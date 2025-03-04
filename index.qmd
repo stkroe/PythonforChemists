@@ -4,7 +4,8 @@ Welcome to the Data Analysis and Visualization for Chemists and Material Scienti
 
 ::::{.callout-caution}
 ## Disclaimer
-Please read the [license](license.qmd), [privacy policy](privacy.qmd), and [disclaimers](disclaimer.qmd) of this website.
+This website is under construction and continuous development. The content provided is for educational purposes only and may be subject to change. The authors and contributors are not responsible for any errors or omissions, or for any outcomes related to the use of the information contained herein.
+Please read the [license](informations/license.qmd), [privacy policy](informations/privacy.qmd), and [disclaimers](informations/disclaimer.qmd) of this website.
 
 :::
 
