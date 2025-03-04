@@ -1,17 +1,12 @@
-name: myenv
-channels:
-  - conda
-dependencies:
-  - python=3.10
-  - pandas
-  - numpy
-  - matplotlib
-  - jupyter
-  - jupyterlab
-  - scikit-learn
-  - scipy
-  - seaborn
-  - statsmodels
+pandas
+numpy
+matplotlib
+jupyter
+jupyterlab
+scikit-learn
+scipy
+seaborn
+statsmodels
 
 
   
