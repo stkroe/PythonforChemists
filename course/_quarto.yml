@@ -2,6 +2,7 @@ project:
   type: book
   output-dir: _site
 execute: 
+  freeze: auto
   echo: false
   warning: false
 book:
