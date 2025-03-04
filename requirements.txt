@@ -2,7 +2,7 @@ name: env
 channels:
   - conda
 dependencies:
-  - python=3.11
+  - python=3.10
   - pandas
   - numpy
   - matplotlib
