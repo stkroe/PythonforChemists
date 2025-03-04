@@ -1,0 +1,62 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Analysis and Visualization for Chemists and Material Scientists",
+    "section": "",
+    "text": "Overview\nWelcome to the Data Analysis and Visualization for Chemists and Material Scientists course! This course is designed for better understanding how Python can be used for data analysis and visualization in the fields of chemistry and materials science. Before diving into the course content, please take a moment to review the following important informations.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#who-is-the-course-for",
+    "href": "index.html#who-is-the-course-for",
+    "title": "Data Analysis and Visualization for Chemists and Material Scientists",
+    "section": "Who is the course for?",
+    "text": "Who is the course for?\nThis course has been designed for persons who are looking to undertake a specialised data visualization and analyzing course in Python with a particular focus the field of chemistry and materials science. The course tries to be interactivley with practical examples.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#what-can-you-expect-from-this-course",
+    "href": "index.html#what-can-you-expect-from-this-course",
+    "title": "Data Analysis and Visualization for Chemists and Material Scientists",
+    "section": "What can you expect from this course",
+    "text": "What can you expect from this course\n\nThis course wants to show you the advantage of using a programming language for data analyzing and visualization in chemistry and material science in comparision to gui-based softwares.\nThe course will give you a very brief introduction to Python and its libraries.\nThe main focus will be on the libraries numpy, pandas, pandas, scipy, matplotlib and seaborn for data analyzing and visualization.\nThe course is organized interactivly. You will get the chance to practice with exercises.\nUpon successful completion of this course, participants will have acquired a comprehensive understanding of the fundamental components of Python and the key packages necessary for the analysis and presentation of their own research data.\nYou can test your knowledge by an exam example at the end of this course.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#what-can-you-not-expect-from-this-course",
+    "href": "index.html#what-can-you-not-expect-from-this-course",
+    "title": "Data Analysis and Visualization for Chemists and Material Scientists",
+    "section": "What can you NOT expect from this course",
+    "text": "What can you NOT expect from this course\n\nYou will not get a deep explanation of the Python language. Please consider full Python tutorials for get a deep overview of Python.\nYou will not learn object-oriented programming in Python.\nWe will not go into details of the libraries.\nThis is not a statistics course.\n\nThe aim of this course should be that you get an idea how Python can be use for data analyzing and visualization in chemistry and material science field.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#how-this-course-is-working",
+    "href": "index.html#how-this-course-is-working",
+    "title": "Data Analysis and Visualization for Chemists and Material Scientists",
+    "section": "How this course is working",
+    "text": "How this course is working\nThis course is divided into three possible paths how to accomplish this course. Most chapters are containing an introduction for every one, a beginner, an advanced and a challenging section. If you have no or only very vague knowldege than please follow the beginner path otherwise the advanced path. If you want to really challenge you please follow the hard-mode path.\n\nThe beginner path concentrates on first contact in python.\nIn the advanced path you get a deeper dive into different libaries and specialized visualization plots.\nThe hard-mode is for those who wants to explore advanced topics and complex data visualization techniques. This path will challenge you with more difficult exercises and in-depth analysis.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#course-paths",
+    "href": "index.html#course-paths",
+    "title": "Data Analysis and Visualization for Chemists and Material Scientists",
+    "section": "Course Paths",
+    "text": "Course Paths\n\nIntroduction\n\nTools of Data Science\n\n\nShort Introduction in Data Science\n\n\nWhat is Python?\n\n\nIntroduction and History of Python\n\n\nInstallation Guide\n\n\nInstallation of Python and a Editor/IDE.\n\n\n\nBeginner Path\n\nBasic Python\nBasic Modules\nData Analysis Introduction\nData Analysis Modules\nData Input\nData Cleaning\nData Manipulation\nData Statistics\nData Export\nData Visualization Introduction\nData Visualization Modules\nData Visualization Basics\n\n\n\nAdvanced Path\n\nData Analysis Introduction\nData Analysis Modules\nData Input\nData Cleaning\nData Manipulation\nData Statistics\nData Export\nAdvanced Data Visualization\nData Visualization Introduction\nData Visualization Modules\nData Visualization Basics\nAdvanced Data Visualization Techniques\n\n\n\nChallenging Path\nAdditionally to the Advanced Path:\n\nChallenging Data Analysis\nChallenging Data Visualization",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  }
+]
