@@ -1,6 +1,6 @@
 # Overview
 
-Welcome to the Data Analysis and Visualization for Chemists and Material Scientists course! This course is designed for better understanding how Python can be used for data analysis and visualization in the fields of chemistry and materials science. Before diving into the course content, please take a moment to review the following important informations.
+Welcome to the Data Analysis and Visualization Course for Chemists and Material Scientists! This course is designed for better understanding how Python can be used for data analysis and visualization in the fields of chemistry and materials science. Before diving into the course content, please take a moment to review the following important informations.
 
 ::::{.callout-caution}
 ## Disclaimer
@@ -11,7 +11,7 @@ Please read the [license](informations/license.qmd), [privacy policy](informatio
 
 :::{.callout-warning}
 ## Prequisits
-It is suggested that you possess a basic understanding of Python or a comparable program language prior to enrollment in this course, in order to facilitate more expeditious progress. Nevertheless, this course is structured in such a way that it can be done with any prior knowledge. The course contains also a fundamental introduction to Python syntax, and as such, persons with no prior knowledge should be able to take the courses. However, it is advisable to study also a basic Python course beside of this course.
+It is suggested that you have a basic understanding of Python or a comparable programming language prior to enrollment in this course, in order to facilitate more expeditious progress. Nevertheless, this course is structured in such a way that it can be done with any prior knowledge. The course contains also a fundamental introduction to Python syntax, and as such, persons with no prior knowledge should be able to take the courses. However, it is advisable to study a basic Python course beside of this content.
 
 Further this course will not going in detail of fundamental statistical principles. This is assumed as fullfilled prequirements beforehand of this course.
 :::
@@ -38,15 +38,23 @@ This course has been designed for persons who are looking to undertake a special
 The aim of this course should be that you get an idea how Python can be use for data analyzing and visualization in chemistry and material science field. 
 
 
+
 ## How this course is working
 This course is divided into three possible paths how to accomplish this course.
 Most chapters are containing an introduction for every one, a beginner, an advanced and a challenging section.
-If you have no or only very vague knowldege than please follow the beginner path otherwise the advanced path. 
-If you want to really challenge you please follow the hard-mode path.
+If you have no or only very vague knowledge than please follow the beginner path otherwise the advanced path. 
+If you want to really challenge you try also the challenging parts.
 
 - The beginner path concentrates on first contact in python.
 - In the advanced path you get a deeper dive into different libaries and specialized visualization plots.
-- The hard-mode is for those who wants to explore advanced topics and complex data visualization techniques. This path will challenge you with more difficult exercises and in-depth analysis.
+- The challenging part is for those who wants to explore advanced topics and complex data visualization techniques. This path will challenge you with more difficult exercises and in-depth analysis.
+
+Every chapter provides examples related to chemistry and material science.
+At the end of each part, there are exercises to test your understanding and reinforce the concepts learned. These exercises are designed to be practical and relevant to real-world scenarios in chemistry and materials science.
+
+## Comprehensive Exam
+
+At the very end of the course, there is a comprehensive exam which covers a complete data analyis and visualization example.
 
 ## Course Paths
 
