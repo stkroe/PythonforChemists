@@ -33,13 +33,13 @@ book:
       - index.qmd
       - part: "Introduction"
         chapters:
-          - chapters/Introduction/ToolsOfDataScience.ipynb
-          - chapters/Introduction/WhatIsPython.ipynb
-          - chapters/Introduction/InstallationGuide.ipynb
+          - course/chapters/Introduction/ToolsOfDataScience.ipynb
+          - course/chapters/Introduction/WhatIsPython.ipynb
+          - course/chapters/Introduction/InstallationGuide.ipynb
       - part: "Python Basics"
         chapters:
-          - chapters/Basics/Basics.ipynb
-          - chapters/Basics/BasicsModules.ipynb
+          - course/chapters/Basics/Basics.ipynb
+          - course/chapters/Basics/BasicsModules.ipynb
      
 bibliography: references.bib
 
