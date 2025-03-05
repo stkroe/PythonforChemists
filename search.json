@@ -118,7 +118,7 @@
     "href": "course/chapters/Introduction/WhatIsPython.html#what-is-python",
     "title": "What is Python?",
     "section": "What is Python?",
-    "text": "What is Python?\n\nPython is an interpreted language in comparsion to compiled languages e.g. C or C++\nPython is often slower compare to compiled languages\nPython has dynamically type-check and a garabge collection\nPython is also able to object-oriented and functional programming\nPython is a high-level language, which means that it is closer to human language than machine language which the computer is understanding\n\nSimple Scheme how Python works internally: So if you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).\n\n\n\n\n\ngraph TD\n    A[Python Source Code *.py] --&gt;|Step 1: Compilation| B[Bytecode *.pyc]\n    B --&gt;|Step 2: Interpretation| C[Python Virtual Machine - PVM]\n    C --&gt;|Execution| D[Program Output]",
+    "text": "What is Python?\n\nPython is an interpreted language in comparsion to compiled languages e.g. C or C++\nPython is often slower compare to compiled languages\nPython has dynamically type-check and a garabge collection\nPython is also able to object-oriented and functional programming\nPython is a high-level language, which means that it is closer to human language than machine language which the computer is understanding\n\nSimple Scheme how Python works internally: So if you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is Python?</span>"
@@ -327,7 +327,7 @@
     "href": "course/chapters/Basics/Basics.html#exercises",
     "title": "Rocketstart to the Python Universe",
     "section": "Exercises",
-    "text": "Exercises\nBasic Python",
+    "text": "Exercises\nBasic Python\nOr open it in Google Colab:\nBasic Python",
     "crumbs": [
       "Python Basics",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
