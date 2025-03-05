@@ -56,4 +56,11 @@ format:
     fig-cap: true
     self-contained: true
     number-sections: false
- 
+  jupyter: default
+  
+colab:
+  gh-user: "stkroe"    # Your GitHub username
+  gh-repo: "PythonforChemists"    # Your repository name
+  gh-branch: "gh-pages"      # Optional, defaults to "main"
+filters:
+  - colab
