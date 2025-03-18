@@ -1,0 +1,16 @@
+# Quiz: Data Collection and Storage
+
+```{julia}
+using QuizQuestions
+```
+
+
+
+
+```{julia}
+#| echo: false
+questions = ("What is a nominal data type?")
+choices = ("masses", "chemical substances", "concentrations", "pH scale") # may be more than questions
+answer = (2) # indices of correct
+matchq(questions, choices, answer)
+```

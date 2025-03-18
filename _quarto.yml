@@ -31,16 +31,27 @@ book:
 
   chapters:
       - index.qmd
-      - part: "Introduction"
+      - part: "Essentials"
         chapters:
-          - course/chapters/Introduction/ToolsOfDataScience.ipynb
-          - course/chapters/Introduction/WhatIsPython.ipynb
-          - course/chapters/Introduction/InstallationGuide.ipynb
-      - part: "Python Basics"
+          - course/chapters/Introduction/Lecture0/ToolsOfDataScience.ipynb
+          - course/chapters/Introduction/Lecture0/WhatIsPython.ipynb
+          - course/chapters/Introduction/Lecture0/InstallationGuide.ipynb
+      - part: "Python Crash Course"
         chapters:
-          - course/chapters/Basics/Basics.ipynb
-          - course/chapters/Basics/BasicsModules.ipynb
-     
+          - course/chapters/Python/Basics.ipynb
+          - course/chapters/Python/BasicsModules.ipynb
+      - part: "Lecture 1"
+        chapters:
+          - course/chapters/Introduction/Lecture1/DataCollection.ipynb
+          - course/chapters/Basics/Lecture1/SimpleDataImport.ipynb
+          - course/chapters/Intermediate/Lecture1/SpecialDataImport.ipynb
+          - course/chapters/Advanced/Lecture1/AdvancedDataImport.ipynb
+      # - part: "Lecture 2"
+      #   chapters:
+      #     - course/chapters/Introduction/Lecture2/Introduction.ipynb
+      #     - course/chapters/Basics/Lecture2/BasicDataAnalysis.ipynb
+      #     - course/chapters/Intermediate/Lecture2/IntermediateDataAnalysis.ipynb
+      #     - course/chapters/Advanced/Lecture2/AdvancedDataAnalysis.ipynb
 bibliography: references.bib
 
 format:
