@@ -11,6 +11,6 @@ using QuizQuestions
 #| echo: false
 questions = ("What is a nominal data type?")
 choices = ("masses", "chemical substances", "concentrations", "pH scale") # may be more than questions
-answer = (2) # indices of correct
+answer = (2s) # indices of correct
 matchq(questions, choices, answer)
 ```
