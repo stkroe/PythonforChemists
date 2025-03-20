@@ -174,3 +174,5 @@ cython_debug/
 _site/
 # autograder
 *.zip
+
+_freeze

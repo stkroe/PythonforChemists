@@ -9,19 +9,19 @@ pyodide:
     - seaborn
     - pandas
   resources:
-    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperature.csv"
+    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperatures.csv"
     - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperatures_nan.csv"
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/Lecture1/SimpleDataInspection.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
         icon: "laptop"
 --- 
 
 
-# Inspection of Data {.unnumbered}
+## Inspection of Data {.unnumbered}
 
 
-# After you load your data you have to inspect it to:
+After you load your data you have to inspect it to:
 - check if no data is consistent, no missing values
 - check if the data is in the correct format
 - check if the data is in the correct range
@@ -29,10 +29,10 @@ code-links:
 - get first insights into the data
 
 
-## Pandas {.unnumbered}
+### Pandas {.unnumbered}
 
 
-### Overview of the Data {.unnumbered}
+#### Overview of the Data {.unnumbered}
 
 
 You can use the `head()` function to get a quick overview of the first rows of the data.

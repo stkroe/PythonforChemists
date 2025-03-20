@@ -16,7 +16,7 @@ pyodide:
 
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/SimpleDataImport.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataImport.ipynb"
         icon: "laptop"
 --- 
 

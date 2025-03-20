@@ -14,14 +14,14 @@ code-links:
 ---
 
 
-# Basic Data Visualization Technique {.unnumbered}
+## Basic Data Visualization Technique {.unnumbered}
 
 
 The most popular data visualization libraries in Python is Matplotlib.
 Let`s start with the basic data visualization techniques using Matplotlib.
 
 
-## 1. Generate some x-y data points. {.unnumbered}
+### 1. Generate some x-y data points. {.unnumbered}
 
 ```{pyodide}
 from matplotlib import pyplot as plt
@@ -33,7 +33,7 @@ y = np.sin(x)
 
 
 
-## 2. Plot the data points. {.unnumbered}
+### 2. Plot the data points. {.unnumbered}
 
 ```{pyodide}
 #| fig-width: 8
@@ -57,7 +57,7 @@ plt.plot(x, y)
 plt.show()
 ```
 
-## 3. Adjust the plot. {.unnumbered}
+### 3. Adjust the plot. {.unnumbered}
 
 
 The `plot()` function takes the following arguments:
@@ -91,7 +91,7 @@ plt.legend()
 plt.show()
 ```
 
-## 4. Adust the figure {.unnumbered}
+### 4. Adust the figure {.unnumbered}
 
 
 This plot figure can be adjusted by changing the figure size, title, labels, and so on.
@@ -132,7 +132,7 @@ plt.legend(loc='upper left') # set the location of the legend: upper left, upper
 plt.show()
 ```
 
-## Creating multiple plots {.unnumbered}
+### Creating multiple plots {.unnumbered}
 
 You can create multiple plots in the same figure by using the `subplot()` function.
 
