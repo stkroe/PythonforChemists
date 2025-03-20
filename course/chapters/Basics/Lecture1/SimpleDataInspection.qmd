@@ -7,9 +7,6 @@ pyodide:
     - matplotlib
     - numpy
     - seaborn
-    - os 
-    - argparse
-    - sys
     - pandas
 code-links:
       - text: "Open in Colab"

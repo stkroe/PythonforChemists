@@ -7,9 +7,7 @@ pyodide:
     - matplotlib
     - numpy
     - seaborn
-    - os 
     - argparse
-    - sys
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Python/BasicsModules.ipynb"
