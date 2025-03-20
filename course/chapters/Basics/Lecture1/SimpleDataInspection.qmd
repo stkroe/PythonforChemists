@@ -8,6 +8,8 @@ pyodide:
     - numpy
     - seaborn
     - pandas
+  resources:
+    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/Lecture1/SimpleDataInspection.ipynb"
@@ -44,7 +46,7 @@ data.head()
 ```{pyodide}
 import pandas as pd
 
-data = pd.read_csv('../../../data/temperatures.csv',sep=';')
+data = pd.read_csv('data/temperatures.csv',sep=';')
 data.head()
 ```
 
@@ -108,7 +110,7 @@ data.fillna(0)
 ```
 
 ```{pyodide}
-data_missing = pd.read_csv('../../../data/temperatures_nan.dat', header=None, skipinitialspace=True, sep=' ', names=['time', 'temperature'])
+data_missing = pd.read_csv('data/temperatures_nan.dat', header=None, skipinitialspace=True, sep=' ', names=['time', 'temperature'])
 data_missing.head()
 ```
 

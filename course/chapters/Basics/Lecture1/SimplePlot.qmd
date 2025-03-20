@@ -7,6 +7,8 @@ pyodide:
     - matplotlib
     - numpy
     - seaborn
+  resources:
+    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/Lecture1/SimplePlot.ipynb"
@@ -36,13 +38,20 @@ y = np.sin(x)
 ## 2. Plot the data points. {.unnumbered}
 
 ```{pyodide}
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 72
 plt.plot(x, y)
+plt.show()
 ```
 
 To add more graphs to the same figure, use `plt.plot()` multiple times before `plt.show()`.
 If you want to create a new figure, use `plt.figure()` before `plt.plot()`.
 
 ```{pyodide}
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 72
 plt.plot(x,y)
 plt.plot(x,2*y)
 plt.show()
@@ -70,6 +79,9 @@ The `plot()` function takes the following arguments:
 You have to call `plt.legend()` to show the labels.
 
 ```{pyodide}
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 72
 plt.figure()
 plt.plot(x, y, color='red', linestyle='dashed', linewidth=2, marker='o', 
             markerfacecolor='blue', markersize=5,
@@ -99,6 +111,9 @@ This plot figure can be adjusted by changing the figure size, title, labels, and
 - `plt.show()`: Display a figure.
 
 ```{pyodide}
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 72
 plt.figure(figsize=(4, 4), dpi=100)
 # Create a figure with a specific size and resolution
 plt.plot(x, y, color='red', linestyle='dashed', linewidth=2, marker='o', 
@@ -123,17 +138,12 @@ plt.show()
 
 You can create multiple plots in the same figure by using the `subplot()` function.
 
-```{pyodide}
-plt.subplot(2, 1, 1)
-plt.plot(x, y1)
-
-plt.subplot(2, 1, 2)
-plt.plot(x, y2)
-```
-
 
 
 ```{pyodide}
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 72
 plt.subplot(2, 1, 1)
 plt.plot(x, y, color='red', linestyle='dashed', linewidth=2, marker='o', 
             markerfacecolor='blue', markersize=5,
@@ -156,6 +166,9 @@ plt.show()
 ```
 
 ```{pyodide}
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 72
 fig = plt.figure(layout='constrained', facecolor='lightskyblue')
 # Create a figure with a specific layout and background color
 # constrained layout automatically adjusts the subplots to fit the figure
