@@ -9,7 +9,11 @@ pyodide:
     - seaborn
     - pandas
   resources:
-    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/"
+    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperature.csv"
+    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperatures_nan.csv"
+    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperature.dat"
+    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperatures_nan.dat"
+
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/SimpleDataImport.ipynb"
@@ -50,7 +54,7 @@ because you can specify the delimiter, header, and other options.
 
 ```{pyodide}
 import pandas as pd
-data = pd.read_csv('temperatures.csv')
+data = pd.read_csv('data/temperatures.csv')
 data
 ```
 
@@ -59,7 +63,7 @@ The data has a different delimiter than the default `comma`. You can specify the
 
 
 ```{pyodide}
-data = pd.read_csv('temperatures.csv', sep=';')
+data = pd.read_csv('data/temperatures.csv', sep=';')
 data
 ```
 
@@ -74,14 +78,14 @@ df = pd.read_csv('file.csv', header=1) # Header is in the second row
 
 
 ```{pyodide}
-data = pd.read_csv('temperatures.csv', sep=';', header=0)
+data = pd.read_csv('data/temperatures.csv', sep=';', header=0)
 data
 ```
 
 If your data contains whitespace, you can use the `skipinitialspace` parameter to remove initial whitespaces.
 
 ```{pyodide}
-data = pd.read_csv('temperatures.dat', skipinitialspace=True, sep=" ")
+data = pd.read_csv('data/temperatures.dat', skipinitialspace=True, sep=" ")
 data
 ```
 
@@ -89,7 +93,7 @@ Now the data has no header. You can specify the header using the `names` paramet
 
 
 ```{pyodide}
-data = pd.read_csv('temperatures.dat', sep=' ', skipinitialspace=True,header=1,names=['t', 'T'])
+data = pd.read_csv('data/temperatures.dat', sep=' ', skipinitialspace=True,header=1,names=['t', 'T'])
 # important to set header=None, otherwise the first line is used as header
 data
 ```
@@ -126,14 +130,14 @@ Some examples are:
 
 
 ```{pyodide}
-data = pd.read_csv('temperatures.csv', sep=';', header=0, names=['t', 'T'], skiprows=1)
+data = pd.read_csv('data/temperatures.csv', sep=';', header=0, names=['t', 'T'], skiprows=1)
 ```
 data now the first row is skipped, only 44638 rows are read instead of 44639
 Missing value examples:
 
 
 ```{pyodide}
-data = pd.read_csv('temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=False)
+data = pd.read_csv('data/temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=False)
 print(data.loc[20:26]) print some rows to see the NaN values
 ```
 
@@ -141,7 +145,7 @@ print(data.loc[20:26]) print some rows to see the NaN values
 If the `na_filter`is set to `False`, the missing values are not recognized. But if it set on `True`, the missing values are recognized.
 
 ```{pyodide}
-data = pd.read_csv('temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=True)
+data = pd.read_csv('data/temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=True)
 print(data.loc[20:26]) print some rows to see the NaN values
 ```
 
@@ -161,7 +165,7 @@ If you try to read a file with a header row, you will get an error.
 
 ```{pyodide}
 import numpy as np
-data = np.loadtxt('temperatures.csv', delimiter=';')
+data = np.loadtxt('data/temperatures.csv', delimiter=';')
 ```
 
 You can specify the header row using the `skiprows` parameter.
@@ -169,7 +173,7 @@ If you want to skip one row, the `skiprows=1` parameter is set at `1`.
 
 
 ```{pyodide}
-data = np.loadtxt('temperatures.csv', delimiter=';', skiprows=1)
+data = np.loadtxt('data/temperatures.csv', delimiter=';', skiprows=1)
 data
 ```
 
@@ -183,7 +187,7 @@ If you have data with whitespace, you do not need to specify the `delimiter`para
 
 
 ```{pyodide}
-data = np.loadtxt('temperatures.dat')
+data = np.loadtxt('data/temperatures.dat')
 data
 ```
 
@@ -194,14 +198,14 @@ First using the `loadtxt()` function, you get an error because of the missing va
 
 
 ```{pyodide}
-data = np.loadtxt('temperatures_nan.dat')
+data = np.loadtxt('data/temperatures_nan.dat')
 data
 ```
 
 If you try to read the file with an empty entrance at row 22, you wil get still an error with the `genfromtxt()` function. 
 
 ```{pyodide}
-data = np.genfromtxt('temperatures_nan.dat')
+data = np.genfromtxt('data/temperatures_nan.dat')
 data
 ```
 
@@ -228,7 +232,7 @@ If you have not `whitespace` as delimiter, you can use the `genfromtxt()` functi
 
 
 ```{pyodide}
-data = np.genfromtxt('temperatures_nan.csv',delimiter=';')
+data = np.genfromtxt('data/temperatures_nan.csv',delimiter=';')
 data[20:26] # print some rows to see the NaN values
 ```
 

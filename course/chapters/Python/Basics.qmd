@@ -534,10 +534,10 @@ print("------")
 print("a:",a)
 print("b:",b)
 ```
-
+mutable objects
 
 ```{pyodide}
-mutable objects
+
 a = [1,2,3]
 b = a
 
