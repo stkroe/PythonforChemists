@@ -9,10 +9,10 @@ pyodide:
     - seaborn
     - pandas
   resources:
-    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/blob/main/course/data/temperatures.csv"
-    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/blob/main/course/data/temperatures_nan.csv"
-    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/blob/main/course/data/temperatures.dat"
-    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/blob/main/course/data/temperatures_nan.dat"
+    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures.csv"
+    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures_nan.csv"
+    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures.dat"
+    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures_nan.dat"
 
 code-links:
       - text: "Open in Colab"
