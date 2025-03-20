@@ -73,7 +73,7 @@ format:
       toc-depth: 3
       code-fold: false
       fig-cap: true
-      #self-contained: true
+      self-contained: true
       number-sections: false
 colab:
   gh-user: "stkroe"    # Your GitHub username
