@@ -335,7 +335,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pandas" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="pandas">Pandas</h2>
 <p>Pandas is read function is quite fast and can read large files. The advantage is that different data types can be read in the same file. The reading functions return a DataFrame object.</p>
-<p>Pandas has different functions to read different file formats. - <code>pandas.read_csv()</code> function is can read CSV files. - <code>pandas.read_table()</code> function is can read general delimiter files. - <code>pandas.read_fwf()</code> function is can read fixed-width files.</p>
+<p>Pandas has different functions to read different file formats.</p>
+<ul>
+<li><p><code>pandas.read_csv()</code> function is can read CSV files.</p></li>
+<li><p><code>pandas.read_table()</code> function is can read general delimiter files.</p></li>
+<li><p><code>pandas.read_fwf()</code> function is can read fixed-width files.</p></li>
+</ul>
 <p>Mostly used function is <code>pandas.read_csv()</code> because you can specify the delimiter, header, and other options.</p>
 <div>
 <div id="pyodide-1" class="exercise-cell">
@@ -387,7 +392,23 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGF0YSA9IHBkLnJlYWRfY3N2
 </div>
 <p>You see that also not <code>.csv</code> files can be read with the <code>read_csv()</code> function.</p>
 <p>The <code>read_csv()</code> function has a lot of parameters. Look in the documentation. You can see which parameters you can set <a href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html">https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html</a></p>
-<p>For example, - <code>delimiter</code> parameter can be used to specify the delimiter instead of <code>sep</code>. Both are the same. Default is <code>,</code>. - <code>header</code> parameter can be used to specify the header row. Default is inferred from the file. - <code>skipinitialspace</code> parameter can be used to remove initial whitespaces. Default is <code>False</code>. - <code>names</code> parameter can be used to specify the column names. - <code>skiprows</code> parameter can be used to skip rows at the beginning of the file. - <code>skipfooter</code> parameter can be used to skip rows at the end of the file. - <code>nrows</code> parameter can be used to read only a specific number of rows. - <code>usecols</code> parameter can be used to read only specific columns. - <code>dtype</code> parameter can be used to specify the data type of the columns. - <code>na_values</code> parameter can be used to specify the missing values. - <code>keep_default_na</code> parameter can be used to specify if the default missing values should be kept. Default is <code>True</code>. - <code>na_filter</code> parameter can be used to recognize missing values without <code>NA</code> or <code>NaN</code> values. Default is <code>True</code>. - <code>true_values</code> parameter can be used to specify the values that should be recognized as <code>True</code>. - <code>false_values</code> parameter can be used to specify the values that should be recognized as <code>False</code>. - <code>parse_dates</code> parameter can be used to parse dates. Default is <code>False</code>.</p>
+<p>For example, - <code>delimiter</code> parameter can be used to specify the delimiter instead of <code>sep</code>. Both are the same. Default is <code>,</code>.</p>
+<ul>
+<li><p><code>header</code> parameter can be used to specify the header row. Default is inferred from the file.</p></li>
+<li><p><code>skipinitialspace</code> parameter can be used to remove initial whitespaces. Default is <code>False</code>.</p></li>
+<li><p><code>names</code> parameter can be used to specify the column names.</p></li>
+<li><p><code>skiprows</code> parameter can be used to skip rows at the beginning of the file.</p></li>
+<li><p><code>skipfooter</code> parameter can be used to skip rows at the end of the file.</p></li>
+<li><p><code>nrows</code> parameter can be used to read only a specific number of rows.</p></li>
+<li><p><code>usecols</code> parameter can be used to read only specific columns.</p></li>
+<li><p><code>dtype</code> parameter can be used to specify the data type of the columns.</p></li>
+<li><p><code>na_values</code> parameter can be used to specify the missing values.</p></li>
+<li><p><code>keep_default_na</code> parameter can be used to specify if the default missing values should be kept. Default is <code>True</code>.</p></li>
+<li><p><code>na_filter</code> parameter can be used to recognize missing values without <code>NA</code> or <code>NaN</code> values. Default is <code>True</code>.</p></li>
+<li><p><code>true_values</code> parameter can be used to specify the values that should be recognized as <code>True</code>.</p></li>
+<li><p><code>false_values</code> parameter can be used to specify the values that should be recognized as <code>False</code>.</p></li>
+<li><p><code>parse_dates</code> parameter can be used to parse dates. Default is <code>False</code>.</p></li>
+</ul>
 <p>Some examples are:</p>
 <div>
 <div id="pyodide-6" class="exercise-cell">
@@ -397,7 +418,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGF0YSA9IHBkLnJlYWRfY3N2
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGF0YSA9IHBkLnJlYWRfY3N2KCd0ZW1wZXJhdHVyZXMuY3N2Jywgc2VwPSc7JywgaGVhZGVyPTAsIG5hbWVzPVsndCcsICdUJ10sIHNraXByb3dzPTEpIn0=
 </script>
 </div>
-<p>data now the first row is skipped, only 44638 rows are read instead of 44639 Missing value examples:</p>
+<p>Now the first row is skipped, only 44638 rows are read instead of 44639.</p>
+<p>Missing value examples:</p>
 <div>
 <div id="pyodide-7" class="exercise-cell">
 
