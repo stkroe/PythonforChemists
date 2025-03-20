@@ -526,7 +526,7 @@
     "href": "course/chapters/Basics/Lecture1/SimplePlot.html#creating-multiple-plots",
     "title": "Basic Data Visualization Techniques",
     "section": "Creating multiple plots",
-    "text": "Creating multiple plots\nYou can create multiple plots in the same figure by using the subplot() function.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLets try to create 4x3 subplots with specific adjustments. -plt.subplots(4, 3): create 4x3 subplots -figsize=(3, 4): set the figure size to 3x4 inches -sharex=True: all subplots share the x-axis -sharey=True: all subplots share the y-axis -constraint_layout=True: automatically adjust the subplot parameters to give the specified padding around the subplots -gridspec_kw={‘hspace’: 0.5, ‘wspace’: 0.5}`: set the horizontal and vertical space between the subplots to 0.5 inches\nPlay with the code below to understand the different parameters: {.unnumbered}",
+    "text": "Creating multiple plots\nYou can create multiple plots in the same figure by using the subplot() function.\n\n\n\n\n\n\n\n\n\n\n\n\nLets try to create 4x3 subplots with specific adjustments. -plt.subplots(4, 3): create 4x3 subplots -figsize=(3, 4): set the figure size to 3x4 inches -sharex=True: all subplots share the x-axis -sharey=True: all subplots share the y-axis -constraint_layout=True: automatically adjust the subplot parameters to give the specified padding around the subplots -gridspec_kw={‘hspace’: 0.5, ‘wspace’: 0.5}`: set the horizontal and vertical space between the subplots to 0.5 inches\nPlay with the code below to understand the different parameters: {.unnumbered}",
     "crumbs": [
       "Lecture 1",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
