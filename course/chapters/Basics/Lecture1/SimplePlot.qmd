@@ -196,7 +196,8 @@ Let`s try to create 4x3 subplots with specific adjustments.
 Play with the code below to understand the different parameters: {.unnumbered}
 
 ```{pyodide}
-fig, ax = plt.subplots(4,3, figsize=(2.55,4), dpi=100, sharex=True, sharey=True, constrained_layout=True,gridspec_kw={'hspace': 0.1, 'wspace': 0.1})
+#| exercise: ex_1
+fig, ax = plt.subplots(4,3, figsize=(__,___), dpi=__100__, sharex=True, sharey=True, constrained_layout=____,gridspec_kw={'hspace': ___, 'wspace': __})
 
 for i in range(4):
     for j in range(3):
