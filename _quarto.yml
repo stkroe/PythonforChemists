@@ -73,8 +73,11 @@ format:
       toc-depth: 3
       code-fold: false
       fig-cap: true
-      self-contained: true
+      #self-contained: true
       number-sections: false
+      #embed-resources: true
+      link-external-icon: true
+      link-external-newwindow: true
 colab:
   gh-user: "stkroe"    # Your GitHub username
   gh-repo: "PythonforChemists"    # Your repository name
