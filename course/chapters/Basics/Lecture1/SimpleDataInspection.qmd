@@ -46,7 +46,7 @@ data.head()
 ```{pyodide}
 import pandas as pd
 
-data = pd.read_csv('data/temperatures.csv',sep=';')
+data = pd.read_csv('temperatures.csv',sep=';')
 data.head()
 ```
 
@@ -110,7 +110,7 @@ data.fillna(0)
 ```
 
 ```{pyodide}
-data_missing = pd.read_csv('data/temperatures_nan.dat', header=None, skipinitialspace=True, sep=' ', names=['time', 'temperature'])
+data_missing = pd.read_csv('temperatures_nan.dat', header=None, skipinitialspace=True, sep=' ', names=['time', 'temperature'])
 data_missing.head()
 ```
 
