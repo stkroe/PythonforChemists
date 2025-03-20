@@ -104,6 +104,7 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Simple Data Inspection – Data Analysis and Visualization for Chemists and Material Scientists">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
 
@@ -282,17 +283,13 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#inspection-of-data" id="toc-inspection-of-data" class="nav-link active" data-scroll-target="#inspection-of-data">Inspection of Data</a></li>
-  <li><a href="#after-you-load-your-data-you-have-to-inspect-it-to" id="toc-after-you-load-your-data-you-have-to-inspect-it-to" class="nav-link" data-scroll-target="#after-you-load-your-data-you-have-to-inspect-it-to">After you load your data you have to inspect it to:</a>
+  <li><a href="#inspection-of-data" id="toc-inspection-of-data" class="nav-link active" data-scroll-target="#inspection-of-data">Inspection of Data</a>
   <ul class="collapse">
-  <li><a href="#pandas" id="toc-pandas" class="nav-link" data-scroll-target="#pandas">Pandas</a>
-  <ul class="collapse">
-  <li><a href="#overview-of-the-data" id="toc-overview-of-the-data" class="nav-link" data-scroll-target="#overview-of-the-data">Overview of the Data</a></li>
-  </ul></li>
+  <li><a href="#pandas" id="toc-pandas" class="nav-link" data-scroll-target="#pandas">Pandas</a></li>
   </ul></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Basics/Lecture1/SimpleDataInspection.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/Lecture1/SimpleDataInspection.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Basics/Lecture1/SimpleDataInspection.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -316,22 +313,13 @@ window.Quarto = {
 </header>
 
 
-<section id="inspection-of-data" class="level1 unnumbered">
-<h1 class="unnumbered">Inspection of Data</h1>
-</section>
-<section id="after-you-load-your-data-you-have-to-inspect-it-to" class="level1">
-<h1>After you load your data you have to inspect it to:</h1>
-<ul>
-<li>check if no data is consistent, no missing values</li>
-<li>check if the data is in the correct format</li>
-<li>check if the data is in the correct range</li>
-<li>check if the data is in the correct distribution</li>
-<li>get first insights into the data</li>
-</ul>
-<section id="pandas" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="pandas">Pandas</h2>
-<section id="overview-of-the-data" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="overview-of-the-data">Overview of the Data</h3>
+<section id="inspection-of-data" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="inspection-of-data">Inspection of Data</h2>
+<p>After you load your data you have to inspect it to: - check if no data is consistent, no missing values - check if the data is in the correct format - check if the data is in the correct range - check if the data is in the correct distribution - get first insights into the data</p>
+<section id="pandas" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="pandas">Pandas</h3>
+<section id="overview-of-the-data" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="overview-of-the-data">Overview of the Data</h4>
 <p>You can use the <code>head()</code> function to get a quick overview of the first rows of the data.</p>
 <div>
 <div id="pyodide-1" class="exercise-cell">
@@ -353,6 +341,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGF0YS5kZXNjcmliZSgpIn0=
 <p>The <code>describe</code>function shows you the count, mean, standard deviation, minimum, 25%, 50%, 75% and maximum values of the data.</p>
 <p>In this case, data has 44640 data points, The mean of the temperature is 298(6) K. The minimum temperature is 279 K and the maximum temperature is 316 K. Further the 25% quantile is 294 K, the 50% quantile is 298 K and the 75% quantile is 302 K. The measurement was taken from 1 to 44640 seconds which is 12 hours and 24 minutes. We suppose that is the correct time range which was to be expected.</p>
 <p>This gives you a quick overview of the data distribution.</p>
+</section>
 <section id="missing-data-and-corrupted-data" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="missing-data-and-corrupted-data">Missing Data and Corrupted Data</h4>
 <p>To check if there is missing data in the data set you can use the <code>isna()</code> function.</p>
@@ -478,7 +467,6 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGF0YVsndGVtcGVyYXR1cmUn
 </section>
 </section>
 </section>
-</section>
 <section id="section" class="level1">
 <h1></h1>
 
@@ -498,7 +486,7 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTE1IiwiaW5saW5lIjpmYWxzZSwibWV0aG9k
 </div>
 </div>
 <script type="vfs-file">
-WyJodHRwczovL2dpdGh1Yi5jb20vc3Rrcm9lL1B5dGhvbmZvckNoZW1pc3RzL2Jsb2IvbWFpbi9jb3Vyc2UvZGF0YS90ZW1wZXJhdHVyZS5jc3YiLCJodHRwczovL2dpdGh1Yi5jb20vc3Rrcm9lL1B5dGhvbmZvckNoZW1pc3RzL2Jsb2IvbWFpbi9jb3Vyc2UvZGF0YS90ZW1wZXJhdHVyZXNfbmFuLmNzdiJd
+WyJodHRwczovL2dpdGh1Yi5jb20vc3Rrcm9lL1B5dGhvbmZvckNoZW1pc3RzL2Jsb2IvbWFpbi9jb3Vyc2UvZGF0YS90ZW1wZXJhdHVyZXMuY3N2IiwiaHR0cHM6Ly9naXRodWIuY29tL3N0a3JvZS9QeXRob25mb3JDaGVtaXN0cy9ibG9iL21haW4vY291cnNlL2RhdGEvdGVtcGVyYXR1cmVzX25hbi5jc3YiXQ==
 </script>
 </section>
 

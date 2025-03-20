@@ -449,18 +449,18 @@
     "href": "course/chapters/Basics/Lecture1/SimpleDataInspection.html",
     "title": "Simple Data Inspection",
     "section": "",
-    "text": "Inspection of Data",
+    "text": "Inspection of Data\nAfter you load your data you have to inspect it to: - check if no data is consistent, no missing values - check if the data is in the correct format - check if the data is in the correct range - check if the data is in the correct distribution - get first insights into the data",
     "crumbs": [
       "Lecture 1",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Simple Data Inspection</span>"
     ]
   },
   {
-    "objectID": "course/chapters/Basics/Lecture1/SimpleDataInspection.html#pandas",
-    "href": "course/chapters/Basics/Lecture1/SimpleDataInspection.html#pandas",
+    "objectID": "course/chapters/Basics/Lecture1/SimpleDataInspection.html#inspection-of-data",
+    "href": "course/chapters/Basics/Lecture1/SimpleDataInspection.html#inspection-of-data",
     "title": "Simple Data Inspection",
-    "section": "Pandas",
-    "text": "Pandas\n\nOverview of the Data\nYou can use the head() function to get a quick overview of the first rows of the data.\n\n\n\n\n\n\nThe describe() function gives you a quick overview of the data distribution.\n\n\n\n\n\n\nThe describefunction shows you the count, mean, standard deviation, minimum, 25%, 50%, 75% and maximum values of the data.\nIn this case, data has 44640 data points, The mean of the temperature is 298(6) K. The minimum temperature is 279 K and the maximum temperature is 316 K. Further the 25% quantile is 294 K, the 50% quantile is 298 K and the 75% quantile is 302 K. The measurement was taken from 1 to 44640 seconds which is 12 hours and 24 minutes. We suppose that is the correct time range which was to be expected.\nThis gives you a quick overview of the data distribution.\n\nMissing Data and Corrupted Data\nTo check if there is missing data in the data set you can use the isna() function.\n\n\n\n\n\n\nNo missing data is found in this case.\nYou can check the data type using dtypes function to check if the data is in the correct format.\n\n\n\n\n\n\n\n\n\n\n\n\nYou see that time is an int64 and temperature is a float64. For the analysis, you might want to convert the time to a float64 as well.\n\n\n\n\n\n\n\n\n\n\n\n\nIf we have missing data we can use the fillna() function to fill the missing data with a specific value.\n\n\n\n\n\n\n\n\n\n\n\n\nOne value is missing in the temperature column. We fill it with 0.\nFirst let check where the data is missing.\n\n\n\n\n\n\ndata_missing[data_missing[‘temperature’].isna()]\nAt index 21 at time 22 s the temperature is missing. :::{.callout .callout-info} The handling of missing data is a complex topic. First of all you have to check why the data is missing. Is it a measurement error, a data processing error etc.\nYou have to decide if you want to fill the missing data with a specific value, drop the row or column or interpolate the missing data. The decision depends on the data and the analysis you want to perform. Droping Data is always a delicate decision because you loose information. Sometimes it is not good scientific practice to drop data. For more information there a lot of research in this topic https://doi.org/10.1076/edre.7.4.353.8937 :::\nThe time step can be estimated by the difference between the time steps of the previous and the next data point.\n\n\n\n\n\n\nAnd we can summarize it via:\n\n\n\n\n\n\n\n\n\n\n\n\nget difference between temperature values\n\n\n\n\n\n\nThe time step is constantly 1 second. The difference between the temperature of the previous and the next data point is at \\(~10^{-2}\\) order. We can assume that in this case the data is consistent enough and we can fill the missing data with the mean of the previous and the next data point.\n\n\n\n\n\n\ndata_missing[‘temperature’].fillna((data_missing[‘temperature’].shift() + data_missing[‘temperature’].shift(-1))/2, inplace=True) data_missing[20:25]\nNow can analysis or plot the data.",
+    "section": "",
+    "text": "Pandas\n\nOverview of the Data\nYou can use the head() function to get a quick overview of the first rows of the data.\n\n\n\n\n\n\nThe describe() function gives you a quick overview of the data distribution.\n\n\n\n\n\n\nThe describefunction shows you the count, mean, standard deviation, minimum, 25%, 50%, 75% and maximum values of the data.\nIn this case, data has 44640 data points, The mean of the temperature is 298(6) K. The minimum temperature is 279 K and the maximum temperature is 316 K. Further the 25% quantile is 294 K, the 50% quantile is 298 K and the 75% quantile is 302 K. The measurement was taken from 1 to 44640 seconds which is 12 hours and 24 minutes. We suppose that is the correct time range which was to be expected.\nThis gives you a quick overview of the data distribution.\n\n\nMissing Data and Corrupted Data\nTo check if there is missing data in the data set you can use the isna() function.\n\n\n\n\n\n\nNo missing data is found in this case.\nYou can check the data type using dtypes function to check if the data is in the correct format.\n\n\n\n\n\n\n\n\n\n\n\n\nYou see that time is an int64 and temperature is a float64. For the analysis, you might want to convert the time to a float64 as well.\n\n\n\n\n\n\n\n\n\n\n\n\nIf we have missing data we can use the fillna() function to fill the missing data with a specific value.\n\n\n\n\n\n\n\n\n\n\n\n\nOne value is missing in the temperature column. We fill it with 0.\nFirst let check where the data is missing.\n\n\n\n\n\n\ndata_missing[data_missing[‘temperature’].isna()]\nAt index 21 at time 22 s the temperature is missing. :::{.callout .callout-info} The handling of missing data is a complex topic. First of all you have to check why the data is missing. Is it a measurement error, a data processing error etc.\nYou have to decide if you want to fill the missing data with a specific value, drop the row or column or interpolate the missing data. The decision depends on the data and the analysis you want to perform. Droping Data is always a delicate decision because you loose information. Sometimes it is not good scientific practice to drop data. For more information there a lot of research in this topic https://doi.org/10.1076/edre.7.4.353.8937 :::\nThe time step can be estimated by the difference between the time steps of the previous and the next data point.\n\n\n\n\n\n\nAnd we can summarize it via:\n\n\n\n\n\n\n\n\n\n\n\n\nget difference between temperature values\n\n\n\n\n\n\nThe time step is constantly 1 second. The difference between the temperature of the previous and the next data point is at \\(~10^{-2}\\) order. We can assume that in this case the data is consistent enough and we can fill the missing data with the mean of the previous and the next data point.\n\n\n\n\n\n\ndata_missing[‘temperature’].fillna((data_missing[‘temperature’].shift() + data_missing[‘temperature’].shift(-1))/2, inplace=True) data_missing[20:25]\nNow can analysis or plot the data.",
     "crumbs": [
       "Lecture 1",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Simple Data Inspection</span>"
@@ -478,55 +478,11 @@
     ]
   },
   {
-    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html#generate-some-x-y-data-points.",
-    "href": "course/chapters/Basics/Lecture1/SimplePlot.html#generate-some-x-y-data-points.",
+    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html#basic-data-visualization-technique",
+    "href": "course/chapters/Basics/Lecture1/SimplePlot.html#basic-data-visualization-technique",
     "title": "Basic Data Visualization Techniques",
-    "section": "1. Generate some x-y data points.",
-    "text": "1. Generate some x-y data points.",
-    "crumbs": [
-      "Lecture 1",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html#plot-the-data-points.",
-    "href": "course/chapters/Basics/Lecture1/SimplePlot.html#plot-the-data-points.",
-    "title": "Basic Data Visualization Techniques",
-    "section": "2. Plot the data points.",
-    "text": "2. Plot the data points.\n\n\n\n\n\n\nTo add more graphs to the same figure, use plt.plot() multiple times before plt.show(). If you want to create a new figure, use plt.figure() before plt.plot().",
-    "crumbs": [
-      "Lecture 1",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html#adjust-the-plot.",
-    "href": "course/chapters/Basics/Lecture1/SimplePlot.html#adjust-the-plot.",
-    "title": "Basic Data Visualization Techniques",
-    "section": "3. Adjust the plot.",
-    "text": "3. Adjust the plot.\nThe plot() function takes the following arguments: - x-axis data points - y-axis data points - color: hex, or color name (e.g., ‘red’, ‘blue’,‘black’), abbreviated (e.g., ‘r’, ‘b’,‘k’) - linestyle: ‘-’, ‘–’, ‘-.’, ‘:’ or “solid”, “dashed”, “dashdot”, “dotted” - marker: ‘o’, ‘x’, ‘+’, ’*‘, ’s’, ‘d’, ‘^’, ‘v’, ‘&gt;’, ‘&lt;’, ‘p’, ‘h’ - linewidth - width of the line - alpha - transparency of the line - markerfacecolor - color of the marker face - markersize - size of the marker - label - label for the data points\nYou have to call plt.legend() to show the labels.",
-    "crumbs": [
-      "Lecture 1",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html#adust-the-figure",
-    "href": "course/chapters/Basics/Lecture1/SimplePlot.html#adust-the-figure",
-    "title": "Basic Data Visualization Techniques",
-    "section": "4. Adust the figure",
-    "text": "4. Adust the figure\nThis plot figure can be adjusted by changing the figure size, title, labels, and so on.\n\nplt.xlabel(): Set the x-axis label of the current axis.\nplt.ylabel(): Set the y-axis label of the current axis.\nplt.title(): Set a title for the axes.\nplt.legend(): Place a legend on the axes.\nplt.grid(): Configure the grid lines.\nplt.xlim(): Get or set the x-limits of the current axes.\nplt.ylim(): Get or set the y-limits of the current axes.\nplt.xticks(): Get or set the current tick locations and labels of the x-axis.\nplt.yticks(): Get or set the current tick locations and labels of the y-axis.\nplt.figure(): Create a new figure.\nplt.show(): Display a figure.",
-    "crumbs": [
-      "Lecture 1",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html#creating-multiple-plots",
-    "href": "course/chapters/Basics/Lecture1/SimplePlot.html#creating-multiple-plots",
-    "title": "Basic Data Visualization Techniques",
-    "section": "Creating multiple plots",
-    "text": "Creating multiple plots\nYou can create multiple plots in the same figure by using the subplot() function.\n\n\n\n\n\n\n\n\n\n\n\n\nLets try to create 4x3 subplots with specific adjustments. -plt.subplots(4, 3): create 4x3 subplots -figsize=(3, 4): set the figure size to 3x4 inches -sharex=True: all subplots share the x-axis -sharey=True: all subplots share the y-axis -constraint_layout=True: automatically adjust the subplot parameters to give the specified padding around the subplots -gridspec_kw={‘hspace’: 0.5, ‘wspace’: 0.5}`: set the horizontal and vertical space between the subplots to 0.5 inches\nPlay with the code below to understand the different parameters: {.unnumbered}",
+    "section": "",
+    "text": "1. Generate some x-y data points.\n\n\n\n\n\n\n\n\n2. Plot the data points.\n\n\n\n\n\n\nTo add more graphs to the same figure, use plt.plot() multiple times before plt.show(). If you want to create a new figure, use plt.figure() before plt.plot().\n\n\n\n\n\n\n\n\n3. Adjust the plot.\nThe plot() function takes the following arguments: - x-axis data points - y-axis data points - color: hex, or color name (e.g., ‘red’, ‘blue’,‘black’), abbreviated (e.g., ‘r’, ‘b’,‘k’) - linestyle: ‘-’, ‘–’, ‘-.’, ‘:’ or “solid”, “dashed”, “dashdot”, “dotted” - marker: ‘o’, ‘x’, ‘+’, ’*‘, ’s’, ‘d’, ‘^’, ‘v’, ‘&gt;’, ‘&lt;’, ‘p’, ‘h’ - linewidth - width of the line - alpha - transparency of the line - markerfacecolor - color of the marker face - markersize - size of the marker - label - label for the data points\nYou have to call plt.legend() to show the labels.\n\n\n\n\n\n\n\n\n4. Adust the figure\nThis plot figure can be adjusted by changing the figure size, title, labels, and so on.\n\nplt.xlabel(): Set the x-axis label of the current axis.\nplt.ylabel(): Set the y-axis label of the current axis.\nplt.title(): Set a title for the axes.\nplt.legend(): Place a legend on the axes.\nplt.grid(): Configure the grid lines.\nplt.xlim(): Get or set the x-limits of the current axes.\nplt.ylim(): Get or set the y-limits of the current axes.\nplt.xticks(): Get or set the current tick locations and labels of the x-axis.\nplt.yticks(): Get or set the current tick locations and labels of the y-axis.\nplt.figure(): Create a new figure.\nplt.show(): Display a figure.\n\n\n\n\n\n\n\n\n\nCreating multiple plots\nYou can create multiple plots in the same figure by using the subplot() function.\n\n\n\n\n\n\n\n\n\n\n\n\nLets try to create 4x3 subplots with specific adjustments. -plt.subplots(4, 3): create 4x3 subplots -figsize=(3, 4): set the figure size to 3x4 inches -sharex=True: all subplots share the x-axis -sharey=True: all subplots share the y-axis -constraint_layout=True: automatically adjust the subplot parameters to give the specified padding around the subplots -gridspec_kw={‘hspace’: 0.5, ‘wspace’: 0.5}`: set the horizontal and vertical space between the subplots to 0.5 inches\nPlay with the code below to understand the different parameters: {.unnumbered}",
     "crumbs": [
       "Lecture 1",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
