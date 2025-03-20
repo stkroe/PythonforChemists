@@ -50,45 +50,35 @@
     ]
   },
   {
-    "objectID": "index.html#course-paths",
-    "href": "index.html#course-paths",
-    "title": "Data Analysis and Visualization for Chemists and Material Scientists",
-    "section": "Course Paths",
-    "text": "Course Paths",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
-    ]
-  },
-  {
     "objectID": "index.html#this-course-within-of-the-vu-data-science-and-visualization-primer-for-chemists-and-material-scientists",
     "href": "index.html#this-course-within-of-the-vu-data-science-and-visualization-primer-for-chemists-and-material-scientists",
     "title": "Data Analysis and Visualization for Chemists and Material Scientists",
     "section": "This course within of the “VU Data Science and Visualization Primer for Chemists and Material Scientists”",
-    "text": "This course within of the “VU Data Science and Visualization Primer for Chemists and Material Scientists”\nWe concentrate on the Basic Path during this lecture.\nTimeschedule for a week table\n\n\n\n\n\n\n\n\n\n\n\nTime\nMonday\nTuesday\nWednesday\nThursday\nFriday\n\n\n\n\n13:00-14:00\nIntroduction/Python Basics\nLecture 2\nLecture 3\nLecture 4\nLecture 5\n\n\n14:00-15:00\nBasic Example\nLecture 2\nLecture 3\nLecture 4\nExample 5\n\n\n15:00-16:00\nLecture 1\nExample 2\nExample 3\nExample 4\nF&Q\n\n\n16:00-17:00\nExample 1\nExample 2\nExample 3\nExample 4\nFinal Exam\n\n\n17:00-18:00\nExample 1\nExample 2\nExample 3\nExample 4\nFinal Exam\n\n\n\n\n\nMonday\n\n\nIntroduction\n\n\nOverview of this course?\nWhat do you need for data analysis and visualization?\nWhy you should learn Python?\n\n\nBasic Python\n\n\nFast introduction in Python Syntax\nIntroduction in important Python libaries\nIntroduction in Dataanalysis\nIntroduction in Datavisualization\n\n\nLecture 1\n\n\nHow I import data?\nHow to draw simple xy-Plot\nHow to adjust a plot\n\n\nExample 1",
+    "text": "This course within of the “VU Data Science and Visualization Primer for Chemists and Material Scientists”\nWe concentrate on the Basic Path during this lecture.\nTimeschedule for a week table\n\n\n\n\n\n\n\n\n\n\n\nTime\nMonday\nTuesday\nWednesday\nThursday\nFriday\n\n\n\n\n13:00-14:00\nIntroduction/Python Basics\nLecture 2\nLecture 3\nLecture 4\nLecture 5\n\n\n14:00-15:00\nLecture 1\nLecture 2\nLecture 3\nLecture 4\nExample 5\n\n\n15:00-16:00\nLecture 1\nExample 2\nExample 3\nExample 4\nF&Q\n\n\n16:00-17:00\nExample 1\nExample 2\nExample 3\nExample 4\nFinal Exam\n\n\n17:00-18:00\nExample 1\nExample 2\nExample 3\nExample 4\nFinal Exam",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
-    "objectID": "course/chapters/Introduction/Lecture0/ToolsOfDataScience.html",
-    "href": "course/chapters/Introduction/Lecture0/ToolsOfDataScience.html",
-    "title": "Tools for Data Science",
+    "objectID": "course/chapters/Introduction/Lecture0/Introduction.html",
+    "href": "course/chapters/Introduction/Lecture0/Introduction.html",
+    "title": "Introduction",
     "section": "",
     "text": "What do you need for data analysis and visualization?\nYou can use basic spreadsheet programs with graphical interfaces e.g. Excel, LibreOffice Calc …\nBut for more advanced analysis you need probably specifc plotting and analysis tools:\nThis is a small election of tools, that can be used for data analysis and plotting.\nFor a larger list see these wikipedia lists:",
     "crumbs": [
       "Essentials",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tools for Data Science</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
-    "objectID": "course/chapters/Introduction/Lecture0/ToolsOfDataScience.html#what-do-you-need-for-data-analysis-and-visualization",
-    "href": "course/chapters/Introduction/Lecture0/ToolsOfDataScience.html#what-do-you-need-for-data-analysis-and-visualization",
-    "title": "Tools for Data Science",
+    "objectID": "course/chapters/Introduction/Lecture0/Introduction.html#what-do-you-need-for-data-analysis-and-visualization",
+    "href": "course/chapters/Introduction/Lecture0/Introduction.html#what-do-you-need-for-data-analysis-and-visualization",
+    "title": "Introduction",
     "section": "",
     "text": "Scientists produce a lot of data which needs to be analyzed and visualized.\nClear presentation of data is essential for the understanding of data.\nIt helps to improve your scientific communication and to make your results more accessible to others.\nThere are many tools available for data analysis and visualization.\n\n\n\n\nYou can either use programs with GUIs e.g. LabPlot, QtiPlot, Scilab, SciDAVis, Origin …\nor a GUI based program with command line interface e.g. Xmgrace, GNU Octave …\nor command line based tools e.g. Gnuplot, Matlab, Mathematica …\nor programming languages e.g. Python, R, Julia …\n\n\n\n\nList of Numerical Analysis Software\nList of Graphical Software\nList of Statistical Software\nList of Computer Algebra Systems",
     "crumbs": [
       "Essentials",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tools for Data Science</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
@@ -96,18 +86,7 @@
     "href": "course/chapters/Introduction/Lecture0/WhatIsPython.html",
     "title": "What is Python?",
     "section": "",
-    "text": "Short History of Python\n(see Wikipedia for more details)\nVan Rossum designed Python as a “Computer Programming Language for Everybody”.",
-    "crumbs": [
-      "Essentials",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is Python?</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Introduction/Lecture0/WhatIsPython.html#short-history-of-python",
-    "href": "course/chapters/Introduction/Lecture0/WhatIsPython.html#short-history-of-python",
-    "title": "What is Python?",
-    "section": "",
-    "text": "1989: the beginning of python\n1991: Guido van Rossum, a Dutch programmer and father of Python, implemented and published the first version of Python.\nFun fact: The name Python came from the show Monty Python’s Flying Circus.\n1994: Python 1.0 was released\n2000: Python 2.0 was released\n2008: Python 3.0 was released with new syntax and features\nImportant: python3 to python2 is backward incompatible e.g. print(\"Hello World\") python3 and print \"Hello World\" python2.\npython2 is nowdays outdated. It is not recommended to use it for new projects.",
+    "text": "Short History of Python",
     "crumbs": [
       "Essentials",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is Python?</span>"
@@ -118,7 +97,7 @@
     "href": "course/chapters/Introduction/Lecture0/WhatIsPython.html#what-is-python",
     "title": "What is Python?",
     "section": "What is Python?",
-    "text": "What is Python?\n\nPython is an interpreted language in comparsion to compiled languages e.g. C or C++\nPython is often slower compare to compiled languages\nPython has dynamically type-check and a garabge collection\nPython is also able to object-oriented and functional programming\nPython is a high-level language, which means that it is closer to human language than machine language which the computer is understanding\n\nSimple Scheme how Python works internally: So if you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).",
+    "text": "What is Python?\n\nPython is an interpreted language in comparsion to compiled languages e.g. C or C++\nPython is often slower compare to compiled languages\nPython has dynamically type-check and a garabge collection\nPython is also able to object-oriented and functional programming\nPython is a high-level language, which means that it is closer to human language than machine language which the computer is understanding\n\n\nSimple Scheme how Python works internally:\nSo if you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).",
     "crumbs": [
       "Essentials",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is Python?</span>"
@@ -129,7 +108,7 @@
     "href": "course/chapters/Introduction/Lecture0/WhatIsPython.html#how-i-can-learn-python",
     "title": "What is Python?",
     "section": "How I can learn Python?",
-    "text": "How I can learn Python?\nThere are a lot of resources to dive deeper into Python e.g.:\n\nhttps://www.py4e.com/ (Python for Everybody)\nhttps://py-tutorial-de.readthedocs.io/de/python-3.3/ (German Tutorial)\nhttps://www.w3schools.com/python/default.asp\nhttps://jakevdp.github.io/PythonDataScienceHandbook/\nhttps://exercism.org/ (Coding Exercises)\nhttps://www.freecodecamp.org/ (Coding Exercises)\nhttps://realpython.com/tutorials/data-viz/\nhttps://www.youtube.com/watch?v=LHBE6Q9XlzI\n\n\n\n\n\n\n\nImportant\n\n\n\nAs it is with languages, you can only learn it if you practicing it.  So, start you own projects and have fun with it!",
+    "text": "How I can learn Python?",
     "crumbs": [
       "Essentials",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is Python?</span>"
@@ -147,11 +126,66 @@
     ]
   },
   {
-    "objectID": "course/chapters/Introduction/Lecture0/InstallationGuide.html#how-to-install-python-locally",
-    "href": "course/chapters/Introduction/Lecture0/InstallationGuide.html#how-to-install-python-locally",
+    "objectID": "course/chapters/Introduction/Lecture0/InstallationGuide.html#install-python-interpreter",
+    "href": "course/chapters/Introduction/Lecture0/InstallationGuide.html#install-python-interpreter",
     "title": "Installation Guide",
-    "section": "",
-    "text": "Python\nPython documentation\n\n\n1. Install Python Interpreter\nYour preferred searching engine is your friend to find the best way to install Python on your system. Please choose that method which is suitable for you.\nPython can be install by severals ways:\n\ndirectly by Python official site\n\nthe installation guide can be found under python wiki\n\nor via package manager of your os:\n\ne.g.: sudo apt install python (linux debian) or brew install python (macOS)\n\nor via docker, wsl ect.\nor via a conda or mamba python package and environment managers which have a python interpreter on board and are avaiable for Windows, Linux and macOS [my recomendation]\n\n\n\nPython Package and Environment manager\nThe advantage of using a python package and environment manager is that you have a python interpreter directly on board but you can also directly create different python enviroments and install and remove python packages.\n\nConda\nThere are differerent condainstaller: (Please pay attention which one is suitable for you (https://docs.anaconda.com/distro-or-miniconda/).\n\n\n\n\n\n\nWarning\n\n\n\nPlease read the Anaconda Terms of Service FAQs and Terms of Service) not every case is free of use.\n\n\n\nAnaconda Distribution is a comprehensive distribution which includes conda and hundreds of preinstalled packages and tools.\nminiconda is the light version of it which contains only conda, python interpreter and few fundamental packages\nminiforge minimal installer for conda and using only the community conda-forge channel\n\n\n\nMamba\nAnother python package and environment managers is mamba. mamba is a reimplementation of conda: - micromamba is a statically linked version of mamba - mambaand it at the moment faster than conda\n\n\n\n\n\n\nTip\n\n\n\nRecommondation: micromamba  \nInstall it like it is explained under the micromamba documentation: - https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html\n\n\nPlease install in one of the above explained ways Python and use your preferred searching enging to get more information.\n\n\n\n2. Set up an environment\nIt is often very useful to have different python enviroments for different python projects because of the need of different python package versions.\nYou can use conda or micromamba to create different environments. There exists also other virtual environment manager.\nIn this course the explaination is restricted to micromamba as an example. If you want to use something else there exists tons of information online how to use other programs.\n\nMicromamba: Most important commands are:\nRead for more detail: https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html\nCreating a new virtual environment:\nmicromamba create --name &lt;myenvname&gt;\nInstall new packages:\nmicromamba install &lt;packagename&gt;\nList all environments:\nmicromamba env list\nActivate an environment:\nmicromamba activate &lt;myenvname&gt;\nList all packages of this environment:\nmicromamba list\n\n\n\n3. Usefull packages for Data Analyse and Visualization:\n\nmatplotlib - data visualization library\nnumpy - numerical library\nscipy - scientific library\npandas - data manipulation library\nseaborn - data visualization library\nscikit-learn - machine learning library\nstatsmodels - statistical library\njupyter-notebook/jupyterlab - interactive computing environment\nipykernel - IPython Kernel for Jupyter\npip - package installer for python instead of conda\n\n\n\n\n\n\n\nTip\n\n\n\nRecommendation  Use yml-file with all needed packages and configurations:\n\n\nSave this in a environment.yml file:\nname: myenv\nchannels:\n - conda-forge\ndependencies:\n - python=3.12\n - pandas\n - numpy\n - matplotlib\n - jupyterlab\n - scikit-learn\n - scipy\n - pip\n - ipykernel\n - seaborn\n - statsmodels\nand create an environment with this specific packages:\nmicromamba env create -f environment.yml\nTest your installation by opening the interactive python mode by typing in your terminal (Linux, macOS) / comand prompt (Windows):\npython\nthen something like this should be opened in your terminal (Linux, macOS) / comand prompt (Windows)\nPython 3.12.7 | packaged by conda-forge | (main, Oct 4 2024, 15:57:01) [Clang 17.0.6 ] on darwin Type “help”, “copyright”, “credits” or “license” for more information. &gt;&gt;&gt;\nthen type:\nprint(\"Hello World!\")\nIf this works your installation was successful!\n\n\n4. Choose an editor\nAfter you installed python successfully you need a editor for writing your Python programs. Technical you could use everything where you can write text but it is not really purposeful.\nAn editor with syntax highlighting, code completion and debugging is very useful.\n\n\n\n\n\n\nTip\n\n\n\nRecommendation: Visual Studio Code\n\n\n\nOther editors:\n\nSpyder https://www.spyder-ide.org/\nPyCharm (JetBrains) https://www.jetbrains.com/products/compare/?product=pycharm&product=pycharm-ce\nJupyter Notebook https://jupyter.org/ https://code.visualstudio.com/docs/datascience/jupyter-notebooks\nJupyter Lab https://jupyter.org/ https://code.visualstudio.com/docs/datascience/jupyter-notebooks etc.\n\n\n\nPython extension for VS Code:\n\nPython from Microsoft,\nPylance from Microsoft\nand Jupyter from Microsoft (optional it is only needed if you want to use Jupyter Notebooks in VS Code)\n\nAlternatively you can use a Jupyter Notebook (*.ipynb) to execute code.\nWrite the code in a cell and execute it by pressing the run button.\nAdvantage of using Jupyter Notebooks: - The code can run cell by cell and the output is directly shown below the cell. - Further you can write text and equations in markdown cells. - Jupyter Notebooks can also handle different programming languages like Ror Julia. - Therefore it is very popular in the data science community.\nJupyter Notebooks can be used in VS Code, Jupyter Lab, Jupyter Notebook or Google Colab.\n\nIn this course all exercises are provided as Jupyter Notebooks.\n\n\n\n\n6. Test your setup\n\nopen your editor\nopen a new file and save this file as helloworld.py\nwrite your first test program:\n\n\n\nHello World!\n\n\n\nexecute your program by using your IDE/Editor\nor using command line in the terminal (Linux/MacOS) / command prompt under Windows.\n\ncd /path/to/file\npython helloworld.py\nThe ouput should be: “Hello World!”.\nIf you are using Jupyter Notebook you can also write this code in a cell and execute it by pressing the run button.\n\n\n\n\n\n\nCongratulations\n\n\n\nYou have successfully set up python!!",
+    "section": "1. Install Python Interpreter",
+    "text": "1. Install Python Interpreter\nYour preferred searching engine is your friend to find the best way to install Python on your system. Please choose that method which is suitable for you.\nPython can be install by severals ways:\n\ndirectly by Python official site\n\nthe installation guide can be found under python wiki\n\nor via package manager of your os:\n\ne.g.: sudo apt install python (linux debian) or brew install python (macOS)\n\nor via docker, wsl ect.\nor via a conda or mamba python package and environment managers which have a python interpreter on board and are avaiable for Windows, Linux and macOS [my recomendation]",
+    "crumbs": [
+      "Essentials",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Installation Guide</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Introduction/Lecture0/InstallationGuide.html#python-package-and-environment-manager",
+    "href": "course/chapters/Introduction/Lecture0/InstallationGuide.html#python-package-and-environment-manager",
+    "title": "Installation Guide",
+    "section": "Python Package and Environment manager",
+    "text": "Python Package and Environment manager\nThe advantage of using a python package and environment manager is that you have a python interpreter directly on board but you can also directly create different python enviroments and install and remove python packages.\n\nConda\nThere are differerent condainstaller: (Please pay attention which one is suitable for you (https://docs.anaconda.com/distro-or-miniconda/).\n\n\n\n\n\n\nWarning\n\n\n\nPlease read the Anaconda Terms of Service FAQs and Terms of Service) not every case is free of use.\n\n\n\nAnaconda Distribution is a comprehensive distribution which includes conda and hundreds of preinstalled packages and tools.\nminiconda is the light version of it which contains only conda, python interpreter and few fundamental packages\nminiforge minimal installer for conda and using only the community conda-forge channel\n\n\n\nMamba\nAnother python package and environment managers is mamba. mamba is a reimplementation of conda: - micromamba is a statically linked version of mamba - mambaand it at the moment faster than conda\n\n\n\n\n\n\nTip\n\n\n\nRecommondation: micromamba  \nInstall it like it is explained under the micromamba documentation: - https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html\n\n\nPlease install in one of the above explained ways Python and use your preferred searching enging to get more information.",
+    "crumbs": [
+      "Essentials",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Installation Guide</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Introduction/Lecture0/InstallationGuide.html#set-up-an-environment",
+    "href": "course/chapters/Introduction/Lecture0/InstallationGuide.html#set-up-an-environment",
+    "title": "Installation Guide",
+    "section": "2. Set up an environment",
+    "text": "2. Set up an environment\nIt is often very useful to have different python enviroments for different python projects because of the need of different python package versions.\nYou can use conda or micromamba to create different environments. There exists also other virtual environment manager.\nIn this course the explaination is restricted to micromamba as an example. If you want to use something else there exists tons of information online how to use other programs.\n\nMicromamba: Most important commands are:\nRead for more detail: https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html\nCreating a new virtual environment:\nmicromamba create --name &lt;myenvname&gt;\nInstall new packages:\nmicromamba install &lt;packagename&gt;\nList all environments:\nmicromamba env list\nActivate an environment:\nmicromamba activate &lt;myenvname&gt;\nList all packages of this environment:\nmicromamba list",
+    "crumbs": [
+      "Essentials",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Installation Guide</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Introduction/Lecture0/InstallationGuide.html#usefull-packages-for-data-analyse-and-visualization",
+    "href": "course/chapters/Introduction/Lecture0/InstallationGuide.html#usefull-packages-for-data-analyse-and-visualization",
+    "title": "Installation Guide",
+    "section": "3. Usefull packages for Data Analyse and Visualization:",
+    "text": "3. Usefull packages for Data Analyse and Visualization:\n\nmatplotlib - data visualization library\nnumpy - numerical library\nscipy - scientific library\npandas - data manipulation library\nseaborn - data visualization library\nscikit-learn - machine learning library\nstatsmodels - statistical library\njupyter-notebook/jupyterlab - interactive computing environment\nipykernel - IPython Kernel for Jupyter\npip - package installer for python instead of conda\n\n\n\n\n\n\n\nTip\n\n\n\nRecommendation  Use yml-file with all needed packages and configurations:\n\n\nSave this in a environment.yml file:\nname: myenv\nchannels:\n - conda-forge\ndependencies:\n - python=3.12\n - pandas\n - numpy\n - matplotlib\n - jupyterlab\n - scikit-learn\n - scipy\n - pip\n - ipykernel\n - seaborn\n - statsmodels\nand create an environment with this specific packages:\nmicromamba env create -f environment.yml\nTest your installation by opening the interactive python mode by typing in your terminal (Linux, macOS) / comand prompt (Windows):\npython\nthen something like this should be opened in your terminal (Linux, macOS) / comand prompt (Windows)\nPython 3.12.7 | packaged by conda-forge | (main, Oct  4 2024, 15:57:01) [Clang 17.0.6 ] on darwin\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n&gt;&gt;&gt; \nthen type:\nprint(\"Hello World!\")\nIf this works your installation was successful!",
+    "crumbs": [
+      "Essentials",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Installation Guide</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Introduction/Lecture0/InstallationGuide.html#choose-an-editor",
+    "href": "course/chapters/Introduction/Lecture0/InstallationGuide.html#choose-an-editor",
+    "title": "Installation Guide",
+    "section": "4. Choose an editor",
+    "text": "4. Choose an editor\nAfter you installed python successfully you need a editor for writing your Python programs. Technical you could use everything where you can write text but it is not really purposeful.\nAn editor with syntax highlighting, code completion and debugging is very useful.\n\n\n\n\n\n\nTip\n\n\n\nRecommendation: Visual Studio Code\n\n\n\nOther editors:\n\nSpyder https://www.spyder-ide.org/\nPyCharm (JetBrains) https://www.jetbrains.com/products/compare/?product=pycharm&product=pycharm-ce\nJupyter Notebook https://jupyter.org/ https://code.visualstudio.com/docs/datascience/jupyter-notebooks\nJupyter Lab https://jupyter.org/ https://code.visualstudio.com/docs/datascience/jupyter-notebooks etc.\n\n\n\nPython extension for VS Code:\n\nPython from Microsoft,\nPylance from Microsoft\nand Jupyter from Microsoft (optional it is only needed if you want to use Jupyter Notebooks in VS Code)\n\nAlternatively you can use a Jupyter Notebook (*.ipynb) to execute code.\nWrite the code in a cell and execute it by pressing the run button.\nAdvantage of using Jupyter Notebooks: - The code can run cell by cell and the output is directly shown below the cell. - Further you can write text and equations in markdown cells. - Jupyter Notebooks can also handle different programming languages like Ror Julia. - Therefore it is very popular in the data science community.\nJupyter Notebooks can be used in VS Code, Jupyter Lab, Jupyter Notebook or Google Colab.\n\nIn this course all exercises are provided as Jupyter Notebooks.",
+    "crumbs": [
+      "Essentials",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Installation Guide</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Introduction/Lecture0/InstallationGuide.html#test-your-setup",
+    "href": "course/chapters/Introduction/Lecture0/InstallationGuide.html#test-your-setup",
+    "title": "Installation Guide",
+    "section": "6. Test your setup",
+    "text": "6. Test your setup\n\nopen your editor\nopen a new file and save this file as helloworld.py\nwrite your first test program:\n\nprint(\"Hello World!\")\n\nexecute your program by using your IDE/Editor\nor using command line in the terminal (Linux/MacOS) / command prompt under Windows.\n\ncd /path/to/file\npython helloworld.py\nThe ouput should be: “Hello World!”.\nIf you are using Jupyter Notebook you can also write this code in a cell and execute it by pressing the run button.\n\n\n\n\n\n\nTip\n\n\n\nCongratulations You have successfully set up python!!\n\n\nAlternative to local installation: Google Colab {.unnumbered}\nGoogle Colab is a free cloud service provided by Google. It is based on Jupyter Notebooks and allows you to write and execute Python code in your browser.\n\nThe use of Google Colab needs a Google Account. Please read the Terms of Service and Privacy Policy",
     "crumbs": [
       "Essentials",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Installation Guide</span>"
@@ -160,210 +194,122 @@
   {
     "objectID": "course/chapters/Python/Basics.html",
     "href": "course/chapters/Python/Basics.html",
-    "title": "Rocketstart to the Python Universe",
+    "title": "Python Start",
     "section": "",
-    "text": "Elemental Syntax\nThis will be a very fast and basic start into coding with Python.\nTry it out:\nIf you want to span a command over multiple lines you can use \\ or  if you are using parenthesis in your command you can directly use a new line.\nTry it out:\nWhat does the error message tell you?",
+    "text": "Elemental Syntax\nThis will be a very fast and basic start into coding with Python.",
     "crumbs": [
       "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Python Start</span>"
     ]
   },
   {
-    "objectID": "course/chapters/Python/Basics.html#elemental-syntax",
-    "href": "course/chapters/Python/Basics.html#elemental-syntax",
-    "title": "Rocketstart to the Python Universe",
-    "section": "",
-    "text": "Comands\nEach line of code is a command. The computer reads the code from top to bottom and executes each command in order.",
+    "objectID": "course/chapters/Python/Basics.html#comands",
+    "href": "course/chapters/Python/Basics.html#comands",
+    "title": "Python Start",
+    "section": "Comands",
+    "text": "Comands\nEach line of code is a command. The computer reads the code from top to bottom and executes each command in order.\n\n\n\n\n\n\nExample - Hello World\n\n\n\nprint is a command that tells the computer to display the text that follows it.\n\n\nTry it out:\n\n\n\n\n\n\nIf you want to span a command over multiple lines you can use \\ or  if you are using parenthesis in your command you can directly use a new line.\n result = 1 + 2 + 3 + \\\n          7 + 8 + 9\n numbers = [\n     1, 2, 3,\n     4, 5, 6,\n     7, 8, 9\n ]\n## Indentation {.unnumbered} In Python code blocks are not structured by brackets or semicolons like C/C++ or Java but by indentation. This means that the code inside a loop or a function is indented by a tab or four spaces.\n\n\n\n\n\n\nWarning\n\n\n\nIndentations are curcial in Python. If you don’t indent your code correctly, you will get an typical beginner error.\nPay attention to not mix tabs and spaces in your code.\n\n\n\n\n\n\n\n\nNote\n\n\n\nExample - Wrong Indentation {.unnumbered}\n\n\nTry it out:\n\n\n\n\n\n\nAll the lines in the block must have the same indentation:",
     "crumbs": [
       "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Python Start</span>"
     ]
   },
   {
-    "objectID": "course/chapters/Python/Basics.html#modules",
-    "href": "course/chapters/Python/Basics.html#modules",
-    "title": "Rocketstart to the Python Universe",
-    "section": "Modules",
-    "text": "Modules\nThere exist a lot of libraries and modules in Python.  Libraries is a term to describe a collection of modules.  Packages are a way to collect related modules together within a single tree-like hierarchy.  Modules are a collection of files.  A script is a file that can be run independently.  You can use the import statement to import the whole module.  You can use the from statement to import a specific part of the module.  You can use the dir() function to list the names in a module.  You can use the help() function to get help on a module. \nimport numpy as np # the library numpy is imported\nfrom matplotlib import pyplot as plt # the library pyplot is imported from matplotlib module",
+    "objectID": "course/chapters/Python/Basics.html#error-messages",
+    "href": "course/chapters/Python/Basics.html#error-messages",
+    "title": "Python Start",
+    "section": "Error messages",
+    "text": "Error messages\nWhen you run a command that has an error, Python will print an error message.\nThe so called stack trace. It is a list of error messages that Python prints when an error occurs.\nIt gives you information about the error and the location of the error in your code.\nThe strack track is read from bottom to top.\nThe last line contains the error message and the line number where the error occured.\n\n\n\n\n\n\nTip\n\n\n\nOften the error messages are not very clear. You can search for the error message in the internet. Stackoverflow has a lot of answers to common errors. Or you can ask some AI e.g. ChatGPT.\n\n\n\n\n\n\n\n\nNote\n\n\n\nExample - Cryptic Error Message {.unnumbered} What does the error message tell you?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nSolution {.unnumbered} The error message tells you that you are trying to access an index that is out of range.",
     "crumbs": [
       "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Python Start</span>"
     ]
   },
   {
-    "objectID": "course/chapters/Python/Basics.html#io-inputoutput",
-    "href": "course/chapters/Python/Basics.html#io-inputoutput",
-    "title": "Rocketstart to the Python Universe",
-    "section": "I/O (Input/Output)",
-    "text": "I/O (Input/Output)\nYou can use the print() function to print a message to the screen.  You can use the input() function to get input from the user.  You can use the open() function to open a file.  You can use the write() function to write to a file.  You can use the read() function to read from a file.  You can use the close() function to close a file.  You can use the with statement to open a file and automatically close it when you are done.  You can use the os module to work with files and directories.  You can use the sys module to work with command line arguments.  You can use the argparse module to work also with command line arguments. \n # This should print \"Hello World!\" to the console\nprint(\"Hello World!\")\n# This should ask the user to enter a number and print it to the console\nprint(input(\"Enter a number: \"))\n# This should write \"Hello World!\" to the file \"file.txt\"\nopen(\"file.txt\", \"w\").write(\"Hello World!\") \n# This should read the file \"file.txt\" and print the content to the console\nprint(open(\"file.txt\").read()) \n# This should print \"Hello World!\" to the console without a newline\nprint(\"Hello World without newline.\", end=\"\") \nprint(\"Next print statement.\")\n# This should read the file \"file.txt\" and print the content to the console\nwith open(\"file.txt\", \"r\") as file: print(file.read())",
+    "objectID": "course/chapters/Python/Basics.html#comments",
+    "href": "course/chapters/Python/Basics.html#comments",
+    "title": "Python Start",
+    "section": "Comments",
+    "text": "Comments\nComments are important. They help you and others to understand your code.  You can use the ` symbol to write comments.\nDocstrings are used to document the code for example with pydoc. They are written using triple quotes `““” ““““`\n# This is a comment\n\n\"\"\"\nThis is a documentation.\nYou can document your code for example by pydoc\n\"\"\"",
     "crumbs": [
       "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Python Start</span>"
     ]
   },
   {
-    "objectID": "course/chapters/Python/Basics.html#system",
-    "href": "course/chapters/Python/Basics.html#system",
-    "title": "Rocketstart to the Python Universe",
-    "section": "System",
-    "text": "System\nThere are a lot of modules in Python to work with the system.  You can use the os module to work with files and directories.  You can use the sys module to work with command line arguments.  You can use the argparse module to work also with command line arguments. \nMost important functions are:  - os.getcwd() to get the current working directory.  - os.chdir() to change the current working directory.  - os.listdir() to list the files in a directory.  - os.mkdir() to create a directory.  - os.rmdir() to remove a directory.  - os.remove() to remove a file.  - os.rename() to rename a file.  - os.path.exists() to check if a file or directory exists.  - os.path.isfile() to check if a file exists.  - os.path.isdir() to check if a directory exists.  - os.path.join() to join two paths.  - os.path.basename() to get the base name of a path.  - os.path.dirname() to get the directory name of a path.  - os.path.abspath() to get the absolute path of a path.  - os.path.split() to split a path into a directory and a file.  - os.path.splitext() to split a path into a base name and an extension.  - os.path.getsize() to get the size of a file.  - os.path.getmtime() to get the modification time of a file. \n\nsys.argv to get the command line arguments. \nsys.exit() to exit the program. \nsys.stdin to read from the standard input. \nsys.stdout to write to the standard output. \nsys.stderr to write to the standard error. \nargparse.ArgumentParser() to create a parser. \nadd_argument() to add an argument to the parser. \nparse_args() to parse the command line arguments. \n\nimport os\n# This should remove the file \"file.txt\"\nos.remove(\"file.txt\")\nFor sys you can use the sys.argv to get the command line arguments.  sys.argv is a list of the command line arguments.  sys.argv[0] is the name of the script.  sys.argv[1] is the first argument. \nimport sys\nfirst_argument = sys.argv[1]\nFor more information about the sys module you can visit the official documentation.\nFor Argparse you can use the following code:\nfrom argparse import ArgumentParser\n# For python scripts:\n# You can use argparse to parse command line arguments\nparser = ArgumentParser(description=\"This is a description.\")\nparser.add_argument(\"--arg1\", help=\"This is the first argument.\")\nparser.add_argument(\"---arg2\", help=\"This is the second argument.\")\nargs = parser.parse_args()\nFor more information about Argparse you can visit the official documentation.",
+    "objectID": "course/chapters/Python/Basics.html#if-statement",
+    "href": "course/chapters/Python/Basics.html#if-statement",
+    "title": "Python Start",
+    "section": "if statement",
+    "text": "if statement",
     "crumbs": [
       "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Python Start</span>"
     ]
   },
   {
-    "objectID": "course/chapters/Python/Basics.html#paths",
-    "href": "course/chapters/Python/Basics.html#paths",
-    "title": "Rocketstart to the Python Universe",
-    "section": "Paths",
-    "text": "Paths\nPay attention to the paths in your code. They are different defined in Windows and Linux. In Windows and macOS, you use backslashes / and in Linux, you use forward slashes \\.\nTo avoid this problem you can use the os or pathlib module to make your code platform independent.\nimport os\n\npath = os.path.join('folder1', 'folder2', 'folder3', 'data.dat')\nprint(path)\nworking_dir = os.getcwd()\nprint(working_dir)\nfrom pathlib import Path\n\npath = Path('folder1') / 'folder2' / 'folder3' / 'data.dat'\nprint(path)\nworking_dir = Path.cwd()\nprint(working_dir)",
+    "objectID": "course/chapters/Python/Basics.html#breakcotinuepass",
+    "href": "course/chapters/Python/Basics.html#breakcotinuepass",
+    "title": "Python Start",
+    "section": "break,cotinue,pass",
+    "text": "break,cotinue,pass\n\nexample break\n\n\n\n\n\n\n\n\nexample continue\n\n\n\n\n\n\n\n\nexample pass",
     "crumbs": [
       "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Python Start</span>"
     ]
   },
   {
-    "objectID": "course/chapters/Python/Basics.html#variables",
-    "href": "course/chapters/Python/Basics.html#variables",
-    "title": "Rocketstart to the Python Universe",
-    "section": "Variables",
-    "text": "Variables\nIn Python, you don’t need to declare the type of a variable.  You can assign a value to a variable using the = operator. \n\na = 1 # a is a variable\nb = \"String\" # b is a string\nprint(1, \" is an\", type(a))\nprint(b, \" is a\", type(b))\n\n1  is an &lt;class 'int'&gt;\nString  is a &lt;class 'str'&gt;",
+    "objectID": "course/chapters/Python/Basics.html#for-loops",
+    "href": "course/chapters/Python/Basics.html#for-loops",
+    "title": "Python Start",
+    "section": "For Loops",
+    "text": "For Loops",
     "crumbs": [
       "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Python Start</span>"
     ]
   },
   {
-    "objectID": "course/chapters/Python/Basics.html#data-types",
-    "href": "course/chapters/Python/Basics.html#data-types",
-    "title": "Rocketstart to the Python Universe",
-    "section": "Data Types",
-    "text": "Data Types\nPython has several data types. The most common are: - int for integers - float for floating point numbers - str for strings - bool for booleans - list for lists - tuple for tuples - dict for dictionaries - set for sets\nYou can use the type() function to get the type of a variable.  You can use the isinstance() function to check if a variable is an instance of a class.  Type casting is the process of converting one data type to another.  You can use the int(), float(), str(), bool(), list(), tuple(), dict(), set() functions to cast a variable to a different type. \n\nx = 5 # int\nprint(x,type(x)) # print the type of x\n\n5 &lt;class 'int'&gt;\n\n\n\ny = 5.12 # float\nprint(y,type(y))\n\n5.12 &lt;class 'float'&gt;\n\n\n\nc = 2.8j # complex\nprint(c,type(c))\n\n2.8j &lt;class 'complex'&gt;\n\n\n\ns = \"Hello World\" # string\nprint(s,type(s))\n\nHello World &lt;class 'str'&gt;\n\n\n\n\nprint(\"length of word: \", len(s)) # length of string\nprint(\"character on position 2: \", s[2]) \nprint(\"last 3 characters: \", s[-3:])\ns2 = s + \"!\"\nprint(s2)\ns3 = \"\\\"Hello world\\\"!\"\nprint(s3)\n\n\nlength of word:  11\ncharacter on position 2:  l\nlast 3 characters:  rld\nHello World!\n\"Hello world\"!\n\n\n\nd = dict(name=\"Max\",lastname=\"Musterman\",height=1.89) # dictionary\nprint(d,type(d))\n\n{'name': 'Max', 'lastname': 'Musterman', 'height': 1.89} &lt;class 'dict'&gt;\n\n\n\nb = True # boolean\nprint(b,type(b))\n\nTrue &lt;class 'bool'&gt;\n\n\n\ndataset = {1,12,3} # set \nprint(dataset,type(dataset))\n\n{1, 3, 12} &lt;class 'set'&gt;\n\n\n\ndataset2 = set((1.2,2,2)) # set\nprint(dataset2,type(dataset2))\n\n{1.2, 2} &lt;class 'set'&gt;\n\n\n\nr = range(0,10,2) # range\nprint(r,type(r))\n\nrange(0, 10, 2) &lt;class 'range'&gt;\n\n\n\nl = [1,2,2,3] # list\nprint(l,type(l))\nprint(\"length of list\",len(l))\n\n[1, 2, 2, 3] &lt;class 'list'&gt;\nlength of list 4\n\n\n\nt = (1,2) # tuple\nprint(t,type(t))\n\n(1, 2) &lt;class 'tuple'&gt;\n\n\n\n#type conversion\nf = float(x)\nprint(f,type(f))\n\n5.0 &lt;class 'float'&gt;",
+    "objectID": "course/chapters/Python/Basics.html#while-loops",
+    "href": "course/chapters/Python/Basics.html#while-loops",
+    "title": "Python Start",
+    "section": "While Loops",
+    "text": "While Loops",
     "crumbs": [
       "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Python/Basics.html#lists",
-    "href": "course/chapters/Python/Basics.html#lists",
-    "title": "Rocketstart to the Python Universe",
-    "section": "Lists",
-    "text": "Lists\nLists collect multiple items in a single variable.  You can use the [] operator to create a list.  You can use the append() method to add an item to a list.  You can use the insert() method to add an item at a specific position.  You can use the del statement to delete an item from a list.  You can use the remove() method to remove an item from a list.  You can use the pop() method to remove an item at a specific position.  You can use the clear() method to remove all items from a list.  You can use the copy() method to copy a list.  You can use the count() method to count the number of items in a list.  You can use the sort() method to sort a list.  You can use the reverse() method to reverse a list.  You can use the extend() method to add items from another list.  You can use the index() method to get the index of an item.  You can use the len() function to get the length of a list.  You can use the list() function to create a list. \n\n\na = ['a', 'b', 'c']\nb = [1,3,'a', 1j]\nlen(a) #length of list\n\n3\n\n\n\n\n\n\n\n\nWarning\n\n\n\nIndex is starting with 0 in Python.\n\n\n\n\nl = ['first', 'second', 'third']\nl[0]\n\n'first'\n\n\nLast element is reached by index -1.\n\nl[-1]\n\n'third'",
-    "crumbs": [
-      "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Python/Basics.html#mutable-and-immutable-objects",
-    "href": "course/chapters/Python/Basics.html#mutable-and-immutable-objects",
-    "title": "Rocketstart to the Python Universe",
-    "section": "Mutable and Immutable Objects",
-    "text": "Mutable and Immutable Objects\nImmutable objects cannot be changed.  Mutable objects can be changed.  Immutable objects are: int, float, bool, str, tuple, frozenset.  Mutable objects are: list, dict, set. \nThat means if you change an immutable object, a new object is created.  If you change a mutable object, the object is changed. \n\na = 1\nb = a\n\nprint(\"a:\",a)\nprint(\"b:\",b)\n\na = 2\nprint(\"------\")\nprint(\"a:\",a)\nprint(\"b:\",b)\n\nb = 3\nprint(\"------\")\nprint(\"a:\",a)\nprint(\"b:\",b)\n\nb = a\nprint(\"------\")\nprint(\"a:\",a)\nprint(\"b:\",b)\n\n\na: 1\nb: 1\n------\na: 2\nb: 1\n------\na: 2\nb: 3\n------\na: 2\nb: 2\n\n\n\n# mutable objects\na = [1,2,3]\nb = a\n\nprint(\"a:\",a)\nprint(\"b:\",b)\n\na[0] = 4\nprint(\"------\")\nprint(\"a:\",a)\nprint(\"b:\",b)\n\nb[1] = 5\nprint(\"------\")\nprint(\"a:\",a)\nprint(\"b:\",b)\n\n\na: [1, 2, 3]\nb: [1, 2, 3]\n------\na: [4, 2, 3]\nb: [4, 2, 3]\n------\na: [4, 5, 3]\nb: [4, 5, 3]\n\n\nThis happens because a and b are pointing to the same memory location. So if you change a, b will also change. If you want to avoid this, you can use the copy() method.\n\nb = a.copy()\nprint(\"------\")\nprint(\"a:\",a)\nprint(\"b:\",b)\n\na[2] = 6\nprint(\"------\")\nprint(\"a:\",a)\nprint(\"b:\",b)\n\nb[2] = 7\nprint(\"------\")\nprint(\"a:\",a)\nprint(\"b:\",b)\n\n------\na: [4, 5, 3]\nb: [4, 5, 3]\n------\na: [4, 5, 6]\nb: [4, 5, 3]\n------\na: [4, 5, 6]\nb: [4, 5, 7]",
-    "crumbs": [
-      "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Python/Basics.html#string-formatting",
-    "href": "course/chapters/Python/Basics.html#string-formatting",
-    "title": "Rocketstart to the Python Universe",
-    "section": "String Formatting",
-    "text": "String Formatting\nYou can use the following escape characters:\n`\\n`: new line\n`\\t`: tab\n`\\\\`: backslash\n`\\'`: single quote\n`\\\"`: double quote\n`\\b`: backspace\n`\\r`: carriage return\n`\\f`: form feed\n`\\ooo`: octal value\n`\\xhh`: hex value\nYou can use the + operator to concatenate strings. \n\na = \"This \" \nb = \"is a string\"\nprint(a + b)\n\nThis is a string\n\n\nFor print formatting you can use the format() method.  You can use the f-string method.  See for more information here\n\na = 1.5434\nb = \"nm\"\nprint(\"This is an integer %d %s\" % (a, b))\nprint(\"This is a float formating with minimum \\\n1 number of character wide and 2 digits %1.2f %s\" % (a, b))\nprint(\"This is scientific notation with \\\n2 digits %.2e %s\" % (a, b))\nprint(\"This is a string %s %s\" % (a, b))\nprint(\"This is an example of using \\\nformat() method {0} {1}\".format(a, b)) \nprint(\"This is an example of using format() \\\nmethod with named arguments {a} {b}\".format(a=a, b=b))\n\nThis is an integer 1 nm\nThis is a float formating with minimum 1 number of character wide and 2 digits 1.54 nm\nThis is scientific notation with 2 digits 1.54e+00 nm\nThis is a string 1.5434 nm\nThis is an example of using format() method 1.5434 nm\nThis is an example of using format() method with named arguments 1.5434 nm",
-    "crumbs": [
-      "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Python/Basics.html#operators",
-    "href": "course/chapters/Python/Basics.html#operators",
-    "title": "Rocketstart to the Python Universe",
-    "section": "Operators",
-    "text": "Operators\nThere are different types of operators in Python. \n+: addition\n-: subtraction\n*: multiplication\n/: division\n%: modulo\n**: exponentiation\n//: floor division\n==: equal\n!=: not equal\n&lt;: less than    \n&gt;: greater than\n&lt;=: less than or equal\n&gt;=: greater than or equal\nand: logical and\nor: logical or\nnot: logical not\nis: identity\nin: membership\n\na = 5.3\nb = 2\nc = 3\n\nprint(\"division: \", a/b)\nprint(\"division: \", b/c, \" type: \", type(b/c))\nprint(\"integer division: \", a//b)\nprint(\"modulo: \", a%b)\nprint(\"float multiplication: \", a*b, \" type: \", type(a*b))\nprint(\"integer multiplication: \", b*c, \" type: \", type(b*c))\nprint(\"exponentiation: \", a**2)\n\ndivision:  2.65\ndivision:  0.6666666666666666  type:  &lt;class 'float'&gt;\ninteger division:  2.0\nmodulo:  1.2999999999999998\nfloat multiplication:  10.6  type:  &lt;class 'float'&gt;\ninteger multiplication:  6  type:  &lt;class 'int'&gt;\nexponentiation:  28.09",
-    "crumbs": [
-      "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Python/Basics.html#control-structures",
-    "href": "course/chapters/Python/Basics.html#control-structures",
-    "title": "Rocketstart to the Python Universe",
-    "section": "Control Structures",
-    "text": "Control Structures\nThe most common control structures are:\nif\nelse\nelif\nfor\nwhile\nbreak\ncontinue\npass\nreturn\n\nif statement\n\nx = 0\nif x &lt; 0:\n    print(\"x &lt; 0\")\nelif x &gt; 0:\n    print(\"x &gt; 0\")\nelse:\n    print(\"x = 0\")\n\nx = 0\n\n\n\n\nbreak,cotinue,pass\n\n# example break\nfor i in range(10):\n    if i == 5:\n        break\n    print(i)\n\n0\n1\n2\n3\n4\n\n\n\n# example continue\nfor i in range(10):\n    if i == 5:\n        continue\n    print(i)\n    \n\n0\n1\n2\n3\n4\n6\n7\n8\n9\n\n\n\n# example pass\nfor i in range(10):\n    if i == 5:\n        pass\n    print(i)\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\n\n\n\nFor Loops\n\nfor i in range(5): #from 0 to 4 \n    print(i)\n\n0\n1\n2\n3\n4\n\n\n\nfor i in range(1,10,2): # start 1, stop 10 excluded, step 2\n    print(i)\n\n1\n3\n5\n7\n9\n\n\n\nl = list(range(0,10))\n\n\nl\n\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n\n\nfor i in l: # using list\n    print(i)\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\n\n\n\nWhile Loops\n\nx = 0\nwhile x  &lt; 4:\n    print(l[x])\n    x = x + 1\n\n0\n1\n2\n3\n\n\n\nprint(\"while loop with continue and break statement\")\nn = 0\nwhile(n &lt; 10):\n    n+=1\n    if n == 5:\n        continue\n    if n == 7:\n        print(\"The loop reached 7 and will break now.\")\n        break\n    print(n)\n\nwhile loop with continue and break statement\n1\n2\n3\n4\n6\nThe loop reached 7 and will break now.",
-    "crumbs": [
-      "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Python/Basics.html#functions",
-    "href": "course/chapters/Python/Basics.html#functions",
-    "title": "Rocketstart to the Python Universe",
-    "section": "Functions",
-    "text": "Functions\nFunctions are defined using the def keyword.  You can use the return keyword to return a value from a function.  The parameters of a function are defined in the parentheses.  Multiple parameters are separated by commas.  You can use default values for the parameter e.g. b=5.  Multiple return values are separated by commas.  They are stored in a tuple. \n\ndef summation(a,b=5):\n    return a+b, a-b\n\n\nsummation(4,2)\n\n(6, 2)\n\n\n\nsum, sub = summation(4)\nprint(sum)\nprint(sub)\n\n9\n-1\n\n\n\nx = 3\n\n\ndef multiple_return_value(x,a,b):\n    n = x+a\n    m = x-b\n    return [n,m]\nprint(multiple_return_value(x,5,10)[0],multiple_return_value(x,5,10)[1])\n\n8 -7",
-    "crumbs": [
-      "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Python/Basics.html#style-guideline-for-writing-python-code",
-    "href": "course/chapters/Python/Basics.html#style-guideline-for-writing-python-code",
-    "title": "Rocketstart to the Python Universe",
-    "section": "Style guideline for writing python code",
-    "text": "Style guideline for writing python code\nFor writing a readable code, it is important to follow a style guideline.  The most common style guideline for Python is PEP 8.",
-    "crumbs": [
-      "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
-    ]
-  },
-  {
-    "objectID": "course/chapters/Python/Basics.html#exercises",
-    "href": "course/chapters/Python/Basics.html#exercises",
-    "title": "Rocketstart to the Python Universe",
-    "section": "Exercises",
-    "text": "Exercises\nDownload it locally and try to solve the exercises. \nBasic Python\nOr open it in Google Colab:\nBasic Python",
-    "crumbs": [
-      "Python Crash Course",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Rocketstart to the Python Universe</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Python Start</span>"
     ]
   },
   {
     "objectID": "course/chapters/Python/BasicsModules.html",
     "href": "course/chapters/Python/BasicsModules.html",
-    "title": "Numpy and Pandas",
+    "title": "Basic Modules",
     "section": "",
-    "text": "Numpy\nMore information can found at the Numpy website.",
+    "text": "Numpy and Pandas",
     "crumbs": [
       "Python Crash Course",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Numpy and Pandas</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Modules</span>"
     ]
   },
   {
     "objectID": "course/chapters/Python/BasicsModules.html#numpy",
     "href": "course/chapters/Python/BasicsModules.html#numpy",
-    "title": "Numpy and Pandas",
-    "section": "",
-    "text": "Numpy is the most important library for Python.\nThe standard data types in Python are very slow and not very efficient for data analysis.\nNumpy is based mainly on C an C++.\nThis allows Numpy to be faster than plain Python.\nWith Numpy a new data type is introduced numpy array.\nNumpy arrays are multidimensional arrays that are much faster than Python lists.\nThe libary also includes many mathematical functions and methods for linear algebra.\n\n\n\nNumpy Arrays\nAn array can be described as multidimensional lists. For example a matrix is a 2D array.\n\n\n[[1 2 3]\n [4 5 6]\n [7 8 9]]\n\n\nThe elements of an array can be accessed using the index of the element.\n\n\n1\n\n\n\n\n6\n\n\n\n\n[1 4 7]\n\n\n\n\n[4 5 6]\n\n\n\n\n[[4.9e-324 9.9e-324 1.5e-323]\n [2.0e-323 2.5e-323 3.0e-323]\n [3.5e-323 4.0e-323 4.4e-323]]\n\n\n\n\n[[1. 1. 1.]\n [1. 1. 1.]\n [1. 1. 1.]]\n\n\n\n\n[[0. 0. 0.]\n [0. 0. 0.]\n [0. 0. 0.]]\n\n\n\n\n[1 3 5 7 9]\n\n\n\n\n[  0.  25.  50.  75. 100.]\n\n\n\n\n[[0.2256729  0.02910694 0.54348537]\n [0.37709634 0.44347666 0.83187513]\n [0.96959175 0.36089956 0.10453707]]",
+    "title": "Basic Modules",
+    "section": "Numpy",
+    "text": "Numpy\n\nNumpy is the most important library for Python.\nThe standard data types in Python are very slow and not very efficient for data analysis.\nNumpy is based mainly on C an C++.\nThis allows Numpy to be faster than plain Python.\nWith Numpy a new data type is introduced numpy array.\nNumpy arrays are multidimensional arrays that are much faster than Python lists.\nThe libary also includes many mathematical functions and methods for linear algebra.",
     "crumbs": [
       "Python Crash Course",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Numpy and Pandas</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Modules</span>"
     ]
   },
   {
     "objectID": "course/chapters/Python/BasicsModules.html#pandas",
     "href": "course/chapters/Python/BasicsModules.html#pandas",
-    "title": "Numpy and Pandas",
+    "title": "Basic Modules",
     "section": "Pandas",
-    "text": "Pandas\n\nPandas is a library for data manipulation and analysis.\nIt is built on top of Numpy.\nWith Pandas you are working with dataframes and not with arrays like in Numpy.\nDataframes are two-dimensional labeled data structures with columns of potentially different types.\nIt is like a table in a database or a spreadsheet. Pandas has a lot of methods to manipulate dataframes.\nYou can select subsets of the data, filter, sort, group, merge, join, etc.\nYou can statistically analyze the data, export the data to different file formats, but also plot the data with the help of matplotlib.\n\nMore information can be found under Pandas website.\n\nPanda DataFrames\nPanda DataFrames are two-dimensional labeled data structures with columns of potentially different types like a table.\n\n\n   gas  moalar_weight\n0  CH4             16\n1  H2O             18\n2  CO2             44",
+    "text": "Pandas\n\nPandas is a library for data manipulation and analysis.\nIt is built on top of Numpy.\nWith Pandas you are working with dataframes and not with arrays like in Numpy.\nDataframes are two-dimensional labeled data structures with columns of potentially different types.\nIt is like a table in a database or a spreadsheet. Pandas has a lot of methods to manipulate dataframes.\nYou can select subsets of the data, filter, sort, group, merge, join, etc.\nYou can statistically analyze the data, export the data to different file formats, but also plot the data with the help of matplotlib.",
     "crumbs": [
       "Python Crash Course",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Numpy and Pandas</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Modules</span>"
     ]
   },
   {
@@ -382,7 +328,7 @@
     "href": "course/chapters/Introduction/Lecture1/DataCollection.html#what-is-data",
     "title": "Introduction to Data Science",
     "section": "What is data?",
-    "text": "What is data?\nData is a collection of numbers, words, measurements, observations or just descriptions of things.",
+    "text": "What is data?\nData is a collection of - numbers - words - measurements - observations",
     "crumbs": [
       "Lecture 1",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to Data Science</span>"
@@ -393,7 +339,7 @@
     "href": "course/chapters/Introduction/Lecture1/DataCollection.html#how-do-you-get-data",
     "title": "Introduction to Data Science",
     "section": "How do you get data?",
-    "text": "How do you get data?\nAt the beginning of every data science project, you need to collect data.\nData can be collected from various sources, such as: - experimental measurements - calculations and simulations - surveys - existing databases - web scraping - APIs - etc.",
+    "text": "How do you get data?",
     "crumbs": [
       "Lecture 1",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to Data Science</span>"
@@ -404,7 +350,7 @@
     "href": "course/chapters/Introduction/Lecture1/DataCollection.html#how-do-you-store-the-data",
     "title": "Introduction to Data Science",
     "section": "How do you store the data?",
-    "text": "How do you store the data?\nThis data can be stored in different locations, such as: - local files - databases - cloud storages - cluster storages - web servers - etc.\nIf you measure data yourself, either the your measurement device will store the data in a specific format, or you will have to store it yourself. Sometimes you have to transform the data into a different format to be able to work with it.\nIf you use data from external sources, you have to make sure that you have legal rights to use the data. Check the data license and terms of use.\nFurther make sure how the data is stored and how you can access it.",
+    "text": "How do you store the data?",
     "crumbs": [
       "Lecture 1",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to Data Science</span>"
@@ -426,7 +372,18 @@
     "href": "course/chapters/Introduction/Lecture1/DataCollection.html#which-data-formats-do-you-use",
     "title": "Introduction to Data Science",
     "section": "Which data formats do you use?",
-    "text": "Which data formats do you use?\nData can be stored in various data formats, such as: - Plain Text files (e.g. CSV, DAT, TXT) - Text files with structure (e.g. JSON, XML) - Spreadsheet files - Binary files (e.g. HDF5, Parquet, NetCDF,Feather, Pickle, npy, etc.) - Databases - chemical and molecular data formats (e.g. XYZ, CIF, PDB, etc.) - etc.\n\nPlain Text Files\nA text file often contains a header with the names of the columns and then the data in rows. Columns can be seperated by different delimiters (spaces, ,, ;, tabs, …).  For example, a file with data from an experiment could look like this:\nTime/s  Temperature/°C\n0         20\n10        21\n...     ...\n\n\nJSON or XML\nJSON stands for JavaScript Object Notation. Data is structured in a key-value format, so that both humans and machines can read it easily.  For example, a JSON file with the same data as above could look like this:\n{\n  \"data\": [\n    {\"Time\": 0, \"Temperature\": 20},\n    {\"Time\": 10, \"Temperature\": 21},\n    ...\n  ]\n}\nXML stands for Extensible Markup Language. It is also designed to be both human-readable and machine-readable.  For example, an XML file with the same data as above could look like this:\n&lt;data&gt;\n  &lt;measurement&gt;\n    &lt;Time&gt;0&lt;/Time&gt;\n    &lt;Temperature&gt;20&lt;/Temperature&gt;\n  &lt;/measurement&gt;\n  &lt;measurement&gt;\n    &lt;Time&gt;10&lt;/Time&gt;\n    &lt;Temperature&gt;21&lt;/Temperature&gt;\n  &lt;/measurement&gt;\n  ...\n\n### Binary Files\n\nData is stored in a binary format and can be read with specific libraries. It is often used for large datasets, as it is more efficient than plain text files. The computer is able to read and write binary files faster than text files. &lt;br&gt; Some common binary file formats are:\n\n- [**HDF5**](https://en.wikipedia.org/wiki/Hierarchical_Data_Format): Hierarchical Data Format, used for large datasets\n- [**Parquet**](https://en.wikipedia.org/wiki/Apache_Parquet): Columnar storage format, used for big data\n- [**NetCDF**](https://en.wikipedia.org/wiki/NetCDF): Network Common Data Form, array-orriented, often for geoscience data\n- [**Feather**](https://arrow.apache.org/docs/python/feather.html): a fast column-based serialization for data frames, initially designed for R and Python, helps to share data between languages\n- [**Pickle**](https://docs.python.org/3/library/pickle.html): Python-specific format, used for serializing Python objects\n- [**npy**](https://numpy.org/doc/stable/reference/generated/numpy.lib.format.html): Numpy-specific format, used for saving numpy arrays\n\nHere is a list of comparison of binary file formats: [Comparison of data serialization formats](https://en.wikipedia.org/wiki/Comparison_of_data-serialization_formats)\n\n### Databases\n\nDatabases are designed for big data storage. The advantage of databases is that they can be queried and updated easily. There are different types of databases, such as:\n- **[SQL](https://en.wikipedia.org/wiki/SQL)** databases (e.g. SQLite, MySQL, PostgreSQL)\n- **[NoSQL](https://en.wikipedia.org/wiki/NoSQL)** databases (e.g. MongoDB)\n- **[Graph databases](https://en.wikipedia.org/wiki/Graph_database#List_of_graph_databases)**\n- **[Time series databases](https://en.wikipedia.org/wiki/Time_series_database)**\n\n### Chemical and Molecular Data Formats\n\nThere are specific data formats for chemical and molecular data, such as:\n- **[XYZ](https://en.wikipedia.org/wiki/XYZ_file_format)**: Cartesian coordinates of atoms\n- **[CIF](https://en.wikipedia.org/wiki/Crystallographic_Information_File)**: Crystallographic Information File, used for crystallographic data\n- **[PDB](https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format))**: Protein Data Bank, used for protein structures\n- **[MOL](https://en.wikipedia.org/wiki/Chemical_table_file)**: Molecule file format, used for chemical structures\n- **[SDF](https://en.wikipedia.org/wiki/Chemical_table_file)**: Structure Data File, used for chemical structures\n- **[SMILES](https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system)**: Simplified Molecular Input Line Entry System, used for chemical structures\n- **[InChI](https://en.wikipedia.org/wiki/International_Chemical_Identifier)**: International Chemical Identifier, used for chemical structures\netc.\n\n\n### Other Data Formats\n- [**Images**](https://en.wikipedia.org/wiki/Image_file_formats): Images can be stored in different formats, such as JPEG, PNG, TIFF, BMP, GIF, etc.\n- [**Audio**](https://en.wikipedia.org/wiki/Audio_file_format): Audio files can be stored in different formats, such as MP3, WAV, FLAC, etc.\n- [**Video**](https://en.wikipedia.org/wiki/Video_file_format): Video files can be stored in different formats, such as MP4, AVI, MOV, etc.\n\n## What type of data do you have?\n\nNext what do you have to consider is the types of your data. \n\n\n```mermaid\ngraph LR\nA[Types of Data] --&gt; B[Numerical]\nA --&gt; C[Categorical]\nB --&gt; D[Discrete]\nB --&gt; E[Continuous]\nC --&gt; F[Ordinal]\nC --&gt; G[Nominal]\nDepending on the type of data analysis could be different.\n\n\n\nNumerical Data\nNumerical data is data that is expressed with numbers. It can be further divided into two types: - Discrete: Data that can only take certain values (e.g. integers) - Continuous: Data that can take any value within a certain range (e.g. real numbers)\nFor example, - measured temperature over time -&gt; continuous - number of chemical substances, which are measured -&gt; discrete\n\n\nCategorical Data\nCategorial means that data is divided into categories. It can be further divided into two types: - Ordinal: Data that has a specific order or ranking - Nominal: Data that has no specific order or ranking\nFor example, - blood type -&gt; nominal {A, B, AB, O} - chemical function group -&gt; nominal {alcohol, ketone, aldehyde, carboxylic acid, etc.} - purity of a substance -&gt; ordinal {low, medium, high} - hardness of a material -&gt; ordinal {soft, medium, hard}",
+    "text": "Which data formats do you use?\nData can be stored in various data formats, such as: - Plain Text files (e.g. CSV, DAT, TXT) - Text files with structure (e.g. JSON, XML) - Spreadsheet files - Binary files (e.g. HDF5, Parquet, NetCDF,Feather, Pickle, npy, etc.) - Databases - chemical and molecular data formats (e.g. XYZ, CIF, PDB, etc.) - etc.\n\nPlain Text Files\nA text file often contains a header with the names of the columns and then the data in rows. Columns can be seperated by different delimiters (spaces, ,, ;, tabs, …).  For example, a file with data from an experiment could look like this:\nTime/s  Temperature/°C\n0         20\n10        21\n...     ...\n\n\n\nJSON or XML\nJSON stands for JavaScript Object Notation. Data is structured in a key-value format, so that both humans and machines can read it easily.  For example, a JSON file with the same data as above could look like this:\n``json { “data”: [ {“Time”: 0, “Temperature”: 20}, {“Time”: 10, “Temperature”: 21}, … ] }\n\n[XML](https://en.wikipedia.org/wiki/XML) stands for Extensible Markup Language. It is also designed to be both human-readable and machine-readable. &lt;br&gt; For example, an XML file with the same data as above could look like this:\n\n```xml\n&lt;data&gt;\n  &lt;measurement&gt;\n    &lt;Time&gt;0&lt;/Time&gt;\n    &lt;Temperature&gt;20&lt;/Temperature&gt;\n  &lt;/measurement&gt;\n  &lt;measurement&gt;\n    &lt;Time&gt;10&lt;/Time&gt;\n    &lt;Temperature&gt;21&lt;/Temperature&gt;\n  &lt;/measurement&gt;\n  ...\n\n\nBinary Files\nData is stored in a binary format and can be read with specific libraries. It is often used for large datasets, as it is more efficient than plain text files. The computer is able to read and write binary files faster than text files.  Some common binary file formats are:\n\nHDF5: Hierarchical Data Format, used for large datasets\nParquet: Columnar storage format, used for big data\nNetCDF: Network Common Data Form, array-orriented, often for geoscience data\nFeather: a fast column-based serialization for data frames, initially designed for R and Python, helps to share data between languages\nPickle: Python-specific format, used for serializing Python objects\nnpy: Numpy-specific format, used for saving numpy arrays\n\nHere is a list of comparison of binary file formats: Comparison of data serialization formats\n\n\nDatabases\nDatabases are designed for big data storage. The advantage of databases is that they can be queried and updated easily. There are different types of databases, such as: - SQL databases (e.g. SQLite, MySQL, PostgreSQL) - NoSQL databases (e.g. MongoDB) - Graph databases - Time series databases\n\n\nChemical and Molecular Data Formats\nThere are specific data formats for chemical and molecular data, such as:\n\nXYZ: Cartesian coordinates of atoms\nCIF: Crystallographic Information File, used for crystallographic data\nPDB: Protein Data Bank, used for protein structures\nMOL: Molecule file format, used for chemical structures\nSDF: Structure Data File, used for chemical structures\nSMILES: Simplified Molecular Input Line Entry System, used for chemical structures\nInChI: International Chemical Identifier, used for chemical structures\nnmrML: Nuclear Magnetic Resonance Markup Language, used for NMR data\nNMReDATA: Nuclear Magnetic Resonance Electronic Data Aggregation, used for NMR data\nJCAMP-DX: Joint Committee on Atomic and Molecular Physical Data, used for spectroscopy data\nmzML: Mass Spectrometry Markup Language, used for mass spectrometry data\naniml: Analytical Information Markup Language, used for analytical data\nFASTA: used for DNA and protein sequences\n\netc.\n\n\nOther Data Formats\n\nImages: Images can be stored in different formats, such as JPEG, PNG, TIFF, BMP, GIF, etc.\nAudio: Audio files can be stored in different formats, such as MP3, WAV, FLAC, etc.\nVideo: Video files can be stored in different formats, such as MP4, AVI, MOV, etc.",
+    "crumbs": [
+      "Lecture 1",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to Data Science</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Introduction/Lecture1/DataCollection.html#what-type-of-data-do-you-have",
+    "href": "course/chapters/Introduction/Lecture1/DataCollection.html#what-type-of-data-do-you-have",
+    "title": "Introduction to Data Science",
+    "section": "What type of data do you have?",
+    "text": "What type of data do you have?\nNext what do you have to consider is the types of your data.\nDepending on the type of data analysis could be different.\n\nNumerical Data\nNumerical data is data that is expressed with numbers. It can be further divided into two types: - Discrete: Data that can only take certain values (e.g. integers) - Continuous: Data that can take any value within a certain range (e.g. real numbers)\nFor example, - measured temperature over time -&gt; continuous - number of chemical substances, which are measured -&gt; discrete\n\n\nCategorical Data\nCategorial means that data is divided into categories. It can be further divided into two types: - Ordinal: Data that has a specific order or ranking - Nominal: Data that has no specific order or ranking\nFor example, - blood type -&gt; nominal {A, B, AB, O} - chemical function group -&gt; nominal {alcohol, ketone, aldehyde, carboxylic acid, etc.} - purity of a substance -&gt; ordinal {low, medium, high} - hardness of a material -&gt; ordinal {soft, medium, hard}",
     "crumbs": [
       "Lecture 1",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to Data Science</span>"
@@ -444,25 +401,190 @@
     ]
   },
   {
-    "objectID": "course/chapters/Basics/Lecture1/SimpleDataImport.html#reading-plain-text-files",
-    "href": "course/chapters/Basics/Lecture1/SimpleDataImport.html#reading-plain-text-files",
+    "objectID": "course/chapters/Basics/Lecture1/SimpleDataImport.html#how-do-you-read-the-data",
+    "href": "course/chapters/Basics/Lecture1/SimpleDataImport.html#how-do-you-read-the-data",
     "title": "Simple Data Import",
-    "section": "Reading Plain Text Files",
-    "text": "Reading Plain Text Files\nYou can use the pandas or numpy library to read CSV files.\n\nPandas\nPandas is read function is quite fast and can read large files. The advantage is that different data types can be read in the same file. The reading functions return a DataFrame object.\nPandas has different functions to read different file formats. - pandas.read_csv() function is can read CSV files. - pandas.read_table() function is can read general delimiter files. - pandas.read_fwf() function is can read fixed-width files.\nMostly used function is pandas.read_csv() because you can specify the delimiter, header, and other options.\nimport pandas as pd\ndf = pd.read_csv('file.csv')\n\nimport pandas as pd\ndata = pd.read_csv('../../../data/temperatures.csv')\ndata\n\n\n\n\n\n\n\n\ntime;temperature\n\n\n\n\n0\n1;303.073024218\n\n\n1\n2;302.951624807\n\n\n2\n3;302.831229733\n\n\n3\n4;302.73615227\n\n\n4\n5;302.708880354\n\n\n...\n...\n\n\n44635\n44636;296.102947663\n\n\n44636\n44637;296.173110138\n\n\n44637\n44638;296.140000813\n\n\n44638\n44639;296.169289777\n\n\n44639\n44640;296.287904152\n\n\n\n\n44640 rows × 1 columns\n\n\n\nThe data has a different delimiter than the default comma. You can specify the delimiter using the sep parameter.\ndf = pd.read_csv('file.csv', sep=';')\n\ndata = pd.read_csv('../../../data/temperatures.csv', sep=';')\ndata\n\n\n\n\n\n\n\n\ntime\ntemperature\n\n\n\n\n0\n1\n303.073024\n\n\n1\n2\n302.951625\n\n\n2\n3\n302.831230\n\n\n3\n4\n302.736152\n\n\n4\n5\n302.708880\n\n\n...\n...\n...\n\n\n44635\n44636\n296.102948\n\n\n44636\n44637\n296.173110\n\n\n44637\n44638\n296.140001\n\n\n44638\n44639\n296.169290\n\n\n44639\n44640\n296.287904\n\n\n\n\n44640 rows × 2 columns\n\n\n\nNow the data is read correctly. The header is already taken from the first row. If you want to specify the header, you can use the header parameter.\ndf = pd.read_csv('file.csv', header=None) # No header\ndf = pd.read_csv('file.csv', header=0) # Header is in the first row\ndf = pd.read_csv('file.csv', header=1) # Header is in the second row\n\ndata = pd.read_csv('../../../data/temperatures.csv', sep=';', header=0)\ndata\n\n\n\n\n\n\n\n\ntime\ntemperature\n\n\n\n\n0\n1\n303.073024\n\n\n1\n2\n302.951625\n\n\n2\n3\n302.831230\n\n\n3\n4\n302.736152\n\n\n4\n5\n302.708880\n\n\n...\n...\n...\n\n\n44635\n44636\n296.102948\n\n\n44636\n44637\n296.173110\n\n\n44637\n44638\n296.140001\n\n\n44638\n44639\n296.169290\n\n\n44639\n44640\n296.287904\n\n\n\n\n44640 rows × 2 columns\n\n\n\nIf your data contains whitespace, you can use the skipinitialspace parameter to remove initial whitespaces.\ndf = pd.read_csv('file.csv', skipinitialspace=True,sep=' ')\n\ndata = pd.read_csv('../../../data/temperatures.dat', skipinitialspace=True, sep=\" \")\ndata\n\n\n\n\n\n\n\n\n1\n303.073024218\n\n\n\n\n0\n2\n302.951625\n\n\n1\n3\n302.831230\n\n\n2\n4\n302.736152\n\n\n3\n5\n302.708880\n\n\n4\n6\n302.647462\n\n\n...\n...\n...\n\n\n44634\n44636\n296.102948\n\n\n44635\n44637\n296.173110\n\n\n44636\n44638\n296.140001\n\n\n44637\n44639\n296.169290\n\n\n44638\n44640\n296.287904\n\n\n\n\n44639 rows × 2 columns\n\n\n\nNow the data has no header. You can specify the header using the names parameter.\ndf = pd.read_csv('file.csv', names=['A', 'B', 'C', 'D'])\n\ndata = pd.read_csv('../../../data/temperatures.dat', sep=' ', skipinitialspace=True,header=1,names=['t', 'T'])\n# important to set header=None, otherwise the first line is used as header\ndata\n\n\n\n\n\n\n\n\nt\nT\n\n\n\n\n0\n3\n302.831230\n\n\n1\n4\n302.736152\n\n\n2\n5\n302.708880\n\n\n3\n6\n302.647462\n\n\n4\n7\n302.513749\n\n\n...\n...\n...\n\n\n44633\n44636\n296.102948\n\n\n44634\n44637\n296.173110\n\n\n44635\n44638\n296.140001\n\n\n44636\n44639\n296.169290\n\n\n44637\n44640\n296.287904\n\n\n\n\n44638 rows × 2 columns\n\n\n\nYou see that also not .csv files can be read with the read_csv() function.\nThe read_csv() function has a lot of parameters. Look in the documentation. You can see which parameters you can set https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html\nFor example, - delimiter parameter can be used to specify the delimiter instead of sep. Both are the same. Default is ,. - header parameter can be used to specify the header row. Default is inferred from the file. - skipinitialspace parameter can be used to remove initial whitespaces. Default is False. - names parameter can be used to specify the column names. - skiprows parameter can be used to skip rows at the beginning of the file. - skipfooter parameter can be used to skip rows at the end of the file. - nrows parameter can be used to read only a specific number of rows. - usecols parameter can be used to read only specific columns. - dtype parameter can be used to specify the data type of the columns. - na_values parameter can be used to specify the missing values. - keep_default_na parameter can be used to specify if the default missing values should be kept. Default is True. - na_filter parameter can be used to recognize missing values without NA or NaN values. Default is True. - true_values parameter can be used to specify the values that should be recognized as True. - false_values parameter can be used to specify the values that should be recognized as False. - parse_dates parameter can be used to parse dates. Default is False.\nSome examples are:\ndf = pd.read_csv('file.csv', skiprows=2)\n\ndata = pd.read_csv('../../../data/temperatures.csv', sep=';', header=0, names=['t', 'T'], skiprows=1)\ndata # now the first row is skipped, only 44638 rows are read instead of 44639\n\n\n\n\n\n\n\n\nt\nT\n\n\n\n\n0\n2\n302.951625\n\n\n1\n3\n302.831230\n\n\n2\n4\n302.736152\n\n\n3\n5\n302.708880\n\n\n4\n6\n302.647462\n\n\n...\n...\n...\n\n\n44634\n44636\n296.102948\n\n\n44635\n44637\n296.173110\n\n\n44636\n44638\n296.140001\n\n\n44637\n44639\n296.169290\n\n\n44638\n44640\n296.287904\n\n\n\n\n44639 rows × 2 columns\n\n\n\nMissing value examples:\n\ndata = pd.read_csv('../../../data/temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=False)\nprint(data.loc[20:26]) # print some rows to see the NaN values\n\n     t              T\n20  21  302.020507467\n21  22               \n22  23  301.845408096\n23  24  301.833550446\n24  25  301.785933229\n25  26  301.846169501\n26  27  301.779994697\n\n\nIf the na_filteris set to False, the missing values are not recognized. But if it set on True, the missing values are recognized.\n\ndata = pd.read_csv('../../../data/temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=True)\nprint(data.loc[20:26]) # print some rows to see the NaN values\n\n     t           T\n20  21  302.020507\n21  22         NaN\n22  23  301.845408\n23  24  301.833550\n24  25  301.785933\n25  26  301.846170\n26  27  301.779995\n\n\n\n\nNumpy\nNumpy has two main functions to read text files. - numpy.loadtxt() function is used to read text files. - numpy.genfromtxt() function is used to read text files with missing values.\nIn comparison to the pandas library, the numpy library is slower and can not read different data types in the same file. So you can not read a file with strings and numbers in the same file.\nimport numpy as np\ndata = np.loadtxt('file.csv', delimiter=',')\nIf you try to read a file with a header row, you will get an error.\n\nimport numpy as np\ndata = np.loadtxt('../../../data/temperatures.csv', delimiter=';')\n\n\n---------------------------------------------------------------------------\nValueError                                Traceback (most recent call last)\nValueError: could not convert string to float: 'time'\n\nThe above exception was the direct cause of the following exception:\n\nValueError                                Traceback (most recent call last)\nCell In[164], line 2\n      1 import numpy as np\n----&gt; 2 data = np.loadtxt('../../../data/temperatures.csv', delimiter=';')\n\nFile ~/y/envs/myenv/lib/python3.12/site-packages/numpy/lib/npyio.py:1373, in loadtxt(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, quotechar, like)\n   1370 if isinstance(delimiter, bytes):\n   1371     delimiter = delimiter.decode('latin1')\n-&gt; 1373 arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,\n   1374             converters=converters, skiplines=skiprows, usecols=usecols,\n   1375             unpack=unpack, ndmin=ndmin, encoding=encoding,\n   1376             max_rows=max_rows, quote=quotechar)\n   1378 return arr\n\nFile ~/y/envs/myenv/lib/python3.12/site-packages/numpy/lib/npyio.py:1016, in _read(fname, delimiter, comment, quote, imaginary_unit, usecols, skiplines, max_rows, converters, ndmin, unpack, dtype, encoding)\n   1013     data = _preprocess_comments(data, comments, encoding)\n   1015 if read_dtype_via_object_chunks is None:\n-&gt; 1016     arr = _load_from_filelike(\n   1017         data, delimiter=delimiter, comment=comment, quote=quote,\n   1018         imaginary_unit=imaginary_unit,\n   1019         usecols=usecols, skiplines=skiplines, max_rows=max_rows,\n   1020         converters=converters, dtype=dtype,\n   1021         encoding=encoding, filelike=filelike,\n   1022         byte_converters=byte_converters)\n   1024 else:\n   1025     # This branch reads the file into chunks of object arrays and then\n   1026     # casts them to the desired actual dtype.  This ensures correct\n   1027     # string-length and datetime-unit discovery (like `arr.astype()`).\n   1028     # Due to chunking, certain error reports are less clear, currently.\n   1029     if filelike:\n\nValueError: could not convert string 'time' to float64 at row 0, column 1.\n\n\n\nYou can specify the header row using the skiprows parameter. If you want to skip one row, the skiprows=1 parameter is set at 1.\ndata = np.loadtxt('file.csv', delimiter=';', skiprows=1)\n\ndata = np.loadtxt('../../../data/temperatures.csv', delimiter=';', skiprows=1)\ndata\n\narray([[1.00000000e+00, 3.03073024e+02],\n       [2.00000000e+00, 3.02951625e+02],\n       [3.00000000e+00, 3.02831230e+02],\n       ...,\n       [4.46380000e+04, 2.96140001e+02],\n       [4.46390000e+04, 2.96169290e+02],\n       [4.46400000e+04, 2.96287904e+02]])\n\n\nNow the data is read correctly. You can see that the data is read as a numpy array and not as a DataFrame. This can be a disadvantage if you want to use the data as a DataFrame but an advantage if you want to use numpy functions to process the data.\nIf you have data with whitespace, you do not need to specify the delimiterparamter because the default is whitespace.\ndata = np.loadtxt('file.csv')\n\ndata = np.loadtxt('../../../data/temperatures.dat')\ndata\n\narray([[1.00000000e+00, 3.03073024e+02],\n       [2.00000000e+00, 3.02951625e+02],\n       [3.00000000e+00, 3.02831230e+02],\n       ...,\n       [4.46380000e+04, 2.96140001e+02],\n       [4.46390000e+04, 2.96169290e+02],\n       [4.46400000e+04, 2.96287904e+02]])\n\n\ngenfromtxt() gives you more flexibility to read files with missing values.\nFirst using the loadtxt() function, you get an error because of the missing values.\n\ndata = np.loadtxt('../../../data/temperatures_nan.dat')\ndata\n\n\n---------------------------------------------------------------------------\nValueError                                Traceback (most recent call last)\nCell In[167], line 1\n----&gt; 1 data = np.loadtxt('../../../data/temperatures_nan.dat')\n      2 data\n\nFile ~/y/envs/myenv/lib/python3.12/site-packages/numpy/lib/npyio.py:1373, in loadtxt(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, quotechar, like)\n   1370 if isinstance(delimiter, bytes):\n   1371     delimiter = delimiter.decode('latin1')\n-&gt; 1373 arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,\n   1374             converters=converters, skiplines=skiprows, usecols=usecols,\n   1375             unpack=unpack, ndmin=ndmin, encoding=encoding,\n   1376             max_rows=max_rows, quote=quotechar)\n   1378 return arr\n\nFile ~/y/envs/myenv/lib/python3.12/site-packages/numpy/lib/npyio.py:1016, in _read(fname, delimiter, comment, quote, imaginary_unit, usecols, skiplines, max_rows, converters, ndmin, unpack, dtype, encoding)\n   1013     data = _preprocess_comments(data, comments, encoding)\n   1015 if read_dtype_via_object_chunks is None:\n-&gt; 1016     arr = _load_from_filelike(\n   1017         data, delimiter=delimiter, comment=comment, quote=quote,\n   1018         imaginary_unit=imaginary_unit,\n   1019         usecols=usecols, skiplines=skiplines, max_rows=max_rows,\n   1020         converters=converters, dtype=dtype,\n   1021         encoding=encoding, filelike=filelike,\n   1022         byte_converters=byte_converters)\n   1024 else:\n   1025     # This branch reads the file into chunks of object arrays and then\n   1026     # casts them to the desired actual dtype.  This ensures correct\n   1027     # string-length and datetime-unit discovery (like `arr.astype()`).\n   1028     # Due to chunking, certain error reports are less clear, currently.\n   1029     if filelike:\n\nValueError: the number of columns changed from 2 to 1 at row 22; use `usecols` to select a subset and avoid this error\n\n\n\nIf you try to read the file with an empty entrance at row 22, you wil get still an error with the genfromtxt() function.\n\ndata = np.genfromtxt('../../../data/temperatures_nan.dat')\ndata\n\n\n---------------------------------------------------------------------------\nValueError                                Traceback (most recent call last)\nCell In[168], line 1\n----&gt; 1 data = np.genfromtxt('../../../data/temperatures_nan.dat')\n      2 data\n\nFile ~/y/envs/myenv/lib/python3.12/site-packages/numpy/lib/npyio.py:2312, in genfromtxt(fname, dtype, comments, delimiter, skip_header, skip_footer, converters, missing_values, filling_values, usecols, names, excludelist, deletechars, replace_space, autostrip, case_sensitive, defaultfmt, unpack, usemask, loose, invalid_raise, max_rows, encoding, ndmin, like)\n   2310 # Raise an exception ?\n   2311 if invalid_raise:\n-&gt; 2312     raise ValueError(errmsg)\n   2313 # Issue a warning ?\n   2314 else:\n   2315     warnings.warn(errmsg, ConversionWarning, stacklevel=2)\n\nValueError: Some errors were detected !\n    Line #22 (got 1 columns instead of 2)\n\n\n\nBut why? What do you think is the reason for the error?\n\n\n\n\n\n\nCaution\n\n\n\n\n\nThe reason is that the genfromtxt() function expects the same number of columns in each row. The delimiter is set default to whitespace. But if you have a missing value, the function expects a value. An error is raised because at row 22 the function is detecting only one column due to the missing value.\n\n\n\nHow can you solve this problem?\n\n\n\n\n\n\nCaution\n\n\n\n\n\nYou can NOT solve this problem with the genfromtxt() function if you have missing values and delimiter is whitespace. Either you have to fill the missing value with a value or you have to use the pandas library.\n\n\n\nIf you have not whitespace as delimiter, you can use the genfromtxt() function with missing values.\ndata = np.genfromtxt('file.csv', delimiter=',')\n\ndata = np.genfromtxt('../../../data/temperatures_nan.csv',delimiter=';')\ndata[20:26] # print some rows to see the NaN values\n\narray([[ 21.        , 302.02050747],\n       [ 22.        ,          nan],\n       [ 23.        , 301.8454081 ],\n       [ 24.        , 301.83355045],\n       [ 25.        , 301.78593323],\n       [ 26.        , 301.8461695 ]])\n\n\nThe different parameters that can be set are for loadtxt() function: (see documentation https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html - delimiter parameter can be used to specify the delimiter. Default is whitespace. - skiprows parameter can be used to skip rows at the beginning of the file. - usecols parameter can be used to read only specific columns. - dtype parameter can be used to specify the data type of the columns. - comments parameter can be used to specify the comment character. Default is #. - max_rows parameter can be used to read only a specific number of rows after skipping rows. - unpack parameter can be used to unpack the columns, so each column is returned as a separate array. and for genfromtxt() function (see documentation https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html#numpy.genfromtxt) - delimiter parameter can be used to specify the delimiter. Default is whitespace. - skip_header parameter can be used to skip rows at the beginning of the file. - skip_footer parameter can be used to skip rows at the end of the file. - usecols parameter can be used to read only specific columns. - dtype parameter can be used to specify the data type of the columns. - comments parameter can be used to specify the comment character. Default is #. - max_rows parameter can be used to read only a specific number of rows after skipping rows. - unpack parameter can be used to unpack the columns, so each column is returned as a separate array. - missing_values parameter can be used to specify which values should be recognized as missing values. - filling_values parameter can be used to specify the filling values for the missing values. - usemask parameter can be used to return a masked array with missing values. - names parameter can be used to specify the column names. If names=True, the column names are read from the first row. - replace_space parameter can be used to replace spaces in the column names. Default is _. etc.\n\n\n\n\n\n\nImportant\n\n\n\nThe pandas library is faster and more flexible than the numpy library. Choose wisely which library you want to use. It depends on the data format and the data type and what kind of processing you want to do.",
+    "section": "How do you read the data?",
+    "text": "How do you read the data?\nDepending on the data format, you can use different libraries to read the data.\n\nReading Plain Text Files\nYou can use the pandas or numpy library to read CSV files.",
     "crumbs": [
       "Lecture 1",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Simple Data Import</span>"
     ]
   },
   {
-    "objectID": "course/chapters/Advanced/Lecture1/AdvancedDataImport.html",
-    "href": "course/chapters/Advanced/Lecture1/AdvancedDataImport.html",
-    "title": "Advanced Data Reading",
-    "section": "",
-    "text": "# open the file for reading\n# data is from diechemiker.org (c) Julia Opitz 2015\ndata_file = open('data/fragmentation.csv', 'r') \n#read all lines into a list\nfragments = data_file.readlines() \n# remove the first line from the list and store it as the header\nheader = fragments.pop(0)\nprint(header)\n# remove the second line from the list and store it as the names of the columns\nnames = fragments.pop(0) \n # remove the newline character from the end of the line\nnames = names.strip()\n# split the names into a list of values\nnames = names.split(' ') \nprint(names)\n# strip the newline character from each line\ndata = [line.strip() for line in fragments]\n# split each line into a list of values\ndata = [line.split(' ') for line in data] \n# convert each value to a float\ndata = [[float(value) for value in line] for line in data] \n# close the file\ndata_file.close()\nprint(data)",
+    "objectID": "course/chapters/Basics/Lecture1/SimpleDataImport.html#pandas",
+    "href": "course/chapters/Basics/Lecture1/SimpleDataImport.html#pandas",
+    "title": "Simple Data Import",
+    "section": "Pandas",
+    "text": "Pandas\nPandas is read function is quite fast and can read large files. The advantage is that different data types can be read in the same file. The reading functions return a DataFrame object.\nPandas has different functions to read different file formats. - pandas.read_csv() function is can read CSV files. - pandas.read_table() function is can read general delimiter files. - pandas.read_fwf() function is can read fixed-width files.\nMostly used function is pandas.read_csv() because you can specify the delimiter, header, and other options.\n\n\n\n\n\n\nThe data has a different delimiter than the default comma. You can specify the delimiter using the sep parameter.\n\n\n\n\n\n\nNow the data is read correctly. The header is already taken from the first row. If you want to specify the header, you can use the header parameter.\n\n\n\n\n\n\nIf your data contains whitespace, you can use the skipinitialspace parameter to remove initial whitespaces.\n\n\n\n\n\n\nNow the data has no header. You can specify the header using the names parameter.\n\n\n\n\n\n\nYou see that also not .csv files can be read with the read_csv() function.\nThe read_csv() function has a lot of parameters. Look in the documentation. You can see which parameters you can set https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html\nFor example, - delimiter parameter can be used to specify the delimiter instead of sep. Both are the same. Default is ,. - header parameter can be used to specify the header row. Default is inferred from the file. - skipinitialspace parameter can be used to remove initial whitespaces. Default is False. - names parameter can be used to specify the column names. - skiprows parameter can be used to skip rows at the beginning of the file. - skipfooter parameter can be used to skip rows at the end of the file. - nrows parameter can be used to read only a specific number of rows. - usecols parameter can be used to read only specific columns. - dtype parameter can be used to specify the data type of the columns. - na_values parameter can be used to specify the missing values. - keep_default_na parameter can be used to specify if the default missing values should be kept. Default is True. - na_filter parameter can be used to recognize missing values without NA or NaN values. Default is True. - true_values parameter can be used to specify the values that should be recognized as True. - false_values parameter can be used to specify the values that should be recognized as False. - parse_dates parameter can be used to parse dates. Default is False.\nSome examples are:\n\n\n\n\n\n\ndata now the first row is skipped, only 44638 rows are read instead of 44639 Missing value examples:\n\n\n\n\n\n\nIf the na_filteris set to False, the missing values are not recognized. But if it set on True, the missing values are recognized.",
     "crumbs": [
       "Lecture 1",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Advanced Data Reading</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Simple Data Import</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Basics/Lecture1/SimpleDataImport.html#numpy",
+    "href": "course/chapters/Basics/Lecture1/SimpleDataImport.html#numpy",
+    "title": "Simple Data Import",
+    "section": "Numpy",
+    "text": "Numpy\nNumpy has two main functions to read text files. - numpy.loadtxt() function is used to read text files. - numpy.genfromtxt() function is used to read text files with missing values.\nIn comparison to the pandas library, the numpy library is slower and can not read different data types in the same file. So you can not read a file with strings and numbers in the same file.\nIf you try to read a file with a header row, you will get an error.\n\n\n\n\n\n\nYou can specify the header row using the skiprows parameter. If you want to skip one row, the skiprows=1 parameter is set at 1.\n\n\n\n\n\n\nNow the data is read correctly. You can see that the data is read as a numpy array and not as a DataFrame. This can be a disadvantage if you want to use the data as a DataFrame but an advantage if you want to use numpy functions to process the data.\nIf you have data with whitespace, you do not need to specify the delimiterparamter because the default is whitespace.\n\n\n\n\n\n\ngenfromtxt() gives you more flexibility to read files with missing values.\nFirst using the loadtxt() function, you get an error because of the missing values.\n\n\n\n\n\n\nIf you try to read the file with an empty entrance at row 22, you wil get still an error with the genfromtxt() function.\n\n\n\n\n\n\nBut why? What do you think is the reason for the error?\n\n\n\n\n\n\nCaution\n\n\n\n\n\nThe reason is that the genfromtxt() function expects the same number of columns in each row. The delimiter is set default to whitespace. But if you have a missing value, the function expects a value. An error is raised because at row 22 the function is detecting only one column due to the missing value.\n\n\n\nHow can you solve this problem?\n\n\n\n\n\n\nCaution\n\n\n\n\n\nYou can NOT solve this problem with the genfromtxt() function if you have missing values and delimiter is whitespace. Either you have to fill the missing value with a value or you have to use the pandas library.\n\n\n\nIf you have not whitespace as delimiter, you can use the genfromtxt() function with missing values.\n\n\n\n\n\n\nThe different parameters that can be set are for loadtxt() function: (see documentation https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html - delimiter parameter can be used to specify the delimiter. Default is whitespace. - skiprows parameter can be used to skip rows at the beginning of the file. - usecols parameter can be used to read only specific columns. - dtype parameter can be used to specify the data type of the columns. - comments parameter can be used to specify the comment character. Default is #. - max_rows parameter can be used to read only a specific number of rows after skipping rows. - unpack parameter can be used to unpack the columns, so each column is returned as a separate array. and for genfromtxt() function (see documentation https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html#numpy.genfromtxt) - delimiter parameter can be used to specify the delimiter. Default is whitespace. - skip_header parameter can be used to skip rows at the beginning of the file. - skip_footer parameter can be used to skip rows at the end of the file. - usecols parameter can be used to read only specific columns. - dtype parameter can be used to specify the data type of the columns. - comments parameter can be used to specify the comment character. Default is #. - max_rows parameter can be used to read only a specific number of rows after skipping rows. - unpack parameter can be used to unpack the columns, so each column is returned as a separate array. - missing_values parameter can be used to specify which values should be recognized as missing values. - filling_values parameter can be used to specify the filling values for the missing values. - usemask parameter can be used to return a masked array with missing values. - names parameter can be used to specify the column names. If names=True, the column names are read from the first row. - replace_space parameter can be used to replace spaces in the column names. Default is _. etc.\n\n\n\n\n\n\nImportant\n\n\n\nThe pandas library is faster and more flexible than the numpy library. Choose wisely which library you want to use. It depends on the data format, the data type and what kind of processing you want to do.",
+    "crumbs": [
+      "Lecture 1",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Simple Data Import</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Basics/Lecture1/SimpleDataImport.html#exercises",
+    "href": "course/chapters/Basics/Lecture1/SimpleDataImport.html#exercises",
+    "title": "Simple Data Import",
+    "section": "Exercises",
+    "text": "Exercises",
+    "crumbs": [
+      "Lecture 1",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Simple Data Import</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Basics/Lecture1/SimpleDataInspection.html",
+    "href": "course/chapters/Basics/Lecture1/SimpleDataInspection.html",
+    "title": "Simple Data Inspection",
+    "section": "",
+    "text": "Inspection of Data",
+    "crumbs": [
+      "Lecture 1",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Simple Data Inspection</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Basics/Lecture1/SimpleDataInspection.html#pandas",
+    "href": "course/chapters/Basics/Lecture1/SimpleDataInspection.html#pandas",
+    "title": "Simple Data Inspection",
+    "section": "Pandas",
+    "text": "Pandas\n\nOverview of the Data\nYou can use the head() function to get a quick overview of the first rows of the data.\n\n\n\n\n\n\n\n\n\n\n\n\nThe describe() function gives you a quick overview of the data distribution.\n\n\n\n\n\n\nThe describefunction shows you the count, mean, standard deviation, minimum, 25%, 50%, 75% and maximum values of the data.\nIn this case, data has 44640 data points, The mean of the temperature is 298(6) K. The minimum temperature is 279 K and the maximum temperature is 316 K. Further the 25% quantile is 294 K, the 50% quantile is 298 K and the 75% quantile is 302 K. The measurement was taken from 1 to 44640 seconds which is 12 hours and 24 minutes. We suppose that is the correct time range which was to be expected.\nThis gives you a quick overview of the data distribution.\n\nMissing Data and Corrupted Data\nTo check if there is missing data in the data set you can use the isna() function.\n\n\n\n\n\n\nNo missing data is found in this case.\nYou can check the data type using dtypes function to check if the data is in the correct format.\n\n\n\n\n\n\n\n\n\n\n\n\nYou see that time is an int64 and temperature is a float64. For the analysis, you might want to convert the time to a float64 as well.\n\n\n\n\n\n\n\n\n\n\n\n\nIf we have missing data we can use the fillna() function to fill the missing data with a specific value.\n\n\n\n\n\n\n\n\n\n\n\n\nOne value is missing in the temperature column. We fill it with 0.\nFirst let check where the data is missing.\n\n\n\n\n\n\ndata_missing[data_missing[‘temperature’].isna()]\nAt index 21 at time 22 s the temperature is missing. :::{.callout .callout-info} The handling of missing data is a complex topic. First of all you have to check why the data is missing. Is it a measurement error, a data processing error etc.\nYou have to decide if you want to fill the missing data with a specific value, drop the row or column or interpolate the missing data. The decision depends on the data and the analysis you want to perform. Droping Data is always a delicate decision because you loose information. Sometimes it is not good scientific practice to drop data. For more information there a lot of research in this topic https://doi.org/10.1076/edre.7.4.353.8937 :::\nThe time step can be estimated by the difference between the time steps of the previous and the next data point.\n\n\n\n\n\n\nAnd we can summarize it via:\n\n\n\n\n\n\n\n\n\n\n\n\nget difference between temperature values\n\n\n\n\n\n\nThe time step is constantly 1 second. The difference between the temperature of the previous and the next data point is at \\(~10^{-2}\\) order. We can assume that in this case the data is consistent enough and we can fill the missing data with the mean of the previous and the next data point.\n\n\n\n\n\n\ndata_missing[‘temperature’].fillna((data_missing[‘temperature’].shift() + data_missing[‘temperature’].shift(-1))/2, inplace=True) data_missing[20:25]\nNow can analysis or plot the data.",
+    "crumbs": [
+      "Lecture 1",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Simple Data Inspection</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html",
+    "href": "course/chapters/Basics/Lecture1/SimplePlot.html",
+    "title": "Basic Data Visualization Techniques",
+    "section": "",
+    "text": "Basic Data Visualization Technique\nThe most popular data visualization libraries in Python is Matplotlib. Let`s start with the basic data visualization techniques using Matplotlib.",
+    "crumbs": [
+      "Lecture 1",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html#generate-some-x-y-data-points.",
+    "href": "course/chapters/Basics/Lecture1/SimplePlot.html#generate-some-x-y-data-points.",
+    "title": "Basic Data Visualization Techniques",
+    "section": "1. Generate some x-y data points.",
+    "text": "1. Generate some x-y data points.",
+    "crumbs": [
+      "Lecture 1",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html#plot-the-data-points.",
+    "href": "course/chapters/Basics/Lecture1/SimplePlot.html#plot-the-data-points.",
+    "title": "Basic Data Visualization Techniques",
+    "section": "2. Plot the data points.",
+    "text": "2. Plot the data points.\n\n\n\n\n\n\nTo add more graphs to the same figure, use plt.plot() multiple times before plt.show(). If you want to create a new figure, use plt.figure() before plt.plot().",
+    "crumbs": [
+      "Lecture 1",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html#adjust-the-plot.",
+    "href": "course/chapters/Basics/Lecture1/SimplePlot.html#adjust-the-plot.",
+    "title": "Basic Data Visualization Techniques",
+    "section": "3. Adjust the plot.",
+    "text": "3. Adjust the plot.\nThe plot() function takes the following arguments: - x-axis data points - y-axis data points - color: hex, or color name (e.g., ‘red’, ‘blue’,‘black’), abbreviated (e.g., ‘r’, ‘b’,‘k’) - linestyle: ‘-’, ‘–’, ‘-.’, ‘:’ or “solid”, “dashed”, “dashdot”, “dotted” - marker: ‘o’, ‘x’, ‘+’, ’*‘, ’s’, ‘d’, ‘^’, ‘v’, ‘&gt;’, ‘&lt;’, ‘p’, ‘h’ - linewidth - width of the line - alpha - transparency of the line - markerfacecolor - color of the marker face - markersize - size of the marker - label - label for the data points\nYou have to call plt.legend() to show the labels.",
+    "crumbs": [
+      "Lecture 1",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html#adust-the-figure",
+    "href": "course/chapters/Basics/Lecture1/SimplePlot.html#adust-the-figure",
+    "title": "Basic Data Visualization Techniques",
+    "section": "4. Adust the figure",
+    "text": "4. Adust the figure\nThis plot figure can be adjusted by changing the figure size, title, labels, and so on.\n\nplt.xlabel(): Set the x-axis label of the current axis.\nplt.ylabel(): Set the y-axis label of the current axis.\nplt.title(): Set a title for the axes.\nplt.legend(): Place a legend on the axes.\nplt.grid(): Configure the grid lines.\nplt.xlim(): Get or set the x-limits of the current axes.\nplt.ylim(): Get or set the y-limits of the current axes.\nplt.xticks(): Get or set the current tick locations and labels of the x-axis.\nplt.yticks(): Get or set the current tick locations and labels of the y-axis.\nplt.figure(): Create a new figure.\nplt.show(): Display a figure.",
+    "crumbs": [
+      "Lecture 1",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "course/chapters/Basics/Lecture1/SimplePlot.html#creating-multiple-plots",
+    "href": "course/chapters/Basics/Lecture1/SimplePlot.html#creating-multiple-plots",
+    "title": "Basic Data Visualization Techniques",
+    "section": "Creating multiple plots",
+    "text": "Creating multiple plots\nYou can create multiple plots in the same figure by using the subplot() function.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLets try to create 4x3 subplots with specific adjustments. -plt.subplots(4, 3): create 4x3 subplots -figsize=(3, 4): set the figure size to 3x4 inches -sharex=True: all subplots share the x-axis -sharey=True: all subplots share the y-axis -constraint_layout=True: automatically adjust the subplot parameters to give the specified padding around the subplots -gridspec_kw={‘hspace’: 0.5, ‘wspace’: 0.5}`: set the horizontal and vertical space between the subplots to 0.5 inches\nPlay with the code below to understand the different parameters: {.unnumbered}",
+    "crumbs": [
+      "Lecture 1",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Basic Data Visualization Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "informations/license.html",
+    "href": "informations/license.html",
+    "title": "License",
+    "section": "",
+    "text": "MIT License\nCopyright (c) 2025 Stefanie Kröll\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "crumbs": [
+      "Informations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>License</span>"
+    ]
+  },
+  {
+    "objectID": "informations/privacy.html",
+    "href": "informations/privacy.html",
+    "title": "Privacy Policy",
+    "section": "",
+    "text": "Hosting: GitHub Pages\nThis website does not collect, store or process any personally identifiable information and does not use cookies or other tracking technologies.\nThis website is hosted on GitHub Pages. GitHub says at",
+    "crumbs": [
+      "Informations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Privacy Policy</span>"
+    ]
+  },
+  {
+    "objectID": "informations/privacy.html#hosting-github-pages",
+    "href": "informations/privacy.html#hosting-github-pages",
+    "title": "Privacy Policy",
+    "section": "",
+    "text": "Github-Docs &gt; GitHub Pages &gt; Get started &gt; About GitHub Pages (https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages):\n\n\n“When a GitHub Pages site is visited, the visitor’s IP address is logged and stored for security purposes, regardless of whether the visitor has signed into GitHub or not. For more information about GitHub’s security practices, see GitHub Privacy Statement”",
+    "crumbs": [
+      "Informations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Privacy Policy</span>"
+    ]
+  },
+  {
+    "objectID": "informations/impressum.html",
+    "href": "informations/impressum.html",
+    "title": "Impressum",
+    "section": "",
+    "text": "This Data Analysis and Visualization for Chemists and Material Scientists tutorial is created by:\nStefanie Kröll, MSc\nUniversity of Innsbruck\nInstitute of General, Inorganic and Theoretical Chemistry\nUniversity of Innsbruck\nCenter for Chemistry and Biomedicine\nInnrain 80-82\nA-6020 Innsbruck\nAUSTRIA, Europe\n\nas part of the lecture course “VU Data Science and Visualization Primer for Chemists and Material Scientists” at UIBK\n\nContact Information\nEmail: s.kroell@student.uibk.ac.at\n\n\nResponsible for Content: Stefanie Kröll\nCopyright Notice: © 2025 Stefanie Kröll. All rights reserved.\n\nPrivacy Policy\nExternal Link Policy and Disclaimers",
+    "crumbs": [
+      "Informations",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Impressum</span>"
+    ]
+  },
+  {
+    "objectID": "informations/disclaimer.html",
+    "href": "informations/disclaimer.html",
+    "title": "Disclaimers",
+    "section": "",
+    "text": "Disclaimer:\nAll information provided on this website is offered “as is” without any warranties, expressed or implied, including, but not limited to, warranties of merchantability, fitness for a particular purpose, or non-infringement. While efforts are made to ensure the accuracy of the information, the website owner makes no guarantee of its correctness or completeness. Use the information at your own discretion and risk.\n\n\n\n\n\n\nExternal Link Policy\n\n\n\nIt is imperative to note that the external links present on this website are intended to serve as a reference point, providing insights into software programs, packages, tools and tutorials that can be utilised. The primary function of these links is to facilitate further information on the subject matter. It is crucial to acknowledge that the website author is not held responsible for the content or information found on external websites. Furthermore, the website author does not exercise any control over the content of such external websites. It is, therefore, incumbent upon the user to exercise due diligence when engaging with external links. The user uses the links at his own risk and is subject to the terms of services of the respective providers.",
+    "crumbs": [
+      "Informations",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Disclaimers</span>"
     ]
   }
 ]
