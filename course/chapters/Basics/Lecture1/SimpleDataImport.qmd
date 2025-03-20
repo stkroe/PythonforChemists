@@ -42,14 +42,15 @@ The advantage is that different data types can be read in the same file.
 The reading functions return a DataFrame object. 
 
 Pandas has different functions to read different file formats.
+
 - `pandas.read_csv()` function is can read CSV files.
+
 - `pandas.read_table()` function is can read general delimiter files.
+
 - `pandas.read_fwf()` function is can read fixed-width files.
 
 
-Mostly used function is
-`pandas.read_csv()` 
-because you can specify the delimiter, header, and other options.
+Mostly used function is `pandas.read_csv()` because you can specify the delimiter, header, and other options.
 
 
 ```{pyodide}
@@ -107,19 +108,33 @@ Look in the documentation. You can see which parameters you can set [https://pan
 
 For example,
 - `delimiter` parameter can be used to specify the delimiter instead of `sep`. Both are the same. Default is `,`.
+
 - `header` parameter can be used to specify the header row. Default is inferred from the file.
+
 - `skipinitialspace` parameter can be used to remove initial whitespaces. Default is `False`.
+
 - `names` parameter can be used to specify the column names.
+
 - `skiprows` parameter can be used to skip rows at the beginning of the file.
+
 - `skipfooter` parameter can be used to skip rows at the end of the file.
+
 - `nrows` parameter can be used to read only a specific number of rows.
+
 - `usecols` parameter can be used to read only specific columns.
+
 - `dtype` parameter can be used to specify the data type of the columns.
+
 - `na_values` parameter can be used to specify the missing values.
+
 - `keep_default_na` parameter can be used to specify if the default missing values should be kept. Default is `True`.
+
 - `na_filter` parameter can be used to recognize missing values without `NA` or `NaN` values. Default is `True`.
+
 - `true_values` parameter can be used to specify the values that should be recognized as `True`.
+
 - `false_values` parameter can be used to specify the values that should be recognized as `False`.
+
 - `parse_dates` parameter can be used to parse dates. Default is `False`.
 
 
@@ -132,7 +147,9 @@ Some examples are:
 ```{pyodide}
 data = pd.read_csv('temperatures.csv', sep=';', header=0, names=['t', 'T'], skiprows=1)
 ```
-data now the first row is skipped, only 44638 rows are read instead of 44639
+
+Now the first row is skipped, only 44638 rows are read instead of 44639.
+
 Missing value examples:
 
 
