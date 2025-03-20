@@ -1,0 +1,824 @@
+---
+title: "Python Start"
+format: live-html
+engine: jupyter
+pyodide:
+  packages:
+    - matplotlib
+    - numpy
+    - seaborn
+    - os 
+    - argparse
+    - sys
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Python/Basics.ipynb"
+        icon: "laptop"
+---
+
+
+This will be a very fast and basic start into coding with Python. 
+
+
+# Elemental Syntax{.unnumbered}
+## Comands{.unnumbered}
+
+Each line of code is a command. The computer reads the code from top to bottom and executes each command in order.
+
+:::{.callout-note}
+# Example - Hello World {.unnumbered}
+`print` is a command that tells the computer to display the text that follows it. 
+:::
+
+Try it out:
+
+```{pyodide}
+print("Hello World")
+```
+
+ If you want to span a command over multiple lines you can use `\` or <br> 
+ if you are using parenthesis in your command you can directly use a new line.
+
+
+```python
+ result = 1 + 2 + 3 + \
+          7 + 8 + 9
+ numbers = [
+     1, 2, 3,
+     4, 5, 6,
+     7, 8, 9
+ ]
+ ```
+
+ 
+
+ ## Indentation {.unnumbered}
+ In Python code blocks are not structured by brackets or semicolons like C/C++ or Java but by indentation. This means that the code inside a loop or a function is indented by a tab or four spaces.
+
+:::{.callout-warning}
+Indentations are curcial in Python. 
+If you don't indent your code correctly, you will get an typical beginner error.
+
+Pay attention to not mix tabs and spaces in your code.
+:::
+
+
+
+
+
+:::{.callout-note}
+Example - Wrong Indentation {.unnumbered}
+:::
+
+Try it out:
+
+```{pyodide}
+print("correct indentation")
+    print("wrong indentation")
+```
+
+All the lines in the block must have the same indentation:
+
+```{pyodide}
+    print("correct indentation") 
+    print("correct indentation")
+    print("correct indentation")
+```
+
+## Error messages {.unnumbered}
+
+When you run a command that has an error, Python will print an error message. 
+
+The so called stack trace. It is a list of error messages that Python prints when an error occurs.
+
+It gives you information about the error and the location of the error in your code.
+
+The strack track is read from bottom to top.
+
+The last line contains the error message and the line number where the error occured.
+
+
+
+::: {.callout-tip}
+Often the error messages are not very clear. You can search for the error message in the internet. [Stackoverflow](https://stackoverflow.com/) has a lot of answers to common errors. Or you can ask some AI *e.g.* [ChatGPT](https://chat.openai.com/).
+:::
+
+
+:::{.callout-note}
+Example - Cryptic Error Message {.unnumbered}
+What does the error message tell you?
+:::
+
+```{pyodide}
+a = [1,2,3]
+print(a[3])
+```
+
+
+
+
+
+
+:::{.callout-tip collapse="true"}
+Solution {.unnumbered}
+The error message tells you that you are trying to access an index that is out of range.
+:::
+
+
+## Comments {.unnumbered}
+Comments are important. They help you and others to understand your code. <br>
+You can use the \` symbol to write comments.
+
+Docstrings are used to document the code for example with [pydoc](https://docs.python.org/3/library/pydoc.html). They are written using triple quotes \`""" """"\` 
+
+
+
+```python
+# This is a comment
+
+"""
+This is a documentation.
+You can document your code for example by pydoc
+"""
+```
+
+
+# Modules {.unnumbered}
+There exist a lot of libraries and modules in Python. <br>
+Libraries is a term to describe a collection of modules. <br>
+Packages are a way to collect related modules together within a single tree-like hierarchy. <br>
+Modules are a collection of files. <br>
+A script is a file that can be run independently. <br>
+You can use the `import` statement to import the whole module. <br>
+You can use the `from` statement to import a specific part of the module. <br>
+You can use the `dir()` function to list the names in a module. <br>
+You can use the `help()` function to get help on a module. <br>
+
+
+
+
+
+```python
+import numpy as np 
+# the library numpy is imported
+from matplotlib import pyplot as plt 
+# the library pyplot is imported from matplotlib module
+```
+
+
+# I/O (Input/Output) {.unnumbered}
+
+
+You can use the `print()` function to **print a message** to the screen. <br>
+You can use the `input()` function to get **input from the user**. <br>
+You can use the `open()` function to **open a file**. <br>
+You can use the `write()` function to **write to a file**. <br>
+You can use the `read()` function to **read from a file**. <br>
+You can use the `close()` function to **close a file**. <br>
+You can use the `with` statement to **open a file** and **automatically close** it when you are done. <br>
+You can use the `os` module to **work with files and directories**. <br>
+You can use the `sys` module to **work with command line arguments**. <br>
+You can use the `argparse` module to work also with **command line arguments**. <br>
+
+ This should print "Hello World!" to the console
+```{pyodide}
+print("Hello World!")
+
+```
+
+This should ask the user to enter a number and print it to the console
+```python
+print(input("Enter a number: "))
+
+```
+
+This should write "Hello World!" to the file "file.txt"
+```python
+open("file.txt", "w").write("Hello World!") 
+```
+
+This should read the file "file.txt" and print the content to the console
+```python
+print(open("file.txt").read()) 
+
+```
+
+This should print "Hello World!" to the console without a newline
+```python
+print("Hello World without newline.", end="") 
+print("Next print statement.")
+```
+
+This should read the file "file.txt" and print the content to the console
+```python
+with open("file.txt", "r") as file: print(file.read()) 
+```
+
+
+# System {.unnumbered}
+
+
+There are a lot of modules in Python to work with the system. <br>
+You can use the `os` module to **work with files and directories**. <br>
+You can use the `sys` module to **work with command line arguments**. <br>
+You can use the `argparse` module to work also with **command line arguments**. <br>
+
+Most important functions are: <br>
+- `os.getcwd()` to get the current working directory. <br>
+- `os.chdir()` to change the current working directory. <br>
+- `os.listdir()` to list the files in a directory. <br>
+- `os.mkdir()` to create a directory. <br>
+- `os.rmdir()` to remove a directory. <br>
+- `os.remove()` to remove a file. <br>
+- `os.rename()` to rename a file. <br>
+- `os.path.exists()` to check if a file or directory exists. <br>
+- `os.path.isfile()` to check if a file exists. <br>
+- `os.path.isdir()` to check if a directory exists. <br>
+- `os.path.join()` to join two paths. <br>
+- `os.path.basename()` to get the base name of a path. <br>
+- `os.path.dirname()` to get the directory name of a path. <br>
+- `os.path.abspath()` to get the absolute path of a path. <br>
+- `os.path.split()` to split a path into a directory and a file. <br>
+- `os.path.splitext()` to split a path into a base name and an extension. <br>
+- `os.path.getsize()` to get the size of a file. <br>
+- `os.path.getmtime()` to get the modification time of a file. <br>
+
+- `sys.argv` to get the command line arguments. <br>
+- `sys.exit()` to exit the program. <br>
+- `sys.stdin` to read from the standard input. <br>
+- `sys.stdout` to write to the standard output. <br>
+- `sys.stderr` to write to the standard error. <br>
+
+- `argparse.ArgumentParser()` to create a parser. <br>
+- `add_argument()` to add an argument to the parser. <br>
+- `parse_args()` to parse the command line arguments. <br>
+
+
+This should remove the file "file.txt"
+```python
+import os
+os.remove("file.txt")
+```
+
+
+For `sys` you can use the `sys.argv` to get the command line arguments. <br>
+`sys.argv` is a list of the command line arguments. <br>
+`sys.argv[0]` is the name of the script. <br>
+`sys.argv[1]` is the first argument. <br>
+
+
+
+```python
+import sys
+first_argument = sys.argv[1]
+```
+
+
+
+
+For more information about the sys module you can visit the [official documentation](https://docs.python.org/3/library/sys.html).
+
+
+For `Argparse` you can use the following code:
+
+```python
+from argparse import ArgumentParser
+For python scripts:
+You can use argparse to parse command line arguments
+parser = ArgumentParser(description="This is a description.")
+parser.add_argument("--arg1", help="This is the first argument.")
+parser.add_argument("---arg2", help="This is the second argument.")
+args = parser.parse_args()
+```
+
+For more information about `Argparse` you can visit the [official documentation](https://docs.python.org/3/library/argparse.html).
+
+
+# Paths {.unnumbered}
+
+Pay attention to the paths in your code. They
+are different defined in Windows and Linux. In Windows and macOS, you use backslashes `/` and in Linux, you use forward slashes `\`. 
+
+To avoid this problem you can use the `os` or `pathlib` module to make your code platform independent.
+
+
+```python
+import os
+
+path = os.path.join('folder1', 'folder2', 'folder3', 'data.dat')
+print(path)
+```
+
+
+```python
+working_dir = os.getcwd()
+print(working_dir)
+```
+
+
+```python
+from pathlib import Path
+
+path = Path('folder1') / 'folder2' / 'folder3' / 'data.dat'
+print(path)
+```
+
+
+```python
+working_dir = Path.cwd()
+print(working_dir)
+```
+
+
+# Variables {.unnumbered}
+
+
+In Python, you don't need to declare the type of a variable. <br>
+You can assign a value to a variable using the `=` operator. <br>
+
+
+```{pyodide}
+a = 1 a is a variable
+b = "String" b is a string
+print(1, " is an", type(a))
+print(b, " is a", type(b))
+
+```
+
+# Data Types {.unnumbered}
+
+
+Python has several data types. The most common are:
+- `int` for integers
+- `float` for floating point numbers
+- `str` for strings
+- `bool` for booleans
+- `list` for lists
+- `tuple` for tuples
+- `dict` for dictionaries
+- `set` for sets
+
+You can use the `type()` function to get the type of a variable. <br>
+You can use the `isinstance()` function to check if a variable is an instance of a class. <br>
+Type casting is the process of converting one data type to another. <br>
+You can use the `int()`, `float()`, `str()`, `bool()`, `list()`, `tuple()`, `dict()`, `set()` functions to cast a variable to a different type. <br>
+
+
+```{pyodide}
+x = 5 int
+print(x,type(x))# print the type of x
+
+```
+
+```{pyodide}
+y = 5.12 float
+print(y,type(y))
+
+```
+
+```{pyodide}
+c = 2.8j complex
+print(c,type(c))
+
+```
+
+```{pyodide}
+s = "Hello World" #string
+print(s,type(s))
+
+```
+
+```{pyodide}
+
+print("length of word: ", len(s)) # length of string
+print("character on position 2: ", s[2]) 
+print("last 3 characters: ", s[-3:])
+s2 = s + "!"
+print(s2)
+s3 = "\"Hello world\"!"
+print(s3)
+
+```
+
+
+```{pyodide}
+d = dict(name="Max",lastname="Musterman",height=1.89) # dictionary
+print(d,type(d))
+
+```
+```{pyodide}
+b = True # boolean
+print(b,type(b))
+
+```
+
+```{pyodide}
+dataset = {1,12,3} # set 
+print(dataset,type(dataset))
+
+```
+
+```{pyodide}
+dataset2 = set((1.2,2,2)) # set
+print(dataset2,type(dataset2))
+
+```
+
+```{pyodide}
+r = range(0,10,2) # range
+print(r,type(r))
+
+```
+
+```{pyodide}
+l = [1,2,2,3] # list
+print(l,type(l))
+print("length of list",len(l))
+
+```
+
+```{pyodide}
+t = (1,2)# tuple
+print(t,type(t))
+```
+
+```{pyodide}
+#type conversion
+f = float(x)
+print(f,type(f))
+
+```
+
+# Lists {.unnumbered}
+
+
+
+Lists collect multiple items in a single variable. <br>
+You can use the `[]` operator to create a list. <br>
+You can use the `append()` method to add an item to a list. <br>
+You can use the `insert()` method to add an item at a specific position. <br>
+You can use the `del` statement to delete an item from a list. <br>
+You can use the `remove()` method to remove an item from a list. <br>
+You can use the `pop()` method to remove an item at a specific position. <br>
+You can use the `clear()` method to remove all items from a list. <br>
+You can use the `copy()` method to copy a list. <br>
+You can use the `count()` method to count the number of items in a list. <br>
+You can use the `sort()` method to sort a list. <br>
+You can use the `reverse()` method to reverse a list. <br>
+You can use the `extend()` method to add items from another list. <br>
+You can use the `index()` method to get the index of an item. <br>
+You can use the `len()` function to get the length of a list. <br>
+You can use the `list()` function to create a list. <br>
+
+
+
+
+
+```{pyodide}
+
+a = ['a', 'b', 'c']
+b = [1,3,'a', 1j]
+len(a) #length of list
+
+```
+
+:::{.callout-warning}
+Index is starting with **0** in Python.
+:::
+
+```{pyodide}
+
+l = ['first', 'second', 'third']
+l[0]
+
+```
+
+
+Last element is reached by index -1.
+
+
+```{pyodide}
+l[-1]
+
+```
+
+
+
+# Mutable and Immutable Objects {.unnumbered}
+
+Immutable objects cannot be changed. <br>
+Mutable objects can be changed. <br>
+Immutable objects are: `int`, `float`, `bool`, `str`, `tuple`, `frozenset`. <br>
+Mutable objects are: `list`, `dict`, `set`. <br>
+
+That means if you change an immutable object, a new object is created. <br>
+If you change a mutable object, the object is changed. <br>
+
+```{pyodide}
+a = 1
+b = a
+
+print("a:",a)
+print("b:",b)
+
+a = 2
+print("------")
+print("a:",a)
+print("b:",b)
+
+b = 3
+print("------")
+print("a:",a)
+print("b:",b)
+
+b = a
+print("------")
+print("a:",a)
+print("b:",b)
+```
+
+
+```{pyodide}
+mutable objects
+a = [1,2,3]
+b = a
+
+print("a:",a)
+print("b:",b)
+
+a[0] = 4
+print("------")
+print("a:",a)
+print("b:",b)
+
+b[1] = 5
+print("------")
+print("a:",a)
+print("b:",b)
+```
+
+
+
+This happens because a and b are pointing to the same memory location. So if you change a, b will also change. If you want to avoid this, you can use the copy() method.
+
+```{pyodide}
+b = a.copy()
+print("------")
+print("a:",a)
+print("b:",b)
+
+a[2] = 6
+print("------")
+print("a:",a)
+print("b:",b)
+
+b[2] = 7
+print("------")
+print("a:",a)
+print("b:",b)
+```
+
+# String Formatting {.unnumbered}
+
+
+You can use the following escape characters:
+
+- `\n`: new line
+- `\t`: tab
+- `\\`: backslash
+- `\'`: single quote
+- `\"`: double quote
+- `\b`: backspace
+- `\r`: carriage return
+- `\f`: form feed
+- `\ooo`: octal value
+- `\xhh`: hex value
+
+
+
+You can use the `+` operator to concatenate strings. <br>
+
+```{pyodide}
+a = "This " 
+b = "is a string"
+print(a + b)
+```
+
+For print formatting you can use the `format()` method. <br>
+You can use the `f-string` method. <br>
+See for more information [here](https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings)
+
+```{pyodide}
+a = 1.5434
+b = "nm"
+print("This is an integer %d %s" % (a, b))
+print("This is a float formating with minimum \
+1 number of character wide and 2 digits %1.2f %s" % (a, b))
+print("This is scientific notation with \
+2 digits %.2e %s" % (a, b))
+print("This is a string %s %s" % (a, b))
+print("This is an example of using \
+format() method {0} {1}".format(a, b)) 
+print("This is an example of using format() \
+method with named arguments {a} {b}".format(a=a, b=b))
+```
+
+
+# Operators {.unnumbered}
+
+
+There are different types of operators in Python. <br>
+
+
+-  +: addition
+-  -: subtraction
+-  *: multiplication
+-  /: division
+-  %: modulo
+-  **: exponentiation
+-  //: floor division
+-  ==: equal
+-  !=: not equal
+-  <: less than    
+-  >: greater than
+-  <=: less than or equal
+-  >=: greater than or equal
+-  and: logical and
+-  or: logical or
+-  not: logical not
+-  is: identity
+-  in: membership
+
+```{pyodide}
+a = 5.3
+b = 2
+c = 3
+
+print("division: ", a/b)
+print("division: ", b/c, " type: ", type(b/c))
+print("integer division: ", a//b)
+print("modulo: ", a%b)
+print("float multiplication: ", a*b, " type: ", type(a*b))
+print("integer multiplication: ", b*c, " type: ", type(b*c))
+print("exponentiation: ", a**2)
+```
+
+# Control Structures {.unnumbered}
+
+
+The most common control structures are:
+
+- if
+- else
+- elif
+- for
+- while
+- break
+- continue
+- pass
+- return
+
+
+## if statement {.unnumbered}
+
+```{pyodide}
+x = 0
+if x < 0:
+    print("x < 0")
+elif x > 0:
+    print("x > 0")
+else:
+    print("x = 0")
+```
+
+## break,cotinue,pass {.unnumbered}
+#### example break {.unnumbered}
+```{pyodide}
+
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+```
+#### example continue {.unnumbered}
+```{pyodide}
+
+for i in range(10):
+    if i == 5:
+        continue
+    print(i)
+ ```   
+
+
+#### example pass {.unnumbered}
+```{pyodide} 
+for i in range(10):
+    if i == 5:
+        pass
+    print(i)
+```
+
+## For Loops {.unnumbered}
+
+```{pyodide} 
+for i in range(5): #from 0 to 4 
+    print(i)
+```
+
+```{pyodide} 
+for i in range(1,10,2): # start 1, stop 10 excluded, step 2
+    print(i)
+```
+
+```{pyodide} 
+l = list(range(0,10))
+```
+
+```{pyodide} 
+l
+```
+
+```{pyodide} 
+for i in l:  # using list
+    print(i)
+```
+
+## While Loops {.unnumbered}
+
+```{pyodide} 
+x = 0
+while x  < 4:
+    print(l[x])
+    x = x + 1
+```
+
+```{pyodide} 
+print("while loop with continue and break statement")
+n = 0
+while(n < 10):
+    n+=1
+    if n == 5:
+        continue
+    if n == 7:
+        print("The loop reached 7 and will break now.")
+        break
+    print(n)
+```
+
+# Functions {.unnumbered}
+
+
+Functions are defined using the `def` keyword. <br>
+You can use the `return` keyword to return a value from a function. <br>
+The parameters of a function are defined in the parentheses. <br>
+Multiple parameters are separated by commas. <br>
+You can use default values for the parameter *e.g.* `b=5`. <br>
+Multiple return values are separated by commas. <br>
+They are stored in a tuple. <br>
+
+
+```{pyodide} 
+def summation(a,b=5):
+    return a+b, a-b
+```
+
+```{pyodide} 
+summation(4,2)
+```
+
+```{pyodide} 
+sum, sub = summation(4)
+print(sum)
+print(sub)
+```
+
+```{pyodide} 
+x = 3
+
+def multiple_return_value(x,a,b):
+    n = x+a
+    m = x-b
+    return [n,m]
+print(multiple_return_value(x,5,10)[0],multiple_return_value(x,5,10)[1])
+```
+
+# Style guideline for writing python code {.unnumbered}
+
+
+For writing a readable code, it is important to follow a style guideline. <br>
+The most common style guideline for Python is [PEP 8](https://www.python.org/dev/peps/pep-0008/). <br>
+
+
+# Exercises {.unnumbered}
+Download it locally and try to solve the exercises. <br>
+
+[Basic Python](https://github.com/stkroe/PythonforChemists/blob/main/course/exercises/notebooks/student/BasicExercises.ipynb)
+
+
+Or open it in `Google Colab`:
+
+[Basic Python](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/exercises/notebooks/student/BasicExercises.ipynb)
+
+
+
+

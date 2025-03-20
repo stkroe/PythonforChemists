@@ -1,0 +1,99 @@
+---
+title: "Introduction into Data Visualization"
+execute:
+    echo: true
+    eval: false
+--- 
+
+
+# Data Visualization {.unnumbered}
+
+
+## Why we should viusalize data? {.unnumbered}
+
+
+Visualization of data helps us to understand the data better. It helps us to understand the relationship between different features and the target variable. You can identify outliers. Further the distribution of the data can be understood and correlation can be identified.
+
+There exists are lot of different visualization techniques:
+
+- [Line plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html): 
+Show the relationship of observable over the abscissa *e.g.* time vs radioactivity decay as continuous function.
+
+
+- [Scatter plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html):
+Show the relationship of observable over the abscissa *e.g.* time vs temperature as discrete function.
+
+
+- [Histogram] (https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html):
+Show the distribution of a single variable *e.g.* count of a mass of individuals in a population. The data is divided into bins and the number of data points in each bin is plotted.
+
+
+- [Kernel density plot](https://seaborn.pydata.org/generated/seaborn.kdeplot.html):
+Show the distribution of a single variable *e.g.* distribution of a mass of individuals in a population. The data is smoothed by a kernel density and the density of the data is plotted continuously.
+
+
+- [Bar plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html):
+Show the relationship of a categorical variable with a numerical variable *e.g.* cancer cell survival time for different treatment groups. The height of the bar is proportional to the value of the investigated variable.
+
+
+- [Heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html): 
+Show the relationship of two categorical variables with a numerical variable *e.g.* cancer cell survival time for different treatment groups and different cancer types. The color of the cell is proportional to the value of the investigated variable.
+
+
+- [Network plot](https://networkx.org/documentation/stable/auto_examples/index.html):
+It is used to show the relationship between different nodes. It is used to show the relationship between different entities *e.g.*  protein-protein interaction network [PPI](http://www.ncbi.nlm.nih.gov/pmc/articles/pmc4017556/).
+
+
+- [Box plot](https://seaborn.pydata.org/generated/seaborn.boxplot.html):
+Show the distribution of a numerical variable for different categories. It shows the minimum, first quartile, median, third quartile and maximum of your data. Outliers can be identified. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.
+
+
+- [Pie chart](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pie.html):
+Show the proportion of different categories in a single variable *e.g.* the content of different amino acids in a protein.
+
+
+- [Violin plot](https://seaborn.pydata.org/generated/seaborn.violinplot.html): Show the distribution of a numerical variable for different categories. It is similar to a box plot but it also shows the probability density of the data at different values. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.
+
+
+
+- [Regression plot](https://seaborn.pydata.org/generated/seaborn.regplot.html):
+Show a regression model between two variables *e.g.* the relationship between the concentration and the time.
+
+
+## Which technique should you use? {.unnumbered}
+
+
+- How many variables do you have and how many do you want to compare at once?
+- What type of data do you have?
+- What type of relationship are you trying to represent?
+- Do you want to analyze the distribution of the data?
+- Do you want to analyze the correlation between the variables?
+- Do you want to show ranking or ordering of the data?
+- Do you want to a trend over time?
+- Do you want to show the composition of the data?
+- Do you want to predict the future values of the data?
+- Do you want to show the relationship between the variables?
+
+
+### Additional resources {.unnumbered}
+
+
+
+A good handbook for data visualization in Python  <br
+is the book "Python Data Science Handbook" by Jake VanderPlas: <br>
+[https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
+
+
+How you should visualize the data depends on the data and the question you want to answer. For example descriptive statistics can be visualized with a boxplot, a violinplot, a histogram or a density plot. Relationships between two variables can be visualized with a scatterplot, a lineplot, a regplot or a jointplot. 
+
+
+## How you should visualize data? {.unnumbered}
+
+
+- A graphic should have a suitable font size.
+- Choose colors that are easy to distinguish also for colorblind people.
+- The axis ticks and limits should be chosen in a way that the data is easy to read.
+- Axis should be labeled and physical units should be not forgotten.
+- The graphic should be not overloaded with information.
+
+

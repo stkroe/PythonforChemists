@@ -1,0 +1,234 @@
+---
+title: "Introduction to Data Science"
+execute:
+    echo: true
+    eval: false
+--- 
+
+
+### More information {.unnumbered}
+- [Data Science for Beginner](https://microsoft.github.io/Data-Science-For-Beginners/#/) by Microsoft
+- [Research Data Managment (RDM) in Chemistry](https://knowledgebase.nfdi4chem.de/knowledge_base/)
+
+
+# Data Collection and Storage {.unnumbered}
+
+
+## What is data? {.unnumbered}
+Data is a collection of 
+- numbers
+- words
+- measurements
+- observations 
+
+
+## How do you get data? {.unnumbered}
+
+
+# At the beginning of every data science project, you need to collect data. 
+
+# Data can be collected from various sources, such as:
+- experimental measurements
+- calculations and simulations
+- surveys
+- existing databases
+- web scraping
+- APIs
+- etc.
+
+
+## How do you store the data? {.unnumbered}
+
+
+# This data can be stored in different locations, such as:
+- local files
+- databases
+- cloud storages
+- cluster storages
+- web servers
+- etc.
+
+
+
+If you measure data yourself, either the your measurement device will store the data in a specific format, or you will have to store it yourself. Sometimes you have to transform the data into a different format to be able to work with it.
+
+
+If you use data from external sources, you have to make sure that you have legal rights to use the data. Check the data license and terms of use.
+
+Further make sure how the data is stored and how you can access it.
+
+
+## How do you access external data? {.unnumbered}
+
+
+To access data from exeternal sources, you can use different tools and libraries.
+
+For example, if you want to access data from a chemical database e.g. 
+- [Materials Project](https://next-gen.materialsproject.org/api), you can use the `pymatgen` [library](https://pymatgen.org/). (Requires API key, which can be obtained by registering on the website.)
+
+- [RCSB PDB Protein Data Bank](https://www.rcsb.org/docs/programmatic-access/web-apis-overview), you can use the `rcsb` [library](https://rcsbapi.readthedocs.io/en/latest/).
+
+- [PubChem](https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access), you can use the `pubchempy` [library](https://pubchempy.readthedocs.io/en/latest/guide/introduction.html).
+
+... and many more.
+
+
+
+If you use APIs please read the documentation of the API to understand how to access the data. And make sure to respect the API usage policy and database terms of use.
+
+
+## Which data formats do you use? {.unnumbered}
+
+
+Data can be stored in various data formats, such as:
+- Plain Text files (e.g. CSV, DAT, TXT)
+- Text files with structure (e.g. JSON, XML)
+- Spreadsheet files
+- Binary files (e.g. HDF5, Parquet, NetCDF,Feather, Pickle, npy, etc.)
+- Databases 
+- chemical and molecular data formats (e.g. XYZ, CIF, PDB, etc.)
+- etc.
+
+
+### Plain Text Files {.unnumbered}
+
+A text file often contains a header with the names of the columns and then the data in rows. Columns can be seperated by different delimiters (`spaces`, `,`, `;`, `tabs`, ...). <br> For example, a file with data from an experiment could look like this:
+
+```plaintext
+Time/s  Temperature/°C
+0         20
+10        21
+...     ...
+
+```
+
+
+### JSON or XML {.unnumbered}
+[JSON](https://en.wikipedia.org/wiki/JSON) stands for JavaScript Object Notation. Data is structured in a key-value format, so that both humans and machines can read it easily. <br> For example, a JSON file with the same data as above could look like this:
+ 
+ 
+``json
+{
+  "data": [
+    {"Time": 0, "Temperature": 20},
+    {"Time": 10, "Temperature": 21},
+    ...
+  ]
+}
+```
+
+[XML](https://en.wikipedia.org/wiki/XML) stands for Extensible Markup Language. It is also designed to be both human-readable and machine-readable. <br> For example, an XML file with the same data as above could look like this:
+
+```xml
+<data>
+  <measurement>
+    <Time>0</Time>
+    <Temperature>20</Temperature>
+  </measurement>
+  <measurement>
+    <Time>10</Time>
+    <Temperature>21</Temperature>
+  </measurement>
+  ...
+```
+
+
+### Binary Files {.unnumbered}
+
+Data is stored in a binary format and can be read with specific libraries. It is often used for large datasets, as it is more efficient than plain text files. The computer is able to read and write binary files faster than text files. <br> Some common binary file formats are:
+
+- [**HDF5**](https://en.wikipedia.org/wiki/Hierarchical_Data_Format): Hierarchical Data Format, used for large datasets
+- [**Parquet**](https://en.wikipedia.org/wiki/Apache_Parquet): Columnar storage format, used for big data
+- [**NetCDF**](https://en.wikipedia.org/wiki/NetCDF): Network Common Data Form, array-orriented, often for geoscience data
+- [**Feather**](https://arrow.apache.org/docs/python/feather.html): a fast column-based serialization for data frames, initially designed for R and Python, helps to share data between languages
+- [**Pickle**](https://docs.python.org/3/library/pickle.html): Python-specific format, used for serializing Python objects
+- [**npy**](https://numpy.org/doc/stable/reference/generated/numpy.lib.format.html): Numpy-specific format, used for saving numpy arrays
+
+Here is a list of comparison of binary file formats: [Comparison of data serialization formats](https://en.wikipedia.org/wiki/Comparison_of_data-serialization_formats)
+
+
+### Databases {.unnumbered}
+
+Databases are designed for big data storage. The advantage of databases is that they can be queried and updated easily. There are different types of databases, such as:
+- **[SQL](https://en.wikipedia.org/wiki/SQL)** databases (e.g. SQLite, MySQL, PostgreSQL)
+- **[NoSQL](https://en.wikipedia.org/wiki/NoSQL)** databases (e.g. MongoDB)
+- **[Graph databases](https://en.wikipedia.org/wiki/Graph_database#List_of_graph_databases)**
+- **[Time series databases](https://en.wikipedia.org/wiki/Time_series_database)**
+
+
+
+### Chemical and Molecular Data Formats {.unnumbered}
+There are specific data formats for chemical and molecular data, such as:
+
+
+- **[XYZ](https://en.wikipedia.org/wiki/XYZ_file_format)**: Cartesian coordinates of atoms
+
+- **[CIF](https://en.wikipedia.org/wiki/Crystallographic_Information_File)**: Crystallographic Information File, used for crystallographic data
+
+- **[PDB](https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format))**: Protein Data Bank, used for protein structures
+ 
+- **[MOL](https://en.wikipedia.org/wiki/Chemical_table_file)**: Molecule file format, used for chemical structures
+ 
+- **[SDF](https://en.wikipedia.org/wiki/Chemical_table_file)**: Structure Data File, used for chemical structures
+
+- **[SMILES](https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system)**: Simplified Molecular Input Line Entry System, used for chemical structures
+
+- **[InChI](https://en.wikipedia.org/wiki/International_Chemical_Identifier)**: International Chemical Identifier, used for chemical structures
+
+- **[nmrML](https://nmrml.org/)**: Nuclear Magnetic Resonance Markup Language, used for NMR data
+
+- **[NMReDATA](https://nmredata.org/)**: Nuclear Magnetic Resonance Electronic Data Aggregation, used for NMR data
+ 
+- **[JCAMP-DX](https://iupac.org/what-we-do/digital-standards/jcamp-dx/)**: Joint Committee on Atomic and Molecular Physical Data, used for spectroscopy data
+
+- **[mzML](https://link.springer.com/protocol/10.1007/978-1-60761-444-9_22)**: Mass Spectrometry Markup Language, used for mass spectrometry data
+
+- **[animl](https://www.animl.org/)**: Analytical Information Markup Language, used for analytical data
+
+- **[FASTA](https://en.wikipedia.org/wiki/FASTA_format)**: used for DNA and protein sequences
+
+etc.
+
+
+### Other Data Formats {.unnumbered}
+- [**Images**](https://en.wikipedia.org/wiki/Image_file_formats): Images can be stored in different formats, such as JPEG, PNG, TIFF, BMP, GIF, etc.
+
+- [**Audio**](https://en.wikipedia.org/wiki/Audio_file_format): Audio files can be stored in different formats, such as MP3, WAV, FLAC, etc.
+
+- [**Video**](https://en.wikipedia.org/wiki/Video_file_format): Video files can be stored in different formats, such as MP4, AVI, MOV, etc.
+
+
+
+## What type of data do you have? {.unnumbered}
+
+Next what do you have to consider is the types of your data. 
+
+Depending on the type of data analysis could be different.
+
+
+### Numerical Data {.unnumbered}
+Numerical data is data that is expressed with numbers. It can be further divided into two types:
+- **Discrete**: Data that can only take certain values (e.g. integers)
+- **Continuous**: Data that can take any value within a certain range (e.g. real numbers)
+
+For example, 
+- measured temperature over time -> continuous
+- number of chemical substances, which are measured -> discrete 
+
+
+
+### Categorical Data {.unnumbered}
+Categorial means that data is divided into categories. It can be further divided into two types:
+- **Ordinal**: Data that has a specific order or ranking 
+- **Nominal**: Data that has no specific order or ranking 
+ 
+For example,
+- blood type -> nominal {A, B, AB, O}
+- chemical function group -> nominal {alcohol, ketone, aldehyde, carboxylic acid, etc.}
+- purity of a substance -> ordinal {low, medium, high}
+- hardness of a material -> ordinal {soft, medium, hard}
+
+
+# Quiz {.unnumbered}
+
+

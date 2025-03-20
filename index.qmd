@@ -3,14 +3,14 @@
 Welcome to the Data Analysis and Visualization Course for Chemists and Material Scientists! This course is designed for better understanding how Python can be used for data analysis and visualization in the fields of chemistry and materials science. Before diving into the course content, please take a moment to review the following important informations.
 
 ::::{.callout-caution}
-## Disclaimer
+## Disclaimer {.unnumbered}
 This website is under construction and continuous development. The content provided is for educational purposes only and may be subject to change. The authors and contributors are not responsible for any errors or omissions, or for any outcomes related to the use of the information contained herein.
 Please read the [license](informations/license.qmd), [privacy policy](informations/privacy.qmd), and [disclaimers](informations/disclaimer.qmd) of this website.
 
 :::
 
 :::{.callout-warning collapse="true"}
-## Prequisits
+## Prequisits {.unnumbered}
 It is suggested that you have a basic understanding of Python or a comparable programming language prior to enrollment in this course, in order to facilitate more expeditious progress. Nevertheless, this course is structured in such a way that it can be done with any prior knowledge. The course contains also a fundamental introduction to Python syntax, and as such, persons with no prior knowledge should be able to take the courses. However, it is advisable to study a basic Python course beside of this content.
 
 Further this course will not going in detail of fundamental statistical principles. This is assumed as fullfilled prequirements beforehand of this course.
@@ -53,27 +53,6 @@ Each lecture includes examples related to chemistry and material science. At the
 
 At the very end of the course, there is a comprehensive exam which covers a complete data analyis and visualization example.
 
-
-## Course Paths
-
-```{mermaid}
-graph TD;
-    A[Beginner Path] --> B[Lecture 1];
-    B --> C[Example 1];
-    C --> D[Lecture 2];
-    D --> E[Example 2];
-    E --> F[Lecture 3];
-    F --> G[Example 3];
-    G --> H[Lecture 4];
-    H --> I[Example 4];
-    I --> J[Lecture 5];
-    J --> M[Example 5];
-    M --> N[Exam];
-
-```
-
-
-
 ##  This course within of the "VU Data Science and Visualization Primer for Chemists and Material Scientists"
 
 We concentrate on the Basic Path during this lecture.
@@ -83,144 +62,9 @@ Timeschedule for a week table
 | Time       | Monday       | Tuesday      | Wednesday    | Thursday     | Friday       |
 |------------|--------------|--------------|--------------|--------------|--------------|
 | 13:00-14:00| Introduction/Python Basics | Lecture 2| Lecture 3   | Lecture 4| Lecture 5  |
-| 14:00-15:00| Basic Example| Lecture 2 | Lecture 3   | Lecture 4 | Example 5  |
+| 14:00-15:00| Lecture 1    | Lecture 2 | Lecture 3   | Lecture 4 | Example 5  |
 | 15:00-16:00| Lecture 1    | Example 2| Example 3  | Example 4 |F&Q|
 | 16:00-17:00| Example 1    | Example 2| Example 3  | Example 4 | Final Exam|
 | 17:00-18:00| Example 1    | Example 2| Example 3  | Example 4 | Final Exam|
-
-<details>
-  <summary>Monday</summary>
-1. Introduction
- - [Overview of this course?](index.qmd)
- - [What do you need for data analysis and visualization?](course/chapters/Introduction/ToolsOfDataScience.ipynb)
- - [Why you should learn Python? ](course/chapters/Introduction/ToolsOfDataScience.ipynb)
-2. Basic Python 
- - [Fast introduction in Python Syntax](course/chapters/Basics/Basics.ipynb)
- - [Introduction in important Python libaries](course/chapters/Basics/BasicsModules.ipynb)
- - [Introduction in Dataanalysis](course/chapters/Basics/DataAnalysis.ipynb)
- - [Introduction in Datavisualization](course/chapters/Basics/Datavisualization.ipynb)
-
-3. Lecture 1
-- [How I import data?](course/chapters/Lecture1/Data_input.ipynb)
-- [How to draw simple xy-Plot](course/chapters/Lecture1/Simple_plot.ipynb)
-- [How to adjust a plot](course/chapters/Lecture1/Adjusting_plot.ipynb)
-
-4. Example 1
-</details>
-
-
-<!-- 
-Exercise 1a: Basic Plot xy-plot
-Experimental Data vs Theory Data 
-
-Exercise 1b: Multi Plots and Multi Files 
-
-Exercise 1c: 3D Plot
-Potentialcurve
-
-Exercise 2a: Histogram fitting Gaussian distribution 
-e.g. machine fill accuracy
-
-Exercise 2b: Arrhenius Fit
-
-Exercise 2c: Half-Life Coffin
-
-Exercise 3a: Correlation plots
-time vs. temperature 
-temperature vs pressure
-
-
-Exercise 3b: Outliers
-Anthraquinone E_exp vs E_theory with outlier
-
-Exercise 3c: Interactive Plot
-a, b linear function
-E_theo vs E_exp
-
-Exercise 4a: XRD - Peak position
-
-Exercise 4b: Data smoothing, Running average
-
-Exercise 4c: Splines Interpolation and Integration
-
-
-Theory: 1.5h 
-
-Exercises: 30 min students should try to solve it and 15 min show solution
-last exercise of each day should not be included in the exam
-
-17:00-18:00: practice, repetition, questions
-
-Fr: 15:00-17:00: Exam 
--->
-
-<!-- ### Introduction
-
-1. [Tools of Data Science](chapters/Introduction/ToolsOfDataScience.ipynb)
-- Short Introduction in Data Science
-2. [What is Python?](chapters/Introduction/WhatIsPython.ipynb)
-- Introduction and History of Python
-3. [Installation Guide](chapters/Introduction/InstallationGuide.ipynb)
- - Installation of Python and a Editor/IDE. -->
-
-
-
-<!-- ### Beginner Path
-
-1. [Basic Python](chapters/Basics/Basics.ipynb)
-
-2. [Basic Modules](chapters/Basics/BasicsModules.ipynb)
-
-6. [Data Analysis Introduction](chapters/DataAnalysis/DataAnalysis.ipynb)
-
-7. [Data Analysis Modules](chapters/DataAnalysis/DataAnalysisModules.ipynb)
-
-8. [Data Input](chapters/DataAnalysis/DataInput.ipynb)
-
-9. [Data Cleaning](chapters/DataAnalysis/DataCleaning.ipynb)
-
-10. [Data Manipulation](chapters/DataAnalysis/DataManipulation.ipynb)
-
-11. [Data Statistics](chapters/DataAnalysis/DataStatistics.ipynb)
-
-12. [Data Export](chapter/DataAnalysis/DataExport.ipynb)
-
-13. [Data Visualization Introduction](chapters/DataVisualization/DataVisualization.ipynb)
-
-14. [Data Visualization Modules](chapters/DataVisualization/DataVisualizationModules.ipynb)
-
-15. [Data Visualization Basics](chapters/DataVisualization/DataVisualizationBasics.ipynb)
-
-### Advanced Path
-1. [Data Analysis Introduction](chapters/DataAnalysis/DataAnalysis.ipynb)
-
-2. [Data Analysis Modules](chapters/DataAnalysis/DataAnalysisModules.ipynb)
-
-3. [Data Input](chapters/DataAnalysis/DataInput.ipynb)
-
-4. [Data Cleaning](chapters/DataAnalysis/DataCleaning.ipynb)
-
-5. [Data Manipulation](chapters/DataAnalysis/DataManipulation.ipynb)
-
-6. [Data Statistics](chapters/DataAnalysis/DataStatistics.ipynb)
-
-7. [Data Export](chapter/DataAnalysis/DataExport.ipynb)
-
-9. [Advanced Data Visualization](chapters/Advanced/DataAnalysisAdvancedTechniques.ipynb)
-
-10. [Data Visualization Introduction](chapters/DataVisualization/DataVisualization.ipynb)
-
-11. [Data Visualization Modules](chapters/DataVisualization/DataVisualizationModules.ipynb)
-
-12. [Data Visualization Basics](chapters/DataVisualization/DataVisualizationBasicTechniques.ipynb)
-
-13. [Advanced Data Visualization Techniques](chapters/Advanced/DataAnalysisAdvancedTechniques.ipynb)
-
-### Challenging Path
-Additionally to the Advanced Path:
-
-1. [Challenging Data Analysis](chapters/Challenging/DataAnalysisComplexTechniques.ipynb)
-
-2. [Challenging Data Visualization](chapters/Challenging/DataVisualizationComplexTechniques.ipynb) -->
 
 

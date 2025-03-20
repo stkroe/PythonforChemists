@@ -33,41 +33,48 @@ book:
       - index.qmd
       - part: "Essentials"
         chapters:
-          - course/chapters/Introduction/Lecture0/ToolsOfDataScience.ipynb
-          - course/chapters/Introduction/Lecture0/WhatIsPython.ipynb
-          - course/chapters/Introduction/Lecture0/InstallationGuide.ipynb
+          - course/chapters/Introduction/Lecture0/Introduction.qmd
+          - course/chapters/Introduction/Lecture0/WhatIsPython.qmd
+          - course/chapters/Introduction/Lecture0/InstallationGuide.qmd
       - part: "Python Crash Course"
         chapters:
-          - course/chapters/Python/Basics.ipynb
-          - course/chapters/Python/BasicsModules.ipynb
+          - course/chapters/Python/Basics.qmd
+          - course/chapters/Python/BasicsModules.qmd
       - part: "Lecture 1"
         chapters:
-          - course/chapters/Introduction/Lecture1/DataCollection.ipynb
-          - course/chapters/Basics/Lecture1/SimpleDataImport.ipynb
-          - course/chapters/Intermediate/Lecture1/SpecialDataImport.ipynb
-          - course/chapters/Advanced/Lecture1/AdvancedDataImport.ipynb
+          - course/chapters/Introduction/Lecture1/DataCollection.qmd
+          - course/chapters/Basics/Lecture1/SimpleDataImport.qmd
+          - course/chapters/Basics/Lecture1/SimpleDataInspection.qmd
+          - course/chapters/Basics/Lecture1/SimplePlot.qmd
+          # - course/chapters/Intermediate/Lecture1/SpecialDataImport.ipynb
+          # - course/chapters/Advanced/Lecture1/AdvancedDataImport.ipynb
       # - part: "Lecture 2"
       #   chapters:
       #     - course/chapters/Introduction/Lecture2/Introduction.ipynb
       #     - course/chapters/Basics/Lecture2/BasicDataAnalysis.ipynb
       #     - course/chapters/Intermediate/Lecture2/IntermediateDataAnalysis.ipynb
       #     - course/chapters/Advanced/Lecture2/AdvancedDataAnalysis.ipynb
+      - part: "Informations"
+        chapters:
+         - informations/references.qmd
+         - informations/license.qmd
+         - informations/privacy.qmd
+         - informations/impressum.qmd
+         - informations/disclaimer.qmd
 bibliography: references.bib
 
 format:
-  html:
-    light: lumen
-    dark:  darkly
-    code-link: true
-    code-copy: true
-    code-overflow: wrap
-    toc: true
-    toc-depth: 3
-    code-fold: false
-    fig-cap: true
-    self-contained: true
-    number-sections: false
-  
+    live-html: 
+      theme: "book"
+      highlight-style: "github"
+      code-copy: true
+      code-overflow: wrap
+      toc: true
+      toc-depth: 3
+      code-fold: false
+      fig-cap: true
+      #self-contained: true
+      number-sections: false
 colab:
   gh-user: "stkroe"    # Your GitHub username
   gh-repo: "PythonforChemists"    # Your repository name

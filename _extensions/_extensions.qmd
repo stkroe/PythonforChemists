@@ -1,0 +1,28 @@
+---
+title: Example {quarto-assign} document
+format: html
+filters:
+  - assign
+---
+
+Please attempt all exercises to the best of your ability.
+
+:::{.direction}
+1. Create a vector of containing 5 different integer numbers.  
+:::
+
+:::{.rubric}
+Points awarded:
+
+- +1 for full points
+- +0.5 for vector with 5 observations or vector with only integers but not exactly 5 observations.
+:::
+
+:::{.sol}
+```{r}
+x <- c(1L:5L)
+# Or: 
+y <- c(1L, -4L, -5L, 42L, 55L)
+```
+:::
+

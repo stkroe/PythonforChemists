@@ -1,0 +1,133 @@
+---
+title: "Basic Modules"
+format: live-html
+engine: jupyter
+pyodide:
+  packages:
+    - matplotlib
+    - numpy
+    - seaborn
+    - os 
+    - argparse
+    - sys
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Python/BasicsModules.ipynb"
+        icon: "laptop"
+---
+
+
+# Numpy and Pandas {.unnumbered}
+
+
+## Numpy {.unnumbered}
+- Numpy is the most important library for Python. 
+- The standard data types in Python are very slow and not very efficient for data analysis. 
+- Numpy is based mainly on C an C++. 
+- This allows Numpy to be faster than plain Python. 
+- With Numpy a new data type is introduced `numpy array`. 
+- Numpy arrays are multidimensional arrays that are much faster than Python lists. 
+- The libary also includes many mathematical functions and methods for linear algebra. 
+
+
+# More information can found at the [Numpy website](https://numpy.org/).
+
+
+# Load the required libraries
+
+```{pyodide}
+import numpy as np
+```
+
+###  Numpy Arrays {.unnumbered}
+
+
+# An array can be described as multidimensional lists. For example a matrix is a 2D array.
+
+```{pyodide}
+mat = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(mat)
+```
+
+# The elements of an array can be accessed using the index of the element. 
+
+```{pyodide}
+print(mat[0, 0])   # 1 element at row 0, column 0
+```
+
+print(mat[1, 2])  # 6 element at row 1, column 2
+
+
+print(mat[:, 0])  # [1 4 7] all elements in column 0
+
+
+print(mat[1, :])  # [4 5 6] all elements in row 1
+```
+
+```{pyodide}
+empty_mat = np.empty((3,3),dtype=float)
+print(empty_mat)
+```
+
+```{pyodide}
+ones_mat = np.ones((3, 3))
+print(ones_mat)
+```
+
+```{pyodide}
+zeros_mat = np.zeros((3, 3))
+print(zeros_mat)
+```
+
+```{pyodide}
+arr = np.arange(1, 10, 2) # an array from 1 to 10 with a step of 2
+print(arr)
+```
+
+```{pyodide}
+arr2 = np.linspace(0,100,5) # an array from 0 to 100 with 5 elements
+print(arr2)
+```
+```{pyodide}
+rand_mat = np.random.rand(3,3) # a 3x3 matrix with random numbers between 0 and 1
+print(rand_mat)
+```
+
+
+
+
+## Pandas {.unnumbered}
+
+
+- Pandas is a library for data manipulation and analysis. 
+- It is built on top of Numpy. 
+- With Pandas you are working with dataframes and not with arrays like in Numpy. 
+- Dataframes are two-dimensional labeled data structures with columns of potentially different types.
+- It is like a table in a database or a spreadsheet. Pandas has a lot of methods to manipulate dataframes. 
+- You can select subsets of the data, filter, sort, group, merge, join, etc. 
+- You can statistically analyze the data, export the data to different file formats, but also plot the data with the help of `matplotlib`.
+
+
+# More information can be found under [Pandas website](https://pandas.pydata.org/).
+
+```{pyodide}
+import pandas as pd
+```
+
+
+
+
+### Panda DataFrames {.unnumbered}
+
+
+# Panda DataFrames are two-dimensional labeled data structures with columns of potentially different types like a table.
+
+```{pyodide}
+data = pd.DataFrame({"gas": ["CH4", "H2O", "CO2"], "moalar_weight": [16, 18, 44]
+                     }) # create a dataframe from a dictionary
+print(data)
+```
+
+
+
+

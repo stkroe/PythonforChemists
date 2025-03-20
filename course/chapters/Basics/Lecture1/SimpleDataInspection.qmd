@@ -1,0 +1,189 @@
+---
+title: "Simple Data Inspection"
+format: live-html
+engine: jupyter
+pyodide:
+  packages:
+    - matplotlib
+    - numpy
+    - seaborn
+    - os 
+    - argparse
+    - sys
+    - pandas
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/Lecture1/SimpleDataInspection.ipynb"
+        icon: "laptop"
+--- 
+
+
+# Inspection of Data {.unnumbered}
+
+
+# After you load your data you have to inspect it to:
+- check if no data is consistent, no missing values
+- check if the data is in the correct format
+- check if the data is in the correct range
+- check if the data is in the correct distribution
+- get first insights into the data
+
+
+## Pandas {.unnumbered}
+
+
+### Overview of the Data {.unnumbered}
+
+
+You can use the `head()` function to get a quick overview of the first rows of the data.
+
+```{pyodide}
+import pandas as pd
+
+data = pd.read_csv('data.csv')
+data.head()
+```
+
+```{pyodide}
+import pandas as pd
+
+data = pd.read_csv('../../../data/temperatures.csv',sep=';')
+data.head()
+```
+
+The `describe()` function gives you a quick overview of the data distribution.
+
+```{pyodide}
+data.describe()
+```
+
+
+
+
+The `describe`function shows you the count, mean, standard deviation, minimum, 25%, 50%, 75% and maximum values of the data.
+
+In this case, data has 44640 data points, The mean of the temperature is 298(6) K. The minimum temperature is 279 K and the maximum temperature is 316 K. Further the 25% quantile is 294 K, the 50% quantile is 298 K and the 75% quantile is 302 K. The measurement was taken from 1 to 44640 seconds which is 12 hours and 24 minutes.
+We suppose that is the correct time range which was to be expected.
+ 
+This gives you a quick overview of the data distribution.
+
+
+#### Missing Data and Corrupted Data {.unnumbered}
+
+
+To check if there is missing data in the data set you can use the `isna()` function.
+
+```{pyodide}
+data.isna().sum()
+```
+
+
+
+No missing data is found in this case.
+
+
+You can check the data type using `dtypes` function to check if the data is in the correct format.
+
+```{pyodide}
+data.dtypes
+```
+
+```{pyodide}
+data.dtypes
+```
+
+You see that `time` is an `int64` and `temperature` is a `float64`.
+For the analysis, you might want to convert the `time` to a `float64` as well.
+
+```{pyodide}
+data['time'] = data['time'].astype('float64')
+```
+
+```{pyodide}
+data['time'] = data['time'].astype('float64')
+data.dtypes
+```
+
+If we have missing data we can use the `fillna()` function to fill the missing data with a specific value.
+
+```{pyodide}
+data.fillna(0)
+```
+
+```{pyodide}
+data_missing = pd.read_csv('../../../data/temperatures_nan.dat', header=None, skipinitialspace=True, sep=' ', names=['time', 'temperature'])
+data_missing.head()
+```
+
+
+
+
+One value is missing in the `temperature` column. We fill it with 0.
+
+First let check where the data is missing.
+
+```{pyodide}
+data[data['temperature'].isna()]
+```
+
+
+data_missing[data_missing['temperature'].isna()]
+
+
+At index 21 at time 22 s the temperature is missing.
+:::{.callout .callout-info}
+The handling of missing data is a complex topic.
+First of all you have to check why the data is missing. Is it a measurement error, a data processing error etc.
+
+You have to decide if you want to fill the missing data with a specific value, drop the row or column or interpolate the missing data. The decision depends on the data and the analysis you want to perform. Droping Data is always a delicate decision because you loose information. Sometimes it is not good scientific practice to drop data. 
+For more information there a lot of research in this topic [https://doi.org/10.1076/edre.7.4.353.8937](https://doi.org/10.1076/edre.7.4.353.8937)
+:::
+
+
+The time step can be estimated by the difference between the time steps of the previous and the next data point.
+
+```{pyodide}
+data['time'].diff()
+```
+And we can summarize it via:
+
+```{pyodide}
+data['time'].diff().value_counts()
+```
+
+```{pyodide}
+data_missing['time'].diff().value_counts()
+```
+
+get difference between temperature values
+```{pyodide}
+data_missing[10:30].diff()
+```
+
+
+The time step is constantly 1 second. 
+The difference between the temperature of the previous and the next data point is at $~10^{-2}$ order.
+We can assume that in this case the data is consistent enough and we can fill the missing data with the mean of the previous and the next data point.
+ 
+```{pyodide}
+data['temperature'].fillna((data['temperature'].shift() + data['temperature'].shift(-1))/2, inplace=True)
+```
+
+
+data_missing['temperature'].fillna((data_missing['temperature'].shift() + data_missing['temperature'].shift(-1))/2, inplace=True)
+data_missing[20:25]
+
+
+Now can analysis or plot the data.
+ 
+
+
+
+
+
+# 
+
+
+
+
+

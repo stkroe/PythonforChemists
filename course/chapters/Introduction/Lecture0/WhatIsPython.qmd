@@ -1,0 +1,69 @@
+---
+title: "What is Python?"
+---
+
+
+## Short History of Python {.unnumbered}
+
+
+# (see [Wikipedia](https://en.wikipedia.org/wiki/History_of_Python) for more details)
+
+
+- 1989: the beginning of python
+- 1991: Guido van Rossum, a Dutch programmer and father of Python, implemented and published the first version of Python.
+- Fun fact: The name Python came from the show Monty Python's Flying Circus.
+- 1994: Python 1.0 was released
+- 2000: Python 2.0 was released
+- 2008: Python 3.0 was released with new syntax and features
+- Important: **python3 to python2 is backward incompatible**  *e.g.* `print("Hello World")` python3 and `print "Hello World"` python2. 
+- `python2` is nowdays outdated. It is not recommended to use it for new projects.
+
+
+# Van Rossum designed Python as a "Computer Programming Language for Everybody".
+# 
+
+
+## What is Python? {.unnumbered}
+- Python is an interpreted language in comparsion to compiled languages *e.g.* C or C++
+- Python is often slower compare to compiled languages
+- Python has dynamically type-check and a garabge collection
+- Python is also able to object-oriented and functional programming
+- Python is a high-level language, which means that it is closer to human language than machine language which the computer is understanding
+
+### Simple Scheme how Python works internally: {.unnumbered}
+
+So if you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).
+
+
+ ```{mermaid}
+ graph TD
+     A[Python Source Code *.py] -->|Step 1: Compilation| B[Bytecode *.pyc]
+     B -->|Step 2: Interpretation| C[Python Virtual Machine - PVM]
+     C -->|Execution| D[Program Output]
+ ```
+
+
+## How I can learn Python? {.unnumbered}
+
+
+# There are a lot of resources to dive deeper into Python *e.g.*:
+
+
+- [https://www.py4e.com/](https://www.py4e.com/) (Python for Everybody)
+- [https://py-tutorial-de.readthedocs.io/de/python-3.3/](https://py-tutorial-de.readthedocs.io/de/python-3.3/) (German Tutorial)
+- [https://www.w3schools.com/python/default.asp](https://www.w3schools.com/python/default.asp)
+- [https://jakevdp.github.io/PythonDataScienceHandbook/](https://jakevdp.github.io/PythonDataScienceHandbook/)
+- [https://exercism.org/](https://exercism.org/) (Coding Exercises)
+- [https://www.freecodecamp.org/](https://www.freecodecamp.org/) (Coding Exercises)
+- [https://realpython.com/tutorials/data-viz/](https://realpython.com/tutorials/data-viz/)
+- [https://www.youtube.com/watch?v=LHBE6Q9XlzI](https://www.youtube.com/watch?v=LHBE6Q9XlzI)
+
+
+:::{.callout-important}
+As it is with languages, you can only learn it if you practicing it. <br>
+So, start you own projects and have fun with it!
+:::
+
+
+
+

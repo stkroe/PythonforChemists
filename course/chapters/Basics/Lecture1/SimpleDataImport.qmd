@@ -1,0 +1,278 @@
+---
+title: "Simple Data Import"
+format: live-html
+engine: jupyter
+pyodide:
+  packages:
+    - matplotlib
+    - numpy
+    - seaborn
+    - os 
+    - argparse
+    - sys
+    - pandas
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/SimpleDataImport.ipynb"
+        icon: "laptop"
+--- 
+
+
+# Data Reading and Writing {.unnumbered}
+
+
+## How do you read the data? {.unnumbered}
+
+
+Depending on the data format, you can use different libraries to read the data.
+
+
+### Reading Plain Text Files {.unnumbered}
+
+You can use the `pandas`  or `numpy` library to read CSV files. 
+
+
+
+## Pandas {.unnumbered}
+Pandas is read function is quite fast and can read large files.
+The advantage is that different data types can be read in the same file. 
+The reading functions return a DataFrame object. 
+
+Pandas has different functions to read different file formats.
+- `pandas.read_csv()` function is can read CSV files.
+- `pandas.read_table()` function is can read general delimiter files.
+- `pandas.read_fwf()` function is can read fixed-width files.
+
+
+Mostly used function is
+`pandas.read_csv()` 
+because you can specify the delimiter, header, and other options.
+
+
+```{pyodide}
+import pandas as pd
+data = pd.read_csv('../../../data/temperatures.csv')
+data
+```
+
+The data has a different delimiter than the default `comma`. You can specify the delimiter using the `sep` parameter.
+
+
+
+```{pyodide}
+data = pd.read_csv('../../../data/temperatures.csv', sep=';')
+data
+```
+
+Now the data is read correctly. The header is already taken from the first row. If you want to specify the header, you can use the `header` parameter.
+
+```python
+import pandas as pd
+df = pd.read_csv('file.csv', header=None) # No header
+df = pd.read_csv('file.csv', header=0) # Header is in the first row
+df = pd.read_csv('file.csv', header=1) # Header is in the second row
+```
+
+
+```{pyodide}
+data = pd.read_csv('../../../data/temperatures.csv', sep=';', header=0)
+data
+```
+
+If your data contains whitespace, you can use the `skipinitialspace` parameter to remove initial whitespaces.
+
+```{pyodide}
+data = pd.read_csv('../../../data/temperatures.dat', skipinitialspace=True, sep=" ")
+data
+```
+
+Now the data has no header. You can specify the header using the `names` parameter.
+
+
+```{pyodide}
+data = pd.read_csv('../../../data/temperatures.dat', sep=' ', skipinitialspace=True,header=1,names=['t', 'T'])
+# important to set header=None, otherwise the first line is used as header
+data
+```
+
+
+You see that also not `.csv` files can be read with the `read_csv()` function.
+
+
+The `read_csv()` function has a lot of parameters. 
+Look in the documentation. You can see which parameters you can set [https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)
+
+For example,
+- `delimiter` parameter can be used to specify the delimiter instead of `sep`. Both are the same. Default is `,`.
+- `header` parameter can be used to specify the header row. Default is inferred from the file.
+- `skipinitialspace` parameter can be used to remove initial whitespaces. Default is `False`.
+- `names` parameter can be used to specify the column names.
+- `skiprows` parameter can be used to skip rows at the beginning of the file.
+- `skipfooter` parameter can be used to skip rows at the end of the file.
+- `nrows` parameter can be used to read only a specific number of rows.
+- `usecols` parameter can be used to read only specific columns.
+- `dtype` parameter can be used to specify the data type of the columns.
+- `na_values` parameter can be used to specify the missing values.
+- `keep_default_na` parameter can be used to specify if the default missing values should be kept. Default is `True`.
+- `na_filter` parameter can be used to recognize missing values without `NA` or `NaN` values. Default is `True`.
+- `true_values` parameter can be used to specify the values that should be recognized as `True`.
+- `false_values` parameter can be used to specify the values that should be recognized as `False`.
+- `parse_dates` parameter can be used to parse dates. Default is `False`.
+
+
+
+
+Some examples are:
+
+
+
+```{pyodide}
+data = pd.read_csv('../../../data/temperatures.csv', sep=';', header=0, names=['t', 'T'], skiprows=1)
+```
+data now the first row is skipped, only 44638 rows are read instead of 44639
+Missing value examples:
+
+
+```{pyodide}
+data = pd.read_csv('../../../data/temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=False)
+print(data.loc[20:26]) print some rows to see the NaN values
+```
+
+
+If the `na_filter`is set to `False`, the missing values are not recognized. But if it set on `True`, the missing values are recognized.
+
+```{pyodide}
+data = pd.read_csv('../../../data/temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=True)
+print(data.loc[20:26]) print some rows to see the NaN values
+```
+
+
+## Numpy {.unnumbered}
+Numpy has two main functions to read text files.
+- `numpy.loadtxt()` function is used to read text files.
+- `numpy.genfromtxt()` function is used to read text files with missing values.
+
+In comparison to the `pandas` library, the `numpy` library is slower and can not read different data types in the same file.
+So you can not read a file with strings and numbers in the same file.
+
+
+
+If you try to read a file with a header row, you will get an error. 
+
+
+```{pyodide}
+import numpy as np
+data = np.loadtxt('../../../data/temperatures.csv', delimiter=';')
+```
+
+You can specify the header row using the `skiprows` parameter.
+If you want to skip one row, the `skiprows=1` parameter is set at `1`.
+
+
+```{pyodide}
+data = np.loadtxt('../../../data/temperatures.csv', delimiter=';', skiprows=1)
+data
+```
+
+Now the data is read correctly. You can see that the data is read as a numpy array and not as a DataFrame. This can be a disadvantage if you want to use the data as a DataFrame but an advantage if you want to use numpy functions to process the data.
+
+
+
+
+
+If you have data with whitespace, you do not need to specify the `delimiter`paramter because the default is whitespace.
+
+
+```{pyodide}
+data = np.loadtxt('../../../data/temperatures.dat')
+data
+```
+
+`genfromtxt()` gives you more flexibility to read files with missing values. 
+
+
+First using the `loadtxt()` function, you get an error because of the missing values. 
+
+
+```{pyodide}
+data = np.loadtxt('../../../data/temperatures_nan.dat')
+data
+```
+
+If you try to read the file with an empty entrance at row 22, you wil get still an error with the `genfromtxt()` function. 
+
+```{pyodide}
+data = np.genfromtxt('../../../data/temperatures_nan.dat')
+data
+```
+
+But why?
+What do you think is the reason for the error?
+
+
+::: {.callout-caution collapse="true"}
+The reason is that the `genfromtxt()` function expects the same number of columns in each row. The delimiter is set default to `whitespace`. But if you have a missing value, the function expects a value.
+An error is raised because at row 22 the function is detecting only one column due to the missing value.
+:::
+
+
+How can you solve this problem?
+
+::: {.callout-caution collapse="true"}
+You can **NOT** solve this problem with the `genfromtxt()` function if you have missing values and delimiter is whitespace.
+Either you have to fill the missing value with a value or you have to use the `pandas` library.
+:::
+
+
+
+If you have not `whitespace` as delimiter, you can use the `genfromtxt()` function with missing values.
+
+
+```{pyodide}
+data = np.genfromtxt('../../../data/temperatures_nan.csv',delimiter=';')
+data[20:26] # print some rows to see the NaN values
+```
+
+The different parameters that can be set are for `loadtxt()` function:
+(see documentation [https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html) 
+- `delimiter` parameter can be used to specify the delimiter. Default is whitespace.
+- `skiprows` parameter can be used to skip rows at the beginning of the file.
+- `usecols` parameter can be used to read only specific columns.
+- `dtype` parameter can be used to specify the data type of the columns.
+- `comments` parameter can be used to specify the comment character. Default is `#`.
+- `max_rows` parameter can be used to read only a specific number of rows after skipping rows.
+- `unpack` parameter can be used to unpack the columns, so each column is returned as a separate array.
+and for `genfromtxt()` function
+(see documentation [https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html#numpy.genfromtxt](https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html#numpy.genfromtxt))
+- `delimiter` parameter can be used to specify the delimiter. Default is whitespace.
+- `skip_header` parameter can be used to skip rows at the beginning of the file.
+- `skip_footer` parameter can be used to skip rows at the end of the file.
+- `usecols` parameter can be used to read only specific columns.
+- `dtype` parameter can be used to specify the data type of the columns.
+- `comments` parameter can be used to specify the comment character. Default is `#`.
+- `max_rows` parameter can be used to read only a specific number of rows after skipping rows.
+- `unpack` parameter can be used to unpack the columns, so each column is returned as a separate array.
+- `missing_values` parameter can be used to specify which values should be recognized as missing values.
+- `filling_values` parameter can be used to specify the filling values for the missing values.
+- `usemask` parameter can be used to return a masked array with missing values.
+- `names` parameter can be used to specify the column names. If `names=True`, the column names are read from the first row.
+- `replace_space` parameter can be used to replace spaces in the column names. Default is `_`.
+etc.
+
+
+
+
+::: {.callout-important}
+The `pandas` library is faster and more flexible than the `numpy` library.
+Choose wisely which library you want to use.
+It depends on the data format, the data type and what kind of processing you want to do.
+:::
+
+
+## Exercises {.unnumbered}
+
+
+
+
+
+

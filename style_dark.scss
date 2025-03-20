@@ -1,0 +1,94 @@
+/*-- scss:defaults --*/
+// Colors
+$dark-green: #858e79;
+$light-green: #b0d9a1;
+$cream: #696969;
+$gray: #f5f5f5;
+$purple: #9158a2;
+$orange: #ad7237;
+// Base document colors
+$navbar-bg: $cream; // navbar
+$navbar-fg: $cream; // navbar foreground elements
+$navbar-hl: $cream; // highlight color when hovering over navbar links
+$body-bg: $cream; // page background
+$body-color: $gray; // page text
+$footer-bg: $cream; // footer
+$link-color: $purple; // hyperlinks
+
+// Inline code
+$code-bg: $cream; // inline code background color
+$code-color: $purple; // inline code text color
+
+// Block code
+$block-code-bg: $cream; // block code background color
+$block-code-color: $cream; // block code text color
+
+// Blockquote
+$blockquote-bg: $cream; // blockquote background color
+$blockquote-color: $gray; // blockquote text color
+
+// Buttons
+$button-bg: $cream; // button background color
+$button-color: $cream; // button text color
+
+// Form elements
+$input-bg: $cream; // input background color
+
+// Alerts
+$alert-bg: $orange; // alert background color
+$alert-color: $cream; // alert text color
+
+// Tables
+$table-bg: $cream; // table background color
+$table-color: $gray; // table text color
+$table-header-bg: $cream; // table header background color
+$table-header-color: $cream; // table header text color
+
+// Pagination
+$pagination-bg: $cream; // pagination background color
+$pagination-color: $gray; // pagination text color
+$pagination-active-bg: $cream; // active pagination background color
+$pagination-active-color: $cream; // active pagination text color
+
+// Cards
+$card-bg: $cream; // card background color
+$card-color: $gray; // card text color
+$card-header-bg: $cream; // card header background color
+$card-header-color: $cream; // card header text color
+
+// Dropdowns
+$dropdown-bg: $cream; // dropdown background color
+$dropdown-color: $gray; // dropdown text color
+
+// Modals
+$modal-bg: $cream; // modal background color
+$modal-color: $gray; // modal text color
+
+// Font
+$font-family: "Roboto", sans-serif;
+$font-size: 16px;
+$font-weight: 400;
+$line-height: 1.5;
+$heading-font-weight: 700;
+$heading-line-height: 1.2;
+$heading-color: $cream;
+$heading-font-size: 2.5rem;
+$heading-margin: 1.5rem 0 1rem 0;
+$heading-padding: 0;
+$heading-border: none;
+$heading-border-color: $cream;
+
+// Spacing
+$spacing-unit: 1rem;
+$spacing-unit-half: 0.5rem;
+$spacing-unit-double: 2rem;
+$spacing-unit-triple: 3rem;
+$spacing-unit-quadruple: 4rem;
+$spacing-unit-quintuple: 5rem;
+$spacing-unit-sextuple: 6rem;
+
+// Border
+$border-width: 1px;
+$border-style: solid;
+$border-color: $cream;
+$border-radius: 0.25rem;
