@@ -16,25 +16,36 @@ execute:
 
 ## What is data? {.unnumbered}
 Data is a collection of 
+
 - numbers
+
 - words
+
 - measurements
+
 - observations 
 
 
 ## How do you get data? {.unnumbered}
 
 
-# At the beginning of every data science project, you need to collect data. 
+At the beginning of every data science project, you need to collect data. 
 
-# Data can be collected from various sources, such as:
+Data can be collected from various sources, such as:
+
 - experimental measurements
+
 - calculations and simulations
+
 - surveys
+
 - existing databases
+
 - web scraping
+
 - APIs
-- etc.
+
+etc.
 
 
 ## How do you store the data? {.unnumbered}
@@ -64,6 +75,7 @@ Further make sure how the data is stored and how you can access it.
 To access data from exeternal sources, you can use different tools and libraries.
 
 For example, if you want to access data from a chemical database e.g. 
+
 - [Materials Project](https://next-gen.materialsproject.org/api), you can use the `pymatgen` [library](https://pymatgen.org/). (Requires API key, which can be obtained by registering on the website.)
 
 - [RCSB PDB Protein Data Bank](https://www.rcsb.org/docs/programmatic-access/web-apis-overview), you can use the `rcsb` [library](https://rcsbapi.readthedocs.io/en/latest/).
@@ -71,8 +83,6 @@ For example, if you want to access data from a chemical database e.g.
 - [PubChem](https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access), you can use the `pubchempy` [library](https://pubchempy.readthedocs.io/en/latest/guide/introduction.html).
 
 ... and many more.
-
-
 
 If you use APIs please read the documentation of the API to understand how to access the data. And make sure to respect the API usage policy and database terms of use.
 
@@ -107,7 +117,7 @@ Time/s  Temperature/°C
 [JSON](https://en.wikipedia.org/wiki/JSON) stands for JavaScript Object Notation. Data is structured in a key-value format, so that both humans and machines can read it easily. <br> For example, a JSON file with the same data as above could look like this:
  
  
-``json
+```json
 {
   "data": [
     {"Time": 0, "Temperature": 20},

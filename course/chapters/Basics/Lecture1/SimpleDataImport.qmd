@@ -9,9 +9,9 @@ pyodide:
     - seaborn
     - pandas
   resources:
-    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperature.csv"
+    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperatures.csv"
     - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperatures_nan.csv"
-    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperature.dat"
+    - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperatures.dat"
     - "https://github.com/stkroe/PythonforChemists/blob/main/course/data/temperatures_nan.dat"
 
 code-links:
