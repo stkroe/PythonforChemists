@@ -237,29 +237,53 @@ data[20:26] # print some rows to see the NaN values
 ```
 
 The different parameters that can be set are for `loadtxt()` function:
+
 (see documentation [https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html) 
+
 - `delimiter` parameter can be used to specify the delimiter. Default is whitespace.
+
 - `skiprows` parameter can be used to skip rows at the beginning of the file.
+
 - `usecols` parameter can be used to read only specific columns.
+
 - `dtype` parameter can be used to specify the data type of the columns.
+
 - `comments` parameter can be used to specify the comment character. Default is `#`.
+
 - `max_rows` parameter can be used to read only a specific number of rows after skipping rows.
+
 - `unpack` parameter can be used to unpack the columns, so each column is returned as a separate array.
+
 and for `genfromtxt()` function
+
 (see documentation [https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html#numpy.genfromtxt](https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html#numpy.genfromtxt))
+
 - `delimiter` parameter can be used to specify the delimiter. Default is whitespace.
+
 - `skip_header` parameter can be used to skip rows at the beginning of the file.
+
 - `skip_footer` parameter can be used to skip rows at the end of the file.
+
 - `usecols` parameter can be used to read only specific columns.
+
 - `dtype` parameter can be used to specify the data type of the columns.
+
 - `comments` parameter can be used to specify the comment character. Default is `#`.
+
 - `max_rows` parameter can be used to read only a specific number of rows after skipping rows.
+
 - `unpack` parameter can be used to unpack the columns, so each column is returned as a separate array.
+
 - `missing_values` parameter can be used to specify which values should be recognized as missing values.
+
 - `filling_values` parameter can be used to specify the filling values for the missing values.
+
 - `usemask` parameter can be used to return a masked array with missing values.
+
 - `names` parameter can be used to specify the column names. If `names=True`, the column names are read from the first row.
+
 - `replace_space` parameter can be used to replace spaces in the column names. Default is `_`.
+
 etc.
 
 
