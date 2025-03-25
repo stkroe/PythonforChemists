@@ -6,7 +6,7 @@ title: "What is Python?"
 ## Short History of Python {.unnumbered}
 
 
-# (see [Wikipedia](https://en.wikipedia.org/wiki/History_of_Python) for more details)
+(see [Wikipedia](https://en.wikipedia.org/wiki/History_of_Python) for more details)
 
 
 - 1989: the beginning of python
@@ -19,8 +19,7 @@ title: "What is Python?"
 - `python2` is nowdays outdated. It is not recommended to use it for new projects.
 
 
-# Van Rossum designed Python as a "Computer Programming Language for Everybody".
-# 
+Van Rossum designed Python as a "Computer Programming Language for Everybody".
 
 
 ## What is Python? {.unnumbered}
