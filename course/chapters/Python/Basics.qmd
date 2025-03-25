@@ -1,13 +1,11 @@
 ---
 title: "Python Start"
-format: live-html
+format: html
 engine: jupyter
-pyodide:
-  packages:
-    - matplotlib
-    - numpy
-    - seaborn
-    - argparse
+execute:
+    echo: true
+    eval: false
+    error: false
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Python/Basics.ipynb"
@@ -30,7 +28,7 @@ Each line of code is a command. The computer reads the code from top to bottom a
 
 Try it out:
 
-```{pyodide}
+```{python}
 print("Hello World")
 ```
 
@@ -38,7 +36,7 @@ print("Hello World")
  if you are using parenthesis in your command you can directly use a new line.
 
 
-```python
+```{python}
  result = 1 + 2 + 3 + \
           7 + 8 + 9
  numbers = [
@@ -46,7 +44,7 @@ print("Hello World")
      4, 5, 6,
      7, 8, 9
  ]
- ```
+```
 
  
 
@@ -70,14 +68,14 @@ Example - Wrong Indentation {.unnumbered}
 
 Try it out:
 
-```{pyodide}
+```{python}
 print("correct indentation")
     print("wrong indentation")
 ```
 
 All the lines in the block must have the same indentation:
 
-```{pyodide}
+```{python}
     print("correct indentation") 
     print("correct indentation")
     print("correct indentation")
@@ -107,7 +105,7 @@ Example - Cryptic Error Message {.unnumbered}
 What does the error message tell you?
 :::
 
-```{pyodide}
+```{python}
 a = [1,2,3]
 print(a[3])
 ```
@@ -131,7 +129,7 @@ Docstrings are used to document the code for example with [pydoc](https://docs.p
 
 
 
-```python
+```{python}
 # This is a comment
 
 """
@@ -156,7 +154,7 @@ You can use the `help()` function to get help on a module. <br>
 
 
 
-```python
+```{python}
 import numpy as np 
 # the library numpy is imported
 from matplotlib import pyplot as plt 
@@ -179,36 +177,36 @@ You can use the `sys` module to **work with command line arguments**. <br>
 You can use the `argparse` module to work also with **command line arguments**. <br>
 
  This should print "Hello World!" to the console
-```{pyodide}
+```{python}
 print("Hello World!")
-
 ```
 
 This should ask the user to enter a number and print it to the console
-```python
+```{python}
 print(input("Enter a number: "))
-
 ```
 
 This should write "Hello World!" to the file "file.txt"
-```python
+```{python}
 open("file.txt", "w").write("Hello World!") 
 ```
 
 This should read the file "file.txt" and print the content to the console
-```python
+```{python}
 print(open("file.txt").read()) 
 
 ```
 
 This should print "Hello World!" to the console without a newline
-```python
+
+```{python}
 print("Hello World without newline.", end="") 
 print("Next print statement.")
 ```
 
 This should read the file "file.txt" and print the content to the console
-```python
+
+```{python}
 with open("file.txt", "r") as file: print(file.read()) 
 ```
 
@@ -253,7 +251,7 @@ Most important functions are: <br>
 
 
 This should remove the file "file.txt"
-```python
+```{python}
 import os
 os.remove("file.txt")
 ```
@@ -266,7 +264,7 @@ For `sys` you can use the `sys.argv` to get the command line arguments. <br>
 
 
 
-```python
+```{python}
 import sys
 first_argument = sys.argv[1]
 ```
@@ -279,7 +277,7 @@ For more information about the sys module you can visit the [official documentat
 
 For `Argparse` you can use the following code:
 
-```python
+```{python}
 from argparse import ArgumentParser
 For python scripts:
 You can use argparse to parse command line arguments
@@ -300,7 +298,7 @@ are different defined in Windows and Linux. In Windows and macOS, you use backsl
 To avoid this problem you can use the `os` or `pathlib` module to make your code platform independent.
 
 
-```python
+```{python}
 import os
 
 path = os.path.join('folder1', 'folder2', 'folder3', 'data.dat')
@@ -308,13 +306,13 @@ print(path)
 ```
 
 
-```python
+```{python}
 working_dir = os.getcwd()
 print(working_dir)
 ```
 
 
-```python
+```{python}
 from pathlib import Path
 
 path = Path('folder1') / 'folder2' / 'folder3' / 'data.dat'
@@ -322,7 +320,7 @@ print(path)
 ```
 
 
-```python
+```{python}
 working_dir = Path.cwd()
 print(working_dir)
 ```
@@ -335,7 +333,7 @@ In Python, you don't need to declare the type of a variable. <br>
 You can assign a value to a variable using the `=` operator. <br>
 
 
-```{pyodide}
+```{python}
 a = 1 a is a variable
 b = "String" b is a string
 print(1, " is an", type(a))
@@ -362,31 +360,31 @@ Type casting is the process of converting one data type to another. <br>
 You can use the `int()`, `float()`, `str()`, `bool()`, `list()`, `tuple()`, `dict()`, `set()` functions to cast a variable to a different type. <br>
 
 
-```{pyodide}
+```{python}
 x = 5 int
 print(x,type(x))# print the type of x
 
 ```
 
-```{pyodide}
+```{python}
 y = 5.12 float
 print(y,type(y))
 
 ```
 
-```{pyodide}
+```{python}
 c = 2.8j complex
 print(c,type(c))
 
 ```
 
-```{pyodide}
+```{python}
 s = "Hello World" #string
 print(s,type(s))
 
 ```
 
-```{pyodide}
+```{python}
 
 print("length of word: ", len(s)) # length of string
 print("character on position 2: ", s[2]) 
@@ -395,56 +393,53 @@ s2 = s + "!"
 print(s2)
 s3 = "\"Hello world\"!"
 print(s3)
-
 ```
 
 
-```{pyodide}
+```{python}
 d = dict(name="Max",lastname="Musterman",height=1.89) # dictionary
 print(d,type(d))
 
 ```
-```{pyodide}
+```{python}
 b = True # boolean
 print(b,type(b))
-
 ```
 
-```{pyodide}
+```{python}
 dataset = {1,12,3} # set 
 print(dataset,type(dataset))
 
 ```
 
-```{pyodide}
+```{python}
 dataset2 = set((1.2,2,2)) # set
 print(dataset2,type(dataset2))
 
 ```
 
-```{pyodide}
+```{python}
 r = range(0,10,2) # range
 print(r,type(r))
 
 ```
 
-```{pyodide}
+```{python}
 l = [1,2,2,3] # list
 print(l,type(l))
 print("length of list",len(l))
 
 ```
 
-```{pyodide}
+```{python}
 t = (1,2)# tuple
 print(t,type(t))
 ```
 
-```{pyodide}
+```{python}
 #type conversion
 f = float(x)
 print(f,type(f))
-
 ```
 
 # Lists {.unnumbered}
@@ -472,7 +467,7 @@ You can use the `list()` function to create a list. <br>
 
 
 
-```{pyodide}
+```{python}
 
 a = ['a', 'b', 'c']
 b = [1,3,'a', 1j]
@@ -484,7 +479,7 @@ len(a) #length of list
 Index is starting with **0** in Python.
 :::
 
-```{pyodide}
+```{python}
 
 l = ['first', 'second', 'third']
 l[0]
@@ -495,7 +490,7 @@ l[0]
 Last element is reached by index -1.
 
 
-```{pyodide}
+```{python}
 l[-1]
 
 ```
@@ -512,7 +507,7 @@ Mutable objects are: `list`, `dict`, `set`. <br>
 That means if you change an immutable object, a new object is created. <br>
 If you change a mutable object, the object is changed. <br>
 
-```{pyodide}
+```{python}
 a = 1
 b = a
 
@@ -534,9 +529,10 @@ print("------")
 print("a:",a)
 print("b:",b)
 ```
+
 mutable objects
 
-```{pyodide}
+```{python}
 
 a = [1,2,3]
 b = a
@@ -559,7 +555,7 @@ print("b:",b)
 
 This happens because a and b are pointing to the same memory location. So if you change a, b will also change. If you want to avoid this, you can use the copy() method.
 
-```{pyodide}
+```{python}
 b = a.copy()
 print("------")
 print("a:",a)
@@ -596,7 +592,7 @@ You can use the following escape characters:
 
 You can use the `+` operator to concatenate strings. <br>
 
-```{pyodide}
+```{python}
 a = "This " 
 b = "is a string"
 print(a + b)
@@ -606,7 +602,7 @@ For print formatting you can use the `format()` method. <br>
 You can use the `f-string` method. <br>
 See for more information [here](https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings)
 
-```{pyodide}
+```{python}
 a = 1.5434
 b = "nm"
 print("This is an integer %d %s" % (a, b))
@@ -647,7 +643,7 @@ There are different types of operators in Python. <br>
 -  is: identity
 -  in: membership
 
-```{pyodide}
+```{python}
 a = 5.3
 b = 2
 c = 3
@@ -679,7 +675,7 @@ The most common control structures are:
 
 ## if statement {.unnumbered}
 
-```{pyodide}
+```{python}
 x = 0
 if x < 0:
     print("x < 0")
@@ -691,15 +687,16 @@ else:
 
 ## break,cotinue,pass {.unnumbered}
 #### example break {.unnumbered}
-```{pyodide}
+```{python}
 
 for i in range(10):
     if i == 5:
         break
     print(i)
 ```
+
 #### example continue {.unnumbered}
-```{pyodide}
+```{python}
 
 for i in range(10):
     if i == 5:
@@ -709,7 +706,7 @@ for i in range(10):
 
 
 #### example pass {.unnumbered}
-```{pyodide} 
+```{python} 
 for i in range(10):
     if i == 5:
         pass
@@ -718,39 +715,39 @@ for i in range(10):
 
 ## For Loops {.unnumbered}
 
-```{pyodide} 
+```{python} 
 for i in range(5): #from 0 to 4 
     print(i)
 ```
 
-```{pyodide} 
+```{python} 
 for i in range(1,10,2): # start 1, stop 10 excluded, step 2
     print(i)
 ```
 
-```{pyodide} 
+```{python} 
 l = list(range(0,10))
 ```
 
-```{pyodide} 
+```{python} 
 l
 ```
 
-```{pyodide} 
+```{python} 
 for i in l:  # using list
     print(i)
 ```
 
 ## While Loops {.unnumbered}
 
-```{pyodide} 
+```{python} 
 x = 0
 while x  < 4:
     print(l[x])
     x = x + 1
 ```
 
-```{pyodide} 
+```{python} 
 print("while loop with continue and break statement")
 n = 0
 while(n < 10):
@@ -775,22 +772,22 @@ Multiple return values are separated by commas. <br>
 They are stored in a tuple. <br>
 
 
-```{pyodide} 
+```{python} 
 def summation(a,b=5):
     return a+b, a-b
 ```
 
-```{pyodide} 
+```{python} 
 summation(4,2)
 ```
 
-```{pyodide} 
+```{python} 
 sum, sub = summation(4)
 print(sum)
 print(sub)
 ```
 
-```{pyodide} 
+```{python} 
 x = 3
 
 def multiple_return_value(x,a,b):

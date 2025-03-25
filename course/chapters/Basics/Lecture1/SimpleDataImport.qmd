@@ -8,6 +8,9 @@ pyodide:
     - numpy
     - seaborn
     - pandas
+  cell-options:
+    edit: false
+    runbutton: true
   resources:
     - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures.csv"
     - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures_nan.csv"

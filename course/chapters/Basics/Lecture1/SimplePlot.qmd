@@ -7,6 +7,9 @@ pyodide:
     - matplotlib
     - numpy
     - seaborn
+  cell-options:
+    edit: false
+    runbutton: true
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/Lecture1/SimplePlot.ipynb"
@@ -61,6 +64,7 @@ plt.show()
 
 
 The `plot()` function takes the following arguments:
+
 - x-axis data points
 - y-axis data points
 - [color](https://matplotlib.org/stable/users/explain/colors/colors.html): hex, or color name (e.g., 'red', 'blue','black'), abbreviated (e.g., 'r', 'b','k')
@@ -185,6 +189,7 @@ subR.suptitle('Right subfigure')
 
 
 Let`s try to create 4x3 subplots with specific adjustments.
+
 - `plt.subplots(4, 3)`: create 4x3 subplots
 - `figsize=(3, 4)`: set the figure size to 3x4 inches
 - `sharex=True`: all subplots share the x-axis

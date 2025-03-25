@@ -2,15 +2,9 @@
 title: "Simple Data Inspection"
 format: live-html
 engine: jupyter
-pyodide:
-  packages:
-    - matplotlib
-    - numpy
-    - seaborn
-    - pandas
-  resources:
-    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures.csv"
-    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures_nan.csv"
+execute: 
+  echo: True
+  eval: True
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
@@ -36,17 +30,23 @@ After you load your data you have to inspect it to:
 
 
 You can use the `head()` function to get a quick overview of the first rows of the data.
+```{python}
+#| tags: [parameters]
 
-```{pyodide}
+temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/data/temperatures.csv"
+temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/data/temperatures_nan.dat"
+```
+
+```{python}
 import pandas as pd
 
-data = pd.read_csv('temperatures.csv',sep=';')
+data = pd.read_csv(temperature_data,sep=';')
 data.head()
 ```
 
 The `describe()` function gives you a quick overview of the data distribution.
 
-```{pyodide}
+```{python}
 data.describe()
 ```
 
@@ -66,7 +66,7 @@ This gives you a quick overview of the data distribution.
 
 To check if there is missing data in the data set you can use the `isna()` function.
 
-```{pyodide}
+```{python}
 data.isna().sum()
 ```
 
@@ -77,34 +77,34 @@ No missing data is found in this case.
 
 You can check the data type using `dtypes` function to check if the data is in the correct format.
 
-```{pyodide}
+```{python}
 data.dtypes
 ```
 
-```{pyodide}
+```{python}
 data.dtypes
 ```
 
 You see that `time` is an `int64` and `temperature` is a `float64`.
 For the analysis, you might want to convert the `time` to a `float64` as well.
 
-```{pyodide}
+```{python}
 data['time'] = data['time'].astype('float64')
 ```
 
-```{pyodide}
+```{python}
 data['time'] = data['time'].astype('float64')
 data.dtypes
 ```
 
 If we have missing data we can use the `fillna()` function to fill the missing data with a specific value.
 
-```{pyodide}
+```{python}
 data.fillna(0)
 ```
 
-```{pyodide}
-data_missing = pd.read_csv('temperatures_nan.dat', header=None, skipinitialspace=True, sep=' ', names=['time', 'temperature'])
+```{python}
+data_missing = pd.read_csv(temperature_nan_data, header=None, skipinitialspace=True, sep=' ', names=['time', 'temperature'])
 data_missing.head()
 ```
 
@@ -115,7 +115,7 @@ One value is missing in the `temperature` column. We fill it with 0.
 
 First let check where the data is missing.
 
-```{pyodide}
+```{python}
 data[data['temperature'].isna()]
 ```
 
@@ -124,7 +124,8 @@ data_missing[data_missing['temperature'].isna()]
 
 
 At index 21 at time 22 s the temperature is missing.
-:::{.callout .callout-info}
+
+:::{.callout-note}
 The handling of missing data is a complex topic.
 First of all you have to check why the data is missing. Is it a measurement error, a data processing error etc.
 
@@ -135,21 +136,21 @@ For more information there a lot of research in this topic [https://doi.org/10.1
 
 The time step can be estimated by the difference between the time steps of the previous and the next data point.
 
-```{pyodide}
+```{python}
 data['time'].diff()
 ```
 And we can summarize it via:
 
-```{pyodide}
+```{python}
 data['time'].diff().value_counts()
 ```
 
-```{pyodide}
+```{python}
 data_missing['time'].diff().value_counts()
 ```
 
 get difference between temperature values
-```{pyodide}
+```{python}
 data_missing[10:30].diff()
 ```
 
@@ -158,7 +159,7 @@ The time step is constantly 1 second.
 The difference between the temperature of the previous and the next data point is at $~10^{-2}$ order.
 We can assume that in this case the data is consistent enough and we can fill the missing data with the mean of the previous and the next data point.
  
-```{pyodide}
+```{python}
 data['temperature'].fillna((data['temperature'].shift() + data['temperature'].shift(-1))/2, inplace=True)
 ```
 

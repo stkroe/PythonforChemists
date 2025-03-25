@@ -64,7 +64,7 @@ book:
 bibliography: references.bib
 
 format:
-    live-html: 
+    html: 
       theme: "book"
       highlight-style: "github"
       code-copy: true

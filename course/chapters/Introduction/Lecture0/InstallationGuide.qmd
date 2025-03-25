@@ -19,8 +19,6 @@ The use of [Google Colab](https://colab.research.google.com) needs a Google Acco
 
 Fundamental Python websites:
 
-
-
 - [Python](https://www.python.org) 
 - [Python documentation](https://www.python.org/doc/)
 
