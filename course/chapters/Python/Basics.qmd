@@ -22,7 +22,7 @@ This will be a very fast and basic start into coding with Python.
 Each line of code is a command. The computer reads the code from top to bottom and executes each command in order.
 
 :::{.callout-note}
-# Example - Hello World {.unnumbered}
+# Example - Hello World
 `print` is a command that tells the computer to display the text that follows it. 
 :::
 
@@ -63,7 +63,7 @@ Pay attention to not mix tabs and spaces in your code.
 
 
 :::{.callout-note}
-Example - Wrong Indentation {.unnumbered}
+# Example - Wrong Indentation
 :::
 
 Try it out:
@@ -101,7 +101,7 @@ Often the error messages are not very clear. You can search for the error messag
 
 
 :::{.callout-note}
-Example - Cryptic Error Message {.unnumbered}
+Example - Cryptic Error Message 
 What does the error message tell you?
 :::
 
@@ -116,7 +116,7 @@ print(a[3])
 
 
 :::{.callout-tip collapse="true"}
-Solution {.unnumbered}
+# Solution 
 The error message tells you that you are trying to access an index that is out of range.
 :::
 
