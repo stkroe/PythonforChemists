@@ -22,10 +22,9 @@ code-links:
 - The libary also includes many mathematical functions and methods for linear algebra. 
 
 
-# More information can found at the [Numpy website](https://numpy.org/).
+More information can found at the [Numpy website](https://numpy.org/).
 
-
-# Load the required libraries
+ Load the required libraries
 
 ```{python}
 import numpy as np
@@ -34,14 +33,14 @@ import numpy as np
 ###  Numpy Arrays {.unnumbered}
 
 
-# An array can be described as multidimensional lists. For example a matrix is a 2D array.
+An array can be described as multidimensional lists. For example a matrix is a 2D array.
 
 ```{python}
 mat = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 print(mat)
 ```
 
-# The elements of an array can be accessed using the index of the element. 
+The elements of an array can be accessed using the index of the element. 
 
 ```{python}
 print(mat[0, 0])   # 1 element at row 0, column 0
@@ -101,7 +100,7 @@ print(rand_mat)
 - You can statistically analyze the data, export the data to different file formats, but also plot the data with the help of `matplotlib`.
 
 
-# More information can be found under [Pandas website](https://pandas.pydata.org/).
+More information can be found under [Pandas website](https://pandas.pydata.org/).
 
 ```{python}
 import pandas as pd
