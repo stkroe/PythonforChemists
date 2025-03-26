@@ -31,8 +31,8 @@ You can use the `head()` function to get a quick overview of the first rows of t
 ```{python}
 #| echo: false
 #| eval: true
-temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures.csv"
-temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures_nan.dat"
+temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures.csv"
+temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures_nan.dat"
 ```
 
 ```{python}

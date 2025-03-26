@@ -44,10 +44,10 @@ Mostly used function is `pandas.read_csv()` because you can specify the delimite
 
 ```{python}
 #| echo: false
-temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures.csv"
-temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures_nan.csv"
-temperature_dat = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures.dat"
-temperature_nan_dat="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures_nan.dat"
+temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures.csv"
+temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures_nan.csv"
+temperature_dat = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures.dat"
+temperature_nan_dat="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures_nan.dat"
 ``` 
 
 ```{python}
