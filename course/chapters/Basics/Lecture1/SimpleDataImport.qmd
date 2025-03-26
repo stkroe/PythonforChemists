@@ -43,9 +43,17 @@ Mostly used function is `pandas.read_csv()` because you can specify the delimite
 
 
 ```{python}
+#| echo: false
+temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures.csv"
+temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures_nan.csv"
+temperature_dat = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures.dat"
+temperature_nan_dat="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures_nan.dat"
+``` 
+
+```{python}
 import pandas as pd
-path = "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/"
-data = pd.read_csv(path+path+'temperatures.csv')
+
+data = pd.read_csv(temperature_data)
 data
 ```
 
@@ -54,13 +62,14 @@ The data has a different delimiter than the default `comma`. You can specify the
 
 
 ```{python}
-data = pd.read_csv(path+'temperatures.csv', sep=';')
+data = pd.read_csv(temperature_data, sep=';')
 data
 ```
 
 Now the data is read correctly. The header is already taken from the first row. If you want to specify the header, you can use the `header` parameter.
 
-```python
+```{python}
+#| eval: false
 import pandas as pd
 df = pd.read_csv('file.csv', header=None) # No header
 df = pd.read_csv('file.csv', header=0) # Header is in the first row
@@ -69,14 +78,14 @@ df = pd.read_csv('file.csv', header=1) # Header is in the second row
 
 
 ```{python}
-data = pd.read_csv(path+'temperatures.csv', sep=';', header=0)
+data = pd.read_csv(temperature_data, sep=';', header=0)
 data
 ```
 
 If your data contains whitespace, you can use the `skipinitialspace` parameter to remove initial whitespaces.
 
 ```{python}
-data = pd.read_csv(path+'temperatures.dat', skipinitialspace=True, sep=" ")
+data = pd.read_csv(temperature_dat, skipinitialspace=True, sep=" ")
 data
 ```
 
@@ -84,7 +93,7 @@ Now the data has no header. You can specify the header using the `names` paramet
 
 
 ```{python}
-data = pd.read_csv(path+'temperatures.dat', sep=' ', skipinitialspace=True,header=1,names=['t', 'T'])
+data = pd.read_csv(temperature_dat, sep=' ', skipinitialspace=True,header=1,names=['t', 'T'])
 # important to set header=None, otherwise the first line is used as header
 data
 ```
@@ -135,7 +144,7 @@ Some examples are:
 
 
 ```{python}
-data = pd.read_csv(path+'temperatures.csv', sep=';', header=0, names=['t', 'T'], skiprows=1)
+data = pd.read_csv(temperature_data, sep=';', header=0, names=['t', 'T'], skiprows=1)
 ```
 
 Now the first row is skipped, only 44638 rows are read instead of 44639.
@@ -144,7 +153,7 @@ Missing value examples:
 
 
 ```{python}
-data = pd.read_csv(path+'temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=False)
+data = pd.read_csv(temperature_nan_dat, sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=False)
 print(data.loc[20:26]) print some rows to see the NaN values
 ```
 
@@ -152,7 +161,7 @@ print(data.loc[20:26]) print some rows to see the NaN values
 If the `na_filter`is set to `False`, the missing values are not recognized. But if it set on `True`, the missing values are recognized.
 
 ```{python}
-data = pd.read_csv(path+'temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=True)
+data = pd.read_csv(temperature_nan_dat, sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=True)
 print(data.loc[20:26]) print some rows to see the NaN values
 ```
 
@@ -172,7 +181,7 @@ If you try to read a file with a header row, you will get an error.
 
 ```{python}
 import numpy as np
-data = np.loadtxt(path+'temperatures.csv', delimiter=';')
+data = np.loadtxt(temperature_data, delimiter=';')
 ```
 
 You can specify the header row using the `skiprows` parameter.
@@ -180,7 +189,7 @@ If you want to skip one row, the `skiprows=1` parameter is set at `1`.
 
 
 ```{python}
-data = np.loadtxt(path+'temperatures.csv', delimiter=';', skiprows=1)
+data = np.loadtxt(temperature_data, delimiter=';', skiprows=1)
 data
 ```
 
@@ -194,7 +203,7 @@ If you have data with whitespace, you do not need to specify the `delimiter`para
 
 
 ```{python}
-data = np.loadtxt(path+'temperatures.dat')
+data = np.loadtxt(temperature_dat)
 data
 ```
 
@@ -205,14 +214,14 @@ First using the `loadtxt()` function, you get an error because of the missing va
 
 
 ```{python}
-data = np.loadtxt(path+'temperatures_nan.dat')
+data = np.loadtxt(temperature_nan_dat)
 data
 ```
 
 If you try to read the file with an empty entrance at row 22, you wil get still an error with the `genfromtxt()` function. 
 
 ```{python}
-data = np.genfromtxt(path+'temperatures_nan.dat')
+data = np.genfromtxt(temperature_nan_dat)
 data
 ```
 
@@ -239,7 +248,7 @@ If you have not `whitespace` as delimiter, you can use the `genfromtxt()` functi
 
 
 ```{python}
-data = np.genfromtxt(path+'temperatures_nan.csv',delimiter=';')
+data = np.genfromtxt(temperature_nan_data,delimiter=';')
 data[20:26] # print some rows to see the NaN values
 ```
 
