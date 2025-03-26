@@ -46,7 +46,7 @@ book:
           - course/chapters/Introduction/Lecture1/DataCollection.qmd
           - course/chapters/Basics/Lecture1/SimpleDataImport.qmd
           - course/chapters/Basics/Lecture1/SimpleDataInspection.qmd
-          - course/chapters/Basics/Lecture1/SimplePlot.qmd
+          - course/chapters/Basics/Lecture1/SimplePlots.qmd
           - course/exercises/exercises/exercise1.ipynb
           # - course/chapters/Intermediate/Lecture1/SpecialDataImport.ipynb
           # - course/chapters/Advanced/Lecture1/AdvancedDataImport.ipynb
