@@ -350,7 +350,7 @@
     "href": "course/chapters/Python/BasicsModules.html#numpy",
     "title": "Basic Modules",
     "section": "Numpy",
-    "text": "Numpy\n\nNumpy is the most important library for Python.\nThe standard data types in Python are very slow and not very efficient for data analysis.\nNumpy is based mainly on C an C++.\nThis allows Numpy to be faster than plain Python.\nWith Numpy a new data type is introduced numpy array.\nNumpy arrays are multidimensional arrays that are much faster than Python lists.\nThe libary also includes many mathematical functions and methods for linear algebra.\n\nMore information can found at the Numpy website.\nLoad the required libraries\n\nimport numpy as np\n\n\nNumpy Arrays\nAn array can be described as multidimensional lists. For example a matrix is a 2D array.\n\nmat = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\nprint(mat)\n\n[[1 2 3]\n [4 5 6]\n [7 8 9]]\n\n\nThe elements of an array can be accessed using the index of the element.\n\nprint(mat[0, 0])   # 1 element at row 0, column 0\n\n\nprint(mat[1, 2])  # 6 element at row 1, column 2\n\n\nprint(mat[:, 0])  # [1 4 7] all elements in column 0\n\n\nprint(mat[1, :])  # [4 5 6] all elements in row 1\n\n1\n6\n[1 4 7]\n[4 5 6]\n\n\n\nempty_mat = np.empty((3,3),dtype=float)\nprint(empty_mat)\n\n[[4.64300349e-310 0.00000000e+000 0.00000000e+000]\n [0.00000000e+000 0.00000000e+000 0.00000000e+000]\n [0.00000000e+000 0.00000000e+000 0.00000000e+000]]\n\n\n\nones_mat = np.ones((3, 3))\nprint(ones_mat)\n\n[[1. 1. 1.]\n [1. 1. 1.]\n [1. 1. 1.]]\n\n\n\nzeros_mat = np.zeros((3, 3))\nprint(zeros_mat)\n\n[[0. 0. 0.]\n [0. 0. 0.]\n [0. 0. 0.]]\n\n\n\narr = np.arange(1, 10, 2) # an array from 1 to 10 with a step of 2\nprint(arr)\n\n[1 3 5 7 9]\n\n\n\narr2 = np.linspace(0,100,5) # an array from 0 to 100 with 5 elements\nprint(arr2)\n\n[  0.  25.  50.  75. 100.]\n\n\n\nrand_mat = np.random.rand(3,3) # a 3x3 matrix with random numbers between 0 and 1\nprint(rand_mat)\n\n[[0.46862819 0.79102411 0.39576119]\n [0.27916405 0.66523685 0.03336736]\n [0.75436484 0.85641896 0.23924887]]",
+    "text": "Numpy\n\nNumpy is the most important library for Python.\nThe standard data types in Python are very slow and not very efficient for data analysis.\nNumpy is based mainly on C an C++.\nThis allows Numpy to be faster than plain Python.\nWith Numpy a new data type is introduced numpy array.\nNumpy arrays are multidimensional arrays that are much faster than Python lists.\nThe libary also includes many mathematical functions and methods for linear algebra.\n\nMore information can found at the Numpy website.\nLoad the required libraries\n\nimport numpy as np\n\n\nNumpy Arrays\nAn array can be described as multidimensional lists. For example a matrix is a 2D array.\n\nmat = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\nprint(mat)\n\n[[1 2 3]\n [4 5 6]\n [7 8 9]]\n\n\nThe elements of an array can be accessed using the index of the element.\n\nprint(mat[0, 0])   # 1 element at row 0, column 0\n\n\nprint(mat[1, 2])  # 6 element at row 1, column 2\n\n\nprint(mat[:, 0])  # [1 4 7] all elements in column 0\n\n\nprint(mat[1, :])  # [4 5 6] all elements in row 1\n\n1\n6\n[1 4 7]\n[4 5 6]\n\n\n\nempty_mat = np.empty((3,3),dtype=float)\nprint(empty_mat)\n\n[[4.64943508e-310 0.00000000e+000 0.00000000e+000]\n [0.00000000e+000 0.00000000e+000 0.00000000e+000]\n [0.00000000e+000 0.00000000e+000 0.00000000e+000]]\n\n\n\nones_mat = np.ones((3, 3))\nprint(ones_mat)\n\n[[1. 1. 1.]\n [1. 1. 1.]\n [1. 1. 1.]]\n\n\n\nzeros_mat = np.zeros((3, 3))\nprint(zeros_mat)\n\n[[0. 0. 0.]\n [0. 0. 0.]\n [0. 0. 0.]]\n\n\n\narr = np.arange(1, 10, 2) # an array from 1 to 10 with a step of 2\nprint(arr)\n\n[1 3 5 7 9]\n\n\n\narr2 = np.linspace(0,100,5) # an array from 0 to 100 with 5 elements\nprint(arr2)\n\n[  0.  25.  50.  75. 100.]\n\n\n\nrand_mat = np.random.rand(3,3) # a 3x3 matrix with random numbers between 0 and 1\nprint(rand_mat)\n\n[[0.49814856 0.83290998 0.60894482]\n [0.24249323 0.58874752 0.24327648]\n [0.81128805 0.63998262 0.90494485]]",
     "crumbs": [
       "Python Crash Course",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Modules</span>"
@@ -361,7 +361,7 @@
     "href": "course/chapters/Python/BasicsModules.html#pandas",
     "title": "Basic Modules",
     "section": "Pandas",
-    "text": "Pandas\n\nPandas is a library for data manipulation and analysis.\nIt is built on top of Numpy.\nWith Pandas you are working with dataframes and not with arrays like in Numpy.\nDataframes are two-dimensional labeled data structures with columns of potentially different types.\nIt is like a table in a database or a spreadsheet. Pandas has a lot of methods to manipulate dataframes.\nYou can select subsets of the data, filter, sort, group, merge, join, etc.\nYou can statistically analyze the data, export the data to different file formats, but also plot the data with the help of matplotlib.\n\nMore information can be found under Pandas website.\n\nimport pandas as pd\n\n\nPanda DataFrames",
+    "text": "Pandas\n\nPandas is a library for data manipulation and analysis.\nIt is built on top of Numpy.\nWith Pandas you are working with dataframes and not with arrays like in Numpy.\nDataframes are two-dimensional labeled data structures with columns of potentially different types.\nIt is like a table in a database or a spreadsheet. Pandas has a lot of methods to manipulate dataframes.\nYou can select subsets of the data, filter, sort, group, merge, join, etc.\nYou can statistically analyze the data, export the data to different file formats, but also plot the data with the help of matplotlib.\n\nMore information can be found under Pandas website.\n\nimport pandas as pd\n\n\nPanda DataFrames\nPanda DataFrames are two-dimensional labeled data structures with columns of potentially different types like a table.\n\ndata = {\n    \"Name\": [\"Water\", \"Oxygen\", \"Hydrogen\", \"Carbon Dioxide\", \"Methane\", \"Ammonia\", \"Nitrogen\", \"Sulfur Dioxide\"],\n    \"Formula\": [\"H2O\", \"O2\", \"H2\", \"CO2\", \"CH4\", \"NH3\", \"N2\", \"SO2\"],\n    \"Molar Mass (g/mol)\": [18.015, 32.00, 2.016, 44.01, 16.04, 17.03, 28.013, 64.07]\n}\n\ndf = pd.DataFrame(data)\nprint(df)\n\n             Name Formula  Molar Mass (g/mol)\n0           Water     H2O              18.015\n1          Oxygen      O2              32.000\n2        Hydrogen      H2               2.016\n3  Carbon Dioxide     CO2              44.010\n4         Methane     CH4              16.040\n5         Ammonia     NH3              17.030\n6        Nitrogen      N2              28.013\n7  Sulfur Dioxide     SO2              64.070\n\n\n\nseries_data = pd.Series([1, 2, 3, 4, 5], index=[\"a\", \"b\", \"c\", \"d\", \"e\"])\nprint(series_data)\n\na    1\nb    2\nc    3\nd    4\ne    5\ndtype: int64",
     "crumbs": [
       "Python Crash Course",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Modules</span>"
@@ -438,7 +438,7 @@
     "href": "course/chapters/Introduction/Lecture1/DataCollection.html#what-type-of-data-do-you-have",
     "title": "Introduction to Data Science",
     "section": "What type of data do you have?",
-    "text": "What type of data do you have?\nNext what do you have to consider is the types of your data.\nDepending on the type of data analysis could be different.\n\nNumerical Data\nNumerical data is data that is expressed with numbers. It can be further divided into two types: - Discrete: Data that can only take certain values (e.g. integers) - Continuous: Data that can take any value within a certain range (e.g. real numbers)\nFor example, - measured temperature over time -&gt; continuous - number of chemical substances, which are measured -&gt; discrete\n\n\nCategorical Data\nCategorial means that data is divided into categories. It can be further divided into two types: - Ordinal: Data that has a specific order or ranking - Nominal: Data that has no specific order or ranking\nFor example, - blood type: nominal {A, B, AB, O} - chemical function group: nominal {alcohol, ketone, aldehyde, carboxylic acid, etc.} - purity of a substance: ordinal {low, medium, high} - hardness of a material: ordinal {soft, medium, hard}",
+    "text": "What type of data do you have?\nNext what do you have to consider is the types of your data.\nDepending on the type of data analysis could be different.\n\nNumerical Data\nNumerical data is data that is expressed with numbers. It can be further divided into two types:\n\nDiscrete: Data that can only take certain values (e.g. integers)\nContinuous: Data that can take any value within a certain range (e.g. real numbers)\n\nFor example,\n\nmeasured temperature over time: continuous\nnumber of chemical substances, which are measured: discrete\n\n\n\nCategorical Data\nCategorial means that data is divided into categories. It can be further divided into two types:\n\nOrdinal: Data that has a specific order or ranking\nNominal: Data that has no specific order or ranking\n\nFor example,\n\nblood type: nominal {A, B, AB, O}\nchemical function group: nominal {alcohol, ketone, aldehyde, carboxylic acid, etc.}\npurity of a substance: ordinal {low, medium, high}\nhardness of a material: ordinal {soft, medium, hard}",
     "crumbs": [
       "Lecture 1",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Introduction to Data Science</span>"
@@ -548,62 +548,7 @@
     "href": "course/exercises/exercises/exercise1.html",
     "title": "Exercise",
     "section": "",
-    "text": "Lecture 1\nIn this exercise, we will repeat the first lecture of the course. We will:",
-    "crumbs": [
-      "Lecture 1",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exercise</span>"
-    ]
-  },
-  {
-    "objectID": "course/exercises/exercises/exercise1.html#customizing-the-plots-ticks-labels-and-fontsize-very-low-difficulty",
-    "href": "course/exercises/exercises/exercise1.html#customizing-the-plots-ticks-labels-and-fontsize-very-low-difficulty",
-    "title": "Exercise",
-    "section": "Customizing the Plots – Ticks, Labels and Fontsize (very low difficulty)",
-    "text": "Customizing the Plots – Ticks, Labels and Fontsize (very low difficulty)\n\nExtract the data columns into separate arrays time and temperature (optional)\nSet up the plot by using the arrays time and temperature – color ‘k’ is black\nAdjust x- and y-range using plt.xlim(min,max) and plt.ylim(min,max)\nUse plt.xticks() to set the interval to 7200\n5 days \\(\\cdot\\) 24 hours \\(\\cdot\\) 60 min = 7200 min\nAdd labels using plt.xlabel(), plt.ylabel() and plt.title()\n(use fontsize = to adjust the size)\nUse plt.tick_params() to increase the size of the tick labels using labelsize = x\nAfter adjusting all settings, bring it home using plt.show()",
-    "crumbs": [
-      "Lecture 1",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exercise</span>"
-    ]
-  },
-  {
-    "objectID": "course/exercises/exercises/exercise1.html#further-customization-adding-averages-low-difficulty",
-    "href": "course/exercises/exercises/exercise1.html#further-customization-adding-averages-low-difficulty",
-    "title": "Exercise",
-    "section": "Further customization – adding averages (low difficulty)",
-    "text": "Further customization – adding averages (low difficulty)\n\nChange the x-axis from minutes to days\ndays = time / 60 / 24\nControl the size of the plot using plt.figure(figsize = (x, y))\nAdd the average temperature using np.mean() and plt.achline()\nadd a running average using a window size of 1000 points\nusing np.convolve()\nUse different colors for the plots\nblack: color = ‘k’\nred: color = ‘r’\nblue: color = ‘b’\nAdd a legend by adding label = ‘my label’\nAdjust the axis range, labels and fontsize as before\nWhen done, again: plt.show()",
-    "crumbs": [
-      "Lecture 1",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exercise</span>"
-    ]
-  },
-  {
-    "objectID": "course/exercises/exercises/exercise1.html#data-from-different-files-low-difficulty",
-    "href": "course/exercises/exercises/exercise1.html#data-from-different-files-low-difficulty",
-    "title": "Exercise",
-    "section": "Data from Different Files (low difficulty)",
-    "text": "Data from Different Files (low difficulty)\n\nTo import data from the other two files just re-use the commands from above.\nIn this example, it is sufficient to only extract the y-data.\nWe can even re-use the array days calculated above.\nWe plot all three temperature arrays and assign different colors.\nAdjust the axis range, labels and fontsize as before.\nPlace the legend into the upper left corner using plt.legend(loc=‘upper left’).\nWhen done, again: plt.show()\nOH NO! Experiment 3 is messed up!!",
-    "crumbs": [
-      "Lecture 1",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exercise</span>"
-    ]
-  },
-  {
-    "objectID": "course/exercises/exercises/exercise1.html#data-from-different-files-in-different-subplots-low-difficulty",
-    "href": "course/exercises/exercises/exercise1.html#data-from-different-files-in-different-subplots-low-difficulty",
-    "title": "Exercise",
-    "section": "Data from Different Files in Different subplots (low difficulty)",
-    "text": "Data from Different Files in Different subplots (low difficulty)\n\nPlotting the data in different subplots of a single figure is very simple.\nDefine a figure fig with three subplots being ax1, ax2 and ax3.\nIn this example, the subplot is composed of 3 rows and 1 column.\nFor example plt.subplots(2,2) is composed of 2 rows and 2 columns.\nTo customize provide commands separately for each subplot.\nUse for-loops to apply the same settings to different plots.\nAssign axis labels individually.\nCareful: Commands for subplots are a bit different from just a normal plot.",
-    "crumbs": [
-      "Lecture 1",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exercise</span>"
-    ]
-  },
-  {
-    "objectID": "course/exercises/exercises/exercise1.html#sigmoid-curve-fitting",
-    "href": "course/exercises/exercises/exercise1.html#sigmoid-curve-fitting",
-    "title": "Exercise",
-    "section": "Sigmoid Curve Fitting",
-    "text": "Sigmoid Curve Fitting\nLet’s analyze how bad the situation is in experiment 3 is. To do this, we will fit a sigmoid curve to the data set using curve_fit() from the SciPy module scipy.optimize.\nIn our case the sigmoid function is given by:\n\\[\nT(t) = T_0 + \\Delta T \\frac{1}{1 + e^{-a (t - t_0)}}\n\\]\nwith the four fitting parameters being: - temperature baseline $ T_0 $, - the temperature increase $ T $ , - the growth rate $ a $ , - the time at the midpoint of the temperature increase $ t_0 $\nAfter fitting the curve, we can plot and overlay it with the original data for comparison.",
+    "text": "In this exercise, we will repeat the first lecture of the course. We will:\n\nWe will learn how to read data from a file.\nWe will learn how to inspect the data.\nWe will learn how to make quickly some plots.\n\n\nLecture 1\n\nData\nThe experiment:\n\nWe have multiple synthesis reactors in which we are running a series of experiments.\nEach reactor has a temperature sensor which monitors the temperature inside of it every minute for 4 days.\nOur task is to check if the temperatures in the reactors are stable.\nThe data for reactor 1 is stored in Temperatures_1.csv.\nThe data for reactor 2 is stored in Temperatures_2.csv.\nThe data for reactor 3 is stored in Temperatures_3.csv.\n\n\n\nTask\n\nLook at the plain data files. In which format are the data stored?\nRead the data from the files.\nInspect the data.\nTransform the data into days.\nMake a plot of the temperature in the reactor 1, 2 and 3 first in one plot.\nMake a (1,3) subplot of the temperature in the reactor 1, 2 and 3.\n\n\n\nQuestions\nWhat do you think? Are the temperatures stable in the reactors? Which reactor has the most stable temperature?\npath = “https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/exercises1/”",
     "crumbs": [
       "Lecture 1",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exercise</span>"

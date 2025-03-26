@@ -363,14 +363,14 @@ Example - Hello World
 </div>
 </div>
 <p>Try it out:</p>
-<div id="ba999a58" class="cell" data-execution_count="1">
+<div id="3dc854e7" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World</code></pre>
 </div>
 </div>
 <p>If you want to span a command over multiple lines you can use <code>\</code> or <br> if you are using parenthesis in your command you can directly use a new line.</p>
-<div id="17277e6b" class="cell" data-execution_count="2">
+<div id="60d10699" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a> result <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>          <span class="dv">7</span> <span class="op">+</span> <span class="dv">8</span> <span class="op">+</span> <span class="dv">9</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a> numbers <span class="op">=</span> [</span>
@@ -411,7 +411,7 @@ Example - Wrong Indentation
 </div>
 </div>
 <p>Try it out:</p>
-<div id="b4a7beb2" class="cell" data-execution_count="3">
+<div id="96e00f4b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"wrong indentation"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -425,7 +425,7 @@ Example - Wrong Indentation
 </div>
 </div>
 <p>All the lines in the block must have the same indentation:</p>
-<div id="12f06430" class="cell" data-execution_count="4">
+<div id="246c8735" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>) </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -469,7 +469,7 @@ Note
 <p>Example - Cryptic Error Message What does the error message tell you?</p>
 </div>
 </div>
-<div id="585fe0a9" class="cell" data-execution_count="5">
+<div id="11318b69" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a[<span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -505,7 +505,7 @@ Solution
 <h2 class="unnumbered anchored" data-anchor-id="comments">Comments</h2>
 <p>Comments are important. They help you and others to understand your code. <br> You can use the ` symbol to write comments.</p>
 <p>Docstrings are used to document the code for example with <a href="https://docs.python.org/3/library/pydoc.html">pydoc</a>. They are written using triple quotes `““” ““““`</p>
-<div id="ea49bd90" class="cell" data-execution_count="6">
+<div id="ec9e7659" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a comment</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
@@ -521,7 +521,7 @@ Solution
 <section id="modules" class="level1 unnumbered">
 <h1 class="unnumbered">Modules</h1>
 <p>There exist a lot of libraries and modules in Python. <br> Libraries is a term to describe a collection of modules. <br> Packages are a way to collect related modules together within a single tree-like hierarchy. <br> Modules are a collection of files. <br> A script is a file that can be run independently. <br> You can use the <code>import</code> statement to import the whole module. <br> You can use the <code>from</code> statement to import a specific part of the module. <br> You can use the <code>dir()</code> function to list the names in a module. <br> You can use the <code>help()</code> function to get help on a module. <br></p>
-<div id="85bf624e" class="cell" data-execution_count="7">
+<div id="ec314377" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the library numpy is imported</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt </span>
@@ -531,7 +531,7 @@ Solution
 <section id="variables" class="level1 unnumbered">
 <h1 class="unnumbered">Variables</h1>
 <p>In Python, you don’t need to declare the type of a variable. <br> You can assign a value to a variable using the <code>=</code> operator. <br></p>
-<div id="4fa227ef" class="cell" data-execution_count="8">
+<div id="cdbc6461" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span>  <span class="co">#a is a variable</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">"String"</span> <span class="co">#b is a string</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1</span>, <span class="st">" is an"</span>, <span class="bu">type</span>(a))</span>
@@ -546,7 +546,7 @@ String  is a &lt;class 'str'&gt;</code></pre>
 <h1 class="unnumbered">Data Types</h1>
 <p>Python has several data types. The most common are: - <code>int</code> for integers - <code>float</code> for floating point numbers - <code>str</code> for strings - <code>bool</code> for booleans - <code>list</code> for lists - <code>tuple</code> for tuples - <code>dict</code> for dictionaries - <code>set</code> for sets</p>
 <p>You can use the <code>type()</code> function to get the type of a variable. <br> You can use the <code>isinstance()</code> function to check if a variable is an instance of a class. <br> Type casting is the process of converting one data type to another. <br> You can use the <code>int()</code>, <code>float()</code>, <code>str()</code>, <code>bool()</code>, <code>list()</code>, <code>tuple()</code>, <code>dict()</code>, <code>set()</code> functions to cast a variable to a different type. <br></p>
-<div id="3ec3bb5a" class="cell" data-execution_count="9">
+<div id="a5e80c3a" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span> <span class="bu">int</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x,<span class="bu">type</span>(x))<span class="co"># print the type of x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -559,28 +559,28 @@ String  is a &lt;class 'str'&gt;</code></pre>
 </div>
 </div>
 </div>
-<div id="0118639d" class="cell" data-execution_count="10">
+<div id="6b58057c" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">5.12</span> <span class="co">#float</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y,<span class="bu">type</span>(y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>5.12 &lt;class 'float'&gt;</code></pre>
 </div>
 </div>
-<div id="fc0555ee" class="cell" data-execution_count="11">
+<div id="bbaad258" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="ot">2.8j</span> <span class="co">#complex</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c,<span class="bu">type</span>(c))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2.8j &lt;class 'complex'&gt;</code></pre>
 </div>
 </div>
-<div id="5d3ef5d0" class="cell" data-execution_count="12">
+<div id="40ffa567" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">"Hello World"</span> <span class="co">#string</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s,<span class="bu">type</span>(s))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World &lt;class 'str'&gt;</code></pre>
 </div>
 </div>
-<div id="12e2ddd4" class="cell" data-execution_count="13">
+<div id="8e885757" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"length of word: "</span>, <span class="bu">len</span>(s)) <span class="co"># length of string</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"character on position 2: "</span>, s[<span class="dv">2</span>]) </span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"last 3 characters: "</span>, s[<span class="op">-</span><span class="dv">3</span>:])</span>
@@ -596,42 +596,42 @@ Hello World!
 "Hello world"!</code></pre>
 </div>
 </div>
-<div id="84d84ddc" class="cell" data-execution_count="14">
+<div id="999e34ac" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="bu">dict</span>(name<span class="op">=</span><span class="st">"Max"</span>,lastname<span class="op">=</span><span class="st">"Musterman"</span>,height<span class="op">=</span><span class="fl">1.89</span>) <span class="co"># dictionary</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d,<span class="bu">type</span>(d))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{'name': 'Max', 'lastname': 'Musterman', 'height': 1.89} &lt;class 'dict'&gt;</code></pre>
 </div>
 </div>
-<div id="0691a73b" class="cell" data-execution_count="15">
+<div id="64fd6dc1" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="va">True</span> <span class="co"># boolean</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b,<span class="bu">type</span>(b))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True &lt;class 'bool'&gt;</code></pre>
 </div>
 </div>
-<div id="f1a58ab7" class="cell" data-execution_count="16">
+<div id="6beeb370" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> {<span class="dv">1</span>,<span class="dv">12</span>,<span class="dv">3</span>} <span class="co"># set </span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dataset,<span class="bu">type</span>(dataset))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{1, 3, 12} &lt;class 'set'&gt;</code></pre>
 </div>
 </div>
-<div id="6d38a2dd" class="cell" data-execution_count="17">
+<div id="f0382dee" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>dataset2 <span class="op">=</span> <span class="bu">set</span>((<span class="fl">1.2</span>,<span class="dv">2</span>,<span class="dv">2</span>)) <span class="co"># set</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dataset2,<span class="bu">type</span>(dataset2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{1.2, 2} &lt;class 'set'&gt;</code></pre>
 </div>
 </div>
-<div id="fa8a50c8" class="cell" data-execution_count="18">
+<div id="63cd0a0b" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">2</span>) <span class="co"># range</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(r,<span class="bu">type</span>(r))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>range(0, 10, 2) &lt;class 'range'&gt;</code></pre>
 </div>
 </div>
-<div id="096f71d7" class="cell" data-execution_count="19">
+<div id="6d8b6012" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">3</span>] <span class="co"># list</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(l,<span class="bu">type</span>(l))</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"length of list"</span>,<span class="bu">len</span>(l))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -640,14 +640,14 @@ Hello World!
 length of list 4</code></pre>
 </div>
 </div>
-<div id="c5ad8ed3" class="cell" data-execution_count="20">
+<div id="7325c2fa" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>)<span class="co"># tuple</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t,<span class="bu">type</span>(t))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(1, 2) &lt;class 'tuple'&gt;</code></pre>
 </div>
 </div>
-<div id="db165ec0" class="cell" data-execution_count="21">
+<div id="ca3a2b24" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#type conversion</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">float</span>(x)</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(f,<span class="bu">type</span>(f))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -669,7 +669,7 @@ Cell <span class="ansi-green-fg">In[21], line 2</span>
 <h1 class="unnumbered">Lists</h1>
 <p>Lists collect multiple items in a single variable. <br></p>
 <p>You can use the <code>[]</code> operator to create a list. <br> You can use the <code>append()</code> method to add an item to a list. <br> You can use the <code>insert()</code> method to add an item at a specific position. <br> You can use the <code>del</code> statement to delete an item from a list. <br> You can use the <code>remove()</code> method to remove an item from a list. <br> You can use the <code>pop()</code> method to remove an item at a specific position. <br> You can use the <code>clear()</code> method to remove all items from a list. <br> You can use the <code>copy()</code> method to copy a list. <br> You can use the <code>count()</code> method to count the number of items in a list. <br> You can use the <code>sort()</code> method to sort a list. <br> You can use the <code>reverse()</code> method to reverse a list. <br> You can use the <code>extend()</code> method to add items from another list. <br> You can use the <code>index()</code> method to get the index of an item. <br> You can use the <code>len()</code> function to get the length of a list. <br> You can use the <code>list()</code> function to create a list. <br></p>
-<div id="61fbc306" class="cell" data-execution_count="22">
+<div id="6ab9c9d2" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">3</span>,<span class="st">'a'</span>, <span class="ot">1j</span>]</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(a) <span class="co">#length of list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -690,7 +690,7 @@ Warning
 <p>Index is starting with <strong>0</strong> in Python.</p>
 </div>
 </div>
-<div id="9c2231c7" class="cell" data-execution_count="23">
+<div id="b6f136e0" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> [<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>]</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>l[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
@@ -698,7 +698,7 @@ Warning
 </div>
 </div>
 <p>Last element is reached by index -1.</p>
-<div id="c3266bb2" class="cell" data-execution_count="24">
+<div id="61899809" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>l[<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>'third'</code></pre>
@@ -709,7 +709,7 @@ Warning
 <h1 class="unnumbered">Mutable and Immutable Objects</h1>
 <p>Immutable objects cannot be changed. <br> Mutable objects can be changed. <br> Immutable objects are: <code>int</code>, <code>float</code>, <code>bool</code>, <code>str</code>, <code>tuple</code>, <code>frozenset</code>. <br> Mutable objects are: <code>list</code>, <code>dict</code>, <code>set</code>. <br></p>
 <p>That means if you change an immutable object, a new object is created. <br> If you change a mutable object, the object is changed. <br></p>
-<div id="5d0db7eb" class="cell" data-execution_count="25">
+<div id="1354f81e" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
 <span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -745,7 +745,7 @@ b: 2</code></pre>
 </div>
 </div>
 <p>mutable objects</p>
-<div id="231e3dd1" class="cell" data-execution_count="26">
+<div id="b52653a0" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -773,7 +773,7 @@ b: [4, 5, 3]</code></pre>
 </div>
 </div>
 <p>This happens because a and b are pointing to the same memory location. So if you change a, b will also change. If you want to avoid this, you can use the copy() method.</p>
-<div id="f521bc70" class="cell" data-execution_count="27">
+<div id="c2c0092d" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a.copy()</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
@@ -817,7 +817,7 @@ b: [4, 5, 7]</code></pre>
 <li><code>\xhh</code>: hex value</li>
 </ul>
 <p>You can use the <code>+</code> operator to concatenate strings. <br></p>
-<div id="d16b779e" class="cell" data-execution_count="28">
+<div id="a1ee4798" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">"This "</span> </span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">"is a string"</span></span>
 <span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -826,7 +826,7 @@ b: [4, 5, 7]</code></pre>
 </div>
 </div>
 <p>For print formatting you can use the <code>format()</code> method. <br> You can use the <code>f-string</code> method. <br> See for more information <a href="https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings">here</a></p>
-<div id="eee3ae2c" class="cell" data-execution_count="29">
+<div id="1a2c0f47" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">1.5434</span></span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">"nm"</span></span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"This is an integer </span><span class="sc">%d</span><span class="st"> </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (a, b))</span>
@@ -877,7 +877,7 @@ This is an example of using format() method with named arguments 1.5434 nm</code
 <li>is: identity</li>
 <li>in: membership</li>
 </ul>
-<div id="749ee4b0" class="cell" data-execution_count="30">
+<div id="25a03a8a" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">5.3</span></span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">3</span></span>
@@ -916,7 +916,7 @@ exponentiation:  28.09</code></pre>
 </ul>
 <section id="if-statement" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="if-statement">if statement</h2>
-<div id="3080579c" class="cell" data-execution_count="31">
+<div id="ac5c6fb9" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
 <span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"x &lt; 0"</span>)</span>
@@ -931,7 +931,7 @@ exponentiation:  28.09</code></pre>
 </section>
 <section id="breakcotinuepass" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="breakcotinuepass">break,cotinue,pass</h2>
-<div id="6c943f36" class="cell" data-execution_count="32">
+<div id="f8d37e44" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
 <span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
@@ -944,7 +944,7 @@ exponentiation:  28.09</code></pre>
 4</code></pre>
 </div>
 </div>
-<div id="68ad374f" class="cell" data-execution_count="33">
+<div id="e82a8b36" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
 <span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
@@ -969,7 +969,7 @@ exponentiation:  28.09</code></pre>
 </section>
 <section id="for-loops" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="for-loops">For Loops</h2>
-<div id="20ac7548" class="cell" data-execution_count="34">
+<div id="2a6df5e4" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>): <span class="co">#from 0 to 4 </span></span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -980,7 +980,7 @@ exponentiation:  28.09</code></pre>
 4</code></pre>
 </div>
 </div>
-<div id="235cd544" class="cell" data-execution_count="35">
+<div id="64b74994" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">2</span>): <span class="co"># start 1, stop 10 excluded, step 2</span></span>
 <span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -991,16 +991,16 @@ exponentiation:  28.09</code></pre>
 9</code></pre>
 </div>
 </div>
-<div id="165e91d2" class="cell" data-execution_count="36">
+<div id="80d73f75" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="76021ecc" class="cell" data-execution_count="37">
+<div id="8e4f3a62" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>l</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="38">
 <pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
 </div>
 </div>
-<div id="4ea671c2" class="cell" data-execution_count="38">
+<div id="1d9e54e4" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> l:  <span class="co"># using list</span></span>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1019,7 +1019,7 @@ exponentiation:  28.09</code></pre>
 </section>
 <section id="while-loops" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="while-loops">While Loops</h2>
-<div id="81412e61" class="cell" data-execution_count="39">
+<div id="e142323a" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x  <span class="op">&lt;</span> <span class="dv">4</span>:</span>
 <span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(l[x])</span>
@@ -1031,7 +1031,7 @@ exponentiation:  28.09</code></pre>
 3</code></pre>
 </div>
 </div>
-<div id="4ec3ad7c" class="cell" data-execution_count="40">
+<div id="05b27d0d" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"while loop with continue and break statement"</span>)</span>
 <span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>(n <span class="op">&lt;</span> <span class="dv">10</span>):</span>
@@ -1056,17 +1056,17 @@ The loop reached 7 and will break now.</code></pre>
 <section id="functions" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="functions">Functions</h2>
 <p>Functions are defined using the <code>def</code> keyword. <br> You can use the <code>return</code> keyword to return a value from a function. <br> The parameters of a function are defined in the parentheses. <br> Multiple parameters are separated by commas. <br> You can use default values for the parameter <em>e.g.</em> <code>b=5</code>. <br> Multiple return values are separated by commas. <br> They are stored in a tuple. <br></p>
-<div id="0d196024" class="cell" data-execution_count="41">
+<div id="813871d7" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> summation(a,b<span class="op">=</span><span class="dv">5</span>):</span>
 <span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a<span class="op">+</span>b, a<span class="op">-</span>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="383d9b4f" class="cell" data-execution_count="42">
+<div id="46b995dd" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>summation(<span class="dv">4</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="43">
 <pre><code>(6, 2)</code></pre>
 </div>
 </div>
-<div id="a106ba7b" class="cell" data-execution_count="43">
+<div id="068946c2" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>, sub <span class="op">=</span> summation(<span class="dv">4</span>)</span>
 <span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sum</span>)</span>
 <span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sub)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1075,7 +1075,7 @@ The loop reached 7 and will break now.</code></pre>
 -1</code></pre>
 </div>
 </div>
-<div id="fc8638a1" class="cell" data-execution_count="44">
+<div id="d8401e19" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> multiple_return_value(x,a,b):</span>
