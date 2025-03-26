@@ -233,10 +233,10 @@ Categorial means that data is divided into categories. It can be further divided
 - **Nominal**: Data that has no specific order or ranking 
  
 For example,
-- blood type -> nominal {A, B, AB, O}
-- chemical function group -> nominal {alcohol, ketone, aldehyde, carboxylic acid, etc.}
-- purity of a substance -> ordinal {low, medium, high}
-- hardness of a material -> ordinal {soft, medium, hard}
+- blood type: **nominal** {A, B, AB, O}
+- chemical function group: **nominal** {alcohol, ketone, aldehyde, carboxylic acid, etc.}
+- purity of a substance: **ordinal** {low, medium, high}
+- hardness of a material: **ordinal** {soft, medium, hard}
 
 
 # Quiz {.unnumbered}
