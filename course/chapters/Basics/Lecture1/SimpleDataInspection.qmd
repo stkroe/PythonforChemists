@@ -1,7 +1,5 @@
 ---
 title: "Simple Data Inspection"
-format: live-html
-engine: jupyter
 execute: 
   echo: True
   eval: True
@@ -31,8 +29,8 @@ After you load your data you have to inspect it to:
 
 You can use the `head()` function to get a quick overview of the first rows of the data.
 ```{python}
-#| tags: [parameters]
-
+#| echo: false
+#| eval: true
 temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures.csv"
 temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/temperatures_nan.dat"
 ```
@@ -164,9 +162,10 @@ data['temperature'].fillna((data['temperature'].shift() + data['temperature'].sh
 ```
 
 
+```{python}
 data_missing['temperature'].fillna((data_missing['temperature'].shift() + data_missing['temperature'].shift(-1))/2, inplace=True)
 data_missing[20:25]
-
+```
 
 Now can analysis or plot the data.
  
