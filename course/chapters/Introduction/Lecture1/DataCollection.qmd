@@ -218,21 +218,25 @@ Depending on the type of data analysis could be different.
 
 ### Numerical Data {.unnumbered}
 Numerical data is data that is expressed with numbers. It can be further divided into two types:
+
 - **Discrete**: Data that can only take certain values (e.g. integers)
 - **Continuous**: Data that can take any value within a certain range (e.g. real numbers)
 
 For example, 
-- measured temperature over time -> continuous
-- number of chemical substances, which are measured -> discrete 
+
+- measured temperature over time: **continuous**
+- number of chemical substances, which are measured: **discrete**
 
 
 
 ### Categorical Data {.unnumbered}
 Categorial means that data is divided into categories. It can be further divided into two types:
+
 - **Ordinal**: Data that has a specific order or ranking 
 - **Nominal**: Data that has no specific order or ranking 
  
 For example,
+
 - blood type: **nominal** {A, B, AB, O}
 - chemical function group: **nominal** {alcohol, ketone, aldehyde, carboxylic acid, etc.}
 - purity of a substance: **ordinal** {low, medium, high}
