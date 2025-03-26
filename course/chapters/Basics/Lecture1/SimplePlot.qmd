@@ -26,7 +26,7 @@ Let`s start with the basic data visualization techniques using Matplotlib.
 
 ### 1. Generate some x-y data points. {.unnumbered}
 
-```{pyodide}
+```{python}
 from matplotlib import pyplot as plt
 import numpy as np
 
@@ -38,7 +38,7 @@ y = np.sin(x)
 
 ### 2. Plot the data points. {.unnumbered}
 
-```{pyodide}
+```{python}
 #| fig-width: 8
 #| fig-height: 4
 #| fig-dpi: 72
@@ -49,7 +49,7 @@ plt.show()
 To add more graphs to the same figure, use `plt.plot()` multiple times before `plt.show()`.
 If you want to create a new figure, use `plt.figure()` before `plt.plot()`.
 
-```{pyodide}
+```{python}
 #| fig-width: 8
 #| fig-height: 4
 #| fig-dpi: 72
@@ -80,7 +80,7 @@ The `plot()` function takes the following arguments:
 
 You have to call `plt.legend()` to show the labels.
 
-```{pyodide}
+```{python}
 #| fig-width: 8
 #| fig-height: 4
 #| fig-dpi: 72
@@ -112,7 +112,7 @@ This plot figure can be adjusted by changing the figure size, title, labels, and
 - `plt.figure()`: Create a new figure.
 - `plt.show()`: Display a figure.
 
-```{pyodide}
+```{python}
 #| fig-width: 8
 #| fig-height: 4
 #| fig-dpi: 72
@@ -142,7 +142,7 @@ You can create multiple plots in the same figure by using the `subplot()` functi
 
 
 
-```{pyodide}
+```{python}
 #| fig-width: 8
 #| fig-height: 4
 #| fig-dpi: 72
@@ -167,11 +167,8 @@ plt.tight_layout()
 plt.show()
 ```
 
-```{pyodide}
-#| fig-width: 8
-#| fig-height: 4
-#| fig-dpi: 72
-fig = plt.figure(layout='constrained', facecolor='lightskyblue')
+```{python}
+fig = plt.figure(figsize=(8,4),dpi=72,layout='constrained', facecolor='lightskyblue')
 # Create a figure with a specific layout and background color
 # constrained layout automatically adjusts the subplots to fit the figure
 fig.suptitle('Figure') # set the title of the figure object
