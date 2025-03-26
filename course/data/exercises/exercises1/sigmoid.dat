@@ -1,0 +1,4 @@
+20/(1+exp(-0.0005*(x-21000)))
+
+
+gawk '{printf "%20d  %19.9f\n", NR, $3 + 20/(1+exp(-0.0005*(NR-21000))) + 20*(rand() - 0.5) }' temp.dat > ~/python_course_examples/plotting_histogram/Temperature_6.dat 

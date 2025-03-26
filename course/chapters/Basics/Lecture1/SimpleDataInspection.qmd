@@ -14,8 +14,8 @@ code-links:
 
 ## Inspection of Data {.unnumbered}
 
-
 After you load your data you have to inspect it to:
+
 - check if no data is consistent, no missing values
 - check if the data is in the correct format
 - check if the data is in the correct range

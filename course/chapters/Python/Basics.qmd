@@ -757,7 +757,7 @@ while(n < 10):
     print(n)
 ```
 
-# Functions {.unnumbered}
+## Functions {.unnumbered}
 
 
 Functions are defined using the `def` keyword. <br>
@@ -794,7 +794,7 @@ def multiple_return_value(x,a,b):
 print(multiple_return_value(x,5,10)[0],multiple_return_value(x,5,10)[1])
 ```
 
-# Style guideline for writing python code {.unnumbered}
+## Style guideline for writing python code {.unnumbered}
 
 
 For writing a readable code, it is important to follow a style guideline. <br>
