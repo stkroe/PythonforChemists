@@ -1,11 +1,9 @@
 ---
 title: "Python Start"
-format: html
-engine: jupyter
 execute:
     echo: true
-    eval: false
-    error: false
+    eval: true
+    error: true
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Python/Basics.ipynb"
@@ -48,8 +46,8 @@ print("Hello World")
 
  
 
- ## Indentation {.unnumbered}
- In Python code blocks are not structured by brackets or semicolons like C/C++ or Java but by indentation. This means that the code inside a loop or a function is indented by a tab or four spaces.
+## Indentation {.unnumbered}
+In Python code blocks are not structured by brackets or semicolons like C/C++ or Java but by indentation. This means that the code inside a loop or a function is indented by a tab or four spaces.
 
 :::{.callout-warning}
 Indentations are curcial in Python. 
@@ -57,8 +55,6 @@ If you don't indent your code correctly, you will get an typical beginner error.
 
 Pay attention to not mix tabs and spaces in your code.
 :::
-
-
 
 
 
@@ -276,11 +272,12 @@ For more information about the sys module you can visit the [official documentat
 
 
 For `Argparse` you can use the following code:
+For python scripts:
+You can use argparse to parse command line arguments.
 
 ```{python}
 from argparse import ArgumentParser
-For python scripts:
-You can use argparse to parse command line arguments
+
 parser = ArgumentParser(description="This is a description.")
 parser.add_argument("--arg1", help="This is the first argument.")
 parser.add_argument("---arg2", help="This is the second argument.")
@@ -334,8 +331,8 @@ You can assign a value to a variable using the `=` operator. <br>
 
 
 ```{python}
-a = 1 a is a variable
-b = "String" b is a string
+a = 1  #a is a variable
+b = "String" #b is a string
 print(1, " is an", type(a))
 print(b, " is a", type(b))
 
@@ -367,13 +364,13 @@ print(x,type(x))# print the type of x
 ```
 
 ```{python}
-y = 5.12 float
+y = 5.12 #float
 print(y,type(y))
 
 ```
 
 ```{python}
-c = 2.8j complex
+c = 2.8j #complex
 print(c,type(c))
 
 ```
@@ -686,7 +683,8 @@ else:
 ```
 
 ## break,cotinue,pass {.unnumbered}
-#### example break {.unnumbered}
+
+
 ```{python}
 
 for i in range(10):
@@ -695,9 +693,8 @@ for i in range(10):
     print(i)
 ```
 
-#### example continue {.unnumbered}
-```{python}
 
+```{python}
 for i in range(10):
     if i == 5:
         continue
@@ -705,7 +702,7 @@ for i in range(10):
  ```   
 
 
-#### example pass {.unnumbered}
+
 ```{python} 
 for i in range(10):
     if i == 5:
