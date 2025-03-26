@@ -7,16 +7,12 @@ title: "Introduction"
 
 
 - Scientists produce a lot of data which needs to be analyzed and visualized.
-- Clear presentation of data is essential for the understanding of data.
-- It helps to improve your scientific communication and to make your results more accessible to others.
+- Clear presentation of data is essential for the understanding the data.
+- It helps to improve your scientific communication and make your results more accessible to others.
 - There are many tools available for data analysis and visualization.
 
-
-You can use basic spreadsheet programs with graphical interfaces *e.g.* 
+A very simple approach would be the use of basic spreadsheet programs with graphical user interfaces *e.g.* 
 [Excel](https://www.microsoft.com/de-at/microsoft-365/excel), [LibreOffice Calc](https://de.libreoffice.org/) ...
-
-
-
 
 
 

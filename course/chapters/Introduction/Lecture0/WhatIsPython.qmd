@@ -1,5 +1,5 @@
 ---
-title: "What is Python?"
+title: "Python?"
 ---
 
 
@@ -45,7 +45,7 @@ So if you execute a python programe, the python interpreter will convert the cod
 ## How I can learn Python? {.unnumbered}
 
 
-# There are a lot of resources to dive deeper into Python *e.g.*:
+There are a lot of resources to dive deeper into Python *e.g.*:
 
 
 - [https://www.py4e.com/](https://www.py4e.com/) (Python for Everybody)
