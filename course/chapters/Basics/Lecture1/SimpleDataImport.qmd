@@ -154,7 +154,7 @@ Missing value examples:
 
 ```{python}
 data = pd.read_csv(temperature_nan_dat, sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=False)
-print(data.loc[20:26]) print some rows to see the NaN values
+print(data.loc[20:26]) #print some rows to see the NaN values
 ```
 
 
@@ -162,7 +162,7 @@ If the `na_filter`is set to `False`, the missing values are not recognized. But 
 
 ```{python}
 data = pd.read_csv(temperature_nan_dat, sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=True)
-print(data.loc[20:26]) print some rows to see the NaN values
+print(data.loc[20:26]) #print some rows to see the NaN values
 ```
 
 
