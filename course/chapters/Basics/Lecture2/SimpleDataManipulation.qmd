@@ -1,19 +1,242 @@
 ---
-title: "Simple Data Manipulation"
+title: "Simple Data Manipulation and Analysis"
 execute: 
   echo: True
   eval: True
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataManipulation.ipynb"
         icon: "laptop"
 --- 
 
-# Data Manipulation
+# Data Manipulation {.unnumbered}
 
-## Pandas
+## Numpy{.unnumbered}
 
-### Filter
+### Array manipulation {.unnumbered}
+Often data has to be manipulated before it can be analyzed. <br> 
+Numpy has many methods for array manipulation. <br> 
+
+For example, 
+
+- the shape of an array can be changed,
+- multiple arrays can be concatenated, 
+- the elements of an array can be sorted
+- non valid values NaN can be removed, 
+- linear algebra operations can be performed,
+
+etc.
+
+#### Sort arrays: {.unnumbered}
+
+```{python}
+unsorted_arr = np.array([[3, 1, 5, 2, 4], [5, 2, 0, 8, 1], [3, 2, 9, 4 , 5]])
+print("unsortd_arr: \n", unsorted_arr)
+sorted_arr = np.sort(unsorted_arr,axis = 0) # sorted along the column
+print("sorted_arr along columns: \n" , sorted_arr)
+sorted_arr = np.sort(unsorted_arr,axis = 1) # sorted along the row
+print("sorted_arr along rows: \n" , sorted_arr)
+```
+
+#### Concatenate arrays: {.unnumbered}
+```{python}
+a = np.array([1, 2, 3]) 
+b = np.array([4, 5, 6])
+c = np.concatenate((a, b))
+print(c)
+```
+
+#### Reshape arrays: {.unnumbered}
+
+```{python}
+a = np.array([[1, 2],[3, 4],[5, 6]])
+b = np.array([[7, 8],[9, 10],[11, 12]])
+c = np.vstack((a, b)) # vertical stack
+d = np.hstack((a, b)) # horizontal stack
+print("vertical stack: \n", c)
+print("horizontal stack: \n", d)
+print("flatten array: \n", c.flatten())
+```
+
+#### Linear algebra operations *e.g.*: {.unnumbered}
+
+- `np.sum(a)` returns **element-wise sum** of two arrays
+- `np.add(a)` returns **sum of all elements** an arrays
+- `np.subtract(a,b)` returns the **difference** of two arrays
+- `np.multiply(a,b)` returns the **product** of two arrays
+- `np.divide(a,b)` returns the **division** of two arrays
+- `np.dot(a,b)` returns the **dot product** of two arrays
+- `np.cross(a,b)` returns the **cross product** of two arrays
+- `np.linalg.inv(a)` returns the **inverse of a matrix**
+- `np.linalg.det(a)` returns the **determinant of a matrix**
+- `np.linalg.eig(a)` returns the **eigenvalues and eigenvectors** of a matrix
+- `np.linalg.solve(a,b)` returns the **solution of a linear system of equations**
+- `np.mean(a)` returns the **mean** of the elements of an array
+- `np.average(a)` returns the **weighted average** of the elements of an array
+- `np.max(a)` returns the **maximum** of the elements of an array
+- `np.min(a)` returns **the minimum** of the elements of an array
+- `np.std(a)` returns **the standard** deviation of the elements of an array
+- `np.var(a)` returns **the variance** of the elements of an array
+- `np.covar(a)` returns the **covariance** of the elements of an array
+- `np.median(a)` returns the **median** of the elements of an array
+- `np.percentile(a,p) `` returns the **p-th percentile** of the elements of an array
+- `np.histogram(a, [,bins,range,density,weights])` returns the **histogram** of the elements of an array
+
+```{python}
+a = np.array([[1, 2],[3, 4],[5, 6]])
+b = np.array([[7, 8],[9, 10],[11, 12]])
+c = np.sum(a) # sum of all elements
+print("Summ of all elements: ", c)
+c = np.add(a,b) # element wise addition
+print("Element wise addition: ", c)
+```
+
+- `np.argmin(a)` returns the **index of the minimum** element of an array
+- `np.argmax(a)` returns the **index of the maximum** element of an array
+- `np.where(a)` returns the **indices of the elements** of an array that are non-zero
+- `np.argwhere(a)` returns the **indices of the elements** of an array that are non-zero
+- `np.nonzero(a)` returns the **indices of the elements** of an array that are non-zero
+- `np.searchsorted(a,v)` returns the **index of the first element** of an array <br> 
+    **that is greater than or equal to a value**
+- `np.extract(condition,a)` returns the **elements of an array that satisfy a condition**
+
+```{python}
+arr = np.array([1, 2, 3, 4, 5, 4, 7, 8, 9])
+print(arr)
+print("Index of the maximum element: ", np.argmax(arr))
+print("Index of the minimum element: ", np.argmin(arr))
+print("Maximum element: ", np.max(arr))
+print("Minimum element: ", np.min(arr))
+print("Find the index of element \"4\": ", np.where(arr == 4))
+print("Find the index of element \">4\": ", np.argwhere(arr > 4),
+       " and the elements are: ", arr[np.where(arr > 4)])
+```
+
+
+## Pandas {.unnumbered}
+
+
+### Get information about the data {.unnumbered}
+
+```{python}
+data = pd.DataFrame({
+    "Name": ["Water", "Sulfuric Acid", "Ethanol", "Acetone", "Ammonia", "Benzene", "Methanol", "Glycerol"],
+    "Formula": ["H2O", "H2SO4", "C2H5OH", "C3H6O", "NH3", "C6H6", "CH3OH", "C3H8O3"],
+    "Molecular Weight (g/mol)": [18.015, 98.079, 46.07, 58.08, 17.03, 78.11, 32.04, 92.09],
+    "Viscosity (mPa·s)": [1.002, 24.0, 1.2, 0.32, 0.26, 0.65, 0.544, 1412],
+    "pH (Acidity)": [7, 1, 7.33, 7, 11.6, 7, 7.4, 5.5],
+    "Chemical Type": ["Inorganic", "Acid", "Alcohol", "Ketone", "Base", "Aromatic Hydrocarbon", "Alcohol", "Polyol"],
+    "Concentration (M)": [55.5, 18.0, 1.0, 0.8, 0.5, 0.1, 1.5, 1.2]})
+```
+
+```{python}
+print("head of data: \n",data.head()) # print the first 5 rows
+print("\n")
+print("Number of data set: \n", data.shape[0]) # number of data set
+print("\n")
+print("Column name: \n", data["name"]) # print the column "name"
+print("\n")
+print("2. Row: \n", data.iloc[1]) # print the second row
+```
+
+#### Select subsets of the data: {.unnumbered}
 
 Often you need only a specific part of your data with `pandas`it is quite easy to filter the data after specific properties.
 
+```{python}
+# filter the rows where concentration is greater than 5
+print("Filter the rows where concentration is greater than 5: \n", data[data["concentration"] > 5]) 
+print("\n")
+# get the chemical type with a concentration higher than 5
+print("Get the chemical type with a concentration higher than 5: \n", 
+      data.loc[data["concentration"]>5,"Chemical Type"])
+print("\n")
+```
+
+
+
+### Manipulate data {.unnumbered}
+
+You can
+
+- copy data,
+- drop columns,
+- drop rows,
+- fill not valid values,
+- replace values, 
+- merge data, 
+- join data,
+
+etc.
+
+```{python}
+data2 = data.copy()
+data2["concentration"] = data2["concentration"] + 10 # increase the concentration by 10 M
+print("data2: \n" , data2)
+
+data2.index = range(5,10) # change the index
+data3 = pd.concat([data, data2]) # concatenate the dataframes
+print("concated data: \n", data3)
+```
+
+```{python}
+ # create a Panda Series
+acidity = pd.Series(["basic", "acid", "basic", "neutral",
+                    "acid", "acid", "basic", "basic"], name="acidity")
+print("acidity: \n",acidity)
+# concatenate the dataframes
+data4 = pd.concat([data3, acidity], axis=1) 
+print("concated data: \n", data4)
+```
+
+```{python}
+data5 = data4.drop_duplicates() # drop the duplicates
+print("data5: \n", data5)
+data6 = data5.dropna() # drop the NaNs
+print("data6: \n", data6)
+```
+
+### Transform Pandas DataFrame to Numpy Array and viceversa {.unnumbered}
+
+
+```{python}
+df = data6
+print(df)
+# convert the dataframe to a numpy array
+arr = df.to_numpy() 
+print("arr: \n", arr)
+# convert the numpy array to a dataframe
+df2 = pd.DataFrame(arr, columns=["Name", "Formula", "Molecular Weight (g/mol)","Viscosity (mPa·s)","pH (Acidity)","Chemical Type","Concentration (M)"])
+print("df2: \n", df2)
+```
+
+### Sort data
+
+```{python}
+print("sorted after concentration: ",data.sort_values(by="concentration", ascending=True))
+```
+
+### Statistial Analysis {.unnumbered}
+
+```{python}
+print("mean of concentration: \n", data["concentration"].mean()) # mean of concentration
+print("std of concentration: \n", data["concentration"].std()) # standard deviation of concentration
+print("median of concentration: \n", data["concentration"].median()) # median of concentration
+print("max of concentration: \n", data["concentration"].max()) # max of concentration
+print("min of concentration: \n", data["concentration"].min()) # min of concentration
+print("sum of concentration: \n", data["concentration"].sum()) # sum of concentration
+print("Statisical summary: \n", data.describe()) # statistical summary
+# mean of concentration group by type
+print("Mean of concentration group by type: \n", data.groupby("type")["concentration"].mean()) 
+# count the chemicals with different concentration
+print("Count the chemicals with the different concentrations \n", data["concentration"].value_counts())
+```
+
+
+### Pivot Table {.unnumbered}
+
+Pivot tables are used to summarize and aggregate data inside a dataframe.
+
+```{python}
+data.pivot_table(index="chemical type", columns="job", values="age", aggfunc="mean") 
+```

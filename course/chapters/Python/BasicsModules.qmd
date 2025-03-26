@@ -14,6 +14,7 @@ code-links:
 
 
 ## Numpy {.unnumbered}
+
 - Numpy is the most important library for Python. 
 - The standard data types in Python are very slow and not very efficient for data analysis. 
 - Numpy is based mainly on C an C++. 
@@ -113,14 +114,23 @@ import pandas as pd
 ### Panda DataFrames {.unnumbered}
 
 
-# Panda DataFrames are two-dimensional labeled data structures with columns of potentially different types like a table.
+Panda DataFrames are two-dimensional labeled data structures with columns of potentially different types like a table.
 
 ```{python}
-data = pd.DataFrame({"gas": ["CH4", "H2O", "CO2"], "moalar_weight": [16, 18, 44]
-                     }) # create a dataframe from a dictionary
-print(data)
+data = {
+    "Name": ["Water", "Oxygen", "Hydrogen", "Carbon Dioxide", "Methane", "Ammonia", "Nitrogen", "Sulfur Dioxide"],
+    "Formula": ["H2O", "O2", "H2", "CO2", "CH4", "NH3", "N2", "SO2"],
+    "Molar Mass (g/mol)": [18.015, 32.00, 2.016, 44.01, 16.04, 17.03, 28.013, 64.07]
+}
+
+df = pd.DataFrame(data)
+print(df)
 ```
 
 
 
 
+```{python}
+series_data = pd.Series([1, 2, 3, 4, 5], index=["a", "b", "c", "d", "e"])
+print(series_data)
+```

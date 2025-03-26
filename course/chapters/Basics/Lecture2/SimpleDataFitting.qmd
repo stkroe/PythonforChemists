@@ -1,5 +1,5 @@
 ---
-title: "Simple Plot Types"
+title: "Simple Data Fitting"
 execute: 
   echo: True
   eval: True
@@ -8,4 +8,6 @@ code-links:
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
         icon: "laptop"
 --- 
+
+## Linear Regression {.unnumbered}
 
