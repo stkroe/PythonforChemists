@@ -1,0 +1,260 @@
+---
+title: "Basic Data Visualization Techniques"
+format: live-html
+engine: jupyter
+pyodide:
+  packages:
+    - matplotlib
+    - numpy
+    - seaborn
+  cell-options:
+    edit: false
+    runbutton: true
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/Lecture1/SimplePlot.ipynb"
+        icon: "laptop"
+---
+
+
+## Basic Data Visualization Technique {.unnumbered}
+
+
+The most popular data visualization libraries in Python is Matplotlib.
+Let`s start with the basic data visualization techniques using Matplotlib.
+
+
+### 1. Generate some x-y data points. {.unnumbered}
+
+```{python}
+from matplotlib import pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+```
+
+
+
+### 2. Plot the data points. {.unnumbered}
+
+```{python}
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 72
+plt.plot(x, y)
+plt.show()
+```
+
+To add more graphs to the same figure, use `plt.plot()` multiple times before `plt.show()`.
+If you want to create a new figure, use `plt.figure()` before `plt.plot()`.
+
+```{python}
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 72
+plt.plot(x,y)
+plt.plot(x,2*y)
+plt.show()
+plt.plot(x, y)
+plt.show()
+```
+
+### 3. Adjust the plot. {.unnumbered}
+
+
+The `plot()` function takes the following arguments:
+
+- x-axis data points
+- y-axis data points
+- [color](https://matplotlib.org/stable/users/explain/colors/colors.html): hex, or color name (e.g., 'red', 'blue','black'), abbreviated (e.g., 'r', 'b','k')
+- [linestyle](https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html): '-', '--', '-.', ':' or "solid", "dashed", "dashdot", "dotted"
+- [marker](https://matplotlib.org/stable/api/markers_api.html): 'o', 'x', '+', '*', 's', 'd', '^', 'v', '>', '<', 'p', 'h'
+- linewidth - width of the line
+- alpha - transparency of the line
+- markerfacecolor - color of the marker face
+- markersize - size of the marker
+- label - label for the data points
+
+
+
+You have to call `plt.legend()` to show the labels.
+
+```{python}
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 72
+plt.figure()
+plt.plot(x, y, color='red', linestyle='dashed', linewidth=2, marker='o', 
+            markerfacecolor='blue', markersize=5,
+            label='sin(x)')
+plt.plot(x, 2*y, color='green', linestyle='dotted', linewidth=2, marker='x',
+            markerfacecolor='yellow', markersize=5,
+            label='2*sin(x)')
+plt.legend()
+plt.show()
+```
+
+### 4. Adust the figure {.unnumbered}
+
+
+This plot figure can be adjusted by changing the figure size, title, labels, and so on.
+ 
+- `plt.xlabel()`: Set the x-axis label of the current axis.
+- `plt.ylabel()`: Set the y-axis label of the current axis.
+- `plt.title()`: Set a title for the axes.
+- `plt.legend()`: Place a legend on the axes.
+- `plt.grid()`: Configure the grid lines.
+- `plt.xlim()`: Get or set the x-limits of the current axes.
+- `plt.ylim()`: Get or set the y-limits of the current axes.
+- `plt.xticks()`: Get or set the current tick locations and labels of the x-axis.
+- `plt.yticks()`: Get or set the current tick locations and labels of the y-axis.
+- `plt.figure()`: Create a new figure.
+- `plt.show()`: Display a figure.
+
+```{python}
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 72
+plt.figure(figsize=(4, 4), dpi=100)
+# Create a figure with a specific size and resolution
+plt.plot(x, y, color='red', linestyle='dashed', linewidth=2, marker='o', 
+            markerfacecolor='blue', markersize=5,
+            label='sin(x)')
+plt.plot(x, 2*y, color='green', linestyle='dotted', linewidth=2, marker='x',
+            markerfacecolor='yellow', markersize=5,
+            label='2*sin(x)')
+plt.xlim([0, 10]) # set the x-axis limits
+plt.ylim([-3, 3]) # set the y-axis limits
+plt.xticks(np.arange(0, 11, 2)) # set the x-axis ticks
+plt.yticks(np.arange(-3, 4, 1)) # set the y-axis ticks
+plt.xlabel('x') # set the x-axis label
+plt.ylabel('y') # set the y-axis label
+plt.title('Sine and Double Sine Functions') # set the title of the plot
+plt.grid(linewidth=0.1)# set the grid linewidth
+plt.legend(loc='upper left') # set the location of the legend: upper left, upper right, lower left, lower right
+plt.show()
+```
+
+### Creating multiple plots {.unnumbered}
+
+You can create multiple plots in the same figure by using the `subplot()` function.
+
+
+
+```{python}
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 72
+plt.subplot(2, 1, 1)
+plt.plot(x, y, color='red', linestyle='dashed', linewidth=2, marker='o', 
+            markerfacecolor='blue', markersize=5,
+            label='sin(x)')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Sine Function')
+plt.legend()
+
+plt.subplot(2, 1, 2)
+plt.plot(x, 2*y, color='green', linestyle='dotted', linewidth=2, marker='x',
+            markerfacecolor='yellow', markersize=5,
+            label='2*sin(x)')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Double Sine Function')
+plt.legend()   
+plt.tight_layout()
+plt.show()
+```
+
+```{python}
+fig = plt.figure(figsize=(8,4),dpi=72,layout='constrained', facecolor='lightskyblue')
+# Create a figure with a specific layout and background color
+# constrained layout automatically adjusts the subplots to fit the figure
+fig.suptitle('Figure') # set the title of the figure object
+subL, subR = fig.subfigures(1, 2) # create two subfigures
+subL.set_facecolor('thistle') # set the background color of the left subfigure
+sub_subL = subL.subplots(2, 1, sharex=True) # create two subplots in the left subfigure
+sub_subL[1].set_xlabel('x [m]')
+subL.suptitle('Left subfigure') # set the title of the left subfigure
+subR.set_facecolor('lightyellow') # set the background color of the right subfigure
+sub_subR = subR.subplots(1, 2, sharey=True) 
+sub_subR[0].set_title('Axes 1') # set the title of the first subplot in the right subfigure
+sub_subR[1].set_title('Axes 2') # set the title of the second subplot in the right subfigure
+subR.suptitle('Right subfigure')
+```
+
+
+Let`s try to create 4x3 subplots with specific adjustments.
+
+- `plt.subplots(4, 3)`: create 4x3 subplots
+- `figsize=(3, 4)`: set the figure size to 3x4 inches
+- `sharex=True`: all subplots share the x-axis
+- `sharey=True`: all subplots share the y-axis
+-  `constraint_layout=True`: automatically adjust the subplot parameters to give the specified padding around the subplots
+- `gridspec_kw={'hspace': 0.5, 'wspace': 0.5}`: set the horizontal and vertical space between the subplots to 0.5 inches
+
+
+Play with the code below to understand the different parameters:
+
+
+```{ojs}
+//| echo: false
+
+viewof figx = Inputs.range(
+  [1, 10], 
+  {value: 5, step: 0.5, label: "Figure x-size:"}
+)
+viewof figy = Inputs.range(
+  [1, 10], 
+  {value: 5, step: 0.5, label: "Figure y-size:"}
+)
+viewof constrained = Inputs.select(["True", "False"], {label: "Select an option:"})
+viewof dpi = Inputs.range(
+  [70, 100], 
+  {value:75, step:5 , label: "Dpi:"}
+)
+viewof space_h = Inputs.range(
+  [0.1, 1], 
+  {value: 0.5, step: 0.05, label: "horizonatal space:"}
+)
+viewof space_w = Inputs.range(
+  [0.1, 1], 
+  {value: 0.5, step: 0.05, label: "width space:"}
+)
+```
+
+```{pyodide}
+#| edit: False
+#| runbutton: True
+#| input:
+#|   - figx
+#|   - figy
+#|   - constrained
+#|   - dpi
+#|   - space_w
+#|   - space_h
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+fig, ax = plt.subplots(3,2, figsize=(figx,figy), dpi=dpi, sharex=True, sharey=True, constrained_layout=constrained,gridspec_kw={'hspace': space_h, 'wspace': space_w})
+
+for i in range(3):
+    for j in range(2):
+        ax[i,j].plot(x, y*(i+1)*(j+1))
+
+plt.show()
+
+```
+
+
+
+
+
+
+
+
