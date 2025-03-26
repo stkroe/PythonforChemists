@@ -68,8 +68,10 @@ bibliography: references.bib
 
 format:
   html: 
-      theme: "book"
-      highlight-style: "github"
+      theme: 
+        light: flatly  # Light theme
+        dark: darkly   # Dark theme
+      highlight-style: "tango"
       code-copy: true
       code-overflow: wrap
       toc: true
