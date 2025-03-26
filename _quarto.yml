@@ -50,10 +50,11 @@ book:
           - course/exercises/exercises/exercise1.ipynb
           # - course/chapters/Intermediate/Lecture1/SpecialDataImport.ipynb
           # - course/chapters/Advanced/Lecture1/AdvancedDataImport.ipynb
-      # - part: "Lecture 2"
-      #   chapters:
+      - part: "Lecture 2"
+        chapters:
+          - course/chapters/Basics/Lecture1/SimpleDataManipulation.qmd
       #     - course/chapters/Introduction/Lecture2/Introduction.ipynb
-      #     - course/chapters/Basics/Lecture2/BasicDataAnalysis.ipynb
+       #    - course/chapters/Basics/Lecture2/BasicDataAnalysis.ipynb
       #     - course/chapters/Intermediate/Lecture2/IntermediateDataAnalysis.ipynb
       #     - course/chapters/Advanced/Lecture2/AdvancedDataAnalysis.ipynb
       - part: "Informations"
