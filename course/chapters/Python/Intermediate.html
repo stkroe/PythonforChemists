@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Data Science – Data Analysis and Visualization for Chemists and Material Scientists</title>
+<title>Python Intermediate – Data Analysis and Visualization for Chemists and Material Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,24 +57,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../../">
-<link href="../../../../course/chapters/Basics/Lecture1/SimpleDataImport.html" rel="next">
-<link href="../../../../course/chapters/Python/BasicsModules.html" rel="prev">
-<script src="../../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-de84f8d6bb715db06a919283c2d1e787.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-a4e2516462c63f7dfa57dd5d144311d4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../course/chapters/Python/BasicsModules.html" rel="next">
+<link href="../../../course/chapters/Python/Basics.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-de84f8d6bb715db06a919283c2d1e787.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-a4e2516462c63f7dfa57dd5d144311d4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="Introduction to Data Science – Data Analysis and Visualization for Chemists and Material Scientists">
+<meta property="og:title" content="Python Intermediate – Data Analysis and Visualization for Chemists and Material Scientists">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../course/chapters/Introduction/Lecture1/DataCollection.html">Lecture 1</a></li><li class="breadcrumb-item"><a href="../../../../course/chapters/Introduction/Lecture1/DataCollection.html"><span class="chapter-title">Introduction to Data Science</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/Python/Basics.html">Python Crash Course</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/Python/Intermediate.html"><span class="chapter-title">Python Intermediate</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -132,11 +132,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../../../../index.html" class="sidebar-logo-link">
-      <img src="../../../../logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../../index.html" class="sidebar-logo-link">
+      <img src="../../../logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../../../">Data Analysis and Visualization for Chemists and Material Scientists</a> 
+      <a href="../../../">Data Analysis and Visualization for Chemists and Material Scientists</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/stkroe/PythonForChemists.github.io" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -156,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Overview</span></a>
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -170,17 +170,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../course/chapters/Introduction/Lecture0/Introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
+  <a href="../../../course/chapters/Introduction/Lecture0/Introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../course/chapters/Introduction/Lecture0/WhatIsPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python?</span></a>
+  <a href="../../../course/chapters/Introduction/Lecture0/WhatIsPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../course/chapters/Introduction/Lecture0/InstallationGuide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installation Guide</span></a>
+  <a href="../../../course/chapters/Introduction/Lecture0/InstallationGuide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installation Guide</span></a>
   </div>
 </li>
       </ul>
@@ -196,17 +196,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../course/chapters/Python/Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Start</span></a>
+  <a href="../../../course/chapters/Python/Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Start</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../course/chapters/Python/Intermediate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Intermediate</span></a>
+  <a href="../../../course/chapters/Python/Intermediate.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Python Intermediate</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../course/chapters/Python/BasicsModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Modules</span></a>
+  <a href="../../../course/chapters/Python/BasicsModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Modules</span></a>
   </div>
 </li>
       </ul>
@@ -222,27 +222,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../course/chapters/Introduction/Lecture1/DataCollection.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Introduction to Data Science</span></a>
+  <a href="../../../course/chapters/Introduction/Lecture1/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../course/chapters/Basics/Lecture1/SimpleDataImport.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Import</span></a>
+  <a href="../../../course/chapters/Basics/Lecture1/SimpleDataImport.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Import</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../course/chapters/Basics/Lecture1/SimpleDataInspection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Inspection</span></a>
+  <a href="../../../course/chapters/Basics/Lecture1/SimpleDataInspection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Inspection</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../course/chapters/Basics/Lecture1/SimplePlot.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Data Visualization Techniques</span></a>
+  <a href="../../../course/chapters/Basics/Lecture1/SimplePlot.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Data Visualization Techniques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../course/exercises/exercises/exercise1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise</span></a>
+  <a href="../../../course/exercises/exercises/exercise1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise</span></a>
   </div>
 </li>
       </ul>
@@ -258,28 +258,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../informations/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../informations/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../informations/license.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">License</span></a>
+  <a href="../../../informations/license.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">License</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../informations/privacy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Privacy Policy</span></a>
+  <a href="../../../informations/privacy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Privacy Policy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../informations/impressum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Impressum</span></a>
+  <a href="../../../informations/impressum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Impressum</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../informations/disclaimer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Disclaimers</span></a>
+  <a href="../../../informations/disclaimer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Disclaimers</span></a>
   </div>
 </li>
       </ul>
@@ -294,41 +294,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#more-information" id="toc-more-information" class="nav-link active" data-scroll-target="#more-information">More information</a></li>
-  <li><a href="#data-collection-and-storage" id="toc-data-collection-and-storage" class="nav-link" data-scroll-target="#data-collection-and-storage">Data Collection and Storage</a>
-  <ul class="collapse">
-  <li><a href="#what-is-data" id="toc-what-is-data" class="nav-link" data-scroll-target="#what-is-data">What is data?</a></li>
-  <li><a href="#how-do-you-get-data" id="toc-how-do-you-get-data" class="nav-link" data-scroll-target="#how-do-you-get-data">How do you get data?</a></li>
-  <li><a href="#how-do-you-store-the-data" id="toc-how-do-you-store-the-data" class="nav-link" data-scroll-target="#how-do-you-store-the-data">How do you store the data?</a></li>
-  </ul></li>
-  <li><a href="#this-data-can-be-stored-in-different-locations-such-as" id="toc-this-data-can-be-stored-in-different-locations-such-as" class="nav-link" data-scroll-target="#this-data-can-be-stored-in-different-locations-such-as">This data can be stored in different locations, such as:</a>
-  <ul class="collapse">
-  <li><a href="#how-do-you-access-external-data" id="toc-how-do-you-access-external-data" class="nav-link" data-scroll-target="#how-do-you-access-external-data">How do you access external data?</a></li>
-  <li><a href="#which-data-formats-do-you-use" id="toc-which-data-formats-do-you-use" class="nav-link" data-scroll-target="#which-data-formats-do-you-use">Which data formats do you use?</a>
-  <ul class="collapse">
-  <li><a href="#plain-text-files" id="toc-plain-text-files" class="nav-link" data-scroll-target="#plain-text-files">Plain Text Files</a></li>
-  <li><a href="#json-or-xml" id="toc-json-or-xml" class="nav-link" data-scroll-target="#json-or-xml">JSON or XML</a></li>
-  <li><a href="#binary-files" id="toc-binary-files" class="nav-link" data-scroll-target="#binary-files">Binary Files</a></li>
-  <li><a href="#databases" id="toc-databases" class="nav-link" data-scroll-target="#databases">Databases</a></li>
-  <li><a href="#chemical-and-molecular-data-formats" id="toc-chemical-and-molecular-data-formats" class="nav-link" data-scroll-target="#chemical-and-molecular-data-formats">Chemical and Molecular Data Formats</a></li>
-  <li><a href="#other-data-formats" id="toc-other-data-formats" class="nav-link" data-scroll-target="#other-data-formats">Other Data Formats</a></li>
-  </ul></li>
-  <li><a href="#what-type-of-data-do-you-have" id="toc-what-type-of-data-do-you-have" class="nav-link" data-scroll-target="#what-type-of-data-do-you-have">What type of data do you have?</a>
-  <ul class="collapse">
-  <li><a href="#numerical-data" id="toc-numerical-data" class="nav-link" data-scroll-target="#numerical-data">Numerical Data</a></li>
-  <li><a href="#categorical-data" id="toc-categorical-data" class="nav-link" data-scroll-target="#categorical-data">Categorical Data</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">Quiz</a></li>
+  <li><a href="#io-inputoutput" id="toc-io-inputoutput" class="nav-link active" data-scroll-target="#io-inputoutput">I/O (Input/Output)</a></li>
+  <li><a href="#system" id="toc-system" class="nav-link" data-scroll-target="#system">System</a></li>
+  <li><a href="#paths" id="toc-paths" class="nav-link" data-scroll-target="#paths">Paths</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Introduction/Lecture1/DataCollection.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Python/Intermediate.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Python/Intermediate.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../course/chapters/Introduction/Lecture1/DataCollection.html">Lecture 1</a></li><li class="breadcrumb-item"><a href="../../../../course/chapters/Introduction/Lecture1/DataCollection.html"><span class="chapter-title">Introduction to Data Science</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/Python/Basics.html">Python Crash Course</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/Python/Intermediate.html"><span class="chapter-title">Python Intermediate</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Introduction to Data Science</span></h1>
+<h1 class="title"><span class="chapter-title">Python Intermediate</span></h1>
 </div>
 
 
@@ -345,166 +322,151 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="more-information" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="more-information">More information</h3>
+<section id="io-inputoutput" class="level1 unnumbered">
+<h1 class="unnumbered">I/O (Input/Output)</h1>
+<p>You can use the <code>print()</code> function to <strong>print a message</strong> to the screen. <br> You can use the <code>input()</code> function to get <strong>input from the user</strong>. <br> You can use the <code>open()</code> function to <strong>open a file</strong>. <br> You can use the <code>write()</code> function to <strong>write to a file</strong>. <br> You can use the <code>read()</code> function to <strong>read from a file</strong>. <br> You can use the <code>close()</code> function to <strong>close a file</strong>. <br> You can use the <code>with</code> statement to <strong>open a file</strong> and <strong>automatically close</strong> it when you are done. <br> You can use the <code>os</code> module to <strong>work with files and directories</strong>. <br> You can use the <code>sys</code> module to <strong>work with command line arguments</strong>. <br> You can use the <code>argparse</code> module to work also with <strong>command line arguments</strong>. <br></p>
+<p>This should print “Hello World!” to the console</p>
+<div id="4d2e79bc" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello World!</code></pre>
+</div>
+</div>
+<p>This should ask the user to enter a number and print it to the console</p>
+<div id="31872cf1" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[2], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="color:rgb(0,135,0)">print</span>(<span style="color:rgb(0,135,0)" class="ansi-yellow-bg">input</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">Enter a number: </span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span class="ansi-yellow-bg">)</span>)
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.10.16/x64/lib/python3.10/site-packages/ipykernel/kernelbase.py:1281</span>, in <span class="ansi-cyan-fg">Kernel.raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
+<span class="ansi-green-fg ansi-bold">   1279</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_allow_stdin:
+<span class="ansi-green-fg ansi-bold">   1280</span>     msg <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">raw_input was called, but this frontend does not support input requests.</span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg">-&gt; 1281</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> StdinNotImplementedError(msg)
+<span class="ansi-green-fg ansi-bold">   1282</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_input_request(
+<span class="ansi-green-fg ansi-bold">   1283</span>     <span style="color:rgb(0,135,0)">str</span>(prompt),
+<span class="ansi-green-fg ansi-bold">   1284</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_parent_ident[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">shell</span><span style="color:rgb(175,0,0)">"</span>],
+<span class="ansi-green-fg ansi-bold">   1285</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>get_parent(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">shell</span><span style="color:rgb(175,0,0)">"</span>),
+<span class="ansi-green-fg ansi-bold">   1286</span>     password<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">False</span>,
+<span class="ansi-green-fg ansi-bold">   1287</span> )
+
+<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.</pre>
+</div>
+</div>
+</div>
+<p>This should write “Hello World!” to the file “file.txt”</p>
+<div id="984c0994" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>).write(<span class="st">"Hello World!"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>12</code></pre>
+</div>
+</div>
+<p>This should read the file “file.txt” and print the content to the console</p>
+<div id="aacf82d5" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">open</span>(<span class="st">"file.txt"</span>).read()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello World!</code></pre>
+</div>
+</div>
+<p>This should print “Hello World!” to the console without a newline</p>
+<div id="1e287825" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World without newline."</span>, end<span class="op">=</span><span class="st">""</span>) </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Next print statement."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello World without newline.Next print statement.</code></pre>
+</div>
+</div>
+<p>This should read the file “file.txt” and print the content to the console</p>
+<div id="4e067fec" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>: <span class="bu">print</span>(<span class="bu">file</span>.read()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello World!</code></pre>
+</div>
+</div>
+</section>
+<section id="system" class="level1 unnumbered">
+<h1 class="unnumbered">System</h1>
+<p>There are a lot of modules in Python to work with the system. <br> You can use the <code>os</code> module to <strong>work with files and directories</strong>. <br> You can use the <code>sys</code> module to <strong>work with command line arguments</strong>. <br> You can use the <code>argparse</code> module to work also with <strong>command line arguments</strong>. <br></p>
+<p>Most important functions are: <br> - <code>os.getcwd()</code> to get the current working directory. <br> - <code>os.chdir()</code> to change the current working directory. <br> - <code>os.listdir()</code> to list the files in a directory. <br> - <code>os.mkdir()</code> to create a directory. <br> - <code>os.rmdir()</code> to remove a directory. <br> - <code>os.remove()</code> to remove a file. <br> - <code>os.rename()</code> to rename a file. <br> - <code>os.path.exists()</code> to check if a file or directory exists. <br> - <code>os.path.isfile()</code> to check if a file exists. <br> - <code>os.path.isdir()</code> to check if a directory exists. <br> - <code>os.path.join()</code> to join two paths. <br> - <code>os.path.basename()</code> to get the base name of a path. <br> - <code>os.path.dirname()</code> to get the directory name of a path. <br> - <code>os.path.abspath()</code> to get the absolute path of a path. <br> - <code>os.path.split()</code> to split a path into a directory and a file. <br> - <code>os.path.splitext()</code> to split a path into a base name and an extension. <br> - <code>os.path.getsize()</code> to get the size of a file. <br> - <code>os.path.getmtime()</code> to get the modification time of a file. <br></p>
 <ul>
-<li><a href="https://microsoft.github.io/Data-Science-For-Beginners/#/">Data Science for Beginner</a> by Microsoft</li>
-<li><a href="https://knowledgebase.nfdi4chem.de/knowledge_base/">Research Data Managment (RDM) in Chemistry</a></li>
+<li><p><code>sys.argv</code> to get the command line arguments. <br></p></li>
+<li><p><code>sys.exit()</code> to exit the program. <br></p></li>
+<li><p><code>sys.stdin</code> to read from the standard input. <br></p></li>
+<li><p><code>sys.stdout</code> to write to the standard output. <br></p></li>
+<li><p><code>sys.stderr</code> to write to the standard error. <br></p></li>
+<li><p><code>argparse.ArgumentParser()</code> to create a parser. <br></p></li>
+<li><p><code>add_argument()</code> to add an argument to the parser. <br></p></li>
+<li><p><code>parse_args()</code> to parse the command line arguments. <br></p></li>
 </ul>
+<p>This should remove the file “file.txt”</p>
+<div id="7c9ebdc2" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>os.remove(<span class="st">"file.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For <code>sys</code> you can use the <code>sys.argv</code> to get the command line arguments. <br> <code>sys.argv</code> is a list of the command line arguments. <br> <code>sys.argv[0]</code> is the name of the script. <br> <code>sys.argv[1]</code> is the first argument. <br></p>
+<div id="e96bd429" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>first_argument <span class="op">=</span> sys.argv[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For more information about the sys module you can visit the <a href="https://docs.python.org/3/library/sys.html">official documentation</a>.</p>
+<p>For <code>Argparse</code> you can use the following code: For python scripts: You can use argparse to parse command line arguments.</p>
+<div id="3c57925f" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> argparse <span class="im">import</span> ArgumentParser</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>parser <span class="op">=</span> ArgumentParser(description<span class="op">=</span><span class="st">"This is a description."</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>parser.add_argument(<span class="st">"--arg1"</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"This is the first argument."</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>parser.add_argument(<span class="st">"---arg2"</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"This is the second argument."</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>args <span class="op">=</span> parser.parse_args()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre>An exception has occurred, use %tb to see the full traceback.
+
+<span class="ansi-red-fg">SystemExit</span><span class="ansi-red-fg">:</span> 2
+</pre>
+</div>
+</div>
+</div>
+<p>For more information about <code>Argparse</code> you can visit the <a href="https://docs.python.org/3/library/argparse.html">official documentation</a>.</p>
 </section>
-<section id="data-collection-and-storage" class="level1 unnumbered">
-<h1 class="unnumbered">Data Collection and Storage</h1>
-<section id="what-is-data" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="what-is-data">What is data?</h2>
-<p>Data is a collection of</p>
-<ul>
-<li><p>numbers</p></li>
-<li><p>words</p></li>
-<li><p>measurements</p></li>
-<li><p>observations</p></li>
-</ul>
-</section>
-<section id="how-do-you-get-data" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-do-you-get-data">How do you get data?</h2>
-<p>At the beginning of every data science project, you need to collect data.</p>
-<p>Data can be collected from various sources, such as:</p>
-<ul>
-<li><p>experimental measurements</p></li>
-<li><p>calculations and simulations</p></li>
-<li><p>surveys</p></li>
-<li><p>existing databases</p></li>
-<li><p>web scraping</p></li>
-<li><p>APIs</p></li>
-</ul>
-<p>etc.</p>
-</section>
-<section id="how-do-you-store-the-data" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-do-you-store-the-data">How do you store the data?</h2>
-</section>
-</section>
-<section id="this-data-can-be-stored-in-different-locations-such-as" class="level1">
-<h1>This data can be stored in different locations, such as:</h1>
-<ul>
-<li>local files</li>
-<li>databases</li>
-<li>cloud storages</li>
-<li>cluster storages</li>
-<li>web servers</li>
-<li>etc.</li>
-</ul>
-<p>If you measure data yourself, either the your measurement device will store the data in a specific format, or you will have to store it yourself. Sometimes you have to transform the data into a different format to be able to work with it.</p>
-<p>If you use data from external sources, you have to make sure that you have legal rights to use the data. Check the data license and terms of use.</p>
-<p>Further make sure how the data is stored and how you can access it.</p>
-<section id="how-do-you-access-external-data" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-do-you-access-external-data">How do you access external data?</h2>
-<p>To access data from exeternal sources, you can use different tools and libraries.</p>
-<p>For example, if you want to access data from a chemical database e.g.&nbsp;</p>
-<ul>
-<li><p><a href="https://next-gen.materialsproject.org/api">Materials Project</a>, you can use the <code>pymatgen</code> <a href="https://pymatgen.org/">library</a>. (Requires API key, which can be obtained by registering on the website.)</p></li>
-<li><p><a href="https://www.rcsb.org/docs/programmatic-access/web-apis-overview">RCSB PDB Protein Data Bank</a>, you can use the <code>rcsb</code> <a href="https://rcsbapi.readthedocs.io/en/latest/">library</a>.</p></li>
-<li><p><a href="https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access">PubChem</a>, you can use the <code>pubchempy</code> <a href="https://pubchempy.readthedocs.io/en/latest/guide/introduction.html">library</a>.</p></li>
-</ul>
-<p>… and many more.</p>
-<p>If you use APIs please read the documentation of the API to understand how to access the data. And make sure to respect the API usage policy and database terms of use.</p>
-</section>
-<section id="which-data-formats-do-you-use" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="which-data-formats-do-you-use">Which data formats do you use?</h2>
-<p>Data can be stored in various data formats, such as: - Plain Text files (e.g.&nbsp;CSV, DAT, TXT) - Text files with structure (e.g.&nbsp;JSON, XML) - Spreadsheet files - Binary files (e.g.&nbsp;HDF5, Parquet, NetCDF,Feather, Pickle, npy, etc.) - Databases - chemical and molecular data formats (e.g.&nbsp;XYZ, CIF, PDB, etc.) - etc.</p>
-<section id="plain-text-files" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="plain-text-files">Plain Text Files</h3>
-<p>A text file often contains a header with the names of the columns and then the data in rows. Columns can be seperated by different delimiters (<code>spaces</code>, <code>,</code>, <code>;</code>, <code>tabs</code>, …). <br> For example, a file with data from an experiment could look like this:</p>
-<pre class="plaintext"><code>Time/s  Temperature/°C
-0         20
-10        21
-...     ...
-</code></pre>
-</section>
-<section id="json-or-xml" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="json-or-xml">JSON or XML</h3>
-<p><a href="https://en.wikipedia.org/wiki/JSON">JSON</a> stands for JavaScript Object Notation. Data is structured in a key-value format, so that both humans and machines can read it easily. <br> For example, a JSON file with the same data as above could look like this:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"Time"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span> <span class="dt">"Temperature"</span><span class="fu">:</span> <span class="dv">20</span><span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"Time"</span><span class="fu">:</span> <span class="dv">10</span><span class="fu">,</span> <span class="dt">"Temperature"</span><span class="fu">:</span> <span class="dv">21</span><span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="er">...</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><a href="https://en.wikipedia.org/wiki/XML">XML</a> stands for Extensible Markup Language. It is also designed to be both human-readable and machine-readable. <br> For example, an XML file with the same data as above could look like this:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">data</span>&gt;</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">measurement</span>&gt;</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Time</span>&gt;0&lt;/<span class="kw">Time</span>&gt;</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Temperature</span>&gt;20&lt;/<span class="kw">Temperature</span>&gt;</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">measurement</span>&gt;</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">measurement</span>&gt;</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Time</span>&gt;10&lt;/<span class="kw">Time</span>&gt;</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Temperature</span>&gt;21&lt;/<span class="kw">Temperature</span>&gt;</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">measurement</span>&gt;</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="binary-files" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="binary-files">Binary Files</h3>
-<p>Data is stored in a binary format and can be read with specific libraries. It is often used for large datasets, as it is more efficient than plain text files. The computer is able to read and write binary files faster than text files. <br> Some common binary file formats are:</p>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Hierarchical_Data_Format"><strong>HDF5</strong></a>: Hierarchical Data Format, used for large datasets</li>
-<li><a href="https://en.wikipedia.org/wiki/Apache_Parquet"><strong>Parquet</strong></a>: Columnar storage format, used for big data</li>
-<li><a href="https://en.wikipedia.org/wiki/NetCDF"><strong>NetCDF</strong></a>: Network Common Data Form, array-orriented, often for geoscience data</li>
-<li><a href="https://arrow.apache.org/docs/python/feather.html"><strong>Feather</strong></a>: a fast column-based serialization for data frames, initially designed for R and Python, helps to share data between languages</li>
-<li><a href="https://docs.python.org/3/library/pickle.html"><strong>Pickle</strong></a>: Python-specific format, used for serializing Python objects</li>
-<li><a href="https://numpy.org/doc/stable/reference/generated/numpy.lib.format.html"><strong>npy</strong></a>: Numpy-specific format, used for saving numpy arrays</li>
-</ul>
-<p>Here is a list of comparison of binary file formats: <a href="https://en.wikipedia.org/wiki/Comparison_of_data-serialization_formats">Comparison of data serialization formats</a></p>
-</section>
-<section id="databases" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="databases">Databases</h3>
-<p>Databases are designed for big data storage. The advantage of databases is that they can be queried and updated easily. There are different types of databases, such as: - <strong><a href="https://en.wikipedia.org/wiki/SQL">SQL</a></strong> databases (e.g.&nbsp;SQLite, MySQL, PostgreSQL) - <strong><a href="https://en.wikipedia.org/wiki/NoSQL">NoSQL</a></strong> databases (e.g.&nbsp;MongoDB) - <strong><a href="https://en.wikipedia.org/wiki/Graph_database#List_of_graph_databases">Graph databases</a></strong> - <strong><a href="https://en.wikipedia.org/wiki/Time_series_database">Time series databases</a></strong></p>
-</section>
-<section id="chemical-and-molecular-data-formats" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="chemical-and-molecular-data-formats">Chemical and Molecular Data Formats</h3>
-<p>There are specific data formats for chemical and molecular data, such as:</p>
-<ul>
-<li><p><strong><a href="https://en.wikipedia.org/wiki/XYZ_file_format">XYZ</a></strong>: Cartesian coordinates of atoms</p></li>
-<li><p><strong><a href="https://en.wikipedia.org/wiki/Crystallographic_Information_File">CIF</a></strong>: Crystallographic Information File, used for crystallographic data</p></li>
-<li><p><strong><a href="https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format)">PDB</a></strong>: Protein Data Bank, used for protein structures</p></li>
-<li><p><strong><a href="https://en.wikipedia.org/wiki/Chemical_table_file">MOL</a></strong>: Molecule file format, used for chemical structures</p></li>
-<li><p><strong><a href="https://en.wikipedia.org/wiki/Chemical_table_file">SDF</a></strong>: Structure Data File, used for chemical structures</p></li>
-<li><p><strong><a href="https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system">SMILES</a></strong>: Simplified Molecular Input Line Entry System, used for chemical structures</p></li>
-<li><p><strong><a href="https://en.wikipedia.org/wiki/International_Chemical_Identifier">InChI</a></strong>: International Chemical Identifier, used for chemical structures</p></li>
-<li><p><strong><a href="https://nmrml.org/">nmrML</a></strong>: Nuclear Magnetic Resonance Markup Language, used for NMR data</p></li>
-<li><p><strong><a href="https://nmredata.org/">NMReDATA</a></strong>: Nuclear Magnetic Resonance Electronic Data Aggregation, used for NMR data</p></li>
-<li><p><strong><a href="https://iupac.org/what-we-do/digital-standards/jcamp-dx/">JCAMP-DX</a></strong>: Joint Committee on Atomic and Molecular Physical Data, used for spectroscopy data</p></li>
-<li><p><strong><a href="https://link.springer.com/protocol/10.1007/978-1-60761-444-9_22">mzML</a></strong>: Mass Spectrometry Markup Language, used for mass spectrometry data</p></li>
-<li><p><strong><a href="https://www.animl.org/">animl</a></strong>: Analytical Information Markup Language, used for analytical data</p></li>
-<li><p><strong><a href="https://en.wikipedia.org/wiki/FASTA_format">FASTA</a></strong>: used for DNA and protein sequences</p></li>
-</ul>
-<p>etc.</p>
-</section>
-<section id="other-data-formats" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="other-data-formats">Other Data Formats</h3>
-<ul>
-<li><p><a href="https://en.wikipedia.org/wiki/Image_file_formats"><strong>Images</strong></a>: Images can be stored in different formats, such as JPEG, PNG, TIFF, BMP, GIF, etc.</p></li>
-<li><p><a href="https://en.wikipedia.org/wiki/Audio_file_format"><strong>Audio</strong></a>: Audio files can be stored in different formats, such as MP3, WAV, FLAC, etc.</p></li>
-<li><p><a href="https://en.wikipedia.org/wiki/Video_file_format"><strong>Video</strong></a>: Video files can be stored in different formats, such as MP4, AVI, MOV, etc.</p></li>
-</ul>
-</section>
-</section>
-<section id="what-type-of-data-do-you-have" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="what-type-of-data-do-you-have">What type of data do you have?</h2>
-<p>Next what do you have to consider is the types of your data.</p>
-<p>Depending on the type of data analysis could be different.</p>
-<section id="numerical-data" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="numerical-data">Numerical Data</h3>
-<p>Numerical data is data that is expressed with numbers. It can be further divided into two types: - <strong>Discrete</strong>: Data that can only take certain values (e.g.&nbsp;integers) - <strong>Continuous</strong>: Data that can take any value within a certain range (e.g.&nbsp;real numbers)</p>
-<p>For example, - measured temperature over time -&gt; continuous - number of chemical substances, which are measured -&gt; discrete</p>
-</section>
-<section id="categorical-data" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="categorical-data">Categorical Data</h3>
-<p>Categorial means that data is divided into categories. It can be further divided into two types: - <strong>Ordinal</strong>: Data that has a specific order or ranking - <strong>Nominal</strong>: Data that has no specific order or ranking</p>
-<p>For example, - blood type: <strong>nominal</strong> {A, B, AB, O} - chemical function group: <strong>nominal</strong> {alcohol, ketone, aldehyde, carboxylic acid, etc.} - purity of a substance: <strong>ordinal</strong> {low, medium, high} - hardness of a material: <strong>ordinal</strong> {soft, medium, hard}</p>
-</section>
-</section>
-</section>
-<section id="quiz" class="level1 unnumbered">
-<h1 class="unnumbered">Quiz</h1>
+<section id="paths" class="level1 unnumbered">
+<h1 class="unnumbered">Paths</h1>
+<p>Pay attention to the paths in your code. They are different defined in Windows and Linux. In Windows and macOS, you use backslashes <code>/</code> and in Linux, you use forward slashes <code>\</code>.</p>
+<p>To avoid this problem you can use the <code>os</code> or <code>pathlib</code> module to make your code platform independent.</p>
+<div id="1409287f" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> os.path.join(<span class="st">'folder1'</span>, <span class="st">'folder2'</span>, <span class="st">'folder3'</span>, <span class="st">'data.dat'</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>folder1/folder2/folder3/data.dat</code></pre>
+</div>
+</div>
+<div id="db3fdcdb" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>working_dir <span class="op">=</span> os.getcwd()</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(working_dir)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>/home/runner/work/PythonforChemists/PythonforChemists/course/chapters/Python</code></pre>
+</div>
+</div>
+<div id="f0f20543" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> Path(<span class="st">'folder1'</span>) <span class="op">/</span> <span class="st">'folder2'</span> <span class="op">/</span> <span class="st">'folder3'</span> <span class="op">/</span> <span class="st">'data.dat'</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>folder1/folder2/folder3/data.dat</code></pre>
+</div>
+</div>
+<div id="68b34b7d" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>working_dir <span class="op">=</span> Path.cwd()</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(working_dir)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>/home/runner/work/PythonforChemists/PythonforChemists/course/chapters/Python</code></pre>
+</div>
+</div>
 
 
 </section>
@@ -936,13 +898,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../../course/chapters/Python/BasicsModules.html" class="pagination-link" aria-label="Basic Modules">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Basic Modules</span></span>
+      <a href="../../../course/chapters/Python/Basics.html" class="pagination-link" aria-label="Python Start">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Python Start</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../../course/chapters/Basics/Lecture1/SimpleDataImport.html" class="pagination-link" aria-label="Simple Data Import">
-        <span class="nav-page-text"><span class="chapter-title">Simple Data Import</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../course/chapters/Python/BasicsModules.html" class="pagination-link" aria-label="Basic Modules">
+        <span class="nav-page-text"><span class="chapter-title">Basic Modules</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -954,7 +916,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 Stefanie Kröll. All rights reserved.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Introduction/Lecture1/DataCollection.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Python/Intermediate.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <li>
 <a href="https://github.com/stkroe/PythonForChemists.github.io" target="blank">Code source</a>
