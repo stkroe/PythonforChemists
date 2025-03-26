@@ -175,7 +175,7 @@ fig.suptitle('Figure') # set the title of the figure object
 subL, subR = fig.subfigures(1, 2) # create two subfigures
 subL.set_facecolor('thistle') # set the background color of the left subfigure
 sub_subL = subL.subplots(2, 1, sharex=True) # create two subplots in the left subfigure
-axL[1].set_xlabel('x [m]')
+sub_subL[1].set_xlabel('x [m]')
 subL.suptitle('Left subfigure') # set the title of the left subfigure
 subR.set_facecolor('lightyellow') # set the background color of the right subfigure
 sub_subR = subR.subplots(1, 2, sharey=True) 
