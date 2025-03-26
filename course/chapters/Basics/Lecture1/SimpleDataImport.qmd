@@ -1,22 +1,8 @@
 ---
 title: "Simple Data Import"
-format: live-html
-engine: jupyter
-pyodide:
-  packages:
-    - matplotlib
-    - numpy
-    - seaborn
-    - pandas
-  cell-options:
-    edit: false
-    runbutton: true
-  resources:
-    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures.csv"
-    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures_nan.csv"
-    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures.dat"
-    - "https://raw.githubusercontent.com/stkroe/PythonforChemists/main/course/data/temperatures_nan.dat"
-
+execute: 
+  echo: True
+  eval: True
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataImport.ipynb"
@@ -56,9 +42,18 @@ Pandas has different functions to read different file formats.
 Mostly used function is `pandas.read_csv()` because you can specify the delimiter, header, and other options.
 
 
-```{pyodide}
+```{python}
+#| echo: false
+temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures.csv"
+temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures_nan.csv"
+temperature_dat = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures.dat"
+temperature_nan_dat="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures_nan.dat"
+``` 
+
+```{python}
 import pandas as pd
-data = pd.read_csv('temperatures.csv')
+
+data = pd.read_csv(temperature_data)
 data
 ```
 
@@ -66,14 +61,15 @@ The data has a different delimiter than the default `comma`. You can specify the
 
 
 
-```{pyodide}
-data = pd.read_csv('temperatures.csv', sep=';')
+```{python}
+data = pd.read_csv(temperature_data, sep=';')
 data
 ```
 
 Now the data is read correctly. The header is already taken from the first row. If you want to specify the header, you can use the `header` parameter.
 
-```python
+```{python}
+#| eval: false
 import pandas as pd
 df = pd.read_csv('file.csv', header=None) # No header
 df = pd.read_csv('file.csv', header=0) # Header is in the first row
@@ -81,23 +77,23 @@ df = pd.read_csv('file.csv', header=1) # Header is in the second row
 ```
 
 
-```{pyodide}
-data = pd.read_csv('temperatures.csv', sep=';', header=0)
+```{python}
+data = pd.read_csv(temperature_data, sep=';', header=0)
 data
 ```
 
 If your data contains whitespace, you can use the `skipinitialspace` parameter to remove initial whitespaces.
 
-```{pyodide}
-data = pd.read_csv('temperatures.dat', skipinitialspace=True, sep=" ")
+```{python}
+data = pd.read_csv(temperature_dat, skipinitialspace=True, sep=" ")
 data
 ```
 
 Now the data has no header. You can specify the header using the `names` parameter.
 
 
-```{pyodide}
-data = pd.read_csv('temperatures.dat', sep=' ', skipinitialspace=True,header=1,names=['t', 'T'])
+```{python}
+data = pd.read_csv(temperature_dat, sep=' ', skipinitialspace=True,header=1,names=['t', 'T'])
 # important to set header=None, otherwise the first line is used as header
 data
 ```
@@ -147,8 +143,8 @@ Some examples are:
 
 
 
-```{pyodide}
-data = pd.read_csv('temperatures.csv', sep=';', header=0, names=['t', 'T'], skiprows=1)
+```{python}
+data = pd.read_csv(temperature_data, sep=';', header=0, names=['t', 'T'], skiprows=1)
 ```
 
 Now the first row is skipped, only 44638 rows are read instead of 44639.
@@ -156,17 +152,17 @@ Now the first row is skipped, only 44638 rows are read instead of 44639.
 Missing value examples:
 
 
-```{pyodide}
-data = pd.read_csv('temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=False)
-print(data.loc[20:26]) print some rows to see the NaN values
+```{python}
+data = pd.read_csv(temperature_nan_dat, sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=False)
+print(data.loc[20:26]) #print some rows to see the NaN values
 ```
 
 
 If the `na_filter`is set to `False`, the missing values are not recognized. But if it set on `True`, the missing values are recognized.
 
-```{pyodide}
-data = pd.read_csv('temperatures_nan.dat', sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=True)
-print(data.loc[20:26]) print some rows to see the NaN values
+```{python}
+data = pd.read_csv(temperature_nan_dat, sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=True)
+print(data.loc[20:26]) #print some rows to see the NaN values
 ```
 
 
@@ -183,17 +179,17 @@ So you can not read a file with strings and numbers in the same file.
 If you try to read a file with a header row, you will get an error. 
 
 
-```{pyodide}
+```{python}
 import numpy as np
-data = np.loadtxt('temperatures.csv', delimiter=';')
+data = np.loadtxt(temperature_data, delimiter=';')
 ```
 
 You can specify the header row using the `skiprows` parameter.
 If you want to skip one row, the `skiprows=1` parameter is set at `1`.
 
 
-```{pyodide}
-data = np.loadtxt('temperatures.csv', delimiter=';', skiprows=1)
+```{python}
+data = np.loadtxt(temperature_data, delimiter=';', skiprows=1)
 data
 ```
 
@@ -206,8 +202,8 @@ Now the data is read correctly. You can see that the data is read as a numpy arr
 If you have data with whitespace, you do not need to specify the `delimiter`paramter because the default is whitespace.
 
 
-```{pyodide}
-data = np.loadtxt('temperatures.dat')
+```{python}
+data = np.loadtxt(temperature_dat)
 data
 ```
 
@@ -217,15 +213,15 @@ data
 First using the `loadtxt()` function, you get an error because of the missing values. 
 
 
-```{pyodide}
-data = np.loadtxt('temperatures_nan.dat')
+```{python}
+data = np.loadtxt(temperature_nan_dat)
 data
 ```
 
 If you try to read the file with an empty entrance at row 22, you wil get still an error with the `genfromtxt()` function. 
 
-```{pyodide}
-data = np.genfromtxt('temperatures_nan.dat')
+```{python}
+data = np.genfromtxt(temperature_nan_dat)
 data
 ```
 
@@ -251,8 +247,8 @@ Either you have to fill the missing value with a value or you have to use the `p
 If you have not `whitespace` as delimiter, you can use the `genfromtxt()` function with missing values.
 
 
-```{pyodide}
-data = np.genfromtxt('temperatures_nan.csv',delimiter=';')
+```{python}
+data = np.genfromtxt(temperature_nan_data,delimiter=';')
 data[20:26] # print some rows to see the NaN values
 ```
 

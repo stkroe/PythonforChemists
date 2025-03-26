@@ -1,0 +1,179 @@
+
+---
+title: "Python Intermediate"
+execute:
+    echo: true
+    eval: true
+    error: true
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Python/Intermediate.ipynb"
+        icon: "laptop"
+---
+
+
+
+# I/O (Input/Output) {.unnumbered}
+
+
+You can use the `print()` function to **print a message** to the screen. <br>
+You can use the `input()` function to get **input from the user**. <br>
+You can use the `open()` function to **open a file**. <br>
+You can use the `write()` function to **write to a file**. <br>
+You can use the `read()` function to **read from a file**. <br>
+You can use the `close()` function to **close a file**. <br>
+You can use the `with` statement to **open a file** and **automatically close** it when you are done. <br>
+You can use the `os` module to **work with files and directories**. <br>
+You can use the `sys` module to **work with command line arguments**. <br>
+You can use the `argparse` module to work also with **command line arguments**. <br>
+
+ This should print "Hello World!" to the console
+```{python}
+print("Hello World!")
+```
+
+This should ask the user to enter a number and print it to the console
+```{python}
+print(input("Enter a number: "))
+```
+
+This should write "Hello World!" to the file "file.txt"
+```{python}
+open("file.txt", "w").write("Hello World!") 
+```
+
+This should read the file "file.txt" and print the content to the console
+```{python}
+print(open("file.txt").read()) 
+
+```
+
+This should print "Hello World!" to the console without a newline
+
+```{python}
+print("Hello World without newline.", end="") 
+print("Next print statement.")
+```
+
+This should read the file "file.txt" and print the content to the console
+
+```{python}
+with open("file.txt", "r") as file: print(file.read()) 
+```
+
+
+# System {.unnumbered}
+
+
+There are a lot of modules in Python to work with the system. <br>
+You can use the `os` module to **work with files and directories**. <br>
+You can use the `sys` module to **work with command line arguments**. <br>
+You can use the `argparse` module to work also with **command line arguments**. <br>
+
+Most important functions are: <br>
+- `os.getcwd()` to get the current working directory. <br>
+- `os.chdir()` to change the current working directory. <br>
+- `os.listdir()` to list the files in a directory. <br>
+- `os.mkdir()` to create a directory. <br>
+- `os.rmdir()` to remove a directory. <br>
+- `os.remove()` to remove a file. <br>
+- `os.rename()` to rename a file. <br>
+- `os.path.exists()` to check if a file or directory exists. <br>
+- `os.path.isfile()` to check if a file exists. <br>
+- `os.path.isdir()` to check if a directory exists. <br>
+- `os.path.join()` to join two paths. <br>
+- `os.path.basename()` to get the base name of a path. <br>
+- `os.path.dirname()` to get the directory name of a path. <br>
+- `os.path.abspath()` to get the absolute path of a path. <br>
+- `os.path.split()` to split a path into a directory and a file. <br>
+- `os.path.splitext()` to split a path into a base name and an extension. <br>
+- `os.path.getsize()` to get the size of a file. <br>
+- `os.path.getmtime()` to get the modification time of a file. <br>
+
+- `sys.argv` to get the command line arguments. <br>
+- `sys.exit()` to exit the program. <br>
+- `sys.stdin` to read from the standard input. <br>
+- `sys.stdout` to write to the standard output. <br>
+- `sys.stderr` to write to the standard error. <br>
+
+- `argparse.ArgumentParser()` to create a parser. <br>
+- `add_argument()` to add an argument to the parser. <br>
+- `parse_args()` to parse the command line arguments. <br>
+
+
+This should remove the file "file.txt"
+```{python}
+import os
+os.remove("file.txt")
+```
+
+
+For `sys` you can use the `sys.argv` to get the command line arguments. <br>
+`sys.argv` is a list of the command line arguments. <br>
+`sys.argv[0]` is the name of the script. <br>
+`sys.argv[1]` is the first argument. <br>
+
+
+
+```{python}
+import sys
+first_argument = sys.argv[1]
+```
+
+
+
+
+For more information about the sys module you can visit the [official documentation](https://docs.python.org/3/library/sys.html).
+
+
+For `Argparse` you can use the following code:
+For python scripts:
+You can use argparse to parse command line arguments.
+
+```{python}
+from argparse import ArgumentParser
+
+parser = ArgumentParser(description="This is a description.")
+parser.add_argument("--arg1", help="This is the first argument.")
+parser.add_argument("---arg2", help="This is the second argument.")
+args = parser.parse_args()
+```
+
+For more information about `Argparse` you can visit the [official documentation](https://docs.python.org/3/library/argparse.html).
+
+
+
+# Paths {.unnumbered}
+
+Pay attention to the paths in your code. They
+are different defined in Windows and Linux. In Windows and macOS, you use backslashes `/` and in Linux, you use forward slashes `\`. 
+
+To avoid this problem you can use the `os` or `pathlib` module to make your code platform independent.
+
+
+```{python}
+import os
+
+path = os.path.join('folder1', 'folder2', 'folder3', 'data.dat')
+print(path)
+```
+
+
+```{python}
+working_dir = os.getcwd()
+print(working_dir)
+```
+
+
+```{python}
+from pathlib import Path
+
+path = Path('folder1') / 'folder2' / 'folder3' / 'data.dat'
+print(path)
+```
+
+
+```{python}
+working_dir = Path.cwd()
+print(working_dir)
+```

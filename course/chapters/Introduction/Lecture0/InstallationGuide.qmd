@@ -43,7 +43,7 @@ Python can be install by severals ways:
 
 
 
-## Python Package and Environment manager {.unnumbered}
+## 2. Python Package and Environment manager {.unnumbered}
 
 
 The advantage of using a python package and environment manager is that you have a python interpreter directly on board but you can also directly create different python enviroments and install and remove python packages.
@@ -87,7 +87,7 @@ Install it like it is explained under the micromamba documentation:
 Please install in one of the above explained ways Python and use your preferred searching enging to get more information.
 
 
-## 2. Set up an environment {.unnumbered}
+## 3. Set up an environment {.unnumbered}
 
 It is often very useful to have different python enviroments for different python projects because of the need of different python package versions.
 
@@ -145,7 +145,7 @@ micromamba list
 ```
 
 
-## 3. Usefull packages for Data Analyse and Visualization:  {.unnumbered}
+## 4. Usefull packages for Data Analyse and Visualization:  {.unnumbered}
 - [matplotlib](https://matplotlib.org) - data visualization library
 - [numpy](https://numpy.org) - numerical library
 - [scipy](https://docs.scipy.org/doc/scipy/reference/) - scientific library
@@ -223,7 +223,7 @@ print("Hello World!")
 If this works your installation was successful!
 
 
-## 4. Choose an editor {.unnumbered}
+## 5. Choose an editor {.unnumbered}
 
 
 After you installed python successfully you need a editor for writing your Python programs. Technical you could use everything where you can write text but it is not really purposeful. 

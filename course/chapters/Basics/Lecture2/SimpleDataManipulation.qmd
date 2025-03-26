@@ -1,0 +1,19 @@
+---
+title: "Simple Data Manipulation"
+execute: 
+  echo: True
+  eval: True
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
+        icon: "laptop"
+--- 
+
+# Data Manipulation
+
+## Pandas
+
+### Filter
+
+Often you need only a specific part of your data with `pandas`it is quite easy to filter the data after specific properties.
+

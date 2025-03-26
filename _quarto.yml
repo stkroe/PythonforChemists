@@ -39,6 +39,7 @@ book:
       - part: "Python Crash Course"
         chapters:
           - course/chapters/Python/Basics.qmd
+          - course/chapters/Python/Intermediate.qmd
           - course/chapters/Python/BasicsModules.qmd
       - part: "Lecture 1"
         chapters:
@@ -65,7 +66,7 @@ book:
 bibliography: references.bib
 
 format:
-  live-html: 
+  html: 
       theme: "book"
       highlight-style: "github"
       code-copy: true
