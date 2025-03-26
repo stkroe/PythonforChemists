@@ -149,11 +149,11 @@ Often you need only a specific part of your data with `pandas`it is quite easy t
 
 ```{python}
 # filter the rows where concentration is greater than 5
-print("Filter the rows where concentration is greater than 5: \n", data[data["concentration"] > 5]) 
+print("Filter the rows where concentration is greater than 5: \n", data[data["Concentration (M)"] > 5]) 
 print("\n")
 # get the chemical type with a concentration higher than 5
 print("Get the chemical type with a concentration higher than 5: \n", 
-      data.loc[data["concentration"]>5,"Chemical Type"])
+      data.loc[data["Concentration (M)"]>5,"Chemical Type"])
 print("\n")
 ```
 
@@ -175,7 +175,7 @@ etc.
 
 ```{python}
 data2 = data.copy()
-data2["concentration"] = data2["concentration"] + 10 # increase the concentration by 10 M
+data2["Concentration (M)"] = data2["Concentration (M)"] + 10 # increase the concentration by 10 M
 print("data2: \n" , data2)
 
 data2.index = range(5,10) # change the index
@@ -217,23 +217,23 @@ print("df2: \n", df2)
 ### Sort data
 
 ```{python}
-print("sorted after concentration: ",data.sort_values(by="concentration", ascending=True))
+print("sorted after concentration: ",data.sort_values(by="Concentration (M)", ascending=True))
 ```
 
 ### Statistial Analysis {.unnumbered}
 
 ```{python}
-print("mean of concentration: \n", data["concentration"].mean()) # mean of concentration
-print("std of concentration: \n", data["concentration"].std()) # standard deviation of concentration
-print("median of concentration: \n", data["concentration"].median()) # median of concentration
-print("max of concentration: \n", data["concentration"].max()) # max of concentration
-print("min of concentration: \n", data["concentration"].min()) # min of concentration
-print("sum of concentration: \n", data["concentration"].sum()) # sum of concentration
+print("mean of concentration: \n", data["Concentration (M)"].mean()) # mean of concentration
+print("std of concentration: \n", data["Concentration (M)"].std()) # standard deviation of concentration
+print("median of concentration: \n", data["Concentration (M)"].median()) # median of concentration
+print("max of concentration: \n", data["Concentration (M)"].max()) # max of concentration
+print("min of concentration: \n", data["Concentration (M)"].min()) # min of concentration
+print("sum of concentration: \n", data["Concentration (M)"].sum()) # sum of concentration
 print("Statisical summary: \n", data.describe()) # statistical summary
 # mean of concentration group by type
-print("Mean of concentration group by type: \n", data.groupby("type")["concentration"].mean()) 
+print("Mean of concentration group by type: \n", data.groupby("Chemical Type")["Concentration (M)"].mean()) 
 # count the chemicals with different concentration
-print("Count the chemicals with the different concentrations \n", data["concentration"].value_counts())
+print("Count the chemicals with the different concentrations \n", data["Concentration (M)"].value_counts())
 ```
 
 
@@ -242,5 +242,5 @@ print("Count the chemicals with the different concentrations \n", data["concentr
 Pivot tables are used to summarize and aggregate data inside a dataframe.
 
 ```{python}
-data.pivot_table(index="chemical type", columns="job", values="age", aggfunc="mean") 
+data.pivot_table(index="Chemical type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean") 
 ```
