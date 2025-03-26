@@ -50,7 +50,7 @@
         "\n",
         "Mostly used function is `pandas.read_csv()` because you can specify the delimiter, header, and other options.\n"
       ],
-      "id": "af02f74a"
+      "id": "e7539286"
     },
     {
       "cell_type": "code",
@@ -62,7 +62,7 @@
         "temperature_dat = \"https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures.dat\"\n",
         "temperature_nan_dat=\"https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures_nan.dat\""
       ],
-      "id": "3f31fdea",
+      "id": "172bd984",
       "execution_count": null,
       "outputs": []
     },
@@ -75,7 +75,7 @@
         "data = pd.read_csv(temperature_data)\n",
         "data"
       ],
-      "id": "544b73c9",
+      "id": "5bd5ef44",
       "execution_count": null,
       "outputs": []
     },
@@ -85,7 +85,7 @@
       "source": [
         "The data has a different delimiter than the default `comma`. You can specify the delimiter using the `sep` parameter.\n"
       ],
-      "id": "95148600"
+      "id": "1b402933"
     },
     {
       "cell_type": "code",
@@ -94,7 +94,7 @@
         "data = pd.read_csv(temperature_data, sep=';')\n",
         "data"
       ],
-      "id": "54410917",
+      "id": "c6dcba22",
       "execution_count": null,
       "outputs": []
     },
@@ -104,7 +104,7 @@
       "source": [
         "Now the data is read correctly. The header is already taken from the first row. If you want to specify the header, you can use the `header` parameter.\n"
       ],
-      "id": "4e4a5da5"
+      "id": "725555e3"
     },
     {
       "cell_type": "code",
@@ -116,7 +116,7 @@
         "df = pd.read_csv('file.csv', header=0) # Header is in the first row\n",
         "df = pd.read_csv('file.csv', header=1) # Header is in the second row"
       ],
-      "id": "5a6a76d9",
+      "id": "4e47aeb9",
       "execution_count": null,
       "outputs": []
     },
@@ -127,7 +127,7 @@
         "data = pd.read_csv(temperature_data, sep=';', header=0)\n",
         "data"
       ],
-      "id": "fe7eecd4",
+      "id": "69412e81",
       "execution_count": null,
       "outputs": []
     },
@@ -137,7 +137,7 @@
       "source": [
         "If your data contains whitespace, you can use the `skipinitialspace` parameter to remove initial whitespaces.\n"
       ],
-      "id": "17f59e73"
+      "id": "15abb764"
     },
     {
       "cell_type": "code",
@@ -146,7 +146,7 @@
         "data = pd.read_csv(temperature_dat, skipinitialspace=True, sep=\" \")\n",
         "data"
       ],
-      "id": "9498322e",
+      "id": "55b53595",
       "execution_count": null,
       "outputs": []
     },
@@ -156,7 +156,7 @@
       "source": [
         "Now the data has no header. You can specify the header using the `names` parameter.\n"
       ],
-      "id": "a9b5bd44"
+      "id": "85bc9679"
     },
     {
       "cell_type": "code",
@@ -166,7 +166,7 @@
         "# important to set header=None, otherwise the first line is used as header\n",
         "data"
       ],
-      "id": "5f601b9f",
+      "id": "48acc2b2",
       "execution_count": null,
       "outputs": []
     },
@@ -216,7 +216,7 @@
         "\n",
         "Some examples are:\n"
       ],
-      "id": "5b2f0bfc"
+      "id": "5b3b3aa5"
     },
     {
       "cell_type": "code",
@@ -224,7 +224,7 @@
       "source": [
         "data = pd.read_csv(temperature_data, sep=';', header=0, names=['t', 'T'], skiprows=1)"
       ],
-      "id": "8d0223ba",
+      "id": "e675a690",
       "execution_count": null,
       "outputs": []
     },
@@ -236,7 +236,7 @@
         "\n",
         "Missing value examples:\n"
       ],
-      "id": "9a33f195"
+      "id": "902b8565"
     },
     {
       "cell_type": "code",
@@ -245,7 +245,7 @@
         "data = pd.read_csv(temperature_nan_dat, sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=False)\n",
         "print(data.loc[20:26]) #print some rows to see the NaN values"
       ],
-      "id": "77ebc692",
+      "id": "ec06e58d",
       "execution_count": null,
       "outputs": []
     },
@@ -255,7 +255,7 @@
       "source": [
         "If the `na_filter`is set to `False`, the missing values are not recognized. But if it set on `True`, the missing values are recognized.\n"
       ],
-      "id": "226817ad"
+      "id": "cb1573d8"
     },
     {
       "cell_type": "code",
@@ -264,7 +264,7 @@
         "data = pd.read_csv(temperature_nan_dat, sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=True)\n",
         "print(data.loc[20:26]) #print some rows to see the NaN values"
       ],
-      "id": "5eaf3ba8",
+      "id": "a7e376b4",
       "execution_count": null,
       "outputs": []
     },
@@ -284,7 +284,7 @@
         "\n",
         "If you try to read a file with a header row, you will get an error. \n"
       ],
-      "id": "b2c88133"
+      "id": "b3749e06"
     },
     {
       "cell_type": "code",
@@ -293,7 +293,7 @@
         "import numpy as np\n",
         "data = np.loadtxt(temperature_data, delimiter=';')"
       ],
-      "id": "33b78705",
+      "id": "6ab09ad4",
       "execution_count": null,
       "outputs": []
     },
@@ -304,7 +304,7 @@
         "You can specify the header row using the `skiprows` parameter.\n",
         "If you want to skip one row, the `skiprows=1` parameter is set at `1`.\n"
       ],
-      "id": "f1b63546"
+      "id": "e90cd0e4"
     },
     {
       "cell_type": "code",
@@ -313,7 +313,7 @@
         "data = np.loadtxt(temperature_data, delimiter=';', skiprows=1)\n",
         "data"
       ],
-      "id": "7ab6e7f7",
+      "id": "64acdc3c",
       "execution_count": null,
       "outputs": []
     },
@@ -329,7 +329,7 @@
         "\n",
         "If you have data with whitespace, you do not need to specify the `delimiter`paramter because the default is whitespace.\n"
       ],
-      "id": "476bb37a"
+      "id": "60a6e4ac"
     },
     {
       "cell_type": "code",
@@ -338,7 +338,7 @@
         "data = np.loadtxt(temperature_dat)\n",
         "data"
       ],
-      "id": "ca72a447",
+      "id": "c2a43933",
       "execution_count": null,
       "outputs": []
     },
@@ -351,7 +351,7 @@
         "\n",
         "First using the `loadtxt()` function, you get an error because of the missing values. \n"
       ],
-      "id": "5af83205"
+      "id": "219bd1b9"
     },
     {
       "cell_type": "code",
@@ -360,7 +360,7 @@
         "data = np.loadtxt(temperature_nan_dat)\n",
         "data"
       ],
-      "id": "b94242d2",
+      "id": "ef77689d",
       "execution_count": null,
       "outputs": []
     },
@@ -370,7 +370,7 @@
       "source": [
         "If you try to read the file with an empty entrance at row 22, you wil get still an error with the `genfromtxt()` function. \n"
       ],
-      "id": "80d71d43"
+      "id": "d141b28a"
     },
     {
       "cell_type": "code",
@@ -379,7 +379,7 @@
         "data = np.genfromtxt(temperature_nan_dat)\n",
         "data"
       ],
-      "id": "1b2c8f5f",
+      "id": "8e438697",
       "execution_count": null,
       "outputs": []
     },
@@ -408,7 +408,7 @@
         "\n",
         "If you have not `whitespace` as delimiter, you can use the `genfromtxt()` function with missing values.\n"
       ],
-      "id": "cc3e66a1"
+      "id": "be62c68c"
     },
     {
       "cell_type": "code",
@@ -417,7 +417,7 @@
         "data = np.genfromtxt(temperature_nan_data,delimiter=';')\n",
         "data[20:26] # print some rows to see the NaN values"
       ],
-      "id": "8e8b2c09",
+      "id": "7cd4e14c",
       "execution_count": null,
       "outputs": []
     },
@@ -487,7 +487,7 @@
         "\n",
         "## Exercises {.unnumbered}\n"
       ],
-      "id": "ed298261"
+      "id": "e5d3a6a4"
     }
   ],
   "metadata": {
