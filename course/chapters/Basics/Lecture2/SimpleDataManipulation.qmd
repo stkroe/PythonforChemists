@@ -178,7 +178,7 @@ data2 = data.copy()
 data2["Concentration (M)"] = data2["Concentration (M)"] + 10 # increase the concentration by 10 M
 print("data2: \n" , data2)
 
-data2.index = range(5,10) # change the index
+data2.index = range(0,3) # change the index
 data3 = pd.concat([data, data2]) # concatenate the dataframes
 print("concated data: \n", data3)
 ```
