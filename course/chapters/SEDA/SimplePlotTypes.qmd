@@ -1,0 +1,31 @@
+---
+title: "Simple Plot Types"
+execute: 
+  echo: True
+  eval: True
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
+        icon: "laptop"
+--- 
+## Relationship plots
+
+### Scatter Plot {.unnumberd}
+
+### Errorbars {.unnumberd}
+
+## Distribution Plots {.unnumberd}
+ 
+### Histogram Plot {.unnumbered}
+
+### Boxplot {.unnumbered}
+
+### 2D Histogram Plot  {.unnumbered}
+
+## KDE Plot {.unnumbered}
+
+## Correlation plots {.unnumbered}
+
+### Proportion Plots {.unnumbered}
+
+## Pie Chart {.unnumbered}

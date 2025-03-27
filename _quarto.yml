@@ -33,29 +33,29 @@ book:
       - index.qmd
       - part: "Essentials"
         chapters:
-          - course/chapters/Introduction/Lecture0/Introduction.qmd
-          - course/chapters/Introduction/Lecture0/WhatIsPython.qmd
-          - course/chapters/Introduction/Lecture0/InstallationGuide.qmd
+          - course/chapters/Essentials/Introduction.qmd
+          - course/chapters/Essentials/WhatIsPython.qmd
+          - course/chapters/Essentials/InstallationGuide.qmd
       - part: "Python Crash Course"
         chapters:
           - course/chapters/Python/Basics.qmd
           - course/chapters/Python/Intermediate.qmd
           - course/chapters/Python/BasicsModules.qmd
-      - part: "Lecture 1"
+      - part: "Data Handling and Preprocessing"
         chapters:
-          - course/chapters/Introduction/Lecture1/DataCollection.qmd
-          - course/chapters/Basics/Lecture1/SimpleDataImport.qmd
-          - course/chapters/Basics/Lecture1/SimpleDataInspection.qmd
-          - course/chapters/Basics/Lecture1/SimplePlots.qmd
+          - course/chapters/DHP/DataCollection.qmd
+          - course/chapters/DHP/SimpleDataImport.qmd
+          - course/chapters/DHP/SimpleDataInspection.qmd
+          - course/chapters/DHP/SimplePlots.qmd
           - course/exercises/exercises/exercise1.ipynb
-          # - course/chapters/Intermediate/Lecture1/SpecialDataImport.ipynb
-          # - course/chapters/Advanced/Lecture1/AdvancedDataImport.ipynb
-      - part: "Lecture 2"
+          # - course/chapters/Intermediate/SpecialDataImport.ipynb
+          # - course/chapters/Advanced/AdvancedDataImport.ipynb
+      - part: "Statistical and Exploratory Data Analysis"
         chapters:
-          - course/chapters/Basics/Lecture2/SimpleDataManipulation.qmd
-          - course/chapters/Basics/Lecture2/SimpleDataModels.qmd
-      #     - course/chapters/Introduction/Lecture2/Introduction.ipynb
-       #    - course/chapters/Basics/Lecture2/BasicDataAnalysis.ipynb
+          - course/chapters/SEDA/SimpleDataManipulation.qmd
+          - course/chapters/SEDA/SimpleDataModels.qmd
+      #     - course/chapters/Lecture2/Introduction.ipynb
+       #    - course/chapters/DataHandlingPreprocess/Lecture2/BasicDataAnalysis.ipynb
       #     - course/chapters/Intermediate/Lecture2/IntermediateDataAnalysis.ipynb
       #     - course/chapters/Advanced/Lecture2/AdvancedDataAnalysis.ipynb
       - part: "Informations"
