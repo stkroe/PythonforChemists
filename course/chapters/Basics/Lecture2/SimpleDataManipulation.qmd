@@ -179,7 +179,7 @@ data2["Concentration 2 (M)"] = data2["Concentration (M)"] + 10 # increase the co
 print("data2: \n" , data2)
 
 
-data3 = pd.concat([data, data2["Concentration 2 (M)"]]) # concatenate the dataframes
+data3 = pd.concat([data, data2]) # concatenate the dataframes
 print("concated data: \n", data3)
 ```
 
@@ -242,5 +242,5 @@ print("Count the chemicals with the different concentrations \n", data["Concentr
 Pivot tables are used to summarize and aggregate data inside a dataframe.
 
 ```{python}
-data.pivot_table(index="Chemical type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean") 
+data.pivot_table(index="Chemical Type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean") 
 ```
