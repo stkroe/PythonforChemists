@@ -1,0 +1,144 @@
+---
+title: "Simple Data Models"
+execute: 
+  echo: True
+  eval: True
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataModelling.ipynb"
+        icon: "laptop"
+--- 
+
+## Linear Regression {.unnumbered}
+
+Often we want to find a model which can explain the data.
+It is important to understand the data and the model to be able to interpret the results and make predictions.
+
+The simplest model is the linear regression model. It assumes that the data has a linear relationship with the target variable. The model is defined as:
+
+$$
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n + \epsilon
+$$
+
+where $y$ is the target variable, $x_1, x_2, \ldots, x_n$ are the features, $\beta_0, \beta_1, \ldots, \beta_n$ are the coefficients, and $\epsilon$ is the error term.
+
+
+In `python` there exists serveral libraries which can be used to fit a linear regression model.
+
+## Using `scipy`{.unnumbered}
+
+A easy way is to use `scipy` library. The `scipy` library has a function called `linregress` which can be used to fit a linear regression model. The function returns the slope, intercept, r-value, p-value, and the standard error of the estimate. And with scipy version 1.15.2 also the intercept error.
+
+```{python}
+from scipy.stats import linregress
+import numpy as np
+
+x = [1, 2, 3, 4, 5]
+y = x*np.random.normal(0, 1, 5)+np.random.normal(0, 1, 5)
+
+results = linregress(x, y)
+
+slope = results.slope
+intercept = results.intercept
+r_value = results.rvalue
+p_value = results.pvalue
+std_err = results.stderr
+intercept_err = results.intercept_stderr
+print("slope: %f    intercept: %f" % (slope, intercept))
+print("R-squared: %f" % r_value**2)
+print("p-value: %f" % p_value)
+print("standard error: %f" % std_err)
+print("Intercept error: %f" %intercept_err)
+# Two-sided inverse Students t-distribution
+# p - probability, df - degrees of freedom
+from scipy.stats import t
+tinv = lambda p, df: abs(t.ppf(p/2, df))
+print("95% confidence interval: " + str(intercept - tinv(0.05, len(x)-2)*intercept_err) + " to " + str(intercept + tinv(0.05, len(x)-2)*intercept_err))
+```
+
+:::{.callout-important}
+For older version `scipy`only returned 5 values with fields slope, intercept, rvalue, pvalue and stderr. For compatiblity reasons the return values are 5 elements tuple.
+
+```python
+slope, intercept, r, p, se = linregress(x, y)
+```
+And if you want to get the intercept error you can use the following return value as a object:
+
+```python
+results = linregress(x, y)
+print(results.intercept_stderr)
+```
+
+## Using `scikit-learn` {.unnumbered}
+One of the most popular libraries is `scikit-learn`. The following code shows how to fit a linear regression model using `scikit-learn`:
+
+
+
+## Using `scikit-learn`
+```python
+from sklearn.linear_model import LinearRegression
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Sample data
+X = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
+y = X*np.random.normal(0, 1, 5)+np.random.normal(0, 1, 5)
+
+# Model fitting
+model = LinearRegression()
+model.fit(X, y)
+
+# Predictions
+y_pred = model.predict(X)
+
+# Plot
+plt.scatter(X, y, color='blue', label='Data')
+plt.plot(X, y_pred, color='red', label='Linear Fit')
+plt.legend()
+plt.show()
+```
+
+## Using `statsmodels`
+```python
+import statsmodels.api as sm
+
+X_with_const = sm.add_constant(X)  # Add intercept term
+model = sm.OLS(y, X_with_const).fit()
+print(model.summary())
+```
+
+# Non-Linear Fits
+Linear regression may not always be sufficient, especially for complex relationships. Non-linear models provide more flexibility.
+
+## Polynomial Regression
+```python
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.pipeline import make_pipeline
+
+poly_model = make_pipeline(PolynomialFeatures(3), LinearRegression())
+poly_model.fit(X, y)
+y_poly_pred = poly_model.predict(X)
+
+plt.scatter(X, y, color='blue', label='Data')
+plt.plot(X, y_poly_pred, color='green', label='Polynomial Fit')
+plt.legend()
+plt.show()
+```
+
+## Curve Fitting with `scipy`
+```python
+from scipy.optimize import curve_fit
+
+def nonlinear_func(x, a, b, c):
+    return a * np.sin(b * x) + c
+
+params, _ = curve_fit(nonlinear_func, X.flatten(), y)
+
+X_range = np.linspace(1, 5, 100)
+y_fit = nonlinear_func(X_range, *params)
+
+plt.scatter(X, y, color='blue', label='Data')
+plt.plot(X_range, y_fit, color='purple', label='Non-Linear Fit')
+plt.legend()
+plt.show()
+```
