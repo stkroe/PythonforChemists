@@ -53,6 +53,7 @@ book:
       - part: "Lecture 2"
         chapters:
           - course/chapters/Basics/Lecture2/SimpleDataManipulation.qmd
+          - course/chapters/Basics/Lecture2/SimpleDataModels.qmd
       #     - course/chapters/Introduction/Lecture2/Introduction.ipynb
        #    - course/chapters/Basics/Lecture2/BasicDataAnalysis.ipynb
       #     - course/chapters/Intermediate/Lecture2/IntermediateDataAnalysis.ipynb
