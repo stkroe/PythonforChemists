@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Simple Data Manipulation and Analysis – Data Analysis and Visualization for Chemists and Material Scientists</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../course/chapters/Basics/Lecture2/SimpleDataModels.html" rel="next">
+<link href="../../../../course/exercises/exercises/exercise1.html" rel="prev">
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-0de45b8b5f35a93596f1d788d60c4c11.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0de45b8b5f35a93596f1d788d60c4c11.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-bda0ff5fbdd523c92c768a827deeb3f4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-6739849a793100502cb65f2ffbf353f9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<meta property="og:title" content="Simple Data Manipulation and Analysis – Data Analysis and Visualization for Chemists and Material Scientists">
+<meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../course/chapters/Basics/Lecture2/SimpleDataManipulation.html">Lecture 2</a></li><li class="breadcrumb-item"><a href="../../../../course/chapters/Basics/Lecture2/SimpleDataManipulation.html"><span class="chapter-title">Simple Data Manipulation and Analysis</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../../../index.html" class="sidebar-logo-link">
+      <img src="../../../../logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../../">Data Analysis and Visualization for Chemists and Material Scientists</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/stkroe/PythonForChemists.github.io" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Essentials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Introduction/Lecture0/Introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Introduction/Lecture0/WhatIsPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Introduction/Lecture0/InstallationGuide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installation Guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Python Crash Course</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Python/Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Start</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Python/Intermediate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Intermediate</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Python/BasicsModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Modules</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lecture 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Introduction/Lecture1/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Basics/Lecture1/SimpleDataImport.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Import</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Basics/Lecture1/SimpleDataInspection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Inspection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Basics/Lecture1/SimplePlots.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Data Visualization Techniques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/exercises/exercises/exercise1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lecture 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Basics/Lecture2/SimpleDataManipulation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Simple Data Manipulation and Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../course/chapters/Basics/Lecture2/SimpleDataModels.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Models</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Informations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../informations/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../informations/license.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">License</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../informations/privacy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Privacy Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../informations/impressum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Impressum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../informations/disclaimer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Disclaimers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#data-manipulation" id="toc-data-manipulation" class="nav-link active" data-scroll-target="#data-manipulation">Data Manipulation</a>
+  <ul class="collapse">
+  <li><a href="#numpy" id="toc-numpy" class="nav-link" data-scroll-target="#numpy">Numpy</a>
+  <ul class="collapse">
+  <li><a href="#array-manipulation" id="toc-array-manipulation" class="nav-link" data-scroll-target="#array-manipulation">Array manipulation</a></li>
+  </ul></li>
+  <li><a href="#pandas" id="toc-pandas" class="nav-link" data-scroll-target="#pandas">Pandas</a>
+  <ul class="collapse">
+  <li><a href="#get-information-about-the-data" id="toc-get-information-about-the-data" class="nav-link" data-scroll-target="#get-information-about-the-data">Get information about the data</a></li>
+  <li><a href="#manipulate-data" id="toc-manipulate-data" class="nav-link" data-scroll-target="#manipulate-data">Manipulate data</a></li>
+  <li><a href="#transform-pandas-dataframe-to-numpy-array-and-viceversa" id="toc-transform-pandas-dataframe-to-numpy-array-and-viceversa" class="nav-link" data-scroll-target="#transform-pandas-dataframe-to-numpy-array-and-viceversa">Transform Pandas DataFrame to Numpy Array and viceversa</a></li>
+  <li><a href="#sort-data" id="toc-sort-data" class="nav-link" data-scroll-target="#sort-data">Sort data</a></li>
+  <li><a href="#statistial-analysis" id="toc-statistial-analysis" class="nav-link" data-scroll-target="#statistial-analysis">Statistial Analysis</a></li>
+  <li><a href="#pivot-table" id="toc-pivot-table" class="nav-link" data-scroll-target="#pivot-table">Pivot Table</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Basics/Lecture2/SimpleDataManipulation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataManipulation.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../course/chapters/Basics/Lecture2/SimpleDataManipulation.html">Lecture 2</a></li><li class="breadcrumb-item"><a href="../../../../course/chapters/Basics/Lecture2/SimpleDataManipulation.html"><span class="chapter-title">Simple Data Manipulation and Analysis</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Simple Data Manipulation and Analysis</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="data-manipulation" class="level1 unnumbered">
+<h1 class="unnumbered">Data Manipulation</h1>
+<section id="numpy" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="numpy">Numpy</h2>
+<div id="11332839" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="array-manipulation" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="array-manipulation">Array manipulation</h3>
+<p>Often data has to be manipulated before it can be analyzed. <br> Numpy has many methods for array manipulation. <br></p>
+<p>For example,</p>
+<ul>
+<li>the shape of an array can be changed,</li>
+<li>multiple arrays can be concatenated,</li>
+<li>the elements of an array can be sorted</li>
+<li>non valid values NaN can be removed,</li>
+<li>linear algebra operations can be performed,</li>
+</ul>
+<p>etc.</p>
+<section id="sort-arrays" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="sort-arrays">Sort arrays:</h4>
+<div id="7183a60d" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>unsorted_arr <span class="op">=</span> np.array([[<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">8</span>, <span class="dv">1</span>], [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">9</span>, <span class="dv">4</span> , <span class="dv">5</span>]])</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"unsortd_arr: </span><span class="ch">\n</span><span class="st">"</span>, unsorted_arr)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>sorted_arr <span class="op">=</span> np.sort(unsorted_arr,axis <span class="op">=</span> <span class="dv">0</span>) <span class="co"># sorted along the column</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"sorted_arr along columns: </span><span class="ch">\n</span><span class="st">"</span> , sorted_arr)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>sorted_arr <span class="op">=</span> np.sort(unsorted_arr,axis <span class="op">=</span> <span class="dv">1</span>) <span class="co"># sorted along the row</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"sorted_arr along rows: </span><span class="ch">\n</span><span class="st">"</span> , sorted_arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>unsortd_arr: 
+ [[3 1 5 2 4]
+ [5 2 0 8 1]
+ [3 2 9 4 5]]
+sorted_arr along columns: 
+ [[3 1 0 2 1]
+ [3 2 5 4 4]
+ [5 2 9 8 5]]
+sorted_arr along rows: 
+ [[1 2 3 4 5]
+ [0 1 2 5 8]
+ [2 3 4 5 9]]</code></pre>
+</div>
+</div>
+</section>
+<section id="concatenate-arrays" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="concatenate-arrays">Concatenate arrays:</h4>
+<div id="75193543" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]) </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> np.concatenate((a, b))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1 2 3 4 5 6]</code></pre>
+</div>
+</div>
+</section>
+<section id="reshape-arrays" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="reshape-arrays">Reshape arrays:</h4>
+<div id="f2640026" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>],[<span class="dv">3</span>, <span class="dv">4</span>],[<span class="dv">5</span>, <span class="dv">6</span>]])</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([[<span class="dv">7</span>, <span class="dv">8</span>],[<span class="dv">9</span>, <span class="dv">10</span>],[<span class="dv">11</span>, <span class="dv">12</span>]])</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> np.vstack((a, b)) <span class="co"># vertical stack</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> np.hstack((a, b)) <span class="co"># horizontal stack</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"vertical stack: </span><span class="ch">\n</span><span class="st">"</span>, c)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"horizontal stack: </span><span class="ch">\n</span><span class="st">"</span>, d)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"flatten array: </span><span class="ch">\n</span><span class="st">"</span>, c.flatten())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>vertical stack: 
+ [[ 1  2]
+ [ 3  4]
+ [ 5  6]
+ [ 7  8]
+ [ 9 10]
+ [11 12]]
+horizontal stack: 
+ [[ 1  2  7  8]
+ [ 3  4  9 10]
+ [ 5  6 11 12]]
+flatten array: 
+ [ 1  2  3  4  5  6  7  8  9 10 11 12]</code></pre>
+</div>
+</div>
+</section>
+<section id="linear-algebra-operations-e.g." class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="linear-algebra-operations-e.g.">Linear algebra operations <em>e.g.</em>:</h4>
+<ul>
+<li><code>np.sum(a)</code> returns <strong>element-wise sum</strong> of two arrays</li>
+<li><code>np.add(a)</code> returns <strong>sum of all elements</strong> an arrays</li>
+<li><code>np.subtract(a,b)</code> returns the <strong>difference</strong> of two arrays</li>
+<li><code>np.multiply(a,b)</code> returns the <strong>product</strong> of two arrays</li>
+<li><code>np.divide(a,b)</code> returns the <strong>division</strong> of two arrays</li>
+<li><code>np.dot(a,b)</code> returns the <strong>dot product</strong> of two arrays</li>
+<li><code>np.cross(a,b)</code> returns the <strong>cross product</strong> of two arrays</li>
+<li><code>np.linalg.inv(a)</code> returns the <strong>inverse of a matrix</strong></li>
+<li><code>np.linalg.det(a)</code> returns the <strong>determinant of a matrix</strong></li>
+<li><code>np.linalg.eig(a)</code> returns the <strong>eigenvalues and eigenvectors</strong> of a matrix</li>
+<li><code>np.linalg.solve(a,b)</code> returns the <strong>solution of a linear system of equations</strong></li>
+<li><code>np.mean(a)</code> returns the <strong>mean</strong> of the elements of an array</li>
+<li><code>np.average(a)</code> returns the <strong>weighted average</strong> of the elements of an array</li>
+<li><code>np.max(a)</code> returns the <strong>maximum</strong> of the elements of an array</li>
+<li><code>np.min(a)</code> returns <strong>the minimum</strong> of the elements of an array</li>
+<li><code>np.std(a)</code> returns <strong>the standard</strong> deviation of the elements of an array</li>
+<li><code>np.var(a)</code> returns <strong>the variance</strong> of the elements of an array</li>
+<li><code>np.covar(a)</code> returns the <strong>covariance</strong> of the elements of an array</li>
+<li><code>np.median(a)</code> returns the <strong>median</strong> of the elements of an array</li>
+<li>`np.percentile(a,p) `` returns the <strong>p-th percentile</strong> of the elements of an array</li>
+<li><code>np.histogram(a, [,bins,range,density,weights])</code> returns the <strong>histogram</strong> of the elements of an array</li>
+</ul>
+<div id="c6db93f0" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>],[<span class="dv">3</span>, <span class="dv">4</span>],[<span class="dv">5</span>, <span class="dv">6</span>]])</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([[<span class="dv">7</span>, <span class="dv">8</span>],[<span class="dv">9</span>, <span class="dv">10</span>],[<span class="dv">11</span>, <span class="dv">12</span>]])</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> np.<span class="bu">sum</span>(a) <span class="co"># sum of all elements</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Summ of all elements: "</span>, c)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> np.add(a,b) <span class="co"># element wise addition</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Element wise addition: "</span>, c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Summ of all elements:  21
+Element wise addition:  [[ 8 10]
+ [12 14]
+ [16 18]]</code></pre>
+</div>
+</div>
+<ul>
+<li><code>np.argmin(a)</code> returns the <strong>index of the minimum</strong> element of an array</li>
+<li><code>np.argmax(a)</code> returns the <strong>index of the maximum</strong> element of an array</li>
+<li><code>np.where(a)</code> returns the <strong>indices of the elements</strong> of an array that are non-zero</li>
+<li><code>np.argwhere(a)</code> returns the <strong>indices of the elements</strong> of an array that are non-zero</li>
+<li><code>np.nonzero(a)</code> returns the <strong>indices of the elements</strong> of an array that are non-zero</li>
+<li><code>np.searchsorted(a,v)</code> returns the <strong>index of the first element</strong> of an array <br> <strong>that is greater than or equal to a value</strong></li>
+<li><code>np.extract(condition,a)</code> returns the <strong>elements of an array that satisfy a condition</strong></li>
+</ul>
+<div id="89c721b4" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Index of the maximum element: "</span>, np.argmax(arr))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Index of the minimum element: "</span>, np.argmin(arr))</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Maximum element: "</span>, np.<span class="bu">max</span>(arr))</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Minimum element: "</span>, np.<span class="bu">min</span>(arr))</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Find the index of element </span><span class="ch">\"</span><span class="st">4</span><span class="ch">\"</span><span class="st">: "</span>, np.where(arr <span class="op">==</span> <span class="dv">4</span>))</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Find the index of element </span><span class="ch">\"</span><span class="st">&gt;4</span><span class="ch">\"</span><span class="st">: "</span>, np.argwhere(arr <span class="op">&gt;</span> <span class="dv">4</span>),</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>       <span class="st">" and the elements are: "</span>, arr[np.where(arr <span class="op">&gt;</span> <span class="dv">4</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1 2 3 4 5 4 7 8 9]
+Index of the maximum element:  8
+Index of the minimum element:  0
+Maximum element:  9
+Minimum element:  1
+Find the index of element "4":  (array([3, 5]),)
+Find the index of element "&gt;4":  [[4]
+ [6]
+ [7]
+ [8]]  and the elements are:  [5 7 8 9]</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="pandas" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="pandas">Pandas</h2>
+<section id="get-information-about-the-data" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="get-information-about-the-data">Get information about the data</h3>
+<div id="de1d6d0e" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Name"</span>: [<span class="st">"Water"</span>, <span class="st">"Sulfuric Acid"</span>, <span class="st">"Ethanol"</span>, <span class="st">"Acetone"</span>, <span class="st">"Ammonia"</span>, <span class="st">"Benzene"</span>, <span class="st">"Methanol"</span>, <span class="st">"Glycerol"</span>],</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Formula"</span>: [<span class="st">"H2O"</span>, <span class="st">"H2SO4"</span>, <span class="st">"C2H5OH"</span>, <span class="st">"C3H6O"</span>, <span class="st">"NH3"</span>, <span class="st">"C6H6"</span>, <span class="st">"CH3OH"</span>, <span class="st">"C3H8O3"</span>],</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Molecular Weight (g/mol)"</span>: [<span class="fl">18.015</span>, <span class="fl">98.079</span>, <span class="fl">46.07</span>, <span class="fl">58.08</span>, <span class="fl">17.03</span>, <span class="fl">78.11</span>, <span class="fl">32.04</span>, <span class="fl">92.09</span>],</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Viscosity (mPa·s)"</span>: [<span class="fl">1.002</span>, <span class="fl">24.0</span>, <span class="fl">1.2</span>, <span class="fl">0.32</span>, <span class="fl">0.26</span>, <span class="fl">0.65</span>, <span class="fl">0.544</span>, <span class="dv">1412</span>],</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"pH (Acidity)"</span>: [<span class="dv">7</span>, <span class="dv">1</span>, <span class="fl">7.33</span>, <span class="dv">7</span>, <span class="fl">11.6</span>, <span class="dv">7</span>, <span class="fl">7.4</span>, <span class="fl">5.5</span>],</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Chemical Type"</span>: [<span class="st">"Inorganic"</span>, <span class="st">"Acid"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Ketone"</span>, <span class="st">"Base"</span>, <span class="st">"Aromatic Hydrocarbon"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Polyol"</span>],</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Concentration (M)"</span>: [<span class="fl">55.5</span>, <span class="fl">18.0</span>, <span class="fl">1.0</span>, <span class="fl">0.8</span>, <span class="fl">0.5</span>, <span class="fl">0.1</span>, <span class="fl">1.5</span>, <span class="fl">1.2</span>]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="c361edc7" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"head of data: </span><span class="ch">\n</span><span class="st">"</span>,data.head()) <span class="co"># print the first 5 rows</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Column Name: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Name"</span>]) <span class="co"># print the column "Name"</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"2. Row: </span><span class="ch">\n</span><span class="st">"</span>, data.iloc[<span class="dv">1</span>]) <span class="co"># print the second row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>head of data: 
+             Name Formula  Molecular Weight (g/mol)  Viscosity (mPa·s)  \
+0          Water     H2O                    18.015              1.002   
+1  Sulfuric Acid   H2SO4                    98.079             24.000   
+2        Ethanol  C2H5OH                    46.070              1.200   
+3        Acetone   C3H6O                    58.080              0.320   
+4        Ammonia     NH3                    17.030              0.260   
+
+   pH (Acidity) Chemical Type  Concentration (M)  
+0          7.00     Inorganic               55.5  
+1          1.00          Acid               18.0  
+2          7.33       Alcohol                1.0  
+3          7.00        Ketone                0.8  
+4         11.60          Base                0.5  
+
+
+Number of data set: 
+ 8
+
+
+Column Name: 
+ 0            Water
+1    Sulfuric Acid
+2          Ethanol
+3          Acetone
+4          Ammonia
+5          Benzene
+6         Methanol
+7         Glycerol
+Name: Name, dtype: object
+
+
+2. Row: 
+ Name                        Sulfuric Acid
+Formula                             H2SO4
+Molecular Weight (g/mol)           98.079
+Viscosity (mPa·s)                    24.0
+pH (Acidity)                          1.0
+Chemical Type                        Acid
+Concentration (M)                    18.0
+Name: 1, dtype: object</code></pre>
+</div>
+</div>
+<section id="select-subsets-of-the-data" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="select-subsets-of-the-data">Select subsets of the data:</h4>
+<p>Often you need only a specific part of your data with <code>pandas</code>it is quite easy to filter the data after specific properties.</p>
+<div id="e45a39ef" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filter the rows where concentration is greater than 5</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Filter the rows where concentration is greater than 5: </span><span class="ch">\n</span><span class="st">"</span>, data[data[<span class="st">"Concentration (M)"</span>] <span class="op">&gt;</span> <span class="dv">5</span>]) </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># get the chemical type with a concentration higher than 5</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Get the chemical type with a concentration higher than 5: </span><span class="ch">\n</span><span class="st">"</span>, </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>      data.loc[data[<span class="st">"Concentration (M)"</span>]<span class="op">&gt;</span><span class="dv">5</span>,<span class="st">"Chemical Type"</span>])</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Filter the rows where concentration is greater than 5: 
+             Name Formula  Molecular Weight (g/mol)  Viscosity (mPa·s)  \
+0          Water     H2O                    18.015              1.002   
+1  Sulfuric Acid   H2SO4                    98.079             24.000   
+
+   pH (Acidity) Chemical Type  Concentration (M)  
+0           7.0     Inorganic               55.5  
+1           1.0          Acid               18.0  
+
+
+Get the chemical type with a concentration higher than 5: 
+ 0    Inorganic
+1         Acid
+Name: Chemical Type, dtype: object
+
+</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="manipulate-data" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="manipulate-data">Manipulate data</h3>
+<p>You can</p>
+<ul>
+<li>copy data,</li>
+<li>drop columns,</li>
+<li>drop rows,</li>
+<li>fill not valid values,</li>
+<li>replace values,</li>
+<li>merge data,</li>
+<li>join data,</li>
+</ul>
+<p>etc.</p>
+<div id="612aaa2d" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="op">=</span> data.copy()</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>data2[<span class="st">"Concentration 2 (M)"</span>] <span class="op">=</span> data2[<span class="st">"Concentration (M)"</span>] <span class="op">+</span> <span class="dv">10</span> <span class="co"># increase the concentration by 10 M</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"data2: </span><span class="ch">\n</span><span class="st">"</span> , data2)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>data3 <span class="op">=</span> pd.concat([data, data2]) <span class="co"># concatenate the dataframes</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"concated data: </span><span class="ch">\n</span><span class="st">"</span>, data3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>data2: 
+             Name Formula  Molecular Weight (g/mol)  Viscosity (mPa·s)  \
+0          Water     H2O                    18.015              1.002   
+1  Sulfuric Acid   H2SO4                    98.079             24.000   
+2        Ethanol  C2H5OH                    46.070              1.200   
+3        Acetone   C3H6O                    58.080              0.320   
+4        Ammonia     NH3                    17.030              0.260   
+5        Benzene    C6H6                    78.110              0.650   
+6       Methanol   CH3OH                    32.040              0.544   
+7       Glycerol  C3H8O3                    92.090           1412.000   
+
+   pH (Acidity)         Chemical Type  Concentration (M)  Concentration 2 (M)  
+0          7.00             Inorganic               55.5                 65.5  
+1          1.00                  Acid               18.0                 28.0  
+2          7.33               Alcohol                1.0                 11.0  
+3          7.00                Ketone                0.8                 10.8  
+4         11.60                  Base                0.5                 10.5  
+5          7.00  Aromatic Hydrocarbon                0.1                 10.1  
+6          7.40               Alcohol                1.5                 11.5  
+7          5.50                Polyol                1.2                 11.2  
+concated data: 
+             Name Formula  Molecular Weight (g/mol)  Viscosity (mPa·s)  \
+0          Water     H2O                    18.015              1.002   
+1  Sulfuric Acid   H2SO4                    98.079             24.000   
+2        Ethanol  C2H5OH                    46.070              1.200   
+3        Acetone   C3H6O                    58.080              0.320   
+4        Ammonia     NH3                    17.030              0.260   
+5        Benzene    C6H6                    78.110              0.650   
+6       Methanol   CH3OH                    32.040              0.544   
+7       Glycerol  C3H8O3                    92.090           1412.000   
+0          Water     H2O                    18.015              1.002   
+1  Sulfuric Acid   H2SO4                    98.079             24.000   
+2        Ethanol  C2H5OH                    46.070              1.200   
+3        Acetone   C3H6O                    58.080              0.320   
+4        Ammonia     NH3                    17.030              0.260   
+5        Benzene    C6H6                    78.110              0.650   
+6       Methanol   CH3OH                    32.040              0.544   
+7       Glycerol  C3H8O3                    92.090           1412.000   
+
+   pH (Acidity)         Chemical Type  Concentration (M)  Concentration 2 (M)  
+0          7.00             Inorganic               55.5                  NaN  
+1          1.00                  Acid               18.0                  NaN  
+2          7.33               Alcohol                1.0                  NaN  
+3          7.00                Ketone                0.8                  NaN  
+4         11.60                  Base                0.5                  NaN  
+5          7.00  Aromatic Hydrocarbon                0.1                  NaN  
+6          7.40               Alcohol                1.5                  NaN  
+7          5.50                Polyol                1.2                  NaN  
+0          7.00             Inorganic               55.5                 65.5  
+1          1.00                  Acid               18.0                 28.0  
+2          7.33               Alcohol                1.0                 11.0  
+3          7.00                Ketone                0.8                 10.8  
+4         11.60                  Base                0.5                 10.5  
+5          7.00  Aromatic Hydrocarbon                0.1                 10.1  
+6          7.40               Alcohol                1.5                 11.5  
+7          5.50                Polyol                1.2                 11.2  </code></pre>
+</div>
+</div>
+<div id="803b1892" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a> <span class="co"># create a Panda Series</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>acidity <span class="op">=</span> pd.Series([<span class="st">"basic"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"neutral"</span>,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"acid"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"basic"</span>], name<span class="op">=</span><span class="st">"Aciditiy Type"</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"acidity: </span><span class="ch">\n</span><span class="st">"</span>,acidity)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># concatenate the dataframes</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>data4 <span class="op">=</span> pd.concat([data3, acidity], axis<span class="op">=</span><span class="dv">1</span>) </span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"concated data: </span><span class="ch">\n</span><span class="st">"</span>, data4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>acidity: 
+ 0      basic
+1       acid
+2      basic
+3    neutral
+4       acid
+5       acid
+6      basic
+7      basic
+Name: Aciditiy Type, dtype: object
+concated data: 
+             Name Formula  Molecular Weight (g/mol)  Viscosity (mPa·s)  \
+0          Water     H2O                    18.015              1.002   
+1  Sulfuric Acid   H2SO4                    98.079             24.000   
+2        Ethanol  C2H5OH                    46.070              1.200   
+3        Acetone   C3H6O                    58.080              0.320   
+4        Ammonia     NH3                    17.030              0.260   
+5        Benzene    C6H6                    78.110              0.650   
+6       Methanol   CH3OH                    32.040              0.544   
+7       Glycerol  C3H8O3                    92.090           1412.000   
+0          Water     H2O                    18.015              1.002   
+1  Sulfuric Acid   H2SO4                    98.079             24.000   
+2        Ethanol  C2H5OH                    46.070              1.200   
+3        Acetone   C3H6O                    58.080              0.320   
+4        Ammonia     NH3                    17.030              0.260   
+5        Benzene    C6H6                    78.110              0.650   
+6       Methanol   CH3OH                    32.040              0.544   
+7       Glycerol  C3H8O3                    92.090           1412.000   
+
+   pH (Acidity)         Chemical Type  Concentration (M)  Concentration 2 (M)  \
+0          7.00             Inorganic               55.5                  NaN   
+1          1.00                  Acid               18.0                  NaN   
+2          7.33               Alcohol                1.0                  NaN   
+3          7.00                Ketone                0.8                  NaN   
+4         11.60                  Base                0.5                  NaN   
+5          7.00  Aromatic Hydrocarbon                0.1                  NaN   
+6          7.40               Alcohol                1.5                  NaN   
+7          5.50                Polyol                1.2                  NaN   
+0          7.00             Inorganic               55.5                 65.5   
+1          1.00                  Acid               18.0                 28.0   
+2          7.33               Alcohol                1.0                 11.0   
+3          7.00                Ketone                0.8                 10.8   
+4         11.60                  Base                0.5                 10.5   
+5          7.00  Aromatic Hydrocarbon                0.1                 10.1   
+6          7.40               Alcohol                1.5                 11.5   
+7          5.50                Polyol                1.2                 11.2   
+
+  Aciditiy Type  
+0         basic  
+1          acid  
+2         basic  
+3       neutral  
+4          acid  
+5          acid  
+6         basic  
+7         basic  
+0         basic  
+1          acid  
+2         basic  
+3       neutral  
+4          acid  
+5          acid  
+6         basic  
+7         basic  </code></pre>
+</div>
+</div>
+<div id="d6dcd922" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>data5 <span class="op">=</span> data4.drop_duplicates() <span class="co"># drop the duplicates</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"data5: </span><span class="ch">\n</span><span class="st">"</span>, data5)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>data6 <span class="op">=</span> data5.dropna() <span class="co"># drop the NaNs</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>data5: 
+             Name Formula  Molecular Weight (g/mol)  Viscosity (mPa·s)  \
+0          Water     H2O                    18.015              1.002   
+1  Sulfuric Acid   H2SO4                    98.079             24.000   
+2        Ethanol  C2H5OH                    46.070              1.200   
+3        Acetone   C3H6O                    58.080              0.320   
+4        Ammonia     NH3                    17.030              0.260   
+5        Benzene    C6H6                    78.110              0.650   
+6       Methanol   CH3OH                    32.040              0.544   
+7       Glycerol  C3H8O3                    92.090           1412.000   
+0          Water     H2O                    18.015              1.002   
+1  Sulfuric Acid   H2SO4                    98.079             24.000   
+2        Ethanol  C2H5OH                    46.070              1.200   
+3        Acetone   C3H6O                    58.080              0.320   
+4        Ammonia     NH3                    17.030              0.260   
+5        Benzene    C6H6                    78.110              0.650   
+6       Methanol   CH3OH                    32.040              0.544   
+7       Glycerol  C3H8O3                    92.090           1412.000   
+
+   pH (Acidity)         Chemical Type  Concentration (M)  Concentration 2 (M)  \
+0          7.00             Inorganic               55.5                  NaN   
+1          1.00                  Acid               18.0                  NaN   
+2          7.33               Alcohol                1.0                  NaN   
+3          7.00                Ketone                0.8                  NaN   
+4         11.60                  Base                0.5                  NaN   
+5          7.00  Aromatic Hydrocarbon                0.1                  NaN   
+6          7.40               Alcohol                1.5                  NaN   
+7          5.50                Polyol                1.2                  NaN   
+0          7.00             Inorganic               55.5                 65.5   
+1          1.00                  Acid               18.0                 28.0   
+2          7.33               Alcohol                1.0                 11.0   
+3          7.00                Ketone                0.8                 10.8   
+4         11.60                  Base                0.5                 10.5   
+5          7.00  Aromatic Hydrocarbon                0.1                 10.1   
+6          7.40               Alcohol                1.5                 11.5   
+7          5.50                Polyol                1.2                 11.2   
+
+  Aciditiy Type  
+0         basic  
+1          acid  
+2         basic  
+3       neutral  
+4          acid  
+5          acid  
+6         basic  
+7         basic  
+0         basic  
+1          acid  
+2         basic  
+3       neutral  
+4          acid  
+5          acid  
+6         basic  
+7         basic  
+data6: 
+             Name Formula  Molecular Weight (g/mol)  Viscosity (mPa·s)  \
+0          Water     H2O                    18.015              1.002   
+1  Sulfuric Acid   H2SO4                    98.079             24.000   
+2        Ethanol  C2H5OH                    46.070              1.200   
+3        Acetone   C3H6O                    58.080              0.320   
+4        Ammonia     NH3                    17.030              0.260   
+5        Benzene    C6H6                    78.110              0.650   
+6       Methanol   CH3OH                    32.040              0.544   
+7       Glycerol  C3H8O3                    92.090           1412.000   
+
+   pH (Acidity)         Chemical Type  Concentration (M)  Concentration 2 (M)  \
+0          7.00             Inorganic               55.5                 65.5   
+1          1.00                  Acid               18.0                 28.0   
+2          7.33               Alcohol                1.0                 11.0   
+3          7.00                Ketone                0.8                 10.8   
+4         11.60                  Base                0.5                 10.5   
+5          7.00  Aromatic Hydrocarbon                0.1                 10.1   
+6          7.40               Alcohol                1.5                 11.5   
+7          5.50                Polyol                1.2                 11.2   
+
+  Aciditiy Type  
+0         basic  
+1          acid  
+2         basic  
+3       neutral  
+4          acid  
+5          acid  
+6         basic  
+7         basic  </code></pre>
+</div>
+</div>
+</section>
+<section id="transform-pandas-dataframe-to-numpy-array-and-viceversa" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="transform-pandas-dataframe-to-numpy-array-and-viceversa">Transform Pandas DataFrame to Numpy Array and viceversa</h3>
+<div id="f01df647" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> data6</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(df))</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co"># convert the dataframe to a numpy array</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> df.to_numpy() </span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"arr: </span><span class="ch">\n</span><span class="st">"</span>, arr)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="co"># convert the numpy array to a dataframe</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> pd.DataFrame(arr, columns<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Formula"</span>, <span class="st">"Molecular Weight (g/mol)"</span>,<span class="st">"Viscosity (mPa·s)"</span>,<span class="st">"pH (Acidity)"</span>,<span class="st">"Chemical Type"</span>,<span class="st">"Concentration (M)"</span>,<span class="st">"Concentration 2 (M)"</span>, <span class="st">"Aciditiy Type"</span>])</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"df2: </span><span class="ch">\n</span><span class="st">"</span>, df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>8
+arr: 
+ [['Water' 'H2O' 18.015 1.002 7.0 'Inorganic' 55.5 65.5 'basic']
+ ['Sulfuric Acid' 'H2SO4' 98.079 24.0 1.0 'Acid' 18.0 28.0 'acid']
+ ['Ethanol' 'C2H5OH' 46.07 1.2 7.33 'Alcohol' 1.0 11.0 'basic']
+ ['Acetone' 'C3H6O' 58.08 0.32 7.0 'Ketone' 0.8 10.8 'neutral']
+ ['Ammonia' 'NH3' 17.03 0.26 11.6 'Base' 0.5 10.5 'acid']
+ ['Benzene' 'C6H6' 78.11 0.65 7.0 'Aromatic Hydrocarbon' 0.1 10.1 'acid']
+ ['Methanol' 'CH3OH' 32.04 0.544 7.4 'Alcohol' 1.5 11.5 'basic']
+ ['Glycerol' 'C3H8O3' 92.09 1412.0 5.5 'Polyol' 1.2 11.2 'basic']]
+df2: 
+             Name Formula Molecular Weight (g/mol) Viscosity (mPa·s)  \
+0          Water     H2O                   18.015             1.002   
+1  Sulfuric Acid   H2SO4                   98.079              24.0   
+2        Ethanol  C2H5OH                    46.07               1.2   
+3        Acetone   C3H6O                    58.08              0.32   
+4        Ammonia     NH3                    17.03              0.26   
+5        Benzene    C6H6                    78.11              0.65   
+6       Methanol   CH3OH                    32.04             0.544   
+7       Glycerol  C3H8O3                    92.09            1412.0   
+
+  pH (Acidity)         Chemical Type Concentration (M) Concentration 2 (M)  \
+0          7.0             Inorganic              55.5                65.5   
+1          1.0                  Acid              18.0                28.0   
+2         7.33               Alcohol               1.0                11.0   
+3          7.0                Ketone               0.8                10.8   
+4         11.6                  Base               0.5                10.5   
+5          7.0  Aromatic Hydrocarbon               0.1                10.1   
+6          7.4               Alcohol               1.5                11.5   
+7          5.5                Polyol               1.2                11.2   
+
+  Aciditiy Type  
+0         basic  
+1          acid  
+2         basic  
+3       neutral  
+4          acid  
+5          acid  
+6         basic  
+7         basic  </code></pre>
+</div>
+</div>
+</section>
+<section id="sort-data" class="level3">
+<h3 class="anchored" data-anchor-id="sort-data">Sort data</h3>
+<div id="fbef3622" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"sorted after concentration: "</span>,data.sort_values(by<span class="op">=</span><span class="st">"Concentration (M)"</span>, ascending<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>sorted after concentration:              Name Formula  Molecular Weight (g/mol)  Viscosity (mPa·s)  \
+5        Benzene    C6H6                    78.110              0.650   
+4        Ammonia     NH3                    17.030              0.260   
+3        Acetone   C3H6O                    58.080              0.320   
+2        Ethanol  C2H5OH                    46.070              1.200   
+7       Glycerol  C3H8O3                    92.090           1412.000   
+6       Methanol   CH3OH                    32.040              0.544   
+1  Sulfuric Acid   H2SO4                    98.079             24.000   
+0          Water     H2O                    18.015              1.002   
+
+   pH (Acidity)         Chemical Type  Concentration (M)  
+5          7.00  Aromatic Hydrocarbon                0.1  
+4         11.60                  Base                0.5  
+3          7.00                Ketone                0.8  
+2          7.33               Alcohol                1.0  
+7          5.50                Polyol                1.2  
+6          7.40               Alcohol                1.5  
+1          1.00                  Acid               18.0  
+0          7.00             Inorganic               55.5  </code></pre>
+</div>
+</div>
+</section>
+<section id="statistial-analysis" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="statistial-analysis">Statistial Analysis</h3>
+<div id="b049e027" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"mean of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].mean()) <span class="co"># mean of concentration</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"std of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].std()) <span class="co"># standard deviation of concentration</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"median of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].median()) <span class="co"># median of concentration</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"max of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">max</span>()) <span class="co"># max of concentration</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"min of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">min</span>()) <span class="co"># min of concentration</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"sum of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">sum</span>()) <span class="co"># sum of concentration</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Statisical summary: </span><span class="ch">\n</span><span class="st">"</span>, data.describe()) <span class="co"># statistical summary</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="co"># mean of concentration group by type</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean of concentration group by type: </span><span class="ch">\n</span><span class="st">"</span>, data.groupby(<span class="st">"Chemical Type"</span>)[<span class="st">"Concentration (M)"</span>].mean()) </span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="co"># count the chemicals with different concentration</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Count the chemicals with the different concentrations </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].value_counts())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>mean of concentration: 
+ 9.825
+std of concentration: 
+ 19.41131849499888
+median of concentration: 
+ 1.1
+max of concentration: 
+ 55.5
+min of concentration: 
+ 0.1
+sum of concentration: 
+ 78.6
+Statisical summary: 
+        Molecular Weight (g/mol)  Viscosity (mPa·s)  pH (Acidity)  \
+count                  8.000000           8.000000      8.000000   
+mean                  54.939250         179.997000      6.728750   
+std                   32.052446         497.871465      2.905421   
+min                   17.030000           0.260000      1.000000   
+25%                   28.533750           0.488000      6.625000   
+50%                   52.075000           0.826000      7.000000   
+75%                   81.605000           6.900000      7.347500   
+max                   98.079000        1412.000000     11.600000   
+
+       Concentration (M)  
+count           8.000000  
+mean            9.825000  
+std            19.411318  
+min             0.100000  
+25%             0.725000  
+50%             1.100000  
+75%             5.625000  
+max            55.500000  
+Mean of concentration group by type: 
+ Chemical Type
+Acid                    18.00
+Alcohol                  1.25
+Aromatic Hydrocarbon     0.10
+Base                     0.50
+Inorganic               55.50
+Ketone                   0.80
+Polyol                   1.20
+Name: Concentration (M), dtype: float64
+Count the chemicals with the different concentrations 
+ Concentration (M)
+55.5    1
+18.0    1
+1.0     1
+0.8     1
+0.5     1
+0.1     1
+1.5     1
+1.2     1
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="pivot-table" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="pivot-table">Pivot Table</h3>
+<p>Pivot tables are used to summarize and aggregate data inside a dataframe.</p>
+<div id="bd6fee2b" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>data.pivot_table(index<span class="op">=</span><span class="st">"Chemical Type"</span>, columns<span class="op">=</span><span class="st">"Concentration (M)"</span>, values<span class="op">=</span><span class="st">"Molecular Weight (g/mol)"</span>, aggfunc<span class="op">=</span><span class="st">"mean"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Concentration (M)</th>
+<th data-quarto-table-cell-role="th">0.1</th>
+<th data-quarto-table-cell-role="th">0.5</th>
+<th data-quarto-table-cell-role="th">0.8</th>
+<th data-quarto-table-cell-role="th">1.0</th>
+<th data-quarto-table-cell-role="th">1.2</th>
+<th data-quarto-table-cell-role="th">1.5</th>
+<th data-quarto-table-cell-role="th">18.0</th>
+<th data-quarto-table-cell-role="th">55.5</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Chemical Type</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Acid</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>98.079</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Alcohol</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>46.07</td>
+<td>NaN</td>
+<td>32.04</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Aromatic Hydrocarbon</td>
+<td>78.11</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Base</td>
+<td>NaN</td>
+<td>17.03</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Inorganic</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>18.015</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Ketone</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>58.08</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Polyol</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>92.09</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../../course/exercises/exercises/exercise1.html" class="pagination-link" aria-label="Exercise">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Exercise</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../../course/chapters/Basics/Lecture2/SimpleDataModels.html" class="pagination-link" aria-label="Simple Data Models">
+        <span class="nav-page-text"><span class="chapter-title">Simple Data Models</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+<p>© 2025 Stefanie Kröll. All rights reserved.</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Basics/Lecture2/SimpleDataManipulation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<li>
+<a href="https://github.com/stkroe/PythonForChemists.github.io" target="blank">Code source</a>
+</li>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
