@@ -175,10 +175,10 @@ etc.
 
 ```{python}
 data2 = data.copy()
-data2["Concentration (M)"] = data2["Concentration (M)"] + 10 # increase the concentration by 10 M
+data2["Concentration 2 (M)"] = data2["Concentration (M)"] + 10 # increase the concentration by 10 M
 print("data2: \n" , data2)
 
-data2.index = range(0,3) # change the index
+
 data3 = pd.concat([data, data2]) # concatenate the dataframes
 print("concated data: \n", data3)
 ```
@@ -186,7 +186,7 @@ print("concated data: \n", data3)
 ```{python}
  # create a Panda Series
 acidity = pd.Series(["basic", "acid", "basic", "neutral",
-                    "acid", "acid", "basic", "basic"], name="acidity")
+                    "acid", "acid", "basic", "basic"], name="Aciditiy Type")
 print("acidity: \n",acidity)
 # concatenate the dataframes
 data4 = pd.concat([data3, acidity], axis=1) 
@@ -205,12 +205,12 @@ print("data6: \n", data6)
 
 ```{python}
 df = data6
-print(df)
+print(len(df))
 # convert the dataframe to a numpy array
 arr = df.to_numpy() 
 print("arr: \n", arr)
 # convert the numpy array to a dataframe
-df2 = pd.DataFrame(arr, columns=["Name", "Formula", "Molecular Weight (g/mol)","Viscosity (mPa·s)","pH (Acidity)","Chemical Type","Concentration (M)"])
+df2 = pd.DataFrame(arr, columns=["Name", "Formula", "Molecular Weight (g/mol)","Viscosity (mPa·s)","pH (Acidity)","Chemical Type","Concentration (M)","Concentration 2 (M)", "Aciditiy Type"])
 print("df2: \n", df2)
 ```
 
@@ -242,5 +242,5 @@ print("Count the chemicals with the different concentrations \n", data["Concentr
 Pivot tables are used to summarize and aggregate data inside a dataframe.
 
 ```{python}
-data.pivot_table(index="Chemical type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean") 
+data.pivot_table(index="Chemical Type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean") 
 ```
