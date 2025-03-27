@@ -72,7 +72,7 @@ format:
       theme: 
         light: flatly  # Light theme
         dark: darkly   # Dark theme
-      highlight-style: "tango"
+      #highlight-style: "tango"
       code-copy: true
       code-overflow: wrap
       toc: true
