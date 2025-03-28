@@ -65,7 +65,7 @@ You can download it or run it directly in Google Colab.
 
 # Using Jupyter Notebooks in VS Code {.unnumbered}
 
-![VS Code](https://github.com/stkroe/PythonforChemists/tree/main/course/images/ipynb-vscode.svg)
+![VS Code](https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/images/ipynb-vscode.png)
 
 ## Difference Between Jupyter Notebooks and Python Scripts
 

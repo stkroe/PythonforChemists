@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Data Science"
+title: "Introduction to Data Science in Chemistry and Materials Science"
 execute:
     echo: true
     eval: false
@@ -7,9 +7,14 @@ execute:
 
 
 ### More information {.unnumbered}
+
 - [Data Science for Beginner](https://microsoft.github.io/Data-Science-For-Beginners/#/) by Microsoft
 - [Research Data Managment (RDM) in Chemistry](https://knowledgebase.nfdi4chem.de/knowledge_base/)
-
+- [An introduction to Python for Chemistry](https://pythoninchemistry.org/intro_python_chemists/intro.html)
+- [Scientific Computing for Chemists with Python](https://weisscharlesj.github.io/SciCompforChemists/notebooks/introduction/intro.html)
+- [Python for Data Science in Chemistry](https://education.molssi.org/python-data-science-chemistry/intro.html)
+- [Introduction to Data Science with Python](https://pythondatabook.com/)
+- [Practical Data Science in Python](https://www.practicaldatascience.org/intro.html)
 
 # Data Collection and Storage {.unnumbered}
 
@@ -24,6 +29,14 @@ Data is a collection of
 - measurements
 
 - observations 
+
+If you work with data, please have the [FAIR](https://www.uibk.ac.at/zid/forschungsdaten/forschungsdatenmanagement/fair.html) principles in mind:
+
+- **F**indable
+- **A**ccessible
+- **I**nteroperable
+- **R**eusable
+
 
 
 ## How do you get data? {.unnumbered}
@@ -52,6 +65,7 @@ etc.
 
 
 # This data can be stored in different locations, such as:
+
 - local files
 - databases
 - cloud storages
@@ -61,7 +75,7 @@ etc.
 
 
 
-If you measure data yourself, either the your measurement device will store the data in a specific format, or you will have to store it yourself. Sometimes you have to transform the data into a different format to be able to work with it.
+If you measure data yourself, either your measurement device will store the data in a specific format, or you will have to store it yourself. Sometimes you have to transform the data into a different format to be able to work with it.
 
 
 If you use data from external sources, you have to make sure that you have legal rights to use the data. Check the data license and terms of use.
@@ -91,6 +105,7 @@ If you use APIs please read the documentation of the API to understand how to ac
 
 
 Data can be stored in various data formats, such as:
+
 - Plain Text files (e.g. CSV, DAT, TXT)
 - Text files with structure (e.g. JSON, XML)
 - Spreadsheet files
