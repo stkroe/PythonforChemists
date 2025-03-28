@@ -27,7 +27,7 @@ code-links:
 --- 
 
 
-# Data Reading and Writing {.unnumbered}
+# Data Reading {.unnumbered}
 
 
 ## How do you read the data? {.unnumbered}
@@ -156,7 +156,7 @@ For example,
 - `parse_dates` parameter can be used to parse dates. Default is `False`.
 
 
-
+---
 
 Some examples are:
 
@@ -185,6 +185,8 @@ print(data.loc[20:26]) #print some rows to see the NaN values
 ```
 
 
+---
+
 ## Numpy {.unnumbered}
 Numpy has two main functions to read text files.
 - `numpy.loadtxt()` function is used to read text files.
@@ -195,7 +197,7 @@ So you can not read a file with strings and numbers in the same file.
 
 
 
-If you try to read a file with a header row, you will get an error. 
+If you try to read a file with a header row, you will get an **error**. 
 
 
 ```{python}
@@ -216,7 +218,7 @@ Now the data is read correctly. You can see that the data is read as a numpy arr
 
 
 
-
+---
 
 If you have data with whitespace, you do not need to specify the `delimiter`paramter because the default is whitespace.
 
@@ -229,7 +231,7 @@ data
 `genfromtxt()` gives you more flexibility to read files with missing values. 
 
 
-First using the `loadtxt()` function, you get an error because of the missing values. 
+First using the `loadtxt()` function, you get an **error** because of the missing values. 
 
 
 ```{python}
@@ -237,15 +239,14 @@ data = np.loadtxt(temperature_nan_dat)
 data
 ```
 
-If you try to read the file with an empty entrance at row 22, you wil get still an error with the `genfromtxt()` function. 
+If you try to read the file with an empty entrance at row 22, you wil get still an **error** with the `genfromtxt()` function. 
 
 ```{python}
 data = np.genfromtxt(temperature_nan_dat)
 data
 ```
 
-But why?
-What do you think is the reason for the error?
+**But why? What do you think is the reason for the error?**
 
 
 ::: {.callout-caution collapse="true"}
@@ -254,7 +255,7 @@ An error is raised because at row 22 the function is detecting only one column d
 :::
 
 
-How can you solve this problem?
+**How can you solve this problem?**
 
 ::: {.callout-caution collapse="true"}
 You can **NOT** solve this problem with the `genfromtxt()` function if you have missing values and delimiter is whitespace.
@@ -331,7 +332,18 @@ It depends on the data format, the data type and what kind of processing you wan
 :::
 
 
-## Exercises {.unnumbered}
+# Data Writing {.unnumbered}
+
+## Numpy {.unnumbered}
+
+Numpy has one function to write text files.
+
+- `numpy.savetxt()` function is used to write text files.
+
+```{python}
+#| eval: false
+np.savetxt('file.txt', data)
+```
 
 
 

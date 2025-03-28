@@ -44,7 +44,7 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique used 
 - **Interpretation:** PCA helps visualize multi-dimensional data in 2D or 3D spaces.
 - **Applications in Materials Science:** PCA can extract significant features from spectral or compositional data, aiding in classification and clustering.
 
-#### **Code Example:**
+
 
 ```python
 from sklearn.decomposition import PCA

@@ -20,14 +20,12 @@ execute:
 
 
 ## What is data? {.unnumbered}
+
 Data is a collection of 
 
 - numbers
-
 - words
-
 - measurements
-
 - observations 
 
 If you work with data, please have the [FAIR](https://www.uibk.ac.at/zid/forschungsdaten/forschungsdatenmanagement/fair.html) principles in mind:
@@ -37,6 +35,7 @@ If you work with data, please have the [FAIR](https://www.uibk.ac.at/zid/forschu
 - **I**nteroperable
 - **R**eusable
 
+---
 
 
 ## How do you get data? {.unnumbered}
@@ -47,19 +46,15 @@ At the beginning of every data science project, you need to collect data.
 Data can be collected from various sources, such as:
 
 - experimental measurements
-
 - calculations and simulations
-
 - surveys
-
 - existing databases
-
 - web scraping
-
 - APIs
 
 etc.
 
+---
 
 ## How do you store the data? {.unnumbered}
 
@@ -82,6 +77,7 @@ If you use data from external sources, you have to make sure that you have legal
 
 Further make sure how the data is stored and how you can access it.
 
+---
 
 ## How do you access external data? {.unnumbered}
 
@@ -112,7 +108,7 @@ Data can be stored in various data formats, such as:
 - Binary files (e.g. HDF5, Parquet, NetCDF,Feather, Pickle, npy, etc.)
 - Databases 
 - chemical and molecular data formats (e.g. XYZ, CIF, PDB, etc.)
-- etc.
+etc.
 
 
 ### Plain Text Files {.unnumbered}
@@ -163,10 +159,15 @@ Time/s  Temperature/°C
 Data is stored in a binary format and can be read with specific libraries. It is often used for large datasets, as it is more efficient than plain text files. The computer is able to read and write binary files faster than text files. <br> Some common binary file formats are:
 
 - [**HDF5**](https://en.wikipedia.org/wiki/Hierarchical_Data_Format): Hierarchical Data Format, used for large datasets
+
 - [**Parquet**](https://en.wikipedia.org/wiki/Apache_Parquet): Columnar storage format, used for big data
+
 - [**NetCDF**](https://en.wikipedia.org/wiki/NetCDF): Network Common Data Form, array-orriented, often for geoscience data
+
 - [**Feather**](https://arrow.apache.org/docs/python/feather.html): a fast column-based serialization for data frames, initially designed for R and Python, helps to share data between languages
+
 - [**Pickle**](https://docs.python.org/3/library/pickle.html): Python-specific format, used for serializing Python objects
+
 - [**npy**](https://numpy.org/doc/stable/reference/generated/numpy.lib.format.html): Numpy-specific format, used for saving numpy arrays
 
 Here is a list of comparison of binary file formats: [Comparison of data serialization formats](https://en.wikipedia.org/wiki/Comparison_of_data-serialization_formats)
@@ -175,6 +176,7 @@ Here is a list of comparison of binary file formats: [Comparison of data seriali
 ### Databases {.unnumbered}
 
 Databases are designed for big data storage. The advantage of databases is that they can be queried and updated easily. There are different types of databases, such as:
+
 - **[SQL](https://en.wikipedia.org/wiki/SQL)** databases (e.g. SQLite, MySQL, PostgreSQL)
 - **[NoSQL](https://en.wikipedia.org/wiki/NoSQL)** databases (e.g. MongoDB)
 - **[Graph databases](https://en.wikipedia.org/wiki/Graph_database#List_of_graph_databases)**
@@ -216,6 +218,7 @@ etc.
 
 
 ### Other Data Formats {.unnumbered}
+
 - [**Images**](https://en.wikipedia.org/wiki/Image_file_formats): Images can be stored in different formats, such as JPEG, PNG, TIFF, BMP, GIF, etc.
 
 - [**Audio**](https://en.wikipedia.org/wiki/Audio_file_format): Audio files can be stored in different formats, such as MP3, WAV, FLAC, etc.
@@ -223,6 +226,7 @@ etc.
 - [**Video**](https://en.wikipedia.org/wiki/Video_file_format): Video files can be stored in different formats, such as MP4, AVI, MOV, etc.
 
 
+---
 
 ## What type of data do you have? {.unnumbered}
 
@@ -252,51 +256,69 @@ Categorial means that data is divided into categories. It can be further divided
  
 For example,
 
-- blood type: **nominal** {A, B, AB, O}
-- chemical function group: **nominal** {alcohol, ketone, aldehyde, carboxylic acid, etc.}
-- purity of a substance: **ordinal** {low, medium, high}
-- hardness of a material: **ordinal** {soft, medium, hard}
+- blood type: **nominal** (A, B, AB, O)
+- chemical function group: **nominal** (alcohol, ketone, aldehyde, carboxylic acid, etc.)
+- purity of a substance: **ordinal** (low, medium, high)
+- hardness of a material: **ordinal** (soft, medium, hard)
 
+---
 
 # Quiz {.unnumbered}
 
 Multiple Choice Questions:
 
-### Question 1
 
+:::{.callout-note}
+### Question 1
 What stands the *I* in the FAIR principles for?
 
 - a) Interoperable
 - b) Inclusive
 - c) Intelligent
 - d) Interesting
+:::
 
+:::{.callout-note}
 ### Question 2
-
 What data format is used for crystallographic data?
 
 - a) XYZ
 - b) CIF
 - c) FASTA
 - d) SMILES
+:::
 
+
+:::{.callout-note}
 ### Question 3
-
 What type of data is the temperature in a chemical reaction?
 
 - a) Discrete
 - b) Continuous
 - c) Ordinal
 - d) Nominal
+:::
 
+
+:::{.callout-note}
 ### Question 4
-
 What type of data is the heat capacity of a material?
 
 - a) Discrete
 - b) Continuous
 - c) Ordinal
 - d) Nominal
+:::
+
+:::{.callout-note}
+### Question 5
+What type of data is acidity of a solution?
+
+- a) Discrete
+- b) Continuous
+- c) Ordinal
+- d) Nominal
+:::
 
 ::: {.callout-note collapse="true"}
 # Solutions
@@ -311,11 +333,15 @@ What type of data is the heat capacity of a material?
 
 ### Question 3
 
-- Correct answer: b) Continuous and c) Ordinal
+- Correct answer: b) Continuous 
 
 ### Question 4
 
-- Correct answer: b) Continuous and c) Ordinal
+- Correct answer: b) Continuous
+
+### Question 5
+
+- Correct answer: b) Continuous
 
 
 :::

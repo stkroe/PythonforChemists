@@ -15,3 +15,24 @@ code-links:
 
 
 ## Plotting with Seaborn {.unnumbered}
+
+Seaborn is a Python data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Seaborn is built on top of Matplotlib and closely integrated with pandas data structures.
+
+
+### KDE Plot {.unnumbered}
+[Kernel density plot](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) show the distribution of a single variable *e.g.* distribution of a mass of individuals in a population. The data is smoothed by a kernel density and the density of the data is plotted continuously.
+
+### Violin Plot {.unnumbered}
+
+- [Violin plot](https://seaborn.pydata.org/generated/seaborn.violinplot.html): Show the distribution of a numerical variable for different categories. It is similar to a box plot but it also shows the probability density of the data at different values. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.
+
+## Correlation plots {.unnumbered}
+
+
+#
+
+- [Regression plot](https://seaborn.pydata.org/generated/seaborn.regplot.html):
+Show a regression model between two variables *e.g.* the relationship between the concentration and the time.
+
+
+[Heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) shows the relationship of two categorical variables with a numerical variable *e.g.* cancer cell survival time for different treatment groups and different cancer types. The color of the cell is proportional to the value of the investigated variable.

@@ -37,6 +37,55 @@ After you load your data you have to inspect it to:
 - check if the data is in the correct distribution
 - get first insights into the data
 
+```{python}
+#| echo: false
+#| eval: true
+temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.csv"
+temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.dat"
+```
+
+### Numpy {.unnumbered}
+
+#### Overview of the Data {.unnumbered}
+
+```{python}
+import numpy as np
+data = np.loadtxt(temperature_data, delimiter=';', skiprows=1)
+```
+
+First of all you can use the `print()` function to get a quick overview of the data.
+
+```{python}
+print(data)
+```
+
+In numpy you can use the `shape` attribute to get the shape of the data.
+```{python}
+print(data.shape)
+```
+
+The data has 44640 rows and 2 columns.
+
+#### Data Type Conversion{.unnumbered}
+You can use the `dtype` attribute to get the data type of the data.
+```{python}
+print(data.dtype)
+```
+
+The data type is `float64`.
+
+You can transform the data to a `float64` data type if it is not already in this format.
+```{python}
+data = data.astype('float64')
+```
+
+#### Missing Data and Corrupted Data {.unnumbered}
+You can use the `isnan()` function to check if there are missing values in the data.
+
+```{python}
+print(np.isnan(data).sum())
+```
+
 
 ### Pandas {.unnumbered}
 
@@ -45,12 +94,7 @@ After you load your data you have to inspect it to:
 
 
 You can use the `head()` function to get a quick overview of the first rows of the data.
-```{python}
-#| echo: false
-#| eval: true
-temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.csv"
-temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.dat"
-```
+
 
 ```{python}
 import pandas as pd
@@ -134,10 +178,6 @@ First let check where the data is missing.
 data[data['temperature'].isna()]
 ```
 
-
-data_missing[data_missing['temperature'].isna()]
-
-
 At index 21 at time 22 s the temperature is missing.
 
 :::{.callout-note}
@@ -185,8 +225,32 @@ data_missing[20:25]
 ```
 
 Now can analysis or plot the data.
- 
 
+#### Data Type Conversion {.unnumbered}
+
+You get the data type of the data with the `dtypes` function.
+
+```{python}
+data.dtypes
+```
+
+You can convert the data type with the `astype()` function.
+
+```{python}
+data['time'] = data['time'].astype('float64')
+```
+
+## Example: Data Import and Inspection {.unnumbered}
+
+# Exercises {.unnumbered}
+Download it locally and try to solve the exercises. <br>
+
+[Data Import and Inspection Example](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/DHP_Example.ipynb)
+
+
+Or open it in `Google Colab`:
+
+[Data Import and Inspection Example](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/DHP_Example.ipynb)
 
 
 

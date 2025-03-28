@@ -28,6 +28,10 @@ book:
     style: "docked"
     search: true
     logo: logo.png
+    collapse-level: 1
+    toc: true
+    toc-depth: 3
+    scroll: true
 
   chapters:
       - index.qmd
@@ -57,17 +61,17 @@ book:
           - course/exercises/exercises/exercise1.ipynb
       - part: "Statistical and Exploratory Data Analysis"
         chapters:
-          - course/chapters/SEDA/SimpleDataManipulation.qmd
+          - course/chapters/SEDA/DataManipulation.qmd
           - course/chapters/SEDA/DescriptiveStatistics.qmd
           - course/chapters/SEDA/DataModels.qmd
           - course/chapters/SEDA/ModelTesting.qmd
-          - course/chapters/SEDA/MultivariantAnalysiss.qmd
+          - course/chapters/SEDA/MultivariantAnalysis.qmd
       - part: "Data Visualization 2"
         chapters:
-          - course/chapters/Plots/PlotTypes.qmd
-          - course/chapters/Plots/AdvancedPlots.qmd
-          - course/chapters/Plots/InteractivePlots.qmd
-      - part: "Spectroscopy and Image Data"
+          - course/chapters/PlotTypes/SimplePlotTypes.qmd
+          - course/chapters/PlotTypes/AdvancedPlotTypes.qmd
+          - course/chapters/PlotTypes/InteractivePlots.qmd
+      - part: "Spectroscopy and Image Data Analysis"
         chapters:
           - course/chapters/SID/Spectroscopy.qmd
           - course/chapters/SID/ImageAnalysis.qmd

@@ -44,6 +44,7 @@ For a larger list see these wikipedia lists:
 - [List of Statistical Software](https://en.wikipedia.org/wiki/List_of_statistical_software)
 - [List of Computer Algebra Systems](https://en.wikipedia.org/wiki/List_of_computer_algebra_systems)
 
+---
 
 # Why you should learn Python? {.unnumbered}
 

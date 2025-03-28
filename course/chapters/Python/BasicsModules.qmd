@@ -91,6 +91,7 @@ rand_mat = np.random.rand(3,3) # a 3x3 matrix with random numbers between 0 and 
 print(rand_mat)
 ```
 
+---
 
 
 

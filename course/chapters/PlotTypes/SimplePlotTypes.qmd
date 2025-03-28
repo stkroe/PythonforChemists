@@ -12,24 +12,200 @@ code-links:
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimplePlotTypes.ipynb"
         icon: "laptop"
 --- 
+
+## Types of Plots {.unnumbered}
+
+There exists are lot of different visualization techniques.
+
+How you should visualize the data depends on the data and the question you want to answer. 
+
+- **Distributions** can be visualized with a boxplot, a *violinplot*, a *histogram* or a *density plot*.
+
+- **Relationships** between two variables can be visualized with a *scatterplot*, a *lineplot*, a *regplot* or a *jointplot*. 
+
+- **Descriptions** of the data can be visualized with a *barplot*, *network plot* or a *pie chart*.
+
+
 ## Relationship plots
 
 ### Scatter Plot {.unnumberd}
 
+[Scatter plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html) shows the relationship of observable over the abscissa *e.g.* time vs temperature as **discrete** function.
+
+The `scatter()` function creates a scatter plot.
+
+```{python}
+#| eval: False
+plt.scatter()
+```
+
+:::{.callout-note}
+The marker size can be adjusted with the `s` parameter.
+:::
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = np.random.rand(100)*298
+
+plt.scatter(x, y, color='red', marker='o', label='sin(x)',s=5)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.show()
+```
+
+### Line Plot {.unnumberd}
+
+[Line plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) shows the relationship of observable over the abscissa *e.g.* time vs radioactivity decay as **continuous** function.
+
+The `plot()` function creates a line plot but can also be used to create scatter plots.
+
+:::{.callout-note}
+The marker size can be adjusted with the `markersize` parameter.
+:::
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = np.random.rand(100)*298
+
+plt.plot(x, y, color='red', marker='o', label='sin(x)',markersize=5,linewidth=2,linestyle='--')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.show()
+```
+
 ### Errorbars {.unnumberd}
+
+Errorbars can be added to the plot with the `errorbar()` function and the `yerr` parameter.
+
+```{python}
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = np.random.rand(100)*298
+yerr = np.random.rand(100)*10
+
+plt.errorbar(x, y, yerr=yerr, color='red', marker='o', label='sin(x)',markersize=5,linewidth=2)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.show()
+
+```
+
+---
 
 ## Distribution Plots {.unnumberd}
  
 ### Histogram Plot {.unnumbered}
 
+[Histogram] (https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html) shows the distribution of a single variable *e.g.* count of a mass of individuals in a population. The data is divided into bins and the number of data points in each bin is plotted.
+
+The `hist()` function creates a histogram with `bins` number of bins.
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.randn(1000)
+
+plt.hist(x, bins=30, color='red', edgecolor='black')
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
+```
+
+
 ### Boxplot {.unnumbered}
+
+[Box plot](https://seaborn.pydata.org/generated/seaborn.boxplot.html) shows the distribution of a numerical variable for different categories. It shows the minimum, first quartile, median, third quartile and maximum of your data. Outliers can be identified. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.
+
+
+The `boxplot()` function creates a boxplot.
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+data = [np.random.normal(0, std, 100) for std in range(1, 4)]
+
+plt.boxplot(data, patch_artist=True, notch=True, showmeans=True, meanline=True, showfliers=True)
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
+```
 
 ### 2D Histogram Plot  {.unnumbered}
 
-## KDE Plot {.unnumbered}
+A 2D histogram can be created with the `hist2d()` function.
 
-## Correlation plots {.unnumbered}
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.randn(1000)
+y = np.random.randn(1000)
+
+plt.hist2d(x, y, bins=30, cmap='Blues')
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
+```
+
+
+
+
 
 ### Proportion Plots {.unnumbered}
 
+## Bar Plot {.unnumbered}
+[Bar plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html) shows the relationship of a categorical variable with a numerical variable *e.g.* cancer cell survival time for different treatment groups. The height of the bar is proportional to the value of the investigated variable.
+
+The `bar()` function creates a bar plot.
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = ['A', 'B', 'C', 'D']
+y = [10, 20, 30, 40]
+
+plt.bar(x, y, color='red')
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
+```
+
 ## Pie Chart {.unnumbered}
+
+
+[Pie chart](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pie.html) show the proportion of different categories in a single variable *e.g.* the content of different amino acids in a protein.
+
+The `pie()` function creates a pie chart.
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = [10, 20, 30, 40]
+labels = ['A', 'B', 'C', 'D']
+
+plt.pie(x, labels=labels)
+
+plt.show()
+```
+
+
