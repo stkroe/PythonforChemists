@@ -82,8 +82,8 @@ bibliography: references.bib
 format:
   html: 
       theme: 
-        light: flatly  # Light theme
-        dark: darkly   # Dark theme
+        light: [cosmo]  # Light theme
+        dark: [darkly]   # Dark theme
       #highlight-style: "tango"
       code-copy: true
       code-overflow: wrap
