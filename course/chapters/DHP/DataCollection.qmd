@@ -298,7 +298,7 @@ What type of data is the heat capacity of a material?
 - c) Ordinal
 - d) Nominal
 
-:::{.callout-info collapsed=true}
+::: {.callout-note collapse="true"}
 # Solutions
 
 ### Question 1
