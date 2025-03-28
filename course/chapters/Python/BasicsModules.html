@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-27cffeef7d0d9a156df082afbe3fb21a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-35422cdc4f70219b1f2ea309e4c869ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-0c7f10e693ceb5850653c71567dd3ef9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -159,7 +159,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Overview</span></a>
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Disclaimer</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -423,13 +424,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>More information can found at the <a href="https://numpy.org/">Numpy website</a>.</p>
 <p>Load the required libraries</p>
-<div id="9906015a" class="cell" data-execution_count="1">
+<div id="9b9c1222" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="numpy-arrays" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="numpy-arrays">Numpy Arrays</h3>
 <p>An array can be described as multidimensional lists. For example a matrix is a 2D array.</p>
-<div id="23128865" class="cell" data-execution_count="2">
+<div id="e179d016" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mat <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>], [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]])</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -439,7 +440,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The elements of an array can be accessed using the index of the element.</p>
-<div id="494d3291" class="cell" data-execution_count="3">
+<div id="c290df10" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mat[<span class="dv">0</span>, <span class="dv">0</span>])   <span class="co"># 1 element at row 0, column 0</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -457,16 +458,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [4 5 6]</code></pre>
 </div>
 </div>
-<div id="827d529d" class="cell" data-execution_count="4">
+<div id="1efef830" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>empty_mat <span class="op">=</span> np.empty((<span class="dv">3</span>,<span class="dv">3</span>),dtype<span class="op">=</span><span class="bu">float</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(empty_mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[4.67943548e-310 0.00000000e+000 0.00000000e+000]
+<pre><code>[[4.69010435e-310 0.00000000e+000 0.00000000e+000]
  [0.00000000e+000 0.00000000e+000 0.00000000e+000]
  [0.00000000e+000 0.00000000e+000 0.00000000e+000]]</code></pre>
 </div>
 </div>
-<div id="e3a1bd3f" class="cell" data-execution_count="5">
+<div id="96fd1631" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ones_mat <span class="op">=</span> np.ones((<span class="dv">3</span>, <span class="dv">3</span>))</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ones_mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -475,7 +476,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  [1. 1. 1.]]</code></pre>
 </div>
 </div>
-<div id="6d3c3bfc" class="cell" data-execution_count="6">
+<div id="dc5c0ad3" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>zeros_mat <span class="op">=</span> np.zeros((<span class="dv">3</span>, <span class="dv">3</span>))</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeros_mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -484,27 +485,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  [0. 0. 0.]]</code></pre>
 </div>
 </div>
-<div id="63ac396f" class="cell" data-execution_count="7">
+<div id="0b6e18b5" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">2</span>) <span class="co"># an array from 1 to 10 with a step of 2</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1 3 5 7 9]</code></pre>
 </div>
 </div>
-<div id="bc2e42cc" class="cell" data-execution_count="8">
+<div id="dad6ca57" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>arr2 <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">100</span>,<span class="dv">5</span>) <span class="co"># an array from 0 to 100 with 5 elements</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[  0.  25.  50.  75. 100.]</code></pre>
 </div>
 </div>
-<div id="62556365" class="cell" data-execution_count="9">
+<div id="d021b115" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>rand_mat <span class="op">=</span> np.random.rand(<span class="dv">3</span>,<span class="dv">3</span>) <span class="co"># a 3x3 matrix with random numbers between 0 and 1</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rand_mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[0.68309277 0.63135432 0.21127455]
- [0.757191   0.53602221 0.02165705]
- [0.85059626 0.26288536 0.32686878]]</code></pre>
+<pre><code>[[0.59308691 0.89088555 0.77727523]
+ [0.81518219 0.8693971  0.99299503]
+ [0.9422383  0.36714851 0.3039445 ]]</code></pre>
 </div>
 </div>
 </section>
@@ -521,13 +522,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>You can statistically analyze the data, export the data to different file formats, but also plot the data with the help of <code>matplotlib</code>.</li>
 </ul>
 <p>More information can be found under <a href="https://pandas.pydata.org/">Pandas website</a>.</p>
-<div id="8ea0b16f" class="cell" data-execution_count="10">
+<div id="269af937" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="panda-dataframes" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="panda-dataframes">Panda DataFrames</h3>
 <p>Panda DataFrames are two-dimensional labeled data structures with columns of potentially different types like a table.</p>
-<div id="c046527b" class="cell" data-execution_count="11">
+<div id="2b36796b" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Name"</span>: [<span class="st">"Water"</span>, <span class="st">"Oxygen"</span>, <span class="st">"Hydrogen"</span>, <span class="st">"Carbon Dioxide"</span>, <span class="st">"Methane"</span>, <span class="st">"Ammonia"</span>, <span class="st">"Nitrogen"</span>, <span class="st">"Sulfur Dioxide"</span>],</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Formula"</span>: [<span class="st">"H2O"</span>, <span class="st">"O2"</span>, <span class="st">"H2"</span>, <span class="st">"CO2"</span>, <span class="st">"CH4"</span>, <span class="st">"NH3"</span>, <span class="st">"N2"</span>, <span class="st">"SO2"</span>],</span>
@@ -552,7 +553,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="panda-dataseries" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="panda-dataseries">Panda DataSeries</h3>
 <p>Panda DataSeries are one-dimensional labeled arrays.</p>
-<div id="b7a4a27b" class="cell" data-execution_count="12">
+<div id="c675806f" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>series_data <span class="op">=</span> pd.Series([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], index<span class="op">=</span>[<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span>])</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
