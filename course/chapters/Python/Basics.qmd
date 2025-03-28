@@ -20,6 +20,7 @@ This will be a very fast and basic start into coding with Python.
 Each line of code is a command. The computer reads the code from top to bottom and executes each command in succession order. 
 
 First of all some terminology:
+
 | Term | Definition |
 | --- | --- |
 | Command | A line of code that tells the computer to do something. |
