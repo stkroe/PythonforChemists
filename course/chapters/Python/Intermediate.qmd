@@ -34,6 +34,7 @@ print("Hello World!")
 
 This should ask the user to enter a number and print it to the console
 ```{python}
+#| eval: false
 print(input("Enter a number: "))
 ```
 
@@ -131,6 +132,7 @@ For python scripts:
 You can use argparse to parse command line arguments.
 
 ```{python}
+#| eval: false
 from argparse import ArgumentParser
 
 parser = ArgumentParser(description="This is a description.")

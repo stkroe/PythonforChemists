@@ -4,6 +4,22 @@ execute:
   echo: True
   eval: True
   error: True
+other-links: 
+      - text: "Data tempearture_data"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.csv"
+        icon: "filetype-csv"
+      - text: "Data temperature_nan_data"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.csv"
+        icon: "filetype-csv"
+      - text: "Data temperature_dat"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.dat"
+        icon: "filetype-txt"
+      - text: "Data temperature_nan_dat"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.dat"
+        icon: "filetype-txt"
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/SimpleDataImport.ipynb"
+        icon: "journal"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataImport.ipynb"
@@ -46,10 +62,10 @@ Mostly used function is `pandas.read_csv()` because you can specify the delimite
 
 ```{python}
 #| echo: false
-temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures.csv"
-temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures_nan.csv"
-temperature_dat = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures.dat"
-temperature_nan_dat="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/lecture1/temperatures_nan.dat"
+temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.csv"
+temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.csv"
+temperature_dat = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.dat"
+temperature_nan_dat="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.dat"
 ``` 
 
 ```{python}
