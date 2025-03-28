@@ -23,23 +23,28 @@ Van Rossum designed Python as a "Computer Programming Language for Everybody".
 
 
 ## What is Python? {.unnumbered}
-- Python is an interpreted language in comparsion to compiled languages *e.g.* C or C++
-- Python is often slower compare to compiled languages
-- Python has dynamically type-check and a garabge collection
-- Python is also able to object-oriented and functional programming
-- Python is a high-level language, which means that it is closer to human language than machine language which the computer is understanding
+
+- Python is an **interpreted** language compared to compiled languages *e.g.*, C or C++.
+
+- Python is **often slower** compared to compiled languages.
+
+- Python has **dynamic type checking** and **garbage collection**.
+
+- Python supports both **object-oriented** and **functional programming**.
+
+- Python is a **high-level language**, meaning it is closer to human language than the machine language understood by computers.
 
 ### Simple Scheme how Python works internally: {.unnumbered}
 
 So if you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).
 
 
- ```{mermaid}
+```{mermaid}
  graph TD
      A[Python Source Code *.py] -->|Step 1: Compilation| B[Bytecode *.pyc]
      B -->|Step 2: Interpretation| C[Python Virtual Machine - PVM]
      C -->|Execution| D[Program Output]
- ```
+```
 
 
 ## How I can learn Python? {.unnumbered}
@@ -59,7 +64,7 @@ There are a lot of resources to dive deeper into Python *e.g.*:
 
 
 :::{.callout-important}
-As it is with languages, you can only learn it if you practicing it. <br>
+As it is with languages, you can only learn it if you **practice** it. <br>
 So, start you own projects and have fun with it!
 :::
 

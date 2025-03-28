@@ -17,11 +17,37 @@ This will be a very fast and basic start into coding with Python.
 # Elemental Syntax{.unnumbered}
 ## Comands{.unnumbered}
 
-Each line of code is a command. The computer reads the code from top to bottom and executes each command in order.
+Each line of code is a command. The computer reads the code from top to bottom and executes each command in succession order. 
+
+First of all some terminology:
+| Term | Definition |
+| --- | --- |
+| Command | A line of code that tells the computer to do something. |
+| Syntax | The rules that govern how commands are written. |
+| Execute | To run a command. |
+| Comment | A note in the code that is not executed. |
+| Indentation | The space at the beginning of a line of code that tells the computer that the line is part of a block of code. |
+| Error | A message that tells you that something is wrong with your code. |
+| Stack trace | A list of error messages that Python prints when an error occurs. |
+| Variable | A name that stores a value. |
+| Data type | The type of value that a variable stores. |
+| Declaration | The process of assigning memory to a variable  |
+| Integer | A whole number. |
+| Float | A number with a decimal point. |
+| Boolean | A value that is either True or False. |
+| List | A collection of items. |
+| Mutable | A type of object that can be changed. |
+| Immutable | A type of object that cannot be changed. |
+| String | A sequence of characters. |
+| Function | A block of code that performs a specific task. |
+| Module | A collection of functions and variables. |
+| Library | A collection of modules. |
+| Package | A collection of related modules. |
+| Script | A file that contains code that can be run independently. |
 
 :::{.callout-note}
 # Example - Hello World
-`print` is a command that tells the computer to display the text that follows it. 
+`print` is a command that tells the computer to display the text or variable that follows it. 
 :::
 
 Try it out:
@@ -30,8 +56,8 @@ Try it out:
 print("Hello World")
 ```
 
- If you want to span a command over multiple lines you can use `\` or <br> 
- if you are using parenthesis in your command you can directly use a new line.
+If you want to span a command over multiple lines you can use `\` or <br> 
+if you are using parenthesis in your command you can directly use a new line.
 
 
 ```{python}
@@ -47,7 +73,7 @@ print("Hello World")
  
 
 ## Indentation {.unnumbered}
-In Python code blocks are not structured by brackets or semicolons like C/C++ or Java but by indentation. This means that the code inside a loop or a function is indented by a tab or four spaces.
+In Python code blocks are not structured by brackets or semicolons like `C/C++` or `Java` but by indentation. This means that the code inside a loop or a function is indented by a tab or four spaces.
 
 :::{.callout-warning}
 Indentations are curcial in Python. 
@@ -98,7 +124,7 @@ Often the error messages are not very clear. You can search for the error messag
 
 :::{.callout-note}
 Example - Cryptic Error Message 
-What does the error message tell you?
+What does the error message tell you? If you are not sure ask the internet or your favorite AI.
 :::
 
 ```{python}
@@ -121,7 +147,7 @@ The error message tells you that you are trying to access an index that is out o
 Comments are important. They help you and others to understand your code. <br>
 You can use the \` symbol to write comments.
 
-Docstrings are used to document the code for example with [pydoc](https://docs.python.org/3/library/pydoc.html). They are written using triple quotes \`""" """"\` 
+Docstrings are used to document the code for example with [pydoc](https://docs.python.org/3/library/pydoc.html). They are using triple quotes \`""" """"\`.
 
 
 
@@ -136,6 +162,7 @@ You can document your code for example by pydoc
 
 
 # Modules {.unnumbered}
+
 There exist a lot of libraries and modules in Python. <br>
 Libraries is a term to describe a collection of modules. <br>
 Packages are a way to collect related modules together within a single tree-like hierarchy. <br>
@@ -164,6 +191,7 @@ from matplotlib import pyplot as plt
 
 In Python, you don't need to declare the type of a variable. <br>
 You can assign a value to a variable using the `=` operator. <br>
+Python is managing the memory allocation for you. <br>
 
 
 ```{python}
@@ -276,7 +304,6 @@ print(f,type(f))
 ```
 
 # Lists {.unnumbered}
-
 
 
 Lists collect multiple items in a single variable. <br>
@@ -493,19 +520,17 @@ print("exponentiation: ", a**2)
 
 # Control Structures {.unnumbered}
 
-
+Control structures are used to control the flow of a program. <br>
 The most common control structures are:
 
-- if
-- else
-- elif
-- for
-- while
-- break
-- continue
-- pass
-- return
-
+- You can use the `if` statement to execute a block of code if a condition is true. 
+- You can use the `elif` statement to execute a block of code if the first condition is - false and the second condition is true.
+- You can use the `else` statement to execute a block of code if the condition is false.
+- You can use the `for` loop to iterate over a sequence. 
+- You can use the `while` loop to execute a block of code as long as a condition is true. 
+- You can use the `break` statement to exit a loop. 
+- You can use the `continue` statement to skip the rest of the code in a loop. 
+- You can use the `pass` statement to do nothing.
 
 ## if statement {.unnumbered}
 
@@ -519,7 +544,7 @@ else:
     print("x = 0")
 ```
 
-## break,cotinue,pass {.unnumbered}
+## break,continue,pass {.unnumbered}
 
 
 ```{python}

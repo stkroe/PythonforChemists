@@ -68,6 +68,7 @@ And if you want to get the intercept error you can use the following return valu
 results = linregress(x, y)
 print(results.intercept_stderr)
 ```
+:::
 
 ## Using `scikit-learn` {.unnumbered}
 One of the most popular libraries is `scikit-learn`. The following code shows how to fit a linear regression model using `scikit-learn`:
