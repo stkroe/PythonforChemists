@@ -456,7 +456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <section id="numpy" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="numpy">Numpy</h3>
-<div id="f38ef14f" class="cell" data-execution_count="1">
+<div id="6a261ebf" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
@@ -478,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>np.searchsorted(a,v)</code> returns the <strong>index of the first element</strong> of an array <br> <strong>that is greater than or equal to a value</strong></p></li>
 <li><p><code>np.extract(condition,a)</code> returns the <strong>elements of an array that satisfy a condition</strong></p></li>
 </ul>
-<div id="3de3a6ad" class="cell" data-execution_count="2">
+<div id="1864d753" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Index of the maximum element: "</span>, np.argmax(arr))</span>
@@ -505,7 +505,7 @@ Find the index of element "&gt;4":  [[4]
 </section>
 <section id="pandas" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="pandas">Pandas</h3>
-<div id="91bfaed0" class="cell" data-execution_count="3">
+<div id="492d1876" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Name"</span>: [<span class="st">"Water"</span>, <span class="st">"Sulfuric Acid"</span>, <span class="st">"Ethanol"</span>, <span class="st">"Acetone"</span>, <span class="st">"Ammonia"</span>, <span class="st">"Benzene"</span>, <span class="st">"Methanol"</span>, <span class="st">"Glycerol"</span>],</span>
@@ -516,7 +516,7 @@ Find the index of element "&gt;4":  [[4]
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Chemical Type"</span>: [<span class="st">"Inorganic"</span>, <span class="st">"Acid"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Ketone"</span>, <span class="st">"Base"</span>, <span class="st">"Aromatic Hydrocarbon"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Polyol"</span>],</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Concentration (M)"</span>: [<span class="fl">55.5</span>, <span class="fl">18.0</span>, <span class="fl">1.0</span>, <span class="fl">0.8</span>, <span class="fl">0.5</span>, <span class="fl">0.1</span>, <span class="fl">1.5</span>, <span class="fl">1.2</span>]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="7619e411" class="cell" data-execution_count="4">
+<div id="2fab34ee" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"mean of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].mean()) <span class="co"># mean of concentration</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"std of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].std()) <span class="co"># standard deviation of concentration</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"median of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].median()) <span class="co"># median of concentration</span></span>
@@ -587,7 +587,7 @@ Name: count, dtype: int64</code></pre>
 <section id="pivot-table" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="pivot-table">Pivot Table</h4>
 <p>Pivot tables are used to summarize and aggregate data inside a dataframe.</p>
-<div id="19886869" class="cell" data-execution_count="5">
+<div id="90208900" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data.pivot_table(index<span class="op">=</span><span class="st">"Chemical Type"</span>, columns<span class="op">=</span><span class="st">"Concentration (M)"</span>, values<span class="op">=</span><span class="st">"Molecular Weight (g/mol)"</span>, aggfunc<span class="op">=</span><span class="st">"mean"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
