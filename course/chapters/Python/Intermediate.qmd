@@ -11,7 +11,7 @@ code-links:
         icon: "laptop"
 ---
 
-
+Often we need with user input, files, system and paths. In this chapter we will cover these topics.
 
 # I/O (Input/Output) {.unnumbered}
 

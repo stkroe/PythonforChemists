@@ -17,16 +17,16 @@ code-links:
 
 - Numpy is the most important library for Python. 
 - The standard data types in Python are very slow and not very efficient for data analysis. 
-- Numpy is based mainly on C an C++. 
+- Numpy is based mainly on `C` an `C++`. 
 - This allows Numpy to be faster than plain Python. 
-- With Numpy a new data type is introduced `numpy array`. 
+- With Numpy a new data type is introduced **numpy arrays**. 
 - Numpy arrays are multidimensional arrays that are much faster than Python lists. 
 - The libary also includes many mathematical functions and methods for linear algebra. 
 
 
 More information can found at the [Numpy website](https://numpy.org/).
 
- Load the required libraries
+Load the required libraries
 
 ```{python}
 import numpy as np
@@ -95,7 +95,7 @@ print(rand_mat)
 
 - Pandas is a library for data manipulation and analysis. 
 - It is built on top of Numpy. 
-- With Pandas you are working with dataframes and not with arrays like in Numpy. 
+- With Pandas you are working with **dataframes** and not with arrays like in Numpy. 
 - Dataframes are two-dimensional labeled data structures with columns of potentially different types.
 - It is like a table in a database or a spreadsheet. Pandas has a lot of methods to manipulate dataframes. 
 - You can select subsets of the data, filter, sort, group, merge, join, etc. 
@@ -127,10 +127,19 @@ df = pd.DataFrame(data)
 print(df)
 ```
 
+### Panda DataSeries {.unnumbered}
 
-
+Panda DataSeries are one-dimensional labeled arrays.
 
 ```{python}
 series_data = pd.Series([1, 2, 3, 4, 5], index=["a", "b", "c", "d", "e"])
 print(series_data)
 ```
+
+# Matplotlib {.unnumbered}
+
+Matplotlib is the main **plotting** library in Python. It is mainly used for static 2D plots.
+
+More information can be found under [Matplotlib website](https://matplotlib.org/).
+
+Later in this course we will get a detailed tutorial on how to use Matplotlib.

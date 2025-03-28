@@ -36,28 +36,40 @@ book:
           - course/chapters/Essentials/Introduction.qmd
           - course/chapters/Essentials/WhatIsPython.qmd
           - course/chapters/Essentials/InstallationGuide.qmd
+          - course/chapters/Essentials/Editors.qmd
       - part: "Python Crash Course"
         chapters:
           - course/chapters/Python/Basics.qmd
           - course/chapters/Python/Intermediate.qmd
           - course/chapters/Python/BasicsModules.qmd
+          - course/chapters/Python/AdvancedModules.qmd
       - part: "Data Handling and Preprocessing"
         chapters:
           - course/chapters/DHP/DataCollection.qmd
           - course/chapters/DHP/SimpleDataImport.qmd
           - course/chapters/DHP/SimpleDataInspection.qmd
-          - course/chapters/DHP/SimplePlots.qmd
+         
+      - part: "Simple Plotting"
+        chapters:
+          - course/chapters/Plots/DataVisualization.qmd
+          - course/chapters/Plots/SimplePlots.qmd
           - course/exercises/exercises/exercise1.ipynb
-          # - course/chapters/Intermediate/SpecialDataImport.ipynb
-          # - course/chapters/Advanced/AdvancedDataImport.ipynb
       - part: "Statistical and Exploratory Data Analysis"
         chapters:
           - course/chapters/SEDA/SimpleDataManipulation.qmd
           - course/chapters/SEDA/SimpleDataModels.qmd
-      #     - course/chapters/Lecture2/Introduction.ipynb
-       #    - course/chapters/DataHandlingPreprocess/Lecture2/BasicDataAnalysis.ipynb
-      #     - course/chapters/Intermediate/Lecture2/IntermediateDataAnalysis.ipynb
-      #     - course/chapters/Advanced/Lecture2/AdvancedDataAnalysis.ipynb
+          - course/chapters/SEDA/ModelTesting.qmd
+      - part: "Spectroscopy and Image Data"
+        chapters:
+          - course/chapters/SID/Spectroscopy.qmd
+          - course/chapters/SID/ImageAnalysis.qmd
+      # - part: "Machine Learning"
+      #   chapters:
+      #     - course/chapters/ML/IntroductionML.qmd
+      #     - course/chapters/ML/MLBasics.qmd
+      #     - course/chapters/ML/MLModels.qmd
+      #     - course/chapters/ML/MLValidation.qmd
+      #     - course/chapters/ML/MLDeployment.qmd
       - part: "Informations"
         chapters:
          - informations/references.qmd

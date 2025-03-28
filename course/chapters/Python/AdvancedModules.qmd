@@ -1,0 +1,36 @@
+---
+title: "Advanced Modules"
+execute: 
+  echo: true
+  execute: false
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Python/AdvancedModules.ipynb"
+        icon: "laptop"
+---
+
+# Advanced Modules {.unnumbered}
+
+## Scipy {.unnumbered}
+
+Scipy is a library that builds on Numpy. It is specialized in **scientific computing**. It includes modules for statistical calculations , optimization, linear algebra, integration, interpolation, special functions, FFT, signal and image processing, ODE solvers and more.
+
+More information can be found at the [Scipy website](https://www.scipy.org/).
+
+Later on we will see how to use Scipy for statistical calculations and for anlaysis of spectra.
+
+## Scikit-learn {.unnumbered}
+
+Scikit-learn is a library for **machine learning**. It includes modules for classification, regression, clustering, dimensionality reduction, model selection and preprocessing.
+
+More information can be found at the [Scikit-learn website](https://scikit-learn.org/stable/).
+
+Later on we will see how to use Scikit-learn for classification and regression.
+
+## Seaborn {.unnumbered}
+
+Seaborn is a library for **data visualization**. It is based on Matplotlib and provides a high-level interface for drawing attractive and informative statistical graphics.
+
+More information can be found at the [Seaborn website](https://seaborn.pydata.org/).
+
+Later on we will see how to use Seaborn for data visualization.
