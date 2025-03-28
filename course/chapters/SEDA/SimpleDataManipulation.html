@@ -237,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/DHP/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science</span></a>
+  <a href="../../../course/chapters/DHP/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science in Chemistry and Materials Science</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -417,7 +417,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">Data Manipulation</h1>
 <section id="numpy" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="numpy">Numpy</h2>
-<div id="d1df1291" class="cell" data-execution_count="1">
+<div id="5f77a92e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="array-manipulation" class="level3 unnumbered">
@@ -434,7 +434,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>etc.</p>
 <section id="sort-arrays" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="sort-arrays">Sort arrays:</h4>
-<div id="67d74e7d" class="cell" data-execution_count="2">
+<div id="a72810be" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>unsorted_arr <span class="op">=</span> np.array([[<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">8</span>, <span class="dv">1</span>], [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">9</span>, <span class="dv">4</span> , <span class="dv">5</span>]])</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"unsortd_arr: </span><span class="ch">\n</span><span class="st">"</span>, unsorted_arr)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>sorted_arr <span class="op">=</span> np.sort(unsorted_arr,axis <span class="op">=</span> <span class="dv">0</span>) <span class="co"># sorted along the column</span></span>
@@ -459,7 +459,7 @@ sorted_arr along rows:
 </section>
 <section id="concatenate-arrays" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="concatenate-arrays">Concatenate arrays:</h4>
-<div id="6b881ead" class="cell" data-execution_count="3">
+<div id="4a3217fc" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]) </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> np.concatenate((a, b))</span>
@@ -471,7 +471,7 @@ sorted_arr along rows:
 </section>
 <section id="reshape-arrays" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="reshape-arrays">Reshape arrays:</h4>
-<div id="45629cee" class="cell" data-execution_count="4">
+<div id="12a85682" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>],[<span class="dv">3</span>, <span class="dv">4</span>],[<span class="dv">5</span>, <span class="dv">6</span>]])</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([[<span class="dv">7</span>, <span class="dv">8</span>],[<span class="dv">9</span>, <span class="dv">10</span>],[<span class="dv">11</span>, <span class="dv">12</span>]])</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> np.vstack((a, b)) <span class="co"># vertical stack</span></span>
@@ -521,7 +521,7 @@ flatten array:
 <li>`np.percentile(a,p) `` returns the <strong>p-th percentile</strong> of the elements of an array</li>
 <li><code>np.histogram(a, [,bins,range,density,weights])</code> returns the <strong>histogram</strong> of the elements of an array</li>
 </ul>
-<div id="e163ea69" class="cell" data-execution_count="5">
+<div id="dd172367" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>],[<span class="dv">3</span>, <span class="dv">4</span>],[<span class="dv">5</span>, <span class="dv">6</span>]])</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([[<span class="dv">7</span>, <span class="dv">8</span>],[<span class="dv">9</span>, <span class="dv">10</span>],[<span class="dv">11</span>, <span class="dv">12</span>]])</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> np.<span class="bu">sum</span>(a) <span class="co"># sum of all elements</span></span>
@@ -544,7 +544,7 @@ Element wise addition:  [[ 8 10]
 <li><code>np.searchsorted(a,v)</code> returns the <strong>index of the first element</strong> of an array <br> <strong>that is greater than or equal to a value</strong></li>
 <li><code>np.extract(condition,a)</code> returns the <strong>elements of an array that satisfy a condition</strong></li>
 </ul>
-<div id="c7600263" class="cell" data-execution_count="6">
+<div id="335f4d67" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Index of the maximum element: "</span>, np.argmax(arr))</span>
@@ -574,7 +574,7 @@ Find the index of element "&gt;4":  [[4]
 <h2 class="unnumbered anchored" data-anchor-id="pandas">Pandas</h2>
 <section id="get-information-about-the-data" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="get-information-about-the-data">Get information about the data</h3>
-<div id="a527001e" class="cell" data-execution_count="7">
+<div id="5277b399" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Name"</span>: [<span class="st">"Water"</span>, <span class="st">"Sulfuric Acid"</span>, <span class="st">"Ethanol"</span>, <span class="st">"Acetone"</span>, <span class="st">"Ammonia"</span>, <span class="st">"Benzene"</span>, <span class="st">"Methanol"</span>, <span class="st">"Glycerol"</span>],</span>
@@ -585,7 +585,7 @@ Find the index of element "&gt;4":  [[4]
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Chemical Type"</span>: [<span class="st">"Inorganic"</span>, <span class="st">"Acid"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Ketone"</span>, <span class="st">"Base"</span>, <span class="st">"Aromatic Hydrocarbon"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Polyol"</span>],</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Concentration (M)"</span>: [<span class="fl">55.5</span>, <span class="fl">18.0</span>, <span class="fl">1.0</span>, <span class="fl">0.8</span>, <span class="fl">0.5</span>, <span class="fl">0.1</span>, <span class="fl">1.5</span>, <span class="fl">1.2</span>]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="fd024956" class="cell" data-execution_count="8">
+<div id="bfbd10e8" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"head of data: </span><span class="ch">\n</span><span class="st">"</span>,data.head()) <span class="co"># print the first 5 rows</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span>
@@ -640,7 +640,7 @@ Name: 1, dtype: object</code></pre>
 <section id="select-subsets-of-the-data" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="select-subsets-of-the-data">Select subsets of the data:</h4>
 <p>Often you need only a specific part of your data with <code>pandas</code>it is quite easy to filter the data after specific properties.</p>
-<div id="d565f4a8" class="cell" data-execution_count="9">
+<div id="fe9b996e" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filter the rows where concentration is greater than 5</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Filter the rows where concentration is greater than 5: </span><span class="ch">\n</span><span class="st">"</span>, data[data[<span class="st">"Concentration (M)"</span>] <span class="op">&gt;</span> <span class="dv">5</span>]) </span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
@@ -682,7 +682,7 @@ Name: Chemical Type, dtype: object
 <li>join data,</li>
 </ul>
 <p>etc.</p>
-<div id="2a049f36" class="cell" data-execution_count="10">
+<div id="be97c4c7" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="op">=</span> data.copy()</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>data2[<span class="st">"Concentration 2 (M)"</span>] <span class="op">=</span> data2[<span class="st">"Concentration (M)"</span>] <span class="op">+</span> <span class="dv">10</span> <span class="co"># increase the concentration by 10 M</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"data2: </span><span class="ch">\n</span><span class="st">"</span> , data2)</span>
@@ -749,7 +749,7 @@ concated data:
 7          5.50                Polyol                1.2                 11.2  </code></pre>
 </div>
 </div>
-<div id="9e2c0cc8" class="cell" data-execution_count="11">
+<div id="cdbe2008" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a> <span class="co"># create a Panda Series</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>acidity <span class="op">=</span> pd.Series([<span class="st">"basic"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"neutral"</span>,</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"acid"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"basic"</span>], name<span class="op">=</span><span class="st">"Aciditiy Type"</span>)</span>
@@ -824,7 +824,7 @@ concated data:
 7         basic  </code></pre>
 </div>
 </div>
-<div id="f475eae9" class="cell" data-execution_count="12">
+<div id="a0160e77" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>data5 <span class="op">=</span> data4.drop_duplicates() <span class="co"># drop the duplicates</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"data5: </span><span class="ch">\n</span><span class="st">"</span>, data5)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>data6 <span class="op">=</span> data5.dropna() <span class="co"># drop the NaNs</span></span>
@@ -919,7 +919,7 @@ data6:
 </section>
 <section id="transform-pandas-dataframe-to-numpy-array-and-viceversa" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="transform-pandas-dataframe-to-numpy-array-and-viceversa">Transform Pandas DataFrame to Numpy Array and viceversa</h3>
-<div id="dc6daac6" class="cell" data-execution_count="13">
+<div id="823323f0" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> data6</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(df))</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co"># convert the dataframe to a numpy array</span></span>
@@ -974,7 +974,7 @@ df2:
 </section>
 <section id="sort-data" class="level3">
 <h3 class="anchored" data-anchor-id="sort-data">Sort data</h3>
-<div id="eca04e7c" class="cell" data-execution_count="14">
+<div id="2350bd55" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"sorted after concentration: "</span>,data.sort_values(by<span class="op">=</span><span class="st">"Concentration (M)"</span>, ascending<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>sorted after concentration:              Name Formula  Molecular Weight (g/mol)  Viscosity (mPa·s)  \
@@ -1001,7 +1001,7 @@ df2:
 </section>
 <section id="statistial-analysis" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="statistial-analysis">Statistial Analysis</h3>
-<div id="24c31682" class="cell" data-execution_count="15">
+<div id="c9044672" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"mean of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].mean()) <span class="co"># mean of concentration</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"std of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].std()) <span class="co"># standard deviation of concentration</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"median of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].median()) <span class="co"># median of concentration</span></span>
@@ -1073,7 +1073,7 @@ Name: count, dtype: int64</code></pre>
 <section id="pivot-table" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="pivot-table">Pivot Table</h3>
 <p>Pivot tables are used to summarize and aggregate data inside a dataframe.</p>
-<div id="559be68e" class="cell" data-execution_count="16">
+<div id="0eb04dda" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>data.pivot_table(index<span class="op">=</span><span class="st">"Chemical Type"</span>, columns<span class="op">=</span><span class="st">"Concentration (M)"</span>, values<span class="op">=</span><span class="st">"Molecular Weight (g/mol)"</span>, aggfunc<span class="op">=</span><span class="st">"mean"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <div>

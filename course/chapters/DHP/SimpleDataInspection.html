@@ -264,7 +264,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/DHP/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science</span></a>
+  <a href="../../../course/chapters/DHP/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science in Chemistry and Materials Science</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -444,7 +444,7 @@ window.Quarto = {
 <section id="overview-of-the-data" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="overview-of-the-data">Overview of the Data</h4>
 <p>You can use the <code>head()</code> function to get a quick overview of the first rows of the data.</p>
-<div id="8a09180f" class="cell" data-execution_count="2">
+<div id="0c513847" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(temperature_data,sep<span class="op">=</span><span class="st">';'</span>)</span>
@@ -565,7 +565,7 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.10.16/x64/lib/pyt
 </div>
 </div>
 <p>The <code>describe()</code> function gives you a quick overview of the data distribution.</p>
-<div id="931316eb" class="cell" data-execution_count="3">
+<div id="1ff55609" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -585,7 +585,7 @@ Cell <span class="ansi-green-fg">In[3], line 1</span>
 <section id="missing-data-and-corrupted-data" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="missing-data-and-corrupted-data">Missing Data and Corrupted Data</h4>
 <p>To check if there is missing data in the data set you can use the <code>isna()</code> function.</p>
-<div id="2134b914" class="cell" data-execution_count="4">
+<div id="6ce0d33a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -600,7 +600,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 </div>
 <p>No missing data is found in this case.</p>
 <p>You can check the data type using <code>dtypes</code> function to check if the data is in the correct format.</p>
-<div id="81354bed" class="cell" data-execution_count="5">
+<div id="142a816e" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -613,7 +613,7 @@ Cell <span class="ansi-green-fg">In[5], line 1</span>
 </div>
 </div>
 </div>
-<div id="6b701e35" class="cell" data-execution_count="6">
+<div id="ace6dc76" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -627,7 +627,7 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 </div>
 </div>
 <p>You see that <code>time</code> is an <code>int64</code> and <code>temperature</code> is a <code>float64</code>. For the analysis, you might want to convert the <code>time</code> to a <code>float64</code> as well.</p>
-<div id="be435da0" class="cell" data-execution_count="7">
+<div id="711cda03" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'time'</span>] <span class="op">=</span> data[<span class="st">'time'</span>].astype(<span class="st">'float64'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -640,7 +640,7 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 </div>
 </div>
 </div>
-<div id="d53547cd" class="cell" data-execution_count="8">
+<div id="45b14ae3" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'time'</span>] <span class="op">=</span> data[<span class="st">'time'</span>].astype(<span class="st">'float64'</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -656,7 +656,7 @@ Cell <span class="ansi-green-fg">In[8], line 1</span>
 </div>
 </div>
 <p>If we have missing data we can use the <code>fillna()</code> function to fill the missing data with a specific value.</p>
-<div id="8e11fdbb" class="cell" data-execution_count="9">
+<div id="2532418a" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data.fillna(<span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -669,7 +669,7 @@ Cell <span class="ansi-green-fg">In[9], line 1</span>
 </div>
 </div>
 </div>
-<div id="b2d20a4e" class="cell" data-execution_count="10">
+<div id="ae491605" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data_missing <span class="op">=</span> pd.read_csv(temperature_nan_data, header<span class="op">=</span><span class="va">None</span>, skipinitialspace<span class="op">=</span><span class="va">True</span>, sep<span class="op">=</span><span class="st">' '</span>, names<span class="op">=</span>[<span class="st">'time'</span>, <span class="st">'temperature'</span>])</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data_missing.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -788,7 +788,7 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.10.16/x64/lib/pyt
 </div>
 <p>One value is missing in the <code>temperature</code> column. We fill it with 0.</p>
 <p>First let check where the data is missing.</p>
-<div id="17b9d894" class="cell" data-execution_count="11">
+<div id="36b8e67f" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data[data[<span class="st">'temperature'</span>].isna()]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -818,7 +818,7 @@ Note
 </div>
 </div>
 <p>The time step can be estimated by the difference between the time steps of the previous and the next data point.</p>
-<div id="b9af5708" class="cell" data-execution_count="12">
+<div id="aa94b448" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'time'</span>].diff()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -832,7 +832,7 @@ Cell <span class="ansi-green-fg">In[12], line 1</span>
 </div>
 </div>
 <p>And we can summarize it via:</p>
-<div id="c3e290bf" class="cell" data-execution_count="13">
+<div id="d06e577c" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'time'</span>].diff().value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -845,7 +845,7 @@ Cell <span class="ansi-green-fg">In[13], line 1</span>
 </div>
 </div>
 </div>
-<div id="7546021d" class="cell" data-execution_count="14">
+<div id="6d547a97" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>data_missing[<span class="st">'time'</span>].diff().value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -859,7 +859,7 @@ Cell <span class="ansi-green-fg">In[14], line 1</span>
 </div>
 </div>
 <p>get difference between temperature values</p>
-<div id="0f75b295" class="cell" data-execution_count="15">
+<div id="c47e956f" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data_missing[<span class="dv">10</span>:<span class="dv">30</span>].diff()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -873,7 +873,7 @@ Cell <span class="ansi-green-fg">In[15], line 1</span>
 </div>
 </div>
 <p>The time step is constantly 1 second. The difference between the temperature of the previous and the next data point is at <span class="math inline">\(~10^{-2}\)</span> order. We can assume that in this case the data is consistent enough and we can fill the missing data with the mean of the previous and the next data point.</p>
-<div id="c6802239" class="cell" data-execution_count="16">
+<div id="15be2b13" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'temperature'</span>].fillna((data[<span class="st">'temperature'</span>].shift() <span class="op">+</span> data[<span class="st">'temperature'</span>].shift(<span class="op">-</span><span class="dv">1</span>))<span class="op">/</span><span class="dv">2</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -886,7 +886,7 @@ Cell <span class="ansi-green-fg">In[16], line 1</span>
 </div>
 </div>
 </div>
-<div id="9fa06869" class="cell" data-execution_count="17">
+<div id="e2dcdc90" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>data_missing[<span class="st">'temperature'</span>].fillna((data_missing[<span class="st">'temperature'</span>].shift() <span class="op">+</span> data_missing[<span class="st">'temperature'</span>].shift(<span class="op">-</span><span class="dv">1</span>))<span class="op">/</span><span class="dv">2</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>data_missing[<span class="dv">20</span>:<span class="dv">25</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">

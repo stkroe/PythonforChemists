@@ -264,7 +264,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/DHP/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science</span></a>
+  <a href="../../../course/chapters/DHP/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science in Chemistry and Materials Science</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -447,7 +447,7 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n + \epsilon
 <section id="using-scipy" class="level2">
 <h2 class="anchored" data-anchor-id="using-scipy">Using <code class="unnumbered">scipy</code></h2>
 <p>A easy way is to use <code>scipy</code> library. The <code>scipy</code> library has a function called <code>linregress</code> which can be used to fit a linear regression model. The function returns the slope, intercept, r-value, p-value, and the standard error of the estimate. And with scipy version 1.15.2 also the intercept error.</p>
-<div id="212806cc" class="cell" data-execution_count="1">
+<div id="caa604b0" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> linregress</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -473,12 +473,12 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n + \epsilon
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>tinv <span class="op">=</span> <span class="kw">lambda</span> p, df: <span class="bu">abs</span>(t.ppf(p<span class="op">/</span><span class="dv">2</span>, df))</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"95</span><span class="sc">% c</span><span class="st">onfidence interval: "</span> <span class="op">+</span> <span class="bu">str</span>(intercept <span class="op">-</span> tinv(<span class="fl">0.05</span>, <span class="bu">len</span>(x)<span class="op">-</span><span class="dv">2</span>)<span class="op">*</span>intercept_err) <span class="op">+</span> <span class="st">" to "</span> <span class="op">+</span> <span class="bu">str</span>(intercept <span class="op">+</span> tinv(<span class="fl">0.05</span>, <span class="bu">len</span>(x)<span class="op">-</span><span class="dv">2</span>)<span class="op">*</span>intercept_err))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>slope: 0.220005    intercept: 0.524563
-R-squared: 0.010668
-p-value: 0.868727
-standard error: 1.223212
-Intercept error: 4.056936
-95% confidence interval: -12.386418167225244 to 13.435544068707518</code></pre>
+<pre><code>slope: 0.362839    intercept: -0.444250
+R-squared: 0.046474
+p-value: 0.727659
+standard error: 0.948890
+Intercept error: 3.147111
+95% confidence interval: -10.459762580969615 to 9.57126223233269</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
