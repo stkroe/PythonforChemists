@@ -16,6 +16,7 @@ code-links:
 
 ## Plotting with Seaborn {.unnumbered}
 
+Seaborn is a Python data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Seaborn is built on top of Matplotlib and closely integrated with pandas data structures.
 
 
 ### KDE Plot {.unnumbered}
@@ -29,3 +30,9 @@ code-links:
 
 
 #
+
+- [Regression plot](https://seaborn.pydata.org/generated/seaborn.regplot.html):
+Show a regression model between two variables *e.g.* the relationship between the concentration and the time.
+
+
+[Heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) shows the relationship of two categorical variables with a numerical variable *e.g.* cancer cell survival time for different treatment groups and different cancer types. The color of the cell is proportional to the value of the investigated variable.

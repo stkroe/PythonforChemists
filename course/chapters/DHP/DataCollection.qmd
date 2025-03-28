@@ -20,6 +20,7 @@ execute:
 
 
 ## What is data? {.unnumbered}
+
 Data is a collection of 
 
 - numbers
@@ -107,7 +108,7 @@ Data can be stored in various data formats, such as:
 - Binary files (e.g. HDF5, Parquet, NetCDF,Feather, Pickle, npy, etc.)
 - Databases 
 - chemical and molecular data formats (e.g. XYZ, CIF, PDB, etc.)
-- etc.
+etc.
 
 
 ### Plain Text Files {.unnumbered}
@@ -175,6 +176,7 @@ Here is a list of comparison of binary file formats: [Comparison of data seriali
 ### Databases {.unnumbered}
 
 Databases are designed for big data storage. The advantage of databases is that they can be queried and updated easily. There are different types of databases, such as:
+
 - **[SQL](https://en.wikipedia.org/wiki/SQL)** databases (e.g. SQLite, MySQL, PostgreSQL)
 - **[NoSQL](https://en.wikipedia.org/wiki/NoSQL)** databases (e.g. MongoDB)
 - **[Graph databases](https://en.wikipedia.org/wiki/Graph_database#List_of_graph_databases)**
@@ -308,6 +310,16 @@ What type of data is the heat capacity of a material?
 - d) Nominal
 :::
 
+:::{.callout-note}
+### Question 5
+What type of data is acidity of a solution?
+
+- a) Discrete
+- b) Continuous
+- c) Ordinal
+- d) Nominal
+:::
+
 ::: {.callout-note collapse="true"}
 # Solutions
 
@@ -321,11 +333,15 @@ What type of data is the heat capacity of a material?
 
 ### Question 3
 
-- Correct answer: b) Continuous and c) Ordinal
+- Correct answer: b) Continuous 
 
 ### Question 4
 
-- Correct answer: b) Continuous and c) Ordinal
+- Correct answer: b) Continuous
+
+### Question 5
+
+- Correct answer: b) Continuous
 
 
 :::

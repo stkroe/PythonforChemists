@@ -27,7 +27,7 @@ Each line of code is a command. The computer reads the code from top to bottom a
 First of all some terminology:
 
 | Term | Definition |
-| --- | --- |
+|:---------|:------------|
 | Command | A line of code that tells the computer to do something. |
 | Syntax | The rules that govern how commands are written. |
 | Execute | To run a command. |
@@ -50,6 +50,8 @@ First of all some terminology:
 | Library | A collection of modules. |
 | Package | A collection of related modules. |
 | Script | A file that contains code that can be run independently. |
+:  {tbl-colwidths="[25,75]" .striped .hover}
+
 
 :::{.callout-note}
 ### Example - Hello World

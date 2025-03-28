@@ -65,6 +65,14 @@ This should read the file "file.txt" and print the content to the console
 with open("file.txt", "r") as file: print(file.read()) 
 ```
 
+Write a file with the content "Hello World!" and close it
+
+```{python}
+file = open("file.txt", "w")
+file.write("Hello World!")
+file.close()
+```
+
 ---
 
 # System {.unnumbered}

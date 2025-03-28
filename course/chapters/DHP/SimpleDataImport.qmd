@@ -27,7 +27,7 @@ code-links:
 --- 
 
 
-# Data Reading and Writing {.unnumbered}
+# Data Reading {.unnumbered}
 
 
 ## How do you read the data? {.unnumbered}
@@ -332,7 +332,18 @@ It depends on the data format, the data type and what kind of processing you wan
 :::
 
 
-## Exercises {.unnumbered}
+# Data Writing {.unnumbered}
+
+## Numpy {.unnumbered}
+
+Numpy has one function to write text files.
+
+- `numpy.savetxt()` function is used to write text files.
+
+```{python}
+#| eval: false
+np.savetxt('file.txt', data)
+```
 
 
 

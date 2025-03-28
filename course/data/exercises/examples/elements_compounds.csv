@@ -1,0 +1,20 @@
+# Sample Chemical Data - Unstructured
+Element | AtomicNumber | AtomicMass | Density; MeltingPoint - BoilingPoint
+Iron | 26 | 55.845 | 7.87; 1538 - 2862
+Copper | 29 | 63.546 | 8.96; 1085 - 2562
+Gold, 79, 196.97, 19.32: 1064 - 2856
+Silicon - 14 - 28.085 - 2.33; 1414 : 3265
+Carbon| 6 | 12.011 | 2.26 - Sublimation: 3642
+
+# Compound Data
+Compound; Formula | MolarMass | Density; MP - BP
+Water - H2O | 18.015 | 1.00; 0 - 100
+Ethanol, C2H5OH , 46.07 | 0.789 | 114 - 78.37
+Silica | SiO2, 60.08; 2.65 - 1713 - N/A
+Graphene, C, Variable; 2.267 - Sublimation: 3650
+
+# Notes:
+- Some boiling points (BP) are missing
+- Density units are inconsistent (g/cm³ or unspecified)
+- Different delimiters used within the same row
+- Some values labeled as "Sublimation" instead of a boiling point
