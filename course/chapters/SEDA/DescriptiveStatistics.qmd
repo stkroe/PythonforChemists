@@ -1,0 +1,110 @@
+---
+title: "Descriptive Statistics and Analysis"
+execute: 
+  echo: True
+  eval: True
+other-links: 
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/DescriptiveStatistics.ipynb"
+        icon: "journal"
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/DescriptiveStatistics.ipynb"
+        icon: "laptop"
+--- 
+
+
+## Descriptive Statistics and Analysis{.unnumbered}
+
+
+
+
+Descriptive statistics summarize and analyze datasets by providing measures of central tendency, dispersion, and correlation. These statistics help in understanding the underlying patterns in chemical and materials science data.
+
+- **Measures of Central Tendency:** Mean, median, and mode provide insights into the average or most common values in the dataset.
+- **Variability:** Variance, standard deviation, and interquartile range (IQR) measure how spread out the data is.
+- **Correlation & Covariance:** Determine relationships between two or more variables, useful for identifying dependencies in experimental data.
+- **Summary Statistics:** Using Pandas, scientists can quickly summarize large datasets.
+
+
+
+### Numpy {.unnumbered}
+
+
+- `np.mean(a)` returns the **mean** of the elements of an array
+- `np.average(a)` returns the **weighted average** of the elements of an array
+- `np.max(a)` returns the **maximum** of the elements of an array
+- `np.min(a)` returns **the minimum** of the elements of an array
+- `np.std(a)` returns **the standard** deviation of the elements of an array
+- `np.var(a)` returns **the variance** of the elements of an array
+- `np.covar(a)` returns the **covariance** of the elements of an array
+- `np.median(a)` returns the **median** of the elements of an array
+- `np.percentile(a,p) `` returns the **p-th percentile** of the elements of an array
+- `np.histogram(a, [,bins,range,density,weights])` returns the **histogram** of the elements of an array
+
+
+- `np.argmin(a)` returns the **index of the minimum** element of an array
+- `np.argmax(a)` returns the **index of the maximum** element of an array
+- `np.where(a)` returns the **indices of the elements** of an array that are non-zero
+- `np.argwhere(a)` returns the **indices of the elements** of an array that are non-zero
+- `np.nonzero(a)` returns the **indices of the elements** of an array that are non-zero
+- `np.searchsorted(a,v)` returns the **index of the first element** of an array <br> 
+    **that is greater than or equal to a value**
+- `np.extract(condition,a)` returns the **elements of an array that satisfy a condition**
+
+
+
+```{python}
+arr = np.array([1, 2, 3, 4, 5, 4, 7, 8, 9])
+print(arr)
+print("Index of the maximum element: ", np.argmax(arr))
+print("Index of the minimum element: ", np.argmin(arr))
+print("Maximum element: ", np.max(arr))
+print("Minimum element: ", np.min(arr))
+print("Find the index of element \"4\": ", np.where(arr == 4))
+print("Find the index of element \">4\": ", np.argwhere(arr > 4),
+       " and the elements are: ", arr[np.where(arr > 4)])
+```
+
+
+
+### Pandas {.unnumbered}
+
+```{python}
+import pandas as pd
+data = pd.DataFrame({
+    "Name": ["Water", "Sulfuric Acid", "Ethanol", "Acetone", "Ammonia", "Benzene", "Methanol", "Glycerol"],
+    "Formula": ["H2O", "H2SO4", "C2H5OH", "C3H6O", "NH3", "C6H6", "CH3OH", "C3H8O3"],
+    "Molecular Weight (g/mol)": [18.015, 98.079, 46.07, 58.08, 17.03, 78.11, 32.04, 92.09],
+    "Viscosity (mPa·s)": [1.002, 24.0, 1.2, 0.32, 0.26, 0.65, 0.544, 1412],
+    "pH (Acidity)": [7, 1, 7.33, 7, 11.6, 7, 7.4, 5.5],
+    "Chemical Type": ["Inorganic", "Acid", "Alcohol", "Ketone", "Base", "Aromatic Hydrocarbon", "Alcohol", "Polyol"],
+    "Concentration (M)": [55.5, 18.0, 1.0, 0.8, 0.5, 0.1, 1.5, 1.2]})
+```
+
+
+
+```{python}
+print("mean of concentration: \n", data["Concentration (M)"].mean()) # mean of concentration
+print("std of concentration: \n", data["Concentration (M)"].std()) # standard deviation of concentration
+print("median of concentration: \n", data["Concentration (M)"].median()) # median of concentration
+print("max of concentration: \n", data["Concentration (M)"].max()) # max of concentration
+print("min of concentration: \n", data["Concentration (M)"].min()) # min of concentration
+print("sum of concentration: \n", data["Concentration (M)"].sum()) # sum of concentration
+print("Statisical summary: \n", data.describe()) # statistical summary
+# mean of concentration group by type
+print("Mean of concentration group by type: \n", data.groupby("Chemical Type")["Concentration (M)"].mean()) 
+# count the chemicals with different concentration
+print("Count the chemicals with the different concentrations \n", data["Concentration (M)"].value_counts())
+```
+
+
+### Pivot Table {.unnumbered}
+
+Pivot tables are used to summarize and aggregate data inside a dataframe.
+
+```{python}
+data.pivot_table(index="Chemical Type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean") 
+```
+
+## Example {.unnumbered}

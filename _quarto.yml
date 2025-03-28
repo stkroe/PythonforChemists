@@ -49,16 +49,24 @@ book:
           - course/chapters/DHP/SimpleDataImport.qmd
           - course/chapters/DHP/SimpleDataInspection.qmd
          
-      - part: "Simple Plotting"
+      - part: "Data Visualization 1 "
         chapters:
           - course/chapters/Plots/DataVisualization.qmd
           - course/chapters/Plots/SimplePlots.qmd
+          - course/chapters/Plots/Seaborn.qmd
           - course/exercises/exercises/exercise1.ipynb
       - part: "Statistical and Exploratory Data Analysis"
         chapters:
           - course/chapters/SEDA/SimpleDataManipulation.qmd
-          - course/chapters/SEDA/SimpleDataModels.qmd
+          - course/chapters/SEDA/DescriptiveStatistics.qmd
+          - course/chapters/SEDA/DataModels.qmd
           - course/chapters/SEDA/ModelTesting.qmd
+          - course/chapters/SEDA/MultivariantAnalysiss.qmd
+      - part: "Data Visualization 2"
+        chapters:
+          - course/chapters/Plots/PlotTypes.qmd
+          - course/chapters/Plots/AdvancedPlots.qmd
+          - course/chapters/Plots/InteractivePlots.qmd
       - part: "Spectroscopy and Image Data"
         chapters:
           - course/chapters/SID/Spectroscopy.qmd

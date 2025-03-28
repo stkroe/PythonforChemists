@@ -1,11 +1,15 @@
 ---
-title: "Simple Data Manipulation and Analysis"
+title: "Data Manipulation"
 execute: 
   echo: True
   eval: True
+other-links: 
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/DataManipulation.ipynb"
+        icon: "journal"
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataManipulation.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/DataManipulation.ipynb"
         icon: "laptop"
 --- 
 
@@ -74,16 +78,6 @@ print("flatten array: \n", c.flatten())
 - `np.linalg.det(a)` returns the **determinant of a matrix**
 - `np.linalg.eig(a)` returns the **eigenvalues and eigenvectors** of a matrix
 - `np.linalg.solve(a,b)` returns the **solution of a linear system of equations**
-- `np.mean(a)` returns the **mean** of the elements of an array
-- `np.average(a)` returns the **weighted average** of the elements of an array
-- `np.max(a)` returns the **maximum** of the elements of an array
-- `np.min(a)` returns **the minimum** of the elements of an array
-- `np.std(a)` returns **the standard** deviation of the elements of an array
-- `np.var(a)` returns **the variance** of the elements of an array
-- `np.covar(a)` returns the **covariance** of the elements of an array
-- `np.median(a)` returns the **median** of the elements of an array
-- `np.percentile(a,p) `` returns the **p-th percentile** of the elements of an array
-- `np.histogram(a, [,bins,range,density,weights])` returns the **histogram** of the elements of an array
 
 ```{python}
 a = np.array([[1, 2],[3, 4],[5, 6]])
@@ -94,32 +88,11 @@ c = np.add(a,b) # element wise addition
 print("Element wise addition: ", c)
 ```
 
-- `np.argmin(a)` returns the **index of the minimum** element of an array
-- `np.argmax(a)` returns the **index of the maximum** element of an array
-- `np.where(a)` returns the **indices of the elements** of an array that are non-zero
-- `np.argwhere(a)` returns the **indices of the elements** of an array that are non-zero
-- `np.nonzero(a)` returns the **indices of the elements** of an array that are non-zero
-- `np.searchsorted(a,v)` returns the **index of the first element** of an array <br> 
-    **that is greater than or equal to a value**
-- `np.extract(condition,a)` returns the **elements of an array that satisfy a condition**
 
-```{python}
-arr = np.array([1, 2, 3, 4, 5, 4, 7, 8, 9])
-print(arr)
-print("Index of the maximum element: ", np.argmax(arr))
-print("Index of the minimum element: ", np.argmin(arr))
-print("Maximum element: ", np.max(arr))
-print("Minimum element: ", np.min(arr))
-print("Find the index of element \"4\": ", np.where(arr == 4))
-print("Find the index of element \">4\": ", np.argwhere(arr > 4),
-       " and the elements are: ", arr[np.where(arr > 4)])
-```
 
 
 ## Pandas {.unnumbered}
 
-
-### Get information about the data {.unnumbered}
 
 ```{python}
 import pandas as pd
@@ -218,29 +191,4 @@ print("df2: \n", df2)
 
 ```{python}
 print("sorted after concentration: ",data.sort_values(by="Concentration (M)", ascending=True))
-```
-
-### Statistial Analysis {.unnumbered}
-
-```{python}
-print("mean of concentration: \n", data["Concentration (M)"].mean()) # mean of concentration
-print("std of concentration: \n", data["Concentration (M)"].std()) # standard deviation of concentration
-print("median of concentration: \n", data["Concentration (M)"].median()) # median of concentration
-print("max of concentration: \n", data["Concentration (M)"].max()) # max of concentration
-print("min of concentration: \n", data["Concentration (M)"].min()) # min of concentration
-print("sum of concentration: \n", data["Concentration (M)"].sum()) # sum of concentration
-print("Statisical summary: \n", data.describe()) # statistical summary
-# mean of concentration group by type
-print("Mean of concentration group by type: \n", data.groupby("Chemical Type")["Concentration (M)"].mean()) 
-# count the chemicals with different concentration
-print("Count the chemicals with the different concentrations \n", data["Concentration (M)"].value_counts())
-```
-
-
-### Pivot Table {.unnumbered}
-
-Pivot tables are used to summarize and aggregate data inside a dataframe.
-
-```{python}
-data.pivot_table(index="Chemical Type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean") 
 ```

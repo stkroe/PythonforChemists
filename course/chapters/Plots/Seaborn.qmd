@@ -1,0 +1,17 @@
+---
+title: "Seaborn Plots"
+execute: 
+  echo: True
+  eval: True
+other-links: 
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/Seaborn.ipynb"
+        icon: "journal"
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Seaborn.ipynb"
+        icon: "laptop"
+--- 
+
+
+## Plotting with Seaborn {.unnumbered}

@@ -4,9 +4,13 @@ execute:
     echo: true
     eval: true
     error: true
+other-links:     
+    - text: "Download Code"
+      href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/notebooks/Basics.ipynb"
+      icon: "journal"
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Python/Basics.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Basics.ipynb"
         icon: "laptop"
 ---
 

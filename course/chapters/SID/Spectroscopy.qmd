@@ -1,0 +1,16 @@
+---
+title: "Analysis of Spectroscopy Data"
+execute: 
+  echo: True
+  eval: True
+other-links: 
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/Spectroscopy.ipynb"
+        icon: "journal"
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Spectroscopy.ipynb"
+        icon: "laptop"
+--- 
+
+##   Spectroscopy Data Analysis {.unnumbered}

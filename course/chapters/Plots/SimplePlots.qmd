@@ -1,18 +1,16 @@
 ---
 title: "Basic Data Visualization Techniques"
-format: live-html
-engine: jupyter
-pyodide:
-  packages:
-    - matplotlib
-    - numpy
-    - seaborn
-  cell-options:
-    edit: false
-    runbutton: true
+execute: 
+  echo: True
+  eval: True
+  error: True
+other-links: 
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/SimplePlots.ipynb"
+        icon: "journal"
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/Lecture1/SimplePlot.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimplePlot.ipynb"
         icon: "laptop"
 ---
 
@@ -224,7 +222,7 @@ viewof space_w = Inputs.range(
 )
 ```
 
-```{pyodide}
+```{python}
 #| edit: False
 #| runbutton: True
 #| input:

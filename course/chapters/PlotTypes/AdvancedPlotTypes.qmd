@@ -1,0 +1,20 @@
+---
+title: "Advanced Plot Types"
+execute: 
+  echo: True
+  eval: True
+other-links: 
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/AdvancedPlotTypes.ipynb"
+        icon: "journal"
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/AdvancedPlotTypes.ipynb"
+        icon: "laptop"
+--- 
+
+
+## PCA Plot {.unnumberd}
+
+
+## 3D Plot {.unnumberd}

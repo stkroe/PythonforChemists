@@ -3,9 +3,13 @@ title: "Simple Plot Types"
 execute: 
   echo: True
   eval: True
+other-links: 
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/SimplePlotTypes.ipynb"
+        icon: "journal"
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimplePlotTypes.ipynb"
         icon: "laptop"
 --- 
 ## Relationship plots

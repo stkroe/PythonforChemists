@@ -1,47 +1,23 @@
 ---
-title: "Statistical Analysis & EDA"
+title: "Model Testing"
 execute: 
   echo: True
   eval: True
   error: True
+other-links: 
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/ModelTesting.ipynb"
+        icon: "journal"
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataImport.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/ModelTesting.ipynb"
         icon: "laptop"
 --- 
 
-### **1. Descriptive Statistics (**``**)**
 
-#### **Overview:**
 
-Descriptive statistics summarize and analyze datasets by providing measures of central tendency, dispersion, and correlation. These statistics help in understanding the underlying patterns in chemical and materials science data.
+### Hypothesis Testing  {.unnumbered}
 
-- **Measures of Central Tendency:** Mean, median, and mode provide insights into the average or most common values in the dataset.
-- **Variability:** Variance, standard deviation, and interquartile range (IQR) measure how spread out the data is.
-- **Correlation & Covariance:** Determine relationships between two or more variables, useful for identifying dependencies in experimental data.
-- **Summary Statistics:** Using Pandas, scientists can quickly summarize large datasets.
-
-#### **Code Example:**
-
-```python
-import pandas as pd
-import numpy as np
-
-# Sample dataset
-data = pd.DataFrame({
-    'Sample': ['A', 'B', 'C', 'D', 'E'],
-    'Property': [10.2, 14.5, 13.3, 9.8, 12.7]
-})
-
-# Descriptive statistics
-print(data.describe())
-```
-
----
-
-### **2. Hypothesis Testing (**``**)**
-
-#### **Overview:**
 
 Hypothesis testing is a statistical method for making decisions or inferences about a population based on a sample. It is widely used in chemistry and materials science to validate experimental results and compare datasets.
 
@@ -50,7 +26,7 @@ Hypothesis testing is a statistical method for making decisions or inferences ab
 - **ANOVA (Analysis of Variance):** Compares means of multiple groups to check for significant differences.
 - **Chi-square Test:** Used for categorical data to examine associations between different groups.
 
-#### **Code Example:**
+
 
 ```python
 from scipy import stats
@@ -63,66 +39,5 @@ group2 = [9.5, 13.1, 12.9, 8.7, 11.3]
 t_stat, p_value = stats.ttest_ind(group1, group2)
 print(f"T-statistic: {t_stat}, P-value: {p_value}")
 ```
-
 ---
 
-### **3. Principal Component Analysis (PCA) (**``**)**
-
-#### **Overview:**
-
-Principal Component Analysis (PCA) is a dimensionality reduction technique used to simplify complex datasets while retaining most of the variance. It is widely applied in spectroscopy, crystallography, and material property analysis.
-
-- **Why Use PCA?** Reduces noise and redundancy in large datasets.
-- **Eigenvalues & Eigenvectors:** Determine principal components that explain the most variance.
-- **Interpretation:** PCA helps visualize multi-dimensional data in 2D or 3D spaces.
-- **Applications in Materials Science:** PCA can extract significant features from spectral or compositional data, aiding in classification and clustering.
-
-#### **Code Example:**
-
-```python
-from sklearn.decomposition import PCA
-import matplotlib.pyplot as plt
-
-# Sample dataset
-X = np.random.rand(10, 3)
-pca = PCA(n_components=2)
-X_pca = pca.fit_transform(X)
-
-# Plot PCA results
-plt.scatter(X_pca[:, 0], X_pca[:, 1])
-plt.xlabel('PC1')
-plt.ylabel('PC2')
-plt.title('PCA Analysis')
-plt.show()
-```
-
----
-
-### **4. Clustering Techniques (**``**)**
-
-#### **Overview:**
-
-Clustering is an unsupervised learning technique used to group similar data points based on patterns. In chemistry and materials science, clustering helps in categorizing material properties, identifying experimental trends, and classifying samples.
-
-- **k-Means Clustering:** Partitions data into k clusters based on similarity.
-- **Hierarchical Clustering:** Builds a tree of clusters using agglomerative or divisive methods.
-- **Applications:** Clustering can classify unknown chemical samples, group materials with similar thermal or mechanical properties, and aid in phase identification in materials research.
-
-#### **Code Example:**
-
-```python
-from sklearn.cluster import KMeans
-
-# Example dataset
-X = np.random.rand(20, 2)
-kmeans = KMeans(n_clusters=3)
-kmeans.fit(X)
-labels = kmeans.labels_
-
-# Plot Clusters
-plt.scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis')
-plt.title('K-Means Clustering')
-plt.show()
-```
-
----
