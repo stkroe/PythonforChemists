@@ -1,13 +1,16 @@
-
 ---
 title: "Python Intermediate"
 execute:
     echo: true
     eval: true
     error: true
+other-links:     
+    - text: "Download Code"
+      href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/notebooks/Intermediate.ipynb"
+      icon: "journal"
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Python/Intermediate.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Intermediate.ipynb"
         icon: "laptop"
 ---
 

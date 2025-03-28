@@ -62,6 +62,7 @@ Mostly used function is `pandas.read_csv()` because you can specify the delimite
 
 ```{python}
 #| echo: false
+#| eval: true
 temperature_data = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.csv"
 temperature_nan_data ="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.csv"
 temperature_dat = "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.dat"

@@ -63,11 +63,11 @@ You can download it or run it directly in Google Colab.
 
 
 
-# Using Jupyter Notebooks in VS Code {.unnumbered}
+## Using Jupyter Notebooks in VS Code {.unnumbered}
 
 ![VS Code](https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/images/ipynb-vscode.png)
 
-## Difference Between Jupyter Notebooks and Python Scripts
+### Difference Between Jupyter Notebooks and Python Scripts
 
 - **Interactivity**: Jupyter Notebooks allow you to run code in chunks (cells) and see the output immediately, making them ideal for experimentation and visualization. Python scripts (`.py` files) are typically executed all at once.
 - **Documentation**: Notebooks support Markdown cells for adding rich text, equations, and images alongside your code. Python scripts are plain text files and require comments for documentation.
@@ -75,7 +75,7 @@ You can download it or run it directly in Google Colab.
 
 
 
-# Google Colab Tutorial
+## Google Colab Tutorial
 
 Google Colab is a free, cloud-based platform that allows you to run Jupyter Notebooks without any setup. To get started with Google Colab:
 
@@ -101,13 +101,13 @@ Upload data on Google Colab:
 from google.colab import files
 ```
 
-# Upload a file
+### Upload a file
 ```{python}
 #| eval: false
 uploaded = files.upload()
 ```
 
-# Access the uploaded file
+### Access the uploaded file
 ```{python}
 #| eval: false
 for filename in uploaded.keys():

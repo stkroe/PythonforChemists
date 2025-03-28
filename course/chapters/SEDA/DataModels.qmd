@@ -1,14 +1,18 @@
 ---
-title: "Simple Data Models"
+title: "Inferential Statistics"
 execute: 
   echo: True
   eval: True
+other-links: 
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/SimpleDataModels.ipynb"
+        icon: "journal"
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataModelling.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataModels.ipynb"
         icon: "laptop"
 --- 
-
+# Data Models {.unnumbered}
 ## Linear Regression {.unnumbered}
 
 Often we want to find a model which can explain the data.
@@ -25,7 +29,7 @@ where $y$ is the target variable, $x_1, x_2, \ldots, x_n$ are the features, $\be
 
 In `python` there exists serveral libraries which can be used to fit a linear regression model.
 
-## Using `scipy`{.unnumbered}
+### Using `scipy`{.unnumbered}
 
 A easy way is to use `scipy` library. The `scipy` library has a function called `linregress` which can be used to fit a linear regression model. The function returns the slope, intercept, r-value, p-value, and the standard error of the estimate. And with scipy version 1.15.2 also the intercept error.
 
@@ -70,12 +74,10 @@ print(results.intercept_stderr)
 ```
 :::
 
-## Using `scikit-learn` {.unnumbered}
+### Using `scikit-learn` {.unnumbered}
 One of the most popular libraries is `scikit-learn`. The following code shows how to fit a linear regression model using `scikit-learn`:
 
 
-
-## Using `scikit-learn`
 ```python
 from sklearn.linear_model import LinearRegression
 import numpy as np
@@ -99,7 +101,7 @@ plt.legend()
 plt.show()
 ```
 
-## Using `statsmodels`
+### Using `statsmodels`
 ```python
 import statsmodels.api as sm
 
@@ -108,10 +110,10 @@ model = sm.OLS(y, X_with_const).fit()
 print(model.summary())
 ```
 
-# Non-Linear Fits
+## Non-Linear Fits
 Linear regression may not always be sufficient, especially for complex relationships. Non-linear models provide more flexibility.
 
-## Polynomial Regression
+### Polynomial Regression
 ```python
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline
@@ -126,7 +128,7 @@ plt.legend()
 plt.show()
 ```
 
-## Curve Fitting with `scipy`
+### Curve Fitting with `scipy`
 ```python
 from scipy.optimize import curve_fit
 
@@ -143,3 +145,5 @@ plt.plot(X_range, y_fit, color='purple', label='Non-Linear Fit')
 plt.legend()
 plt.show()
 ```
+
+
