@@ -88,7 +88,7 @@ c = np.add(a,b) # element wise addition
 print("Element wise addition: ", c)
 ```
 
-
+---
 
 
 ## Pandas {.unnumbered}

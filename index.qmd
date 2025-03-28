@@ -1,4 +1,4 @@
-ç# Overview
+# Overview
 
 Welcome to the Data Analysis and Visualization Course for Chemists and Material Scientists! This course is designed for better understanding how Python can be used for data analysis and visualization in the fields of chemistry and materials science. Before diving into the course content, please take a moment to review the following important informations.
 
@@ -8,6 +8,7 @@ This website is under construction and continuous development. The content provi
 Please read the [license](informations/license.qmd), [privacy policy](informations/privacy.qmd), and [disclaimers](informations/disclaimer.qmd) of this website.
 
 :::
+---
 
 :::{.callout-warning collapse="true"}
 ## Prequisits {.unnumbered}
@@ -16,6 +17,7 @@ It is suggested that you have a basic understanding of Python or a comparable pr
 Further this course will not going in detail of fundamental statistical principles. This is assumed as fullfilled prequirements beforehand of this course.
 :::
 
+---
 ## Who is the course for? {.unnumbereds}
 
 This course has been designed for persons who are looking to undertake a specialised data visualization and analyzing course in Python with a particular focus the field of chemistry and materials science. The course tries to be interactivley with practical examples.
@@ -29,6 +31,8 @@ This course has been designed for persons who are looking to undertake a special
 - Upon successful completion of this course, participants will have acquired a comprehensive understanding of the fundamental components of Python and the key packages necessary for the analysis and presentation of their own research data.
 - You can test your knowledge by an exam example at the end of this course.
 
+---
+
 ## What can you NOT expect from this course {.unnumbered}
 - You will not get a deep explanation of the Python language. Please consider full Python tutorials for get a deep overview of Python.
 - You will not learn object-oriented programming in Python.
@@ -37,7 +41,7 @@ This course has been designed for persons who are looking to undertake a special
 
 The aim of this course should be that you get an idea how Python can be use for data analyzing and visualization in chemistry and material science field. 
 
-
+---
 
 ## How this course is structured {.unnumbered}
 
@@ -52,6 +56,13 @@ Each lecture includes examples related to chemistry and material science. At the
 **Comprehensive Exam**
 
 At the very end of the course, there is a comprehensive exam which covers a complete data analyis and visualization example.
+
+:::{.callout-important}
+It is recommended to try out every lecture and exercise to get the most out of this course.
+You can download each interactive notebook and run it on your local machine or use the provided Google Colab links to run the notebooks in the cloud.
+:::
+
+---
 
 ##  This course within of the "VU Data Science and Visualization Primer for Chemists and Material Scientists"
 

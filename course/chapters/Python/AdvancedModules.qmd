@@ -23,6 +23,8 @@ More information can be found at the [Scipy website](https://www.scipy.org/).
 
 Later on we will see how to use Scipy for statistical calculations and for anlaysis of spectra.
 
+---
+
 ## Scikit-learn {.unnumbered}
 
 Scikit-learn is a library for **machine learning**. It includes modules for classification, regression, clustering, dimensionality reduction, model selection and preprocessing.
@@ -30,6 +32,8 @@ Scikit-learn is a library for **machine learning**. It includes modules for clas
 More information can be found at the [Scikit-learn website](https://scikit-learn.org/stable/).
 
 Later on we will see how to use Scikit-learn for classification and regression.
+
+---
 
 ## Seaborn {.unnumbered}
 

@@ -14,7 +14,14 @@ code-links:
 --- 
 
 
+- [Network plot](https://networkx.org/documentation/stable/auto_examples/index.html):
+It is used to show the relationship between different nodes. It is used to show the relationship between different entities *e.g.*  protein-protein interaction network [PPI](http://www.ncbi.nlm.nih.gov/pmc/articles/pmc4017556/).
+
+
+
+
 ## PCA Plot {.unnumberd}
 
+---
 
 ## 3D Plot {.unnumberd}

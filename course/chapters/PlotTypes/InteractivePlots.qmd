@@ -18,9 +18,15 @@ code-links:
 
 ### Matplotlib {.unnumbered}
 
+---
+
 ### Plotly {.unnumbered}
 
+---
+
 ### Bokeh {.unnumbered}
+
+---
 
 ### Altair {.unnumbered}
 

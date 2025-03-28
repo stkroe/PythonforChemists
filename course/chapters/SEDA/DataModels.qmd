@@ -109,6 +109,7 @@ X_with_const = sm.add_constant(X)  # Add intercept term
 model = sm.OLS(y, X_with_const).fit()
 print(model.summary())
 ```
+---
 
 ## Non-Linear Fits
 Linear regression may not always be sufficient, especially for complex relationships. Non-linear models provide more flexibility.

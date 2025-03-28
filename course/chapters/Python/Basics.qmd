@@ -19,6 +19,7 @@ This will be a very fast and basic start into coding with Python.
 
 
 # Elemental Syntax{.unnumbered}
+
 ## Comands{.unnumbered}
 
 Each line of code is a command. The computer reads the code from top to bottom and executes each command in succession order. 
@@ -51,7 +52,7 @@ First of all some terminology:
 | Script | A file that contains code that can be run independently. |
 
 :::{.callout-note}
-# Example - Hello World
+### Example - Hello World
 `print` is a command that tells the computer to display the text or variable that follows it. 
 :::
 
@@ -90,7 +91,7 @@ Pay attention to not mix tabs and spaces in your code.
 
 
 :::{.callout-note}
-# Example - Wrong Indentation
+### Example - Wrong Indentation
 :::
 
 Try it out:
@@ -143,7 +144,7 @@ print(a[3])
 
 
 :::{.callout-tip collapse="true"}
-# Solution 
+### Solution 
 The error message tells you that you are trying to access an index that is out of range.
 :::
 
@@ -165,6 +166,7 @@ You can document your code for example by pydoc
 """
 ```
 
+---
 
 # Modules {.unnumbered}
 
@@ -189,7 +191,7 @@ from matplotlib import pyplot as plt
 # the library pyplot is imported from matplotlib module
 ```
 
-
+---
 
 # Variables {.unnumbered}
 
@@ -206,6 +208,8 @@ print(1, " is an", type(a))
 print(b, " is a", type(b))
 
 ```
+
+---
 
 # Data Types {.unnumbered}
 
@@ -308,6 +312,9 @@ f = float(x)
 print(f,type(f))
 ```
 
+
+---
+
 # Lists {.unnumbered}
 
 
@@ -361,7 +368,7 @@ l[-1]
 
 ```
 
-
+---
 
 # Mutable and Immutable Objects {.unnumbered}
 
@@ -438,6 +445,8 @@ print("a:",a)
 print("b:",b)
 ```
 
+---
+
 # String Formatting {.unnumbered}
 
 
@@ -483,6 +492,7 @@ print("This is an example of using format() \
 method with named arguments {a} {b}".format(a=a, b=b))
 ```
 
+---
 
 # Operators {.unnumbered}
 
@@ -522,6 +532,8 @@ print("float multiplication: ", a*b, " type: ", type(a*b))
 print("integer multiplication: ", b*c, " type: ", type(b*c))
 print("exponentiation: ", a**2)
 ```
+
+---
 
 # Control Structures {.unnumbered}
 
@@ -661,22 +673,25 @@ def multiple_return_value(x,a,b):
 print(multiple_return_value(x,5,10)[0],multiple_return_value(x,5,10)[1])
 ```
 
+---
+
 ## Style guideline for writing python code {.unnumbered}
 
 
 For writing a readable code, it is important to follow a style guideline. <br>
 The most common style guideline for Python is [PEP 8](https://www.python.org/dev/peps/pep-0008/). <br>
 
+---
 
 # Exercises {.unnumbered}
 Download it locally and try to solve the exercises. <br>
 
-[Basic Python](https://github.com/stkroe/PythonforChemists/blob/main/course/exercises/notebooks/student/BasicExercises.ipynb)
+[Basic Python](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/student/BasicExercises.ipynb)
 
 
 Or open it in `Google Colab`:
 
-[Basic Python](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/exercises/notebooks/student/BasicExercises.ipynb)
+[Basic Python](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/student/BasicExercises.ipynb)
 
 
 

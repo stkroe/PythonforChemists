@@ -32,7 +32,7 @@ x = np.linspace(0, 10, 100)
 y = np.sin(x)
 ```
 
-
+---
 
 ### 2. Plot the data points. {.unnumbered}
 
@@ -57,6 +57,8 @@ plt.show()
 plt.plot(x, y)
 plt.show()
 ```
+
+---
 
 ### 3. Adjust the plot. {.unnumbered}
 
@@ -92,6 +94,8 @@ plt.plot(x, 2*y, color='green', linestyle='dotted', linewidth=2, marker='x',
 plt.legend()
 plt.show()
 ```
+
+---
 
 ### 4. Adust the figure {.unnumbered}
 
@@ -133,6 +137,9 @@ plt.grid(linewidth=0.1)# set the grid linewidth
 plt.legend(loc='upper left') # set the location of the legend: upper left, upper right, lower left, lower right
 plt.show()
 ```
+
+---
+
 
 ### Creating multiple plots {.unnumbered}
 

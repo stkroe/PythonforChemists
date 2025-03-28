@@ -15,3 +15,17 @@ code-links:
 
 
 ## Plotting with Seaborn {.unnumbered}
+
+
+
+### KDE Plot {.unnumbered}
+[Kernel density plot](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) show the distribution of a single variable *e.g.* distribution of a mass of individuals in a population. The data is smoothed by a kernel density and the density of the data is plotted continuously.
+
+### Violin Plot {.unnumbered}
+
+- [Violin plot](https://seaborn.pydata.org/generated/seaborn.violinplot.html): Show the distribution of a numerical variable for different categories. It is similar to a box plot but it also shows the probability density of the data at different values. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.
+
+## Correlation plots {.unnumbered}
+
+
+#
