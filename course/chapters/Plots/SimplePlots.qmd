@@ -141,7 +141,7 @@ plt.show()
 ---
 
 
-### Creating multiple plots {.unnumbered}
+## Creating multiple plots {.unnumbered}
 
 You can create multiple plots in the same figure by using the `subplot()` function.
 
@@ -190,7 +190,50 @@ subR.suptitle('Right subfigure')
 ```
 
 
-Let`s try to create 4x3 subplots with specific adjustments.
+### Subfigures and Gridspec
+
+You can also create subfigures and gridspecs to create more complex layouts.
+
+```{python}
+from matplotlib.gridspec import GridSpec
+from matplotlib import pyplot as plt
+import numpy as np
+
+```
+
+```{python}
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+fig, ax = plt.subplots(3,2, figsize=(2,3), dpi=96, sharex=True, sharey=True, constrained_layout=True,gridspec_kw={'hspace': 0.5, 'wspace': 0.5})
+
+for i in range(3):
+    for j in range(2):
+        ax[i,j].plot(x, y*(i+1)*(j+1))
+
+plt.show()
+
+```
+
+```{python}
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+fig = plt.figure(figsize=(8, 6), dpi=100)
+gs = GridSpec(3, 2, figure=fig, hspace=0.4, wspace=0.1)
+
+for i in range(3):
+    for j in range(2):
+        ax = fig.add_subplot(gs[i, j])
+        ax.plot(x, y*(i+1)*(j+1))
+        ax.set_title(f'Plot {i+1}, {j+1}')
+
+plt.show()
+
+```
+
+
+<!-- Let`s try to create 4x3 subplots with specific adjustments.
 
 - `plt.subplots(4, 3)`: create 4x3 subplots
 - `figsize=(3, 4)`: set the figure size to 3x4 inches
@@ -254,7 +297,7 @@ for i in range(3):
 
 plt.show()
 
-```
+``` -->
 
 
 
