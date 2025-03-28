@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Simple Data Inspection – Data Analysis and Visualization for Chemists and Material Scientists</title>
+<title>Advanced Plot Types – Data Analysis and Visualization for Chemists and Material Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,52 +20,18 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../course/chapters/Plots/DataVisualization.html" rel="next">
-<link href="../../../course/chapters/DHP/SimpleDataImport.html" rel="prev">
+<link href="../../../course/chapters/PlotTypes/InteractivePlots.html" rel="next">
+<link href="../../../course/chapters/PlotTypes/SimplePlotTypes.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -104,42 +70,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Simple Data Inspection – Data Analysis and Visualization for Chemists and Material Scientists">
-<meta property="og:description" content="">
+<meta property="og:title" content="Advanced Plot Types – Data Analysis and Visualization for Chemists and Material Scientists">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
 
@@ -152,7 +85,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/DHP/DataCollection.html">Data Handling and Preprocessing</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/DHP/SimpleDataInspection.html"><span class="chapter-title">Simple Data Inspection</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/PlotTypes/SimplePlotTypes.html">Data Visualization 2</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/PlotTypes/AdvancedPlotTypes.html"><span class="chapter-title">Advanced Plot Types</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -258,13 +191,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Data Handling and Preprocessing</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../course/chapters/DHP/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science in Chemistry and Materials Science</span></a>
@@ -277,7 +210,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/DHP/SimpleDataInspection.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Simple Data Inspection</span></a>
+  <a href="../../../course/chapters/DHP/SimpleDataInspection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Inspection</span></a>
   </div>
 </li>
       </ul>
@@ -351,13 +284,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Data Visualization 2</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../course/chapters/PlotTypes/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
@@ -365,7 +298,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/PlotTypes/AdvancedPlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Plot Types</span></a>
+  <a href="../../../course/chapters/PlotTypes/AdvancedPlotTypes.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Advanced Plot Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -443,22 +376,17 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#inspection-of-data" id="toc-inspection-of-data" class="nav-link active" data-scroll-target="#inspection-of-data">Inspection of Data</a>
-  <ul class="collapse">
-  <li><a href="#numpy" id="toc-numpy" class="nav-link" data-scroll-target="#numpy">Numpy</a></li>
-  <li><a href="#pandas" id="toc-pandas" class="nav-link" data-scroll-target="#pandas">Pandas</a></li>
-  </ul></li>
-  <li><a href="#example-data-import-and-inspection" id="toc-example-data-import-and-inspection" class="nav-link" data-scroll-target="#example-data-import-and-inspection">Example: Data Import and Inspection</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#pca-plot" id="toc-pca-plot" class="nav-link active" data-scroll-target="#pca-plot">PCA Plot</a></li>
+  <li><a href="#d-plot" id="toc-d-plot" class="nav-link" data-scroll-target="#d-plot">3D Plot</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/DHP/SimpleDataInspection.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.csv"><i class="bi bi-filetype-csv"></i>Data tempearture_data</a></li><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.csv"><i class="bi bi-filetype-csv"></i>Data temperature_nan_data</a></li><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.dat"><i class="bi bi-filetype-txt"></i>Data temperature_dat</a></li><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.dat"><i class="bi bi-filetype-txt"></i>Data temperature_nan_dat</a></li><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/SimpleDataInspection.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/PlotTypes/AdvancedPlotTypes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/AdvancedPlotTypes.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/AdvancedPlotTypes.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/DHP/DataCollection.html">Data Handling and Preprocessing</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/DHP/SimpleDataInspection.html"><span class="chapter-title">Simple Data Inspection</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/PlotTypes/SimplePlotTypes.html">Data Visualization 2</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/PlotTypes/AdvancedPlotTypes.html"><span class="chapter-title">Advanced Plot Types</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Simple Data Inspection</span></h1>
+<h1 class="title"><span class="chapter-title">Advanced Plot Types</span></h1>
 </div>
 
 
@@ -475,634 +403,15 @@ window.Quarto = {
 </header>
 
 
-<section id="inspection-of-data" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="inspection-of-data">Inspection of Data</h2>
-<p>After you load your data you have to inspect it to:</p>
 <ul>
-<li>check if no data is consistent, no missing values</li>
-<li>check if the data is in the correct format</li>
-<li>check if the data is in the correct range</li>
-<li>check if the data is in the correct distribution</li>
-<li>get first insights into the data</li>
+<li><a href="https://networkx.org/documentation/stable/auto_examples/index.html">Network plot</a>: It is used to show the relationship between different nodes. It is used to show the relationship between different entities <em>e.g.</em> protein-protein interaction network <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/pmc4017556/">PPI</a>.</li>
 </ul>
-<section id="numpy" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="numpy">Numpy</h3>
-<section id="overview-of-the-data" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="overview-of-the-data">Overview of the Data</h4>
-<div id="35b6c73f" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.loadtxt(temperature_data, delimiter<span class="op">=</span><span class="st">';'</span>, skiprows<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>First of all you can use the <code>print()</code> function to get a quick overview of the data.</p>
-<div id="76de3259" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[[1.00000000e+00 3.03073024e+02]
- [2.00000000e+00 3.02951625e+02]
- [3.00000000e+00 3.02831230e+02]
- ...
- [4.46380000e+04 2.96140001e+02]
- [4.46390000e+04 2.96169290e+02]
- [4.46400000e+04 2.96287904e+02]]</code></pre>
-</div>
-</div>
-<p>In numpy you can use the <code>shape</code> attribute to get the shape of the data.</p>
-<div id="4fe63c61" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>(44640, 2)</code></pre>
-</div>
-</div>
-<p>The data has 44640 rows and 2 columns.</p>
+<section id="pca-plot" class="level2 unnumberd">
+<h2 class="unnumberd anchored" data-anchor-id="pca-plot">PCA Plot</h2>
+<hr>
 </section>
-<section id="data-type-conversion" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="data-type-conversion">Data Type Conversion</h4>
-<p>You can use the <code>dtype</code> attribute to get the data type of the data.</p>
-<div id="0e62135c" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.dtype)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>float64</code></pre>
-</div>
-</div>
-<p>The data type is <code>float64</code>.</p>
-<p>You can transform the data to a <code>float64</code> data type if it is not already in this format.</p>
-<div id="26748d6b" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> data.astype(<span class="st">'float64'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="missing-data-and-corrupted-data" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="missing-data-and-corrupted-data">Missing Data and Corrupted Data</h4>
-<p>You can use the <code>isnan()</code> function to check if there are missing values in the data.</p>
-<div id="8960a511" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.isnan(data).<span class="bu">sum</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>0</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="pandas" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="pandas">Pandas</h3>
-<section id="overview-of-the-data-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="overview-of-the-data-1">Overview of the Data</h4>
-<p>You can use the <code>head()</code> function to get a quick overview of the first rows of the data.</p>
-<div id="b06148dd" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(temperature_data,sep<span class="op">=</span><span class="st">';'</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">time</th>
-<th data-quarto-table-cell-role="th">temperature</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>1</td>
-<td>303.073024</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>2</td>
-<td>302.951625</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>3</td>
-<td>302.831230</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>4</td>
-<td>302.736152</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>5</td>
-<td>302.708880</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>The <code>describe()</code> function gives you a quick overview of the data distribution.</p>
-<div id="fae7261f" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">time</th>
-<th data-quarto-table-cell-role="th">temperature</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">count</td>
-<td>44640.000000</td>
-<td>44640.000000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">mean</td>
-<td>22320.500000</td>
-<td>297.937566</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">std</td>
-<td>12886.602345</td>
-<td>6.080222</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">min</td>
-<td>1.000000</td>
-<td>278.814670</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">25%</td>
-<td>11160.750000</td>
-<td>293.842755</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">50%</td>
-<td>22320.500000</td>
-<td>297.875930</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">75%</td>
-<td>33480.250000</td>
-<td>301.879560</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">max</td>
-<td>44640.000000</td>
-<td>316.006103</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>The <code>describe</code>function shows you the count, mean, standard deviation, minimum, 25%, 50%, 75% and maximum values of the data.</p>
-<p>In this case, data has 44640 data points, The mean of the temperature is 298(6) K. The minimum temperature is 279 K and the maximum temperature is 316 K. Further the 25% quantile is 294 K, the 50% quantile is 298 K and the 75% quantile is 302 K. The measurement was taken from 1 to 44640 seconds which is 12 hours and 24 minutes. We suppose that is the correct time range which was to be expected.</p>
-<p>This gives you a quick overview of the data distribution.</p>
-</section>
-<section id="missing-data-and-corrupted-data-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="missing-data-and-corrupted-data-1">Missing Data and Corrupted Data</h4>
-<p>To check if there is missing data in the data set you can use the <code>isna()</code> function.</p>
-<div id="b779f647" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>time           0
-temperature    0
-dtype: int64</code></pre>
-</div>
-</div>
-<p>No missing data is found in this case.</p>
-<p>You can check the data type using <code>dtypes</code> function to check if the data is in the correct format.</p>
-<div id="388092a8" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
-<pre><code>time             int64
-temperature    float64
-dtype: object</code></pre>
-</div>
-</div>
-<div id="7f11958e" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>data.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>time             int64
-temperature    float64
-dtype: object</code></pre>
-</div>
-</div>
-<p>You see that <code>time</code> is an <code>int64</code> and <code>temperature</code> is a <code>float64</code>. For the analysis, you might want to convert the <code>time</code> to a <code>float64</code> as well.</p>
-<div id="86105a96" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'time'</span>] <span class="op">=</span> data[<span class="st">'time'</span>].astype(<span class="st">'float64'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="0702115a" class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'time'</span>] <span class="op">=</span> data[<span class="st">'time'</span>].astype(<span class="st">'float64'</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>data.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
-<pre><code>time           float64
-temperature    float64
-dtype: object</code></pre>
-</div>
-</div>
-<p>If we have missing data we can use the <code>fillna()</code> function to fill the missing data with a specific value.</p>
-<div id="c8ab4044" class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>data.fillna(<span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">time</th>
-<th data-quarto-table-cell-role="th">temperature</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>1.0</td>
-<td>303.073024</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>2.0</td>
-<td>302.951625</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>3.0</td>
-<td>302.831230</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>4.0</td>
-<td>302.736152</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>5.0</td>
-<td>302.708880</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">44635</td>
-<td>44636.0</td>
-<td>296.102948</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">44636</td>
-<td>44637.0</td>
-<td>296.173110</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">44637</td>
-<td>44638.0</td>
-<td>296.140001</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">44638</td>
-<td>44639.0</td>
-<td>296.169290</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">44639</td>
-<td>44640.0</td>
-<td>296.287904</td>
-</tr>
-</tbody>
-</table>
-
-<p>44640 rows × 2 columns</p>
-</div>
-</div>
-</div>
-<div id="de9bf172" class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>data_missing <span class="op">=</span> pd.read_csv(temperature_nan_data, header<span class="op">=</span><span class="va">None</span>, skipinitialspace<span class="op">=</span><span class="va">True</span>, sep<span class="op">=</span><span class="st">' '</span>, names<span class="op">=</span>[<span class="st">'time'</span>, <span class="st">'temperature'</span>])</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>data_missing.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">time</th>
-<th data-quarto-table-cell-role="th">temperature</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>1</td>
-<td>303.073024</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>2</td>
-<td>302.951625</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>3</td>
-<td>302.831230</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>4</td>
-<td>302.736152</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>5</td>
-<td>302.708880</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>One value is missing in the <code>temperature</code> column. We fill it with 0.</p>
-<p>First let check where the data is missing.</p>
-<div id="26055ab5" class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>data[data[<span class="st">'temperature'</span>].isna()]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">time</th>
-<th data-quarto-table-cell-role="th">temperature</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>At index 21 at time 22 s the temperature is missing.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The handling of missing data is a complex topic. First of all you have to check why the data is missing. Is it a measurement error, a data processing error etc.</p>
-<p>You have to decide if you want to fill the missing data with a specific value, drop the row or column or interpolate the missing data. The decision depends on the data and the analysis you want to perform. Droping Data is always a delicate decision because you loose information. Sometimes it is not good scientific practice to drop data. For more information there a lot of research in this topic <a href="https://doi.org/10.1076/edre.7.4.353.8937">https://doi.org/10.1076/edre.7.4.353.8937</a></p>
-</div>
-</div>
-<p>The time step can be estimated by the difference between the time steps of the previous and the next data point.</p>
-<div id="aea7cfdf" class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'time'</span>].diff()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="18">
-<pre><code>0        NaN
-1        1.0
-2        1.0
-3        1.0
-4        1.0
-        ... 
-44635    1.0
-44636    1.0
-44637    1.0
-44638    1.0
-44639    1.0
-Name: time, Length: 44640, dtype: float64</code></pre>
-</div>
-</div>
-<p>And we can summarize it via:</p>
-<div id="0ee4eb7d" class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'time'</span>].diff().value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="19">
-<pre><code>time
-1.0    44639
-Name: count, dtype: int64</code></pre>
-</div>
-</div>
-<div id="f54b45bb" class="cell" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>data_missing[<span class="st">'time'</span>].diff().value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="20">
-<pre><code>time
-1.0    44639
-Name: count, dtype: int64</code></pre>
-</div>
-</div>
-<p>get difference between temperature values</p>
-<div id="67085b38" class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>data_missing[<span class="dv">10</span>:<span class="dv">30</span>].diff()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="21">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">time</th>
-<th data-quarto-table-cell-role="th">temperature</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">10</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">11</td>
-<td>1.0</td>
-<td>0.000728</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12</td>
-<td>1.0</td>
-<td>-0.062319</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">13</td>
-<td>1.0</td>
-<td>-0.130198</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">14</td>
-<td>1.0</td>
-<td>-0.060203</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">15</td>
-<td>1.0</td>
-<td>0.003234</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">16</td>
-<td>1.0</td>
-<td>0.048911</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">17</td>
-<td>1.0</td>
-<td>-0.042025</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">18</td>
-<td>1.0</td>
-<td>0.021264</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">19</td>
-<td>1.0</td>
-<td>0.033401</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">20</td>
-<td>1.0</td>
-<td>0.054579</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">21</td>
-<td>1.0</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">22</td>
-<td>1.0</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">23</td>
-<td>1.0</td>
-<td>-0.011858</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">24</td>
-<td>1.0</td>
-<td>-0.047617</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">25</td>
-<td>1.0</td>
-<td>0.060236</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">26</td>
-<td>1.0</td>
-<td>-0.066175</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">27</td>
-<td>1.0</td>
-<td>-0.080531</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">28</td>
-<td>1.0</td>
-<td>-0.029080</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">29</td>
-<td>1.0</td>
-<td>0.026428</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>The time step is constantly 1 second. The difference between the temperature of the previous and the next data point is at <span class="math inline">\(~10^{-2}\)</span> order. We can assume that in this case the data is consistent enough and we can fill the missing data with the mean of the previous and the next data point.</p>
-<div id="ef0abcc4" class="cell" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'temperature'</span>].fillna((data[<span class="st">'temperature'</span>].shift() <span class="op">+</span> data[<span class="st">'temperature'</span>].shift(<span class="op">-</span><span class="dv">1</span>))<span class="op">/</span><span class="dv">2</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="a8990454" class="cell" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>data_missing[<span class="st">'temperature'</span>].fillna((data_missing[<span class="st">'temperature'</span>].shift() <span class="op">+</span> data_missing[<span class="st">'temperature'</span>].shift(<span class="op">-</span><span class="dv">1</span>))<span class="op">/</span><span class="dv">2</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>data_missing[<span class="dv">20</span>:<span class="dv">25</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="23">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">time</th>
-<th data-quarto-table-cell-role="th">temperature</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">20</td>
-<td>21</td>
-<td>302.020507</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">21</td>
-<td>22</td>
-<td>301.932958</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">22</td>
-<td>23</td>
-<td>301.845408</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">23</td>
-<td>24</td>
-<td>301.833550</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">24</td>
-<td>25</td>
-<td>301.785933</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>Now can analysis or plot the data.</p>
-</section>
-<section id="data-type-conversion-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="data-type-conversion-1">Data Type Conversion</h4>
-<p>You get the data type of the data with the <code>dtypes</code> function.</p>
-<div id="085c553a" class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>data.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="24">
-<pre><code>time           float64
-temperature    float64
-dtype: object</code></pre>
-</div>
-</div>
-<p>You can convert the data type with the <code>astype()</code> function.</p>
-<div id="09a5a1db" class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'time'</span>] <span class="op">=</span> data[<span class="st">'time'</span>].astype(<span class="st">'float64'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-</section>
-<section id="example-data-import-and-inspection" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="example-data-import-and-inspection">Example: Data Import and Inspection</h2>
-</section>
-<section id="exercises" class="level1 unnumbered">
-<h1 class="unnumbered">Exercises</h1>
-<p>Download it locally and try to solve the exercises. <br></p>
-<p><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/examples/DHP_Example.ipynb">Data Import and Inspection Example</a></p>
-<p>Or open it in <code>Google Colab</code>:</p>
-<p><a href="https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/DHP_Example.ipynb">Data Import and Inspection Example</a></p>
+<section id="d-plot" class="level2 unnumberd">
+<h2 class="unnumberd anchored" data-anchor-id="d-plot">3D Plot</h2>
 
 
 </section>
@@ -1678,13 +987,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../course/chapters/DHP/SimpleDataImport.html" class="pagination-link" aria-label="Simple Data Import">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Simple Data Import</span></span>
+      <a href="../../../course/chapters/PlotTypes/SimplePlotTypes.html" class="pagination-link" aria-label="Simple Plot Types">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Simple Plot Types</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../course/chapters/Plots/DataVisualization.html" class="pagination-link" aria-label="Introduction into Data Visualization">
-        <span class="nav-page-text"><span class="chapter-title">Introduction into Data Visualization</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../course/chapters/PlotTypes/InteractivePlots.html" class="pagination-link" aria-label="Interactive Plots">
+        <span class="nav-page-text"><span class="chapter-title">Interactive Plots</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1696,7 +1005,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 Stefanie Kröll. All rights reserved.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/DHP/SimpleDataInspection.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/PlotTypes/AdvancedPlotTypes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <li>
 <a href="https://github.com/stkroe/PythonForChemists.github.io" target="blank">Code source</a>
