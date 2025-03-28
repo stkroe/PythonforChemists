@@ -28,6 +28,7 @@ Hypothesis testing is a statistical method for making decisions or inferences ab
 
 
 
+#### One-Sample t-test
 ```python
 from scipy import stats
 
@@ -39,5 +40,31 @@ group2 = [9.5, 13.1, 12.9, 8.7, 11.3]
 t_stat, p_value = stats.ttest_ind(group1, group2)
 print(f"T-statistic: {t_stat}, P-value: {p_value}")
 ```
----
+
+#### ANOVA Test
+
+```{python}
+from scipy import stats
+
+# Example: Comparing multiple groups
+group1 = [10.2, 14.5, 13.3, 9.8, 12.7]
+group2 = [9.5, 13.1, 12.9, 8.7, 11.3]
+group3 = [11.2, 15.1, 14.3, 10.8, 13.7]
+
+# Perform ANOVA test
+f_stat, p_value = stats.f_oneway(group1, group2, group3)
+print(f"F-statistic: {f_stat}, P-value: {p_value}")
+```
+
+
+### Chi-square Test
+
+```{python}
+from scipy.stats import chi2_contingency
+
+# Example: Comparing categorical data
+observed = [[10, 20, 30], [6, 9, 17]]
+chi2, p, dof, expected = chi2_contingency(observed)
+print(f"Chi-square: {chi2}, P-value: {p}")
+
 
