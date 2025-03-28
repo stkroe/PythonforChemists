@@ -404,53 +404,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">I/O (Input/Output)</h1>
 <p>You can use the <code>print()</code> function to <strong>print a message</strong> to the screen. <br> You can use the <code>input()</code> function to get <strong>input from the user</strong>. <br> You can use the <code>open()</code> function to <strong>open a file</strong>. <br> You can use the <code>write()</code> function to <strong>write to a file</strong>. <br> You can use the <code>read()</code> function to <strong>read from a file</strong>. <br> You can use the <code>close()</code> function to <strong>close a file</strong>. <br> You can use the <code>with</code> statement to <strong>open a file</strong> and <strong>automatically close</strong> it when you are done. <br> You can use the <code>os</code> module to <strong>work with files and directories</strong>. <br> You can use the <code>sys</code> module to <strong>work with command line arguments</strong>. <br> You can use the <code>argparse</code> module to work also with <strong>command line arguments</strong>. <br></p>
 <p>This should print “Hello World!” to the console</p>
-<div id="f306a87d" class="cell" data-execution_count="1">
+<div id="b9018416" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
 </div>
 <p>This should ask the user to enter a number and print it to the console</p>
-<div id="0b9ca388" class="cell" data-execution_count="2">
+<div id="8a5b2b41" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[2], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span style="color:rgb(0,135,0)">print</span>(<span style="color:rgb(0,135,0)" class="ansi-yellow-bg">input</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">Enter a number: </span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span class="ansi-yellow-bg">)</span>)
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.10.16/x64/lib/python3.10/site-packages/ipykernel/kernelbase.py:1281</span>, in <span class="ansi-cyan-fg">Kernel.raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
-<span class="ansi-green-fg ansi-bold">   1279</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_allow_stdin:
-<span class="ansi-green-fg ansi-bold">   1280</span>     msg <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">raw_input was called, but this frontend does not support input requests.</span><span style="color:rgb(175,0,0)">"</span>
-<span class="ansi-green-fg">-&gt; 1281</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> StdinNotImplementedError(msg)
-<span class="ansi-green-fg ansi-bold">   1282</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_input_request(
-<span class="ansi-green-fg ansi-bold">   1283</span>     <span style="color:rgb(0,135,0)">str</span>(prompt),
-<span class="ansi-green-fg ansi-bold">   1284</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_parent_ident[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">shell</span><span style="color:rgb(175,0,0)">"</span>],
-<span class="ansi-green-fg ansi-bold">   1285</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>get_parent(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">shell</span><span style="color:rgb(175,0,0)">"</span>),
-<span class="ansi-green-fg ansi-bold">   1286</span>     password<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">False</span>,
-<span class="ansi-green-fg ansi-bold">   1287</span> )
-
-<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.</pre>
-</div>
-</div>
 </div>
 <p>This should write “Hello World!” to the file “file.txt”</p>
-<div id="72e9c31a" class="cell" data-execution_count="3">
+<div id="c50ffa9a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>).write(<span class="st">"Hello World!"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>12</code></pre>
 </div>
 </div>
 <p>This should read the file “file.txt” and print the content to the console</p>
-<div id="11417c48" class="cell" data-execution_count="4">
+<div id="f688bd2b" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">open</span>(<span class="st">"file.txt"</span>).read()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
 </div>
 <p>This should print “Hello World!” to the console without a newline</p>
-<div id="8f7f6e3e" class="cell" data-execution_count="5">
+<div id="7b4c618a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World without newline."</span>, end<span class="op">=</span><span class="st">""</span>) </span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Next print statement."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -458,7 +437,7 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.10.16/x64/lib/pyt
 </div>
 </div>
 <p>This should read the file “file.txt” and print the content to the console</p>
-<div id="5142832d" class="cell" data-execution_count="6">
+<div id="f460d0a9" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>: <span class="bu">print</span>(<span class="bu">file</span>.read()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
@@ -480,32 +459,24 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.10.16/x64/lib/pyt
 <li><p><code>parse_args()</code> to parse the command line arguments. <br></p></li>
 </ul>
 <p>This should remove the file “file.txt”</p>
-<div id="faf9c8a5" class="cell" data-execution_count="7">
+<div id="91b70b5b" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>os.remove(<span class="st">"file.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For <code>sys</code> you can use the <code>sys.argv</code> to get the command line arguments. <br> <code>sys.argv</code> is a list of the command line arguments. <br> <code>sys.argv[0]</code> is the name of the script. <br> <code>sys.argv[1]</code> is the first argument. <br></p>
-<div id="c4c06128" class="cell" data-execution_count="8">
+<div id="56bc5a75" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>first_argument <span class="op">=</span> sys.argv[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For more information about the sys module you can visit the <a href="https://docs.python.org/3/library/sys.html">official documentation</a>.</p>
 <p>For <code>Argparse</code> you can use the following code: For python scripts: You can use argparse to parse command line arguments.</p>
-<div id="16c64300" class="cell" data-execution_count="9">
+<div id="9e813a5b" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> argparse <span class="im">import</span> ArgumentParser</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>parser <span class="op">=</span> ArgumentParser(description<span class="op">=</span><span class="st">"This is a description."</span>)</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>parser.add_argument(<span class="st">"--arg1"</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"This is the first argument."</span>)</span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>parser.add_argument(<span class="st">"---arg2"</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"This is the second argument."</span>)</span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>args <span class="op">=</span> parser.parse_args()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre>An exception has occurred, use %tb to see the full traceback.
-
-<span class="ansi-red-fg">SystemExit</span><span class="ansi-red-fg">:</span> 2
-</pre>
-</div>
-</div>
 </div>
 <p>For more information about <code>Argparse</code> you can visit the <a href="https://docs.python.org/3/library/argparse.html">official documentation</a>.</p>
 </section>
@@ -513,7 +484,7 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.10.16/x64/lib/pyt
 <h1 class="unnumbered">Paths</h1>
 <p>Pay attention to the paths in your code. They are different defined in Windows and Linux. In Windows and macOS, you use backslashes <code>/</code> and in Linux, you use forward slashes <code>\</code>.</p>
 <p>To avoid this problem you can use the <code>os</code> or <code>pathlib</code> module to make your code platform independent.</p>
-<div id="7f54c1f1" class="cell" data-execution_count="10">
+<div id="3c597a34" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> os.path.join(<span class="st">'folder1'</span>, <span class="st">'folder2'</span>, <span class="st">'folder3'</span>, <span class="st">'data.dat'</span>)</span>
@@ -522,14 +493,14 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.10.16/x64/lib/pyt
 <pre><code>folder1/folder2/folder3/data.dat</code></pre>
 </div>
 </div>
-<div id="deb6b8c0" class="cell" data-execution_count="11">
+<div id="141d7952" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>working_dir <span class="op">=</span> os.getcwd()</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(working_dir)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>/home/runner/work/PythonforChemists/PythonforChemists/course/chapters/Python</code></pre>
 </div>
 </div>
-<div id="0bb79c29" class="cell" data-execution_count="12">
+<div id="17934646" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> Path(<span class="st">'folder1'</span>) <span class="op">/</span> <span class="st">'folder2'</span> <span class="op">/</span> <span class="st">'folder3'</span> <span class="op">/</span> <span class="st">'data.dat'</span></span>
@@ -538,7 +509,7 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.10.16/x64/lib/pyt
 <pre><code>folder1/folder2/folder3/data.dat</code></pre>
 </div>
 </div>
-<div id="8123e74c" class="cell" data-execution_count="13">
+<div id="4200ced5" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>working_dir <span class="op">=</span> Path.cwd()</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(working_dir)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
