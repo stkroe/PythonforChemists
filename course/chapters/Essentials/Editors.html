@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Data Analysis and Visualization for Chemists and Material Scientists</title>
+<title>Editors – Data Analysis and Visualization for Chemists and Material Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../course/chapters/Essentials/WhatIsPython.html" rel="next">
-<link href="../../../index.html" rel="prev">
+<link href="../../../course/chapters/Python/Basics.html" rel="next">
+<link href="../../../course/chapters/Essentials/InstallationGuide.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -72,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Introduction – Data Analysis and Visualization for Chemists and Material Scientists">
+<meta property="og:title" content="Editors – Data Analysis and Visualization for Chemists and Material Scientists">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
@@ -86,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/Essentials/Introduction.html">Essentials</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/Essentials/Introduction.html"><span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/Essentials/Introduction.html">Essentials</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/Essentials/Editors.html"><span class="chapter-title">Editors</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -139,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Essentials/Introduction.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Introduction</span></a>
+  <a href="../../../course/chapters/Essentials/Introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -154,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Essentials/Editors.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Editors</span></a>
+  <a href="../../../course/chapters/Essentials/Editors.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Editors</span></a>
   </div>
 </li>
       </ul>
@@ -336,17 +370,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-do-you-need-for-data-analysis-and-visualization" id="toc-what-do-you-need-for-data-analysis-and-visualization" class="nav-link active" data-scroll-target="#what-do-you-need-for-data-analysis-and-visualization">What do you need for data analysis and visualization?</a></li>
-  <li><a href="#why-you-should-learn-python" id="toc-why-you-should-learn-python" class="nav-link" data-scroll-target="#why-you-should-learn-python">Why you should learn Python?</a></li>
+  <li><a href="#choose-an-editor" id="toc-choose-an-editor" class="nav-link active" data-scroll-target="#choose-an-editor">Choose an editor</a>
+  <ul class="collapse">
+  <li><a href="#editors" id="toc-editors" class="nav-link" data-scroll-target="#editors">Editors:</a></li>
+  <li><a href="#python-extension-for-vs-code" id="toc-python-extension-for-vs-code" class="nav-link" data-scroll-target="#python-extension-for-vs-code">Python extension for VS Code:</a></li>
+  </ul></li>
+  <li><a href="#using-jupyter-notebooks-in-vs-code" id="toc-using-jupyter-notebooks-in-vs-code" class="nav-link" data-scroll-target="#using-jupyter-notebooks-in-vs-code">Using Jupyter Notebooks in VS Code</a>
+  <ul class="collapse">
+  <li><a href="#difference-between-jupyter-notebooks-and-python-scripts" id="toc-difference-between-jupyter-notebooks-and-python-scripts" class="nav-link" data-scroll-target="#difference-between-jupyter-notebooks-and-python-scripts">Difference Between Jupyter Notebooks and Python Scripts</a></li>
+  </ul></li>
+  <li><a href="#google-colab-tutorial" id="toc-google-colab-tutorial" class="nav-link" data-scroll-target="#google-colab-tutorial">Google Colab Tutorial</a>
+  <ul class="collapse">
+  <li><a href="#key-features-of-google-colab" id="toc-key-features-of-google-colab" class="nav-link" data-scroll-target="#key-features-of-google-colab">Key Features of Google Colab</a></li>
+  </ul></li>
+  <li><a href="#upload-a-file" id="toc-upload-a-file" class="nav-link" data-scroll-target="#upload-a-file">Upload a file</a></li>
+  <li><a href="#access-the-uploaded-file" id="toc-access-the-uploaded-file" class="nav-link" data-scroll-target="#access-the-uploaded-file">Access the uploaded file</a></li>
+  <li><a href="#test-your-chosen-setup" id="toc-test-your-chosen-setup" class="nav-link" data-scroll-target="#test-your-chosen-setup">Test your chosen setup</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Essentials/Introduction.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Essentials/Editors.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/Essentials/Introduction.html">Essentials</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/Essentials/Introduction.html"><span class="chapter-title">Introduction</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/Essentials/Introduction.html">Essentials</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/Essentials/Editors.html"><span class="chapter-title">Editors</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-title">Editors</span></h1>
 </div>
 
 
@@ -363,50 +411,132 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-do-you-need-for-data-analysis-and-visualization" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="what-do-you-need-for-data-analysis-and-visualization">What do you need for data analysis and visualization?</h2>
+<section id="choose-an-editor" class="level1 unnumbered">
+<h1 class="unnumbered">Choose an editor</h1>
+<p>After you installed Python successfully you need a editor for writing your Python programs. Technical you could use everything where you can write text but it is not really purposeful.</p>
+<p>An editor with <strong>syntax highlighting</strong>, <strong>code completion</strong> and <strong>debugging</strong> is very useful.</p>
+<section id="editors" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="editors">Editors:</h3>
 <ul>
-<li><p>Scientists produce a lot of data which needs to be analyzed and visualized.</p></li>
-<li><p>Clear presentation of data is essential for the understanding of the data.</p></li>
-<li><p>It helps to improve your scientific communication and make your results more accessible to others.</p></li>
-<li><p>There are many tools available for data analysis and visualization.</p></li>
+<li>Spyder <a href="https://www.spyder-ide.org/">https://www.spyder-ide.org/</a></li>
+<li>PyCharm (JetBrains) <a href="https://www.jetbrains.com/products/compare/?product=pycharm&amp;product=pycharm-ce">https://www.jetbrains.com/products/compare/?product=pycharm&amp;product=pycharm-ce</a></li>
+<li>Jupyter Notebook <a href="https://jupyter.org/">https://jupyter.org/</a> <a href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks">https://code.visualstudio.com/docs/datascience/jupyter-notebooks</a></li>
+<li>Jupyter Lab <a href="https://jupyter.org/">https://jupyter.org/</a> <a href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks">https://code.visualstudio.com/docs/datascience/jupyter-notebooks</a></li>
+<li>Google Google Colab <a href="https://colab.research.google.com/">https://colab.research.google.com/</a> etc.</li>
 </ul>
-<p>A very simple approach would be the use of basic spreadsheet programs with graphical user interfaces <em>e.g.</em> <a href="https://www.microsoft.com/de-at/microsoft-365/excel">Excel</a>, <a href="https://de.libreoffice.org/">LibreOffice Calc</a> …</p>
-<p>But for more advanced analysis you need probably specifc plotting and analysis tools:</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Recommendation</strong>: <em><a href="https://code.visualstudio.com/download">Visual Studio Code</a></em></p>
+</div>
+</div>
+</section>
+<section id="python-extension-for-vs-code" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="python-extension-for-vs-code">Python extension for VS Code:</h3>
 <ul>
-<li><p>You can either use programs with GUIs <em>e.g.</em> <a href="https://labplot.kde.org/">LabPlot</a>, <a href="https://www.qtiplot.com/">QtiPlot</a>, <a href="https://www.scilab.org/">Scilab</a>, <a href="https://scidavis.sourceforge.net/">SciDAVis</a>, <a href="https://www.originlab.com/">Origin</a> …</p></li>
-<li><p>or a GUI based program with command line interface <em>e.g.</em> <a href="https://plasma-gate.weizmann.ac.il/Grace/">Xmgrace</a>, <a href="https://octave.org/">GNU Octave</a> …</p></li>
-<li><p>or command line based tools <em>e.g.</em> <a href="http://www.gnuplot.info/">Gnuplot</a>, <a href="https://de.mathworks.com/products/matlab.html">Matlab</a>, <a href="https://www.wolfram.com/mathematica/">Mathematica</a> …</p></li>
-<li><p>or programming languages <em>e.g.</em> <a href="https://www.python.org/">Python</a>, <a href="https://www.r-project.org/ju">R</a>, <a href="https://julialang.org/">Julia</a> …</p></li>
+<li>Python from Microsoft,</li>
+<li>Pylance from Microsoft</li>
+<li>and Jupyter from Microsoft (optional it is only needed if you want to use Jupyter Notebooks in VS Code)</li>
 </ul>
-<p>This is a small election of tools, that can be used for data analysis and plotting.</p>
-<p>For a larger list see these wikipedia lists:</p>
+<p>Alternatively you can use a <code>Jupyter Notebook</code> (<code>*.ipynb</code>) to execute code.</p>
+<p>Write the code in a cell and execute it by pressing the run button.</p>
+<p><strong>Advantage of using Jupyter Notebooks</strong>:</p>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/List_of_numerical_analysis_software">List of Numerical Analysis Software</a></li>
-<li><a href="https://en.wikipedia.org/wiki/List_of_information_graphics_software">List of Graphical Software</a></li>
-<li><a href="https://en.wikipedia.org/wiki/List_of_statistical_software">List of Statistical Software</a></li>
-<li><a href="https://en.wikipedia.org/wiki/List_of_computer_algebra_systems">List of Computer Algebra Systems</a></li>
+<li>The code can run cell by cell and the output is directly shown below the cell.</li>
+<li>Further you can write text and equations in markdown cells.</li>
+<li>Jupyter Notebooks can also handle different programming languages like <code>R</code>or <code>Julia</code>.</li>
+<li>Also <code>Markdown</code> and <code>LaTeX</code> can be used to write text and equations.</li>
+<li>The output of the code can be visualized directly in the notebook.</li>
+<li>Therefore it is very popular in the data science community.</li>
+</ul>
+<p>Jupyter Notebooks can be used in <code>VS Code</code>, <code>Jupyter Lab</code>, <code>Jupyter Notebook</code> or <code>Google Colab</code>.</p>
+<div class="callout-information">
+<p>In this course all exercises are provided as Jupyter Notebooks. You can download it or run it directly in Google Colab.</p>
+</div>
+</section>
+</section>
+<section id="using-jupyter-notebooks-in-vs-code" class="level1 unnumbered">
+<h1 class="unnumbered">Using Jupyter Notebooks in VS Code</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/stkroe/PythonforChemists/tree/main/course/images/ipynb-vscode.svg" class="img-fluid figure-img"></p>
+<figcaption>VS Code</figcaption>
+</figure>
+</div>
+<section id="difference-between-jupyter-notebooks-and-python-scripts" class="level2">
+<h2 class="anchored" data-anchor-id="difference-between-jupyter-notebooks-and-python-scripts">Difference Between Jupyter Notebooks and Python Scripts</h2>
+<ul>
+<li><strong>Interactivity</strong>: Jupyter Notebooks allow you to run code in chunks (cells) and see the output immediately, making them ideal for experimentation and visualization. Python scripts (<code>.py</code> files) are typically executed all at once.</li>
+<li><strong>Documentation</strong>: Notebooks support Markdown cells for adding rich text, equations, and images alongside your code. Python scripts are plain text files and require comments for documentation.</li>
+<li><strong>Use Case</strong>: Notebooks are great for exploratory data analysis and teaching, while Python scripts are better suited for production code and automation.</li>
 </ul>
 </section>
-<section id="why-you-should-learn-python" class="level1 unnumbered">
-<h1 class="unnumbered">Why you should learn Python?</h1>
+</section>
+<section id="google-colab-tutorial" class="level1">
+<h1>Google Colab Tutorial</h1>
+<p>Google Colab is a free, cloud-based platform that allows you to run Jupyter Notebooks without any setup. To get started with Google Colab:</p>
+<div class="callout-information">
+<p>The use of <a href="https://colab.research.google.com">Google Colab</a> needs a Google Account. Please read the <a href="https://research.google.com/colaboratory/tos_v5.html">Terms of Service</a> and <a href="https://policies.google.com/privacy">Privacy Policy</a></p>
+</div>
+<ol type="1">
+<li>Visit <a href="https://colab.research.google.com/">Google Colab</a> and sign in with your Google account.</li>
+<li>Create a new notebook or upload an existing <code>.ipynb</code> file.</li>
+<li>Write and execute code in cells, just like in Jupyter Notebooks.</li>
+<li>Save your work to Google Drive or download it as a <code>.ipynb</code> file.</li>
+</ol>
+<section id="key-features-of-google-colab" class="level3">
+<h3 class="anchored" data-anchor-id="key-features-of-google-colab">Key Features of Google Colab</h3>
 <ul>
-<li><p>open-source</p></li>
-<li><p>well documented with a lot of online resources:</p></li>
-<li><p><a href="https://github.com/ujjwalkarn/DataSciencePython">tutorials</a>,</p></li>
-<li><p><a href="https://docs.python.org/3/">documentations</a>,</p></li>
-<li><p><a href="https://stackoverflow.com/questions">stackoverflow</a> ect.</p></li>
-<li><p>easy to learn</p></li>
-<li><p>intuitive</p></li>
-<li><p>highly flexible</p></li>
-<li><p>wide range of applications</p></li>
-<li><p>huge number of different python packages are available</p></li>
-<li><p>very easy to adapt to other programming languages such as <code>R</code> and <code>Julia</code></p></li>
-<li><p>it is not limited to a specific operating system</p></li>
-<li><p>you can automate repetitive tasks</p></li>
-<li><p>you can create templates for your analysis and visualization tasks</p></li>
-<li><p>one of the most popular languages in machine learning and data science</p></li>
+<li><strong>Free Access to GPUs/TPUs</strong>: Accelerate your computations by enabling GPU or TPU support from the “Runtime” menu.</li>
+<li><strong>Collaboration</strong>: Share notebooks with others and work on them simultaneously, similar to Google Docs.</li>
+<li><strong>Pre-installed Libraries</strong>: Many popular Python libraries are pre-installed, saving you setup time.</li>
+<li><strong>Integration with Google Drive</strong>: Easily access and save files to your Google Drive.</li>
 </ul>
+<p>Upload data on Google Colab:</p>
+</section>
+</section>
+<section id="upload-a-file" class="level1">
+<h1>Upload a file</h1>
+</section>
+<section id="access-the-uploaded-file" class="level1">
+<h1>Access the uploaded file</h1>
+</section>
+<section id="test-your-chosen-setup" class="level1 unnumbered">
+<h1 class="unnumbered">Test your chosen setup</h1>
+<ul>
+<li>open your editor</li>
+<li>open a new file and save this file as helloworld.py</li>
+<li>write your first test program:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>execute your program by using your IDE/Editor</li>
+<li>or using command line in the terminal (Linux/MacOS) / command prompt under Windows.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /path/to/file</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> helloworld.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The ouput should be: “Hello World!”.</p>
+<p>If you are using Jupyter Notebook you can also write this code in a cell and execute it by pressing the run button.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Congratulations <strong>You have successfully set up python!!</strong></p>
+</div>
+</div>
 
 
 </section>
@@ -982,13 +1112,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../index.html" class="pagination-link" aria-label="Overview">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Overview</span></span>
+      <a href="../../../course/chapters/Essentials/InstallationGuide.html" class="pagination-link" aria-label="Installation Guide">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Installation Guide</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../course/chapters/Essentials/WhatIsPython.html" class="pagination-link" aria-label="Python?">
-        <span class="nav-page-text"><span class="chapter-title">Python?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../course/chapters/Python/Basics.html" class="pagination-link" aria-label="Python Start">
+        <span class="nav-page-text"><span class="chapter-title">Python Start</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1000,7 +1130,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 Stefanie Kröll. All rights reserved.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Essentials/Introduction.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Essentials/Editors.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <li>
 <a href="https://github.com/stkroe/PythonForChemists.github.io" target="blank">Code source</a>

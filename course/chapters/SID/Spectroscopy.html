@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Basic Data Visualization Techniques – Data Analysis and Visualization for Chemists and Material Scientists</title>
+<title>spectroscopy – Data Analysis and Visualization for Chemists and Material Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../course/exercises/exercises/exercise1.html" rel="next">
-<link href="../../../course/chapters/DHP/SimpleDataInspection.html" rel="prev">
+<link href="../../../course/chapters/SID/ImageAnalysis.html" rel="next">
+<link href="../../../course/chapters/SEDA/ModelTesting.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -104,13 +70,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script type="module" src="../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
-<link href="../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
-<meta property="og:title" content="Basic Data Visualization Techniques – Data Analysis and Visualization for Chemists and Material Scientists">
-<meta property="og:description" content="">
-<meta property="og:image" content="SimplePlots_files/figure-html/cell-3-output-1.png">
+<meta property="og:title" content="Data Analysis and Visualization for Chemists and Material Scientists">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
 
@@ -123,7 +85,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/DHP/DataCollection.html">Data Handling and Preprocessing</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/DHP/SimplePlots.html"><span class="chapter-title">Basic Data Visualization Techniques</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/SID/Spectroscopy.html">Spectroscopy and Image Data</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/SID/Spectroscopy.html"><span class="chapter-title">Spectroscopy.html</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -189,6 +151,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="../../../course/chapters/Essentials/InstallationGuide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installation Guide</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/chapters/Essentials/Editors.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Editors</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -213,6 +180,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../course/chapters/Python/BasicsModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/chapters/Python/AdvancedModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Modules</span></a>
   </div>
 </li>
       </ul>
@@ -241,27 +213,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="../../../course/chapters/DHP/SimpleDataInspection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Inspection</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Simple Plotting</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/DHP/SimplePlots.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Basic Data Visualization Techniques</span></a>
+  <a href="../../../course/chapters/Plots/DataVisualization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction into Data Visualization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exercise1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise</span></a>
+  <a href="../../../course/chapters/Plots/SimplePlots.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Data Visualization Techniques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/exercises/exercises/exercise1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 1</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Statistical and Exploratory Data Analysis</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../course/chapters/SEDA/SimpleDataManipulation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Manipulation and Analysis</span></a>
@@ -272,17 +260,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="../../../course/chapters/SEDA/SimpleDataModels.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Models</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/chapters/SEDA/ModelTesting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Statistical Analysis &amp; EDA</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Informations</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Spectroscopy and Image Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/chapters/SID/Spectroscopy.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Spectroscopy.html</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/chapters/SID/ImageAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ImageAnalysis.html</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Informations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../informations/references.html" class="sidebar-item-text sidebar-link">
@@ -316,271 +330,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#basic-data-visualization-technique" id="toc-basic-data-visualization-technique" class="nav-link active" data-scroll-target="#basic-data-visualization-technique">Basic Data Visualization Technique</a>
-  <ul class="collapse">
-  <li><a href="#generate-some-x-y-data-points." id="toc-generate-some-x-y-data-points." class="nav-link" data-scroll-target="#generate-some-x-y-data-points.">1. Generate some x-y data points.</a></li>
-  <li><a href="#plot-the-data-points." id="toc-plot-the-data-points." class="nav-link" data-scroll-target="#plot-the-data-points.">2. Plot the data points.</a></li>
-  <li><a href="#adjust-the-plot." id="toc-adjust-the-plot." class="nav-link" data-scroll-target="#adjust-the-plot.">3. Adjust the plot.</a></li>
-  <li><a href="#adust-the-figure" id="toc-adust-the-figure" class="nav-link" data-scroll-target="#adust-the-figure">4. Adust the figure</a></li>
-  <li><a href="#creating-multiple-plots" id="toc-creating-multiple-plots" class="nav-link" data-scroll-target="#creating-multiple-plots">Creating multiple plots</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/DHP/SimplePlots.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/chapters/Basics/Lecture1/SimplePlot.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/DHP/DataCollection.html">Data Handling and Preprocessing</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/DHP/SimplePlots.html"><span class="chapter-title">Basic Data Visualization Techniques</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Basic Data Visualization Techniques</span></h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/SID/Spectroscopy.html">Spectroscopy and Image Data</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/SID/Spectroscopy.html"><span class="chapter-title">Spectroscopy.html</span></a></li></ol></nav></header>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
 
-
-<section id="basic-data-visualization-technique" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="basic-data-visualization-technique">Basic Data Visualization Technique</h2>
-<p>The most popular data visualization libraries in Python is Matplotlib. Let`s start with the basic data visualization techniques using Matplotlib.</p>
-<section id="generate-some-x-y-data-points." class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="generate-some-x-y-data-points.">1. Generate some x-y data points.</h3>
-</section>
-<section id="plot-the-data-points." class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="plot-the-data-points.">2. Plot the data points.</h3>
-<div id="1baa169d" class="cell" data-fig-dpi="72" data-fig-height="4" data-fig-width="8" data-execution_count="2">
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="SimplePlots_files/figure-html/cell-3-output-1.png" width="590" height="411" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>To add more graphs to the same figure, use <code>plt.plot()</code> multiple times before <code>plt.show()</code>. If you want to create a new figure, use <code>plt.figure()</code> before <code>plt.plot()</code>.</p>
-<div id="1eb5292d" class="cell" data-fig-dpi="72" data-fig-height="4" data-fig-width="8" data-execution_count="3">
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="SimplePlots_files/figure-html/cell-4-output-1.png" width="582" height="411" class="figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="SimplePlots_files/figure-html/cell-4-output-2.png" width="590" height="411" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="adjust-the-plot." class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="adjust-the-plot.">3. Adjust the plot.</h3>
-<p>The <code>plot()</code> function takes the following arguments:</p>
-<ul>
-<li>x-axis data points</li>
-<li>y-axis data points</li>
-<li><a href="https://matplotlib.org/stable/users/explain/colors/colors.html">color</a>: hex, or color name (e.g., ‘red’, ‘blue’,‘black’), abbreviated (e.g., ‘r’, ‘b’,‘k’)</li>
-<li><a href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html">linestyle</a>: ‘-’, ‘–’, ‘-.’, ‘:’ or “solid”, “dashed”, “dashdot”, “dotted”</li>
-<li><a href="https://matplotlib.org/stable/api/markers_api.html">marker</a>: ‘o’, ‘x’, ‘+’, ’*‘, ’s’, ‘d’, ‘^’, ‘v’, ‘&gt;’, ‘&lt;’, ‘p’, ‘h’</li>
-<li>linewidth - width of the line</li>
-<li>alpha - transparency of the line</li>
-<li>markerfacecolor - color of the marker face</li>
-<li>markersize - size of the marker</li>
-<li>label - label for the data points</li>
-</ul>
-<p>You have to call <code>plt.legend()</code> to show the labels.</p>
-<div id="da3ee9f4" class="cell" data-fig-dpi="72" data-fig-height="4" data-fig-width="8" data-execution_count="4">
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="SimplePlots_files/figure-html/cell-5-output-1.png" width="582" height="411" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="adust-the-figure" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="adust-the-figure">4. Adust the figure</h3>
-<p>This plot figure can be adjusted by changing the figure size, title, labels, and so on.</p>
-<ul>
-<li><code>plt.xlabel()</code>: Set the x-axis label of the current axis.</li>
-<li><code>plt.ylabel()</code>: Set the y-axis label of the current axis.</li>
-<li><code>plt.title()</code>: Set a title for the axes.</li>
-<li><code>plt.legend()</code>: Place a legend on the axes.</li>
-<li><code>plt.grid()</code>: Configure the grid lines.</li>
-<li><code>plt.xlim()</code>: Get or set the x-limits of the current axes.</li>
-<li><code>plt.ylim()</code>: Get or set the y-limits of the current axes.</li>
-<li><code>plt.xticks()</code>: Get or set the current tick locations and labels of the x-axis.</li>
-<li><code>plt.yticks()</code>: Get or set the current tick locations and labels of the y-axis.</li>
-<li><code>plt.figure()</code>: Create a new figure.</li>
-<li><code>plt.show()</code>: Display a figure.</li>
-</ul>
-<div id="c2ae55bf" class="cell" data-fig-dpi="72" data-fig-height="4" data-fig-width="8" data-execution_count="5">
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="SimplePlots_files/figure-html/cell-6-output-1.png" width="388" height="392" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="creating-multiple-plots" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="creating-multiple-plots">Creating multiple plots</h3>
-<p>You can create multiple plots in the same figure by using the <code>subplot()</code> function.</p>
-<div id="edd0ce84" class="cell" data-fig-dpi="72" data-fig-height="4" data-fig-width="8" data-execution_count="6">
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="SimplePlots_files/figure-html/cell-7-output-1.png" width="662" height="470" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<div id="997de464" class="cell" data-execution_count="7">
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>Text(0.5, 0.98, 'Right subfigure')</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="SimplePlots_files/figure-html/cell-8-output-2.png" width="584" height="296" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Let`s try to create 4x3 subplots with specific adjustments.</p>
-<ul>
-<li><code>plt.subplots(4, 3)</code>: create 4x3 subplots</li>
-<li><code>figsize=(3, 4)</code>: set the figure size to 3x4 inches</li>
-<li><code>sharex=True</code>: all subplots share the x-axis</li>
-<li><code>sharey=True</code>: all subplots share the y-axis</li>
-<li><code>constraint_layout=True</code>: automatically adjust the subplot parameters to give the specified padding around the subplots</li>
-<li><code>gridspec_kw={'hspace': 0.5, 'wspace': 0.5}</code>: set the horizontal and vertical space between the subplots to 0.5 inches</li>
-</ul>
-<p>Play with the code below to understand the different parameters:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>viewof figx <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span> </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">value</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Figure x-size:"</span>}</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>viewof figy <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>(</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span> </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">value</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Figure y-size:"</span>}</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>viewof constrained <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>([<span class="st">"True"</span><span class="op">,</span> <span class="st">"False"</span>]<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Select an option:"</span>})</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>viewof dpi <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>(</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">70</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> </span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">value</span><span class="op">:</span><span class="dv">75</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span><span class="dv">5</span> <span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Dpi:"</span>}</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>viewof space_h <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>(</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  [<span class="fl">0.1</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> </span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">value</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"horizonatal space:"</span>}</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>viewof space_w <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>(</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  [<span class="fl">0.1</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> </span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">value</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"width space:"</span>}</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-1" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-2" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-3" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-4" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-5" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-6" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-</div>
-<pre class="{pyodide}"><code>#| edit: False
-#| runbutton: True
-#| input:
-#|   - figx
-#|   - figy
-#|   - constrained
-#|   - dpi
-#|   - space_w
-#|   - space_h
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
-
-fig, ax = plt.subplots(3,2, figsize=(figx,figy), dpi=dpi, sharex=True, sharey=True, constrained_layout=constrained,gridspec_kw={'hspace': space_h, 'wspace': space_w})
-
-for i in range(3):
-    for j in range(2):
-        ax[i,j].plot(x, y*(i+1)*(j+1))
-
-plt.show()
-</code></pre>
-
-
-</section>
-</section>
 
 </main> <!-- /main -->
-<script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ilxudmlld29mIGZpZ3ggPSBJbnB1dHMucmFuZ2UoXG4gIFsxLCAxMF0sIFxuICB7dmFsdWU6IDUsIHN0ZXA6IDAuNSwgbGFiZWw6IFwiRmlndXJlIHgtc2l6ZTpcIn1cbilcbnZpZXdvZiBmaWd5ID0gSW5wdXRzLnJhbmdlKFxuICBbMSwgMTBdLCBcbiAge3ZhbHVlOiA1LCBzdGVwOiAwLjUsIGxhYmVsOiBcIkZpZ3VyZSB5LXNpemU6XCJ9XG4pXG52aWV3b2YgY29uc3RyYWluZWQgPSBJbnB1dHMuc2VsZWN0KFtcIlRydWVcIiwgXCJGYWxzZVwiXSwge2xhYmVsOiBcIlNlbGVjdCBhbiBvcHRpb246XCJ9KVxudmlld29mIGRwaSA9IElucHV0cy5yYW5nZShcbiAgWzcwLCAxMDBdLCBcbiAge3ZhbHVlOjc1LCBzdGVwOjUgLCBsYWJlbDogXCJEcGk6XCJ9XG4pXG52aWV3b2Ygc3BhY2VfaCA9IElucHV0cy5yYW5nZShcbiAgWzAuMSwgMV0sIFxuICB7dmFsdWU6IDAuNSwgc3RlcDogMC4wNSwgbGFiZWw6IFwiaG9yaXpvbmF0YWwgc3BhY2U6XCJ9XG4pXG52aWV3b2Ygc3BhY2VfdyA9IElucHV0cy5yYW5nZShcbiAgWzAuMSwgMV0sIFxuICB7dmFsdWU6IDAuNSwgc3RlcDogMC4wNSwgbGFiZWw6IFwid2lkdGggc3BhY2U6XCJ9XG4pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2ZpZ3gnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZmlneScpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjb25zdHJhaW5lZCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdkcGknKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnc3BhY2VfaCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdzcGFjZV93JykifV19
-</script>
-<script type="module">
-if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../course/chapters/DHP";
-window._ojs.paths.runtimeToRoot = "../..";
-window._ojs.paths.docToRoot = "../../..";
-window._ojs.selfContained = false;
-window._ojs.runtime.interpretFromScriptTags();
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1151,13 +913,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../course/chapters/DHP/SimpleDataInspection.html" class="pagination-link" aria-label="Simple Data Inspection">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Simple Data Inspection</span></span>
+      <a href="../../../course/chapters/SEDA/ModelTesting.html" class="pagination-link" aria-label="Statistical Analysis &amp; EDA">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Statistical Analysis &amp; EDA</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../course/exercises/exercises/exercise1.html" class="pagination-link" aria-label="Exercise">
-        <span class="nav-page-text"><span class="chapter-title">Exercise</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../course/chapters/SID/ImageAnalysis.html" class="pagination-link" aria-label="ImageAnalysis.html">
+        <span class="nav-page-text"><span class="chapter-title">ImageAnalysis.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1169,7 +931,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 Stefanie Kröll. All rights reserved.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/DHP/SimplePlots.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SID/Spectroscopy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <li>
 <a href="https://github.com/stkroe/PythonForChemists.github.io" target="blank">Code source</a>
