@@ -217,6 +217,7 @@ print(b, " is a", type(b))
 
 
 Python has several data types. The most common are:
+
 - `int` for integers
 - `float` for floating point numbers
 - `str` for strings

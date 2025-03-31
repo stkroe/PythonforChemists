@@ -74,11 +74,13 @@ print("95% confidence interval: " + str(intercept - tinv(0.05, len(x)-2)*interce
 For older version `scipy`only returned 5 values with fields slope, intercept, rvalue, pvalue and stderr. For compatiblity reasons the return values are 5 elements tuple.
 
 ```{python}
+from scipy.stats import linregress
 slope, intercept, r, p, se = linregress(x, y)
 ```
 And if you want to get the intercept error you can use the following return value as a object:
 
 ```{python}
+from scipy.stats import linregress
 results = linregress(x, y)
 print(results.intercept_stderr)
 ```
@@ -90,6 +92,7 @@ Another library is `statsmodels`. The `statsmodels` library provides more detail
 
 ```{python}
 import statsmodels.api as sm
+import numpy as np
 
 X = np.array([1, 2, 3, 4, 5])
 y = X*np.random.normal(0, 1, 5)+np.random.normal(0, 1, 5)
@@ -104,7 +107,7 @@ print(model.summary())
 One of the most popular libraries is `scikit-learn`. The following code shows how to fit a linear regression model using `scikit-learn`:
 
 
-```python
+```{python}
 from sklearn.linear_model import LinearRegression
 import numpy as np
 import matplotlib.pyplot as plt

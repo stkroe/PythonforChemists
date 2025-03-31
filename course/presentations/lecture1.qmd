@@ -22,7 +22,7 @@ embed-resources: true
 
 # Slide 1
 
-Welcome to Lecture 1!
+Welcome to VU 
 
 ---
 

@@ -146,6 +146,7 @@ micromamba list
 
 
 ## 4. Usefull packages for Data Analyse and Visualization:  {.unnumbered}
+
 - [matplotlib](https://matplotlib.org) - data visualization library
 - [numpy](https://numpy.org) - numerical library
 - [scipy](https://docs.scipy.org/doc/scipy/reference/) - scientific library
