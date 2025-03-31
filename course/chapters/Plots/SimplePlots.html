@@ -71,12 +71,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-fdada01b6a4a613316abf06c0f7ea711.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a7893e8d0b037e1aff40777cba0b700.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a185852c63625fd9ffbdc57047c9a77e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-a185852c63625fd9ffbdc57047c9a77e.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9b636ebed4f7b066ffdd416a9678baf4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-bbe3c2c4137d30106c846c1447f199be.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-2411b6ec7a640a2004d036e8e9db1184.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-e2dfe7f5c7a9c7e811dc66ee94bea0b1.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -143,6 +143,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="sidebar-title mb-0 py-0">
       <a href="../../../">Data Analysis and Visualization for Chemists and Material Scientists</a> 
         <div class="sidebar-tools-main tools-wide">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-substack"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/stkroe/PythonForChemists.github.io/course/presentations/lecture1.html">
+            Lecture 1
+            </a>
+          </li>
+      </ul>
+    </div>
     <a href="https://github.com/stkroe/PythonForChemists.github.io" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -455,7 +465,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The most popular data visualization libraries in Python is Matplotlib. Let`s start with the basic data visualization techniques using Matplotlib.</p>
 <section id="generate-some-x-y-data-points." class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="generate-some-x-y-data-points.">1. Generate some x-y data points.</h3>
-<div id="d2b8761f" class="cell" data-execution_count="1">
+<div id="153f695d" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -466,7 +476,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="plot-the-data-points." class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="plot-the-data-points.">2. Plot the data points.</h3>
-<div id="335ac5da" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="2">
+<div id="4da856b9" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>plt.plot(x, y)</span>
 <span id="cb2-2"><a href="#cb2-2"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -478,7 +488,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>To add more graphs to the same figure, use <code>plt.plot()</code> multiple times before <code>plt.show()</code>. If you want to create a new figure, use <code>plt.figure()</code> before <code>plt.plot()</code>.</p>
-<div id="21eb9115" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="3">
+<div id="8ff04255" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>plt.plot(x,y)</span>
 <span id="cb3-2"><a href="#cb3-2"></a>plt.plot(x,<span class="dv">2</span><span class="op">*</span>y)</span>
 <span id="cb3-3"><a href="#cb3-3"></a>plt.show()</span>
@@ -517,7 +527,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>label - label for the data points</li>
 </ul>
 <p>You have to call <code>plt.legend()</code> to show the labels.</p>
-<div id="b48178d4" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="4">
+<div id="f303bc53" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>plt.figure()</span>
 <span id="cb4-2"><a href="#cb4-2"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'o'</span>, </span>
 <span id="cb4-3"><a href="#cb4-3"></a>            markerfacecolor<span class="op">=</span><span class="st">'blue'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
@@ -553,7 +563,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>plt.figure()</code>: Create a new figure.</li>
 <li><code>plt.show()</code>: Display a figure.</li>
 </ul>
-<div id="c855b618" class="cell" data-fig-dpi="72" data-fig-height="4" data-fig-width="5" data-execution_count="5">
+<div id="8907628f" class="cell" data-fig-dpi="72" data-fig-height="4" data-fig-width="5" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>), dpi<span class="op">=</span><span class="dv">100</span>)</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="co"># Create a figure with a specific size and resolution</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'o'</span>, </span>
@@ -586,7 +596,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="creating-multiple-plots" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="creating-multiple-plots">Creating multiple plots</h2>
 <p>You can create multiple plots in the same figure by using the <code>subplot()</code> function.</p>
-<div id="8a94562e" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="6">
+<div id="5f134953" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
 <span id="cb6-2"><a href="#cb6-2"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'o'</span>, </span>
 <span id="cb6-3"><a href="#cb6-3"></a>            markerfacecolor<span class="op">=</span><span class="st">'blue'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
@@ -614,7 +624,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="ec9d2759" class="cell" data-execution_count="7">
+<div id="5212136c" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">2</span>),dpi<span class="op">=</span><span class="dv">72</span>,layout<span class="op">=</span><span class="st">'constrained'</span>, facecolor<span class="op">=</span><span class="st">'lightskyblue'</span>)</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="co"># Create a figure with a specific layout and background color</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="co"># constrained layout automatically adjusts the subplots to fit the figure</span></span>
@@ -643,12 +653,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="subfigures-and-gridspec" class="level3">
 <h3 class="anchored" data-anchor-id="subfigures-and-gridspec">Subfigures and Gridspec</h3>
 <p>You can also create subfigures and gridspecs to create more complex layouts.</p>
-<div id="f11bfe20" class="cell" data-execution_count="8">
+<div id="ab39c269" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">from</span> matplotlib.gridspec <span class="im">import</span> GridSpec</span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="7a022122" class="cell" data-execution_count="9">
+<div id="242ea0bf" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
 <span id="cb10-2"><a href="#cb10-2"></a>y <span class="op">=</span> np.sin(x)</span>
 <span id="cb10-3"><a href="#cb10-3"></a></span>
@@ -667,7 +677,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="0c78ceb8" class="cell" data-execution_count="10">
+<div id="dfc74387" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
 <span id="cb11-2"><a href="#cb11-2"></a>y <span class="op">=</span> np.sin(x)</span>
 <span id="cb11-3"><a href="#cb11-3"></a></span>
