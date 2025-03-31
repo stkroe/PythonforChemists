@@ -1,0 +1,41 @@
+---
+title: "Lecture 1"
+subtitle: "Introduction to Python and Data Science"
+format: 
+  metropolis-beamer-revealjs: default
+    # theme: style.scss
+header-logo: ../../logo.png
+slide-number: "c"
+author:
+   - name: Stefanie Kröll
+#     orcid: 0000-0000-0000-0000
+#     email: author.x@email.com
+#     affiliations: Institution X
+#   - name: Author Y
+#     orcid: 0000-0000-0000-0001
+#     email: author.y@email.com
+#     affiliations: Institution Y
+date: last-modified
+bibliography: references.bib
+embed-resources: true
+---
+
+# Slide 1
+
+Welcome to Lecture 1!
+
+---
+
+# Slide 2
+
+## Topics Covered
+
+- Topic 1
+- Topic 2
+- Topic 3
+
+---
+
+# Slide 3
+
+Thank you!

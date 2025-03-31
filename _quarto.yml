@@ -23,7 +23,6 @@ book:
   repo-url: https://github.com/stkroe/PythonForChemists.github.io
   repo-actions: [edit,issue]
   repo-branch: master
-
   sidebar:
     style: "docked"
     search: true
@@ -32,6 +31,11 @@ book:
     toc: true
     toc-depth: 3
     scroll: true
+    tools: 
+      - icon: "substack"
+        menu:
+          - text: Lecture 1
+            href: https://github.com/stkroe/PythonForChemists.github.io/course/presentations/lecture1.html
 
   chapters:
       - index.qmd
@@ -96,7 +100,7 @@ format:
       theme: 
         light: [cosmo]  # Light theme
         dark: [darkly]   # Dark theme
-      highlight-style: gruvbox
+      highlight-style: pygments
       code-copy: true
       code-overflow: scroll
       code-fold: false
@@ -113,6 +117,11 @@ format:
       #embed-resources: true
       link-external-icon: true
       link-external-newwindow: true
+PrettyPDF-pdf:
+    latex-tinytex: true
+    latex-auto-install: true
+    keep-tex: true
+    pdf-engine: xelatex
 colab:
   gh-user: "stkroe"    # Your GitHub username
   gh-repo: "PythonforChemists"    # Your repository name
