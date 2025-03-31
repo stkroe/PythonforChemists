@@ -385,7 +385,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
- <span class="menu-text">Spectroscopy and Image Data Analysis</span></a>
+ <span class="menu-text">Special Analysis and Visualization Techniques</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -393,12 +393,17 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SID/Spectroscopy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Spectroscopy Data</span></a>
+  <a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Spectroscopy Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SID/ImageAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Image Data</span></a>
+  <a href="../../../course/chapters/SpecialAnalysisPlots/ImageAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Image Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/chapters/SpecialAnalysisPlots/Ternary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ternary Plot</span></a>
   </div>
 </li>
       </ul>
@@ -508,7 +513,7 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n + \epsilon
 <section id="using-scipy" class="level3">
 <h3 class="anchored" data-anchor-id="using-scipy">Using <code class="unnumbered">scipy</code></h3>
 <p>A easy way is to use <code>scipy</code> library. The <code>scipy</code> library has a function called <code>linregress</code> which can be used to fit a linear regression model. The function returns the slope, intercept, r-value, p-value, and the standard error of the estimate. And with scipy version 1.15.2 also the intercept error.</p>
-<div id="556d8702" class="cell" data-execution_count="1">
+<div id="cb770e99" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> linregress</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -534,12 +539,12 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n + \epsilon
 <span id="cb1-23"><a href="#cb1-23"></a>tinv <span class="op">=</span> <span class="kw">lambda</span> p, df: <span class="bu">abs</span>(t.ppf(p<span class="op">/</span><span class="dv">2</span>, df))</span>
 <span id="cb1-24"><a href="#cb1-24"></a><span class="bu">print</span>(<span class="st">"95</span><span class="sc">% c</span><span class="st">onfidence interval: "</span> <span class="op">+</span> <span class="bu">str</span>(intercept <span class="op">-</span> tinv(<span class="fl">0.05</span>, <span class="bu">len</span>(x)<span class="op">-</span><span class="dv">2</span>)<span class="op">*</span>intercept_err) <span class="op">+</span> <span class="st">" to "</span> <span class="op">+</span> <span class="bu">str</span>(intercept <span class="op">+</span> tinv(<span class="fl">0.05</span>, <span class="bu">len</span>(x)<span class="op">-</span><span class="dv">2</span>)<span class="op">*</span>intercept_err))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>slope: 0.635520    intercept: -0.777590
-R-squared: 0.568370
-p-value: 0.141018
-standard error: 0.319749
-Intercept error: 1.060487
-95% confidence interval: -4.152531676237803 to 2.5973513249132547</code></pre>
+<pre><code>slope: -3.243412    intercept: 7.441411
+R-squared: 0.425627
+p-value: 0.232755
+standard error: 2.175322
+Intercept error: 7.214726
+95% confidence interval: -15.519065734031654 to 30.40188845248621</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -553,15 +558,15 @@ Important
 </div>
 <div class="callout-body-container callout-body">
 <p>For older version <code>scipy</code>only returned 5 values with fields slope, intercept, rvalue, pvalue and stderr. For compatiblity reasons the return values are 5 elements tuple.</p>
-<div id="5a8341a7" class="cell" data-execution_count="2">
+<div id="d4030b58" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>slope, intercept, r, p, se <span class="op">=</span> linregress(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>And if you want to get the intercept error you can use the following return value as a object:</p>
-<div id="1d13d32b" class="cell" data-execution_count="3">
+<div id="c1493b49" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>results <span class="op">=</span> linregress(x, y)</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="bu">print</span>(results.intercept_stderr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>1.0604865492849442</code></pre>
+<pre><code>7.21472568292336</code></pre>
 </div>
 </div>
 </div>
@@ -570,7 +575,7 @@ Important
 <section id="using-statsmodels" class="level3">
 <h3 class="anchored" data-anchor-id="using-statsmodels">Using <code class="unnumbered">statsmodels</code></h3>
 <p>Another library is <code>statsmodels</code>. The <code>statsmodels</code> library provides more detailed information about the model, such as the coefficients, standard errors, t-values, p-values, and confidence intervals.</p>
-<div id="4bd06e40" class="cell" data-execution_count="4">
+<div id="a80698f4" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
 <span id="cb6-3"><a href="#cb6-3"></a>X <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
@@ -582,25 +587,25 @@ Important
 <div class="cell-output cell-output-stdout">
 <pre><code>                            OLS Regression Results                            
 ==============================================================================
-Dep. Variable:                      y   R-squared:                       0.070
-Model:                            OLS   Adj. R-squared:                 -0.240
-Method:                 Least Squares   F-statistic:                    0.2252
-Date:                Mon, 31 Mar 2025   Prob (F-statistic):              0.668
-Time:                        14:53:17   Log-Likelihood:                -10.231
-No. Observations:                   5   AIC:                             24.46
-Df Residuals:                       3   BIC:                             23.68
+Dep. Variable:                      y   R-squared:                       0.457
+Model:                            OLS   Adj. R-squared:                  0.276
+Method:                 Least Squares   F-statistic:                     2.528
+Date:                Mon, 31 Mar 2025   Prob (F-statistic):              0.210
+Time:                        19:15:41   Log-Likelihood:                -11.171
+No. Observations:                   5   AIC:                             26.34
+Df Residuals:                       3   BIC:                             25.56
 Df Model:                           1                                         
 Covariance Type:            nonrobust                                         
 ==============================================================================
                  coef    std err          t      P&gt;|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const         -1.4684      2.535     -0.579      0.603      -9.537       6.600
-x1             0.3627      0.764      0.475      0.668      -2.070       2.795
+const          3.2792      3.060      1.072      0.362      -6.458      13.017
+x1            -1.4669      0.923     -1.590      0.210      -4.403       1.469
 ==============================================================================
-Omnibus:                          nan   Durbin-Watson:                   1.488
-Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.404
-Skew:                          -0.400   Prob(JB):                        0.817
-Kurtosis:                       1.859   Cond. No.                         8.37
+Omnibus:                          nan   Durbin-Watson:                   1.740
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.472
+Skew:                          -0.085   Prob(JB):                        0.790
+Kurtosis:                       1.505   Cond. No.                         8.37
 ==============================================================================
 
 Notes:
@@ -640,7 +645,7 @@ Notes:
 <section id="polynomial-regression" class="level3">
 <h3 class="anchored" data-anchor-id="polynomial-regression">Polynomial Regression</h3>
 <p>Polynomial regression is a type of linear regression where the relationship between the independent variable <span class="math inline">\(x\)</span> and the dependent variable <span class="math inline">\(y\)</span> is modeled as an <span class="math inline">\(n\)</span>-th degree polynomial.</p>
-<div id="7af72077" class="cell" data-execution_count="5">
+<div id="2a472839" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb9-3"><a href="#cb9-3"></a></span>
@@ -662,8 +667,8 @@ Notes:
 <span id="cb9-19"><a href="#cb9-19"></a>plt.plot(X_range, y_fit, color<span class="op">=</span><span class="st">'purple'</span>, label<span class="op">=</span><span class="st">'Polynomial Fit'</span>)</span>
 <span id="cb9-20"><a href="#cb9-20"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        2
-0.8908 x + 0.6872 x - 0.8222</code></pre>
+<pre><code>       2
+0.947 x + 0.3904 x - 0.5519</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
@@ -677,7 +682,7 @@ Notes:
 <section id="curve-fitting-with-scipy" class="level3">
 <h3 class="anchored" data-anchor-id="curve-fitting-with-scipy">Curve Fitting with <code>scipy</code></h3>
 <p><code>scipy</code> provides the <code>curve_fit</code> function to fit a non-linear model to the data. The function requires the model function and the data as input.</p>
-<div id="3aaa81ab" class="cell" data-execution_count="6">
+<div id="707e88a3" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span>
 <span id="cb11-2"><a href="#cb11-2"></a></span>
 <span id="cb11-3"><a href="#cb11-3"></a><span class="kw">def</span> nonlinear_func(x, a, b, c):</span>

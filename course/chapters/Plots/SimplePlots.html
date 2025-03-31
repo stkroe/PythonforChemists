@@ -359,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
- <span class="menu-text">Spectroscopy and Image Data Analysis</span></a>
+ <span class="menu-text">Special Analysis and Visualization Techniques</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -367,12 +367,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SID/Spectroscopy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Spectroscopy Data</span></a>
+  <a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Spectroscopy Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SID/ImageAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Image Data</span></a>
+  <a href="../../../course/chapters/SpecialAnalysisPlots/ImageAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Image Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/chapters/SpecialAnalysisPlots/Ternary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ternary Plot</span></a>
   </div>
 </li>
       </ul>
@@ -434,6 +439,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#creating-multiple-plots" id="toc-creating-multiple-plots" class="nav-link" data-scroll-target="#creating-multiple-plots">Creating multiple plots</a>
   <ul class="collapse">
   <li><a href="#subfigures-and-gridspec" id="toc-subfigures-and-gridspec" class="nav-link" data-scroll-target="#subfigures-and-gridspec">Subfigures and Gridspec</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Plots/SimplePlots.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/SimplePlots.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimplePlot.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
@@ -465,7 +471,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The most popular data visualization libraries in Python is Matplotlib. Let`s start with the basic data visualization techniques using Matplotlib.</p>
 <section id="generate-some-x-y-data-points." class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="generate-some-x-y-data-points.">1. Generate some x-y data points.</h3>
-<div id="c5ea41e3" class="cell" data-execution_count="1">
+<div id="803c5c2c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -476,7 +482,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="plot-the-data-points." class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="plot-the-data-points.">2. Plot the data points.</h3>
-<div id="c6b59640" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="2">
+<div id="6d58f47b" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>plt.plot(x, y)</span>
 <span id="cb2-2"><a href="#cb2-2"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -488,7 +494,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>To add more graphs to the same figure, use <code>plt.plot()</code> multiple times before <code>plt.show()</code>. If you want to create a new figure, use <code>plt.figure()</code> before <code>plt.plot()</code>.</p>
-<div id="82dff7a8" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="3">
+<div id="e2d99238" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>plt.plot(x,y)</span>
 <span id="cb3-2"><a href="#cb3-2"></a>plt.plot(x,<span class="dv">2</span><span class="op">*</span>y)</span>
 <span id="cb3-3"><a href="#cb3-3"></a>plt.show()</span>
@@ -527,7 +533,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>label - label for the data points</li>
 </ul>
 <p>You have to call <code>plt.legend()</code> to show the labels.</p>
-<div id="84febe1b" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="4">
+<div id="2b88a362" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>plt.figure()</span>
 <span id="cb4-2"><a href="#cb4-2"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'o'</span>, </span>
 <span id="cb4-3"><a href="#cb4-3"></a>            markerfacecolor<span class="op">=</span><span class="st">'blue'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
@@ -563,7 +569,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>plt.figure()</code>: Create a new figure.</li>
 <li><code>plt.show()</code>: Display a figure.</li>
 </ul>
-<div id="8808e58d" class="cell" data-fig-dpi="72" data-fig-height="4" data-fig-width="5" data-execution_count="5">
+<div id="bd06adde" class="cell" data-fig-dpi="72" data-fig-height="4" data-fig-width="5" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>), dpi<span class="op">=</span><span class="dv">100</span>)</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="co"># Create a figure with a specific size and resolution</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'o'</span>, </span>
@@ -596,7 +602,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="creating-multiple-plots" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="creating-multiple-plots">Creating multiple plots</h2>
 <p>You can create multiple plots in the same figure by using the <code>subplot()</code> function.</p>
-<div id="6a910574" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="6">
+<div id="bcfbed99" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
 <span id="cb6-2"><a href="#cb6-2"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'o'</span>, </span>
 <span id="cb6-3"><a href="#cb6-3"></a>            markerfacecolor<span class="op">=</span><span class="st">'blue'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
@@ -624,7 +630,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="aad2127f" class="cell" data-execution_count="7">
+<div id="b5ca4a0d" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">2</span>),dpi<span class="op">=</span><span class="dv">72</span>,layout<span class="op">=</span><span class="st">'constrained'</span>, facecolor<span class="op">=</span><span class="st">'lightskyblue'</span>)</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="co"># Create a figure with a specific layout and background color</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="co"># constrained layout automatically adjusts the subplots to fit the figure</span></span>
@@ -653,12 +659,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="subfigures-and-gridspec" class="level3">
 <h3 class="anchored" data-anchor-id="subfigures-and-gridspec">Subfigures and Gridspec</h3>
 <p>You can also create subfigures and gridspecs to create more complex layouts.</p>
-<div id="95613b73" class="cell" data-execution_count="8">
+<div id="8e6dbbe2" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">from</span> matplotlib.gridspec <span class="im">import</span> GridSpec</span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="04f79ee3" class="cell" data-execution_count="9">
+<div id="26227604" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
 <span id="cb10-2"><a href="#cb10-2"></a>y <span class="op">=</span> np.sin(x)</span>
 <span id="cb10-3"><a href="#cb10-3"></a></span>
@@ -677,7 +683,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="e81fee0e" class="cell" data-execution_count="10">
+<div id="09403c57" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
 <span id="cb11-2"><a href="#cb11-2"></a>y <span class="op">=</span> np.sin(x)</span>
 <span id="cb11-3"><a href="#cb11-3"></a></span>
@@ -699,6 +705,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+</section>
+<section id="exercises" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exercises">Exercises</h3>
+<p>Download it locally and try to solve the exercises. <br></p>
+<p><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/examples/SimplePlotExmple.ipynb">Simple Plot Example</a></p>
+<p>Or open it in <code>Google Colab</code>:</p>
+<p><a href="https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/SimplePlotExample.ipynb">Simple Plot Example</a></p>
 <!-- Let`s try to create 4x3 subplots with specific adjustments.
 
 - `plt.subplots(4, 3)`: create 4x3 subplots
@@ -719,7 +732,7 @@ Play with the code below to understand the different parameters:
 
 ::::::{.cell}
 
-```{.js .cell-code .hidden startFrom="252" source-offset="-1"}
+```{.js .cell-code .hidden startFrom="266" source-offset="-1"}
 viewof figx = Inputs.range(
   [1, 10], 
   {value: 5, step: 0.5, label: "Figure x-size:"}
@@ -1710,79 +1723,93 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-252"><a href="#cb12-252"></a></span>
 <span id="cb12-253"><a href="#cb12-253"></a><span class="in">```</span></span>
 <span id="cb12-254"><a href="#cb12-254"></a></span>
-<span id="cb12-255"><a href="#cb12-255"></a></span>
-<span id="cb12-256"><a href="#cb12-256"></a><span class="co">&lt;!-- Let`s try to create 4x3 subplots with specific adjustments.</span></span>
+<span id="cb12-255"><a href="#cb12-255"></a><span class="fu">### Exercises {.unnumbered}</span></span>
+<span id="cb12-256"><a href="#cb12-256"></a>Download it locally and try to solve the exercises. &lt;br&gt;</span>
 <span id="cb12-257"><a href="#cb12-257"></a></span>
-<span id="cb12-258"><a href="#cb12-258"></a><span class="co">- `plt.subplots(4, 3)`: create 4x3 subplots</span></span>
-<span id="cb12-259"><a href="#cb12-259"></a><span class="co">- `figsize=(3, 4)`: set the figure size to 3x4 inches</span></span>
-<span id="cb12-260"><a href="#cb12-260"></a><span class="co">- `sharex=True`: all subplots share the x-axis</span></span>
-<span id="cb12-261"><a href="#cb12-261"></a><span class="co">- `sharey=True`: all subplots share the y-axis</span></span>
-<span id="cb12-262"><a href="#cb12-262"></a><span class="co">-  `constraint_layout=True`: automatically adjust the subplot parameters to give the specified padding around the subplots</span></span>
-<span id="cb12-263"><a href="#cb12-263"></a><span class="co">- `gridspec_kw={'hspace': 0.5, 'wspace': 0.5}`: set the horizontal and vertical space between the subplots to 0.5 inches</span></span>
-<span id="cb12-264"><a href="#cb12-264"></a></span>
+<span id="cb12-258"><a href="#cb12-258"></a><span class="co">[</span><span class="ot">Simple Plot Example</span><span class="co">](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/SimplePlotExmple.ipynb)</span></span>
+<span id="cb12-259"><a href="#cb12-259"></a></span>
+<span id="cb12-260"><a href="#cb12-260"></a></span>
+<span id="cb12-261"><a href="#cb12-261"></a></span>
+<span id="cb12-262"><a href="#cb12-262"></a>Or open it in <span class="in">`Google Colab`</span>:</span>
+<span id="cb12-263"><a href="#cb12-263"></a></span>
+<span id="cb12-264"><a href="#cb12-264"></a><span class="co">[</span><span class="ot">Simple Plot Example</span><span class="co">](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/SimplePlotExample.ipynb)</span></span>
 <span id="cb12-265"><a href="#cb12-265"></a></span>
-<span id="cb12-266"><a href="#cb12-266"></a><span class="co">Play with the code below to understand the different parameters:</span></span>
+<span id="cb12-266"><a href="#cb12-266"></a></span>
 <span id="cb12-267"><a href="#cb12-267"></a></span>
 <span id="cb12-268"><a href="#cb12-268"></a></span>
-<span id="cb12-271"><a href="#cb12-271"></a><span class="in">```{ojs}</span></span>
-<span id="cb12-272"><a href="#cb12-272"></a><span class="co">//| echo: false</span></span>
-<span id="cb12-273"><a href="#cb12-273"></a></span>
-<span id="cb12-274"><a href="#cb12-274"></a><span class="co">viewof figx = Inputs.range(</span></span>
-<span id="cb12-275"><a href="#cb12-275"></a><span class="co">  [1, 10], </span></span>
-<span id="cb12-276"><a href="#cb12-276"></a><span class="co">  {value: 5, step: 0.5, label: "Figure x-size:"}</span></span>
-<span id="cb12-277"><a href="#cb12-277"></a><span class="co">)</span></span>
-<span id="cb12-278"><a href="#cb12-278"></a><span class="co">viewof figy = Inputs.range(</span></span>
-<span id="cb12-279"><a href="#cb12-279"></a><span class="co">  [1, 10], </span></span>
-<span id="cb12-280"><a href="#cb12-280"></a><span class="co">  {value: 5, step: 0.5, label: "Figure y-size:"}</span></span>
-<span id="cb12-281"><a href="#cb12-281"></a><span class="co">)</span></span>
-<span id="cb12-282"><a href="#cb12-282"></a><span class="co">viewof constrained = Inputs.select(["True", "False"], {label: "Select an option:"})</span></span>
-<span id="cb12-283"><a href="#cb12-283"></a><span class="co">viewof dpi = Inputs.range(</span></span>
-<span id="cb12-284"><a href="#cb12-284"></a><span class="co">  [70, 100], </span></span>
-<span id="cb12-285"><a href="#cb12-285"></a><span class="co">  {value:75, step:5 , label: "Dpi:"}</span></span>
-<span id="cb12-286"><a href="#cb12-286"></a><span class="co">)</span></span>
-<span id="cb12-287"><a href="#cb12-287"></a><span class="co">viewof space_h = Inputs.range(</span></span>
-<span id="cb12-288"><a href="#cb12-288"></a><span class="co">  [0.1, 1], </span></span>
-<span id="cb12-289"><a href="#cb12-289"></a><span class="co">  {value: 0.5, step: 0.05, label: "horizonatal space:"}</span></span>
-<span id="cb12-290"><a href="#cb12-290"></a><span class="co">)</span></span>
-<span id="cb12-291"><a href="#cb12-291"></a><span class="co">viewof space_w = Inputs.range(</span></span>
-<span id="cb12-292"><a href="#cb12-292"></a><span class="co">  [0.1, 1], </span></span>
-<span id="cb12-293"><a href="#cb12-293"></a><span class="co">  {value: 0.5, step: 0.05, label: "width space:"}</span></span>
-<span id="cb12-294"><a href="#cb12-294"></a><span class="co">)</span></span>
-<span id="cb12-295"><a href="#cb12-295"></a><span class="co">```</span></span>
-<span id="cb12-296"><a href="#cb12-296"></a></span>
-<span id="cb12-299"><a href="#cb12-299"></a><span class="in">```{python}</span></span>
-<span id="cb12-300"><a href="#cb12-300"></a><span class="co">#| edit: False</span></span>
-<span id="cb12-301"><a href="#cb12-301"></a><span class="co">#| runbutton: True</span></span>
-<span id="cb12-302"><a href="#cb12-302"></a><span class="co">#| input:</span></span>
-<span id="cb12-303"><a href="#cb12-303"></a><span class="co">#|   - figx</span></span>
-<span id="cb12-304"><a href="#cb12-304"></a><span class="co">#|   - figy</span></span>
-<span id="cb12-305"><a href="#cb12-305"></a><span class="co">#|   - constrained</span></span>
-<span id="cb12-306"><a href="#cb12-306"></a><span class="co">#|   - dpi</span></span>
-<span id="cb12-307"><a href="#cb12-307"></a><span class="co">#|   - space_w</span></span>
-<span id="cb12-308"><a href="#cb12-308"></a><span class="co">#|   - space_h</span></span>
-<span id="cb12-309"><a href="#cb12-309"></a></span>
-<span id="cb12-310"><a href="#cb12-310"></a><span class="co">import matplotlib.pyplot as plt</span></span>
-<span id="cb12-311"><a href="#cb12-311"></a><span class="co">import numpy as np</span></span>
-<span id="cb12-312"><a href="#cb12-312"></a></span>
-<span id="cb12-313"><a href="#cb12-313"></a><span class="co">x = np.linspace(0, 10, 100)</span></span>
-<span id="cb12-314"><a href="#cb12-314"></a><span class="co">y = np.sin(x)</span></span>
-<span id="cb12-315"><a href="#cb12-315"></a></span>
-<span id="cb12-316"><a href="#cb12-316"></a><span class="co">fig, ax = plt.subplots(3,2, figsize=(figx,figy), dpi=dpi, sharex=True, sharey=True, constrained_layout=constrained,gridspec_kw={'hspace': space_h, 'wspace': space_w})</span></span>
-<span id="cb12-317"><a href="#cb12-317"></a></span>
-<span id="cb12-318"><a href="#cb12-318"></a><span class="co">for i in range(3):</span></span>
-<span id="cb12-319"><a href="#cb12-319"></a><span class="co">    for j in range(2):</span></span>
-<span id="cb12-320"><a href="#cb12-320"></a><span class="co">        ax[i,j].plot(x, y*(i+1)*(j+1))</span></span>
-<span id="cb12-321"><a href="#cb12-321"></a></span>
-<span id="cb12-322"><a href="#cb12-322"></a><span class="co">plt.show()</span></span>
+<span id="cb12-269"><a href="#cb12-269"></a></span>
+<span id="cb12-270"><a href="#cb12-270"></a><span class="co">&lt;!-- Let`s try to create 4x3 subplots with specific adjustments.</span></span>
+<span id="cb12-271"><a href="#cb12-271"></a></span>
+<span id="cb12-272"><a href="#cb12-272"></a><span class="co">- `plt.subplots(4, 3)`: create 4x3 subplots</span></span>
+<span id="cb12-273"><a href="#cb12-273"></a><span class="co">- `figsize=(3, 4)`: set the figure size to 3x4 inches</span></span>
+<span id="cb12-274"><a href="#cb12-274"></a><span class="co">- `sharex=True`: all subplots share the x-axis</span></span>
+<span id="cb12-275"><a href="#cb12-275"></a><span class="co">- `sharey=True`: all subplots share the y-axis</span></span>
+<span id="cb12-276"><a href="#cb12-276"></a><span class="co">-  `constraint_layout=True`: automatically adjust the subplot parameters to give the specified padding around the subplots</span></span>
+<span id="cb12-277"><a href="#cb12-277"></a><span class="co">- `gridspec_kw={'hspace': 0.5, 'wspace': 0.5}`: set the horizontal and vertical space between the subplots to 0.5 inches</span></span>
+<span id="cb12-278"><a href="#cb12-278"></a></span>
+<span id="cb12-279"><a href="#cb12-279"></a></span>
+<span id="cb12-280"><a href="#cb12-280"></a><span class="co">Play with the code below to understand the different parameters:</span></span>
+<span id="cb12-281"><a href="#cb12-281"></a></span>
+<span id="cb12-282"><a href="#cb12-282"></a></span>
+<span id="cb12-285"><a href="#cb12-285"></a><span class="in">```{ojs}</span></span>
+<span id="cb12-286"><a href="#cb12-286"></a><span class="co">//| echo: false</span></span>
+<span id="cb12-287"><a href="#cb12-287"></a></span>
+<span id="cb12-288"><a href="#cb12-288"></a><span class="co">viewof figx = Inputs.range(</span></span>
+<span id="cb12-289"><a href="#cb12-289"></a><span class="co">  [1, 10], </span></span>
+<span id="cb12-290"><a href="#cb12-290"></a><span class="co">  {value: 5, step: 0.5, label: "Figure x-size:"}</span></span>
+<span id="cb12-291"><a href="#cb12-291"></a><span class="co">)</span></span>
+<span id="cb12-292"><a href="#cb12-292"></a><span class="co">viewof figy = Inputs.range(</span></span>
+<span id="cb12-293"><a href="#cb12-293"></a><span class="co">  [1, 10], </span></span>
+<span id="cb12-294"><a href="#cb12-294"></a><span class="co">  {value: 5, step: 0.5, label: "Figure y-size:"}</span></span>
+<span id="cb12-295"><a href="#cb12-295"></a><span class="co">)</span></span>
+<span id="cb12-296"><a href="#cb12-296"></a><span class="co">viewof constrained = Inputs.select(["True", "False"], {label: "Select an option:"})</span></span>
+<span id="cb12-297"><a href="#cb12-297"></a><span class="co">viewof dpi = Inputs.range(</span></span>
+<span id="cb12-298"><a href="#cb12-298"></a><span class="co">  [70, 100], </span></span>
+<span id="cb12-299"><a href="#cb12-299"></a><span class="co">  {value:75, step:5 , label: "Dpi:"}</span></span>
+<span id="cb12-300"><a href="#cb12-300"></a><span class="co">)</span></span>
+<span id="cb12-301"><a href="#cb12-301"></a><span class="co">viewof space_h = Inputs.range(</span></span>
+<span id="cb12-302"><a href="#cb12-302"></a><span class="co">  [0.1, 1], </span></span>
+<span id="cb12-303"><a href="#cb12-303"></a><span class="co">  {value: 0.5, step: 0.05, label: "horizonatal space:"}</span></span>
+<span id="cb12-304"><a href="#cb12-304"></a><span class="co">)</span></span>
+<span id="cb12-305"><a href="#cb12-305"></a><span class="co">viewof space_w = Inputs.range(</span></span>
+<span id="cb12-306"><a href="#cb12-306"></a><span class="co">  [0.1, 1], </span></span>
+<span id="cb12-307"><a href="#cb12-307"></a><span class="co">  {value: 0.5, step: 0.05, label: "width space:"}</span></span>
+<span id="cb12-308"><a href="#cb12-308"></a><span class="co">)</span></span>
+<span id="cb12-309"><a href="#cb12-309"></a><span class="co">```</span></span>
+<span id="cb12-310"><a href="#cb12-310"></a></span>
+<span id="cb12-313"><a href="#cb12-313"></a><span class="in">```{python}</span></span>
+<span id="cb12-314"><a href="#cb12-314"></a><span class="co">#| edit: False</span></span>
+<span id="cb12-315"><a href="#cb12-315"></a><span class="co">#| runbutton: True</span></span>
+<span id="cb12-316"><a href="#cb12-316"></a><span class="co">#| input:</span></span>
+<span id="cb12-317"><a href="#cb12-317"></a><span class="co">#|   - figx</span></span>
+<span id="cb12-318"><a href="#cb12-318"></a><span class="co">#|   - figy</span></span>
+<span id="cb12-319"><a href="#cb12-319"></a><span class="co">#|   - constrained</span></span>
+<span id="cb12-320"><a href="#cb12-320"></a><span class="co">#|   - dpi</span></span>
+<span id="cb12-321"><a href="#cb12-321"></a><span class="co">#|   - space_w</span></span>
+<span id="cb12-322"><a href="#cb12-322"></a><span class="co">#|   - space_h</span></span>
 <span id="cb12-323"><a href="#cb12-323"></a></span>
-<span id="cb12-324"><a href="#cb12-324"></a><span class="co">``` --&gt;</span></span>
-<span id="cb12-325"><a href="#cb12-325"></a></span>
+<span id="cb12-324"><a href="#cb12-324"></a><span class="co">import matplotlib.pyplot as plt</span></span>
+<span id="cb12-325"><a href="#cb12-325"></a><span class="co">import numpy as np</span></span>
 <span id="cb12-326"><a href="#cb12-326"></a></span>
-<span id="cb12-327"><a href="#cb12-327"></a></span>
-<span id="cb12-328"><a href="#cb12-328"></a></span>
+<span id="cb12-327"><a href="#cb12-327"></a><span class="co">x = np.linspace(0, 10, 100)</span></span>
+<span id="cb12-328"><a href="#cb12-328"></a><span class="co">y = np.sin(x)</span></span>
 <span id="cb12-329"><a href="#cb12-329"></a></span>
-<span id="cb12-330"><a href="#cb12-330"></a></span>
+<span id="cb12-330"><a href="#cb12-330"></a><span class="co">fig, ax = plt.subplots(3,2, figsize=(figx,figy), dpi=dpi, sharex=True, sharey=True, constrained_layout=constrained,gridspec_kw={'hspace': space_h, 'wspace': space_w})</span></span>
 <span id="cb12-331"><a href="#cb12-331"></a></span>
+<span id="cb12-332"><a href="#cb12-332"></a><span class="co">for i in range(3):</span></span>
+<span id="cb12-333"><a href="#cb12-333"></a><span class="co">    for j in range(2):</span></span>
+<span id="cb12-334"><a href="#cb12-334"></a><span class="co">        ax[i,j].plot(x, y*(i+1)*(j+1))</span></span>
+<span id="cb12-335"><a href="#cb12-335"></a></span>
+<span id="cb12-336"><a href="#cb12-336"></a><span class="co">plt.show()</span></span>
+<span id="cb12-337"><a href="#cb12-337"></a></span>
+<span id="cb12-338"><a href="#cb12-338"></a><span class="co">``` --&gt;</span></span>
+<span id="cb12-339"><a href="#cb12-339"></a></span>
+<span id="cb12-340"><a href="#cb12-340"></a></span>
+<span id="cb12-341"><a href="#cb12-341"></a></span>
+<span id="cb12-342"><a href="#cb12-342"></a></span>
+<span id="cb12-343"><a href="#cb12-343"></a></span>
+<span id="cb12-344"><a href="#cb12-344"></a></span>
+<span id="cb12-345"><a href="#cb12-345"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
