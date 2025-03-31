@@ -471,7 +471,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>pandas.read_fwf()</code> function is can read fixed-width files.</p></li>
 </ul>
 <p>Mostly used function is <code>pandas.read_csv()</code> because you can specify the delimiter, header, and other options.</p>
-<div id="c6ef27c7" class="cell" data-execution_count="2">
+<div id="17db1666" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
 <span id="cb1-3"><a href="#cb1-3"></a>data <span class="op">=</span> pd.read_csv(temperature_data)</span>
@@ -540,7 +540,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The data has a different delimiter than the default <code>comma</code>. You can specify the delimiter using the <code>sep</code> parameter.</p>
-<div id="fecefdd5" class="cell" data-execution_count="3">
+<div id="30d4bd73" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>data <span class="op">=</span> pd.read_csv(temperature_data, sep<span class="op">=</span><span class="st">';'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -619,13 +619,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now the data is read correctly. The header is already taken from the first row. If you want to specify the header, you can use the <code>header</code> parameter.</p>
-<div id="ac02905d" class="cell" data-execution_count="4">
+<div id="38f0e6d9" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-2"><a href="#cb3-2"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'file.csv'</span>, header<span class="op">=</span><span class="va">None</span>) <span class="co"># No header</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'file.csv'</span>, header<span class="op">=</span><span class="dv">0</span>) <span class="co"># Header is in the first row</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'file.csv'</span>, header<span class="op">=</span><span class="dv">1</span>) <span class="co"># Header is in the second row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="4953aa97" class="cell" data-execution_count="5">
+<div id="e8c033c4" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>data <span class="op">=</span> pd.read_csv(temperature_data, sep<span class="op">=</span><span class="st">';'</span>, header<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb4-2"><a href="#cb4-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
@@ -704,7 +704,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>If your data contains whitespace, you can use the <code>skipinitialspace</code> parameter to remove initial whitespaces.</p>
-<div id="b5bb4314" class="cell" data-execution_count="6">
+<div id="33beca95" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>data <span class="op">=</span> pd.read_csv(temperature_dat, skipinitialspace<span class="op">=</span><span class="va">True</span>, sep<span class="op">=</span><span class="st">" "</span>)</span>
 <span id="cb5-2"><a href="#cb5-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
@@ -783,7 +783,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now the data has no header. You can specify the header using the <code>names</code> parameter.</p>
-<div id="fb0b3d8d" class="cell" data-execution_count="7">
+<div id="ec8c1dde" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>data <span class="op">=</span> pd.read_csv(temperature_dat, sep<span class="op">=</span><span class="st">' '</span>, skipinitialspace<span class="op">=</span><span class="va">True</span>,header<span class="op">=</span><span class="dv">1</span>,names<span class="op">=</span>[<span class="st">'t'</span>, <span class="st">'T'</span>])</span>
 <span id="cb6-2"><a href="#cb6-2"></a><span class="co"># important to set header=None, otherwise the first line is used as header</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -884,12 +884,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <hr>
 <p>Some examples are:</p>
-<div id="18696710" class="cell" data-execution_count="8">
+<div id="1e1660a7" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>data <span class="op">=</span> pd.read_csv(temperature_data, sep<span class="op">=</span><span class="st">';'</span>, header<span class="op">=</span><span class="dv">0</span>, names<span class="op">=</span>[<span class="st">'t'</span>, <span class="st">'T'</span>], skiprows<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now the first row is skipped, only 44638 rows are read instead of 44639.</p>
 <p>Missing value examples:</p>
-<div id="75e19b67" class="cell" data-execution_count="9">
+<div id="550cbcb8" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>data <span class="op">=</span> pd.read_csv(temperature_nan_dat, sep<span class="op">=</span><span class="st">' '</span>, skipinitialspace<span class="op">=</span><span class="va">True</span>,header<span class="op">=</span><span class="va">None</span>,names<span class="op">=</span>[<span class="st">'t'</span>, <span class="st">'T'</span>],  keep_default_na<span class="op">=</span><span class="va">True</span>,na_filter<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="bu">print</span>(data.loc[<span class="dv">20</span>:<span class="dv">26</span>]) <span class="co">#print some rows to see the NaN values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -904,7 +904,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>If the <code>na_filter</code>is set to <code>False</code>, the missing values are not recognized. But if it set on <code>True</code>, the missing values are recognized.</p>
-<div id="247f6628" class="cell" data-execution_count="10">
+<div id="ab37ea71" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>data <span class="op">=</span> pd.read_csv(temperature_nan_dat, sep<span class="op">=</span><span class="st">' '</span>, skipinitialspace<span class="op">=</span><span class="va">True</span>,header<span class="op">=</span><span class="va">None</span>,names<span class="op">=</span>[<span class="st">'t'</span>, <span class="st">'T'</span>],  keep_default_na<span class="op">=</span><span class="va">True</span>,na_filter<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="bu">print</span>(data.loc[<span class="dv">20</span>:<span class="dv">26</span>]) <span class="co">#print some rows to see the NaN values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -925,7 +925,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Numpy has two main functions to read text files. - <code>numpy.loadtxt()</code> function is used to read text files. - <code>numpy.genfromtxt()</code> function is used to read text files with missing values.</p>
 <p>In comparison to the <code>pandas</code> library, the <code>numpy</code> library is slower and can not read different data types in the same file. So you can not read a file with strings and numbers in the same file.</p>
 <p>If you try to read a file with a header row, you will get an <strong>error</strong>.</p>
-<div id="214f5133" class="cell" data-execution_count="11">
+<div id="0e89e0cc" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb12-2"><a href="#cb12-2"></a>data <span class="op">=</span> np.loadtxt(temperature_data, delimiter<span class="op">=</span><span class="st">';'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -972,7 +972,7 @@ The above exception was the direct cause of the following exception:
 </div>
 </div>
 <p>You can specify the header row using the <code>skiprows</code> parameter. If you want to skip one row, the <code>skiprows=1</code> parameter is set at <code>1</code>.</p>
-<div id="b20d6747" class="cell" data-execution_count="12">
+<div id="c67ece27" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>data <span class="op">=</span> np.loadtxt(temperature_data, delimiter<span class="op">=</span><span class="st">';'</span>, skiprows<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb13-2"><a href="#cb13-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
@@ -988,7 +988,7 @@ The above exception was the direct cause of the following exception:
 <p>Now the data is read correctly. You can see that the data is read as a numpy array and not as a DataFrame. This can be a disadvantage if you want to use the data as a DataFrame but an advantage if you want to use numpy functions to process the data.</p>
 <hr>
 <p>If you have data with whitespace, you do not need to specify the <code>delimiter</code>paramter because the default is whitespace.</p>
-<div id="979f725a" class="cell" data-execution_count="13">
+<div id="4f8d2e2c" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>data <span class="op">=</span> np.loadtxt(temperature_dat)</span>
 <span id="cb15-2"><a href="#cb15-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
@@ -1003,7 +1003,7 @@ The above exception was the direct cause of the following exception:
 </div>
 <p><code>genfromtxt()</code> gives you more flexibility to read files with missing values.</p>
 <p>First using the <code>loadtxt()</code> function, you get an <strong>error</strong> because of the missing values.</p>
-<div id="b144c95a" class="cell" data-execution_count="14">
+<div id="45a599df" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>data <span class="op">=</span> np.loadtxt(temperature_nan_dat)</span>
 <span id="cb17-2"><a href="#cb17-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -1045,7 +1045,7 @@ The above exception was the direct cause of the following exception:
 </div>
 </div>
 <p>If you try to read the file with an empty entrance at row 22, you wil get still an <strong>error</strong> with the <code>genfromtxt()</code> function.</p>
-<div id="70cc5c40" class="cell" data-execution_count="15">
+<div id="1fc1b93e" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>data <span class="op">=</span> np.genfromtxt(temperature_nan_dat)</span>
 <span id="cb18-2"><a href="#cb18-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -1104,7 +1104,7 @@ Caution
 </div>
 </div>
 <p>If you have not <code>whitespace</code> as delimiter, you can use the <code>genfromtxt()</code> function with missing values.</p>
-<div id="34ac4869" class="cell" data-execution_count="16">
+<div id="9f84361a" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>data <span class="op">=</span> np.genfromtxt(temperature_nan_data,delimiter<span class="op">=</span><span class="st">';'</span>)</span>
 <span id="cb19-2"><a href="#cb19-2"></a>data[<span class="dv">20</span>:<span class="dv">26</span>] <span class="co"># print some rows to see the NaN values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
@@ -1168,7 +1168,7 @@ Important
 <ul>
 <li><code>numpy.savetxt()</code> function is used to write text files.</li>
 </ul>
-<div id="3cbb69a3" class="cell" data-execution_count="17">
+<div id="11ada8e7" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>np.savetxt(<span class="st">'file.txt'</span>, data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
