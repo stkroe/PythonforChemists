@@ -14,6 +14,17 @@ This Data Analysis and Visualization for Chemists and Material Scientists tutori
 | A-6020 Innsbruck
 | AUSTRIA, Europe 
 
+A part of the exercises are created by:
+
+| **Assoz.-Prof. Dr. Thomas Hofer**
+| University of Innsbruck
+| Institute of General, Inorganic and Theoretical Chemistry
+| University of Innsbruck
+| Center for Chemistry and Biomedicine
+| Innrain 80-82
+| A-6020 Innsbruck
+| AUSTRIA, Europe
+
 ---
 
 as part of the lecture course "VU Data Science and Visualization Primer for Chemists and Material Scientists"
@@ -28,3 +39,12 @@ at UIBK
 - **Copyright Notice:** © 2025 Stefanie Kröll. All rights reserved.  
 - **[Privacy Policy](privacy.qmd)**
 - **[External Link Policy and Disclaimers](disclaimer.qmd)**
+
+
+### Acknowledgements
+
+
+This tutorial is based on the following sources:
+
+- [Scientific Computing for Chemists with Python](https://weisscharlesj.github.io/SciCompforChemists/notebooks/introduction/intro.html#)
+- 

@@ -68,6 +68,7 @@ There are a lot of resources to dive deeper into Python *e.g.*:
 
 
 ## Use AI to learn Python {.unnumbered}
+
 :::{.callout-important}
 
 - Language Models like GPT-3 can help you to learn Python.

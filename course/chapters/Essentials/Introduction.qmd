@@ -45,9 +45,11 @@ For a larger list see these wikipedia lists:
 
 - open-source
 - well documented with a lot of online resources:
+
  - [tutorials](https://github.com/ujjwalkarn/DataSciencePython), 
  - [documentations](https://docs.python.org/3/),
  - [stackoverflow](https://stackoverflow.com/questions) ect.
+ 
 - easy to learn 
 - intuitive
 - highly flexible
