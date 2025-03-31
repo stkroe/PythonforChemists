@@ -444,7 +444,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Null &amp; Alternative Hypothesis:</strong> The null hypothesis (H₀) assumes no effect, while the alternative hypothesis (H₁) suggests a significant difference.</p></li>
 <li><p><strong>t-tests:</strong> Used to compare the means of two groups (one-sample, independent, paired t-tests).</p></li>
 </ul>
-<div id="90a04d67" class="cell" data-execution_count="1">
+<div id="d84d06f2" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Example: Null hypothesis - The mean is equal to 0</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co">#H0: μ = 0</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -479,7 +479,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="06b94066" class="cell" data-execution_count="2">
+<div id="38b30402" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Generate two random samples (e.g., control and treatment groups)</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>np.random.seed(<span class="dv">42</span>)</span>
 <span id="cb2-3"><a href="#cb2-3"></a>control <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">50</span>, scale<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=50, Std=10</span></span>
@@ -510,7 +510,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="b3ceb14c" class="cell" data-execution_count="3">
+<div id="75f2cd3d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Generate paired data (e.g., before and after measurements)</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>np.random.seed(<span class="dv">42</span>)</span>
 <span id="cb3-3"><a href="#cb3-3"></a>before <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">50</span>, scale<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=50, Std=10</span></span>
@@ -544,7 +544,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>ANOVA (Analysis of Variance):</strong> Compares means of multiple groups to check for significant differences.</li>
 </ul>
-<div id="38af355a" class="cell" data-execution_count="4">
+<div id="c8b7cf4a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb4-2"><a href="#cb4-2"></a></span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="co"># Example: Comparing multiple groups</span></span>
@@ -562,7 +562,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Chi-square Test:</strong> Used for categorical data to examine associations between different groups.</li>
 </ul>
-<div id="75a408ce" class="cell" data-execution_count="5">
+<div id="65dd30c3" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> chi2_contingency</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
 <span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Example: Comparing categorical data</span></span>
