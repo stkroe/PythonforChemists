@@ -28,28 +28,28 @@ First of all some terminology:
 
 | Term | Definition |
 |:---------|:------------|
-| Command | A line of code that tells the computer to do something. |
-| Syntax | The rules that govern how commands are written. |
-| Execute | To run a command. |
-| Comment | A note in the code that is not executed. |
-| Indentation | The space at the beginning of a line of code that tells the computer that the line is part of a block of code. |
-| Error | A message that tells you that something is wrong with your code. |
-| Stack trace | A list of error messages that Python prints when an error occurs. |
-| Variable | A name that stores a value. |
-| Data type | The type of value that a variable stores. |
-| Declaration | The process of assigning memory to a variable  |
-| Integer | A whole number. |
-| Float | A number with a decimal point. |
-| Boolean | A value that is either True or False. |
-| List | A collection of items. |
-| Mutable | A type of object that can be changed. |
-| Immutable | A type of object that cannot be changed. |
-| String | A sequence of characters. |
-| Function | A block of code that performs a specific task. |
-| Module | A collection of functions and variables. |
-| Library | A collection of modules. |
-| Package | A collection of related modules. |
-| Script | A file that contains code that can be run independently. |
+| Command | *A line of code that tells the computer to do something.* |
+| Syntax | *The rules that govern how commands are written.* |
+| Execute | *To run a command.* |
+| Comment | *A note in the code that is not executed.* |
+| Indentation | *The space at the beginning of a line of code that tells the computer that the line is part of a block of code.* |
+| Error | *A message that tells you that something is wrong with your code.* |
+| Stack trace | *A list of error messages that Python prints when an error occurs.* |
+| Variable | *A name that stores a value.* |
+| Data type | *The type of value that a variable stores.* |
+| Declaration | *The process of assigning memory to a variable.* |
+| Integer | *A whole number.* |
+| Float | *A number with a decimal point.* |
+| Boolean | *A value that is either True or False.* |
+| List | *A collection of items.* |
+| Mutable | *A type of object that can be changed.* |
+| Immutable | *A type of object that cannot be changed.* |
+| String | *A sequence of characters.* |
+| Function | *A block of code that performs a specific task.* |
+| Module | *A collection of functions and variables.* |
+| Library | *A collection of modules.* |
+| Package | *A collection of related modules.* |
+| Script | *A file that contains code that can be run independently.* |
 :  {tbl-colwidths="[25,75]" .striped .hover}
 
 

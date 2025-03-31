@@ -78,6 +78,9 @@ print("flatten array: \n", c.flatten())
 - `np.linalg.det(a)` returns the **determinant of a matrix**
 - `np.linalg.eig(a)` returns the **eigenvalues and eigenvectors** of a matrix
 - `np.linalg.solve(a,b)` returns the **solution of a linear system of equations**
+- `np.convolv(a,b)` returns the **convolution** of two arrays
+
+
 
 ```{python}
 a = np.array([[1, 2],[3, 4],[5, 6]])
@@ -87,6 +90,29 @@ print("Summ of all elements: ", c)
 c = np.add(a,b) # element wise addition
 print("Element wise addition: ", c)
 ```
+
+
+:::{.callout-information}
+#### Question:
+What does the following code snippet do?
+```{python}
+#| eval: false
+
+temperatures = np.array([20, 30, 40, 50, 60, 70, 80, 90, 100])
+window = 3
+np.convolve(temperatures,np.ones(window) / window,
+                            mode='valid')
+```
+:::
+
+If you are not sure, look in the numpy documentation, ask AI, search in the internet or try it out in a code cell.
+
+:::{.callout-important}
+#### Answer:
+The code snippet calculates the moving average of the temperatures with a window size of 3.
+:::
+
+
 
 ---
 
@@ -135,17 +161,30 @@ print("\n")
 ### Manipulate data {.unnumbered}
 
 You can
-
-- copy data,
-- drop columns,
-- drop rows,
-- fill not valid values,
-- replace values, 
-- merge data, 
-- join data,
-
+- `df.copy()`: copy the data
+- `df.drop(columns=[...])`: drop columns
+- `df.drop(index=[...])`: drop rows
+- `df.drop_duplicates()`: drop duplicates
+- `df.fillna(...)`: fill NaNs
+- `df.dropna()`: drop NaNs
+- `df.replace(...)`: replace values
+- `pd.concat([df1, df2])`: concatenate data (concatenate along the rows)
+- `pd.concat([df1, df2], axis=1)`: concatenate data (concatenate along the columns)
+- `pd.merge(df1, df2)`: merge data in the sense of inner, outer, left, right join, see [pandas documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.merge.html)
+- `df.agg(...)`: aggregate the data
+- `df.transform(...)`: transform the data 
+- `df.value_counts()`: count the values
+- `df.apply(...)`: apply a function to the data
+- `df.groupby(...)`: group the data and perform operations on the groups
+- `df.sort_values(...)`: sort the data
+- `df.shift(...)`: shift the data
+- `df.diff(...)`: get the difference between the data
+- `df.ptc_shift(...)`: get the percentage change between the data
+- `df.to_numpy()`: convert the dataframe to a numpy array
+- `pd.DataFrame(arr)`: convert the numpy array to a dataframe
 etc.
 
+#### Copy and concatenate data: {.unnumbered}
 ```{python}
 data2 = data.copy()
 data2["Concentration 2 (M)"] = data2["Concentration (M)"] + 10 # increase the concentration by 10 M
@@ -166,25 +205,57 @@ data4 = pd.concat([data3, acidity], axis=1)
 print("concated data: \n", data4)
 ```
 
+#### Drop columns and rows: {.unnumbered}
 ```{python}
-data5 = data4.drop_duplicates() # drop the duplicates
+data4 = data4.drop(columns=["Concentration 2 (M)"]) # drop the column "Concentration 2 (M)"
+print("data4: \n", data4)
+
+data5 = data4.drop(index=[0, 1]) # drop the rows with index 0 and 1
 print("data5: \n", data5)
-data6 = data5.dropna() # drop the NaNs
+
+data6 = data5.drop(columns=["Aciditiy Type"]) # drop the column "Aciditiy Type"
 print("data6: \n", data6)
 ```
 
-### Transform Pandas DataFrame to Numpy Array and viceversa {.unnumbered}
 
+
+#### Drop duplicates, fill NaNs and drop NaNs {.unnumbered}
+```{python}
+data5 = data4.drop_duplicates() # drop the duplicates
+print("data5: \n", data5)
+
+data6 = data5.fillna(0) # fill the NaNs with 0
+print("data6: \n", data6)
+
+data7 = data5.dropna() # drop the NaNs
+print("data7: \n", data7)
+```
+
+#### Replace values: {.unnumbered}
+```{python}
+# replace the values
+data6["Aciditiy Type"].replace({"acid": "Acidic", "basic": "Basic", "neutral": "Neutral"}, inplace=True)
+print("data6: \n", data6)
+```
+
+### Count the values {.unnumbered}
 
 ```{python}
-df = data6
-print(len(df))
-# convert the dataframe to a numpy array
-arr = df.to_numpy() 
-print("arr: \n", arr)
-# convert the numpy array to a dataframe
-df2 = pd.DataFrame(arr, columns=["Name", "Formula", "Molecular Weight (g/mol)","Viscosity (mPa·s)","pH (Acidity)","Chemical Type","Concentration (M)","Concentration 2 (M)", "Aciditiy Type"])
-print("df2: \n", df2)
+# count the chemicals with different concentration
+print("Count the chemicals with the different concentrations \n", data["Concentration (M)"].value_counts())
+```
+
+### Appply a function to the data {.unnumbered}
+```{python}
+print("Apply a function to the data: \n", data["Concentration (M)"].apply(lambda x: x*2))
+```
+
+### Transform data {.unnumbered}
+
+```{python}
+# transform the data
+data6["Concentration (M)"] = data6["Concentration (M)"].transform(lambda x: x*2)
+print("data6: \n", data6)
 ```
 
 ### Sort data
@@ -192,3 +263,31 @@ print("df2: \n", df2)
 ```{python}
 print("sorted after concentration: ",data.sort_values(by="Concentration (M)", ascending=True))
 ```
+
+### Group data 
+
+In pandas you can group data by a specific column and perform operations on the groups.
+
+```{python}
+# sum of concentration by filter
+print("sum of concentration: \n", data["Concentration (M)"].sum()) 
+# sum of concentration group by type
+print("Sum of concentration group by type: \n", data.groupby("Chemical Type")["Concentration (M)"].sum())
+```
+
+### Transform Pandas DataFrame to Numpy Array and viceversa {.unnumbered}
+
+
+```{python}
+print("Names: ", data5.columns)
+df = data5.copy()
+print(len(df))
+# convert the dataframe to a numpy array
+arr = df.to_numpy() 
+print("arr: \n", arr)
+# convert the numpy array to a dataframe
+df2 = pd.DataFrame(arr, columns=["Name", "Formula", "Molecular Weight (g/mol)","Viscosity (mPa·s)","pH (Acidity)","Chemical Type","Concentration (M)", "Aciditiy Type"])
+print("df2: \n", df2)
+```
+
+

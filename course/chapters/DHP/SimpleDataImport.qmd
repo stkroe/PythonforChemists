@@ -125,6 +125,7 @@ The `read_csv()` function has a lot of parameters.
 Look in the documentation. You can see which parameters you can set [https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)
 
 For example,
+
 - `delimiter` parameter can be used to specify the delimiter instead of `sep`. Both are the same. Default is `,`.
 
 - `header` parameter can be used to specify the header row. Default is inferred from the file.
@@ -346,7 +347,22 @@ np.savetxt('file.txt', data)
 ```
 
 
+::: {.callout-important}
+# Problems {.unnumbered}
+If you have problems with importing data please check the following:
+- Have first a look at the data file.
+- Check the delimiter.
+- Check the header.
+- Check the missing values.
+- Check the data type.
+- Check the encoding.
+- Check the file format.
+- Check the file path.
+- Check the file name.
 
-
+You can use AI tool to get a code snippet for reading the data.
+- *e.g.* give the AI tool the one or two line of the as an example and ask for the code snippet.
+- *e.g.* beaware do that only if you do not have sensitive data.
+:::
 
 

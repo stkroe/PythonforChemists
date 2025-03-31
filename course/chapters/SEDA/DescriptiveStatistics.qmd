@@ -24,7 +24,7 @@ Descriptive statistics summarize and analyze datasets by providing measures of c
 - **Measures of Central Tendency:** Mean, median, and mode provide insights into the average or most common values in the dataset.
 - **Variability:** Variance, standard deviation, and interquartile range (IQR) measure how spread out the data is.
 - **Correlation & Covariance:** Determine relationships between two or more variables, useful for identifying dependencies in experimental data.
-- **Summary Statistics:** Using Pandas, scientists can quickly summarize large datasets.
+- **Summary Statistics:** Pandas provides built-in functions to calculate descriptive statistics for dataframes, including mean, median, standard deviation, and more. Further you can get a fast overview of the data using the `describe()` function.
 
 
 
@@ -36,15 +36,34 @@ import numpy as np
 
 - `np.mean(a)` returns the **mean** of the elements of an array
 - `np.average(a)` returns the **weighted average** of the elements of an array
+- `np.median(a)` returns the **median** of the elements of an array
 - `np.max(a)` returns the **maximum** of the elements of an array
 - `np.min(a)` returns **the minimum** of the elements of an array
 - `np.std(a)` returns **the standard** deviation of the elements of an array
+
 - `np.var(a)` returns **the variance** of the elements of an array
 - `np.covar(a)` returns the **covariance** of the elements of an array
-- `np.median(a)` returns the **median** of the elements of an array
-- `np.percentile(a,p) `` returns the **p-th percentile** of the elements of an array
+- `np.percentile(a,p)` returns the **p-th percentile** of the elements of an array
+- `np.quantile(a,q)` returns the **q-th quantile** of the elements of an array
+- `np.corrcoef(a)` returns the **correlation coefficient** of the elements of an array
+- `np.corrcoef(a,b)` returns the **correlation coefficient** of two arrays
 - `np.histogram(a, [,bins,range,density,weights])` returns the **histogram** of the elements of an array
+- `np.histogram2d(a,b, [,bins,range,density,weights])` returns the **2D histogram** of the elements of an array
+- `np.histogramdd(a, [,bins,range,density,weights])` returns the **nD histogram** of the elements of an array
 
+```{python}
+arr = np.array([1, 2, 3, 4, 5, 4, 7, 8, 9])
+print(arr)
+print("Mean: ", np.mean(arr))
+print("Weighted average: ", np.average(arr, weights=[1, 2, 3, 4, 5, 4, 3, 2, 1]))
+print("Median: ", np.median(arr))
+print("Standard deviation: ", np.std(arr))
+print("Variance: ", np.var(arr))
+print("Correlation coefficient: ", np.corrcoef(arr))
+print("Percentile: ", np.percentile(arr, 0.25))
+print("Quantile: ", np.quantile(arr, 0.75))
+print("IQR: ", np.percentile(arr, 0.75) - np.percentile(arr, 0.25))
+```
 
 - `np.argmin(a)` returns the **index of the minimum** element of an array
 - `np.argmax(a)` returns the **index of the maximum** element of an array
@@ -54,8 +73,6 @@ import numpy as np
 - `np.searchsorted(a,v)` returns the **index of the first element** of an array <br> 
     **that is greater than or equal to a value**
 - `np.extract(condition,a)` returns the **elements of an array that satisfy a condition**
-
-
 
 
 ```{python}
@@ -86,6 +103,71 @@ data = pd.DataFrame({
     "Concentration (M)": [55.5, 18.0, 1.0, 0.8, 0.5, 0.1, 1.5, 1.2]})
 ```
 
+### Repeation how to get an overview of the data {.unnumbered}
+- `data.head()`: Returns the first 5 rows of the dataframe
+```{python}
+print("head of data: \n",data.head()) # print the first 5 rows
+```
+
+- `data.shape[0]`: Returns the number of rows in the dataframe
+
+```{python}
+print("Number of data set: \n", data.shape[0]) # number of data set
+```
+
+- `data.shape[1]`: Returns the number of columns in the dataframe
+
+```{python}
+print("Number of data set: \n", data.shape[0]) # number of data set
+```
+
+- `data["Name"]`: Returns the column "Name" of the dataframe
+
+```{python}
+print("Name of chemicals: \n", data["Name"]) # print the column "Name"
+```
+
+- `data.iloc[1]`: Returns the second row of the dataframe
+
+```{python}
+print("2. Row: \n", data.iloc[1]) # print the second row
+```
+
+- `data[data["Concentration (M)"] > 5]`: Returns the rows where the concentration is greater than 5
+- `data.loc[data["Concentration (M)"]>5,"Chemical Type"]`: Returns the chemical type with a concentration higher than 5
+
+```{python}
+print("Filter the rows where concentration is greater than 5: \n", data[data["Concentration (M)"] > 5])
+print("Get the chemical type with a concentration higher than 5: \n", 
+      data.loc[data["Concentration (M)"]>5,"Chemical Type"])
+```
+
+### Descriptive Statistics {.unnumbered}
+
+- `data.info()`: Returns the information of the dataframe
+
+```{python}
+print("Information of data: \n", data.info()) # information of data
+```
+
+**Statistical Summary**
+
+- `data.describe()`: Returns the statistical summary of the dataframe
+
+```{python}
+print("Statistical summary: \n", data.describe()) # statistical summary
+```
+
+**Statistical Measures** 
+
+- `data["Concentration (M)"].mean()`: Returns the mean of the column "Concentration (M)"
+- `data["Concentration (M)"].std()`: Returns the standard deviation of the column "Concentration (M)"
+- `data["Concentration (M)"].median()`: Returns the median of the column "Concentration (M)"
+- `data["Concentration (M)"].max()`: Returns the maximum of the column "Concentration (M)"
+- `data["Concentration (M)"].min()`: Returns the minimum of the column "Concentration (M)"
+- `data["Concentration (M)"].sum()`: Returns the sum of the column "Concentration (M)"
+- `data["Concentration (M)"].mode()`: Returns the mode of the column "Concentration (M)"
+- `data["Concentration (M)"].percentile(q)`: Returns the q-th percentile of the column "Concentration (M)"
 
 
 ```{python}
@@ -95,20 +177,74 @@ print("median of concentration: \n", data["Concentration (M)"].median()) # media
 print("max of concentration: \n", data["Concentration (M)"].max()) # max of concentration
 print("min of concentration: \n", data["Concentration (M)"].min()) # min of concentration
 print("sum of concentration: \n", data["Concentration (M)"].sum()) # sum of concentration
-print("Statisical summary: \n", data.describe()) # statistical summary
-# mean of concentration group by type
-print("Mean of concentration group by type: \n", data.groupby("Chemical Type")["Concentration (M)"].mean()) 
-# count the chemicals with different concentration
-print("Count the chemicals with the different concentrations \n", data["Concentration (M)"].value_counts())
+print("mode of concentration: \n", data["Concentration (M)"].mode()) # mode of concentration
+print("percentile of concentration: \n", data["Concentration (M)"].quantile(0.25)) # 25th percentile of concentration
+print("IQR of concentration: \n", data["Concentration (M)"].quantile(0.75) - data["Concentration (M)"].quantile(0.25)) # IQR of concentration
+```
+
+- `data.groupby("Chemical Type")["Concentration (M)"].mean()`: Returns the mean of the column "Concentration (M)" grouped by "Chemical Type"
+
+```{python}
+print("Mean of concentration group by type: \n", data.groupby("Chemical Type")["Concentration (M)"].mean())
+```
+
+- `data.agg({"Concentration (M)": ["mean", "std", "median", "max", "min", "sum"]})`: Returns the mean, standard deviation, median, maximum, minimum, and sum of the column "Concentration (M)"
+```{python}
+print("Aggregate the data: \n", data.agg({"Concentration (M)": ["mean", "std", "median", "max", "min", "sum"]}))
+```
+
+**Correlation and Covariance**
+
+- `data.corr()`: Returns the correlation matrix of the dataframe
+- `data.cov()`: Returns the covariance matrix of the dataframe
+
+```{python}
+print("Correlation matrix: \n", data["Concentration (M)"].corr(data["Molecular Weight (g/mol)"]))
+print("Covariance matrix: \n", data["Concentration (M)"].cov(data["Molecular Weight (g/mol)"]))
+```
+
+**Pivot Tables**
+Pivot tables are used to summarize and aggregate data inside a dataframe.
+- `data.pivot_table(index="Chemical Type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean")`: Returns a pivot table of the dataframe
+
+```{python}
+data.pivot_table(index="Chemical Type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean")
 ```
 
 
-#### Pivot Table {.unnumbered}
+**Comparison of Data**
 
-Pivot tables are used to summarize and aggregate data inside a dataframe.
+
+- `data1 = data.compare(data2)`: Compares two dataframes and returns the differences
 
 ```{python}
-data.pivot_table(index="Chemical Type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean") 
+data1 = data.copy()
+data1["Concentration (M)"].iloc[0] = 0.5
+print("Comparison of data: \n", 
+data.compare(data1))
+```
+
+**Window Functions**
+
+Window functions are used to perform calculations on a subset of the data.
+It is useful for calculating moving averages, cumulative sums, and other rolling calculations.
+It helps to smooth out the data and identify trends.
+
+- `df.rolling(...)`: perform rolling window calculations
+- `df.rolling(...).mean()`: calculate the rolling mean
+- `df.rolling(...).mean()`: calculate the rolling mean
+- `df.rolling(...).sum()`: calculate the rolling sum
+- `df.rolling(...).std()`: calculate the rolling standard deviation
+- `df.rolling(...).min()`: calculate the rolling minimum
+- `df.rolling(...).max()`: calculate the rolling maximum
+- `df.rolling(...).apply(...)`: apply a function to the rolling window
+- `df.rolling(...).agg(...)`: aggregate the data in the rolling window
+- `df.rolling(...).transform(...)`: transform the data in the rolling window
+- `df.rolling(...).count()`: count the data in the rolling window
+
+```{python}
+# calculate the rolling mean
+print("rolling mean: \n", data["Concentration (M)"].rolling(window=2).mean())
 ```
 
 ---

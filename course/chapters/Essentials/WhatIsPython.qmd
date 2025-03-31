@@ -67,6 +67,19 @@ There are a lot of resources to dive deeper into Python *e.g.*:
 - [https://www.youtube.com/watch?v=LHBE6Q9XlzI](https://www.youtube.com/watch?v=LHBE6Q9XlzI)
 
 
+## Use AI to learn Python {.unnumbered}
+:::{.callout-important}
+
+- Language Models like GPT-3 can help you to learn Python.
+- In my opinion, today it is not necessary to learn the syntax of a programming language by hard.
+- You can use AI tools to help you with the syntax and concentrate on the problem-solving part.
+
+- **Learn how to prompt** your problem to the AI and get a proper solution.
+- But **be aware** that the AI is **not perfect** and can give you **wrong solutions**.
+- So it is **important** that you can **understand the code** and can debug it.
+:::
+
+## Practice, Practice, Practice {.unnumbered}
 :::{.callout-important}
 As it is with languages, you can only learn it if you **practice** it. <br>
 So, start you own projects and have fun with it!

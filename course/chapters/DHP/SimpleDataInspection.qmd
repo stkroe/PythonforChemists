@@ -240,6 +240,8 @@ You can convert the data type with the `astype()` function.
 data['time'] = data['time'].astype('float64')
 ```
 
+
+
 ## Example: Data Import and Inspection {.unnumbered}
 
 # Exercises {.unnumbered}

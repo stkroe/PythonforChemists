@@ -59,7 +59,7 @@ etc.
 ## How do you store the data? {.unnumbered}
 
 
-# This data can be stored in different locations, such as:
+This data can be stored in different locations, such as:
 
 - local files
 - databases
