@@ -35,7 +35,7 @@ book:
       - icon: "substack"
         menu:
           - text: Lecture 1
-            href: https://github.com/stkroe/PythonForChemists.github.io/course/presentations/lecture1.html
+            href: https://github.com/stkroe/PythonforChemists/tree/main/course/presentations/lecture1.html
 
   chapters:
       - index.qmd

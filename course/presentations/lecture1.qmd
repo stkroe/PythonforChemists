@@ -31,6 +31,7 @@ Welcome to Lecture 1!
 ## Topics Covered
 
 - Topic 1
+
 - Topic 2
 - Topic 3
 
