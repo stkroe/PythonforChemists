@@ -22,26 +22,73 @@ code-links:
 Hypothesis testing is a statistical method for making decisions or inferences about a population based on a sample. It is widely used in chemistry and materials science to validate experimental results and compare datasets.
 
 - **Null & Alternative Hypothesis:** The null hypothesis (H₀) assumes no effect, while the alternative hypothesis (H₁) suggests a significant difference.
+
 - **t-tests:** Used to compare the means of two groups (one-sample, independent, paired t-tests).
-- **ANOVA (Analysis of Variance):** Compares means of multiple groups to check for significant differences.
-- **Chi-square Test:** Used for categorical data to examine associations between different groups.
 
+```{python}
+# Example: Null hypothesis - The mean is equal to 0
+#H0: μ = 0
 
+# Alternative hypothesis - The mean is not equal to 0
+#H1: μ ≠ 0
 
-#### One-Sample t-test
-```python
-from scipy import stats
+data = [1, 2, 3, 4, 5]
 
-# Example: Comparing two material compositions
-group1 = [10.2, 14.5, 13.3, 9.8, 12.7]
-group2 = [9.5, 13.1, 12.9, 8.7, 11.3]
+# Perform a one-sample t-test
+t_stat, p_value = stats.ttest_1samp(data, 0)
 
-# Perform t-test
-t_stat, p_value = stats.ttest_ind(group1, group2)
-print(f"T-statistic: {t_stat}, P-value: {p_value}")
+# Print results
+print(f"T-Statistic: {t_stat:.4f}, P-Value: {p_value:.4f}")
+
+# Interpretation
+if p_value < 0.05:
+    print("Reject the null hypothesis: The mean is significantly different from 0.")
+else:
+    print("Fail to reject the null hypothesis: No significant difference from 0.")
+
 ```
 
-#### ANOVA Test
+```{python}
+# Generate two random samples (e.g., control and treatment groups)
+np.random.seed(42)
+control = np.random.normal(loc=50, scale=10, size=30)  # Mean=50, Std=10
+treatment = np.random.normal(loc=55, scale=10, size=30)  # Mean=55, Std=10
+
+# Perform an independent t-test
+t_stat, p_value = stats.ttest_ind(control, treatment)
+
+# Print results
+print(f"T-Statistic: {t_stat:.4f}, P-Value: {p_value:.4f}")
+
+# Interpretation
+if p_value < 0.05:
+    print("Reject the null hypothesis: The groups have significantly different means.")
+else:
+    print("Fail to reject the null hypothesis: No significant difference between groups.")
+```
+
+```{python}
+# Generate paired data (e.g., before and after measurements)
+np.random.seed(42)
+before = np.random.normal(loc=50, scale=10, size=30)  # Mean=50, Std=10
+after = before + np.random.normal(loc=5, scale=2, size=30)  # Mean=55, Std=2
+
+# Perform a paired t-test
+t_stat, p_value = stats.ttest_rel(before, after)
+
+# Print results
+print(f"T-Statistic: {t_stat:.4f}, P-Value: {p_value:.4f}")
+
+# Interpretation
+if p_value < 0.05:
+    print("Reject the null hypothesis: The means are significantly different.")
+else:
+    print("Fail to reject the null hypothesis: No significant difference between means.")
+```
+
+
+- **ANOVA (Analysis of Variance):** Compares means of multiple groups to check for significant differences.
+
 
 ```{python}
 from scipy import stats
@@ -57,7 +104,7 @@ print(f"F-statistic: {f_stat}, P-value: {p_value}")
 ```
 
 
-### Chi-square Test
+- **Chi-square Test:** Used for categorical data to examine associations between different groups.
 
 ```{python}
 from scipy.stats import chi2_contingency
@@ -67,4 +114,9 @@ observed = [[10, 20, 30], [6, 9, 17]]
 chi2, p, dof, expected = chi2_contingency(observed)
 print(f"Chi-square: {chi2}, P-value: {p}")
 
+```
 
+
+Check the [SciPy documentation](https://docs.scipy.org/doc/scipy/reference/stats.html) for more statistical tests and functions.
+
+And for more information on hypothesis testing, refer to the [SciPy Hypothesis Tests](https://docs.scipy.org/doc/scipy/tutorial/stats/hypothesis_tests.html).

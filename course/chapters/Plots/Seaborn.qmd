@@ -22,17 +22,83 @@ Seaborn is a Python data visualization library based on Matplotlib. It provides 
 ### KDE Plot {.unnumbered}
 [Kernel density plot](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) show the distribution of a single variable *e.g.* distribution of a mass of individuals in a population. The data is smoothed by a kernel density and the density of the data is plotted continuously.
 
+```{python}
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+# Create a dataset
+data = np.random.normal(loc=0, scale=1, size=1000)
+df = pd.DataFrame(data, columns=["Data"])
+
+# Create a KDE plot
+sns.kdeplot(data=df["Data"], color="blue", shade=True)
+plt.show()
+```
+
+
 ### Violin Plot {.unnumbered}
 
 - [Violin plot](https://seaborn.pydata.org/generated/seaborn.violinplot.html): Show the distribution of a numerical variable for different categories. It is similar to a box plot but it also shows the probability density of the data at different values. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.
 
+```{python}
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+# Create a dataset
+data = np.random.normal(loc=0, scale=1, size=1000)
+df = pd.DataFrame(data, columns=["Data"])
+
+# Create a Violin plot
+sns.violinplot(data=df["Data"], color="blue")
+plt.show()
+```
+
+
 ## Correlation plots {.unnumbered}
-
-
-#
 
 - [Regression plot](https://seaborn.pydata.org/generated/seaborn.regplot.html):
 Show a regression model between two variables *e.g.* the relationship between the concentration and the time.
 
+```{python}
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 
-[Heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) shows the relationship of two categorical variables with a numerical variable *e.g.* cancer cell survival time for different treatment groups and different cancer types. The color of the cell is proportional to the value of the investigated variable.
+# Create a dataset
+
+data = np.random.normal(loc=0, scale=1, size=1000)
+df = pd.DataFrame(data, columns=["Data"])
+
+# Create a Regression plot
+sns.regplot(x=np.arange(0, len(df)), y=df["Data"], color="blue")
+plt.show()
+``` 
+
+- [Heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) shows the relationship of two categorical variables with a numerical variable *e.g.* cancer cell survival time for different treatment groups and different cancer types. The color of the cell is proportional to the value of the investigated variable.
+
+```{python}
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+# Create a dataset
+data = np.random.normal(loc=0, scale=1, size=(100, 100))
+df = pd.DataFrame(data)
+
+# Create a Heatmap
+sns.heatmap(data=df, cmap="coolwarm")
+plt.show()
+```
+
+### Additional resources {.unnumbered}
+
+- [Seaborn Gallery](https://seaborn.pydata.org/examples/index.html)
+- [Seaborn API](https://seaborn.pydata.org/api.html)
+- [Seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
+- [Seaborn Documentation](https://seaborn.pydata.org/index.html)

@@ -28,7 +28,7 @@ This course has been designed for persons who are looking to undertake a special
 - The course will give you a very brief introduction to Python and its libraries.
 - The main focus will be on the libraries `numpy`, `pandas`, `pandas`, `scipy`, `matplotlib` and `seaborn` for data analyzing and visualization.
 - The course is organized interactivly. You will get the chance to practice with exercises.
-- Upon successful completion of this course, participants will have acquired a comprehensive understanding of the fundamental components of Python and the key packages necessary for the analysis and presentation of their own research data.
+- Upon successful completion of this course, you will have acquired a comprehensive understanding of the fundamental components of Python and the key packages necessary for the analysis and presentation of their own research data.
 - You can test your knowledge by an exam example at the end of this course.
 
 ---
@@ -48,8 +48,8 @@ The aim of this course should be that you get an idea how Python can be use for 
 This course is divided into three possible paths to accomplish the learning objectives:
 
 - **Beginner Path**: Focuses on first contact with Python, covering basic concepts and introductory modules.
-- **Advanced Path**: Provides a deeper dive into different libraries and specialized visualization plots.
-- **Challenging Path**: Explores advanced topics and complex data visualization techniques, with more difficult exercises and in-depth analysis.
+- **Advanced Path**: Provides a deeper dive into different libraries and specialized visualization plots. [work in progress]
+- **Challenging Path**: Explores advanced topics and complex data visualization techniques, with more difficult exercises and in-depth analysis. [TODO]
 
 Each lecture includes examples related to chemistry and material science. At the end of each part, there are exercises to test your understanding and reinforce the concepts learned. These exercises are designed to be practical and relevant to real-world scenarios in chemistry and materials science.
 
@@ -79,3 +79,58 @@ Timeschedule for a week table
 | 17:00-18:00| Example 1    | Example 2| Example 3  | Example 4 | Final Exam|
 
 
+### Lecture 1 {.unnumbered}
+
+**Introduction to Python - Essentials**
+
+- [Introduction to Python](course/chapters/Essentials/Introduction.qmd)
+- [What is Python?](course/chapters/Essentials/WhatIsPython.qmd)
+- [Python Basics](course/chapters/Python/Basics.qmd)
+- [Python Libraries](course/chapters/Python/BasicsModules.qmd)
+
+**Data Handling and Preprocessing**
+
+- [Data Collection](course/chapters/DHP/DataCollection.qmd)
+- [Data Import](course/chapters/DHP/SimpleDataImport.qmd)
+- [Data Inspection](course/chapters/DHP/DataInspection.qmd)
+
+
+### Lecture 2 {.unnumbered}
+
+**First Data Visualization Techniques - Datra Visualization 1**
+
+- [Data Visualization](course/chapters/Plots/DataVisualization.qmd)
+- [Simple Plots](course/chapters/Plots/SimplePlots.qmd)
+
+**Exercise 1**
+<!-- - [Exercise 1](course/exercises/exercises/exercise1.ipynb) -->
+
+### Lecture 3 {.unnumbered}
+
+
+**Statistical and Exploratory Data Analysis**
+
+- [Data Manipulation](course/chapters/SEDA/DataManipulation.qmd)
+- [Descriptive Statistics](course/chapters/SEDA/DescriptiveStatistics.qmd)
+- [Data Models](course/chapters/SEDA/DataModels.qmd)
+- [Model Testing](course/chapters/SEDA/ModelTesting.qmd)
+
+**More Data Visualization Techniques - Data Visualization 2**
+
+- [Simple Plot Types](course/chapters/Plots/SimplePlotTypes.qmd)
+
+
+**Exercise 2**
+<!-- - [Exercise 2](course/exercises/exercises/exercise2.ipynb) -->
+**Exercise 3**
+<!-- - [Exercise 3](course/exercises/exercises/exercise3.ipynb) -->
+
+### Lecture 4 {.unnumbered}
+
+**Special Data Visualization and Analysis Techniques - Spectroscopy and Image Data Analysis**
+
+- [Spectroscopy Data Analysis](course/chapters/SDVA/SpectroscopyDataAnalysis.qmd)
+- [Image Data Analysis](course/chapters/SDVA/ImageDataAnalysis.qmd)
+
+**Exercise 4**
+<!-- - [Exercise 4](course/exercises/exercises/exercise4.ipynb) -->

@@ -8,5 +8,8 @@ scipy
 seaborn
 statsmodels
 otter-grader
-
-  
+umap-learn
+bokeh
+altair
+plotly
+networkx

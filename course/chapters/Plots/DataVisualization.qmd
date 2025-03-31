@@ -41,7 +41,7 @@ A good handbook for data visualization in Python is the book ["Python Data Scien
 
 
 - A graphic should have a suitable font size.
-- Choose colors that are easy to distinguish also for colorblind people.
+- Choose colors that are easy to distinguish also for colorblind people (e.g. [colorbrewer](https://colorbrewer2.org/).
 - The axis ticks and limits should be chosen in a way that the data is easy to read.
 - Axis should be labeled and physical units should be not forgotten.
 - The graphic should be not overloaded with information.

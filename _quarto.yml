@@ -58,17 +58,17 @@ book:
           - course/chapters/Plots/DataVisualization.qmd
           - course/chapters/Plots/SimplePlots.qmd
           - course/chapters/Plots/Seaborn.qmd
-          - course/exercises/exercises/exercise1.ipynb
+          - course/chapters/Plots/SimplePlotTypes.qmd
+          - course/exercises/exercises/exerciseA_1.ipynb
       - part: "Statistical and Exploratory Data Analysis"
         chapters:
           - course/chapters/SEDA/DataManipulation.qmd
           - course/chapters/SEDA/DescriptiveStatistics.qmd
-          - course/chapters/SEDA/DataModels.qmd
           - course/chapters/SEDA/ModelTesting.qmd
-          - course/chapters/SEDA/MultivariantAnalysis.qmd
+          - course/chapters/SEDA/DataModels.qmd
+          - course/chapters/SEDA/AdvancedAnalysis.qmd
       - part: "Data Visualization 2"
         chapters:
-          - course/chapters/PlotTypes/SimplePlotTypes.qmd
           - course/chapters/PlotTypes/AdvancedPlotTypes.qmd
           - course/chapters/PlotTypes/InteractivePlots.qmd
       - part: "Spectroscopy and Image Data Analysis"
@@ -96,12 +96,17 @@ format:
       theme: 
         light: [cosmo]  # Light theme
         dark: [darkly]   # Dark theme
-      #highlight-style: "tango"
+      highlight-style: gruvbox
       code-copy: true
-      code-overflow: wrap
+      code-overflow: scroll
+      code-fold: false
+      code-line-numbers: true
+      code-tools: true
+      code-link: true
+      code-block-bg: true
+      code-block-border-left: "#31BAE9"
       toc: true
       toc-depth: 3
-      code-fold: false
       fig-cap: true
       #self-contained: true
       number-sections: false

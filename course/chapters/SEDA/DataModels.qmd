@@ -13,12 +13,22 @@ code-links:
         icon: "laptop"
 --- 
 # Data Models {.unnumbered}
+
 ## Linear Regression {.unnumbered}
 
 Often we want to find a model which can explain the data.
 It is important to understand the data and the model to be able to interpret the results and make predictions.
 
-The simplest model is the linear regression model. It assumes that the data has a linear relationship with the target variable. The model is defined as:
+The simplest model is the linear regression model. It assumes that the data has a linear relationship with the target variable. 
+For example, if we have a single feature $x$ and a target variable $y$, the linear regression model can be defined as:
+
+$$
+y = \beta_0 + \beta_1 x + \epsilon
+$$
+
+where $y$ is the target variable, $x$ is the feature, $\beta_0$ and $\beta_1$ are the coefficients, and $\epsilon$ is the error term.
+
+For multiple features $x_1, x_2, \ldots, x_n$, the linear regression model can be defined as:
 
 $$
 y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n + \epsilon
@@ -63,16 +73,32 @@ print("95% confidence interval: " + str(intercept - tinv(0.05, len(x)-2)*interce
 :::{.callout-important}
 For older version `scipy`only returned 5 values with fields slope, intercept, rvalue, pvalue and stderr. For compatiblity reasons the return values are 5 elements tuple.
 
-```python
+```{python}
 slope, intercept, r, p, se = linregress(x, y)
 ```
 And if you want to get the intercept error you can use the following return value as a object:
 
-```python
+```{python}
 results = linregress(x, y)
 print(results.intercept_stderr)
 ```
 :::
+
+### Using `statsmodels`{.unnumbered}
+
+Another library is `statsmodels`. The `statsmodels` library provides more detailed information about the model, such as the coefficients, standard errors, t-values, p-values, and confidence intervals.
+
+```{python}
+import statsmodels.api as sm
+
+X = np.array([1, 2, 3, 4, 5])
+y = X*np.random.normal(0, 1, 5)+np.random.normal(0, 1, 5)
+
+X_with_const = sm.add_constant(X)  # Add intercept term
+model = sm.OLS(y, X_with_const).fit()
+print(model.summary())
+```
+
 
 ### Using `scikit-learn` {.unnumbered}
 One of the most popular libraries is `scikit-learn`. The following code shows how to fit a linear regression model using `scikit-learn`:
@@ -100,37 +126,45 @@ plt.plot(X, y_pred, color='red', label='Linear Fit')
 plt.legend()
 plt.show()
 ```
-
-### Using `statsmodels`
-```python
-import statsmodels.api as sm
-
-X_with_const = sm.add_constant(X)  # Add intercept term
-model = sm.OLS(y, X_with_const).fit()
-print(model.summary())
-```
 ---
 
 ## Non-Linear Fits
 Linear regression may not always be sufficient, especially for complex relationships. Non-linear models provide more flexibility.
 
 ### Polynomial Regression
-```python
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.pipeline import make_pipeline
 
-poly_model = make_pipeline(PolynomialFeatures(3), LinearRegression())
-poly_model.fit(X, y)
-y_poly_pred = poly_model.predict(X)
+Polynomial regression is a type of linear regression where the relationship between the independent variable $x$ and the dependent variable $y$ is modeled as an $n$-th degree polynomial.
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+# Sample data
+X = np.linspace(1, 5, 100)
+y = X**2 + np.random.normal(0, 1, 100)
+
+model = np.polyfit(X, y, 2)
+
+model = np.poly1d(model)
+
+X_range = np.linspace(1, 5, 100)
+y_fit = model(X_range)
+
+print(model)
 
 plt.scatter(X, y, color='blue', label='Data')
-plt.plot(X, y_poly_pred, color='green', label='Polynomial Fit')
+plt.plot(X_range, y_fit, color='purple', label='Polynomial Fit')
 plt.legend()
-plt.show()
+
+
 ```
 
 ### Curve Fitting with `scipy`
-```python
+
+`scipy` provides the `curve_fit` function to fit a non-linear model to the data. The function requires the model function and the data as input.
+
+```{python}
 from scipy.optimize import curve_fit
 
 def nonlinear_func(x, a, b, c):

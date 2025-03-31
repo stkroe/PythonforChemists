@@ -7,11 +7,8 @@ title: "Introduction"
 
 
 - Scientists produce a lot of data which needs to be analyzed and visualized.
-
 - Clear presentation of data is essential for the understanding of the data.
-
 - It helps to improve your scientific communication and make your results more accessible to others.
-
 - There are many tools available for data analysis and visualization.
 
 A very simple approach would be the use of basic spreadsheet programs with graphical user interfaces *e.g.* 
@@ -24,11 +21,8 @@ But for more advanced analysis you need probably specifc plotting and analysis t
 
 
 - You can either use programs with GUIs *e.g.* [LabPlot](https://labplot.kde.org/), [QtiPlot](https://www.qtiplot.com/), [Scilab](https://www.scilab.org/), [SciDAVis](https://scidavis.sourceforge.net/), [Origin](https://www.originlab.com/) ...
-
 - or a GUI based program with command line interface *e.g.* [Xmgrace](https://plasma-gate.weizmann.ac.il/Grace/),  [GNU Octave](https://octave.org/) ...
-
 - or command line based tools *e.g.* [Gnuplot](http://www.gnuplot.info/), [Matlab](https://de.mathworks.com/products/matlab.html), [Mathematica](https://www.wolfram.com/mathematica/) ...
-
 - or programming languages *e.g.* [Python](https://www.python.org/), [R](https://www.r-project.org/ju), [Julia](https://julialang.org/) ...
  
 
@@ -50,30 +44,18 @@ For a larger list see these wikipedia lists:
 
 
 - open-source
-
 - well documented with a lot of online resources:
- 
  - [tutorials](https://github.com/ujjwalkarn/DataSciencePython), 
  - [documentations](https://docs.python.org/3/),
  - [stackoverflow](https://stackoverflow.com/questions) ect.
-
 - easy to learn 
-
 - intuitive
-
 - highly flexible
-
 - wide range of applications
-
 - huge number of different python packages are available 
-
 - very easy to adapt to other programming languages such as `R` and `Julia`
-
 - it is not limited to a specific operating system
-
 - you can automate repetitive tasks
-
 - you can create templates for your analysis and visualization tasks
-
 - one of the most popular languages in machine learning and data science
 
