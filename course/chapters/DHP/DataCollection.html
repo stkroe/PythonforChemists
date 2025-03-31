@@ -71,12 +71,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-fdada01b6a4a613316abf06c0f7ea711.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a7893e8d0b037e1aff40777cba0b700.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-35422cdc4f70219b1f2ea309e4c869ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-0c7f10e693ceb5850653c71567dd3ef9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-9b636ebed4f7b066ffdd416a9678baf4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-bbe3c2c4137d30106c846c1447f199be.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -276,7 +276,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exercise1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 1</span></a>
+  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/exercises/exercises/exerciseA_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 1</span></a>
   </div>
 </li>
       </ul>
@@ -302,17 +307,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/DataModels.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inferential Statistics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../../course/chapters/SEDA/ModelTesting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Model Testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/MultivariantAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Multivariant Analysis</span></a>
+  <a href="../../../course/chapters/SEDA/DataModels.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inferential Statistics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/chapters/SEDA/AdvancedAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Statistical Analysis</span></a>
   </div>
 </li>
       </ul>
@@ -326,11 +331,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/PlotTypes/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../course/chapters/PlotTypes/AdvancedPlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Plot Types</span></a>
@@ -417,9 +417,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#what-is-data" id="toc-what-is-data" class="nav-link" data-scroll-target="#what-is-data">What is data?</a></li>
   <li><a href="#how-do-you-get-data" id="toc-how-do-you-get-data" class="nav-link" data-scroll-target="#how-do-you-get-data">How do you get data?</a></li>
   <li><a href="#how-do-you-store-the-data" id="toc-how-do-you-store-the-data" class="nav-link" data-scroll-target="#how-do-you-store-the-data">How do you store the data?</a></li>
-  </ul></li>
-  <li><a href="#this-data-can-be-stored-in-different-locations-such-as" id="toc-this-data-can-be-stored-in-different-locations-such-as" class="nav-link" data-scroll-target="#this-data-can-be-stored-in-different-locations-such-as">This data can be stored in different locations, such as:</a>
-  <ul class="collapse">
   <li><a href="#how-do-you-access-external-data" id="toc-how-do-you-access-external-data" class="nav-link" data-scroll-target="#how-do-you-access-external-data">How do you access external data?</a></li>
   <li><a href="#which-data-formats-do-you-use" id="toc-which-data-formats-do-you-use" class="nav-link" data-scroll-target="#which-data-formats-do-you-use">Which data formats do you use?</a>
   <ul class="collapse">
@@ -445,7 +442,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/DHP/DataCollection.html">Data Handling and Preprocessing</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/DHP/DataCollection.html"><span class="chapter-title">Introduction to Data Science in Chemistry and Materials Science</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Introduction to Data Science in Chemistry and Materials Science</span></h1>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Introduction to Data Science in Chemistry and Materials Science</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -511,10 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="how-do-you-store-the-data" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="how-do-you-store-the-data">How do you store the data?</h2>
-</section>
-</section>
-<section id="this-data-can-be-stored-in-different-locations-such-as" class="level1">
-<h1>This data can be stored in different locations, such as:</h1>
+<p>This data can be stored in different locations, such as:</p>
 <ul>
 <li>local files</li>
 <li>databases</li>
@@ -527,6 +521,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If you use data from external sources, you have to make sure that you have legal rights to use the data. Check the data license and terms of use.</p>
 <p>Further make sure how the data is stored and how you can access it.</p>
 <hr>
+</section>
 <section id="how-do-you-access-external-data" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="how-do-you-access-external-data">How do you access external data?</h2>
 <p>To access data from exeternal sources, you can use different tools and libraries.</p>
@@ -553,33 +548,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="plain-text-files" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="plain-text-files">Plain Text Files</h3>
 <p>A text file often contains a header with the names of the columns and then the data in rows. Columns can be seperated by different delimiters (<code>spaces</code>, <code>,</code>, <code>;</code>, <code>tabs</code>, …). <br> For example, a file with data from an experiment could look like this:</p>
-<pre class="plaintext"><code>Time/s  Temperature/°C
-0         20
-10        21
-...     ...
-</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>Time/s  Temperature/°C</span>
+<span id="cb1-2"><a href="#cb1-2"></a>0         20</span>
+<span id="cb1-3"><a href="#cb1-3"></a>10        21</span>
+<span id="cb1-4"><a href="#cb1-4"></a>...     ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="json-or-xml" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="json-or-xml">JSON or XML</h3>
 <p><a href="https://en.wikipedia.org/wiki/JSON">JSON</a> stands for JavaScript Object Notation. Data is structured in a key-value format, so that both humans and machines can read it easily. <br> For example, a JSON file with the same data as above could look like this:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"Time"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span> <span class="dt">"Temperature"</span><span class="fu">:</span> <span class="dv">20</span><span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"Time"</span><span class="fu">:</span> <span class="dv">10</span><span class="fu">,</span> <span class="dt">"Temperature"</span><span class="fu">:</span> <span class="dv">21</span><span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="er">...</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="fu">{</span><span class="dt">"Time"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span> <span class="dt">"Temperature"</span><span class="fu">:</span> <span class="dv">20</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="fu">{</span><span class="dt">"Time"</span><span class="fu">:</span> <span class="dv">10</span><span class="fu">,</span> <span class="dt">"Temperature"</span><span class="fu">:</span> <span class="dv">21</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="er">...</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>  <span class="ot">]</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><a href="https://en.wikipedia.org/wiki/XML">XML</a> stands for Extensible Markup Language. It is also designed to be both human-readable and machine-readable. <br> For example, an XML file with the same data as above could look like this:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">data</span>&gt;</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">measurement</span>&gt;</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Time</span>&gt;0&lt;/<span class="kw">Time</span>&gt;</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Temperature</span>&gt;20&lt;/<span class="kw">Temperature</span>&gt;</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">measurement</span>&gt;</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">measurement</span>&gt;</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Time</span>&gt;10&lt;/<span class="kw">Time</span>&gt;</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Temperature</span>&gt;21&lt;/<span class="kw">Temperature</span>&gt;</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">measurement</span>&gt;</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1"></a>&lt;<span class="kw">data</span>&gt;</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  &lt;<span class="kw">measurement</span>&gt;</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    &lt;<span class="kw">Time</span>&gt;0&lt;/<span class="kw">Time</span>&gt;</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    &lt;<span class="kw">Temperature</span>&gt;20&lt;/<span class="kw">Temperature</span>&gt;</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  &lt;/<span class="kw">measurement</span>&gt;</span>
+<span id="cb3-6"><a href="#cb3-6"></a>  &lt;<span class="kw">measurement</span>&gt;</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    &lt;<span class="kw">Time</span>&gt;10&lt;/<span class="kw">Time</span>&gt;</span>
+<span id="cb3-8"><a href="#cb3-8"></a>    &lt;<span class="kw">Temperature</span>&gt;21&lt;/<span class="kw">Temperature</span>&gt;</span>
+<span id="cb3-9"><a href="#cb3-9"></a>  &lt;/<span class="kw">measurement</span>&gt;</span>
+<span id="cb3-10"><a href="#cb3-10"></a>  ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="binary-files" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="binary-files">Binary Files</h3>
@@ -854,6 +848,8 @@ Solutions
 </div>
 
 
+<!-- -->
+
 </section>
 
 </main> <!-- /main -->
@@ -1088,6 +1084,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
@@ -1436,7 +1483,355 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         <span class="nav-page-text"><span class="chapter-title">Simple Data Import</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="an">title:</span><span class="co"> "Introduction to Data Science in Chemistry and Materials Science"</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="an">execute:</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">    echo: true</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">    eval: false</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">---</span> </span>
+<span id="cb4-7"><a href="#cb4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="fu">### More information {.unnumbered}</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Science for Beginner</span><span class="co">](https://microsoft.github.io/Data-Science-For-Beginners/#/)</span> by Microsoft</span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Research Data Managment (RDM) in Chemistry</span><span class="co">](https://knowledgebase.nfdi4chem.de/knowledge_base/)</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="ss">- </span><span class="co">[</span><span class="ot">An introduction to Python for Chemistry</span><span class="co">](https://pythoninchemistry.org/intro_python_chemists/intro.html)</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Scientific Computing for Chemists with Python</span><span class="co">](https://weisscharlesj.github.io/SciCompforChemists/notebooks/introduction/intro.html)</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Python for Data Science in Chemistry</span><span class="co">](https://education.molssi.org/python-data-science-chemistry/intro.html)</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Introduction to Data Science with Python</span><span class="co">](https://pythondatabook.com/)</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Practical Data Science in Python</span><span class="co">](https://www.practicaldatascience.org/intro.html)</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="fu"># Data Collection and Storage {.unnumbered}</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a></span>
+<span id="cb4-21"><a href="#cb4-21"></a></span>
+<span id="cb4-22"><a href="#cb4-22"></a><span class="fu">## What is data? {.unnumbered}</span></span>
+<span id="cb4-23"><a href="#cb4-23"></a></span>
+<span id="cb4-24"><a href="#cb4-24"></a>Data is a collection of </span>
+<span id="cb4-25"><a href="#cb4-25"></a></span>
+<span id="cb4-26"><a href="#cb4-26"></a><span class="ss">- </span>numbers</span>
+<span id="cb4-27"><a href="#cb4-27"></a><span class="ss">- </span>words</span>
+<span id="cb4-28"><a href="#cb4-28"></a><span class="ss">- </span>measurements</span>
+<span id="cb4-29"><a href="#cb4-29"></a><span class="ss">- </span>observations </span>
+<span id="cb4-30"><a href="#cb4-30"></a></span>
+<span id="cb4-31"><a href="#cb4-31"></a>If you work with data, please have the <span class="co">[</span><span class="ot">FAIR</span><span class="co">](https://www.uibk.ac.at/zid/forschungsdaten/forschungsdatenmanagement/fair.html)</span> principles in mind:</span>
+<span id="cb4-32"><a href="#cb4-32"></a></span>
+<span id="cb4-33"><a href="#cb4-33"></a><span class="ss">- </span>**F**indable</span>
+<span id="cb4-34"><a href="#cb4-34"></a><span class="ss">- </span>**A**ccessible</span>
+<span id="cb4-35"><a href="#cb4-35"></a><span class="ss">- </span>**I**nteroperable</span>
+<span id="cb4-36"><a href="#cb4-36"></a><span class="ss">- </span>**R**eusable</span>
+<span id="cb4-37"><a href="#cb4-37"></a></span>
+<span id="cb4-38"><a href="#cb4-38"></a>---</span>
+<span id="cb4-39"><a href="#cb4-39"></a></span>
+<span id="cb4-40"><a href="#cb4-40"></a></span>
+<span id="cb4-41"><a href="#cb4-41"></a><span class="fu">## How do you get data? {.unnumbered}</span></span>
+<span id="cb4-42"><a href="#cb4-42"></a></span>
+<span id="cb4-43"><a href="#cb4-43"></a></span>
+<span id="cb4-44"><a href="#cb4-44"></a>At the beginning of every data science project, you need to collect data. </span>
+<span id="cb4-45"><a href="#cb4-45"></a></span>
+<span id="cb4-46"><a href="#cb4-46"></a>Data can be collected from various sources, such as:</span>
+<span id="cb4-47"><a href="#cb4-47"></a></span>
+<span id="cb4-48"><a href="#cb4-48"></a><span class="ss">- </span>experimental measurements</span>
+<span id="cb4-49"><a href="#cb4-49"></a><span class="ss">- </span>calculations and simulations</span>
+<span id="cb4-50"><a href="#cb4-50"></a><span class="ss">- </span>surveys</span>
+<span id="cb4-51"><a href="#cb4-51"></a><span class="ss">- </span>existing databases</span>
+<span id="cb4-52"><a href="#cb4-52"></a><span class="ss">- </span>web scraping</span>
+<span id="cb4-53"><a href="#cb4-53"></a><span class="ss">- </span>APIs</span>
+<span id="cb4-54"><a href="#cb4-54"></a></span>
+<span id="cb4-55"><a href="#cb4-55"></a>etc.</span>
+<span id="cb4-56"><a href="#cb4-56"></a></span>
+<span id="cb4-57"><a href="#cb4-57"></a>---</span>
+<span id="cb4-58"><a href="#cb4-58"></a></span>
+<span id="cb4-59"><a href="#cb4-59"></a><span class="fu">## How do you store the data? {.unnumbered}</span></span>
+<span id="cb4-60"><a href="#cb4-60"></a></span>
+<span id="cb4-61"><a href="#cb4-61"></a></span>
+<span id="cb4-62"><a href="#cb4-62"></a>This data can be stored in different locations, such as:</span>
+<span id="cb4-63"><a href="#cb4-63"></a></span>
+<span id="cb4-64"><a href="#cb4-64"></a><span class="ss">- </span>local files</span>
+<span id="cb4-65"><a href="#cb4-65"></a><span class="ss">- </span>databases</span>
+<span id="cb4-66"><a href="#cb4-66"></a><span class="ss">- </span>cloud storages</span>
+<span id="cb4-67"><a href="#cb4-67"></a><span class="ss">- </span>cluster storages</span>
+<span id="cb4-68"><a href="#cb4-68"></a><span class="ss">- </span>web servers</span>
+<span id="cb4-69"><a href="#cb4-69"></a><span class="ss">- </span>etc.</span>
+<span id="cb4-70"><a href="#cb4-70"></a></span>
+<span id="cb4-71"><a href="#cb4-71"></a></span>
+<span id="cb4-72"><a href="#cb4-72"></a></span>
+<span id="cb4-73"><a href="#cb4-73"></a>If you measure data yourself, either your measurement device will store the data in a specific format, or you will have to store it yourself. Sometimes you have to transform the data into a different format to be able to work with it.</span>
+<span id="cb4-74"><a href="#cb4-74"></a></span>
+<span id="cb4-75"><a href="#cb4-75"></a></span>
+<span id="cb4-76"><a href="#cb4-76"></a>If you use data from external sources, you have to make sure that you have legal rights to use the data. Check the data license and terms of use.</span>
+<span id="cb4-77"><a href="#cb4-77"></a></span>
+<span id="cb4-78"><a href="#cb4-78"></a>Further make sure how the data is stored and how you can access it.</span>
+<span id="cb4-79"><a href="#cb4-79"></a></span>
+<span id="cb4-80"><a href="#cb4-80"></a>---</span>
+<span id="cb4-81"><a href="#cb4-81"></a></span>
+<span id="cb4-82"><a href="#cb4-82"></a><span class="fu">## How do you access external data? {.unnumbered}</span></span>
+<span id="cb4-83"><a href="#cb4-83"></a></span>
+<span id="cb4-84"><a href="#cb4-84"></a></span>
+<span id="cb4-85"><a href="#cb4-85"></a>To access data from exeternal sources, you can use different tools and libraries.</span>
+<span id="cb4-86"><a href="#cb4-86"></a></span>
+<span id="cb4-87"><a href="#cb4-87"></a>For example, if you want to access data from a chemical database e.g. </span>
+<span id="cb4-88"><a href="#cb4-88"></a></span>
+<span id="cb4-89"><a href="#cb4-89"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Materials Project</span><span class="co">](https://next-gen.materialsproject.org/api)</span>, you can use the <span class="in">`pymatgen`</span> <span class="co">[</span><span class="ot">library</span><span class="co">](https://pymatgen.org/)</span>. (Requires API key, which can be obtained by registering on the website.)</span>
+<span id="cb4-90"><a href="#cb4-90"></a></span>
+<span id="cb4-91"><a href="#cb4-91"></a><span class="ss">- </span><span class="co">[</span><span class="ot">RCSB PDB Protein Data Bank</span><span class="co">](https://www.rcsb.org/docs/programmatic-access/web-apis-overview)</span>, you can use the <span class="in">`rcsb`</span> <span class="co">[</span><span class="ot">library</span><span class="co">](https://rcsbapi.readthedocs.io/en/latest/)</span>.</span>
+<span id="cb4-92"><a href="#cb4-92"></a></span>
+<span id="cb4-93"><a href="#cb4-93"></a><span class="ss">- </span><span class="co">[</span><span class="ot">PubChem</span><span class="co">](https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access)</span>, you can use the <span class="in">`pubchempy`</span> <span class="co">[</span><span class="ot">library</span><span class="co">](https://pubchempy.readthedocs.io/en/latest/guide/introduction.html)</span>.</span>
+<span id="cb4-94"><a href="#cb4-94"></a></span>
+<span id="cb4-95"><a href="#cb4-95"></a>... and many more.</span>
+<span id="cb4-96"><a href="#cb4-96"></a></span>
+<span id="cb4-97"><a href="#cb4-97"></a>If you use APIs please read the documentation of the API to understand how to access the data. And make sure to respect the API usage policy and database terms of use.</span>
+<span id="cb4-98"><a href="#cb4-98"></a></span>
+<span id="cb4-99"><a href="#cb4-99"></a></span>
+<span id="cb4-100"><a href="#cb4-100"></a><span class="fu">## Which data formats do you use? {.unnumbered}</span></span>
+<span id="cb4-101"><a href="#cb4-101"></a></span>
+<span id="cb4-102"><a href="#cb4-102"></a></span>
+<span id="cb4-103"><a href="#cb4-103"></a>Data can be stored in various data formats, such as:</span>
+<span id="cb4-104"><a href="#cb4-104"></a></span>
+<span id="cb4-105"><a href="#cb4-105"></a><span class="ss">- </span>Plain Text files (e.g. CSV, DAT, TXT)</span>
+<span id="cb4-106"><a href="#cb4-106"></a><span class="ss">- </span>Text files with structure (e.g. JSON, XML)</span>
+<span id="cb4-107"><a href="#cb4-107"></a><span class="ss">- </span>Spreadsheet files</span>
+<span id="cb4-108"><a href="#cb4-108"></a><span class="ss">- </span>Binary files (e.g. HDF5, Parquet, NetCDF,Feather, Pickle, npy, etc.)</span>
+<span id="cb4-109"><a href="#cb4-109"></a><span class="ss">- </span>Databases </span>
+<span id="cb4-110"><a href="#cb4-110"></a><span class="ss">- </span>chemical and molecular data formats (e.g. XYZ, CIF, PDB, etc.)</span>
+<span id="cb4-111"><a href="#cb4-111"></a>etc.</span>
+<span id="cb4-112"><a href="#cb4-112"></a></span>
+<span id="cb4-113"><a href="#cb4-113"></a></span>
+<span id="cb4-114"><a href="#cb4-114"></a><span class="fu">### Plain Text Files {.unnumbered}</span></span>
+<span id="cb4-115"><a href="#cb4-115"></a></span>
+<span id="cb4-116"><a href="#cb4-116"></a>A text file often contains a header with the names of the columns and then the data in rows. Columns can be seperated by different delimiters (<span class="in">`spaces`</span>, <span class="in">`,`</span>, <span class="in">`;`</span>, <span class="in">`tabs`</span>, ...). &lt;br&gt; For example, a file with data from an experiment could look like this:</span>
+<span id="cb4-117"><a href="#cb4-117"></a></span>
+<span id="cb4-118"><a href="#cb4-118"></a><span class="in">```plaintext</span></span>
+<span id="cb4-119"><a href="#cb4-119"></a><span class="in">Time/s  Temperature/°C</span></span>
+<span id="cb4-120"><a href="#cb4-120"></a><span class="in">0         20</span></span>
+<span id="cb4-121"><a href="#cb4-121"></a><span class="in">10        21</span></span>
+<span id="cb4-122"><a href="#cb4-122"></a><span class="in">...     ...</span></span>
+<span id="cb4-123"><a href="#cb4-123"></a></span>
+<span id="cb4-124"><a href="#cb4-124"></a><span class="in">```</span></span>
+<span id="cb4-125"><a href="#cb4-125"></a></span>
+<span id="cb4-126"><a href="#cb4-126"></a></span>
+<span id="cb4-127"><a href="#cb4-127"></a><span class="fu">### JSON or XML {.unnumbered}</span></span>
+<span id="cb4-128"><a href="#cb4-128"></a><span class="co">[</span><span class="ot">JSON</span><span class="co">](https://en.wikipedia.org/wiki/JSON)</span> stands for JavaScript Object Notation. Data is structured in a key-value format, so that both humans and machines can read it easily. &lt;br&gt; For example, a JSON file with the same data as above could look like this:</span>
+<span id="cb4-129"><a href="#cb4-129"></a> </span>
+<span id="cb4-130"><a href="#cb4-130"></a> </span>
+<span id="cb4-131"><a href="#cb4-131"></a><span class="in">```json</span></span>
+<span id="cb4-132"><a href="#cb4-132"></a><span class="fu">{</span></span>
+<span id="cb4-133"><a href="#cb4-133"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb4-134"><a href="#cb4-134"></a>    <span class="fu">{</span><span class="dt">"Time"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span> <span class="dt">"Temperature"</span><span class="fu">:</span> <span class="dv">20</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb4-135"><a href="#cb4-135"></a>    <span class="fu">{</span><span class="dt">"Time"</span><span class="fu">:</span> <span class="dv">10</span><span class="fu">,</span> <span class="dt">"Temperature"</span><span class="fu">:</span> <span class="dv">21</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb4-136"><a href="#cb4-136"></a>    <span class="er">...</span></span>
+<span id="cb4-137"><a href="#cb4-137"></a>  <span class="ot">]</span></span>
+<span id="cb4-138"><a href="#cb4-138"></a><span class="fu">}</span></span>
+<span id="cb4-139"><a href="#cb4-139"></a><span class="in">```</span></span>
+<span id="cb4-140"><a href="#cb4-140"></a></span>
+<span id="cb4-141"><a href="#cb4-141"></a><span class="co">[</span><span class="ot">XML</span><span class="co">](https://en.wikipedia.org/wiki/XML)</span> stands for Extensible Markup Language. It is also designed to be both human-readable and machine-readable. &lt;br&gt; For example, an XML file with the same data as above could look like this:</span>
+<span id="cb4-142"><a href="#cb4-142"></a></span>
+<span id="cb4-143"><a href="#cb4-143"></a><span class="in">```xml</span></span>
+<span id="cb4-144"><a href="#cb4-144"></a>&lt;<span class="kw">data</span>&gt;</span>
+<span id="cb4-145"><a href="#cb4-145"></a>  &lt;<span class="kw">measurement</span>&gt;</span>
+<span id="cb4-146"><a href="#cb4-146"></a>    &lt;<span class="kw">Time</span>&gt;0&lt;/<span class="kw">Time</span>&gt;</span>
+<span id="cb4-147"><a href="#cb4-147"></a>    &lt;<span class="kw">Temperature</span>&gt;20&lt;/<span class="kw">Temperature</span>&gt;</span>
+<span id="cb4-148"><a href="#cb4-148"></a>  &lt;/<span class="kw">measurement</span>&gt;</span>
+<span id="cb4-149"><a href="#cb4-149"></a>  &lt;<span class="kw">measurement</span>&gt;</span>
+<span id="cb4-150"><a href="#cb4-150"></a>    &lt;<span class="kw">Time</span>&gt;10&lt;/<span class="kw">Time</span>&gt;</span>
+<span id="cb4-151"><a href="#cb4-151"></a>    &lt;<span class="kw">Temperature</span>&gt;21&lt;/<span class="kw">Temperature</span>&gt;</span>
+<span id="cb4-152"><a href="#cb4-152"></a>  &lt;/<span class="kw">measurement</span>&gt;</span>
+<span id="cb4-153"><a href="#cb4-153"></a>  ...</span>
+<span id="cb4-154"><a href="#cb4-154"></a>```</span>
+<span id="cb4-155"><a href="#cb4-155"></a></span>
+<span id="cb4-156"><a href="#cb4-156"></a></span>
+<span id="cb4-157"><a href="#cb4-157"></a>### Binary Files {.unnumbered}</span>
+<span id="cb4-158"><a href="#cb4-158"></a></span>
+<span id="cb4-159"><a href="#cb4-159"></a>Data is stored in a binary format and can be read with specific libraries. It is often used for large datasets, as it is more efficient than plain text files. The computer is able to read and write binary files faster than text files. &lt;<span class="kw">br</span>&gt; Some common binary file formats are:</span>
+<span id="cb4-160"><a href="#cb4-160"></a></span>
+<span id="cb4-161"><a href="#cb4-161"></a>- [**HDF5**](https://en.wikipedia.org/wiki/Hierarchical_Data_Format): Hierarchical Data Format, used for large datasets</span>
+<span id="cb4-162"><a href="#cb4-162"></a></span>
+<span id="cb4-163"><a href="#cb4-163"></a>- [**Parquet**](https://en.wikipedia.org/wiki/Apache_Parquet): Columnar storage format, used for big data</span>
+<span id="cb4-164"><a href="#cb4-164"></a></span>
+<span id="cb4-165"><a href="#cb4-165"></a>- [**NetCDF**](https://en.wikipedia.org/wiki/NetCDF): Network Common Data Form, array-orriented, often for geoscience data</span>
+<span id="cb4-166"><a href="#cb4-166"></a></span>
+<span id="cb4-167"><a href="#cb4-167"></a>- [**Feather**](https://arrow.apache.org/docs/python/feather.html): a fast column-based serialization for data frames, initially designed for R and Python, helps to share data between languages</span>
+<span id="cb4-168"><a href="#cb4-168"></a></span>
+<span id="cb4-169"><a href="#cb4-169"></a>- [**Pickle**](https://docs.python.org/3/library/pickle.html): Python-specific format, used for serializing Python objects</span>
+<span id="cb4-170"><a href="#cb4-170"></a></span>
+<span id="cb4-171"><a href="#cb4-171"></a>- [**npy**](https://numpy.org/doc/stable/reference/generated/numpy.lib.format.html): Numpy-specific format, used for saving numpy arrays</span>
+<span id="cb4-172"><a href="#cb4-172"></a></span>
+<span id="cb4-173"><a href="#cb4-173"></a>Here is a list of comparison of binary file formats: [Comparison of data serialization formats](https://en.wikipedia.org/wiki/Comparison_of_data-serialization_formats)</span>
+<span id="cb4-174"><a href="#cb4-174"></a></span>
+<span id="cb4-175"><a href="#cb4-175"></a></span>
+<span id="cb4-176"><a href="#cb4-176"></a>### Databases {.unnumbered}</span>
+<span id="cb4-177"><a href="#cb4-177"></a></span>
+<span id="cb4-178"><a href="#cb4-178"></a>Databases are designed for big data storage. The advantage of databases is that they can be queried and updated easily. There are different types of databases, such as:</span>
+<span id="cb4-179"><a href="#cb4-179"></a></span>
+<span id="cb4-180"><a href="#cb4-180"></a>- **[SQL](https://en.wikipedia.org/wiki/SQL)** databases (e.g. SQLite, MySQL, PostgreSQL)</span>
+<span id="cb4-181"><a href="#cb4-181"></a>- **[NoSQL](https://en.wikipedia.org/wiki/NoSQL)** databases (e.g. MongoDB)</span>
+<span id="cb4-182"><a href="#cb4-182"></a>- **[Graph databases](https://en.wikipedia.org/wiki/Graph_database#List_of_graph_databases)**</span>
+<span id="cb4-183"><a href="#cb4-183"></a>- **[Time series databases](https://en.wikipedia.org/wiki/Time_series_database)**</span>
+<span id="cb4-184"><a href="#cb4-184"></a></span>
+<span id="cb4-185"><a href="#cb4-185"></a></span>
+<span id="cb4-186"><a href="#cb4-186"></a></span>
+<span id="cb4-187"><a href="#cb4-187"></a>### Chemical and Molecular Data Formats {.unnumbered}</span>
+<span id="cb4-188"><a href="#cb4-188"></a>There are specific data formats for chemical and molecular data, such as:</span>
+<span id="cb4-189"><a href="#cb4-189"></a></span>
+<span id="cb4-190"><a href="#cb4-190"></a></span>
+<span id="cb4-191"><a href="#cb4-191"></a>- **[XYZ](https://en.wikipedia.org/wiki/XYZ_file_format)**: Cartesian coordinates of atoms</span>
+<span id="cb4-192"><a href="#cb4-192"></a></span>
+<span id="cb4-193"><a href="#cb4-193"></a>- **[CIF](https://en.wikipedia.org/wiki/Crystallographic_Information_File)**: Crystallographic Information File, used for crystallographic data</span>
+<span id="cb4-194"><a href="#cb4-194"></a></span>
+<span id="cb4-195"><a href="#cb4-195"></a>- **[PDB](https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format))**: Protein Data Bank, used for protein structures</span>
+<span id="cb4-196"><a href="#cb4-196"></a> </span>
+<span id="cb4-197"><a href="#cb4-197"></a>- **[MOL](https://en.wikipedia.org/wiki/Chemical_table_file)**: Molecule file format, used for chemical structures</span>
+<span id="cb4-198"><a href="#cb4-198"></a> </span>
+<span id="cb4-199"><a href="#cb4-199"></a>- **[SDF](https://en.wikipedia.org/wiki/Chemical_table_file)**: Structure Data File, used for chemical structures</span>
+<span id="cb4-200"><a href="#cb4-200"></a></span>
+<span id="cb4-201"><a href="#cb4-201"></a>- **[SMILES](https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system)**: Simplified Molecular Input Line Entry System, used for chemical structures</span>
+<span id="cb4-202"><a href="#cb4-202"></a></span>
+<span id="cb4-203"><a href="#cb4-203"></a>- **[InChI](https://en.wikipedia.org/wiki/International_Chemical_Identifier)**: International Chemical Identifier, used for chemical structures</span>
+<span id="cb4-204"><a href="#cb4-204"></a></span>
+<span id="cb4-205"><a href="#cb4-205"></a>- **[nmrML](https://nmrml.org/)**: Nuclear Magnetic Resonance Markup Language, used for NMR data</span>
+<span id="cb4-206"><a href="#cb4-206"></a></span>
+<span id="cb4-207"><a href="#cb4-207"></a>- **[NMReDATA](https://nmredata.org/)**: Nuclear Magnetic Resonance Electronic Data Aggregation, used for NMR data</span>
+<span id="cb4-208"><a href="#cb4-208"></a> </span>
+<span id="cb4-209"><a href="#cb4-209"></a>- **[JCAMP-DX](https://iupac.org/what-we-do/digital-standards/jcamp-dx/)**: Joint Committee on Atomic and Molecular Physical Data, used for spectroscopy data</span>
+<span id="cb4-210"><a href="#cb4-210"></a></span>
+<span id="cb4-211"><a href="#cb4-211"></a>- **[mzML](https://link.springer.com/protocol/10.1007/978-1-60761-444-9_22)**: Mass Spectrometry Markup Language, used for mass spectrometry data</span>
+<span id="cb4-212"><a href="#cb4-212"></a></span>
+<span id="cb4-213"><a href="#cb4-213"></a>- **[animl](https://www.animl.org/)**: Analytical Information Markup Language, used for analytical data</span>
+<span id="cb4-214"><a href="#cb4-214"></a></span>
+<span id="cb4-215"><a href="#cb4-215"></a>- **[FASTA](https://en.wikipedia.org/wiki/FASTA_format)**: used for DNA and protein sequences</span>
+<span id="cb4-216"><a href="#cb4-216"></a></span>
+<span id="cb4-217"><a href="#cb4-217"></a>etc.</span>
+<span id="cb4-218"><a href="#cb4-218"></a></span>
+<span id="cb4-219"><a href="#cb4-219"></a></span>
+<span id="cb4-220"><a href="#cb4-220"></a>### Other Data Formats {.unnumbered}</span>
+<span id="cb4-221"><a href="#cb4-221"></a></span>
+<span id="cb4-222"><a href="#cb4-222"></a>- [**Images**](https://en.wikipedia.org/wiki/Image_file_formats): Images can be stored in different formats, such as JPEG, PNG, TIFF, BMP, GIF, etc.</span>
+<span id="cb4-223"><a href="#cb4-223"></a></span>
+<span id="cb4-224"><a href="#cb4-224"></a>- [**Audio**](https://en.wikipedia.org/wiki/Audio_file_format): Audio files can be stored in different formats, such as MP3, WAV, FLAC, etc.</span>
+<span id="cb4-225"><a href="#cb4-225"></a></span>
+<span id="cb4-226"><a href="#cb4-226"></a>- [**Video**](https://en.wikipedia.org/wiki/Video_file_format): Video files can be stored in different formats, such as MP4, AVI, MOV, etc.</span>
+<span id="cb4-227"><a href="#cb4-227"></a></span>
+<span id="cb4-228"><a href="#cb4-228"></a></span>
+<span id="cb4-229"><a href="#cb4-229"></a>---</span>
+<span id="cb4-230"><a href="#cb4-230"></a></span>
+<span id="cb4-231"><a href="#cb4-231"></a>## What type of data do you have? {.unnumbered}</span>
+<span id="cb4-232"><a href="#cb4-232"></a></span>
+<span id="cb4-233"><a href="#cb4-233"></a>Next what do you have to consider is the types of your data. </span>
+<span id="cb4-234"><a href="#cb4-234"></a></span>
+<span id="cb4-235"><a href="#cb4-235"></a>Depending on the type of data analysis could be different.</span>
+<span id="cb4-236"><a href="#cb4-236"></a></span>
+<span id="cb4-237"><a href="#cb4-237"></a></span>
+<span id="cb4-238"><a href="#cb4-238"></a>### Numerical Data {.unnumbered}</span>
+<span id="cb4-239"><a href="#cb4-239"></a>Numerical data is data that is expressed with numbers. It can be further divided into two types:</span>
+<span id="cb4-240"><a href="#cb4-240"></a></span>
+<span id="cb4-241"><a href="#cb4-241"></a>- **Discrete**: Data that can only take certain values (e.g. integers)</span>
+<span id="cb4-242"><a href="#cb4-242"></a>- **Continuous**: Data that can take any value within a certain range (e.g. real numbers)</span>
+<span id="cb4-243"><a href="#cb4-243"></a></span>
+<span id="cb4-244"><a href="#cb4-244"></a>For example, </span>
+<span id="cb4-245"><a href="#cb4-245"></a></span>
+<span id="cb4-246"><a href="#cb4-246"></a>- measured temperature over time: **continuous**</span>
+<span id="cb4-247"><a href="#cb4-247"></a>- number of chemical substances, which are measured: **discrete**</span>
+<span id="cb4-248"><a href="#cb4-248"></a></span>
+<span id="cb4-249"><a href="#cb4-249"></a></span>
+<span id="cb4-250"><a href="#cb4-250"></a></span>
+<span id="cb4-251"><a href="#cb4-251"></a>### Categorical Data {.unnumbered}</span>
+<span id="cb4-252"><a href="#cb4-252"></a>Categorial means that data is divided into categories. It can be further divided into two types:</span>
+<span id="cb4-253"><a href="#cb4-253"></a></span>
+<span id="cb4-254"><a href="#cb4-254"></a>- **Ordinal**: Data that has a specific order or ranking </span>
+<span id="cb4-255"><a href="#cb4-255"></a>- **Nominal**: Data that has no specific order or ranking </span>
+<span id="cb4-256"><a href="#cb4-256"></a> </span>
+<span id="cb4-257"><a href="#cb4-257"></a>For example,</span>
+<span id="cb4-258"><a href="#cb4-258"></a></span>
+<span id="cb4-259"><a href="#cb4-259"></a>- blood type: **nominal** (A, B, AB, O)</span>
+<span id="cb4-260"><a href="#cb4-260"></a>- chemical function group: **nominal** (alcohol, ketone, aldehyde, carboxylic acid, etc.)</span>
+<span id="cb4-261"><a href="#cb4-261"></a>- purity of a substance: **ordinal** (low, medium, high)</span>
+<span id="cb4-262"><a href="#cb4-262"></a>- hardness of a material: **ordinal** (soft, medium, hard)</span>
+<span id="cb4-263"><a href="#cb4-263"></a></span>
+<span id="cb4-264"><a href="#cb4-264"></a>---</span>
+<span id="cb4-265"><a href="#cb4-265"></a></span>
+<span id="cb4-266"><a href="#cb4-266"></a># Quiz {.unnumbered}</span>
+<span id="cb4-267"><a href="#cb4-267"></a></span>
+<span id="cb4-268"><a href="#cb4-268"></a>Multiple Choice Questions:</span>
+<span id="cb4-269"><a href="#cb4-269"></a></span>
+<span id="cb4-270"><a href="#cb4-270"></a></span>
+<span id="cb4-271"><a href="#cb4-271"></a>:::{.callout-note}</span>
+<span id="cb4-272"><a href="#cb4-272"></a>### Question 1</span>
+<span id="cb4-273"><a href="#cb4-273"></a>What stands the *I* in the FAIR principles for?</span>
+<span id="cb4-274"><a href="#cb4-274"></a></span>
+<span id="cb4-275"><a href="#cb4-275"></a>- a) Interoperable</span>
+<span id="cb4-276"><a href="#cb4-276"></a>- b) Inclusive</span>
+<span id="cb4-277"><a href="#cb4-277"></a>- c) Intelligent</span>
+<span id="cb4-278"><a href="#cb4-278"></a>- d) Interesting</span>
+<span id="cb4-279"><a href="#cb4-279"></a>:::</span>
+<span id="cb4-280"><a href="#cb4-280"></a></span>
+<span id="cb4-281"><a href="#cb4-281"></a>:::{.callout-note}</span>
+<span id="cb4-282"><a href="#cb4-282"></a>### Question 2</span>
+<span id="cb4-283"><a href="#cb4-283"></a>What data format is used for crystallographic data?</span>
+<span id="cb4-284"><a href="#cb4-284"></a></span>
+<span id="cb4-285"><a href="#cb4-285"></a>- a) XYZ</span>
+<span id="cb4-286"><a href="#cb4-286"></a>- b) CIF</span>
+<span id="cb4-287"><a href="#cb4-287"></a>- c) FASTA</span>
+<span id="cb4-288"><a href="#cb4-288"></a>- d) SMILES</span>
+<span id="cb4-289"><a href="#cb4-289"></a>:::</span>
+<span id="cb4-290"><a href="#cb4-290"></a></span>
+<span id="cb4-291"><a href="#cb4-291"></a></span>
+<span id="cb4-292"><a href="#cb4-292"></a>:::{.callout-note}</span>
+<span id="cb4-293"><a href="#cb4-293"></a>### Question 3</span>
+<span id="cb4-294"><a href="#cb4-294"></a>What type of data is the temperature in a chemical reaction?</span>
+<span id="cb4-295"><a href="#cb4-295"></a></span>
+<span id="cb4-296"><a href="#cb4-296"></a>- a) Discrete</span>
+<span id="cb4-297"><a href="#cb4-297"></a>- b) Continuous</span>
+<span id="cb4-298"><a href="#cb4-298"></a>- c) Ordinal</span>
+<span id="cb4-299"><a href="#cb4-299"></a>- d) Nominal</span>
+<span id="cb4-300"><a href="#cb4-300"></a>:::</span>
+<span id="cb4-301"><a href="#cb4-301"></a></span>
+<span id="cb4-302"><a href="#cb4-302"></a></span>
+<span id="cb4-303"><a href="#cb4-303"></a>:::{.callout-note}</span>
+<span id="cb4-304"><a href="#cb4-304"></a>### Question 4</span>
+<span id="cb4-305"><a href="#cb4-305"></a>What type of data is the heat capacity of a material?</span>
+<span id="cb4-306"><a href="#cb4-306"></a></span>
+<span id="cb4-307"><a href="#cb4-307"></a>- a) Discrete</span>
+<span id="cb4-308"><a href="#cb4-308"></a>- b) Continuous</span>
+<span id="cb4-309"><a href="#cb4-309"></a>- c) Ordinal</span>
+<span id="cb4-310"><a href="#cb4-310"></a>- d) Nominal</span>
+<span id="cb4-311"><a href="#cb4-311"></a>:::</span>
+<span id="cb4-312"><a href="#cb4-312"></a></span>
+<span id="cb4-313"><a href="#cb4-313"></a>:::{.callout-note}</span>
+<span id="cb4-314"><a href="#cb4-314"></a>### Question 5</span>
+<span id="cb4-315"><a href="#cb4-315"></a>What type of data is acidity of a solution?</span>
+<span id="cb4-316"><a href="#cb4-316"></a></span>
+<span id="cb4-317"><a href="#cb4-317"></a>- a) Discrete</span>
+<span id="cb4-318"><a href="#cb4-318"></a>- b) Continuous</span>
+<span id="cb4-319"><a href="#cb4-319"></a>- c) Ordinal</span>
+<span id="cb4-320"><a href="#cb4-320"></a>- d) Nominal</span>
+<span id="cb4-321"><a href="#cb4-321"></a>:::</span>
+<span id="cb4-322"><a href="#cb4-322"></a></span>
+<span id="cb4-323"><a href="#cb4-323"></a>::: {.callout-note collapse="true"}</span>
+<span id="cb4-324"><a href="#cb4-324"></a># Solutions</span>
+<span id="cb4-325"><a href="#cb4-325"></a></span>
+<span id="cb4-326"><a href="#cb4-326"></a>### Question 1</span>
+<span id="cb4-327"><a href="#cb4-327"></a></span>
+<span id="cb4-328"><a href="#cb4-328"></a>- Correct answer: a) Interoperable</span>
+<span id="cb4-329"><a href="#cb4-329"></a></span>
+<span id="cb4-330"><a href="#cb4-330"></a>### Question 2</span>
+<span id="cb4-331"><a href="#cb4-331"></a></span>
+<span id="cb4-332"><a href="#cb4-332"></a>- Correct answer: b) CIF</span>
+<span id="cb4-333"><a href="#cb4-333"></a></span>
+<span id="cb4-334"><a href="#cb4-334"></a>### Question 3</span>
+<span id="cb4-335"><a href="#cb4-335"></a></span>
+<span id="cb4-336"><a href="#cb4-336"></a>- Correct answer: b) Continuous </span>
+<span id="cb4-337"><a href="#cb4-337"></a></span>
+<span id="cb4-338"><a href="#cb4-338"></a>### Question 4</span>
+<span id="cb4-339"><a href="#cb4-339"></a></span>
+<span id="cb4-340"><a href="#cb4-340"></a>- Correct answer: b) Continuous</span>
+<span id="cb4-341"><a href="#cb4-341"></a></span>
+<span id="cb4-342"><a href="#cb4-342"></a>### Question 5</span>
+<span id="cb4-343"><a href="#cb4-343"></a></span>
+<span id="cb4-344"><a href="#cb4-344"></a>- Correct answer: b) Continuous</span>
+<span id="cb4-345"><a href="#cb4-345"></a></span>
+<span id="cb4-346"><a href="#cb4-346"></a></span>
+<span id="cb4-347"><a href="#cb4-347"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

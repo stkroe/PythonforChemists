@@ -64,19 +64,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../course/chapters/SEDA/ModelTesting.html" rel="next">
-<link href="../../../course/chapters/SEDA/DescriptiveStatistics.html" rel="prev">
+<link href="../../../course/chapters/SEDA/AdvancedAnalysis.html" rel="next">
+<link href="../../../course/chapters/SEDA/ModelTesting.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-fdada01b6a4a613316abf06c0f7ea711.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a7893e8d0b037e1aff40777cba0b700.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-35422cdc4f70219b1f2ea309e4c869ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-0c7f10e693ceb5850653c71567dd3ef9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-9b636ebed4f7b066ffdd416a9678baf4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-bbe3c2c4137d30106c846c1447f199be.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -136,6 +136,7 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Inferential Statistics – Data Analysis and Visualization for Chemists and Material Scientists">
+<meta property="og:image" content="DataModels_files/figure-html/cell-6-output-2.png">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
 
@@ -304,7 +305,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exercise1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 1</span></a>
+  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/exercises/exercises/exerciseA_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 1</span></a>
   </div>
 </li>
       </ul>
@@ -330,17 +336,17 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/DataModels.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Inferential Statistics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../../course/chapters/SEDA/ModelTesting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Model Testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/MultivariantAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Multivariant Analysis</span></a>
+  <a href="../../../course/chapters/SEDA/DataModels.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Inferential Statistics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/chapters/SEDA/AdvancedAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Statistical Analysis</span></a>
   </div>
 </li>
       </ul>
@@ -354,11 +360,6 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/PlotTypes/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../course/chapters/PlotTypes/AdvancedPlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Plot Types</span></a>
@@ -444,8 +445,8 @@ window.Quarto = {
   <li><a href="#linear-regression" id="toc-linear-regression" class="nav-link" data-scroll-target="#linear-regression">Linear Regression&nbsp;</a>
   <ul class="collapse">
   <li><a href="#using-scipy" id="toc-using-scipy" class="nav-link" data-scroll-target="#using-scipy">Using <code class="unnumbered">scipy</code></a></li>
+  <li><a href="#using-statsmodels" id="toc-using-statsmodels" class="nav-link" data-scroll-target="#using-statsmodels">Using <code class="unnumbered">statsmodels</code></a></li>
   <li><a href="#using-scikit-learn" id="toc-using-scikit-learn" class="nav-link" data-scroll-target="#using-scikit-learn">Using <code>scikit-learn</code></a></li>
-  <li><a href="#using-statsmodels" id="toc-using-statsmodels" class="nav-link" data-scroll-target="#using-statsmodels">Using <code>statsmodels</code></a></li>
   </ul></li>
   <li><a href="#non-linear-fits" id="toc-non-linear-fits" class="nav-link" data-scroll-target="#non-linear-fits">Non-Linear Fits</a>
   <ul class="collapse">
@@ -461,7 +462,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/SEDA/DataManipulation.html">Statistical and Exploratory Data Analysis</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/SEDA/DataModels.html"><span class="chapter-title">Inferential Statistics</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Inferential Statistics</span></h1>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Inferential Statistics</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -483,7 +484,12 @@ window.Quarto = {
 <section id="linear-regression" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="linear-regression">Linear Regression&nbsp;</h2>
 <p>Often we want to find a model which can explain the data. It is important to understand the data and the model to be able to interpret the results and make predictions.</p>
-<p>The simplest model is the linear regression model. It assumes that the data has a linear relationship with the target variable. The model is defined as:</p>
+<p>The simplest model is the linear regression model. It assumes that the data has a linear relationship with the target variable. For example, if we have a single feature <span class="math inline">\(x\)</span> and a target variable <span class="math inline">\(y\)</span>, the linear regression model can be defined as:</p>
+<p><span class="math display">\[
+y = \beta_0 + \beta_1 x + \epsilon
+\]</span></p>
+<p>where <span class="math inline">\(y\)</span> is the target variable, <span class="math inline">\(x\)</span> is the feature, <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are the coefficients, and <span class="math inline">\(\epsilon\)</span> is the error term.</p>
+<p>For multiple features <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span>, the linear regression model can be defined as:</p>
 <p><span class="math display">\[
 y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n + \epsilon
 \]</span></p>
@@ -492,38 +498,38 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n + \epsilon
 <section id="using-scipy" class="level3">
 <h3 class="anchored" data-anchor-id="using-scipy">Using <code class="unnumbered">scipy</code></h3>
 <p>A easy way is to use <code>scipy</code> library. The <code>scipy</code> library has a function called <code>linregress</code> which can be used to fit a linear regression model. The function returns the slope, intercept, r-value, p-value, and the standard error of the estimate. And with scipy version 1.15.2 also the intercept error.</p>
-<div id="99f32d25" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> linregress</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x<span class="op">*</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)<span class="op">+</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> linregress(x, y)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>slope <span class="op">=</span> results.slope</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>intercept <span class="op">=</span> results.intercept</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>r_value <span class="op">=</span> results.rvalue</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>p_value <span class="op">=</span> results.pvalue</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>std_err <span class="op">=</span> results.stderr</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>intercept_err <span class="op">=</span> results.intercept_stderr</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"slope: </span><span class="sc">%f</span><span class="st">    intercept: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> (slope, intercept))</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"R-squared: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> r_value<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"p-value: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> p_value)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"standard error: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> std_err)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Intercept error: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span>intercept_err)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Two-sided inverse Students t-distribution</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># p - probability, df - degrees of freedom</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> t</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>tinv <span class="op">=</span> <span class="kw">lambda</span> p, df: <span class="bu">abs</span>(t.ppf(p<span class="op">/</span><span class="dv">2</span>, df))</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"95</span><span class="sc">% c</span><span class="st">onfidence interval: "</span> <span class="op">+</span> <span class="bu">str</span>(intercept <span class="op">-</span> tinv(<span class="fl">0.05</span>, <span class="bu">len</span>(x)<span class="op">-</span><span class="dv">2</span>)<span class="op">*</span>intercept_err) <span class="op">+</span> <span class="st">" to "</span> <span class="op">+</span> <span class="bu">str</span>(intercept <span class="op">+</span> tinv(<span class="fl">0.05</span>, <span class="bu">len</span>(x)<span class="op">-</span><span class="dv">2</span>)<span class="op">*</span>intercept_err))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="126218de" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> linregress</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb1-5"><a href="#cb1-5"></a>y <span class="op">=</span> x<span class="op">*</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)<span class="op">+</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a>results <span class="op">=</span> linregress(x, y)</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a>slope <span class="op">=</span> results.slope</span>
+<span id="cb1-10"><a href="#cb1-10"></a>intercept <span class="op">=</span> results.intercept</span>
+<span id="cb1-11"><a href="#cb1-11"></a>r_value <span class="op">=</span> results.rvalue</span>
+<span id="cb1-12"><a href="#cb1-12"></a>p_value <span class="op">=</span> results.pvalue</span>
+<span id="cb1-13"><a href="#cb1-13"></a>std_err <span class="op">=</span> results.stderr</span>
+<span id="cb1-14"><a href="#cb1-14"></a>intercept_err <span class="op">=</span> results.intercept_stderr</span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="bu">print</span>(<span class="st">"slope: </span><span class="sc">%f</span><span class="st">    intercept: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> (slope, intercept))</span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="bu">print</span>(<span class="st">"R-squared: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> r_value<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="bu">print</span>(<span class="st">"p-value: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> p_value)</span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="bu">print</span>(<span class="st">"standard error: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> std_err)</span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="bu">print</span>(<span class="st">"Intercept error: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span>intercept_err)</span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="co"># Two-sided inverse Students t-distribution</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="co"># p - probability, df - degrees of freedom</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="im">from</span> scipy.stats <span class="im">import</span> t</span>
+<span id="cb1-23"><a href="#cb1-23"></a>tinv <span class="op">=</span> <span class="kw">lambda</span> p, df: <span class="bu">abs</span>(t.ppf(p<span class="op">/</span><span class="dv">2</span>, df))</span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="bu">print</span>(<span class="st">"95</span><span class="sc">% c</span><span class="st">onfidence interval: "</span> <span class="op">+</span> <span class="bu">str</span>(intercept <span class="op">-</span> tinv(<span class="fl">0.05</span>, <span class="bu">len</span>(x)<span class="op">-</span><span class="dv">2</span>)<span class="op">*</span>intercept_err) <span class="op">+</span> <span class="st">" to "</span> <span class="op">+</span> <span class="bu">str</span>(intercept <span class="op">+</span> tinv(<span class="fl">0.05</span>, <span class="bu">len</span>(x)<span class="op">-</span><span class="dv">2</span>)<span class="op">*</span>intercept_err))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>slope: 0.369601    intercept: 0.883353
-R-squared: 0.068421
-p-value: 0.670791
-standard error: 0.787383
-Intercept error: 2.611454
-95% confidence interval: -7.427457826555743 to 9.194163715617618</code></pre>
+<pre><code>slope: 0.606340    intercept: -2.579584
+R-squared: 0.101833
+p-value: 0.600699
+standard error: 1.039659
+Intercept error: 3.448157
+95% confidence interval: -13.55315953841929 to 8.393991873481859</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -537,44 +543,84 @@ Important
 </div>
 <div class="callout-body-container callout-body">
 <p>For older version <code>scipy</code>only returned 5 values with fields slope, intercept, rvalue, pvalue and stderr. For compatiblity reasons the return values are 5 elements tuple.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>slope, intercept, r, p, se <span class="op">=</span> linregress(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="ab4ac50b" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>slope, intercept, r, p, se <span class="op">=</span> linregress(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>And if you want to get the intercept error you can use the following return value as a object:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> linregress(x, y)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.intercept_stderr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="588f5c23" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>results <span class="op">=</span> linregress(x, y)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">print</span>(results.intercept_stderr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3.4481573774645002</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-statsmodels" class="level3">
+<h3 class="anchored" data-anchor-id="using-statsmodels">Using <code class="unnumbered">statsmodels</code></h3>
+<p>Another library is <code>statsmodels</code>. The <code>statsmodels</code> library provides more detailed information about the model, such as the coefficients, standard errors, t-values, p-values, and confidence intervals.</p>
+<div id="70e4a5aa" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a>X <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb6-4"><a href="#cb6-4"></a>y <span class="op">=</span> X<span class="op">*</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)<span class="op">+</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6"></a>X_with_const <span class="op">=</span> sm.add_constant(X)  <span class="co"># Add intercept term</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>model <span class="op">=</span> sm.OLS(y, X_with_const).fit()</span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="bu">print</span>(model.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.481
+Model:                            OLS   Adj. R-squared:                  0.307
+Method:                 Least Squares   F-statistic:                     2.776
+Date:                Mon, 31 Mar 2025   Prob (F-statistic):              0.194
+Time:                        12:24:21   Log-Likelihood:                -13.209
+No. Observations:                   5   AIC:                             30.42
+Df Residuals:                       3   BIC:                             29.64
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          5.0301      4.600      1.094      0.354      -9.608      19.668
+x1            -2.3107      1.387     -1.666      0.194      -6.724       2.103
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   2.561
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.377
+Skew:                           0.026   Prob(JB):                        0.828
+Kurtosis:                       1.656   Cond. No.                         8.37
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</code></pre>
 </div>
 </div>
 </section>
 <section id="using-scikit-learn" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="using-scikit-learn">Using <code>scikit-learn</code></h3>
 <p>One of the most popular libraries is <code>scikit-learn</code>. The following code shows how to fit a linear regression model using <code>scikit-learn</code>:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample data</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]).reshape(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> X<span class="op">*</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)<span class="op">+</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Model fitting</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression()</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>model.fit(X, y)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Predictions</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> model.predict(X)</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>plt.scatter(X, y, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Data'</span>)</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>plt.plot(X, y_pred, color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Linear Fit'</span>)</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="using-statsmodels" class="level3">
-<h3 class="anchored" data-anchor-id="using-statsmodels">Using <code>statsmodels</code></h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>X_with_const <span class="op">=</span> sm.add_constant(X)  <span class="co"># Add intercept term</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(y, X_with_const).fit()</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-4"><a href="#cb8-4"></a></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="co"># Sample data</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>X <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]).reshape(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb8-7"><a href="#cb8-7"></a>y <span class="op">=</span> X<span class="op">*</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)<span class="op">+</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)</span>
+<span id="cb8-8"><a href="#cb8-8"></a></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="co"># Model fitting</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a>model <span class="op">=</span> LinearRegression()</span>
+<span id="cb8-11"><a href="#cb8-11"></a>model.fit(X, y)</span>
+<span id="cb8-12"><a href="#cb8-12"></a></span>
+<span id="cb8-13"><a href="#cb8-13"></a><span class="co"># Predictions</span></span>
+<span id="cb8-14"><a href="#cb8-14"></a>y_pred <span class="op">=</span> model.predict(X)</span>
+<span id="cb8-15"><a href="#cb8-15"></a></span>
+<span id="cb8-16"><a href="#cb8-16"></a><span class="co"># Plot</span></span>
+<span id="cb8-17"><a href="#cb8-17"></a>plt.scatter(X, y, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Data'</span>)</span>
+<span id="cb8-18"><a href="#cb8-18"></a>plt.plot(X, y_pred, color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Linear Fit'</span>)</span>
+<span id="cb8-19"><a href="#cb8-19"></a>plt.legend()</span>
+<span id="cb8-20"><a href="#cb8-20"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 </section>
 </section>
@@ -583,35 +629,70 @@ Important
 <p>Linear regression may not always be sufficient, especially for complex relationships. Non-linear models provide more flexibility.</p>
 <section id="polynomial-regression" class="level3">
 <h3 class="anchored" data-anchor-id="polynomial-regression">Polynomial Regression</h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> PolynomialFeatures</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> make_pipeline</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>poly_model <span class="op">=</span> make_pipeline(PolynomialFeatures(<span class="dv">3</span>), LinearRegression())</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>poly_model.fit(X, y)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>y_poly_pred <span class="op">=</span> poly_model.predict(X)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>plt.scatter(X, y, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Data'</span>)</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>plt.plot(X, y_poly_pred, color<span class="op">=</span><span class="st">'green'</span>, label<span class="op">=</span><span class="st">'Polynomial Fit'</span>)</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Polynomial regression is a type of linear regression where the relationship between the independent variable <span class="math inline">\(x\)</span> and the dependent variable <span class="math inline">\(y\)</span> is modeled as an <span class="math inline">\(n\)</span>-th degree polynomial.</p>
+<div id="96607980" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-3"><a href="#cb9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4"></a></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co"># Sample data</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>X <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb9-7"><a href="#cb9-7"></a>y <span class="op">=</span> X<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb9-8"><a href="#cb9-8"></a></span>
+<span id="cb9-9"><a href="#cb9-9"></a>model <span class="op">=</span> np.polyfit(X, y, <span class="dv">2</span>)</span>
+<span id="cb9-10"><a href="#cb9-10"></a></span>
+<span id="cb9-11"><a href="#cb9-11"></a>model <span class="op">=</span> np.poly1d(model)</span>
+<span id="cb9-12"><a href="#cb9-12"></a></span>
+<span id="cb9-13"><a href="#cb9-13"></a>X_range <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb9-14"><a href="#cb9-14"></a>y_fit <span class="op">=</span> model(X_range)</span>
+<span id="cb9-15"><a href="#cb9-15"></a></span>
+<span id="cb9-16"><a href="#cb9-16"></a><span class="bu">print</span>(model)</span>
+<span id="cb9-17"><a href="#cb9-17"></a></span>
+<span id="cb9-18"><a href="#cb9-18"></a>plt.scatter(X, y, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Data'</span>)</span>
+<span id="cb9-19"><a href="#cb9-19"></a>plt.plot(X_range, y_fit, color<span class="op">=</span><span class="st">'purple'</span>, label<span class="op">=</span><span class="st">'Polynomial Fit'</span>)</span>
+<span id="cb9-20"><a href="#cb9-20"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        2
+0.8488 x + 0.9006 x - 1.139</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="DataModels_files/figure-html/cell-6-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="curve-fitting-with-scipy" class="level3">
 <h3 class="anchored" data-anchor-id="curve-fitting-with-scipy">Curve Fitting with <code>scipy</code></h3>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> nonlinear_func(x, a, b, c):</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">*</span> np.sin(b <span class="op">*</span> x) <span class="op">+</span> c</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>params, _ <span class="op">=</span> curve_fit(nonlinear_func, X.flatten(), y)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>X_range <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>y_fit <span class="op">=</span> nonlinear_func(X_range, <span class="op">*</span>params)</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>plt.scatter(X, y, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Data'</span>)</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>plt.plot(X_range, y_fit, color<span class="op">=</span><span class="st">'purple'</span>, label<span class="op">=</span><span class="st">'Non-Linear Fit'</span>)</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>scipy</code> provides the <code>curve_fit</code> function to fit a non-linear model to the data. The function requires the model function and the data as input.</p>
+<div id="f06f1eb1" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="kw">def</span> nonlinear_func(x, a, b, c):</span>
+<span id="cb11-4"><a href="#cb11-4"></a>    <span class="cf">return</span> a <span class="op">*</span> np.sin(b <span class="op">*</span> x) <span class="op">+</span> c</span>
+<span id="cb11-5"><a href="#cb11-5"></a></span>
+<span id="cb11-6"><a href="#cb11-6"></a>params, _ <span class="op">=</span> curve_fit(nonlinear_func, X.flatten(), y)</span>
+<span id="cb11-7"><a href="#cb11-7"></a></span>
+<span id="cb11-8"><a href="#cb11-8"></a>X_range <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb11-9"><a href="#cb11-9"></a>y_fit <span class="op">=</span> nonlinear_func(X_range, <span class="op">*</span>params)</span>
+<span id="cb11-10"><a href="#cb11-10"></a></span>
+<span id="cb11-11"><a href="#cb11-11"></a>plt.scatter(X, y, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Data'</span>)</span>
+<span id="cb11-12"><a href="#cb11-12"></a>plt.plot(X_range, y_fit, color<span class="op">=</span><span class="st">'purple'</span>, label<span class="op">=</span><span class="st">'Non-Linear Fit'</span>)</span>
+<span id="cb11-13"><a href="#cb11-13"></a>plt.legend()</span>
+<span id="cb11-14"><a href="#cb11-14"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="DataModels_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
+
+<!-- -->
 
 </section>
 </section>
@@ -849,6 +930,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
@@ -1188,16 +1320,201 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../course/chapters/SEDA/DescriptiveStatistics.html" class="pagination-link" aria-label="Descriptive Statistics and Analysis">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Descriptive Statistics and Analysis</span></span>
+      <a href="../../../course/chapters/SEDA/ModelTesting.html" class="pagination-link" aria-label="Model Testing">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Model Testing</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../course/chapters/SEDA/ModelTesting.html" class="pagination-link" aria-label="Model Testing">
-        <span class="nav-page-text"><span class="chapter-title">Model Testing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../course/chapters/SEDA/AdvancedAnalysis.html" class="pagination-link" aria-label="Advanced Statistical Analysis">
+        <span class="nav-page-text"><span class="chapter-title">Advanced Statistical Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="an">title:</span><span class="co"> "Inferential Statistics"</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="an">execute:</span><span class="co"> </span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="co">  echo: True</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="co">  eval: True</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="an">other-links:</span><span class="co"> </span></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="co">      - text: "Download Code"</span></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="co">        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/SimpleDataModels.ipynb"</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a><span class="co">        icon: "journal"</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a><span class="an">code-links:</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a><span class="co">      - text: "Open in Colab"</span></span>
+<span id="cb12-12"><a href="#cb12-12"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataModels.ipynb"</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a><span class="co">        icon: "laptop"</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a><span class="co">---</span> </span>
+<span id="cb12-15"><a href="#cb12-15"></a><span class="fu"># Data Models {.unnumbered}</span></span>
+<span id="cb12-16"><a href="#cb12-16"></a></span>
+<span id="cb12-17"><a href="#cb12-17"></a><span class="fu">## Linear Regression&nbsp;{.unnumbered}</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a></span>
+<span id="cb12-19"><a href="#cb12-19"></a>Often we want to find a model which can explain the data.</span>
+<span id="cb12-20"><a href="#cb12-20"></a>It is important to understand the data and the model to be able to interpret the results and make predictions.</span>
+<span id="cb12-21"><a href="#cb12-21"></a></span>
+<span id="cb12-22"><a href="#cb12-22"></a>The simplest model is the linear regression model. It assumes that the data has a linear relationship with the target variable. </span>
+<span id="cb12-23"><a href="#cb12-23"></a>For example, if we have a single feature $x$ and a target variable $y$, the linear regression model can be defined as:</span>
+<span id="cb12-24"><a href="#cb12-24"></a></span>
+<span id="cb12-25"><a href="#cb12-25"></a>$$</span>
+<span id="cb12-26"><a href="#cb12-26"></a>y = \beta_0 + \beta_1 x + \epsilon</span>
+<span id="cb12-27"><a href="#cb12-27"></a>$$</span>
+<span id="cb12-28"><a href="#cb12-28"></a></span>
+<span id="cb12-29"><a href="#cb12-29"></a>where $y$ is the target variable, $x$ is the feature, $\beta_0$ and $\beta_1$ are the coefficients, and $\epsilon$ is the error term.</span>
+<span id="cb12-30"><a href="#cb12-30"></a></span>
+<span id="cb12-31"><a href="#cb12-31"></a>For multiple features $x_1, x_2, \ldots, x_n$, the linear regression model can be defined as:</span>
+<span id="cb12-32"><a href="#cb12-32"></a></span>
+<span id="cb12-33"><a href="#cb12-33"></a>$$</span>
+<span id="cb12-34"><a href="#cb12-34"></a>y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n + \epsilon</span>
+<span id="cb12-35"><a href="#cb12-35"></a>$$</span>
+<span id="cb12-36"><a href="#cb12-36"></a></span>
+<span id="cb12-37"><a href="#cb12-37"></a>where $y$ is the target variable, $x_1, x_2, \ldots, x_n$ are the features, $\beta_0, \beta_1, \ldots, \beta_n$ are the coefficients, and $\epsilon$ is the error term.</span>
+<span id="cb12-38"><a href="#cb12-38"></a></span>
+<span id="cb12-39"><a href="#cb12-39"></a></span>
+<span id="cb12-40"><a href="#cb12-40"></a>In <span class="in">`python`</span> there exists serveral libraries which can be used to fit a linear regression model.</span>
+<span id="cb12-41"><a href="#cb12-41"></a></span>
+<span id="cb12-42"><a href="#cb12-42"></a><span class="fu">### Using `scipy`{.unnumbered}</span></span>
+<span id="cb12-43"><a href="#cb12-43"></a></span>
+<span id="cb12-44"><a href="#cb12-44"></a>A easy way is to use <span class="in">`scipy`</span> library. The <span class="in">`scipy`</span> library has a function called <span class="in">`linregress`</span> which can be used to fit a linear regression model. The function returns the slope, intercept, r-value, p-value, and the standard error of the estimate. And with scipy version 1.15.2 also the intercept error.</span>
+<span id="cb12-45"><a href="#cb12-45"></a></span>
+<span id="cb12-48"><a href="#cb12-48"></a><span class="in">```{python}</span></span>
+<span id="cb12-49"><a href="#cb12-49"></a><span class="im">from</span> scipy.stats <span class="im">import</span> linregress</span>
+<span id="cb12-50"><a href="#cb12-50"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-51"><a href="#cb12-51"></a></span>
+<span id="cb12-52"><a href="#cb12-52"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb12-53"><a href="#cb12-53"></a>y <span class="op">=</span> x<span class="op">*</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)<span class="op">+</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)</span>
+<span id="cb12-54"><a href="#cb12-54"></a></span>
+<span id="cb12-55"><a href="#cb12-55"></a>results <span class="op">=</span> linregress(x, y)</span>
+<span id="cb12-56"><a href="#cb12-56"></a></span>
+<span id="cb12-57"><a href="#cb12-57"></a>slope <span class="op">=</span> results.slope</span>
+<span id="cb12-58"><a href="#cb12-58"></a>intercept <span class="op">=</span> results.intercept</span>
+<span id="cb12-59"><a href="#cb12-59"></a>r_value <span class="op">=</span> results.rvalue</span>
+<span id="cb12-60"><a href="#cb12-60"></a>p_value <span class="op">=</span> results.pvalue</span>
+<span id="cb12-61"><a href="#cb12-61"></a>std_err <span class="op">=</span> results.stderr</span>
+<span id="cb12-62"><a href="#cb12-62"></a>intercept_err <span class="op">=</span> results.intercept_stderr</span>
+<span id="cb12-63"><a href="#cb12-63"></a><span class="bu">print</span>(<span class="st">"slope: </span><span class="sc">%f</span><span class="st">    intercept: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> (slope, intercept))</span>
+<span id="cb12-64"><a href="#cb12-64"></a><span class="bu">print</span>(<span class="st">"R-squared: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> r_value<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb12-65"><a href="#cb12-65"></a><span class="bu">print</span>(<span class="st">"p-value: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> p_value)</span>
+<span id="cb12-66"><a href="#cb12-66"></a><span class="bu">print</span>(<span class="st">"standard error: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> std_err)</span>
+<span id="cb12-67"><a href="#cb12-67"></a><span class="bu">print</span>(<span class="st">"Intercept error: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span>intercept_err)</span>
+<span id="cb12-68"><a href="#cb12-68"></a><span class="co"># Two-sided inverse Students t-distribution</span></span>
+<span id="cb12-69"><a href="#cb12-69"></a><span class="co"># p - probability, df - degrees of freedom</span></span>
+<span id="cb12-70"><a href="#cb12-70"></a><span class="im">from</span> scipy.stats <span class="im">import</span> t</span>
+<span id="cb12-71"><a href="#cb12-71"></a>tinv <span class="op">=</span> <span class="kw">lambda</span> p, df: <span class="bu">abs</span>(t.ppf(p<span class="op">/</span><span class="dv">2</span>, df))</span>
+<span id="cb12-72"><a href="#cb12-72"></a><span class="bu">print</span>(<span class="st">"95</span><span class="sc">% c</span><span class="st">onfidence interval: "</span> <span class="op">+</span> <span class="bu">str</span>(intercept <span class="op">-</span> tinv(<span class="fl">0.05</span>, <span class="bu">len</span>(x)<span class="op">-</span><span class="dv">2</span>)<span class="op">*</span>intercept_err) <span class="op">+</span> <span class="st">" to "</span> <span class="op">+</span> <span class="bu">str</span>(intercept <span class="op">+</span> tinv(<span class="fl">0.05</span>, <span class="bu">len</span>(x)<span class="op">-</span><span class="dv">2</span>)<span class="op">*</span>intercept_err))</span>
+<span id="cb12-73"><a href="#cb12-73"></a><span class="in">```</span></span>
+<span id="cb12-74"><a href="#cb12-74"></a></span>
+<span id="cb12-75"><a href="#cb12-75"></a>:::{.callout-important}</span>
+<span id="cb12-76"><a href="#cb12-76"></a>For older version <span class="in">`scipy`</span>only returned 5 values with fields slope, intercept, rvalue, pvalue and stderr. For compatiblity reasons the return values are 5 elements tuple.</span>
+<span id="cb12-77"><a href="#cb12-77"></a></span>
+<span id="cb12-80"><a href="#cb12-80"></a><span class="in">```{python}</span></span>
+<span id="cb12-81"><a href="#cb12-81"></a>slope, intercept, r, p, se <span class="op">=</span> linregress(x, y)</span>
+<span id="cb12-82"><a href="#cb12-82"></a><span class="in">```</span></span>
+<span id="cb12-83"><a href="#cb12-83"></a>And if you want to get the intercept error you can use the following return value as a object:</span>
+<span id="cb12-84"><a href="#cb12-84"></a></span>
+<span id="cb12-87"><a href="#cb12-87"></a><span class="in">```{python}</span></span>
+<span id="cb12-88"><a href="#cb12-88"></a>results <span class="op">=</span> linregress(x, y)</span>
+<span id="cb12-89"><a href="#cb12-89"></a><span class="bu">print</span>(results.intercept_stderr)</span>
+<span id="cb12-90"><a href="#cb12-90"></a><span class="in">```</span></span>
+<span id="cb12-91"><a href="#cb12-91"></a>:::</span>
+<span id="cb12-92"><a href="#cb12-92"></a></span>
+<span id="cb12-93"><a href="#cb12-93"></a><span class="fu">### Using `statsmodels`{.unnumbered}</span></span>
+<span id="cb12-94"><a href="#cb12-94"></a></span>
+<span id="cb12-95"><a href="#cb12-95"></a>Another library is <span class="in">`statsmodels`</span>. The <span class="in">`statsmodels`</span> library provides more detailed information about the model, such as the coefficients, standard errors, t-values, p-values, and confidence intervals.</span>
+<span id="cb12-96"><a href="#cb12-96"></a></span>
+<span id="cb12-99"><a href="#cb12-99"></a><span class="in">```{python}</span></span>
+<span id="cb12-100"><a href="#cb12-100"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb12-101"><a href="#cb12-101"></a></span>
+<span id="cb12-102"><a href="#cb12-102"></a>X <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb12-103"><a href="#cb12-103"></a>y <span class="op">=</span> X<span class="op">*</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)<span class="op">+</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)</span>
+<span id="cb12-104"><a href="#cb12-104"></a></span>
+<span id="cb12-105"><a href="#cb12-105"></a>X_with_const <span class="op">=</span> sm.add_constant(X)  <span class="co"># Add intercept term</span></span>
+<span id="cb12-106"><a href="#cb12-106"></a>model <span class="op">=</span> sm.OLS(y, X_with_const).fit()</span>
+<span id="cb12-107"><a href="#cb12-107"></a><span class="bu">print</span>(model.summary())</span>
+<span id="cb12-108"><a href="#cb12-108"></a><span class="in">```</span></span>
+<span id="cb12-109"><a href="#cb12-109"></a></span>
+<span id="cb12-110"><a href="#cb12-110"></a></span>
+<span id="cb12-111"><a href="#cb12-111"></a><span class="fu">### Using `scikit-learn` {.unnumbered}</span></span>
+<span id="cb12-112"><a href="#cb12-112"></a>One of the most popular libraries is <span class="in">`scikit-learn`</span>. The following code shows how to fit a linear regression model using <span class="in">`scikit-learn`</span>:</span>
+<span id="cb12-113"><a href="#cb12-113"></a></span>
+<span id="cb12-114"><a href="#cb12-114"></a></span>
+<span id="cb12-115"><a href="#cb12-115"></a><span class="in">```python</span></span>
+<span id="cb12-116"><a href="#cb12-116"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb12-117"><a href="#cb12-117"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-118"><a href="#cb12-118"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb12-119"><a href="#cb12-119"></a></span>
+<span id="cb12-120"><a href="#cb12-120"></a><span class="co"># Sample data</span></span>
+<span id="cb12-121"><a href="#cb12-121"></a>X <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]).reshape(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb12-122"><a href="#cb12-122"></a>y <span class="op">=</span> X<span class="op">*</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)<span class="op">+</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">5</span>)</span>
+<span id="cb12-123"><a href="#cb12-123"></a></span>
+<span id="cb12-124"><a href="#cb12-124"></a><span class="co"># Model fitting</span></span>
+<span id="cb12-125"><a href="#cb12-125"></a>model <span class="op">=</span> LinearRegression()</span>
+<span id="cb12-126"><a href="#cb12-126"></a>model.fit(X, y)</span>
+<span id="cb12-127"><a href="#cb12-127"></a></span>
+<span id="cb12-128"><a href="#cb12-128"></a><span class="co"># Predictions</span></span>
+<span id="cb12-129"><a href="#cb12-129"></a>y_pred <span class="op">=</span> model.predict(X)</span>
+<span id="cb12-130"><a href="#cb12-130"></a></span>
+<span id="cb12-131"><a href="#cb12-131"></a><span class="co"># Plot</span></span>
+<span id="cb12-132"><a href="#cb12-132"></a>plt.scatter(X, y, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Data'</span>)</span>
+<span id="cb12-133"><a href="#cb12-133"></a>plt.plot(X, y_pred, color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Linear Fit'</span>)</span>
+<span id="cb12-134"><a href="#cb12-134"></a>plt.legend()</span>
+<span id="cb12-135"><a href="#cb12-135"></a>plt.show()</span>
+<span id="cb12-136"><a href="#cb12-136"></a><span class="in">```</span></span>
+<span id="cb12-137"><a href="#cb12-137"></a>---</span>
+<span id="cb12-138"><a href="#cb12-138"></a></span>
+<span id="cb12-139"><a href="#cb12-139"></a><span class="fu">## Non-Linear Fits</span></span>
+<span id="cb12-140"><a href="#cb12-140"></a>Linear regression may not always be sufficient, especially for complex relationships. Non-linear models provide more flexibility.</span>
+<span id="cb12-141"><a href="#cb12-141"></a></span>
+<span id="cb12-142"><a href="#cb12-142"></a><span class="fu">### Polynomial Regression</span></span>
+<span id="cb12-143"><a href="#cb12-143"></a></span>
+<span id="cb12-144"><a href="#cb12-144"></a>Polynomial regression is a type of linear regression where the relationship between the independent variable $x$ and the dependent variable $y$ is modeled as an $n$-th degree polynomial.</span>
+<span id="cb12-145"><a href="#cb12-145"></a></span>
+<span id="cb12-148"><a href="#cb12-148"></a><span class="in">```{python}</span></span>
+<span id="cb12-149"><a href="#cb12-149"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-150"><a href="#cb12-150"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb12-151"><a href="#cb12-151"></a></span>
+<span id="cb12-152"><a href="#cb12-152"></a></span>
+<span id="cb12-153"><a href="#cb12-153"></a><span class="co"># Sample data</span></span>
+<span id="cb12-154"><a href="#cb12-154"></a>X <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb12-155"><a href="#cb12-155"></a>y <span class="op">=</span> X<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb12-156"><a href="#cb12-156"></a></span>
+<span id="cb12-157"><a href="#cb12-157"></a>model <span class="op">=</span> np.polyfit(X, y, <span class="dv">2</span>)</span>
+<span id="cb12-158"><a href="#cb12-158"></a></span>
+<span id="cb12-159"><a href="#cb12-159"></a>model <span class="op">=</span> np.poly1d(model)</span>
+<span id="cb12-160"><a href="#cb12-160"></a></span>
+<span id="cb12-161"><a href="#cb12-161"></a>X_range <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb12-162"><a href="#cb12-162"></a>y_fit <span class="op">=</span> model(X_range)</span>
+<span id="cb12-163"><a href="#cb12-163"></a></span>
+<span id="cb12-164"><a href="#cb12-164"></a><span class="bu">print</span>(model)</span>
+<span id="cb12-165"><a href="#cb12-165"></a></span>
+<span id="cb12-166"><a href="#cb12-166"></a>plt.scatter(X, y, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Data'</span>)</span>
+<span id="cb12-167"><a href="#cb12-167"></a>plt.plot(X_range, y_fit, color<span class="op">=</span><span class="st">'purple'</span>, label<span class="op">=</span><span class="st">'Polynomial Fit'</span>)</span>
+<span id="cb12-168"><a href="#cb12-168"></a>plt.legend()</span>
+<span id="cb12-169"><a href="#cb12-169"></a></span>
+<span id="cb12-170"><a href="#cb12-170"></a></span>
+<span id="cb12-171"><a href="#cb12-171"></a><span class="in">```</span></span>
+<span id="cb12-172"><a href="#cb12-172"></a></span>
+<span id="cb12-173"><a href="#cb12-173"></a><span class="fu">### Curve Fitting with `scipy`</span></span>
+<span id="cb12-174"><a href="#cb12-174"></a></span>
+<span id="cb12-175"><a href="#cb12-175"></a><span class="in">`scipy`</span> provides the <span class="in">`curve_fit`</span> function to fit a non-linear model to the data. The function requires the model function and the data as input.</span>
+<span id="cb12-176"><a href="#cb12-176"></a></span>
+<span id="cb12-179"><a href="#cb12-179"></a><span class="in">```{python}</span></span>
+<span id="cb12-180"><a href="#cb12-180"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span>
+<span id="cb12-181"><a href="#cb12-181"></a></span>
+<span id="cb12-182"><a href="#cb12-182"></a><span class="kw">def</span> nonlinear_func(x, a, b, c):</span>
+<span id="cb12-183"><a href="#cb12-183"></a>    <span class="cf">return</span> a <span class="op">*</span> np.sin(b <span class="op">*</span> x) <span class="op">+</span> c</span>
+<span id="cb12-184"><a href="#cb12-184"></a></span>
+<span id="cb12-185"><a href="#cb12-185"></a>params, _ <span class="op">=</span> curve_fit(nonlinear_func, X.flatten(), y)</span>
+<span id="cb12-186"><a href="#cb12-186"></a></span>
+<span id="cb12-187"><a href="#cb12-187"></a>X_range <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb12-188"><a href="#cb12-188"></a>y_fit <span class="op">=</span> nonlinear_func(X_range, <span class="op">*</span>params)</span>
+<span id="cb12-189"><a href="#cb12-189"></a></span>
+<span id="cb12-190"><a href="#cb12-190"></a>plt.scatter(X, y, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Data'</span>)</span>
+<span id="cb12-191"><a href="#cb12-191"></a>plt.plot(X_range, y_fit, color<span class="op">=</span><span class="st">'purple'</span>, label<span class="op">=</span><span class="st">'Non-Linear Fit'</span>)</span>
+<span id="cb12-192"><a href="#cb12-192"></a>plt.legend()</span>
+<span id="cb12-193"><a href="#cb12-193"></a>plt.show()</span>
+<span id="cb12-194"><a href="#cb12-194"></a><span class="in">```</span></span>
+<span id="cb12-195"><a href="#cb12-195"></a></span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
