@@ -1,0 +1,46 @@
+---
+title: "Ternary Plot"
+execute: 
+  echo: True
+  eval: True
+other-links: 
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/TenaryPlots.ipynb"
+        icon: "journal"
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/TenaryPlots.ipynb"
+        icon: "laptop"
+--- 
+
+# Ternary Plot {.unnumbered}
+
+A ternary plot is a type of plot that is used to visualize the composition of three components.
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+import ternary
+
+# Create a figure
+fig, tax = ternary.figure(scale=1.0)
+
+# Draw Boundary and Gridlines
+tax.boundary(linewidth=2.0)
+tax.gridlines(multiple=0.2, color="blue")
+
+# Set Axis labels and Title
+fontsize = 10
+tax.set_title("Ternary Plot", fontsize=fontsize)
+tax.left_axis_label("Component A", fontsize=fontsize)
+tax.right_axis_label("Component B", fontsize=fontsize)
+tax.bottom_axis_label("Component C", fontsize=fontsize)
+
+# Plot some data
+points = np.random.dirichlet((1, 1, 1), 10)
+tax.scatter(points, marker='s', color='red', label="Data")
+
+# Legend
+tax.legend()
+plt.show()
+```

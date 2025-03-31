@@ -148,3 +148,4 @@ Matplotlib is the main **plotting** library in Python. It is mainly used for sta
 More information can be found under [Matplotlib website](https://matplotlib.org/).
 
 Later in this course we will get a detailed tutorial on how to use Matplotlib.
+

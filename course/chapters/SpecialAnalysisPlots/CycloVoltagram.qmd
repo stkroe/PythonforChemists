@@ -1,0 +1,54 @@
+---
+title: "Cycle Voltammetry Data Analysis"
+execute: 
+  echo: True
+  eval: True
+other-links: 
+      - text: "Download Code"
+        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/CycloVoltagram.ipynb"
+        icon: "journal"
+code-links:
+      - text: "Open in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/CycloVoltagram.ipynb"
+        icon: "laptop"
+--- 
+
+##   Cycle Voltammetry Data Analysis {.unnumbered}
+
+Cycle voltammetry is a powerful technique to study the electrochemical behavior of a system. The cyclic voltammogram is a plot of the current versus the applied potential. The shape of the cyclic voltammogram can provide information about the redox behavior of the system. In this notebook, we will analyze a cyclic voltammogram using Python.
+
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Simulated CV data (potential in V, current in mA)
+potential = np.linspace(-1, 1, 500)  # Potential sweep from -1V to 1V
+current = np.sin(3 * np.pi * potential) + 0.1 * np.random.randn(len(potential))  # Simulated current response
+
+# Find oxidation and reduction peaks
+oxidation_peak_idx = np.argmax(current)
+reduction_peak_idx = np.argmin(current)
+oxidation_peak = (potential[oxidation_peak_idx], current[oxidation_peak_idx])
+reduction_peak = (potential[reduction_peak_idx], current[reduction_peak_idx])
+
+# Plot CV
+plt.figure(figsize=(8, 6), dpi=120)
+plt.plot(potential, current, label='Cyclic Voltammogram', color='blue')
+plt.scatter(*oxidation_peak, color='red', label='Oxidation Peak', zorder=3)
+plt.scatter(*reduction_peak, color='green', label='Reduction Peak', zorder=3)
+
+# Labels and annotations
+plt.xlabel('Potential (V)')
+plt.ylabel('Current (mA)')
+plt.title('Cyclic Voltammogram Analysis')
+plt.axhline(0, color='black', linewidth=0.8, linestyle='--')
+plt.axvline(0, color='black', linewidth=0.8, linestyle='--')
+plt.legend()
+plt.grid(alpha=0.3)
+plt.show()
+
+# Print peak information
+print(f"Oxidation Peak: Potential = {oxidation_peak[0]:.2f} V, Current = {oxidation_peak[1]:.2f} mA")
+print(f"Reduction Peak: Potential = {reduction_peak[0]:.2f} V, Current = {reduction_peak[1]:.2f} mA")
+```

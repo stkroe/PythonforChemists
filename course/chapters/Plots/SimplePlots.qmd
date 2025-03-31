@@ -232,6 +232,20 @@ plt.show()
 
 ```
 
+### Exercises {.unnumbered}
+Download it locally and try to solve the exercises. <br>
+
+[Simple Plot Example](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/SimplePlotExmple.ipynb)
+
+
+
+Or open it in `Google Colab`:
+
+[Simple Plot Example](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/SimplePlotExample.ipynb)
+
+
+
+
 
 <!-- Let`s try to create 4x3 subplots with specific adjustments.
 
