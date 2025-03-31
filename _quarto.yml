@@ -75,10 +75,11 @@ book:
         chapters:
           - course/chapters/PlotTypes/AdvancedPlotTypes.qmd
           - course/chapters/PlotTypes/InteractivePlots.qmd
-      - part: "Spectroscopy and Image Data Analysis"
+      - part: "Special Analysis and Visualization Techniques"
         chapters:
-          - course/chapters/SID/Spectroscopy.qmd
-          - course/chapters/SID/ImageAnalysis.qmd
+          - course/chapters/SpecialAnalysisPlots/Spectroscopy.qmd
+          - course/chapters/SpecialAnalysisPlots/ImageAnalysis.qmd
+          - course/chapters/SpecialAnalysisPlots/Ternary.qmd
       # - part: "Machine Learning"
       #   chapters:
       #     - course/chapters/ML/IntroductionML.qmd

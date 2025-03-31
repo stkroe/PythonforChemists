@@ -13,3 +13,4 @@ bokeh
 altair
 plotly
 networkx
+python-ternary
