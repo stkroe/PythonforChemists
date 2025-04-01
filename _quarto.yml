@@ -16,8 +16,6 @@ book:
   page-footer:
     right: | 
       <li><a href="https://github.com/stkroe/PythonForChemists.github.io" target="blank">Code source</a></li>
-    center: |
-      © 2025 Stefanie Kröll. All rights reserved.
     left: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
   repo-url: https://github.com/stkroe/PythonForChemists.github.io
