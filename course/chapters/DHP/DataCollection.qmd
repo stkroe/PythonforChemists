@@ -1,5 +1,11 @@
 ---
 title: "Introduction to Data Science in Chemistry and Materials Science"
+format: 
+    html:
+        css: ../../quizzes/quiz.css
+        include-in-header:
+         text: |
+            <script src="../../quizzes/typofdata.js"></script>
 execute:
     echo: true
     eval: false
@@ -263,85 +269,7 @@ For example,
 
 ---
 
-# Quiz {.unnumbered}
-
-Multiple Choice Questions:
-
-
 :::{.callout-note}
-### Question 1
-What stands the *I* in the FAIR principles for?
-
-- a) Interoperable
-- b) Inclusive
-- c) Intelligent
-- d) Interesting
-:::
-
-:::{.callout-note}
-### Question 2
-What data format is used for crystallographic data?
-
-- a) XYZ
-- b) CIF
-- c) FASTA
-- d) SMILES
-:::
-
-
-:::{.callout-note}
-### Question 3
-What type of data is the temperature in a chemical reaction?
-
-- a) Discrete
-- b) Continuous
-- c) Ordinal
-- d) Nominal
-:::
-
-
-:::{.callout-note}
-### Question 4
-What type of data is the heat capacity of a material?
-
-- a) Discrete
-- b) Continuous
-- c) Ordinal
-- d) Nominal
-:::
-
-:::{.callout-note}
-### Question 5
-What type of data is acidity of a solution?
-
-- a) Discrete
-- b) Continuous
-- c) Ordinal
-- d) Nominal
-:::
-
-::: {.callout-note collapse="true"}
-# Solutions
-
-### Question 1
-
-- Correct answer: a) Interoperable
-
-### Question 2
-
-- Correct answer: b) CIF
-
-### Question 3
-
-- Correct answer: b) Continuous 
-
-### Question 4
-
-- Correct answer: b) Continuous
-
-### Question 5
-
-- Correct answer: b) Continuous
-
-
+### Quiz
+<div id="quiz-container"></div>
 :::
