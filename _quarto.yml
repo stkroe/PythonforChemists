@@ -8,7 +8,7 @@ execute:
 book:
   title: "Data Analysis and Visualization for Chemists and Material Scientists"
   subtitle: "A Practical Guide with Python"
-  author: "© 2025 Stefanie Kröll"
+  #author: "© 2025 Stefanie Kröll"
   version: 0.1
   page-navigation: true
   reader-mode: true
