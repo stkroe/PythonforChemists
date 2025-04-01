@@ -113,8 +113,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Sample data
-X = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
-y = X*np.random.normal(0, 1, 5)+np.random.normal(0, 1, 5)
+X = np.linspace(1, 5, 100).reshape(-1, 1)
+y = 2 * X + 1 + np.random.normal(0, 1, 100).reshape(-1, 1)
 
 # Model fitting
 model = LinearRegression()
