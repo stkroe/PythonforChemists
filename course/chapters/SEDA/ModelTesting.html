@@ -169,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Overview</span></a>
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome to the Data Analysis and Visualization Course for Chemists and Material Scientists!</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -427,6 +427,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#hypothesis-testing" id="toc-hypothesis-testing" class="nav-link active" data-scroll-target="#hypothesis-testing">Hypothesis Testing</a></li>
+  <li><a href="#outlier-detection" id="toc-outlier-detection" class="nav-link" data-scroll-target="#outlier-detection">Outlier Detection</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SEDA/ModelTesting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/ModelTesting.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/ModelTesting.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
     </div>
@@ -459,7 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Null &amp; Alternative Hypothesis:</strong> The null hypothesis (H₀) assumes no effect, while the alternative hypothesis (H₁) suggests a significant difference.</p></li>
 <li><p><strong>t-tests:</strong> Used to compare the means of two groups (one-sample, independent, paired t-tests).</p></li>
 </ul>
-<div id="3debcd2d" class="cell" data-execution_count="1">
+<div id="2b141842" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Example: Null hypothesis - The mean is equal to 0</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co">#H0: μ = 0</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -494,7 +495,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="805ec190" class="cell" data-execution_count="2">
+<div id="cf4b5178" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Generate two random samples (e.g., control and treatment groups)</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>np.random.seed(<span class="dv">42</span>)</span>
 <span id="cb2-3"><a href="#cb2-3"></a>control <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">50</span>, scale<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=50, Std=10</span></span>
@@ -525,7 +526,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="cb28fe48" class="cell" data-execution_count="3">
+<div id="3e932a79" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Generate paired data (e.g., before and after measurements)</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>np.random.seed(<span class="dv">42</span>)</span>
 <span id="cb3-3"><a href="#cb3-3"></a>before <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">50</span>, scale<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=50, Std=10</span></span>
@@ -559,7 +560,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>ANOVA (Analysis of Variance):</strong> Compares means of multiple groups to check for significant differences.</li>
 </ul>
-<div id="1c03e9c1" class="cell" data-execution_count="4">
+<div id="8b48c4cb" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb4-2"><a href="#cb4-2"></a></span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="co"># Example: Comparing multiple groups</span></span>
@@ -577,7 +578,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Chi-square Test:</strong> Used for categorical data to examine associations between different groups.</li>
 </ul>
-<div id="0eda2cb1" class="cell" data-execution_count="5">
+<div id="d5b477aa" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> chi2_contingency</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
 <span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Example: Comparing categorical data</span></span>
@@ -590,6 +591,149 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Check the <a href="https://docs.scipy.org/doc/scipy/reference/stats.html">SciPy documentation</a> for more statistical tests and functions.</p>
 <p>And for more information on hypothesis testing, refer to the <a href="https://docs.scipy.org/doc/scipy/tutorial/stats/hypothesis_tests.html">SciPy Hypothesis Tests</a>.</p>
+</section>
+<section id="outlier-detection" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="outlier-detection">Outlier Detection</h3>
+<p>Outliers are data points that significantly differ from other observations in a dataset. They have effect on specific statistical methods and can lead to incorrect conclusions.</p>
+<ul>
+<li><strong>Z-Score:</strong> Measures how many standard deviations a data point is from the mean.</li>
+</ul>
+<div id="b90184b0" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Calculate Z-scores for a dataset</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>data <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span>
+<span id="cb8-3"><a href="#cb8-3"></a>z_scores <span class="op">=</span> stats.zscore(data)</span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="bu">print</span>(z_scores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[6]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-green-fg">      1</span> <span style="font-style:italic;color:rgb(95,135,135)"># Calculate Z-scores for a dataset</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> data = <span class="ansi-yellow-bg">np</span>.array([<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">10</span>])
+<span class="ansi-green-fg">      3</span> z_scores = stats.zscore(data)
+<span class="ansi-green-fg">      4</span> <span style="color:rgb(0,135,0)">print</span>(z_scores)
+
+<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>IQR (Interquartile Range):</strong> Identifies outliers based on the spread of the data.</li>
+</ul>
+<div id="9fcabf3c" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Calculate IQR for a dataset</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>q1 <span class="op">=</span> np.percentile(data, <span class="dv">25</span>)</span>
+<span id="cb9-3"><a href="#cb9-3"></a>q3 <span class="op">=</span> np.percentile(data, <span class="dv">75</span>)</span>
+<span id="cb9-4"><a href="#cb9-4"></a>iqr <span class="op">=</span> q3 <span class="op">-</span> q1</span>
+<span id="cb9-5"><a href="#cb9-5"></a></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co"># Define outlier thresholds</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>lower_bound <span class="op">=</span> q1 <span class="op">-</span> <span class="fl">1.5</span> <span class="op">*</span> iqr</span>
+<span id="cb9-8"><a href="#cb9-8"></a>upper_bound <span class="op">=</span> q3 <span class="op">+</span> <span class="fl">1.5</span> <span class="op">*</span> iqr</span>
+<span id="cb9-9"><a href="#cb9-9"></a></span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="co"># Identify outliers</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>outliers <span class="op">=</span> data[(data <span class="op">&lt;</span> lower_bound) <span class="op">|</span> (data <span class="op">&gt;</span> upper_bound)]</span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="bu">print</span>(outliers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[7]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-green-fg">      1</span> <span style="font-style:italic;color:rgb(95,135,135)"># Calculate IQR for a dataset</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> q1 = <span class="ansi-yellow-bg">np</span>.percentile(data, <span class="ansi-green-fg">25</span>)
+<span class="ansi-green-fg">      3</span> q3 = np.percentile(data, <span class="ansi-green-fg">75</span>)
+<span class="ansi-green-fg">      4</span> iqr = q3 - q1
+
+<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>DBSCAN (Density-Based Spatial Clustering of Applications with Noise):</strong> Clustering algorithm that identifies outliers based on density.</li>
+</ul>
+<div id="07f103d8" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> DBSCAN</span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="co"># Generate sample data</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>, <span class="dv">2</span>)</span>
+<span id="cb10-5"><a href="#cb10-5"></a></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="co"># Fit DBSCAN model</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a>dbscan <span class="op">=</span> DBSCAN(eps<span class="op">=</span><span class="fl">0.3</span>, min_samples<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb10-8"><a href="#cb10-8"></a>dbscan.fit(data)</span>
+<span id="cb10-9"><a href="#cb10-9"></a></span>
+<span id="cb10-10"><a href="#cb10-10"></a><span class="co"># Identify outliers</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a>outliers <span class="op">=</span> data[dbscan.labels_ <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb10-12"><a href="#cb10-12"></a><span class="bu">print</span>(outliers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[8]</span><span class="ansi-green-fg">, line 4</span>
+<span class="ansi-green-fg">      1</span> <span style="font-weight:bold;color:rgb(0,135,0)">from</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">sklearn</span><span class="ansi-blue-fg ansi-bold">.</span><span class="ansi-blue-fg ansi-bold">cluster</span><span style="color:rgb(188,188,188)"> </span><span style="font-weight:bold;color:rgb(0,135,0)">import</span> DBSCAN
+<span class="ansi-green-fg">      3</span> <span style="font-style:italic;color:rgb(95,135,135)"># Generate sample data</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">4</span> data = <span class="ansi-yellow-bg">np</span>.random.randn(<span class="ansi-green-fg">100</span>, <span class="ansi-green-fg">2</span>)
+<span class="ansi-green-fg">      6</span> <span style="font-style:italic;color:rgb(95,135,135)"># Fit DBSCAN model</span>
+<span class="ansi-green-fg">      7</span> dbscan = DBSCAN(eps=<span class="ansi-green-fg">0.3</span>, min_samples=<span class="ansi-green-fg">5</span>)
+
+<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Isolation Forest:</strong> Anomaly detection algorithm that isolates outliers in a dataset.</li>
+</ul>
+<div id="37ba0525" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> IsolationForest</span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="co"># Generate sample data</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>, <span class="dv">2</span>)</span>
+<span id="cb11-5"><a href="#cb11-5"></a></span>
+<span id="cb11-6"><a href="#cb11-6"></a><span class="co"># Fit Isolation Forest model</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a>isoforest <span class="op">=</span> IsolationForest(contamination<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb11-8"><a href="#cb11-8"></a>isoforest.fit(data)</span>
+<span id="cb11-9"><a href="#cb11-9"></a></span>
+<span id="cb11-10"><a href="#cb11-10"></a><span class="co"># Identify outliers</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a>outliers <span class="op">=</span> data[isoforest.predict(data) <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb11-12"><a href="#cb11-12"></a><span class="bu">print</span>(outliers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[9]</span><span class="ansi-green-fg">, line 4</span>
+<span class="ansi-green-fg">      1</span> <span style="font-weight:bold;color:rgb(0,135,0)">from</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">sklearn</span><span class="ansi-blue-fg ansi-bold">.</span><span class="ansi-blue-fg ansi-bold">ensemble</span><span style="color:rgb(188,188,188)"> </span><span style="font-weight:bold;color:rgb(0,135,0)">import</span> IsolationForest
+<span class="ansi-green-fg">      3</span> <span style="font-style:italic;color:rgb(95,135,135)"># Generate sample data</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">4</span> data = <span class="ansi-yellow-bg">np</span>.random.randn(<span class="ansi-green-fg">100</span>, <span class="ansi-green-fg">2</span>)
+<span class="ansi-green-fg">      6</span> <span style="font-style:italic;color:rgb(95,135,135)"># Fit Isolation Forest model</span>
+<span class="ansi-green-fg">      7</span> isoforest = IsolationForest(contamination=<span class="ansi-green-fg">0.1</span>)
+
+<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Boxplot:</strong> Visual representation of outliers in a dataset.</li>
+</ul>
+<div id="99e7c8cb" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Generate sample data</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
+<span id="cb12-3"><a href="#cb12-3"></a></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="co"># Create boxplot</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>plt.boxplot(data)</span>
+<span id="cb12-6"><a href="#cb12-6"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[10]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-green-fg">      1</span> <span style="font-style:italic;color:rgb(95,135,135)"># Generate sample data</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> data = <span class="ansi-yellow-bg">np</span>.random.randn(<span class="ansi-green-fg">100</span>)
+<span class="ansi-green-fg">      4</span> <span style="font-style:italic;color:rgb(95,135,135)"># Create boxplot</span>
+<span class="ansi-green-fg">      5</span> plt.boxplot(data)
+
+<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
+</div>
+</div>
+</div>
+<p>For more information on outlier detection, refer to the <a href="https://scikit-learn.org/stable/modules/outlier_detection.html">Scikit-learn documentation</a>.</p>
 
 
 <!-- -->
@@ -1228,128 +1372,209 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> "Model Testing"</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="an">execute:</span><span class="co"> </span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="co">  echo: True</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="co">  eval: True</span></span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="co">  error: True</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a><span class="an">other-links:</span><span class="co"> </span></span>
-<span id="cb8-8"><a href="#cb8-8"></a><span class="co">      - text: "Download Code"</span></span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="co">        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/ModelTesting.ipynb"</span></span>
-<span id="cb8-10"><a href="#cb8-10"></a><span class="co">        icon: "journal"</span></span>
-<span id="cb8-11"><a href="#cb8-11"></a><span class="an">code-links:</span></span>
-<span id="cb8-12"><a href="#cb8-12"></a><span class="co">      - text: "Open in Colab"</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/ModelTesting.ipynb"</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a><span class="co">        icon: "laptop"</span></span>
-<span id="cb8-15"><a href="#cb8-15"></a><span class="co">---</span> </span>
-<span id="cb8-16"><a href="#cb8-16"></a></span>
-<span id="cb8-17"><a href="#cb8-17"></a></span>
-<span id="cb8-18"><a href="#cb8-18"></a></span>
-<span id="cb8-19"><a href="#cb8-19"></a><span class="fu">### Hypothesis Testing  {.unnumbered}</span></span>
-<span id="cb8-20"><a href="#cb8-20"></a></span>
-<span id="cb8-21"><a href="#cb8-21"></a></span>
-<span id="cb8-22"><a href="#cb8-22"></a>Hypothesis testing is a statistical method for making decisions or inferences about a population based on a sample. It is widely used in chemistry and materials science to validate experimental results and compare datasets.</span>
-<span id="cb8-23"><a href="#cb8-23"></a></span>
-<span id="cb8-24"><a href="#cb8-24"></a><span class="ss">- </span>**Null &amp; Alternative Hypothesis:** The null hypothesis (H₀) assumes no effect, while the alternative hypothesis (H₁) suggests a significant difference.</span>
-<span id="cb8-25"><a href="#cb8-25"></a></span>
-<span id="cb8-26"><a href="#cb8-26"></a><span class="ss">- </span>**t-tests:** Used to compare the means of two groups (one-sample, independent, paired t-tests).</span>
-<span id="cb8-27"><a href="#cb8-27"></a></span>
-<span id="cb8-30"><a href="#cb8-30"></a><span class="in">```{python}</span></span>
-<span id="cb8-31"><a href="#cb8-31"></a><span class="co"># Example: Null hypothesis - The mean is equal to 0</span></span>
-<span id="cb8-32"><a href="#cb8-32"></a><span class="co">#H0: μ = 0</span></span>
-<span id="cb8-33"><a href="#cb8-33"></a></span>
-<span id="cb8-34"><a href="#cb8-34"></a><span class="co"># Alternative hypothesis - The mean is not equal to 0</span></span>
-<span id="cb8-35"><a href="#cb8-35"></a><span class="co">#H1: μ ≠ 0</span></span>
-<span id="cb8-36"><a href="#cb8-36"></a></span>
-<span id="cb8-37"><a href="#cb8-37"></a>data <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb8-38"><a href="#cb8-38"></a></span>
-<span id="cb8-39"><a href="#cb8-39"></a><span class="co"># Perform a one-sample t-test</span></span>
-<span id="cb8-40"><a href="#cb8-40"></a>t_stat, p_value <span class="op">=</span> stats.ttest_1samp(data, <span class="dv">0</span>)</span>
-<span id="cb8-41"><a href="#cb8-41"></a></span>
-<span id="cb8-42"><a href="#cb8-42"></a><span class="co"># Print results</span></span>
-<span id="cb8-43"><a href="#cb8-43"></a><span class="bu">print</span>(<span class="ss">f"T-Statistic: </span><span class="sc">{</span>t_stat<span class="sc">:.4f}</span><span class="ss">, P-Value: </span><span class="sc">{</span>p_value<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
-<span id="cb8-44"><a href="#cb8-44"></a></span>
-<span id="cb8-45"><a href="#cb8-45"></a><span class="co"># Interpretation</span></span>
-<span id="cb8-46"><a href="#cb8-46"></a><span class="cf">if</span> p_value <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
-<span id="cb8-47"><a href="#cb8-47"></a>    <span class="bu">print</span>(<span class="st">"Reject the null hypothesis: The mean is significantly different from 0."</span>)</span>
-<span id="cb8-48"><a href="#cb8-48"></a><span class="cf">else</span>:</span>
-<span id="cb8-49"><a href="#cb8-49"></a>    <span class="bu">print</span>(<span class="st">"Fail to reject the null hypothesis: No significant difference from 0."</span>)</span>
-<span id="cb8-50"><a href="#cb8-50"></a></span>
-<span id="cb8-51"><a href="#cb8-51"></a><span class="in">```</span></span>
-<span id="cb8-52"><a href="#cb8-52"></a></span>
-<span id="cb8-55"><a href="#cb8-55"></a><span class="in">```{python}</span></span>
-<span id="cb8-56"><a href="#cb8-56"></a><span class="co"># Generate two random samples (e.g., control and treatment groups)</span></span>
-<span id="cb8-57"><a href="#cb8-57"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb8-58"><a href="#cb8-58"></a>control <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">50</span>, scale<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=50, Std=10</span></span>
-<span id="cb8-59"><a href="#cb8-59"></a>treatment <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">55</span>, scale<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=55, Std=10</span></span>
-<span id="cb8-60"><a href="#cb8-60"></a></span>
-<span id="cb8-61"><a href="#cb8-61"></a><span class="co"># Perform an independent t-test</span></span>
-<span id="cb8-62"><a href="#cb8-62"></a>t_stat, p_value <span class="op">=</span> stats.ttest_ind(control, treatment)</span>
-<span id="cb8-63"><a href="#cb8-63"></a></span>
-<span id="cb8-64"><a href="#cb8-64"></a><span class="co"># Print results</span></span>
-<span id="cb8-65"><a href="#cb8-65"></a><span class="bu">print</span>(<span class="ss">f"T-Statistic: </span><span class="sc">{</span>t_stat<span class="sc">:.4f}</span><span class="ss">, P-Value: </span><span class="sc">{</span>p_value<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
-<span id="cb8-66"><a href="#cb8-66"></a></span>
-<span id="cb8-67"><a href="#cb8-67"></a><span class="co"># Interpretation</span></span>
-<span id="cb8-68"><a href="#cb8-68"></a><span class="cf">if</span> p_value <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
-<span id="cb8-69"><a href="#cb8-69"></a>    <span class="bu">print</span>(<span class="st">"Reject the null hypothesis: The groups have significantly different means."</span>)</span>
-<span id="cb8-70"><a href="#cb8-70"></a><span class="cf">else</span>:</span>
-<span id="cb8-71"><a href="#cb8-71"></a>    <span class="bu">print</span>(<span class="st">"Fail to reject the null hypothesis: No significant difference between groups."</span>)</span>
-<span id="cb8-72"><a href="#cb8-72"></a><span class="in">```</span></span>
-<span id="cb8-73"><a href="#cb8-73"></a></span>
-<span id="cb8-76"><a href="#cb8-76"></a><span class="in">```{python}</span></span>
-<span id="cb8-77"><a href="#cb8-77"></a><span class="co"># Generate paired data (e.g., before and after measurements)</span></span>
-<span id="cb8-78"><a href="#cb8-78"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb8-79"><a href="#cb8-79"></a>before <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">50</span>, scale<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=50, Std=10</span></span>
-<span id="cb8-80"><a href="#cb8-80"></a>after <span class="op">=</span> before <span class="op">+</span> np.random.normal(loc<span class="op">=</span><span class="dv">5</span>, scale<span class="op">=</span><span class="dv">2</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=55, Std=2</span></span>
-<span id="cb8-81"><a href="#cb8-81"></a></span>
-<span id="cb8-82"><a href="#cb8-82"></a><span class="co"># Perform a paired t-test</span></span>
-<span id="cb8-83"><a href="#cb8-83"></a>t_stat, p_value <span class="op">=</span> stats.ttest_rel(before, after)</span>
-<span id="cb8-84"><a href="#cb8-84"></a></span>
-<span id="cb8-85"><a href="#cb8-85"></a><span class="co"># Print results</span></span>
-<span id="cb8-86"><a href="#cb8-86"></a><span class="bu">print</span>(<span class="ss">f"T-Statistic: </span><span class="sc">{</span>t_stat<span class="sc">:.4f}</span><span class="ss">, P-Value: </span><span class="sc">{</span>p_value<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
-<span id="cb8-87"><a href="#cb8-87"></a></span>
-<span id="cb8-88"><a href="#cb8-88"></a><span class="co"># Interpretation</span></span>
-<span id="cb8-89"><a href="#cb8-89"></a><span class="cf">if</span> p_value <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
-<span id="cb8-90"><a href="#cb8-90"></a>    <span class="bu">print</span>(<span class="st">"Reject the null hypothesis: The means are significantly different."</span>)</span>
-<span id="cb8-91"><a href="#cb8-91"></a><span class="cf">else</span>:</span>
-<span id="cb8-92"><a href="#cb8-92"></a>    <span class="bu">print</span>(<span class="st">"Fail to reject the null hypothesis: No significant difference between means."</span>)</span>
-<span id="cb8-93"><a href="#cb8-93"></a><span class="in">```</span></span>
-<span id="cb8-94"><a href="#cb8-94"></a></span>
-<span id="cb8-95"><a href="#cb8-95"></a></span>
-<span id="cb8-96"><a href="#cb8-96"></a><span class="ss">- </span>**ANOVA (Analysis of Variance):** Compares means of multiple groups to check for significant differences.</span>
-<span id="cb8-97"><a href="#cb8-97"></a></span>
-<span id="cb8-98"><a href="#cb8-98"></a></span>
-<span id="cb8-101"><a href="#cb8-101"></a><span class="in">```{python}</span></span>
-<span id="cb8-102"><a href="#cb8-102"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
-<span id="cb8-103"><a href="#cb8-103"></a></span>
-<span id="cb8-104"><a href="#cb8-104"></a><span class="co"># Example: Comparing multiple groups</span></span>
-<span id="cb8-105"><a href="#cb8-105"></a>group1 <span class="op">=</span> [<span class="fl">10.2</span>, <span class="fl">14.5</span>, <span class="fl">13.3</span>, <span class="fl">9.8</span>, <span class="fl">12.7</span>]</span>
-<span id="cb8-106"><a href="#cb8-106"></a>group2 <span class="op">=</span> [<span class="fl">9.5</span>, <span class="fl">13.1</span>, <span class="fl">12.9</span>, <span class="fl">8.7</span>, <span class="fl">11.3</span>]</span>
-<span id="cb8-107"><a href="#cb8-107"></a>group3 <span class="op">=</span> [<span class="fl">11.2</span>, <span class="fl">15.1</span>, <span class="fl">14.3</span>, <span class="fl">10.8</span>, <span class="fl">13.7</span>]</span>
-<span id="cb8-108"><a href="#cb8-108"></a></span>
-<span id="cb8-109"><a href="#cb8-109"></a><span class="co"># Perform ANOVA test</span></span>
-<span id="cb8-110"><a href="#cb8-110"></a>f_stat, p_value <span class="op">=</span> stats.f_oneway(group1, group2, group3)</span>
-<span id="cb8-111"><a href="#cb8-111"></a><span class="bu">print</span>(<span class="ss">f"F-statistic: </span><span class="sc">{</span>f_stat<span class="sc">}</span><span class="ss">, P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb8-112"><a href="#cb8-112"></a><span class="in">```</span></span>
-<span id="cb8-113"><a href="#cb8-113"></a></span>
-<span id="cb8-114"><a href="#cb8-114"></a></span>
-<span id="cb8-115"><a href="#cb8-115"></a><span class="ss">- </span>**Chi-square Test:** Used for categorical data to examine associations between different groups.</span>
-<span id="cb8-116"><a href="#cb8-116"></a></span>
-<span id="cb8-119"><a href="#cb8-119"></a><span class="in">```{python}</span></span>
-<span id="cb8-120"><a href="#cb8-120"></a><span class="im">from</span> scipy.stats <span class="im">import</span> chi2_contingency</span>
-<span id="cb8-121"><a href="#cb8-121"></a></span>
-<span id="cb8-122"><a href="#cb8-122"></a><span class="co"># Example: Comparing categorical data</span></span>
-<span id="cb8-123"><a href="#cb8-123"></a>observed <span class="op">=</span> [[<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>], [<span class="dv">6</span>, <span class="dv">9</span>, <span class="dv">17</span>]]</span>
-<span id="cb8-124"><a href="#cb8-124"></a>chi2, p, dof, expected <span class="op">=</span> chi2_contingency(observed)</span>
-<span id="cb8-125"><a href="#cb8-125"></a><span class="bu">print</span>(<span class="ss">f"Chi-square: </span><span class="sc">{</span>chi2<span class="sc">}</span><span class="ss">, P-value: </span><span class="sc">{</span>p<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb8-126"><a href="#cb8-126"></a></span>
-<span id="cb8-127"><a href="#cb8-127"></a><span class="in">```</span></span>
-<span id="cb8-128"><a href="#cb8-128"></a></span>
-<span id="cb8-129"><a href="#cb8-129"></a></span>
-<span id="cb8-130"><a href="#cb8-130"></a>Check the <span class="co">[</span><span class="ot">SciPy documentation</span><span class="co">](https://docs.scipy.org/doc/scipy/reference/stats.html)</span> for more statistical tests and functions.</span>
-<span id="cb8-131"><a href="#cb8-131"></a></span>
-<span id="cb8-132"><a href="#cb8-132"></a>And for more information on hypothesis testing, refer to the <span class="co">[</span><span class="ot">SciPy Hypothesis Tests</span><span class="co">](https://docs.scipy.org/doc/scipy/tutorial/stats/hypothesis_tests.html)</span>.</span>
+<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">---</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="an">title:</span><span class="co"> "Model Testing"</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="an">execute:</span><span class="co"> </span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="co">  echo: True</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="co">  eval: True</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="co">  error: True</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a><span class="an">other-links:</span><span class="co"> </span></span>
+<span id="cb13-8"><a href="#cb13-8"></a><span class="co">      - text: "Download Code"</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a><span class="co">        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/ModelTesting.ipynb"</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a><span class="co">        icon: "journal"</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a><span class="an">code-links:</span></span>
+<span id="cb13-12"><a href="#cb13-12"></a><span class="co">      - text: "Open in Colab"</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/ModelTesting.ipynb"</span></span>
+<span id="cb13-14"><a href="#cb13-14"></a><span class="co">        icon: "laptop"</span></span>
+<span id="cb13-15"><a href="#cb13-15"></a><span class="co">---</span> </span>
+<span id="cb13-16"><a href="#cb13-16"></a></span>
+<span id="cb13-17"><a href="#cb13-17"></a></span>
+<span id="cb13-18"><a href="#cb13-18"></a></span>
+<span id="cb13-19"><a href="#cb13-19"></a><span class="fu">### Hypothesis Testing  {.unnumbered}</span></span>
+<span id="cb13-20"><a href="#cb13-20"></a></span>
+<span id="cb13-21"><a href="#cb13-21"></a></span>
+<span id="cb13-22"><a href="#cb13-22"></a>Hypothesis testing is a statistical method for making decisions or inferences about a population based on a sample. It is widely used in chemistry and materials science to validate experimental results and compare datasets.</span>
+<span id="cb13-23"><a href="#cb13-23"></a></span>
+<span id="cb13-24"><a href="#cb13-24"></a><span class="ss">- </span>**Null &amp; Alternative Hypothesis:** The null hypothesis (H₀) assumes no effect, while the alternative hypothesis (H₁) suggests a significant difference.</span>
+<span id="cb13-25"><a href="#cb13-25"></a></span>
+<span id="cb13-26"><a href="#cb13-26"></a><span class="ss">- </span>**t-tests:** Used to compare the means of two groups (one-sample, independent, paired t-tests).</span>
+<span id="cb13-27"><a href="#cb13-27"></a></span>
+<span id="cb13-30"><a href="#cb13-30"></a><span class="in">```{python}</span></span>
+<span id="cb13-31"><a href="#cb13-31"></a><span class="co"># Example: Null hypothesis - The mean is equal to 0</span></span>
+<span id="cb13-32"><a href="#cb13-32"></a><span class="co">#H0: μ = 0</span></span>
+<span id="cb13-33"><a href="#cb13-33"></a></span>
+<span id="cb13-34"><a href="#cb13-34"></a><span class="co"># Alternative hypothesis - The mean is not equal to 0</span></span>
+<span id="cb13-35"><a href="#cb13-35"></a><span class="co">#H1: μ ≠ 0</span></span>
+<span id="cb13-36"><a href="#cb13-36"></a></span>
+<span id="cb13-37"><a href="#cb13-37"></a>data <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb13-38"><a href="#cb13-38"></a></span>
+<span id="cb13-39"><a href="#cb13-39"></a><span class="co"># Perform a one-sample t-test</span></span>
+<span id="cb13-40"><a href="#cb13-40"></a>t_stat, p_value <span class="op">=</span> stats.ttest_1samp(data, <span class="dv">0</span>)</span>
+<span id="cb13-41"><a href="#cb13-41"></a></span>
+<span id="cb13-42"><a href="#cb13-42"></a><span class="co"># Print results</span></span>
+<span id="cb13-43"><a href="#cb13-43"></a><span class="bu">print</span>(<span class="ss">f"T-Statistic: </span><span class="sc">{</span>t_stat<span class="sc">:.4f}</span><span class="ss">, P-Value: </span><span class="sc">{</span>p_value<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb13-44"><a href="#cb13-44"></a></span>
+<span id="cb13-45"><a href="#cb13-45"></a><span class="co"># Interpretation</span></span>
+<span id="cb13-46"><a href="#cb13-46"></a><span class="cf">if</span> p_value <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb13-47"><a href="#cb13-47"></a>    <span class="bu">print</span>(<span class="st">"Reject the null hypothesis: The mean is significantly different from 0."</span>)</span>
+<span id="cb13-48"><a href="#cb13-48"></a><span class="cf">else</span>:</span>
+<span id="cb13-49"><a href="#cb13-49"></a>    <span class="bu">print</span>(<span class="st">"Fail to reject the null hypothesis: No significant difference from 0."</span>)</span>
+<span id="cb13-50"><a href="#cb13-50"></a></span>
+<span id="cb13-51"><a href="#cb13-51"></a><span class="in">```</span></span>
+<span id="cb13-52"><a href="#cb13-52"></a></span>
+<span id="cb13-55"><a href="#cb13-55"></a><span class="in">```{python}</span></span>
+<span id="cb13-56"><a href="#cb13-56"></a><span class="co"># Generate two random samples (e.g., control and treatment groups)</span></span>
+<span id="cb13-57"><a href="#cb13-57"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb13-58"><a href="#cb13-58"></a>control <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">50</span>, scale<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=50, Std=10</span></span>
+<span id="cb13-59"><a href="#cb13-59"></a>treatment <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">55</span>, scale<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=55, Std=10</span></span>
+<span id="cb13-60"><a href="#cb13-60"></a></span>
+<span id="cb13-61"><a href="#cb13-61"></a><span class="co"># Perform an independent t-test</span></span>
+<span id="cb13-62"><a href="#cb13-62"></a>t_stat, p_value <span class="op">=</span> stats.ttest_ind(control, treatment)</span>
+<span id="cb13-63"><a href="#cb13-63"></a></span>
+<span id="cb13-64"><a href="#cb13-64"></a><span class="co"># Print results</span></span>
+<span id="cb13-65"><a href="#cb13-65"></a><span class="bu">print</span>(<span class="ss">f"T-Statistic: </span><span class="sc">{</span>t_stat<span class="sc">:.4f}</span><span class="ss">, P-Value: </span><span class="sc">{</span>p_value<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb13-66"><a href="#cb13-66"></a></span>
+<span id="cb13-67"><a href="#cb13-67"></a><span class="co"># Interpretation</span></span>
+<span id="cb13-68"><a href="#cb13-68"></a><span class="cf">if</span> p_value <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb13-69"><a href="#cb13-69"></a>    <span class="bu">print</span>(<span class="st">"Reject the null hypothesis: The groups have significantly different means."</span>)</span>
+<span id="cb13-70"><a href="#cb13-70"></a><span class="cf">else</span>:</span>
+<span id="cb13-71"><a href="#cb13-71"></a>    <span class="bu">print</span>(<span class="st">"Fail to reject the null hypothesis: No significant difference between groups."</span>)</span>
+<span id="cb13-72"><a href="#cb13-72"></a><span class="in">```</span></span>
+<span id="cb13-73"><a href="#cb13-73"></a></span>
+<span id="cb13-76"><a href="#cb13-76"></a><span class="in">```{python}</span></span>
+<span id="cb13-77"><a href="#cb13-77"></a><span class="co"># Generate paired data (e.g., before and after measurements)</span></span>
+<span id="cb13-78"><a href="#cb13-78"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb13-79"><a href="#cb13-79"></a>before <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">50</span>, scale<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=50, Std=10</span></span>
+<span id="cb13-80"><a href="#cb13-80"></a>after <span class="op">=</span> before <span class="op">+</span> np.random.normal(loc<span class="op">=</span><span class="dv">5</span>, scale<span class="op">=</span><span class="dv">2</span>, size<span class="op">=</span><span class="dv">30</span>)  <span class="co"># Mean=55, Std=2</span></span>
+<span id="cb13-81"><a href="#cb13-81"></a></span>
+<span id="cb13-82"><a href="#cb13-82"></a><span class="co"># Perform a paired t-test</span></span>
+<span id="cb13-83"><a href="#cb13-83"></a>t_stat, p_value <span class="op">=</span> stats.ttest_rel(before, after)</span>
+<span id="cb13-84"><a href="#cb13-84"></a></span>
+<span id="cb13-85"><a href="#cb13-85"></a><span class="co"># Print results</span></span>
+<span id="cb13-86"><a href="#cb13-86"></a><span class="bu">print</span>(<span class="ss">f"T-Statistic: </span><span class="sc">{</span>t_stat<span class="sc">:.4f}</span><span class="ss">, P-Value: </span><span class="sc">{</span>p_value<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb13-87"><a href="#cb13-87"></a></span>
+<span id="cb13-88"><a href="#cb13-88"></a><span class="co"># Interpretation</span></span>
+<span id="cb13-89"><a href="#cb13-89"></a><span class="cf">if</span> p_value <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb13-90"><a href="#cb13-90"></a>    <span class="bu">print</span>(<span class="st">"Reject the null hypothesis: The means are significantly different."</span>)</span>
+<span id="cb13-91"><a href="#cb13-91"></a><span class="cf">else</span>:</span>
+<span id="cb13-92"><a href="#cb13-92"></a>    <span class="bu">print</span>(<span class="st">"Fail to reject the null hypothesis: No significant difference between means."</span>)</span>
+<span id="cb13-93"><a href="#cb13-93"></a><span class="in">```</span></span>
+<span id="cb13-94"><a href="#cb13-94"></a></span>
+<span id="cb13-95"><a href="#cb13-95"></a></span>
+<span id="cb13-96"><a href="#cb13-96"></a><span class="ss">- </span>**ANOVA (Analysis of Variance):** Compares means of multiple groups to check for significant differences.</span>
+<span id="cb13-97"><a href="#cb13-97"></a></span>
+<span id="cb13-98"><a href="#cb13-98"></a></span>
+<span id="cb13-101"><a href="#cb13-101"></a><span class="in">```{python}</span></span>
+<span id="cb13-102"><a href="#cb13-102"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb13-103"><a href="#cb13-103"></a></span>
+<span id="cb13-104"><a href="#cb13-104"></a><span class="co"># Example: Comparing multiple groups</span></span>
+<span id="cb13-105"><a href="#cb13-105"></a>group1 <span class="op">=</span> [<span class="fl">10.2</span>, <span class="fl">14.5</span>, <span class="fl">13.3</span>, <span class="fl">9.8</span>, <span class="fl">12.7</span>]</span>
+<span id="cb13-106"><a href="#cb13-106"></a>group2 <span class="op">=</span> [<span class="fl">9.5</span>, <span class="fl">13.1</span>, <span class="fl">12.9</span>, <span class="fl">8.7</span>, <span class="fl">11.3</span>]</span>
+<span id="cb13-107"><a href="#cb13-107"></a>group3 <span class="op">=</span> [<span class="fl">11.2</span>, <span class="fl">15.1</span>, <span class="fl">14.3</span>, <span class="fl">10.8</span>, <span class="fl">13.7</span>]</span>
+<span id="cb13-108"><a href="#cb13-108"></a></span>
+<span id="cb13-109"><a href="#cb13-109"></a><span class="co"># Perform ANOVA test</span></span>
+<span id="cb13-110"><a href="#cb13-110"></a>f_stat, p_value <span class="op">=</span> stats.f_oneway(group1, group2, group3)</span>
+<span id="cb13-111"><a href="#cb13-111"></a><span class="bu">print</span>(<span class="ss">f"F-statistic: </span><span class="sc">{</span>f_stat<span class="sc">}</span><span class="ss">, P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-112"><a href="#cb13-112"></a><span class="in">```</span></span>
+<span id="cb13-113"><a href="#cb13-113"></a></span>
+<span id="cb13-114"><a href="#cb13-114"></a></span>
+<span id="cb13-115"><a href="#cb13-115"></a><span class="ss">- </span>**Chi-square Test:** Used for categorical data to examine associations between different groups.</span>
+<span id="cb13-116"><a href="#cb13-116"></a></span>
+<span id="cb13-119"><a href="#cb13-119"></a><span class="in">```{python}</span></span>
+<span id="cb13-120"><a href="#cb13-120"></a><span class="im">from</span> scipy.stats <span class="im">import</span> chi2_contingency</span>
+<span id="cb13-121"><a href="#cb13-121"></a></span>
+<span id="cb13-122"><a href="#cb13-122"></a><span class="co"># Example: Comparing categorical data</span></span>
+<span id="cb13-123"><a href="#cb13-123"></a>observed <span class="op">=</span> [[<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>], [<span class="dv">6</span>, <span class="dv">9</span>, <span class="dv">17</span>]]</span>
+<span id="cb13-124"><a href="#cb13-124"></a>chi2, p, dof, expected <span class="op">=</span> chi2_contingency(observed)</span>
+<span id="cb13-125"><a href="#cb13-125"></a><span class="bu">print</span>(<span class="ss">f"Chi-square: </span><span class="sc">{</span>chi2<span class="sc">}</span><span class="ss">, P-value: </span><span class="sc">{</span>p<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-126"><a href="#cb13-126"></a></span>
+<span id="cb13-127"><a href="#cb13-127"></a><span class="in">```</span></span>
+<span id="cb13-128"><a href="#cb13-128"></a></span>
+<span id="cb13-129"><a href="#cb13-129"></a></span>
+<span id="cb13-130"><a href="#cb13-130"></a>Check the <span class="co">[</span><span class="ot">SciPy documentation</span><span class="co">](https://docs.scipy.org/doc/scipy/reference/stats.html)</span> for more statistical tests and functions.</span>
+<span id="cb13-131"><a href="#cb13-131"></a></span>
+<span id="cb13-132"><a href="#cb13-132"></a>And for more information on hypothesis testing, refer to the <span class="co">[</span><span class="ot">SciPy Hypothesis Tests</span><span class="co">](https://docs.scipy.org/doc/scipy/tutorial/stats/hypothesis_tests.html)</span>.</span>
+<span id="cb13-133"><a href="#cb13-133"></a></span>
+<span id="cb13-134"><a href="#cb13-134"></a><span class="fu">### Outlier Detection {.unnumbered}</span></span>
+<span id="cb13-135"><a href="#cb13-135"></a></span>
+<span id="cb13-136"><a href="#cb13-136"></a>Outliers are data points that significantly differ from other observations in a dataset. </span>
+<span id="cb13-137"><a href="#cb13-137"></a>They have effect on specific statistical methods and can lead to incorrect conclusions.</span>
+<span id="cb13-138"><a href="#cb13-138"></a></span>
+<span id="cb13-139"><a href="#cb13-139"></a><span class="ss">- </span>**Z-Score:** Measures how many standard deviations a data point is from the mean.</span>
+<span id="cb13-140"><a href="#cb13-140"></a></span>
+<span id="cb13-143"><a href="#cb13-143"></a><span class="in">```{python}</span></span>
+<span id="cb13-144"><a href="#cb13-144"></a><span class="co"># Calculate Z-scores for a dataset</span></span>
+<span id="cb13-145"><a href="#cb13-145"></a>data <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span>
+<span id="cb13-146"><a href="#cb13-146"></a>z_scores <span class="op">=</span> stats.zscore(data)</span>
+<span id="cb13-147"><a href="#cb13-147"></a><span class="bu">print</span>(z_scores)</span>
+<span id="cb13-148"><a href="#cb13-148"></a><span class="in">```</span></span>
+<span id="cb13-149"><a href="#cb13-149"></a></span>
+<span id="cb13-150"><a href="#cb13-150"></a><span class="ss">- </span>**IQR (Interquartile Range):** Identifies outliers based on the spread of the data.</span>
+<span id="cb13-151"><a href="#cb13-151"></a></span>
+<span id="cb13-154"><a href="#cb13-154"></a><span class="in">```{python}</span></span>
+<span id="cb13-155"><a href="#cb13-155"></a><span class="co"># Calculate IQR for a dataset</span></span>
+<span id="cb13-156"><a href="#cb13-156"></a>q1 <span class="op">=</span> np.percentile(data, <span class="dv">25</span>)</span>
+<span id="cb13-157"><a href="#cb13-157"></a>q3 <span class="op">=</span> np.percentile(data, <span class="dv">75</span>)</span>
+<span id="cb13-158"><a href="#cb13-158"></a>iqr <span class="op">=</span> q3 <span class="op">-</span> q1</span>
+<span id="cb13-159"><a href="#cb13-159"></a></span>
+<span id="cb13-160"><a href="#cb13-160"></a><span class="co"># Define outlier thresholds</span></span>
+<span id="cb13-161"><a href="#cb13-161"></a>lower_bound <span class="op">=</span> q1 <span class="op">-</span> <span class="fl">1.5</span> <span class="op">*</span> iqr</span>
+<span id="cb13-162"><a href="#cb13-162"></a>upper_bound <span class="op">=</span> q3 <span class="op">+</span> <span class="fl">1.5</span> <span class="op">*</span> iqr</span>
+<span id="cb13-163"><a href="#cb13-163"></a></span>
+<span id="cb13-164"><a href="#cb13-164"></a><span class="co"># Identify outliers</span></span>
+<span id="cb13-165"><a href="#cb13-165"></a>outliers <span class="op">=</span> data[(data <span class="op">&lt;</span> lower_bound) <span class="op">|</span> (data <span class="op">&gt;</span> upper_bound)]</span>
+<span id="cb13-166"><a href="#cb13-166"></a><span class="bu">print</span>(outliers)</span>
+<span id="cb13-167"><a href="#cb13-167"></a></span>
+<span id="cb13-168"><a href="#cb13-168"></a></span>
+<span id="cb13-169"><a href="#cb13-169"></a><span class="in">```</span></span>
+<span id="cb13-170"><a href="#cb13-170"></a></span>
+<span id="cb13-171"><a href="#cb13-171"></a></span>
+<span id="cb13-172"><a href="#cb13-172"></a><span class="ss">- </span>**DBSCAN (Density-Based Spatial Clustering of Applications with Noise):** Clustering algorithm that identifies outliers based on density.</span>
+<span id="cb13-173"><a href="#cb13-173"></a></span>
+<span id="cb13-176"><a href="#cb13-176"></a><span class="in">```{python}</span></span>
+<span id="cb13-177"><a href="#cb13-177"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> DBSCAN</span>
+<span id="cb13-178"><a href="#cb13-178"></a></span>
+<span id="cb13-179"><a href="#cb13-179"></a><span class="co"># Generate sample data</span></span>
+<span id="cb13-180"><a href="#cb13-180"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>, <span class="dv">2</span>)</span>
+<span id="cb13-181"><a href="#cb13-181"></a></span>
+<span id="cb13-182"><a href="#cb13-182"></a><span class="co"># Fit DBSCAN model</span></span>
+<span id="cb13-183"><a href="#cb13-183"></a>dbscan <span class="op">=</span> DBSCAN(eps<span class="op">=</span><span class="fl">0.3</span>, min_samples<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb13-184"><a href="#cb13-184"></a>dbscan.fit(data)</span>
+<span id="cb13-185"><a href="#cb13-185"></a></span>
+<span id="cb13-186"><a href="#cb13-186"></a><span class="co"># Identify outliers</span></span>
+<span id="cb13-187"><a href="#cb13-187"></a>outliers <span class="op">=</span> data[dbscan.labels_ <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb13-188"><a href="#cb13-188"></a><span class="bu">print</span>(outliers)</span>
+<span id="cb13-189"><a href="#cb13-189"></a><span class="in">```</span></span>
+<span id="cb13-190"><a href="#cb13-190"></a></span>
+<span id="cb13-191"><a href="#cb13-191"></a><span class="ss">- </span>**Isolation Forest:** Anomaly detection algorithm that isolates outliers in a dataset.</span>
+<span id="cb13-192"><a href="#cb13-192"></a></span>
+<span id="cb13-195"><a href="#cb13-195"></a><span class="in">```{python}</span></span>
+<span id="cb13-196"><a href="#cb13-196"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> IsolationForest</span>
+<span id="cb13-197"><a href="#cb13-197"></a></span>
+<span id="cb13-198"><a href="#cb13-198"></a><span class="co"># Generate sample data</span></span>
+<span id="cb13-199"><a href="#cb13-199"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>, <span class="dv">2</span>)</span>
+<span id="cb13-200"><a href="#cb13-200"></a></span>
+<span id="cb13-201"><a href="#cb13-201"></a><span class="co"># Fit Isolation Forest model</span></span>
+<span id="cb13-202"><a href="#cb13-202"></a>isoforest <span class="op">=</span> IsolationForest(contamination<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb13-203"><a href="#cb13-203"></a>isoforest.fit(data)</span>
+<span id="cb13-204"><a href="#cb13-204"></a></span>
+<span id="cb13-205"><a href="#cb13-205"></a><span class="co"># Identify outliers</span></span>
+<span id="cb13-206"><a href="#cb13-206"></a>outliers <span class="op">=</span> data[isoforest.predict(data) <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb13-207"><a href="#cb13-207"></a><span class="bu">print</span>(outliers)</span>
+<span id="cb13-208"><a href="#cb13-208"></a><span class="in">```</span></span>
+<span id="cb13-209"><a href="#cb13-209"></a></span>
+<span id="cb13-210"><a href="#cb13-210"></a><span class="ss">- </span>**Boxplot:** Visual representation of outliers in a dataset.</span>
+<span id="cb13-211"><a href="#cb13-211"></a></span>
+<span id="cb13-214"><a href="#cb13-214"></a><span class="in">```{python}</span></span>
+<span id="cb13-215"><a href="#cb13-215"></a><span class="co"># Generate sample data</span></span>
+<span id="cb13-216"><a href="#cb13-216"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
+<span id="cb13-217"><a href="#cb13-217"></a></span>
+<span id="cb13-218"><a href="#cb13-218"></a><span class="co"># Create boxplot</span></span>
+<span id="cb13-219"><a href="#cb13-219"></a>plt.boxplot(data)</span>
+<span id="cb13-220"><a href="#cb13-220"></a>plt.show()</span>
+<span id="cb13-221"><a href="#cb13-221"></a><span class="in">```</span></span>
+<span id="cb13-222"><a href="#cb13-222"></a></span>
+<span id="cb13-223"><a href="#cb13-223"></a>For more information on outlier detection, refer to the <span class="co">[</span><span class="ot">Scikit-learn documentation</span><span class="co">](https://scikit-learn.org/stable/modules/outlier_detection.html)</span>.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
@@ -1359,8 +1584,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>   
     <div class="nav-footer-center">
-<p>© 2025 Stefanie Kröll. All rights reserved.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SEDA/ModelTesting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SEDA/ModelTesting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <li>
 <a href="https://github.com/stkroe/PythonForChemists.github.io" target="blank">Code source</a>

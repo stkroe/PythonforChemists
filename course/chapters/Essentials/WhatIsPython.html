@@ -104,9 +104,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <meta property="og:title" content="Python? – Data Analysis and Visualization for Chemists and Material Scientists">
@@ -172,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Overview</span></a>
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome to the Data Analysis and Visualization Course for Chemists and Material Scientists!</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -491,7 +488,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="simple-scheme-how-python-works-internally" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="simple-scheme-how-python-works-internally">Simple Scheme how Python works internally:</h3>
 <p>So if you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).</p>
-<hr>
 </section>
 </section>
 <section id="how-i-can-learn-python" class="level2 unnumbered">
@@ -1186,93 +1182,101 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Python?"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co">---</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">## Short History of Python {.unnumbered}</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">## Short History of Python {.unnumbered}</span></span>
 <span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a>(see <span class="co">[</span><span class="ot">Wikipedia</span><span class="co">](https://en.wikipedia.org/wiki/History_of_Python)</span> for more details)</span>
-<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a>(see <span class="co">[</span><span class="ot">Wikipedia</span><span class="co">](https://en.wikipedia.org/wiki/History_of_Python)</span> for more details)</span>
 <span id="cb1-11"><a href="#cb1-11"></a></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="ss">- </span>1989: the beginning of python</span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="ss">- </span>1991: Guido van Rossum, a Dutch programmer and father of Python, implemented and published the first version of Python.</span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="ss">- </span>Fun fact: The name Python came from the show Monty Python's Flying Circus.</span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="ss">- </span>1994: Python 1.0 was released</span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="ss">- </span>2000: Python 2.0 was released</span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="ss">- </span>2008: Python 3.0 was released with new syntax and features</span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="ss">- </span>Important: **python3 to python2 is backward incompatible**  *e.g.* <span class="in">`print("Hello World")`</span> python3 and <span class="in">`print "Hello World"`</span> python2. </span>
-<span id="cb1-19"><a href="#cb1-19"></a><span class="ss">- </span><span class="in">`python2`</span> is nowdays outdated. It is not recommended to use it for new projects.</span>
-<span id="cb1-20"><a href="#cb1-20"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="ss">- </span>1989: the beginning of python</span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="ss">- </span>1991: Guido van Rossum, a Dutch programmer and father of Python, implemented and published the first version of Python.</span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="ss">- </span>Fun fact: The name Python came from the show Monty Python's Flying Circus.</span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="ss">- </span>1994: Python 1.0 was released</span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="ss">- </span>2000: Python 2.0 was released</span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="ss">- </span>2008: Python 3.0 was released with new syntax and features</span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="ss">- </span>Important: **python3 to python2 is backward incompatible**  *e.g.* <span class="in">`print("Hello World")`</span> python3 and <span class="in">`print "Hello World"`</span> python2. </span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="ss">- </span><span class="in">`python2`</span> is nowdays outdated. It is not recommended to use it for new projects.</span>
 <span id="cb1-21"><a href="#cb1-21"></a></span>
-<span id="cb1-22"><a href="#cb1-22"></a>Van Rossum designed Python as a "Computer Programming Language for Everybody".</span>
-<span id="cb1-23"><a href="#cb1-23"></a></span>
-<span id="cb1-24"><a href="#cb1-24"></a>---</span>
-<span id="cb1-25"><a href="#cb1-25"></a></span>
-<span id="cb1-26"><a href="#cb1-26"></a><span class="fu">## What is Python? {.unnumbered}</span></span>
-<span id="cb1-27"><a href="#cb1-27"></a></span>
-<span id="cb1-28"><a href="#cb1-28"></a><span class="ss">- </span>Python is an **interpreted** language compared to compiled languages *e.g.*, C or C++.</span>
-<span id="cb1-29"><a href="#cb1-29"></a></span>
-<span id="cb1-30"><a href="#cb1-30"></a><span class="ss">- </span>Python is **often slower** compared to compiled languages.</span>
-<span id="cb1-31"><a href="#cb1-31"></a></span>
-<span id="cb1-32"><a href="#cb1-32"></a><span class="ss">- </span>Python has **dynamic type checking** and **garbage collection**.</span>
-<span id="cb1-33"><a href="#cb1-33"></a></span>
-<span id="cb1-34"><a href="#cb1-34"></a><span class="ss">- </span>Python supports both **object-oriented** and **functional programming**.</span>
-<span id="cb1-35"><a href="#cb1-35"></a></span>
-<span id="cb1-36"><a href="#cb1-36"></a><span class="ss">- </span>Python is a **high-level language**, meaning it is closer to human language than the machine language understood by computers.</span>
-<span id="cb1-37"><a href="#cb1-37"></a></span>
-<span id="cb1-38"><a href="#cb1-38"></a>---</span>
-<span id="cb1-39"><a href="#cb1-39"></a></span>
-<span id="cb1-40"><a href="#cb1-40"></a><span class="fu">### Simple Scheme how Python works internally: {.unnumbered}</span></span>
-<span id="cb1-41"><a href="#cb1-41"></a></span>
-<span id="cb1-42"><a href="#cb1-42"></a>So if you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).</span>
-<span id="cb1-43"><a href="#cb1-43"></a></span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a>Van Rossum designed Python as a "Computer Programming Language for Everybody".</span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a>---</span>
+<span id="cb1-26"><a href="#cb1-26"></a></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="fu">## What is Python? {.unnumbered}</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="ss">- </span>Python is an **interpreted** language compared to compiled languages *e.g.*, C or C++.</span>
+<span id="cb1-30"><a href="#cb1-30"></a></span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="ss">- </span>Python is **often slower** compared to compiled languages.</span>
+<span id="cb1-32"><a href="#cb1-32"></a></span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="ss">- </span>Python has **dynamic type checking** and **garbage collection**.</span>
+<span id="cb1-34"><a href="#cb1-34"></a></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="ss">- </span>Python supports both **object-oriented** and **functional programming**.</span>
+<span id="cb1-36"><a href="#cb1-36"></a></span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="ss">- </span>Python is a **high-level language**, meaning it is closer to human language than the machine language understood by computers.</span>
+<span id="cb1-38"><a href="#cb1-38"></a></span>
+<span id="cb1-39"><a href="#cb1-39"></a>---</span>
+<span id="cb1-40"><a href="#cb1-40"></a></span>
+<span id="cb1-41"><a href="#cb1-41"></a><span class="fu">### Simple Scheme how Python works internally: {.unnumbered}</span></span>
+<span id="cb1-42"><a href="#cb1-42"></a></span>
+<span id="cb1-43"><a href="#cb1-43"></a>So if you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).</span>
 <span id="cb1-44"><a href="#cb1-44"></a></span>
-<span id="cb1-47"><a href="#cb1-47"></a><span class="in">```{mermaid}</span></span>
-<span id="cb1-48"><a href="#cb1-48"></a><span class="in"> graph TD</span></span>
-<span id="cb1-49"><a href="#cb1-49"></a><span class="in">     A[Python Source Code *.py] --&gt;|Step 1: Compilation| B[Bytecode *.pyc]</span></span>
-<span id="cb1-50"><a href="#cb1-50"></a><span class="in">     B --&gt;|Step 2: Interpretation| C[Python Virtual Machine - PVM]</span></span>
-<span id="cb1-51"><a href="#cb1-51"></a><span class="in">     C --&gt;|Execution| D[Program Output]</span></span>
-<span id="cb1-52"><a href="#cb1-52"></a><span class="in">```</span></span>
-<span id="cb1-53"><a href="#cb1-53"></a></span>
-<span id="cb1-54"><a href="#cb1-54"></a>---</span>
-<span id="cb1-55"><a href="#cb1-55"></a></span>
-<span id="cb1-56"><a href="#cb1-56"></a><span class="fu">## How I can learn Python? {.unnumbered}</span></span>
-<span id="cb1-57"><a href="#cb1-57"></a></span>
-<span id="cb1-58"><a href="#cb1-58"></a></span>
-<span id="cb1-59"><a href="#cb1-59"></a>There are a lot of resources to dive deeper into Python *e.g.*:</span>
+<span id="cb1-45"><a href="#cb1-45"></a></span>
+<span id="cb1-48"><a href="#cb1-48"></a><span class="in">```{dot}</span></span>
+<span id="cb1-49"><a href="#cb1-49"></a><span class="in">digraph {</span></span>
+<span id="cb1-50"><a href="#cb1-50"></a><span class="in">    A [label="Python Source Code *.py"];</span></span>
+<span id="cb1-51"><a href="#cb1-51"></a><span class="in">    B [label="Bytecode *.pyc"];</span></span>
+<span id="cb1-52"><a href="#cb1-52"></a><span class="in">    C [label="Python Virtual Machine - PVM"];</span></span>
+<span id="cb1-53"><a href="#cb1-53"></a><span class="in">    D [label="Program Output"];</span></span>
+<span id="cb1-54"><a href="#cb1-54"></a><span class="in">    </span></span>
+<span id="cb1-55"><a href="#cb1-55"></a><span class="in">    A -&gt; B [label="Step 1: Compilation"];</span></span>
+<span id="cb1-56"><a href="#cb1-56"></a><span class="in">    B -&gt; C [label="Step 2: Interpretation"];</span></span>
+<span id="cb1-57"><a href="#cb1-57"></a><span class="in">    C -&gt; D [label="Execution"];</span></span>
+<span id="cb1-58"><a href="#cb1-58"></a><span class="in">}</span></span>
+<span id="cb1-59"><a href="#cb1-59"></a><span class="in">```</span></span>
 <span id="cb1-60"><a href="#cb1-60"></a></span>
 <span id="cb1-61"><a href="#cb1-61"></a></span>
-<span id="cb1-62"><a href="#cb1-62"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.py4e.com/</span><span class="co">](https://www.py4e.com/)</span> (Python for Everybody)</span>
-<span id="cb1-63"><a href="#cb1-63"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://py-tutorial-de.readthedocs.io/de/python-3.3/</span><span class="co">](https://py-tutorial-de.readthedocs.io/de/python-3.3/)</span> (German Tutorial)</span>
-<span id="cb1-64"><a href="#cb1-64"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.w3schools.com/python/default.asp</span><span class="co">](https://www.w3schools.com/python/default.asp)</span></span>
-<span id="cb1-65"><a href="#cb1-65"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://jakevdp.github.io/PythonDataScienceHandbook/</span><span class="co">](https://jakevdp.github.io/PythonDataScienceHandbook/)</span></span>
-<span id="cb1-66"><a href="#cb1-66"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://exercism.org/</span><span class="co">](https://exercism.org/)</span> (Coding Exercises)</span>
-<span id="cb1-67"><a href="#cb1-67"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.freecodecamp.org/</span><span class="co">](https://www.freecodecamp.org/)</span> (Coding Exercises)</span>
-<span id="cb1-68"><a href="#cb1-68"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://realpython.com/tutorials/data-viz/</span><span class="co">](https://realpython.com/tutorials/data-viz/)</span></span>
-<span id="cb1-69"><a href="#cb1-69"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.youtube.com/watch?v=LHBE6Q9XlzI</span><span class="co">](https://www.youtube.com/watch?v=LHBE6Q9XlzI)</span></span>
-<span id="cb1-70"><a href="#cb1-70"></a></span>
-<span id="cb1-71"><a href="#cb1-71"></a></span>
-<span id="cb1-72"><a href="#cb1-72"></a><span class="fu">## Use AI to learn Python {.unnumbered}</span></span>
-<span id="cb1-73"><a href="#cb1-73"></a>:::{.callout-important}</span>
-<span id="cb1-74"><a href="#cb1-74"></a></span>
-<span id="cb1-75"><a href="#cb1-75"></a><span class="ss">- </span>Language Models like GPT-3 can help you to learn Python.</span>
-<span id="cb1-76"><a href="#cb1-76"></a><span class="ss">- </span>In my opinion, today it is not necessary to learn the syntax of a programming language by hard.</span>
-<span id="cb1-77"><a href="#cb1-77"></a><span class="ss">- </span>You can use AI tools to help you with the syntax and concentrate on the problem-solving part.</span>
+<span id="cb1-62"><a href="#cb1-62"></a></span>
+<span id="cb1-63"><a href="#cb1-63"></a><span class="fu">## How I can learn Python? {.unnumbered}</span></span>
+<span id="cb1-64"><a href="#cb1-64"></a></span>
+<span id="cb1-65"><a href="#cb1-65"></a></span>
+<span id="cb1-66"><a href="#cb1-66"></a>There are a lot of resources to dive deeper into Python *e.g.*:</span>
+<span id="cb1-67"><a href="#cb1-67"></a></span>
+<span id="cb1-68"><a href="#cb1-68"></a></span>
+<span id="cb1-69"><a href="#cb1-69"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.py4e.com/</span><span class="co">](https://www.py4e.com/)</span> (Python for Everybody)</span>
+<span id="cb1-70"><a href="#cb1-70"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://py-tutorial-de.readthedocs.io/de/python-3.3/</span><span class="co">](https://py-tutorial-de.readthedocs.io/de/python-3.3/)</span> (German Tutorial)</span>
+<span id="cb1-71"><a href="#cb1-71"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.w3schools.com/python/default.asp</span><span class="co">](https://www.w3schools.com/python/default.asp)</span></span>
+<span id="cb1-72"><a href="#cb1-72"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://jakevdp.github.io/PythonDataScienceHandbook/</span><span class="co">](https://jakevdp.github.io/PythonDataScienceHandbook/)</span></span>
+<span id="cb1-73"><a href="#cb1-73"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://exercism.org/</span><span class="co">](https://exercism.org/)</span> (Coding Exercises)</span>
+<span id="cb1-74"><a href="#cb1-74"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.freecodecamp.org/</span><span class="co">](https://www.freecodecamp.org/)</span> (Coding Exercises)</span>
+<span id="cb1-75"><a href="#cb1-75"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://realpython.com/tutorials/data-viz/</span><span class="co">](https://realpython.com/tutorials/data-viz/)</span></span>
+<span id="cb1-76"><a href="#cb1-76"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.youtube.com/watch?v=LHBE6Q9XlzI</span><span class="co">](https://www.youtube.com/watch?v=LHBE6Q9XlzI)</span></span>
+<span id="cb1-77"><a href="#cb1-77"></a></span>
 <span id="cb1-78"><a href="#cb1-78"></a></span>
-<span id="cb1-79"><a href="#cb1-79"></a><span class="ss">- </span>**Learn how to prompt** your problem to the AI and get a proper solution.</span>
-<span id="cb1-80"><a href="#cb1-80"></a><span class="ss">- </span>But **be aware** that the AI is **not perfect** and can give you **wrong solutions**.</span>
-<span id="cb1-81"><a href="#cb1-81"></a><span class="ss">- </span>So it is **important** that you can **understand the code** and can debug it.</span>
-<span id="cb1-82"><a href="#cb1-82"></a>:::</span>
-<span id="cb1-83"><a href="#cb1-83"></a></span>
-<span id="cb1-84"><a href="#cb1-84"></a><span class="fu">## Practice, Practice, Practice {.unnumbered}</span></span>
-<span id="cb1-85"><a href="#cb1-85"></a>:::{.callout-important}</span>
-<span id="cb1-86"><a href="#cb1-86"></a>As it is with languages, you can only learn it if you **practice** it. &lt;br&gt;</span>
-<span id="cb1-87"><a href="#cb1-87"></a>So, start you own projects and have fun with it!</span>
-<span id="cb1-88"><a href="#cb1-88"></a>:::</span>
-<span id="cb1-89"><a href="#cb1-89"></a></span>
-<span id="cb1-90"><a href="#cb1-90"></a></span>
+<span id="cb1-79"><a href="#cb1-79"></a><span class="fu">## Use AI to learn Python {.unnumbered}</span></span>
+<span id="cb1-80"><a href="#cb1-80"></a></span>
+<span id="cb1-81"><a href="#cb1-81"></a>:::{.callout-important}</span>
+<span id="cb1-82"><a href="#cb1-82"></a></span>
+<span id="cb1-83"><a href="#cb1-83"></a><span class="ss">- </span>Language Models like GPT-3 can help you to learn Python.</span>
+<span id="cb1-84"><a href="#cb1-84"></a><span class="ss">- </span>In my opinion, today it is not necessary to learn the syntax of a programming language by hard.</span>
+<span id="cb1-85"><a href="#cb1-85"></a><span class="ss">- </span>You can use AI tools to help you with the syntax and concentrate on the problem-solving part.</span>
+<span id="cb1-86"><a href="#cb1-86"></a></span>
+<span id="cb1-87"><a href="#cb1-87"></a><span class="ss">- </span>**Learn how to prompt** your problem to the AI and get a proper solution.</span>
+<span id="cb1-88"><a href="#cb1-88"></a><span class="ss">- </span>But **be aware** that the AI is **not perfect** and can give you **wrong solutions**.</span>
+<span id="cb1-89"><a href="#cb1-89"></a><span class="ss">- </span>So it is **important** that you can **understand the code** and can debug it.</span>
+<span id="cb1-90"><a href="#cb1-90"></a>:::</span>
 <span id="cb1-91"><a href="#cb1-91"></a></span>
+<span id="cb1-92"><a href="#cb1-92"></a><span class="fu">## Practice, Practice, Practice {.unnumbered}</span></span>
+<span id="cb1-93"><a href="#cb1-93"></a>:::{.callout-important}</span>
+<span id="cb1-94"><a href="#cb1-94"></a>As it is with languages, you can only learn it if you **practice** it. &lt;br&gt;</span>
+<span id="cb1-95"><a href="#cb1-95"></a>So, start you own projects and have fun with it!</span>
+<span id="cb1-96"><a href="#cb1-96"></a>:::</span>
+<span id="cb1-97"><a href="#cb1-97"></a></span>
+<span id="cb1-98"><a href="#cb1-98"></a></span>
+<span id="cb1-99"><a href="#cb1-99"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
@@ -1282,8 +1286,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>   
     <div class="nav-footer-center">
-<p>© 2025 Stefanie Kröll. All rights reserved.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Essentials/WhatIsPython.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Essentials/WhatIsPython.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <li>
 <a href="https://github.com/stkroe/PythonForChemists.github.io" target="blank">Code source</a>
