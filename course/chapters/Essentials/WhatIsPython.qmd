@@ -1,5 +1,6 @@
 ---
 title: "Python?"
+format: html
 ---
 
 
@@ -42,14 +43,20 @@ Van Rossum designed Python as a "Computer Programming Language for Everybody".
 So if you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).
 
 
-```{mermaid}
- graph TD
-     A[Python Source Code *.py] -->|Step 1: Compilation| B[Bytecode *.pyc]
-     B -->|Step 2: Interpretation| C[Python Virtual Machine - PVM]
-     C -->|Execution| D[Program Output]
+```{dot}
+digraph {
+    A [label="Python Source Code *.py"];
+    B [label="Bytecode *.pyc"];
+    C [label="Python Virtual Machine - PVM"];
+    D [label="Program Output"];
+    
+    A -> B [label="Step 1: Compilation"];
+    B -> C [label="Step 2: Interpretation"];
+    C -> D [label="Execution"];
+}
 ```
 
----
+
 
 ## How I can learn Python? {.unnumbered}
 

@@ -1,5 +1,11 @@
 ---
 title: "Python Start"
+format: 
+    html:
+        css: ../../quizzes/quiz.css
+        include-in-header:
+         text: |
+            <script src="../../quizzes/basic_python.js"></script>
 execute:
     echo: true
     eval: true
@@ -14,15 +20,24 @@ code-links:
         icon: "laptop"
 ---
 
-
 This will be a very fast and basic start into coding with Python. 
 
+:::{.callout-note}
+### Let`s make a initial quiz.
+You will see coding with Python is very easy and intuitive!
+::: 
 
-# Elemental Syntax{.unnumbered}
+:::{.callout-note collapse=true}
+### Quiz
+<div id="quiz-container"></div>
+:::
+
+# Elemenary Syntax {.unnumbered}
 
 ## Comands{.unnumbered}
 
 Each line of code is a command. The computer reads the code from top to bottom and executes each command in succession order. 
+
 
 First of all some terminology:
 
@@ -59,6 +74,10 @@ First of all some terminology:
 :::
 
 Try it out:
+
+- Copy the code below and paste it into a code cell.
+- Or open this file in `Google Colab` and run the code.
+- Or download this file and run it on your local machine.
 
 ```{python}
 print("Hello World")
@@ -581,7 +600,7 @@ for i in range(10):
     if i == 5:
         continue
     print(i)
- ```   
+```   
 
 
 

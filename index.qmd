@@ -1,6 +1,6 @@
-# Overview
+# Welcome to the Data Analysis and Visualization Course for Chemists and Material Scientists!
 
-Welcome to the Data Analysis and Visualization Course for Chemists and Material Scientists! This course is designed for better understanding how Python can be used for data analysis and visualization in the fields of chemistry and materials science. Before diving into the course content, please take a moment to review the following important informations.
+This course is designed for better understanding how Python can be used for data analysis and visualization in the fields of chemistry and materials science. Before diving into the course content, please take a moment to review the following important informations.
 
 ::::{.callout-caution}
 ## Disclaimer {.unnumbered}
@@ -10,17 +10,21 @@ Please read the [license](informations/license.qmd), [privacy policy](informatio
 :::
 ---
 
-:::{.callout-warning collapse="true"}
+:::{.callout-warning collapse="false"}
 ## Prequisits {.unnumbered}
-It is suggested that you have a basic understanding of Python or a comparable programming language prior to enrollment in this course, in order to facilitate more expeditious progress. Nevertheless, this course is structured in such a way that it can be done with any prior knowledge. The course contains also a fundamental introduction to Python syntax, and as such, persons with no prior knowledge should be able to take the courses. However, it is advisable to study a basic Python course beside of this content.
 
-Further this course will not going in detail of fundamental statistical principles. This is assumed as fullfilled prequirements beforehand of this course.
+- Basic knowledge of Python is useful but not required.
+- Fundamental understanding of statistics is mandatory.
+- Basic knowledge of chemistry and materials science is recommended.
+- You do not need to download or install any software to complete this course. All exercises can be done in the cloud using Google Colab.
+- But if you want to run the notebooks on your local machine, there is a [Installation Guide](course/chapters/Essentials/InstallationGuide.qmd) available.
 :::
 
 ---
 ## Who is the course for? {.unnumbereds}
 
-This course has been designed for persons who are looking to undertake a specialised data visualization and analyzing course in Python with a particular focus the field of chemistry and materials science. The course tries to be interactivley with practical examples.
+- For everyone who is interested in data analyzing and visualization in the field of chemistry and materials science.
+
 
 ## What can you expect from this course {.unnumbered}
 
@@ -30,10 +34,12 @@ This course has been designed for persons who are looking to undertake a special
 - The course is organized interactivly. You will get the chance to practice with exercises.
 - Upon successful completion of this course, you will have acquired a comprehensive understanding of the fundamental components of Python and the key packages necessary for the analysis and presentation of their own research data.
 - You can test your knowledge by an exam example at the end of this course.
+- You will be able to find enough resources to dive deeper into Python and data analyzing and visualization.
 
 ---
 
 ## What can you NOT expect from this course {.unnumbered}
+
 - You will not get a deep explanation of the Python language. Please consider full Python tutorials for get a deep overview of Python.
 - You will not learn object-oriented programming in Python.
 - We will not go into details of the libraries.
@@ -59,7 +65,8 @@ At the very end of the course, there is a comprehensive exam which covers a comp
 
 :::{.callout-important}
 It is recommended to try out every lecture and exercise to get the most out of this course.
-You can download each interactive notebook and run it on your local machine or use the provided Google Colab links to run the notebooks in the cloud.
+If the lecture is created as interactive notebook, you can run the notebook in the cloud using Google Colab via this icon {{< bi journal >}} or download it and run it on your local machine via this icon {{< bi laptop >}}.
+If any data files are used you can download them via this icon {{< bi filetype-txt >}} and {{< bi filetype-csv >}}.
 :::
 
 ---
@@ -94,19 +101,15 @@ Timeschedule for a week table
 - [Data Import](course/chapters/DHP/SimpleDataImport.qmd)
 - [Data Inspection](course/chapters/DHP/DataInspection.qmd)
 
-
-### Lecture 2 {.unnumbered}
-
 **First Data Visualization Techniques - Datra Visualization 1**
 
 - [Data Visualization](course/chapters/Plots/DataVisualization.qmd)
 - [Simple Plots](course/chapters/Plots/SimplePlots.qmd)
 
 **Exercise 1**
-<!-- - [Exercise 1](course/exercises/exercises/exercise1.ipynb) -->
+- [Exercise 1](course/exercises/exercises/exerciseA_1.ipynb)
 
-### Lecture 3 {.unnumbered}
-
+### Lecture 2 {.unnumbered}
 
 **Statistical and Exploratory Data Analysis**
 
@@ -115,15 +118,15 @@ Timeschedule for a week table
 - [Data Models](course/chapters/SEDA/DataModels.qmd)
 - [Model Testing](course/chapters/SEDA/ModelTesting.qmd)
 
-**More Data Visualization Techniques - Data Visualization 2**
+**First Data Visualization Techniques - Datra Visualization 1**
 
 - [Simple Plot Types](course/chapters/Plots/SimplePlotTypes.qmd)
 
 
 **Exercise 2**
-<!-- - [Exercise 2](course/exercises/exercises/exercise2.ipynb) -->
+- [Exercise 2](course/exercises/exercises/exerciseA_2.ipynb)
 **Exercise 3**
-<!-- - [Exercise 3](course/exercises/exercises/exercise3.ipynb) -->
+- [Exercise 3](course/exercises/exercises/exerciseB_1.ipynb)
 
 ### Lecture 4 {.unnumbered}
 

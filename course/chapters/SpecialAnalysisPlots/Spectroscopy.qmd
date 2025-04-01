@@ -16,3 +16,29 @@ code-links:
 ##   Spectroscopy Data Analysis {.unnumbered}
 
 
+Spectroscopy is one of the most used experimental techniques in chemistry *e.g.*:
+
+- UV/Vis spectroscopy
+- IR spectroscopy
+- NMR spectroscopy
+- Mass spectroscopy
+
+
+The analysis of spectroscopy needs often some preprocessing steps *e.g.*:
+
+- Baseline correction
+- Smoothing
+- Normalization
+- Peak assignment
+- Peak fitting
+- Peak integration
+- Peak deconvolution
+
+
+### Baseline Correction {.unnumbered}
+
+A baseline correction is often needed to remove background noise from the signal and 
+
+The baseline correction can be done by different methods *e.g.*:
+
+- Polynomial fitting

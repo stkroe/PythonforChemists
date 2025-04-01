@@ -120,3 +120,84 @@ print(f"Chi-square: {chi2}, P-value: {p}")
 Check the [SciPy documentation](https://docs.scipy.org/doc/scipy/reference/stats.html) for more statistical tests and functions.
 
 And for more information on hypothesis testing, refer to the [SciPy Hypothesis Tests](https://docs.scipy.org/doc/scipy/tutorial/stats/hypothesis_tests.html).
+
+### Outlier Detection {.unnumbered}
+
+Outliers are data points that significantly differ from other observations in a dataset. 
+They have effect on specific statistical methods and can lead to incorrect conclusions.
+
+- **Z-Score:** Measures how many standard deviations a data point is from the mean.
+
+```{python}
+# Calculate Z-scores for a dataset
+data = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+z_scores = stats.zscore(data)
+print(z_scores)
+```
+
+- **IQR (Interquartile Range):** Identifies outliers based on the spread of the data.
+
+```{python}
+# Calculate IQR for a dataset
+q1 = np.percentile(data, 25)
+q3 = np.percentile(data, 75)
+iqr = q3 - q1
+
+# Define outlier thresholds
+lower_bound = q1 - 1.5 * iqr
+upper_bound = q3 + 1.5 * iqr
+
+# Identify outliers
+outliers = data[(data < lower_bound) | (data > upper_bound)]
+print(outliers)
+
+
+```
+
+
+- **DBSCAN (Density-Based Spatial Clustering of Applications with Noise):** Clustering algorithm that identifies outliers based on density.
+
+```{python}
+from sklearn.cluster import DBSCAN
+
+# Generate sample data
+data = np.random.randn(100, 2)
+
+# Fit DBSCAN model
+dbscan = DBSCAN(eps=0.3, min_samples=5)
+dbscan.fit(data)
+
+# Identify outliers
+outliers = data[dbscan.labels_ == -1]
+print(outliers)
+```
+
+- **Isolation Forest:** Anomaly detection algorithm that isolates outliers in a dataset.
+
+```{python}
+from sklearn.ensemble import IsolationForest
+
+# Generate sample data
+data = np.random.randn(100, 2)
+
+# Fit Isolation Forest model
+isoforest = IsolationForest(contamination=0.1)
+isoforest.fit(data)
+
+# Identify outliers
+outliers = data[isoforest.predict(data) == -1]
+print(outliers)
+```
+
+- **Boxplot:** Visual representation of outliers in a dataset.
+
+```{python}
+# Generate sample data
+data = np.random.randn(100)
+
+# Create boxplot
+plt.boxplot(data)
+plt.show()
+```
+
+For more information on outlier detection, refer to the [Scikit-learn documentation](https://scikit-learn.org/stable/modules/outlier_detection.html).
