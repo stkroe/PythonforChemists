@@ -111,7 +111,7 @@ format:
       toc: true
       toc-depth: 3
       fig-cap: true
-      self-contained: true
+      #self-contained: true
       number-sections: false
       #embed-resources: true
       link-external-icon: true
