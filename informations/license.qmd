@@ -3,7 +3,7 @@ title: License
 ---
 MIT License
 
-Copyright (c) 2025 Stefanie Kröll
+Copyright (c) 2025 Stefanie Kröll and Thomas Hofer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
