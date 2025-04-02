@@ -172,7 +172,5 @@ cython_debug/
 
 /.quarto/
 _site/
-# autograder
-*.zip
 
 _freeze
