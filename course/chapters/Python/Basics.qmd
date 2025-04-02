@@ -708,7 +708,7 @@ The most common style guideline for Python is [PEP 8](https://www.python.org/dev
 # Exercises {.unnumbered}
 Download it locally and try to solve the exercises. <br>
 
-[Basic Python](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material)
+[Basic Python](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/)
 
 
 
