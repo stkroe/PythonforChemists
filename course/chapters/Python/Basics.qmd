@@ -714,7 +714,7 @@ Download it locally and try to solve the exercises. <br>
 
 Or open it in `Google Colab`:
 
-[Basic Python](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/dist/BasicExercises.ipynb)
+[Basic Python](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/dist/student/BasicExercises.ipynb)
 
 
 
