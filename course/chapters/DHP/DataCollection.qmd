@@ -34,13 +34,14 @@ Data is a collection of
 - measurements
 - observations 
 
-If you work with data, please have the [FAIR](https://www.uibk.ac.at/zid/forschungsdaten/forschungsdatenmanagement/fair.html) principles in mind:
+If you work with data, please have the [FAIR](https://www.go-fair.org/fair-principles/) principles in mind:
 
 - **F**indable
 - **A**ccessible
 - **I**nteroperable
 - **R**eusable
 
+see also the [UIBK FAIR Principles](https://www.uibk.ac.at/zid/forschungsdaten/forschungsdatenmanagement/fair.html)
 ---
 
 
