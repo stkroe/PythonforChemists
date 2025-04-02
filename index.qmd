@@ -16,7 +16,7 @@ Please read the [license](informations/license.qmd), [privacy policy](informatio
 - Basic knowledge of Python is useful but not required.
 - Fundamental understanding of statistics is mandatory.
 - Basic knowledge of chemistry and materials science is recommended.
-- You do not need to download or install any software to complete this course. All exercises can be done in the cloud using Google Colab.
+- You do not need to download or install any software to complete this course. All exercises can be done in the cloud using [Google Colab](https://colab.google/).
 - But if you want to run the notebooks on your local machine, there is a [Installation Guide](course/chapters/Essentials/InstallationGuide.qmd) available.
 :::
 
@@ -30,11 +30,11 @@ Please read the [license](informations/license.qmd), [privacy policy](informatio
 
 - This course wants to show you the advantage of using a programming language for data analyzing and visualization in chemistry and material science in comparision to gui-based softwares.
 - The course will give you a very brief introduction to Python and its libraries.
-- The main focus will be on the libraries `numpy`, `pandas`, `pandas`, `scipy`, `matplotlib` and `seaborn` for data analyzing and visualization.
+- The main focus will be on the libraries `numpy`, `pandas`, `pandas`, `scipy`, `matplotlib` and `seaborn`.
 - The course is organized interactivly. You will get the chance to practice with exercises.
 - Upon successful completion of this course, you will have acquired a comprehensive understanding of the fundamental components of Python and the key packages necessary for the analysis and presentation of their own research data.
 - You can test your knowledge by an exam example at the end of this course.
-- You will be able to find enough resources to dive deeper into Python and data analyzing and visualization.
+- At the end of this course you will be able to find enough resources to dive deeper into Python.
 
 ---
 
@@ -44,8 +44,6 @@ Please read the [license](informations/license.qmd), [privacy policy](informatio
 - You will not learn object-oriented programming in Python.
 - We will not go into details of the libraries.
 - This is not a statistics course. 
-
-The aim of this course should be that you get an idea how Python can be use for data analyzing and visualization in chemistry and material science field. 
 
 ---
 
@@ -86,7 +84,7 @@ Timeschedule for a week table
 | 17:00-18:00| Example 1    | Example 2| Example 3  | Example 4 | Final Exam|
 
 
-### Lecture 1 {.unnumbered}
+### Introduction {.unnumbered}
 
 **Introduction to Python - Essentials**
 
@@ -94,6 +92,8 @@ Timeschedule for a week table
 - [What is Python?](course/chapters/Essentials/WhatIsPython.qmd)
 - [Python Basics](course/chapters/Python/Basics.qmd)
 - [Python Libraries](course/chapters/Python/BasicsModules.qmd)
+
+### Lecture 1 {.unnumbered}
 
 **Data Handling and Preprocessing**
 
@@ -118,7 +118,7 @@ Timeschedule for a week table
 - [Data Models](course/chapters/SEDA/DataModels.qmd)
 - [Model Testing](course/chapters/SEDA/ModelTesting.qmd)
 
-**First Data Visualization Techniques - Datra Visualization 1**
+**First Data Visualization Techniques - Data Visualization 1**
 
 - [Simple Plot Types](course/chapters/Plots/SimplePlotTypes.qmd)
 
@@ -128,7 +128,8 @@ Timeschedule for a week table
 **Exercise 3**
 - [Exercise 3](course/exercises/exercises/exerciseB_1.ipynb)
 
-### Lecture 4 {.unnumbered}
+
+### Lecture 3 {.unnumbered}
 
 **Special Data Visualization and Analysis Techniques - Spectroscopy and Image Data Analysis**
 
