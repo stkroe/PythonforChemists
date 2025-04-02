@@ -269,7 +269,7 @@ For example,
 
 ---
 
-:::{.callout-note}
+:::{.callout-note collapse="true"}
 ### Quiz
 <div id="quiz-container"></div>
 :::
