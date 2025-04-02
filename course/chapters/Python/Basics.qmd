@@ -708,13 +708,13 @@ The most common style guideline for Python is [PEP 8](https://www.python.org/dev
 # Exercises {.unnumbered}
 Download it locally and try to solve the exercises. <br>
 
-[Basic Python](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/dist)
+[Basic Python](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material)
 
 
 
 Or open it in `Google Colab`:
 
-[Basic Python](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/dist/student/BasicExercises.ipynb)
+[Basic Python](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material/student/BasicExercises.ipynb)
 
 
 
