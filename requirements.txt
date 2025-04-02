@@ -7,7 +7,7 @@ scikit-learn
 scipy
 seaborn
 statsmodels
-otter-grader[grading,plugins,r]==6.1.2
+otter-grader
 umap-learn
 bokeh
 altair
