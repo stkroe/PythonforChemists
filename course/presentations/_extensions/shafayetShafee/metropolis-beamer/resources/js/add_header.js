@@ -21,8 +21,8 @@ function header() {
     logo_img = document.querySelector('.header-logo > img');
     if (logo_img?.getAttribute('src') == null) {
       if (logo_img?.getAttribute('data-src') != null) {
-        logo_img.setAttribute('src', logo_img.getAttribute('data-src'));
-        logo_img.removeAttribute('data-src');
+        logo_img.src = logo_img?.getAttribute('data-src') || "";
+        logo_img.removeAttribute('data-src'); 
       };
     };
   };
