@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analysis of Spectroscopy Data – Data Analysis and Visualization for Chemists and Material Scientists</title>
+<title>Exercise D 2 – Data Analysis and Visualization for Chemists and Material Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../course/chapters/SpecialAnalysisPlots/ImageAnalysis.html" rel="next">
-<link href="../../../course/exercises/exercises/exerciseD_2.html" rel="prev">
+<link href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html" rel="next">
+<link href="../../../course/exercises/exercises/exerciseD_1.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -105,9 +71,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Analysis of Spectroscopy Data – Data Analysis and Visualization for Chemists and Material Scientists">
-<meta property="og:description" content="">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Exercise D 2 – Data Analysis and Visualization for Chemists and Material Scientists">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
 
@@ -120,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html">Special Analysis and Visualization Techniques</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html"><span class="chapter-title">Analysis of Spectroscopy Data</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/exercises/exercises/exerciseD_1.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../../course/exercises/exercises/exerciseD_2.html"><span class="chapter-title">Exercise D 2</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -392,13 +386,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../course/exercises/exercises/exerciseD_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise D 1</span></a>
@@ -406,23 +400,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseD_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise D 2</span></a>
+  <a href="../../../course/exercises/exercises/exerciseD_2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Exercise D 2</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
  <span class="menu-text">Special Analysis and Visualization Techniques</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Analysis of Spectroscopy Data</span></a>
+  <a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Spectroscopy Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -505,19 +499,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#spectroscopy-data-analysis" id="toc-spectroscopy-data-analysis" class="nav-link active" data-scroll-target="#spectroscopy-data-analysis">Spectroscopy Data Analysis</a>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link active" data-scroll-target="#exercise">Exercise:</a>
   <ul class="collapse">
-  <li><a href="#baseline-correction" id="toc-baseline-correction" class="nav-link" data-scroll-target="#baseline-correction">Baseline Correction</a></li>
+  <li><a href="#interactive-plot" id="toc-interactive-plot" class="nav-link" data-scroll-target="#interactive-plot">Interactive Plot</a>
+  <ul class="collapse">
+  <li><a href="#task-1" id="toc-task-1" class="nav-link" data-scroll-target="#task-1">Task 1</a></li>
+  <li><a href="#task-1-1" id="toc-task-1-1" class="nav-link" data-scroll-target="#task-1-1">Task 1</a></li>
+  </ul></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SpecialAnalysisPlots/Spectroscopy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/Spectroscopy.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Spectroscopy.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/stkroe/PythonForChemists.github.io/blob/master/course/exercises/exercises/exerciseD_2.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/exercises/exercises/exercisesD_2.ipynb"><i class="bi bi-journal"></i>Download Code</a></li><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/exercises/solutions/Exercises_D.2_Interactive_Plots.ipynb"><i class="bi bi-journal-check"></i>Download Solution</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/exercises/exercises/exercisesD_2.ipynb"><i class="bi bi-laptop"></i>Open in Colab Code</a></li><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/exercises/solutions/Exercises_D.2_Interactive_Plots.ipynb"><i class="bi bi-laptop"></i>Open in Colab Solution</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html">Special Analysis and Visualization Techniques</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html"><span class="chapter-title">Analysis of Spectroscopy Data</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/exercises/exercises/exerciseD_1.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../../course/exercises/exercises/exerciseD_2.html"><span class="chapter-title">Exercise D 2</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Analysis of Spectroscopy Data</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<h1 class="title"><span class="chapter-title">Exercise D 2</span></h1>
 </div>
 
 
@@ -534,36 +532,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="spectroscopy-data-analysis" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="spectroscopy-data-analysis">Spectroscopy Data Analysis</h2>
-<p>Spectroscopy is one of the most used experimental techniques in chemistry <em>e.g.</em>:</p>
+<section id="exercise" class="level1">
+<h1>Exercise:</h1>
+<section id="interactive-plot" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-plot">Interactive Plot</h2>
+<p>In this exercise, we will repeat how to create an interactive plot using <code>ipywidgets</code>.</p>
+<section id="task-1" class="level3">
+<h3 class="anchored" data-anchor-id="task-1">Task 1</h3>
 <ul>
-<li>UV/Vis spectroscopy</li>
-<li>IR spectroscopy</li>
-<li>NMR spectroscopy</li>
-<li>Mass spectroscopy</li>
+<li>Create an interactive plot using <code>ipywidgets</code> and <code>matplotlib</code> for the van-Deemeter equation where the user can change the parameters <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> using sliders.</li>
 </ul>
-<p>The analysis of spectroscopy needs often some preprocessing steps <em>e.g.</em>:</p>
+</section>
+<section id="task-1-1" class="level3">
+<h3 class="anchored" data-anchor-id="task-1-1">Task 1</h3>
 <ul>
-<li>Baseline correction</li>
-<li>Smoothing</li>
-<li>Normalization</li>
-<li>Peak assignment</li>
-<li>Peak fitting</li>
-<li>Peak integration</li>
-<li>Peak deconvolution</li>
-</ul>
-<section id="baseline-correction" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="baseline-correction">Baseline Correction</h3>
-<p>A baseline correction is often needed to remove background noise from the signal and</p>
-<p>The baseline correction can be done by different methods <em>e.g.</em>:</p>
-<ul>
-<li>Polynomial fitting</li>
+<li>Create an interactive plot using <code>ipywidgets</code> and <code>matplotlib</code> for a rate equation together with an Arrhenius Plot where the user can change the parameters <span class="math inline">\(k_0\)</span>,and <span class="math inline">\(E_a\)</span> using sliders.</li>
 </ul>
 
 
-<!-- -->
-
+</section>
 </section>
 </section>
 
@@ -1189,61 +1176,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../course/exercises/exercises/exerciseD_2.html" class="pagination-link" aria-label="Exercise D 2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Exercise D 2</span></span>
+      <a href="../../../course/exercises/exercises/exerciseD_1.html" class="pagination-link" aria-label="Exercise D 1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Exercise D 1</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../course/chapters/SpecialAnalysisPlots/ImageAnalysis.html" class="pagination-link" aria-label="Analysis of Image Data">
-        <span class="nav-page-text"><span class="chapter-title">Analysis of Image Data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html" class="pagination-link" aria-label="Analysis of Spectroscopy Data">
+        <span class="nav-page-text"><span class="chapter-title">Analysis of Spectroscopy Data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Analysis of Spectroscopy Data"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="an">execute:</span><span class="co"> </span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co">  echo: True</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">  eval: True</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="an">other-links:</span><span class="co"> </span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co">      - text: "Download Code"</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co">        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/Spectroscopy.ipynb"</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co">        icon: "journal"</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="an">code-links:</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="co">      - text: "Open in Colab"</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Spectroscopy.ipynb"</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co">        icon: "laptop"</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="co">---</span> </span>
-<span id="cb1-15"><a href="#cb1-15"></a></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="fu">##   Spectroscopy Data Analysis {.unnumbered}</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a></span>
-<span id="cb1-18"><a href="#cb1-18"></a></span>
-<span id="cb1-19"><a href="#cb1-19"></a>Spectroscopy is one of the most used experimental techniques in chemistry *e.g.*:</span>
-<span id="cb1-20"><a href="#cb1-20"></a></span>
-<span id="cb1-21"><a href="#cb1-21"></a><span class="ss">- </span>UV/Vis spectroscopy</span>
-<span id="cb1-22"><a href="#cb1-22"></a><span class="ss">- </span>IR spectroscopy</span>
-<span id="cb1-23"><a href="#cb1-23"></a><span class="ss">- </span>NMR spectroscopy</span>
-<span id="cb1-24"><a href="#cb1-24"></a><span class="ss">- </span>Mass spectroscopy</span>
-<span id="cb1-25"><a href="#cb1-25"></a></span>
-<span id="cb1-26"><a href="#cb1-26"></a></span>
-<span id="cb1-27"><a href="#cb1-27"></a>The analysis of spectroscopy needs often some preprocessing steps *e.g.*:</span>
-<span id="cb1-28"><a href="#cb1-28"></a></span>
-<span id="cb1-29"><a href="#cb1-29"></a><span class="ss">- </span>Baseline correction</span>
-<span id="cb1-30"><a href="#cb1-30"></a><span class="ss">- </span>Smoothing</span>
-<span id="cb1-31"><a href="#cb1-31"></a><span class="ss">- </span>Normalization</span>
-<span id="cb1-32"><a href="#cb1-32"></a><span class="ss">- </span>Peak assignment</span>
-<span id="cb1-33"><a href="#cb1-33"></a><span class="ss">- </span>Peak fitting</span>
-<span id="cb1-34"><a href="#cb1-34"></a><span class="ss">- </span>Peak integration</span>
-<span id="cb1-35"><a href="#cb1-35"></a><span class="ss">- </span>Peak deconvolution</span>
-<span id="cb1-36"><a href="#cb1-36"></a></span>
-<span id="cb1-37"><a href="#cb1-37"></a></span>
-<span id="cb1-38"><a href="#cb1-38"></a><span class="fu">### Baseline Correction {.unnumbered}</span></span>
-<span id="cb1-39"><a href="#cb1-39"></a></span>
-<span id="cb1-40"><a href="#cb1-40"></a>A baseline correction is often needed to remove background noise from the signal and </span>
-<span id="cb1-41"><a href="#cb1-41"></a></span>
-<span id="cb1-42"><a href="#cb1-42"></a>The baseline correction can be done by different methods *e.g.*:</span>
-<span id="cb1-43"><a href="#cb1-43"></a></span>
-<span id="cb1-44"><a href="#cb1-44"></a><span class="ss">- </span>Polynomial fitting</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
-</div></div></div></div></div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1252,7 +1194,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SpecialAnalysisPlots/Spectroscopy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/stkroe/PythonForChemists.github.io/blob/master/course/exercises/exercises/exerciseD_2.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <li>
 <a href="https://github.com/stkroe/PythonForChemists.github.io" target="blank">Code source</a>

@@ -54,7 +54,7 @@
     "href": "index.html#this-course-within-of-the-vu-data-science-and-visualization-primer-for-chemists-and-material-scientists",
     "title": "Data Analysis and Visualization for Chemists and Material Scientists",
     "section": "This course within of the “VU Data Science and Visualization Primer for Chemists and Material Scientists”",
-    "text": "This course within of the “VU Data Science and Visualization Primer for Chemists and Material Scientists”\nWe concentrate on the Basic Path during this lecture.\nTimeschedule for a week table\n\n\n\n\n\n\n\n\n\n\n\nTime\nMonday\nTuesday\nWednesday\nThursday\nFriday\n\n\n\n\n13:00-14:00\nIntroduction/Python Basics\nLecture 2\nLecture 3\nLecture 4\nLecture 5\n\n\n14:00-15:00\nLecture 1\nLecture 2\nLecture 3\nLecture 4\nExample 5\n\n\n15:00-16:00\nLecture 1\nExample 2\nExample 3\nExample 4\nF&Q\n\n\n16:00-17:00\nExample 1\nExample 2\nExample 3\nExample 4\nFinal Exam\n\n\n17:00-18:00\nExample 1\nExample 2\nExample 3\nExample 4\nFinal Exam\n\n\n\n\nIntroduction\nIntroduction to Python - Essentials\n\nIntroduction to Python\nWhat is Python?\nPython Basics\nPython Libraries\n\n\n\nLecture 1\nData Handling and Preprocessing\n\nData Collection\nData Import\nData Inspection\n\nFirst Data Visualization Techniques - Datra Visualization 1\n\nData Visualization\nSimple Plots\n\nExercise 1 - Exercise 1\n\n\nLecture 2\nStatistical and Exploratory Data Analysis\n\nData Manipulation\nDescriptive Statistics\nData Models\nModel Testing\n\nFirst Data Visualization Techniques - Data Visualization 1\n\nSimple Plot Types\n\nExercise 2 - Exercise 2 Exercise 3 - Exercise 3\n\n\nLecture 3\nSpecial Data Visualization and Analysis Techniques - Spectroscopy and Image Data Analysis\n\nSpectroscopy Data Analysis\nImage Data Analysis\n\nExercise 4",
+    "text": "This course within of the “VU Data Science and Visualization Primer for Chemists and Material Scientists”\nWe concentrate on the Beginner Path of the course during the lecture.\nTimeschedule for a week:\n\n\n\n| Time | Monday | Tuesday | Wednesday | Thursday | Friday |\n\n\n|————|——————|——————-|———————-|——————|————–|\n\n\n| 13:00-14:00| Introduction | Lecture 2 | Lecture 3 | Exercise Block 4 | F&Q |\n\n\n| 14:00-15:00| Lecture 1 | Lecture 2 | Lecture 3 | Exercise Block 4 | F&Q |\n\n\n| 15:00-16:00| Lecture 1 | Exercise Block 2 | Exercise Block 2 | Exercise Block 4 | Final Exam |\n\n\n| 16:00-17:00| Exercise Block 1 | Exercise Block 2 | Exercise Block 2 | Exercise Block 4 | Final Exam |\n\n\n| 17:00-18:00| Exercise Block 1 | Exercise Block 2 | Exercise Block 2 | Exercise Block 4 | Final Exam |\n\n\n\n\nIntroduction\nIntroduction to Python - Essentials\n\nIntroduction to Python\nWhat is Python?\nPython Basics\nPython Libraries\n\n\n\nLecture 1\nData Handling and Preprocessing\n\nData Collection\nData Import\nData Inspection\n\nFirst Data Visualization Techniques - Datra Visualization 1\n\nData Visualization\nSimple Plots\n\n\n\nExercise Block 1\nExercise A 1\n\nExercise A 1\n\n\n\nLecture 2\nStatistical and Exploratory Data Analysis\n\nData Manipulation\nDescriptive Statistics\nData Models\nModel Testing\n\nFirst Data Visualization Techniques - Data Visualization 1\n\nSimple Plot Types\n\n\n\nExercise Block 2\nExercise A 2 - Exercise A 2\nExercise B 1 - Exercise B 1\nExercise B 2 - Exercise B 2\n*Exercise B 3 - Exercise B 3\n\n\nLecture 3\nSpecial Data Visualization and Analysis Techniques\n\nAdvanced Plot Types\nSpectroscopy Data Analysis\nImage Data Analysis\n\n\n\nExercise Block 3\nExercise C 1 - Exercise C 2\n*Exercise C 2 - Exercise C 3\nExercise D 1 - Exercise D 1\nExercise D 2 - Exercise D 2\n\n\nFinal Exam\nEveryone gets a different data set and has to analyze the data and visualize the results. - Final Exam",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to this Course!</span>"
     ]
@@ -383,7 +383,7 @@
     "href": "course/chapters/Python/BasicsModules.html#numpy",
     "title": "Basic Modules",
     "section": "Numpy",
-    "text": "Numpy\n\nNumpy is the most important library for Python.\nThe standard data types in Python are very slow and not very efficient for data analysis.\nNumpy is based mainly on C an C++.\nThis allows Numpy to be faster than plain Python.\nWith Numpy a new data type is introduced numpy arrays.\nNumpy arrays are multidimensional arrays that are much faster than Python lists.\nThe libary also includes many mathematical functions and methods for linear algebra.\n\nMore information can found at the Numpy website.\nLoad the required libraries\n\nimport numpy as np\n\n\nNumpy Arrays\nAn array can be described as multidimensional lists. For example a matrix is a 2D array.\n\nmat = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\nprint(mat)\n\n[[1 2 3]\n [4 5 6]\n [7 8 9]]\n\n\nThe elements of an array can be accessed using the index of the element.\n\nprint(mat[0, 0])   # 1 element at row 0, column 0\n\n\nprint(mat[1, 2])  # 6 element at row 1, column 2\n\n\nprint(mat[:, 0])  # [1 4 7] all elements in column 0\n\n\nprint(mat[1, :])  # [4 5 6] all elements in row 1\n\n1\n6\n[1 4 7]\n[4 5 6]\n\n\n\nempty_mat = np.empty((3,3),dtype=float)\nprint(empty_mat)\n\n[[4.65363315e-310 0.00000000e+000 0.00000000e+000]\n [0.00000000e+000 0.00000000e+000 0.00000000e+000]\n [0.00000000e+000 0.00000000e+000 0.00000000e+000]]\n\n\n\nones_mat = np.ones((3, 3))\nprint(ones_mat)\n\n[[1. 1. 1.]\n [1. 1. 1.]\n [1. 1. 1.]]\n\n\n\nzeros_mat = np.zeros((3, 3))\nprint(zeros_mat)\n\n[[0. 0. 0.]\n [0. 0. 0.]\n [0. 0. 0.]]\n\n\n\narr = np.arange(1, 10, 2) # an array from 1 to 10 with a step of 2\nprint(arr)\n\n[1 3 5 7 9]\n\n\n\narr2 = np.linspace(0,100,5) # an array from 0 to 100 with 5 elements\nprint(arr2)\n\n[  0.  25.  50.  75. 100.]\n\n\n\nrand_mat = np.random.rand(3,3) # a 3x3 matrix with random numbers between 0 and 1\nprint(rand_mat)\n\n[[0.01588133 0.18433821 0.06140203]\n [0.79885476 0.55743744 0.73142165]\n [0.08894447 0.33956003 0.97847926]]",
+    "text": "Numpy\n\nNumpy is the most important library for Python.\nThe standard data types in Python are very slow and not very efficient for data analysis.\nNumpy is based mainly on C an C++.\nThis allows Numpy to be faster than plain Python.\nWith Numpy a new data type is introduced numpy arrays.\nNumpy arrays are multidimensional arrays that are much faster than Python lists.\nThe libary also includes many mathematical functions and methods for linear algebra.\n\nMore information can found at the Numpy website.\nLoad the required libraries\n\nimport numpy as np\n\n\nNumpy Arrays\nAn array can be described as multidimensional lists. For example a matrix is a 2D array.\n\nmat = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\nprint(mat)\n\n[[1 2 3]\n [4 5 6]\n [7 8 9]]\n\n\nThe elements of an array can be accessed using the index of the element.\n\nprint(mat[0, 0])   # 1 element at row 0, column 0\n\n\nprint(mat[1, 2])  # 6 element at row 1, column 2\n\n\nprint(mat[:, 0])  # [1 4 7] all elements in column 0\n\n\nprint(mat[1, :])  # [4 5 6] all elements in row 1\n\n1\n6\n[1 4 7]\n[4 5 6]\n\n\n\nempty_mat = np.empty((3,3),dtype=float)\nprint(empty_mat)\n\n[[4.65619206e-310 0.00000000e+000 0.00000000e+000]\n [0.00000000e+000 0.00000000e+000 0.00000000e+000]\n [0.00000000e+000 0.00000000e+000 0.00000000e+000]]\n\n\n\nones_mat = np.ones((3, 3))\nprint(ones_mat)\n\n[[1. 1. 1.]\n [1. 1. 1.]\n [1. 1. 1.]]\n\n\n\nzeros_mat = np.zeros((3, 3))\nprint(zeros_mat)\n\n[[0. 0. 0.]\n [0. 0. 0.]\n [0. 0. 0.]]\n\n\n\narr = np.arange(1, 10, 2) # an array from 1 to 10 with a step of 2\nprint(arr)\n\n[1 3 5 7 9]\n\n\n\narr2 = np.linspace(0,100,5) # an array from 0 to 100 with 5 elements\nprint(arr2)\n\n[  0.  25.  50.  75. 100.]\n\n\n\nrand_mat = np.random.rand(3,3) # a 3x3 matrix with random numbers between 0 and 1\nprint(rand_mat)\n\n[[0.35485756 0.40988616 0.31450499]\n [0.8788676  0.42630264 0.41820044]\n [0.73745014 0.90832618 0.57082955]]",
     "crumbs": [
       "Python Crash Course",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Basic Modules</span>"
@@ -777,23 +777,23 @@
   {
     "objectID": "course/exercises/exercises/exerciseA_1.html",
     "href": "course/exercises/exercises/exerciseA_1.html",
-    "title": "Exercise 1",
+    "title": "Exercise A 2",
     "section": "",
     "text": "Exercise:",
     "crumbs": [
-      "Data Visualization 1 ",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Exercise 1</span>"
+      "Exercises",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Exercise A 2</span>"
     ]
   },
   {
     "objectID": "course/exercises/exercises/exerciseA_1.html#temperature-in-synthesis-reactor-part-1",
     "href": "course/exercises/exercises/exerciseA_1.html#temperature-in-synthesis-reactor-part-1",
-    "title": "Exercise 1",
+    "title": "Exercise A 2",
     "section": "Temperature in Synthesis Reactor Part 1",
-    "text": "Temperature in Synthesis Reactor Part 1\nIn this exercise, we will repeat the first part of the course.\n\nWe will learn how to read data from a file.\nWe will learn how to inspect the data.\nWe will learn how to make quickly some plots.\n\n\nData\nThe experiment:\n\nWe have multiple synthesis reactors in which we are running a series of experiments.\nEach reactor has a temperature sensor which monitors the temperature inside of it every minute for one month.\nOur task is to check if the temperatures in the reactors are stable.\nThe data for reactor 1 is stored in Temperatures_1.csv.\nThe data for reactor 2 is stored in Temperatures_2.csv.\nThe data for reactor 3 is stored in Temperatures_3.csv.\n\n\n\nData Path:\nhttps://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/Temperature/\n\n\nTask\n\nLook at the plain data files. In which format are the data stored?\nRead the data from the files.\nInspect the data. Are there any missing values? Are the data in the correct format? Is the data measured really over one month?\nTransform the data into days.\nLook at the distribution of the data. Is there some striking pattern?\nMake a plot of the temperatures trend over time for reactor 1, 2 and 3.\n\n\n\nQuestions\n\nWhat do you think?\nAre the temperatures stable in the reactors?\nWhich reactor has the most stable temperature?",
+    "text": "Temperature in Synthesis Reactor Part 1\nIn this exercise, we will repeat the first part of the course.\n\nWe will learn how to read data from a file.\nWe will learn how to inspect the data.\nWe will learn how to make quickly some plots.\n\n\nData\nThe experiment:\n\nWe have multiple synthesis reactors in which we are running a series of experiments.\nEach reactor has a temperature sensor which monitors the temperature inside of it every minute for one month.\nOur task is to check if the temperatures in the reactors are stable.\nThe data for reactor 1 is stored in Temperatures_1.dat.\nThe data for reactor 2 is stored in Temperatures_2.dat.\nThe data for reactor 3 is stored in Temperatures_3.dat.\n\n\n\nData Path:\nhttps://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/Temperature/\n\n\nTask\n\nLook at the plain data files. In which format are the data stored?\nRead the data from the files.\nInspect the data. Are there any missing values? Are the data in the correct format? Is the data measured really over one month?\nTransform the data into days.\nLook at the distribution of the data. Is there some striking pattern?\nMake a plot of the temperatures trend over time for reactor 1, 2 and 3.\n\n\n\nQuestions\n\nWhat do you think?\nAre the temperatures stable in the reactors?\nWhich reactor has the most stable temperature?",
     "crumbs": [
-      "Data Visualization 1 ",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Exercise 1</span>"
+      "Exercises",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Exercise A 2</span>"
     ]
   },
   {
@@ -889,7 +889,7 @@
     "href": "course/chapters/SEDA/DataModels.html#linear-regression",
     "title": "Inferential Statistics",
     "section": "Linear Regression ",
-    "text": "Linear Regression \nOften we want to find a model which can explain the data. It is important to understand the data and the model to be able to interpret the results and make predictions.\nThe simplest model is the linear regression model. It assumes that the data has a linear relationship with the target variable. For example, if we have a single feature \\(x\\) and a target variable \\(y\\), the linear regression model can be defined as:\n\\[\ny = \\beta_0 + \\beta_1 x + \\epsilon\n\\]\nwhere \\(y\\) is the target variable, \\(x\\) is the feature, \\(\\beta_0\\) and \\(\\beta_1\\) are the coefficients, and \\(\\epsilon\\) is the error term.\nFor multiple features \\(x_1, x_2, \\ldots, x_n\\), the linear regression model can be defined as:\n\\[\ny = \\beta_0 + \\beta_1 x_1 + \\beta_2 x_2 + \\ldots + \\beta_n x_n + \\epsilon\n\\]\nwhere \\(y\\) is the target variable, \\(x_1, x_2, \\ldots, x_n\\) are the features, \\(\\beta_0, \\beta_1, \\ldots, \\beta_n\\) are the coefficients, and \\(\\epsilon\\) is the error term.\nIn python there exists serveral libraries which can be used to fit a linear regression model.\n\nUsing scipy\nA easy way is to use scipy library. The scipy library has a function called linregress which can be used to fit a linear regression model. The function returns the slope, intercept, r-value, p-value, and the standard error of the estimate. And with scipy version 1.15.2 also the intercept error.\n\nfrom scipy.stats import linregress\nimport numpy as np\n\nx = [1, 2, 3, 4, 5]\ny = x*np.random.normal(0, 1, 5)+np.random.normal(0, 1, 5)\n\nresults = linregress(x, y)\n\nslope = results.slope\nintercept = results.intercept\nr_value = results.rvalue\np_value = results.pvalue\nstd_err = results.stderr\nintercept_err = results.intercept_stderr\nprint(\"slope: %f    intercept: %f\" % (slope, intercept))\nprint(\"R-squared: %f\" % r_value**2)\nprint(\"p-value: %f\" % p_value)\nprint(\"standard error: %f\" % std_err)\nprint(\"Intercept error: %f\" %intercept_err)\n# Two-sided inverse Students t-distribution\n# p - probability, df - degrees of freedom\nfrom scipy.stats import t\ntinv = lambda p, df: abs(t.ppf(p/2, df))\nprint(\"95% confidence interval: \" + str(intercept - tinv(0.05, len(x)-2)*intercept_err) + \" to \" + str(intercept + tinv(0.05, len(x)-2)*intercept_err))\n\nslope: -2.232050    intercept: 5.031220\nR-squared: 0.547366\np-value: 0.152922\nstandard error: 1.171865\nIntercept error: 3.886638\n95% confidence interval: -7.337796580852582 to 17.400235738505128\n\n\n\n\n\n\n\n\nImportant\n\n\n\nFor older version scipyonly returned 5 values with fields slope, intercept, rvalue, pvalue and stderr. For compatiblity reasons the return values are 5 elements tuple.\n\nfrom scipy.stats import linregress\nslope, intercept, r, p, se = linregress(x, y)\n\nAnd if you want to get the intercept error you can use the following return value as a object:\n\nfrom scipy.stats import linregress\nresults = linregress(x, y)\nprint(results.intercept_stderr)\n\n3.886637816682354\n\n\n\n\n\n\nUsing statsmodels\nAnother library is statsmodels. The statsmodels library provides more detailed information about the model, such as the coefficients, standard errors, t-values, p-values, and confidence intervals.\n\nimport statsmodels.api as sm\nimport numpy as np\n\nX = np.array([1, 2, 3, 4, 5])\ny = X*np.random.normal(0, 1, 5)+np.random.normal(0, 1, 5)\n\nX_with_const = sm.add_constant(X)  # Add intercept term\nmodel = sm.OLS(y, X_with_const).fit()\nprint(model.summary())\n\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:                      y   R-squared:                       0.009\nModel:                            OLS   Adj. R-squared:                 -0.322\nMethod:                 Least Squares   F-statistic:                   0.02643\nDate:                Thu, 03 Apr 2025   Prob (F-statistic):              0.881\nTime:                        11:24:26   Log-Likelihood:                -11.558\nNo. Observations:                   5   AIC:                             27.12\nDf Residuals:                       3   BIC:                             26.34\nDf Model:                           1                                         \nCovariance Type:            nonrobust                                         \n==============================================================================\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst         -0.5424      3.306     -0.164      0.880     -11.064       9.979\nx1            -0.1620      0.997     -0.163      0.881      -3.334       3.010\n==============================================================================\nOmnibus:                          nan   Durbin-Watson:                   2.770\nProb(Omnibus):                    nan   Jarque-Bera (JB):                0.654\nSkew:                           0.653   Prob(JB):                        0.721\nKurtosis:                       1.802   Cond. No.                         8.37\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n\n\n\n\nUsing scikit-learn\nOne of the most popular libraries is scikit-learn. The following code shows how to fit a linear regression model using scikit-learn:\n\nfrom sklearn.linear_model import LinearRegression\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Sample data\nX = np.linspace(1, 5, 100).reshape(-1, 1)\ny = 2 * X + 1 + np.random.normal(0, 1, 100).reshape(-1, 1)\n\n# Model fitting\nmodel = LinearRegression()\nmodel.fit(X, y)\n\n# Predictions\ny_pred = model.predict(X)\n\n# Plot\nplt.scatter(X, y, color='blue', label='Data')\nplt.plot(X, y_pred, color='red', label='Linear Fit')\nplt.legend()\nplt.show()",
+    "text": "Linear Regression \nOften we want to find a model which can explain the data. It is important to understand the data and the model to be able to interpret the results and make predictions.\nThe simplest model is the linear regression model. It assumes that the data has a linear relationship with the target variable. For example, if we have a single feature \\(x\\) and a target variable \\(y\\), the linear regression model can be defined as:\n\\[\ny = \\beta_0 + \\beta_1 x + \\epsilon\n\\]\nwhere \\(y\\) is the target variable, \\(x\\) is the feature, \\(\\beta_0\\) and \\(\\beta_1\\) are the coefficients, and \\(\\epsilon\\) is the error term.\nFor multiple features \\(x_1, x_2, \\ldots, x_n\\), the linear regression model can be defined as:\n\\[\ny = \\beta_0 + \\beta_1 x_1 + \\beta_2 x_2 + \\ldots + \\beta_n x_n + \\epsilon\n\\]\nwhere \\(y\\) is the target variable, \\(x_1, x_2, \\ldots, x_n\\) are the features, \\(\\beta_0, \\beta_1, \\ldots, \\beta_n\\) are the coefficients, and \\(\\epsilon\\) is the error term.\nIn python there exists serveral libraries which can be used to fit a linear regression model.\n\nUsing scipy\nA easy way is to use scipy library. The scipy library has a function called linregress which can be used to fit a linear regression model. The function returns the slope, intercept, r-value, p-value, and the standard error of the estimate. And with scipy version 1.15.2 also the intercept error.\n\nfrom scipy.stats import linregress\nimport numpy as np\n\nx = [1, 2, 3, 4, 5]\ny = x*np.random.normal(0, 1, 5)+np.random.normal(0, 1, 5)\n\nresults = linregress(x, y)\n\nslope = results.slope\nintercept = results.intercept\nr_value = results.rvalue\np_value = results.pvalue\nstd_err = results.stderr\nintercept_err = results.intercept_stderr\nprint(\"slope: %f    intercept: %f\" % (slope, intercept))\nprint(\"R-squared: %f\" % r_value**2)\nprint(\"p-value: %f\" % p_value)\nprint(\"standard error: %f\" % std_err)\nprint(\"Intercept error: %f\" %intercept_err)\n# Two-sided inverse Students t-distribution\n# p - probability, df - degrees of freedom\nfrom scipy.stats import t\ntinv = lambda p, df: abs(t.ppf(p/2, df))\nprint(\"95% confidence interval: \" + str(intercept - tinv(0.05, len(x)-2)*intercept_err) + \" to \" + str(intercept + tinv(0.05, len(x)-2)*intercept_err))\n\nslope: -0.700801    intercept: 2.435217\nR-squared: 0.129534\np-value: 0.551845\nstandard error: 1.048860\nIntercept error: 3.478676\n95% confidence interval: -8.635481847214614 to 13.505916089953185\n\n\n\n\n\n\n\n\nImportant\n\n\n\nFor older version scipyonly returned 5 values with fields slope, intercept, rvalue, pvalue and stderr. For compatiblity reasons the return values are 5 elements tuple.\n\nfrom scipy.stats import linregress\nslope, intercept, r, p, se = linregress(x, y)\n\nAnd if you want to get the intercept error you can use the following return value as a object:\n\nfrom scipy.stats import linregress\nresults = linregress(x, y)\nprint(results.intercept_stderr)\n\n3.478675806784755\n\n\n\n\n\n\nUsing statsmodels\nAnother library is statsmodels. The statsmodels library provides more detailed information about the model, such as the coefficients, standard errors, t-values, p-values, and confidence intervals.\n\nimport statsmodels.api as sm\nimport numpy as np\n\nX = np.array([1, 2, 3, 4, 5])\ny = X*np.random.normal(0, 1, 5)+np.random.normal(0, 1, 5)\n\nX_with_const = sm.add_constant(X)  # Add intercept term\nmodel = sm.OLS(y, X_with_const).fit()\nprint(model.summary())\n\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:                      y   R-squared:                       0.023\nModel:                            OLS   Adj. R-squared:                 -0.302\nMethod:                 Least Squares   F-statistic:                   0.07178\nDate:                Thu, 03 Apr 2025   Prob (F-statistic):              0.806\nTime:                        14:53:07   Log-Likelihood:                -8.7745\nNo. Observations:                   5   AIC:                             21.55\nDf Residuals:                       3   BIC:                             20.77\nDf Model:                           1                                         \nCovariance Type:            nonrobust                                         \n==============================================================================\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst         -1.9068      1.895     -1.006      0.388      -7.936       4.123\nx1             0.1530      0.571      0.268      0.806      -1.665       1.971\n==============================================================================\nOmnibus:                          nan   Durbin-Watson:                   2.728\nProb(Omnibus):                    nan   Jarque-Bera (JB):                0.592\nSkew:                           0.529   Prob(JB):                        0.744\nKurtosis:                       1.688   Cond. No.                         8.37\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n\n\n\n\nUsing scikit-learn\nOne of the most popular libraries is scikit-learn. The following code shows how to fit a linear regression model using scikit-learn:\n\nfrom sklearn.linear_model import LinearRegression\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Sample data\nX = np.linspace(1, 5, 100).reshape(-1, 1)\ny = 2 * X + 1 + np.random.normal(0, 1, 100).reshape(-1, 1)\n\n# Model fitting\nmodel = LinearRegression()\nmodel.fit(X, y)\n\n# Predictions\ny_pred = model.predict(X)\n\n# Plot\nplt.scatter(X, y, color='blue', label='Data')\nplt.plot(X, y_pred, color='red', label='Linear Fit')\nplt.legend()\nplt.show()",
     "crumbs": [
       "Statistical and Exploratory Data Analysis",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Inferential Statistics</span>"
@@ -900,7 +900,7 @@
     "href": "course/chapters/SEDA/DataModels.html#non-linear-fits",
     "title": "Inferential Statistics",
     "section": "Non-Linear Fits",
-    "text": "Non-Linear Fits\nLinear regression may not always be sufficient, especially for complex relationships. Non-linear models provide more flexibility.\n\nPolynomial Regression\nPolynomial regression is a type of linear regression where the relationship between the independent variable \\(x\\) and the dependent variable \\(y\\) is modeled as an \\(n\\)-th degree polynomial.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\n# Sample data\nX = np.linspace(1, 5, 100)\ny = X**2 + np.random.normal(0, 1, 100)\n\nmodel = np.polyfit(X, y, 2)\n\nmodel = np.poly1d(model)\n\nX_range = np.linspace(1, 5, 100)\ny_fit = model(X_range)\n\nprint(model)\n\nplt.scatter(X, y, color='blue', label='Data')\nplt.plot(X_range, y_fit, color='purple', label='Polynomial Fit')\nplt.legend()\n\n        2\n0.9179 x + 0.3144 x - 0.145\n\n\n\n\n\n\n\n\n\n\n\nCurve Fitting with scipy\nscipy provides the curve_fit function to fit a non-linear model to the data. The function requires the model function and the data as input.\n\nfrom scipy.optimize import curve_fit\n\ndef nonlinear_func(x, a, b, c):\n    return a * np.sin(b * x) + c\n\nparams, _ = curve_fit(nonlinear_func, X.flatten(), y)\n\nX_range = np.linspace(1, 5, 100)\ny_fit = nonlinear_func(X_range, *params)\n\nplt.scatter(X, y, color='blue', label='Data')\nplt.plot(X_range, y_fit, color='purple', label='Non-Linear Fit')\nplt.legend()\nplt.show()",
+    "text": "Non-Linear Fits\nLinear regression may not always be sufficient, especially for complex relationships. Non-linear models provide more flexibility.\n\nPolynomial Regression\nPolynomial regression is a type of linear regression where the relationship between the independent variable \\(x\\) and the dependent variable \\(y\\) is modeled as an \\(n\\)-th degree polynomial.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\n# Sample data\nX = np.linspace(1, 5, 100)\ny = X**2 + np.random.normal(0, 1, 100)\n\nmodel = np.polyfit(X, y, 2)\n\nmodel = np.poly1d(model)\n\nX_range = np.linspace(1, 5, 100)\ny_fit = model(X_range)\n\nprint(model)\n\nplt.scatter(X, y, color='blue', label='Data')\nplt.plot(X_range, y_fit, color='purple', label='Polynomial Fit')\nplt.legend()\n\n       2\n0.998 x + 0.012 x + 0.07779\n\n\n\n\n\n\n\n\n\n\n\nCurve Fitting with scipy\nscipy provides the curve_fit function to fit a non-linear model to the data. The function requires the model function and the data as input.\n\nfrom scipy.optimize import curve_fit\n\ndef nonlinear_func(x, a, b, c):\n    return a * np.sin(b * x) + c\n\nparams, _ = curve_fit(nonlinear_func, X.flatten(), y)\n\nX_range = np.linspace(1, 5, 100)\ny_fit = nonlinear_func(X_range, *params)\n\nplt.scatter(X, y, color='blue', label='Data')\nplt.plot(X_range, y_fit, color='purple', label='Non-Linear Fit')\nplt.legend()\nplt.show()",
     "crumbs": [
       "Statistical and Exploratory Data Analysis",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Inferential Statistics</span>"
@@ -911,9 +911,9 @@
     "href": "course/chapters/SEDA/AdvancedAnalysis.html",
     "title": "Advanced Statistical Analysis",
     "section": "",
-    "text": "Dimensionality Reduction Techniques\nOften data has multi dimensions and it is not easy to analyze it.  Multivariate analysis is a set of statistical techniques used to analyze data with multiple variables. It helps in understanding the relationships between variables and identifying patterns in complex data.\nWhat can be done to analyze multi-dimensional data?\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.decomposition import PCA\n\n# Sample dataset\nX = np.random.rand(10, 3)\npca = PCA(n_components=2)\nX_pca = pca.fit_transform(X)\n\n# Plot PCA results\nplt.scatter(X_pca[:, 0], X_pca[:, 1])\nplt.xlabel('PC1')\nplt.ylabel('PC2')\nplt.title('PCA Analysis')\nplt.show()\nSometimes the data needs to be scaled before applying PCA. The StandardScaler from sklearn can be used to scale the data.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.decomposition import PCA\n\n# Standardizing Data\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n\n# Applying PCA\npca = PCA(n_components=2)\nX_pca = pca.fit_transform(X_scaled)\n\nprint(\"Explained Variance Ratio:\", pca.explained_variance_ratio_)\n\n# Plot PCA results\nplt.scatter(X_pca[:, 0], X_pca[:, 1])\nplt.xlabel('PC1')\nplt.ylabel('PC2')\nplt.title('PCA Analysis')\nplt.show()\n\nExplained Variance Ratio: [0.52780115 0.33361878]\nIndependent Component Analysis (ICA): Separates a multivariate signal into additive subcomponents.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.decomposition import FastICA\n\n# Sample dataset\nX = np.random.rand(10, 3)\nica = FastICA(n_components=2)\nX_ica = ica.fit_transform(X)\n\n# Plot ICA results\nplt.scatter(X_ica[:, 0], X_ica[:, 1])\nplt.xlabel('ICA1')\nplt.ylabel('ICA2')\nplt.title('Independent Component Analysis')\nplt.show()\nt-Distributed Stochastic Neighbor Embedding (t-SNE): Visualizes high-dimensional data in lower dimensions.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.manifold import TSNE\n\n# Sample dataset\nX = np.random.rand(10, 3)\ntsne = TSNE(n_components=2,perplexity=3,learning_rate='auto')\nX_tsne = tsne.fit_transform(X)\n\n# Plot t-SNE results\nplt.scatter(X_tsne[:, 0], X_tsne[:, 1])\nplt.xlabel('t-SNE1')\nplt.ylabel('t-SNE2')\nplt.title('t-SNE Analysis')\nplt.show()\nUMAP (Uniform Manifold Approximation and Projection): Reduces the dimensionality of data while preserving local and global structure.\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport umap\n\n# Sample dataset\nX = np.random.rand(10, 3)\numap_model = umap.UMAP(n_components=2)\nX_umap = umap_model.fit_transform(X)\n\n# Plot UMAP results\nplt.scatter(X_umap[:, 0], X_umap[:, 1])\nplt.xlabel('UMAP1')\nplt.ylabel('UMAP2')\nplt.title('UMAP Analysis')\nplt.show()\nFactor Analysis: Identifies latent factors that explain the variance in observed variables.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.decomposition import FactorAnalysis\n\n# Sample dataset\nX = np.random.rand(10, 3)\nfa = FactorAnalysis(n_components=2)\nX_fa = fa.fit_transform(X)\n\n# Plot Factor Analysis results\nplt.scatter(X_fa[:, 0], X_fa[:, 1])\nplt.xlabel('Factor 1')\nplt.ylabel('Factor 2')\nplt.title('Factor Analysis')\nplt.show()\nCanonical Correlation Analysis (CCA): Analyzes the relationship between two sets of variables.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.cross_decomposition import CCA\n\n# Sample dataset\nX = np.random.rand(10, 3)\nY = np.random.rand(10, 3)\ncca = CCA(n_components=2)\nX_c, Y_c = cca.fit_transform(X, Y)\n\n# Plot CCA results\nplt.scatter(X_c[:, 0], Y_c[:, 0])\nplt.xlabel('CCA1')\nplt.ylabel('CCA2')\n\nplt.title('Canonical Correlation Analysis')\nplt.show()",
+    "text": "Dimensionality Reduction Techniques\nOften data has multi dimensions and it is not easy to analyze it.  Multivariate analysis is a set of statistical techniques used to analyze data with multiple variables. It helps in understanding the relationships between variables and identifying patterns in complex data.\nWhat can be done to analyze multi-dimensional data?\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.decomposition import PCA\n\n# Sample dataset\nX = np.random.rand(10, 3)\npca = PCA(n_components=2)\nX_pca = pca.fit_transform(X)\n\n# Plot PCA results\nplt.scatter(X_pca[:, 0], X_pca[:, 1])\nplt.xlabel('PC1')\nplt.ylabel('PC2')\nplt.title('PCA Analysis')\nplt.show()\nSometimes the data needs to be scaled before applying PCA. The StandardScaler from sklearn can be used to scale the data.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.decomposition import PCA\n\n# Standardizing Data\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n\n# Applying PCA\npca = PCA(n_components=2)\nX_pca = pca.fit_transform(X_scaled)\n\nprint(\"Explained Variance Ratio:\", pca.explained_variance_ratio_)\n\n# Plot PCA results\nplt.scatter(X_pca[:, 0], X_pca[:, 1])\nplt.xlabel('PC1')\nplt.ylabel('PC2')\nplt.title('PCA Analysis')\nplt.show()\n\nExplained Variance Ratio: [0.46928193 0.32793163]\nIndependent Component Analysis (ICA): Separates a multivariate signal into additive subcomponents.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.decomposition import FastICA\n\n# Sample dataset\nX = np.random.rand(10, 3)\nica = FastICA(n_components=2)\nX_ica = ica.fit_transform(X)\n\n# Plot ICA results\nplt.scatter(X_ica[:, 0], X_ica[:, 1])\nplt.xlabel('ICA1')\nplt.ylabel('ICA2')\nplt.title('Independent Component Analysis')\nplt.show()\nt-Distributed Stochastic Neighbor Embedding (t-SNE): Visualizes high-dimensional data in lower dimensions.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.manifold import TSNE\n\n# Sample dataset\nX = np.random.rand(10, 3)\ntsne = TSNE(n_components=2,perplexity=3,learning_rate='auto')\nX_tsne = tsne.fit_transform(X)\n\n# Plot t-SNE results\nplt.scatter(X_tsne[:, 0], X_tsne[:, 1])\nplt.xlabel('t-SNE1')\nplt.ylabel('t-SNE2')\nplt.title('t-SNE Analysis')\nplt.show()\nUMAP (Uniform Manifold Approximation and Projection): Reduces the dimensionality of data while preserving local and global structure.\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport umap\n\n# Sample dataset\nX = np.random.rand(10, 3)\numap_model = umap.UMAP(n_components=2)\nX_umap = umap_model.fit_transform(X)\n\n# Plot UMAP results\nplt.scatter(X_umap[:, 0], X_umap[:, 1])\nplt.xlabel('UMAP1')\nplt.ylabel('UMAP2')\nplt.title('UMAP Analysis')\nplt.show()\nFactor Analysis: Identifies latent factors that explain the variance in observed variables.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.decomposition import FactorAnalysis\n\n# Sample dataset\nX = np.random.rand(10, 3)\nfa = FactorAnalysis(n_components=2)\nX_fa = fa.fit_transform(X)\n\n# Plot Factor Analysis results\nplt.scatter(X_fa[:, 0], X_fa[:, 1])\nplt.xlabel('Factor 1')\nplt.ylabel('Factor 2')\nplt.title('Factor Analysis')\nplt.show()\nCanonical Correlation Analysis (CCA): Analyzes the relationship between two sets of variables.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.cross_decomposition import CCA\n\n# Sample dataset\nX = np.random.rand(10, 3)\nY = np.random.rand(10, 3)\ncca = CCA(n_components=2)\nX_c, Y_c = cca.fit_transform(X, Y)\n\n# Plot CCA results\nplt.scatter(X_c[:, 0], Y_c[:, 0])\nplt.xlabel('CCA1')\nplt.ylabel('CCA2')\n\nplt.title('Canonical Correlation Analysis')\nplt.show()",
     "crumbs": [
-      "Statistical and Exploratory Data Analysis",
+      "Exercises",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Advanced Statistical Analysis</span>"
     ]
   },
@@ -924,8 +924,74 @@
     "section": "",
     "text": "Principal Component Analysis (PCA): reduces the dimensionality of data by transforming variables into uncorrelated components. It retains most of the variance in the data while reducing noise and redundancy. The PCA decomposition is based on the eigenvalues and eigenvectors of the covariance matrix of the data to identify the principal components with the highest variance.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClustering Techniques\nClustering is an unsupervised learning technique used to group similar data points based on patterns. In chemistry and materials science, clustering helps in categorizing material properties, identifying experimental trends, and classifying samples.\n\nk-Means Clustering: Partitions data into k clusters based on similarity.\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.cluster import KMeans\n\n# Example dataset\nX = np.random.rand(20, 2)\nkmeans = KMeans(n_clusters=3)\nkmeans.fit(X)\nlabels = kmeans.labels_\n\n# Plot Clusters\nplt.scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis')\nplt.title('K-Means Clustering')\nplt.show()\n\n\n\n\n\n\n\n\n\nHierarchical Clustering: Builds a tree of clusters using agglomerative or divisive methods.\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.cluster import AgglomerativeClustering\n\n# Example dataset\nX = np.random.rand(20, 2)\nagg = AgglomerativeClustering(n_clusters=3)\nlabels = agg.fit_predict(X)\n\n# Plot Clusters\nplt.scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis')\nplt.title('Hierarchical Clustering')\nplt.show()",
     "crumbs": [
-      "Statistical and Exploratory Data Analysis",
+      "Exercises",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Advanced Statistical Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseA_2.html",
+    "href": "course/exercises/exercises/exerciseA_2.html",
+    "title": "Exercise A 2:",
+    "section": "",
+    "text": "Temperature in Synthesis Reactor Part 2\nIn this exercise, we will repeat not-linear fits.\nLet’s analyze how bad the situation is in reactor 3 is. To do this, we will fit a sigmoid curve to the data set. Try to remember which kind of function we used to fit the non-linear data in the lecture.\nIn our case the sigmoid function is given by:\n\\[\nT(t) = T_0 + \\Delta T \\frac{1}{1 + e^{-a (t - t_0)}}\n\\]\nwith the four fitting parameters being:\nUse your results from Part 1 of this exercise.",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Exercise A 2:</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseA_2.html#temperature-in-synthesis-reactor-part-2",
+    "href": "course/exercises/exercises/exerciseA_2.html#temperature-in-synthesis-reactor-part-2",
+    "title": "Exercise A 2:",
+    "section": "",
+    "text": "temperature baseline $ T_0 $,\nthe temperature increase $ T $,\nthe growth rate $ a $,\nthe time at the midpoint of the temperature increase $ t_0 $\n\n\n\nTask 1:\n\nFit a sigmoid function to the data set of reactor 3.\nPlot the data and the fitted curve.\n\n\n\nQuestions:\n\nHow much is the tempearture changed in reactor 3?\nHow fast this change appears?\nWhen does the temperature reach the midpoint of the change?\n\n\n\nTask2:\n\nFit a suitable distribution function over the histograms plots of the temperature data\n\n\n\nQuestions:\n\nWhat can you say about the distribution of the temperature data?",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Exercise A 2:</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseB_1.html",
+    "href": "course/exercises/exercises/exerciseB_1.html",
+    "title": "Exercise B 1",
+    "section": "",
+    "text": "Exercise:",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Exercise B 1</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseB_1.html#linear-regression-calibration-ir-spectroscopy",
+    "href": "course/exercises/exercises/exerciseB_1.html#linear-regression-calibration-ir-spectroscopy",
+    "title": "Exercise B 1",
+    "section": "Linear Regression: Calibration IR spectroscopy",
+    "text": "Linear Regression: Calibration IR spectroscopy\nIn this exercise, we will repeat linear regressions.\n\nWe will learn how to use np.polyfit to perform linear regression.\nWe will learn how to use scipy.stats.linregress to perform linear regression.\nWe will learn how to use sklearn.linear_model.LinearRegression to perform linear regression.\nWe learn what are the differences between these three methods.\nWe will learn how to use the linear regression to calculate the concentration of a unknown sample.\n\nIn quantitative spectroscopy we measure the (dimensionless) absorbance \\(A\\) of a beam of light at a selected frequency/wavelength to determine the concentration \\(c\\) of a sample. To do this, we first calibrate the device using solutions with known concentration.\n\nData\nIn our exercise we compare the calibrations of two groups of students available in the files ir_spectroscopy1.dat and ir_spectroscopy2.dat.\n\n\nData Path:\nhttps://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/Linear_regression/\n\n\nTask\n\nLoad the data from the files ir_spectroscopy1.dat and ir_spectroscopy2.dat.\nPerform a linear regression on the data of each group.\nCompare the results of the three methods.\nUse the linear regression to predict the concentration of our unknown sample measured at the absorption of \\(A_\\mathrm{sample} = 0.753\\).\n\n\n\nQuestions\n\nWhat is the concentration of the unknown sample?\nAre the differences between the three methods?\nWhich method would you recommend for this type of data?",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Exercise B 1</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseB_2.html",
+    "href": "course/exercises/exercises/exerciseB_2.html",
+    "title": "Exercise B 2",
+    "section": "",
+    "text": "Exercise:",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Exercise B 2</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseB_2.html#linear-regression-and-correlation-experimental-vs.-theoretical-data",
+    "href": "course/exercises/exercises/exerciseB_2.html#linear-regression-and-correlation-experimental-vs.-theoretical-data",
+    "title": "Exercise B 2",
+    "section": "Linear Regression and Correlation: Experimental vs. Theoretical Data",
+    "text": "Linear Regression and Correlation: Experimental vs. Theoretical Data\nIn this exercise, we will repeat linear regressions and use it for demonstration of the correlation between experimental and theoretical data.\n\nWe will learn how to use create symmetrical plots.\nWe will learn to use z-scores outlier test.\n\nIn this exercise we compare experimentally measured electrochemical potentials of anthraquinone (AQ) derivatives with those calculated using theoretical methods. We want to find out how well the calculation can reproduce the experimental data. And check if there are any outliers in the data.\nAnthraquinone is an aromatic organic molecule, with manifold applications. In nature, AQ and its derivatives are found in plants and microorganisms due to its key role in reversible redox reactions. For this reason AQ derivates are also key components in industrial processes and material development (such as battery research at the University of Innsbruck).\n\nData\nThe data for this exercise is taken from a recent collaboration between the Theoretical Chemistry Department and the Institute for Physical chemistry. (Phys.Chem.Chem.Phys. 2022, 24, 16207 – 16219 ).\nThe experimental data is stored in the file experimental.dat and the theoretical data is stored in the file theory.dat.\nThe data contains the following columns: - 1-OH : the name of the AQ derivative - -530.0 : the first redox potential in V - -1178.5: the second redox potential in V\n\n\nData Path:\nhttps://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/Anthraquinone/\n\n\nTask\n\nLoad the data from the files experimental.dat and theory.dat.\nHave fist a look at the data.\nCreate a correlation plot of the experimental and theoretical data.\nPerform a linear regression of the data.\nCalculate the correlation coefficient.\nCheck for outliers in the data using the z-scores method.\n\n\n\nQuestions\n\nHow well do the theoretical data reproduce the experimental data?\nAre there any outliers in the data?",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Exercise B 2</span>"
     ]
   },
   {
@@ -936,7 +1002,7 @@
     "text": "Multiple Correlation Analysis\nimport numpy as np\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\nrs = np.random.RandomState(33)\ndf = pd.DataFrame(data=rs.normal(size=(100, 4)), columns=['A', 'B', 'C', 'D'])\n\n\n# Compute correlation matrix\ncorr_matrix = df.corr()\n\n# Visualizing with a heatmap\nsns.heatmap(corr_matrix, annot=True, cmap=\"coolwarm\")\n\nplt.show()",
     "crumbs": [
       "Data Visualization 2",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Advanced Plot Types</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Advanced Plot Types</span>"
     ]
   },
   {
@@ -947,7 +1013,7 @@
     "text": "PCA Plot\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.decomposition import PCA\nfrom sklearn.preprocessing import StandardScaler\n\n# Sample dataset\nX = np.random.rand(10, 3)\n\n# Standardizing Data\nscaler = StandardScaler()\n\nX_scaled = scaler.fit_transform(X)\n\n# Applying PCA\npca = PCA(n_components=2)\nX_pca = pca.fit_transform(X_scaled)\n\n# Plot PCA results\nplt.scatter(X_pca[:, 0], X_pca[:, 1])\nplt.xlabel('PC1')\nplt.ylabel('PC2')\nplt.title('PCA Analysis')\nplt.show()",
     "crumbs": [
       "Data Visualization 2",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Advanced Plot Types</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Advanced Plot Types</span>"
     ]
   },
   {
@@ -958,7 +1024,7 @@
     "text": "Network Plot\n\nimport networkx as nx\nimport matplotlib.pyplot as plt\n\nG = nx.Graph()\nG.add_node(1)\nG.add_nodes_from([2, 3])\nG.add_edge(1, 2)\nG.add_edges_from([(1, 2), (1, 3)])\nnx.draw(G, with_labels=True)\nplt.show()",
     "crumbs": [
       "Data Visualization 2",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Advanced Plot Types</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Advanced Plot Types</span>"
     ]
   },
   {
@@ -969,7 +1035,7 @@
     "text": "3D Plot\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom mpl_toolkits.mplot3d import Axes3D\n\nx = np.linspace(-5, 5, 100) \ny = np.linspace(-5, 5, 100)\nX, Y = np.meshgrid(x, y)\nZ = np.sin(np.sqrt(X**2 + Y**2))\n\nfig = plt.figure()\nax = fig.add_subplot(111, projection='3d')\nax.plot_surface(X, Y, Z)\nplt.show()",
     "crumbs": [
       "Data Visualization 2",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Advanced Plot Types</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Advanced Plot Types</span>"
     ]
   },
   {
@@ -980,7 +1046,7 @@
     "text": "Interactive Plots",
     "crumbs": [
       "Data Visualization 2",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Interactive Plots</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Interactive Plots</span>"
     ]
   },
   {
@@ -991,7 +1057,51 @@
     "text": "Matplotlib and ipywidget\n\nfrom matplotlib import pyplot as plt\nimport numpy as np\nimport ipywidgets as widgets\nfrom IPython.display import display\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\ndef plot_sine(frequency):\n    plt.plot(x, np.sin(frequency*x))\n    plt.show()\n  \nfrequency_slider = widgets.FloatSlider(value=1, min=0.1, max=10, step=0.1)\nwidgets.interactive(plot_sine, frequency=frequency_slider)\n\n\n\n\n\n\n\nPlotly\nPloty is a library that allows you to create interactive plots and dashboards, see the Plotly website.\n\nimport plotly.express as px\nimport numpy as np\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nfig = px.line(x=x, y=y, title='Sine function')\nfig.show()\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n\nBokeh\nBokeh is a library that allows you to create interactive plots and dashboards, see the Bokeh website.\n\nfrom bokeh.plotting import figure, show\nfrom bokeh.io import output_notebook\nimport numpy as np\n\noutput_notebook()\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\np = figure(title='Sine function')\np.line(x, y)\nshow(p)\n\n    \n    \n        \n        Loading BokehJS ...\n    \n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\nAltair\nAltair is a library that allows you to create interactive plots and dashboards, see the Altair website.\n\nimport altair as alt\nimport pandas as pd\nimport numpy as np\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\ndf = pd.DataFrame({'x': x, 'y': y})\n\nalt.Chart(df).mark_line().encode(\n    x='x',\n    y='y'\n).properties(\n    title='Sine function'\n)",
     "crumbs": [
       "Data Visualization 2",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Interactive Plots</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Interactive Plots</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseD_1.html",
+    "href": "course/exercises/exercises/exerciseD_1.html",
+    "title": "Exercise D 1",
+    "section": "",
+    "text": "Exercise:",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Exercise D 1</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseD_1.html#d-plot",
+    "href": "course/exercises/exercises/exerciseD_1.html#d-plot",
+    "title": "Exercise D 1",
+    "section": "3D Plot",
+    "text": "3D Plot\nIn this exercise, we will repeat to plot the 3D data.\n\nData\nThe 3D data is given in the file grid_data.dat. The data contains the following columns: - \\(r_\\mathrm{OH_1}\\) distance from O to H1 atom in Angstrom - \\(r_\\mathrm{OH_2}\\) distance from O to H2 atom in Angstrom - \\(V\\) potential energy in kcal/mol\n\n\nData Path:\nhttps://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/3D_data/\n\n\nTask\n\nLoad the data from the files grid_data.dat.\nCreate a 3D plot of the data using the plot_surface function.\nUse a meaningful color map.",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Exercise D 1</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseD_2.html",
+    "href": "course/exercises/exercises/exerciseD_2.html",
+    "title": "Exercise D 2",
+    "section": "",
+    "text": "Exercise:",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Exercise D 2</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseD_2.html#interactive-plot",
+    "href": "course/exercises/exercises/exerciseD_2.html#interactive-plot",
+    "title": "Exercise D 2",
+    "section": "Interactive Plot",
+    "text": "Interactive Plot\nIn this exercise, we will repeat how to create an interactive plot using ipywidgets.\n\nTask 1\n\nCreate an interactive plot using ipywidgets and matplotlib for the van-Deemeter equation where the user can change the parameters \\(a\\), \\(b\\) and \\(c\\) using sliders.\n\n\n\nTask 1\n\nCreate an interactive plot using ipywidgets and matplotlib for a rate equation together with an Arrhenius Plot where the user can change the parameters \\(k_0\\),and \\(E_a\\) using sliders.",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Exercise D 2</span>"
     ]
   },
   {
@@ -1002,7 +1112,7 @@
     "text": "Spectroscopy Data Analysis\nSpectroscopy is one of the most used experimental techniques in chemistry e.g.:\nThe analysis of spectroscopy needs often some preprocessing steps e.g.:",
     "crumbs": [
       "Special Analysis and Visualization Techniques",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Analysis of Spectroscopy Data</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Analysis of Spectroscopy Data</span>"
     ]
   },
   {
@@ -1013,7 +1123,7 @@
     "text": "UV/Vis spectroscopy\nIR spectroscopy\nNMR spectroscopy\nMass spectroscopy\n\n\n\nBaseline correction\nSmoothing\nNormalization\nPeak assignment\nPeak fitting\nPeak integration\nPeak deconvolution\n\n\nBaseline Correction\nA baseline correction is often needed to remove background noise from the signal and\nThe baseline correction can be done by different methods e.g.:\n\nPolynomial fitting",
     "crumbs": [
       "Special Analysis and Visualization Techniques",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Analysis of Spectroscopy Data</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Analysis of Spectroscopy Data</span>"
     ]
   },
   {
@@ -1024,7 +1134,7 @@
     "text": "Image Data Analysis",
     "crumbs": [
       "Special Analysis and Visualization Techniques",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Analysis of Image Data</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Analysis of Image Data</span>"
     ]
   },
   {
@@ -1035,7 +1145,51 @@
     "text": "Ternary Plot\nA ternary plot is a type of plot that is used to visualize the composition of three components.\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport ternary\n\n# Create a figure\nfig, tax = ternary.figure(scale=1.0)\n\n# Draw Boundary and Gridlines\ntax.boundary(linewidth=2.0)\ntax.gridlines(multiple=0.2, color=\"blue\")\n\n# Set Axis labels and Title\nfontsize = 10\ntax.set_title(\"Ternary Plot\", fontsize=fontsize)\ntax.left_axis_label(\"Component A\", fontsize=fontsize)\ntax.right_axis_label(\"Component B\", fontsize=fontsize)\ntax.bottom_axis_label(\"Component C\", fontsize=fontsize)\n\n# Plot some data\npoints = np.random.dirichlet((1, 1, 1), 10)\ntax.scatter(points, marker='s', color='red', label=\"Data\")\n\n# Legend\ntax.legend()\nplt.show()",
     "crumbs": [
       "Special Analysis and Visualization Techniques",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Ternary Plot</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Ternary Plot</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseC_1.html",
+    "href": "course/exercises/exercises/exerciseC_1.html",
+    "title": "Exercise C 1",
+    "section": "",
+    "text": "Exercise:",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Exercise C 1</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseC_1.html#spectroscopic-data-analysis",
+    "href": "course/exercises/exercises/exerciseC_1.html#spectroscopic-data-analysis",
+    "title": "Exercise C 1",
+    "section": "Spectroscopic data analysis",
+    "text": "Spectroscopic data analysis\nIn this exercise, we will repeat how spectroscopic data can be analyzed effectively via Python SciPylibrary.\n\nWe will learn denoising and smoothing of data (SM).\nWe will learn how to correct the baseline of data (BC).\nWe will learn how to detect peaks in data (PD).\n\nThese kind of analysis methods can be relevant when depicting X-ray diffraction patterns, spectrograms obtained from various techniques (e.g. IR/Raman, UV/Vis, X-ray, NMR, …), chromatograms and electropherograms and many more.\nOften the experimental data is subject to noise or has a notable offset in the baseline.\nSciPy offers a number of straightforward tools to quickly enhance the data to make it ready for plotting.\nLet’s start by reading in some X-ray diffraction data.\n\nData\nThe data is a simple X-ray diffraction pattern of a crystalline material. The experimental data is stored in XRD_experimental.datand the theoretical data in XRD_theory.dat.\nFirst column represents the 2-theta angle in degrees, the second column represents the intensity in arbitrary units.\n\n\nData Path:\nhttps://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/X-ray_Diffraction/\n\n\nTask\n\nLoad the data from the files XRD_experimental.dat and XRD_theory.dat.\nHave fist a look at the data.\nNormalize the data to the maximum intensity to 100.\nSmooth the experimental data using a Gaussian filter with a standard deviation of 2.0.\nFind the peaks in the experimental data using the find_peaks function from scipy.signal.\nPlot the smoothed experimental data.\nAdd a baseline correction to the experimental data using the minimum_fiter1d function from scipy.ndimage.\nPlot the baseline corrected experimental data.\nFind the peaks in the baseline corrected data uing the find_peaks function from scipy.signal.\nCompare the smoothed experimental data with the smoothed and baseline corrected experimental data via a correlation plot and linear regression.\nCompare both experimental smoothed and baseline corrected data and theoretical data via a correlation plot and linear regression.\n\n\n\nQuestions\n\nWhat effect does the Gaussian filter have on the data?\nHow does the baseline correction affect the data?\nHow well does the smoothed data correlate with the theoretical data?",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Exercise C 1</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseC_2.html",
+    "href": "course/exercises/exercises/exerciseC_2.html",
+    "title": "Exercise C 2",
+    "section": "",
+    "text": "Exercise:",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exercise C 2</span>"
+    ]
+  },
+  {
+    "objectID": "course/exercises/exercises/exerciseC_2.html#chromotography-and-spectroscopy-integration",
+    "href": "course/exercises/exercises/exerciseC_2.html#chromotography-and-spectroscopy-integration",
+    "title": "Exercise C 2",
+    "section": "Chromotography and Spectroscopy Integration",
+    "text": "Chromotography and Spectroscopy Integration\nIn this exercise, we will repeat how spectroscopic data can be integrated via Python SciPylibrary.\n\nWe will learn denoising and smoothing of data (SM).\nWe will learn how to correct the baseline of data (BC).\nWe will learn how to detect peaks in data (PD).\nWe will learn how to integrate the area under the curve (AUC).\n\nIn this example we are using the featues of finde-peaks() to determine the left and right integration limits to integrate peaks of an example chromatogram.\nTo achieve this, we first have to reduce the noise and apply a baseline correction.\nLet’s start by loading the file!\n\nData\nThe chromatographic data is stored in a file called Chromatogram.csv.\nFirst column represents the time in min and the second column represents the intensity in arbitrary units (a.u.).\n\n\nData Path:\nhttps://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/Chromatography/\n\n\nTask\n\nLoad the data from the files Chromatogram.csv.\nApply Gaussian smoothing and minimum filtered baseline correction.\nDetect the peaks and integrate the area under the curve.\nPlot the chromatogram with the detected peaks and the integrated area under the curve.\n\n\n\nQuestions\n\nWhat is the area under the curve for each peak?",
+    "crumbs": [
+      "Exercises",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exercise C 2</span>"
     ]
   },
   {
@@ -1046,7 +1200,7 @@
     "text": "MIT License\nCopyright (c) 2025 Stefanie Kröll and Thomas Hofer\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "crumbs": [
       "Informations",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>License</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>License</span>"
     ]
   },
   {
@@ -1057,7 +1211,7 @@
     "text": "Hosting: GitHub Pages\nThis website does not collect, store or process any personally identifiable information and does not use cookies or other tracking technologies.\nThis website is hosted on GitHub Pages. GitHub says at",
     "crumbs": [
       "Informations",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Privacy Policy</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Privacy Policy</span>"
     ]
   },
   {
@@ -1068,7 +1222,7 @@
     "text": "Github-Docs &gt; GitHub Pages &gt; Get started &gt; About GitHub Pages (https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages):\n\n\n“When a GitHub Pages site is visited, the visitor’s IP address is logged and stored for security purposes, regardless of whether the visitor has signed into GitHub or not. For more information about GitHub’s security practices, see GitHub Privacy Statement”",
     "crumbs": [
       "Informations",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Privacy Policy</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Privacy Policy</span>"
     ]
   },
   {
@@ -1079,7 +1233,7 @@
     "text": "This Data Analysis and Visualization for Chemists and Material Scientists tutorial is created by:\nStefanie Kröll, MSc\nUniversity of Innsbruck\nInstitute of General, Inorganic and Theoretical Chemistry\nUniversity of Innsbruck\nCenter for Chemistry and Biomedicine\nInnrain 80-82\nA-6020 Innsbruck\nAUSTRIA, Europe\nA part of the exercises are created by:\nAssoz.-Prof. Dr. Thomas Hofer\nUniversity of Innsbruck\nInstitute of General, Inorganic and Theoretical Chemistry\nUniversity of Innsbruck\nCenter for Chemistry and Biomedicine\nInnrain 80-82\nA-6020 Innsbruck\nAUSTRIA, Europe\n\nas part of the lecture course “VU Data Science and Visualization Primer for Chemists and Material Scientists” at UIBK\n\nContact Information\nEmail: s.kroell@student.uibk.ac.at\n\n\nResponsible for Content: Stefanie Kröll\nCopyright Notice: © 2025 Stefanie Kröll. All rights reserved.\n\nPrivacy Policy\nExternal Link Policy and Disclaimers\n\n\n\nAcknowledgements\nThis tutorial is based on the following sources:\n\nScientific Computing for Chemists with Python",
     "crumbs": [
       "Informations",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Impressum</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Impressum</span>"
     ]
   },
   {
@@ -1090,7 +1244,7 @@
     "text": "Disclaimer:\nAll information provided on this website is offered “as is” without any warranties, expressed or implied, including, but not limited to, warranties of merchantability, fitness for a particular purpose, or non-infringement. While efforts are made to ensure the accuracy of the information, the website owner makes no guarantee of its correctness or completeness. Use the information at your own discretion and risk.\n\n\n\n\n\n\nExternal Link Policy\n\n\n\nIt is imperative to note that the external links present on this website are intended to serve as a reference point, providing insights into software programs, packages, tools and tutorials that can be utilised. The primary function of these links is to facilitate further information on the subject matter. It is crucial to acknowledge that the website author is not held responsible for the content or information found on external websites. Furthermore, the website author does not exercise any control over the content of such external websites. It is, therefore, incumbent upon the user to exercise due diligence when engaging with external links. The user uses the links at his own risk and is subject to the terms of services of the respective providers.",
     "crumbs": [
       "Informations",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Disclaimers</span>"
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>Disclaimers</span>"
     ]
   }
 ]
