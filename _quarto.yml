@@ -107,7 +107,7 @@ format:
       code-tools: true
       code-link: true
       code-block-bg: true
-      code-block-border-left: "#31BAE9"
+      code-block-border-left: "#2B7492"
       toc: true
       toc-depth: 3
       fig-cap: true
