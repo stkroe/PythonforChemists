@@ -85,13 +85,13 @@ Timeschedule for a week:
 
 
 --------
-| Time       | Monday           | Tuesday           | Wednesday            | Thursday         | Friday       |
-|------------|------------------|-------------------|----------------------|------------------|--------------|
-| 13:00-14:00| Introduction     | Lecture 2         | Lecture 3            | Exercise Block 4 | F&Q          |
-| 14:00-15:00| Lecture 1        | Lecture 2         | Lecture 3            | Exercise Block 4 | F&Q          |
-| 15:00-16:00| Lecture 1        | Exercise Block 2  | Exercise Block 2     | Exercise Block 4 | Final Exam   |
-| 16:00-17:00| Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4 | Final Exam   |
-| 17:00-18:00| Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4 | Final Exam   |
+| Time        | Monday           | Tuesday           | Wednesday            | Thursday          | Friday       |
+|-------------|------------------|-------------------|----------------------|-------------------|--------------|
+| 13:00-14:00 | Introduction     | Lecture 2         | Lecture 3            | Exercise Block 4  | F&Q          |
+| 14:00-15:00 | Lecture 1        | Lecture 2         | Lecture 3            | Exercise Block 4  | F&Q          |
+| 15:00-16:00 | Lecture 1        | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
+| 16:00-17:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
+| 17:00-18:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
 --------
 
 ### Introduction {.unnumbered}
@@ -145,7 +145,7 @@ Timeschedule for a week:
 **Exercise B 2**
 - [Exercise B 2](course/exercises/exercises/exerciseB_2.ipynb)
 
-***Exercise B 3**
+**Exercise B 3**
 - [Exercise B 3](course/exercises/exercises/exerciseB_3.ipynb)
 
 
@@ -163,7 +163,7 @@ Timeschedule for a week:
 **Exercise C 1**
 - [Exercise C 2](course/exercises/exercises/exerciseC_1.ipynb)
 
-***Exercise C 2**
+**Exercise C 2**
 - [Exercise C 3](course/exercises/exercises/exerciseC_2.ipynb)
 
 **Exercise D 1**
@@ -175,4 +175,4 @@ Timeschedule for a week:
 ### Final Exam {.unnumbered}
 
 Everyone gets a different data set and has to analyze the data and visualize the results.
-- [Final Exam](course/exercises/exercises/final_exam.ipynb)
+- [Final Exam](course/exam/final_exam.ipynb)
