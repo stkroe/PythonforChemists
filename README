@@ -1,10 +1,39 @@
 Welcome to the Data Analysis and Visualization Course for Chemists and Material Scientists!
 --------------------------------------------------------------------------------------------
 
-This course is designed for better understanding how Python can be used for data analysis and visualization in the fields of chemistry and materials science. Before diving into the course content, please take a moment to review the following important informations.
+This course is designed for better understanding how Python can be used for data analysis and visualization in the fields of chemistry and materials science. 
 
-This course can be found at:
+# The aim of this course
+
+Due to the rapid development of data science and machine learning, Python has become more and more important in scientific research.
+
+In some fields, Python is already the standard programming language for data analysis and visualization.
+However, it seems that in other fields, such as chemistry and materials science, the use of Python is not yet as prevalent as in other areas.
+This course aims to show you the advantages of using Python for data analysis and visualization in chemistry and materials science.
+
+It is designed to be flexible and adaptable to your needs, allowing you to focus on the areas that are most relevant to your work or interests.
+
+The plan is to create different levels of content, so that you can choose the level of difficulty that suits you best.
+
+## Disclaimer
+
+This course is still under construction and continuous development.
+
+Errors, omissions, and changes are possible.
+
+
+## Contribution
+
+If you have any suggestions or feedback, please feel free to open an issue on GitHub.
+
+You want to contribute to this course? Please open a pull request on GitHub.
+It is highly appreciated if you can provide a clear description of your changes in the pull request.
+It will help us to understand your changes and to review them more efficiently.
+
+
+## Course
+
+You can find the course under:
 
 https://stkroe.github.io/PythonforChemists/
-
 

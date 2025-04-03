@@ -6,8 +6,8 @@ title: "Introduction"
 ## What do you need for data analysis and visualization? {.unnumbered}
 
 
-- Scientists produce a lot of data which needs to be analyzed and visualized.
-- Clear presentation of data is essential for the understanding of the data.
+- Research normally contains handling a lot of data.
+- Clear presentation of data is essential to the understanding of data.
 - It helps to improve your scientific communication and make your results more accessible to others.
 - There are many tools available for data analysis and visualization.
 
@@ -15,10 +15,7 @@ A very simple approach would be the use of basic spreadsheet programs with graph
 [Excel](https://www.microsoft.com/de-at/microsoft-365/excel), [LibreOffice Calc](https://de.libreoffice.org/) ...
 
 
-
 But for more advanced analysis you need probably specifc plotting and analysis tools: 
-
-
 
 - You can either use programs with GUIs *e.g.* [LabPlot](https://labplot.kde.org/), [QtiPlot](https://www.qtiplot.com/), [Scilab](https://www.scilab.org/), [SciDAVis](https://scidavis.sourceforge.net/), [Origin](https://www.originlab.com/) ...
 - or a GUI based program with command line interface *e.g.* [Xmgrace](https://plasma-gate.weizmann.ac.il/Grace/),  [GNU Octave](https://octave.org/) ...
@@ -45,11 +42,9 @@ For a larger list see these wikipedia lists:
 
 - open-source
 - well documented with a lot of online resources:
-
- - [tutorials](https://github.com/ujjwalkarn/DataSciencePython), 
- - [documentations](https://docs.python.org/3/),
- - [stackoverflow](https://stackoverflow.com/questions) ect.
- 
+    - [tutorials](https://github.com/ujjwalkarn/DataSciencePython), 
+    - [documentations](https://docs.python.org/3/),
+    - [stackoverflow](https://stackoverflow.com/questions) ect.
 - easy to learn 
 - intuitive
 - highly flexible
