@@ -145,7 +145,7 @@ Timeschedule for a week:
 **Exercise B 2**
 - [Exercise B 2](course/exercises/exercises/exerciseB_2.ipynb)
 
-***Exercise B 3**
+**Exercise B 3**
 - [Exercise B 3](course/exercises/exercises/exerciseB_3.ipynb)
 
 
@@ -163,7 +163,7 @@ Timeschedule for a week:
 **Exercise C 1**
 - [Exercise C 2](course/exercises/exercises/exerciseC_1.ipynb)
 
-***Exercise C 2**
+**Exercise C 2**
 - [Exercise C 3](course/exercises/exercises/exerciseC_2.ipynb)
 
 **Exercise D 1**
