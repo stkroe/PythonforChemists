@@ -49,6 +49,7 @@ book:
           - course/chapters/Python/Intermediate.qmd
           - course/chapters/Python/BasicsModules.qmd
           - course/chapters/Python/AdvancedModules.qmd
+
       - part: "Data Handling and Preprocessing"
         chapters:
           - course/chapters/DHP/DataCollection.qmd
@@ -61,6 +62,8 @@ book:
           - course/chapters/Plots/SimplePlots.qmd
           - course/chapters/Plots/Seaborn.qmd
           - course/chapters/Plots/SimplePlotTypes.qmd
+      - part: "Exercises"
+        chapters:
           - course/exercises/exercises/exerciseA_1.ipynb
       - part: "Statistical and Exploratory Data Analysis"
         chapters:
@@ -68,16 +71,30 @@ book:
           - course/chapters/SEDA/DescriptiveStatistics.qmd
           - course/chapters/SEDA/ModelTesting.qmd
           - course/chapters/SEDA/DataModels.qmd
-          - course/chapters/SEDA/AdvancedAnalysis.qmd
+      - part: "Exercises"
+        chapters:
+            - course/chapters/SEDA/AdvancedAnalysis.qmd
+            - course/exercises/exercises/exerciseA_2.ipynb
+            - course/exercises/exercises/exerciseB_1.ipynb
+            - course/exercises/exercises/exerciseB_2.ipynb
+            - course/exercises/exercises/exerciseB_3.ipynb
       - part: "Data Visualization 2"
         chapters:
-          - course/chapters/PlotTypes/AdvancedPlotTypes.qmd
-          - course/chapters/PlotTypes/InteractivePlots.qmd
+        - course/chapters/PlotTypes/AdvancedPlotTypes.qmd
+        - course/chapters/PlotTypes/InteractivePlots.qmd
+      - part: "Exercises"
+        chapters:
+            - course/exercises/exercises/exerciseD_1.ipynb
+            - course/exercises/exercises/exerciseD_2.ipynb
       - part: "Special Analysis and Visualization Techniques"
         chapters:
           - course/chapters/SpecialAnalysisPlots/Spectroscopy.qmd
           - course/chapters/SpecialAnalysisPlots/ImageAnalysis.qmd
           - course/chapters/SpecialAnalysisPlots/Ternary.qmd
+      - part: "Exercises"
+        chapters:
+            - course/exercises/exercises/exerciseC_1.ipynb
+            - course/exercises/exercises/exerciseC_2.ipynb
       # - part: "Machine Learning"
       #   chapters:
       #     - course/chapters/ML/IntroductionML.qmd

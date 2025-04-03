@@ -79,18 +79,20 @@ If any data files are used you can download them via this icon {{< bi filetype-t
 
 ##  This course within of the "VU Data Science and Visualization Primer for Chemists and Material Scientists"
 
-We concentrate on the Basic Path during this lecture.
+We concentrate on the **Beginner Path** of the course during the lecture.
 
-Timeschedule for a week table 
+Timeschedule for a week: 
 
-| Time       | Monday       | Tuesday      | Wednesday    | Thursday     | Friday       |
-|------------|--------------|--------------|--------------|--------------|--------------|
-| 13:00-14:00| Introduction/Python Basics | Lecture 2| Lecture 3   | Lecture 4| Lecture 5  |
-| 14:00-15:00| Lecture 1    | Lecture 2 | Lecture 3   | Lecture 4 | Example 5  |
-| 15:00-16:00| Lecture 1    | Example 2| Example 3  | Example 4 |F&Q|
-| 16:00-17:00| Example 1    | Example 2| Example 3  | Example 4 | Final Exam|
-| 17:00-18:00| Example 1    | Example 2| Example 3  | Example 4 | Final Exam|
 
+--------
+| Time       | Monday           | Tuesday           | Wednesday            | Thursday         | Friday       |
+|------------|------------------|-------------------|----------------------|------------------|--------------|
+| 13:00-14:00| Introduction     | Lecture 2         | Lecture 3            | Exercise Block 4 | F&Q          |
+| 14:00-15:00| Lecture 1        | Lecture 2         | Lecture 3            | Exercise Block 4 | F&Q          |
+| 15:00-16:00| Lecture 1        | Exercise Block 2  | Exercise Block 2     | Exercise Block 4 | Final Exam   |
+| 16:00-17:00| Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4 | Final Exam   |
+| 17:00-18:00| Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4 | Final Exam   |
+--------
 
 ### Introduction {.unnumbered}
 
@@ -114,8 +116,9 @@ Timeschedule for a week table
 - [Data Visualization](course/chapters/Plots/DataVisualization.qmd)
 - [Simple Plots](course/chapters/Plots/SimplePlots.qmd)
 
-**Exercise 1**
-- [Exercise 1](course/exercises/exercises/exerciseA_1.ipynb)
+### Exercise Block 1 {.unnumbered}
+**Exercise A 1**
+- [Exercise A 1](course/exercises/exercises/exerciseA_1.ipynb)
 
 ### Lecture 2 {.unnumbered}
 
@@ -130,19 +133,44 @@ Timeschedule for a week table
 
 - [Simple Plot Types](course/chapters/Plots/SimplePlotTypes.qmd)
 
+### Exercise Block 2 {.unnumbered}
+**Exercise A 2**
+- [Exercise A 2](course/exercises/exercises/exerciseA_2.ipynb)
 
-**Exercise 2**
-- [Exercise 2](course/exercises/exercises/exerciseA_2.ipynb)
-**Exercise 3**
-- [Exercise 3](course/exercises/exercises/exerciseB_1.ipynb)
+**Exercise B 1**
+- [Exercise B 1](course/exercises/exercises/exerciseB_1.ipynb)
+
+**Exercise B 2**
+- [Exercise B 2](course/exercises/exercises/exerciseB_2.ipynb)
+
+***Exercise B 3**
+- [Exercise B 3](course/exercises/exercises/exerciseB_3.ipynb)
 
 
 ### Lecture 3 {.unnumbered}
 
-**Special Data Visualization and Analysis Techniques - Spectroscopy and Image Data Analysis**
+**Special Data Visualization and Analysis Techniques**
 
+- [Advanced Plot Types](course/chapters/PlotTypes/AdvancedPlotTypes.qmd)
 - [Spectroscopy Data Analysis](course/chapters/SDVA/SpectroscopyDataAnalysis.qmd)
 - [Image Data Analysis](course/chapters/SDVA/ImageDataAnalysis.qmd)
 
-**Exercise 4**
-<!-- - [Exercise 4](course/exercises/exercises/exercise4.ipynb) -->
+
+### Exercise Block 3 {.unnumbered}
+
+**Exercise C 1**
+- [Exercise C 2](course/exercises/exercises/exerciseC_1.ipynb)
+
+***Exercise C 2**
+- [Exercise C 3](course/exercises/exercises/exerciseC_2.ipynb)
+
+**Exercise D 1**
+- [Exercise D 1](course/exercises/exercises/exerciseD_1.ipynb)
+
+**Exercise D 2**
+- [Exercise D 2](course/exercises/exercises/exerciseD_2.ipynb)
+
+### Final Exam {.unnumbered}
+
+Everyone gets a different data set and has to analyze the data and visualize the results.
+- [Final Exam](course/exercises/exercises/final_exam.ipynb)
