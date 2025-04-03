@@ -1,4 +1,4 @@
-# Welcome to the Data Analysis and Visualization Course for Chemists and Material Scientists!
+# Welcome to this Course!
 
 This course is designed for better understanding how Python can be used for data analysis and visualization in the fields of chemistry and materials science. Before diving into the course content, please take a moment to review the following important informations.
 
@@ -30,24 +30,32 @@ Please read the [license](informations/license.qmd), [privacy policy](informatio
 
 - This course wants to show you the advantage of using a programming language for data analyzing and visualization in chemistry and material science in comparision to gui-based softwares.
 - The course will give you a very brief introduction to Python and its libraries.
-- The main focus will be on the libraries `numpy`, `pandas`, `pandas`, `scipy`, `matplotlib` and `seaborn`.
+- The main focus will be on the libraries `numpy`, `pandas`, `pandas`, `scipy`, `scikit-learn`, `matplotlib`.
 - The course is organized interactivly. You will get the chance to practice with exercises.
 - Upon successful completion of this course, you will have acquired a comprehensive understanding of the fundamental components of Python and the key packages necessary for the analysis and presentation of their own research data.
-- You can test your knowledge by an exam example at the end of this course.
-- At the end of this course you will be able to find enough resources to dive deeper into Python.
+- At the end of this course you will be able to find enough resources to dive deeper into Python and you can test your knowledge by an example exam.
+
 
 ---
 
 ## What can you NOT expect from this course {.unnumbered}
 
-- You will not get a deep explanation of the Python language. Please consider full Python tutorials for get a deep overview of Python.
+- You will **not get a deep explanation of the Python language**. Please consider **full Python tutorials** for get a deep overview of Python.
 - You will not learn object-oriented programming in Python.
 - We will not go into details of the libraries.
-- This is not a statistics course. 
+- This is **not a statistics course**. 
 
 ---
 
 ## How this course is structured {.unnumbered}
+
+The plan is to create different levels of content, so that you can choose the level of difficulty that suits you best. The course is designed to be flexible and adaptable to your needs, allowing you to focus on the areas that are most relevant to your work or interests.
+
+:::{.callout-important}
+Due to the fact that this course is still under construction, the content may change over time. The current version of the course is a work in progress and may not reflect the final structure or content.
+
+If someone is interested in contributing to this course, please feel free to contribute. The course is hosted via [GitHub](https://github.com/stkroe/pythonforchemists). Contributions, suggestions, and feedback are highly appreciated. Please refer in the README to the [Contribution Guidelines](https://github.com/stkroe/pythonforchemists/README) for more details.
+:::
 
 This course is divided into three possible paths to accomplish the learning objectives:
 
