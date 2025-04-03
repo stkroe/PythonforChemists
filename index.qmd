@@ -118,6 +118,7 @@ Timeschedule for a week:
 
 ### Exercise Block 1 {.unnumbered}
 **Exercise A 1**
+
 - [Exercise A 1](course/exercises/exercises/exerciseA_1.ipynb)
 
 ### Lecture 2 {.unnumbered}
@@ -134,6 +135,7 @@ Timeschedule for a week:
 - [Simple Plot Types](course/chapters/Plots/SimplePlotTypes.qmd)
 
 ### Exercise Block 2 {.unnumbered}
+
 **Exercise A 2**
 - [Exercise A 2](course/exercises/exercises/exerciseA_2.ipynb)
 
