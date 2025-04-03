@@ -71,9 +71,9 @@ book:
           - course/chapters/SEDA/DescriptiveStatistics.qmd
           - course/chapters/SEDA/ModelTesting.qmd
           - course/chapters/SEDA/DataModels.qmd
+          - course/chapters/SEDA/AdvancedAnalysis.qmd
       - part: "Exercises"
         chapters:
-            - course/chapters/SEDA/AdvancedAnalysis.qmd
             - course/exercises/exercises/exerciseA_2.ipynb
             - course/exercises/exercises/exerciseB_1.ipynb
             - course/exercises/exercises/exerciseB_2.ipynb
