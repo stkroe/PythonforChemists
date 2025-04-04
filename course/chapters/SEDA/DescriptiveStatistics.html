@@ -552,7 +552,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <section id="numpy" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="numpy">Numpy</h3>
-<div id="12e8dccb" class="cell" data-execution_count="1">
+<div id="fd9beee3" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
@@ -572,7 +572,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>np.histogram2d(a,b, [,bins,range,density,weights])</code> returns the <strong>2D histogram</strong> of the elements of an array</p></li>
 <li><p><code>np.histogramdd(a, [,bins,range,density,weights])</code> returns the <strong>nD histogram</strong> of the elements of an array</p></li>
 </ul>
-<div id="9df2f325" class="cell" data-execution_count="2">
+<div id="a62bde25" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(arr)</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="bu">print</span>(<span class="st">"Mean: "</span>, np.mean(arr))</span>
@@ -606,7 +606,7 @@ IQR:  0.040000000000000036</code></pre>
 <li><code>np.searchsorted(a,v)</code> returns the <strong>index of the first element</strong> of an array <br> <strong>that is greater than or equal to a value</strong></li>
 <li><code>np.extract(condition,a)</code> returns the <strong>elements of an array that satisfy a condition</strong></li>
 </ul>
-<div id="3c61c008" class="cell" data-execution_count="3">
+<div id="a9c6b5b4" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="bu">print</span>(arr)</span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="bu">print</span>(<span class="st">"Index of the maximum element: "</span>, np.argmax(arr))</span>
@@ -633,7 +633,7 @@ Find the index of element "&gt;4":  [[4]
 </section>
 <section id="pandas" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="pandas">Pandas</h3>
-<div id="bb2f1ea7" class="cell" data-execution_count="4">
+<div id="a2f2a4b1" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb6-2"><a href="#cb6-2"></a>data <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb6-3"><a href="#cb6-3"></a>    <span class="st">"Name"</span>: [<span class="st">"Water"</span>, <span class="st">"Sulfuric Acid"</span>, <span class="st">"Ethanol"</span>, <span class="st">"Acetone"</span>, <span class="st">"Ammonia"</span>, <span class="st">"Benzene"</span>, <span class="st">"Methanol"</span>, <span class="st">"Glycerol"</span>],</span>
@@ -650,7 +650,7 @@ Find the index of element "&gt;4":  [[4]
 <ul>
 <li><code>data.head()</code>: Returns the first 5 rows of the dataframe</li>
 </ul>
-<div id="db07b294" class="cell" data-execution_count="5">
+<div id="65e9f7f8" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">print</span>(<span class="st">"head of data: </span><span class="ch">\n</span><span class="st">"</span>,data.head()) <span class="co"># print the first 5 rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>head of data: 
@@ -672,7 +672,7 @@ Find the index of element "&gt;4":  [[4]
 <ul>
 <li><code>data.shape[0]</code>: Returns the number of rows in the dataframe</li>
 </ul>
-<div id="9e70aa96" class="cell" data-execution_count="6">
+<div id="d4ad34be" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of data set: 
@@ -682,7 +682,7 @@ Find the index of element "&gt;4":  [[4]
 <ul>
 <li><code>data.shape[1]</code>: Returns the number of columns in the dataframe</li>
 </ul>
-<div id="3bb13f9f" class="cell" data-execution_count="7">
+<div id="b74c8309" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of data set: 
@@ -692,7 +692,7 @@ Find the index of element "&gt;4":  [[4]
 <ul>
 <li><code>data["Name"]</code>: Returns the column “Name” of the dataframe</li>
 </ul>
-<div id="6dc52de7" class="cell" data-execution_count="8">
+<div id="18503314" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="bu">print</span>(<span class="st">"Name of chemicals: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Name"</span>]) <span class="co"># print the column "Name"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Name of chemicals: 
@@ -710,7 +710,7 @@ Name: Name, dtype: object</code></pre>
 <ul>
 <li><code>data.iloc[1]</code>: Returns the second row of the dataframe</li>
 </ul>
-<div id="ab82fcc0" class="cell" data-execution_count="9">
+<div id="5276fd77" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="bu">print</span>(<span class="st">"2. Row: </span><span class="ch">\n</span><span class="st">"</span>, data.iloc[<span class="dv">1</span>]) <span class="co"># print the second row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2. Row: 
@@ -728,7 +728,7 @@ Name: 1, dtype: object</code></pre>
 <li><code>data[data["Concentration (M)"] &gt; 5]</code>: Returns the rows where the concentration is greater than 5</li>
 <li><code>data.loc[data["Concentration (M)"]&gt;5,"Chemical Type"]</code>: Returns the chemical type with a concentration higher than 5</li>
 </ul>
-<div id="bbb8fb45" class="cell" data-execution_count="10">
+<div id="6af328d8" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="bu">print</span>(<span class="st">"Filter the rows where concentration is greater than 5: </span><span class="ch">\n</span><span class="st">"</span>, data[data[<span class="st">"Concentration (M)"</span>] <span class="op">&gt;</span> <span class="dv">5</span>])</span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="bu">print</span>(<span class="st">"Get the chemical type with a concentration higher than 5: </span><span class="ch">\n</span><span class="st">"</span>, </span>
 <span id="cb17-3"><a href="#cb17-3"></a>      data.loc[data[<span class="st">"Concentration (M)"</span>]<span class="op">&gt;</span><span class="dv">5</span>,<span class="st">"Chemical Type"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -753,7 +753,7 @@ Name: Chemical Type, dtype: object</code></pre>
 <ul>
 <li><code>data.info()</code>: Returns the information of the dataframe</li>
 </ul>
-<div id="a8ac9467" class="cell" data-execution_count="11">
+<div id="2574d1ef" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="bu">print</span>(<span class="st">"Information of data: </span><span class="ch">\n</span><span class="st">"</span>, data.info()) <span class="co"># information of data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -778,7 +778,7 @@ Information of data:
 <ul>
 <li><code>data.describe()</code>: Returns the statistical summary of the dataframe</li>
 </ul>
-<div id="068c0bd5" class="cell" data-execution_count="12">
+<div id="24c35e6f" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="bu">print</span>(<span class="st">"Statistical summary: </span><span class="ch">\n</span><span class="st">"</span>, data.describe()) <span class="co"># statistical summary</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Statistical summary: 
@@ -814,7 +814,7 @@ max            55.500000  </code></pre>
 <li><code>data["Concentration (M)"].mode()</code>: Returns the mode of the column “Concentration (M)”</li>
 <li><code>data["Concentration (M)"].percentile(q)</code>: Returns the q-th percentile of the column “Concentration (M)”</li>
 </ul>
-<div id="a9898bb5" class="cell" data-execution_count="13">
+<div id="ea440c7f" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="bu">print</span>(<span class="st">"mean of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].mean()) <span class="co"># mean of concentration</span></span>
 <span id="cb23-2"><a href="#cb23-2"></a><span class="bu">print</span>(<span class="st">"std of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].std()) <span class="co"># standard deviation of concentration</span></span>
 <span id="cb23-3"><a href="#cb23-3"></a><span class="bu">print</span>(<span class="st">"median of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].median()) <span class="co"># median of concentration</span></span>
@@ -856,7 +856,7 @@ IQR of concentration:
 <ul>
 <li><code>data.groupby("Chemical Type")["Concentration (M)"].mean()</code>: Returns the mean of the column “Concentration (M)” grouped by “Chemical Type”</li>
 </ul>
-<div id="7fdb90e5" class="cell" data-execution_count="14">
+<div id="373124ed" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a><span class="bu">print</span>(<span class="st">"Mean of concentration group by type: </span><span class="ch">\n</span><span class="st">"</span>, data.groupby(<span class="st">"Chemical Type"</span>)[<span class="st">"Concentration (M)"</span>].mean())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Mean of concentration group by type: 
@@ -874,7 +874,7 @@ Name: Concentration (M), dtype: float64</code></pre>
 <ul>
 <li><code>data.agg({"Concentration (M)": ["mean", "std", "median", "max", "min", "sum"]})</code>: Returns the mean, standard deviation, median, maximum, minimum, and sum of the column “Concentration (M)”</li>
 </ul>
-<div id="9507ee1a" class="cell" data-execution_count="15">
+<div id="d7fdad16" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="bu">print</span>(<span class="st">"Aggregate the data: </span><span class="ch">\n</span><span class="st">"</span>, data.agg({<span class="st">"Concentration (M)"</span>: [<span class="st">"mean"</span>, <span class="st">"std"</span>, <span class="st">"median"</span>, <span class="st">"max"</span>, <span class="st">"min"</span>, <span class="st">"sum"</span>]}))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Aggregate the data: 
@@ -892,7 +892,7 @@ sum             78.600000</code></pre>
 <li><code>data.corr()</code>: Returns the correlation matrix of the dataframe</li>
 <li><code>data.cov()</code>: Returns the covariance matrix of the dataframe</li>
 </ul>
-<div id="43d93ec2" class="cell" data-execution_count="16">
+<div id="b8e46624" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a><span class="bu">print</span>(<span class="st">"Correlation matrix: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].corr(data[<span class="st">"Molecular Weight (g/mol)"</span>]))</span>
 <span id="cb29-2"><a href="#cb29-2"></a><span class="bu">print</span>(<span class="st">"Covariance matrix: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].cov(data[<span class="st">"Molecular Weight (g/mol)"</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -903,7 +903,7 @@ Covariance matrix:
 </div>
 </div>
 <p><strong>Pivot Tables</strong> Pivot tables are used to summarize and aggregate data inside a dataframe. - <code>data.pivot_table(index="Chemical Type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean")</code>: Returns a pivot table of the dataframe</p>
-<div id="04cd721d" class="cell" data-execution_count="17">
+<div id="521366d2" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a>data.pivot_table(index<span class="op">=</span><span class="st">"Chemical Type"</span>, columns<span class="op">=</span><span class="st">"Concentration (M)"</span>, values<span class="op">=</span><span class="st">"Molecular Weight (g/mol)"</span>, aggfunc<span class="op">=</span><span class="st">"mean"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <div>
@@ -1022,7 +1022,7 @@ Covariance matrix:
 <ul>
 <li><code>data1 = data.compare(data2)</code>: Compares two dataframes and returns the differences</li>
 </ul>
-<div id="4e41b457" class="cell" data-execution_count="18">
+<div id="30e27d0a" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a>data1 <span class="op">=</span> data.copy()</span>
 <span id="cb32-2"><a href="#cb32-2"></a>data1[<span class="st">"Concentration (M)"</span>].iloc[<span class="dv">0</span>] <span class="op">=</span> <span class="fl">0.5</span></span>
 <span id="cb32-3"><a href="#cb32-3"></a><span class="bu">print</span>(<span class="st">"Comparison of data: </span><span class="ch">\n</span><span class="st">"</span>, </span>
@@ -1049,7 +1049,7 @@ Covariance matrix:
 <li><code>df.rolling(...).transform(...)</code>: transform the data in the rolling window</li>
 <li><code>df.rolling(...).count()</code>: count the data in the rolling window</li>
 </ul>
-<div id="0becd7a4" class="cell" data-execution_count="19">
+<div id="13ca33ba" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># calculate the rolling mean</span></span>
 <span id="cb34-2"><a href="#cb34-2"></a><span class="bu">print</span>(<span class="st">"rolling mean: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].rolling(window<span class="op">=</span><span class="dv">2</span>).mean())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
