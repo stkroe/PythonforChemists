@@ -84,7 +84,7 @@ We concentrate on the **Beginner Path** of the course during the lecture.
 Timeschedule for a week: 
 
 
---------
+
 | Time        | Monday           | Tuesday           | Wednesday            | Thursday          | Friday       |
 |-------------|------------------|-------------------|----------------------|-------------------|--------------|
 | 13:00-14:00 | Introduction     | Lecture 2         | Lecture 3            | Exercise Block 4  | F&Q          |
@@ -92,7 +92,6 @@ Timeschedule for a week:
 | 15:00-16:00 | Lecture 1        | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
 | 16:00-17:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
 | 17:00-18:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
---------
 
 ### Introduction {.unnumbered}
 
@@ -118,7 +117,6 @@ Timeschedule for a week:
 
 ### Exercise Block 1 {.unnumbered}
 **Exercise A 1**
-
 - [Exercise A 1](course/exercises/exercises/exerciseA_1.ipynb)
 
 ### Lecture 2 {.unnumbered}
@@ -175,4 +173,6 @@ Timeschedule for a week:
 ### Final Exam {.unnumbered}
 
 Everyone gets a different data set and has to analyze the data and visualize the results.
+
+**Exam**
 - [Final Exam](course/exam/final_exam.ipynb)

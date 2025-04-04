@@ -146,7 +146,9 @@ micromamba list
 
 
 ## 4. Usefull packages for Data Analyse and Visualization:  {.unnumbered}
-
+- [pip](https://packaging.python.org/en/latest/guides/tool-recommendations/) - package installer for python instead of conda
+- [jupyter-notebook/jupyterlab](https://jupyter.org/) - interactive computing environment
+- [ipykernel](https://pypi.org/project/ipykernel/) - IPython Kernel for Jupyter
 - [matplotlib](https://matplotlib.org) - data visualization library
 - [numpy](https://numpy.org) - numerical library
 - [scipy](https://docs.scipy.org/doc/scipy/reference/) - scientific library
@@ -154,9 +156,27 @@ micromamba list
 - [seaborn](https://seaborn.pydata.org/examples/index.html) - data visualization library
 - [scikit-learn](https://scikit-learn.org/stable/) - machine learning library
 - [statsmodels](https://www.statsmodels.org/stable/index.html) - statistical library
-- [jupyter-notebook/jupyterlab](https://jupyter.org/) - interactive computing environment
-- [ipykernel](https://pypi.org/project/ipykernel/) - IPython Kernel for Jupyter
-- [pip](https://packaging.python.org/en/latest/guides/tool-recommendations/) - package installer for python instead of conda
+
+**special packages for data visualization:**
+
+- [bokeh](https://docs.bokeh.org/en/latest/index.html) - interactive data visualization library
+- [plotly](https://plotly.com/python/) - interactive data visualization library
+- [networkx](https://networkx.org/documentation/stable/) - network analysis library
+- [python-ternary](https://python-ternary.readthedocs.io/en/latest/) - ternary plot library
+- [altair](https://altair-viz.github.io/) - declarative statistical visualization library
+- [umap-learn](https://umap-learn.readthedocs.io/en/latest/) - dimensionality reduction library
+
+**special packages for chemistry and material science:**
+
+- [ase](https://wiki.fysik.dtu.dk/ase/) - atomic simulation environment
+- [pymatgen](https://pymatgen.org/) - Python Materials Genomics
+- [RdKit](https://www.rdkit.org/docs/index.html) - cheminformatics library
+- [openbabel](https://openbabel.org/index.html) - cheminformatics library
+- [pymol-opensource](https://pymol.org/#opensource) - molecular visualization library
+
+For more chemistry and material science packages please check the [Awesome Python Chemistry](https://github.com/lmmentel/awesome-python-chemistry) repository.
+
+
 
 
 :::{.callout-tip}
@@ -165,7 +185,7 @@ Use *yml-file* with all needed packages and configurations:
 :::
 
 
-Save this in a *environment.yml* file:
+Save your needed packgess in a *environment.yml* file *e.g.*:
 
 
  ```{yml}
@@ -174,14 +194,14 @@ channels:
   - conda-forge
 dependencies:
   - python=3.12
+  - pip
+  - ipykernel
+  - jupyterlab
   - pandas
   - numpy
   - matplotlib
-  - jupyterlab
   - scikit-learn
   - scipy
-  - pip
-  - ipykernel
   - seaborn
   - statsmodels
  ```
