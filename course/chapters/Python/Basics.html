@@ -532,7 +532,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Python/Basics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/notebooks/Basics.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Basics.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Python/Basics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/Basics.ipynb"><i class="bi bi-journal"></i>Download Code</a></li><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1.zip"><i class="bi bi-zip"></i>Example</a></li><li><a href="https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material/student/BasicExercises.ipynb"><i class="bi bi-laptop"></i>Open Example in Colab</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Basics.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -715,14 +715,14 @@ Example - Hello World
 <li>Or open this file in <code>Google Colab</code> and run the code.</li>
 <li>Or download this file and run it on your local machine.</li>
 </ul>
-<div id="f21cc68a" class="cell" data-execution_count="1">
+<div id="d2e8dbc7" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World</code></pre>
 </div>
 </div>
 <p>If you want to span a command over multiple lines you can use <code>\</code> or <br> if you are using parenthesis in your command you can directly use a new line.</p>
-<div id="6961d250" class="cell" data-execution_count="2">
+<div id="d787302e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a> result <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>          <span class="dv">7</span> <span class="op">+</span> <span class="dv">8</span> <span class="op">+</span> <span class="dv">9</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a> numbers <span class="op">=</span> [</span>
@@ -763,7 +763,7 @@ Example - Wrong Indentation
 </div>
 </div>
 <p>Try it out:</p>
-<div id="ff41f44d" class="cell" data-execution_count="3">
+<div id="a6fe83c8" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2"></a>    <span class="bu">print</span>(<span class="st">"wrong indentation"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -777,7 +777,7 @@ Example - Wrong Indentation
 </div>
 </div>
 <p>All the lines in the block must have the same indentation:</p>
-<div id="c289ca47" class="cell" data-execution_count="4">
+<div id="f778de65" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>) </span>
 <span id="cb5-2"><a href="#cb5-2"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span>
 <span id="cb5-3"><a href="#cb5-3"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -821,7 +821,7 @@ Note
 <p>Example - Cryptic Error Message What does the error message tell you? If you are not sure ask the internet or your favorite AI.</p>
 </div>
 </div>
-<div id="9c8733e4" class="cell" data-execution_count="5">
+<div id="f9168710" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="bu">print</span>(a[<span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -857,7 +857,7 @@ Solution
 <h2 class="unnumbered anchored" data-anchor-id="comments">Comments</h2>
 <p>Comments are important. They help you and others to understand your code. <br> You can use the ` symbol to write comments.</p>
 <p>Docstrings are used to document the code for example with <a href="https://docs.python.org/3/library/pydoc.html">pydoc</a>. They are using triple quotes `““” ““““`.</p>
-<div id="5be07cc9" class="cell" data-execution_count="6">
+<div id="855a5c02" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># This is a comment</span></span>
 <span id="cb8-2"><a href="#cb8-2"></a></span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="co">"""</span></span>
@@ -874,7 +874,7 @@ Solution
 <section id="modules" class="level1 unnumbered">
 <h1 class="unnumbered">Modules</h1>
 <p>There exist a lot of libraries and modules in Python. <br> Libraries is a term to describe a collection of modules. <br> Packages are a way to collect related modules together within a single tree-like hierarchy. <br> Modules are a collection of files. <br> A script is a file that can be run independently. <br> You can use the <code>import</code> statement to import the whole module. <br> You can use the <code>from</code> statement to import a specific part of the module. <br> You can use the <code>dir()</code> function to list the names in a module. <br> You can use the <code>help()</code> function to get help on a module. <br></p>
-<div id="a6c3b7fa" class="cell" data-execution_count="7">
+<div id="2923a33f" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="co"># the library numpy is imported</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt </span>
@@ -885,7 +885,7 @@ Solution
 <section id="variables" class="level1 unnumbered">
 <h1 class="unnumbered">Variables</h1>
 <p>In Python, you don’t need to declare the type of a variable. <br> You can assign a value to a variable using the <code>=</code> operator. <br> Python is managing the memory allocation for you. <br></p>
-<div id="7a6cf837" class="cell" data-execution_count="8">
+<div id="1dfaad14" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>a <span class="op">=</span> <span class="dv">1</span>  <span class="co">#a is a variable</span></span>
 <span id="cb11-2"><a href="#cb11-2"></a>b <span class="op">=</span> <span class="st">"String"</span> <span class="co">#b is a string</span></span>
 <span id="cb11-3"><a href="#cb11-3"></a><span class="bu">print</span>(<span class="dv">1</span>, <span class="st">" is an"</span>, <span class="bu">type</span>(a))</span>
@@ -911,7 +911,7 @@ String  is a &lt;class 'str'&gt;</code></pre>
 <li><code>set</code> for sets</li>
 </ul>
 <p>You can use the <code>type()</code> function to get the type of a variable. <br> You can use the <code>isinstance()</code> function to check if a variable is an instance of a class. <br> Type casting is the process of converting one data type to another. <br> You can use the <code>int()</code>, <code>float()</code>, <code>str()</code>, <code>bool()</code>, <code>list()</code>, <code>tuple()</code>, <code>dict()</code>, <code>set()</code> functions to cast a variable to a different type. <br></p>
-<div id="a6f4094d" class="cell" data-execution_count="9">
+<div id="6a9db823" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>x <span class="op">=</span> <span class="dv">5</span> <span class="bu">int</span></span>
 <span id="cb13-2"><a href="#cb13-2"></a><span class="bu">print</span>(x,<span class="bu">type</span>(x))<span class="co"># print the type of x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -924,28 +924,28 @@ String  is a &lt;class 'str'&gt;</code></pre>
 </div>
 </div>
 </div>
-<div id="ba100968" class="cell" data-execution_count="10">
+<div id="187313e4" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>y <span class="op">=</span> <span class="fl">5.12</span> <span class="co">#float</span></span>
 <span id="cb14-2"><a href="#cb14-2"></a><span class="bu">print</span>(y,<span class="bu">type</span>(y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>5.12 &lt;class 'float'&gt;</code></pre>
 </div>
 </div>
-<div id="ef7e35a1" class="cell" data-execution_count="11">
+<div id="cdaaa8e8" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>c <span class="op">=</span> <span class="ot">2.8j</span> <span class="co">#complex</span></span>
 <span id="cb16-2"><a href="#cb16-2"></a><span class="bu">print</span>(c,<span class="bu">type</span>(c))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2.8j &lt;class 'complex'&gt;</code></pre>
 </div>
 </div>
-<div id="80f43094" class="cell" data-execution_count="12">
+<div id="d7baf3f7" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>s <span class="op">=</span> <span class="st">"Hello World"</span> <span class="co">#string</span></span>
 <span id="cb18-2"><a href="#cb18-2"></a><span class="bu">print</span>(s,<span class="bu">type</span>(s))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World &lt;class 'str'&gt;</code></pre>
 </div>
 </div>
-<div id="aec7fa9b" class="cell" data-execution_count="13">
+<div id="0949e68e" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="bu">print</span>(<span class="st">"length of word: "</span>, <span class="bu">len</span>(s)) <span class="co"># length of string</span></span>
 <span id="cb20-2"><a href="#cb20-2"></a><span class="bu">print</span>(<span class="st">"character on position 2: "</span>, s[<span class="dv">2</span>]) </span>
 <span id="cb20-3"><a href="#cb20-3"></a><span class="bu">print</span>(<span class="st">"last 3 characters: "</span>, s[<span class="op">-</span><span class="dv">3</span>:])</span>
@@ -961,42 +961,42 @@ Hello World!
 "Hello world"!</code></pre>
 </div>
 </div>
-<div id="96c8c0cc" class="cell" data-execution_count="14">
+<div id="f44a83b9" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>d <span class="op">=</span> <span class="bu">dict</span>(name<span class="op">=</span><span class="st">"Max"</span>,lastname<span class="op">=</span><span class="st">"Musterman"</span>,height<span class="op">=</span><span class="fl">1.89</span>) <span class="co"># dictionary</span></span>
 <span id="cb22-2"><a href="#cb22-2"></a><span class="bu">print</span>(d,<span class="bu">type</span>(d))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{'name': 'Max', 'lastname': 'Musterman', 'height': 1.89} &lt;class 'dict'&gt;</code></pre>
 </div>
 </div>
-<div id="e2fca0fe" class="cell" data-execution_count="15">
+<div id="ddd46d8a" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a>b <span class="op">=</span> <span class="va">True</span> <span class="co"># boolean</span></span>
 <span id="cb24-2"><a href="#cb24-2"></a><span class="bu">print</span>(b,<span class="bu">type</span>(b))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True &lt;class 'bool'&gt;</code></pre>
 </div>
 </div>
-<div id="cff5e235" class="cell" data-execution_count="16">
+<div id="d6b36e58" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a>dataset <span class="op">=</span> {<span class="dv">1</span>,<span class="dv">12</span>,<span class="dv">3</span>} <span class="co"># set </span></span>
 <span id="cb26-2"><a href="#cb26-2"></a><span class="bu">print</span>(dataset,<span class="bu">type</span>(dataset))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{1, 3, 12} &lt;class 'set'&gt;</code></pre>
 </div>
 </div>
-<div id="fb2672dd" class="cell" data-execution_count="17">
+<div id="1d4ec492" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a>dataset2 <span class="op">=</span> <span class="bu">set</span>((<span class="fl">1.2</span>,<span class="dv">2</span>,<span class="dv">2</span>)) <span class="co"># set</span></span>
 <span id="cb28-2"><a href="#cb28-2"></a><span class="bu">print</span>(dataset2,<span class="bu">type</span>(dataset2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{1.2, 2} &lt;class 'set'&gt;</code></pre>
 </div>
 </div>
-<div id="6aaee8c3" class="cell" data-execution_count="18">
+<div id="ef114360" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a>r <span class="op">=</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">2</span>) <span class="co"># range</span></span>
 <span id="cb30-2"><a href="#cb30-2"></a><span class="bu">print</span>(r,<span class="bu">type</span>(r))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>range(0, 10, 2) &lt;class 'range'&gt;</code></pre>
 </div>
 </div>
-<div id="60b7b1cb" class="cell" data-execution_count="19">
+<div id="47135236" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a>l <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">3</span>] <span class="co"># list</span></span>
 <span id="cb32-2"><a href="#cb32-2"></a><span class="bu">print</span>(l,<span class="bu">type</span>(l))</span>
 <span id="cb32-3"><a href="#cb32-3"></a><span class="bu">print</span>(<span class="st">"length of list"</span>,<span class="bu">len</span>(l))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1005,14 +1005,14 @@ Hello World!
 length of list 4</code></pre>
 </div>
 </div>
-<div id="e73e779f" class="cell" data-execution_count="20">
+<div id="0d015a8d" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a>t <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>)<span class="co"># tuple</span></span>
 <span id="cb34-2"><a href="#cb34-2"></a><span class="bu">print</span>(t,<span class="bu">type</span>(t))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(1, 2) &lt;class 'tuple'&gt;</code></pre>
 </div>
 </div>
-<div id="fc456e75" class="cell" data-execution_count="21">
+<div id="44956600" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"></a><span class="co">#type conversion</span></span>
 <span id="cb36-2"><a href="#cb36-2"></a>f <span class="op">=</span> <span class="bu">float</span>(x)</span>
 <span id="cb36-3"><a href="#cb36-3"></a><span class="bu">print</span>(f,<span class="bu">type</span>(f))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1035,7 +1035,7 @@ length of list 4</code></pre>
 <h1 class="unnumbered">Lists</h1>
 <p>Lists collect multiple items in a single variable. <br></p>
 <p>You can use the <code>[]</code> operator to create a list. <br> You can use the <code>append()</code> method to add an item to a list. <br> You can use the <code>insert()</code> method to add an item at a specific position. <br> You can use the <code>del</code> statement to delete an item from a list. <br> You can use the <code>remove()</code> method to remove an item from a list. <br> You can use the <code>pop()</code> method to remove an item at a specific position. <br> You can use the <code>clear()</code> method to remove all items from a list. <br> You can use the <code>copy()</code> method to copy a list. <br> You can use the <code>count()</code> method to count the number of items in a list. <br> You can use the <code>sort()</code> method to sort a list. <br> You can use the <code>reverse()</code> method to reverse a list. <br> You can use the <code>extend()</code> method to add items from another list. <br> You can use the <code>index()</code> method to get the index of an item. <br> You can use the <code>len()</code> function to get the length of a list. <br> You can use the <code>list()</code> function to create a list. <br></p>
-<div id="cf11a1fe" class="cell" data-execution_count="22">
+<div id="c09fe7ab" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1"></a>a <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
 <span id="cb37-2"><a href="#cb37-2"></a>b <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">3</span>,<span class="st">'a'</span>, <span class="ot">1j</span>]</span>
 <span id="cb37-3"><a href="#cb37-3"></a><span class="bu">len</span>(a) <span class="co">#length of list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1056,7 +1056,7 @@ Warning
 <p>Index is starting with <strong>0</strong> in Python.</p>
 </div>
 </div>
-<div id="0cfc21a0" class="cell" data-execution_count="23">
+<div id="b38e2f07" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1"></a>l <span class="op">=</span> [<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>]</span>
 <span id="cb39-2"><a href="#cb39-2"></a>l[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
@@ -1064,7 +1064,7 @@ Warning
 </div>
 </div>
 <p>Last element is reached by index -1.</p>
-<div id="c7dc43a1" class="cell" data-execution_count="24">
+<div id="4f0c4959" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1"></a>l[<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>'third'</code></pre>
@@ -1076,7 +1076,7 @@ Warning
 <h1 class="unnumbered">Mutable and Immutable Objects</h1>
 <p>Immutable objects cannot be changed. <br> Mutable objects can be changed. <br> Immutable objects are: <code>int</code>, <code>float</code>, <code>bool</code>, <code>str</code>, <code>tuple</code>, <code>frozenset</code>. <br> Mutable objects are: <code>list</code>, <code>dict</code>, <code>set</code>. <br></p>
 <p>That means if you change an immutable object, a new object is created. <br> If you change a mutable object, the object is changed. <br></p>
-<div id="a4583ed2" class="cell" data-execution_count="25">
+<div id="9093f6ea" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb43-2"><a href="#cb43-2"></a>b <span class="op">=</span> a</span>
 <span id="cb43-3"><a href="#cb43-3"></a></span>
@@ -1112,7 +1112,7 @@ b: 2</code></pre>
 </div>
 </div>
 <p>mutable objects</p>
-<div id="f29f720a" class="cell" data-execution_count="26">
+<div id="7a830548" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
 <span id="cb45-2"><a href="#cb45-2"></a>b <span class="op">=</span> a</span>
 <span id="cb45-3"><a href="#cb45-3"></a></span>
@@ -1140,7 +1140,7 @@ b: [4, 5, 3]</code></pre>
 </div>
 </div>
 <p>This happens because a and b are pointing to the same memory location. So if you change a, b will also change. If you want to avoid this, you can use the copy() method.</p>
-<div id="c87e629c" class="cell" data-execution_count="27">
+<div id="93d450cf" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1"></a>b <span class="op">=</span> a.copy()</span>
 <span id="cb47-2"><a href="#cb47-2"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
 <span id="cb47-3"><a href="#cb47-3"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
@@ -1185,7 +1185,7 @@ b: [4, 5, 7]</code></pre>
 <li><code>\xhh</code>: hex value</li>
 </ul>
 <p>You can use the <code>+</code> operator to concatenate strings. <br></p>
-<div id="f4f375d1" class="cell" data-execution_count="28">
+<div id="53303865" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1"></a>a <span class="op">=</span> <span class="st">"This "</span> </span>
 <span id="cb49-2"><a href="#cb49-2"></a>b <span class="op">=</span> <span class="st">"is a string"</span></span>
 <span id="cb49-3"><a href="#cb49-3"></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1194,7 +1194,7 @@ b: [4, 5, 7]</code></pre>
 </div>
 </div>
 <p>For print formatting you can use the <code>format()</code> method. <br> You can use the <code>f-string</code> method. <br> See for more information <a href="https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings">here</a></p>
-<div id="8912e43f" class="cell" data-execution_count="29">
+<div id="74cd0ea3" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1"></a>a <span class="op">=</span> <span class="fl">1.5434</span></span>
 <span id="cb51-2"><a href="#cb51-2"></a>b <span class="op">=</span> <span class="st">"nm"</span></span>
 <span id="cb51-3"><a href="#cb51-3"></a><span class="bu">print</span>(<span class="st">"This is an integer </span><span class="sc">%d</span><span class="st"> </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (a, b))</span>
@@ -1246,7 +1246,7 @@ This is an example of using format() method with named arguments 1.5434 nm</code
 <li>is: identity</li>
 <li>in: membership</li>
 </ul>
-<div id="18412d55" class="cell" data-execution_count="30">
+<div id="3ea31d16" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1"></a>a <span class="op">=</span> <span class="fl">5.3</span></span>
 <span id="cb53-2"><a href="#cb53-2"></a>b <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb53-3"><a href="#cb53-3"></a>c <span class="op">=</span> <span class="dv">3</span></span>
@@ -1285,7 +1285,7 @@ exponentiation:  28.09</code></pre>
 </ul>
 <section id="if-statement" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="if-statement">if statement</h2>
-<div id="5247ada5" class="cell" data-execution_count="31">
+<div id="93ce07c4" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb55-2"><a href="#cb55-2"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
 <span id="cb55-3"><a href="#cb55-3"></a>    <span class="bu">print</span>(<span class="st">"x &lt; 0"</span>)</span>
@@ -1300,7 +1300,7 @@ exponentiation:  28.09</code></pre>
 </section>
 <section id="breakcontinuepass" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="breakcontinuepass">break,continue,pass</h2>
-<div id="4f40e30b" class="cell" data-execution_count="32">
+<div id="7fda5274" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb57-2"><a href="#cb57-2"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
 <span id="cb57-3"><a href="#cb57-3"></a>        <span class="cf">break</span></span>
@@ -1313,7 +1313,7 @@ exponentiation:  28.09</code></pre>
 4</code></pre>
 </div>
 </div>
-<div id="68b53416" class="cell" data-execution_count="33">
+<div id="edb73a2f" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb59-2"><a href="#cb59-2"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
 <span id="cb59-3"><a href="#cb59-3"></a>        <span class="cf">continue</span></span>
@@ -1330,7 +1330,7 @@ exponentiation:  28.09</code></pre>
 9</code></pre>
 </div>
 </div>
-<div id="1a4e53cd" class="cell" data-execution_count="34">
+<div id="2f2f751f" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb61-2"><a href="#cb61-2"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
 <span id="cb61-3"><a href="#cb61-3"></a>        <span class="cf">pass</span></span>
@@ -1351,7 +1351,7 @@ exponentiation:  28.09</code></pre>
 </section>
 <section id="for-loops" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="for-loops">For Loops</h2>
-<div id="9db8d678" class="cell" data-execution_count="35">
+<div id="9dc81b8c" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>): <span class="co">#from 0 to 4 </span></span>
 <span id="cb63-2"><a href="#cb63-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1362,7 +1362,7 @@ exponentiation:  28.09</code></pre>
 4</code></pre>
 </div>
 </div>
-<div id="b1bf38d4" class="cell" data-execution_count="36">
+<div id="21249744" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">2</span>): <span class="co"># start 1, stop 10 excluded, step 2</span></span>
 <span id="cb65-2"><a href="#cb65-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1373,16 +1373,16 @@ exponentiation:  28.09</code></pre>
 9</code></pre>
 </div>
 </div>
-<div id="aee2fafa" class="cell" data-execution_count="37">
+<div id="52177316" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1"></a>l <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="a24f7b04" class="cell" data-execution_count="38">
+<div id="1d837ecd" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1"></a>l</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="38">
 <pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
 </div>
 </div>
-<div id="7fcfe13c" class="cell" data-execution_count="39">
+<div id="bfad319a" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1"></a><span class="cf">for</span> i <span class="kw">in</span> l:  <span class="co"># using list</span></span>
 <span id="cb70-2"><a href="#cb70-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1401,7 +1401,7 @@ exponentiation:  28.09</code></pre>
 </section>
 <section id="while-loops" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="while-loops">While Loops</h2>
-<div id="bf39039b" class="cell" data-execution_count="40">
+<div id="3fdff70b" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb72-2"><a href="#cb72-2"></a><span class="cf">while</span> x  <span class="op">&lt;</span> <span class="dv">4</span>:</span>
 <span id="cb72-3"><a href="#cb72-3"></a>    <span class="bu">print</span>(l[x])</span>
@@ -1413,7 +1413,7 @@ exponentiation:  28.09</code></pre>
 3</code></pre>
 </div>
 </div>
-<div id="52f72242" class="cell" data-execution_count="41">
+<div id="ae501943" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1"></a><span class="bu">print</span>(<span class="st">"while loop with continue and break statement"</span>)</span>
 <span id="cb74-2"><a href="#cb74-2"></a>n <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb74-3"><a href="#cb74-3"></a><span class="cf">while</span>(n <span class="op">&lt;</span> <span class="dv">10</span>):</span>
@@ -1438,17 +1438,17 @@ The loop reached 7 and will break now.</code></pre>
 <section id="functions" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="functions">Functions</h2>
 <p>Functions are defined using the <code>def</code> keyword. <br> You can use the <code>return</code> keyword to return a value from a function. <br> The parameters of a function are defined in the parentheses. <br> Multiple parameters are separated by commas. <br> You can use default values for the parameter <em>e.g.</em> <code>b=5</code>. <br> Multiple return values are separated by commas. <br> They are stored in a tuple. <br></p>
-<div id="8819444a" class="cell" data-execution_count="42">
+<div id="d7d0a1eb" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1"></a><span class="kw">def</span> summation(a,b<span class="op">=</span><span class="dv">5</span>):</span>
 <span id="cb76-2"><a href="#cb76-2"></a>    <span class="cf">return</span> a<span class="op">+</span>b, a<span class="op">-</span>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="b781779e" class="cell" data-execution_count="43">
+<div id="a0393f9e" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1"></a>summation(<span class="dv">4</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="43">
 <pre><code>(6, 2)</code></pre>
 </div>
 </div>
-<div id="4d54829f" class="cell" data-execution_count="44">
+<div id="9cba6d62" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1"></a><span class="bu">sum</span>, sub <span class="op">=</span> summation(<span class="dv">4</span>)</span>
 <span id="cb79-2"><a href="#cb79-2"></a><span class="bu">print</span>(<span class="bu">sum</span>)</span>
 <span id="cb79-3"><a href="#cb79-3"></a><span class="bu">print</span>(sub)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1457,7 +1457,7 @@ The loop reached 7 and will break now.</code></pre>
 -1</code></pre>
 </div>
 </div>
-<div id="fa06a714" class="cell" data-execution_count="45">
+<div id="b70712ff" class="cell" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb81-2"><a href="#cb81-2"></a></span>
 <span id="cb81-3"><a href="#cb81-3"></a><span class="kw">def</span> multiple_return_value(x,a,b):</span>
@@ -1480,7 +1480,7 @@ The loop reached 7 and will break now.</code></pre>
 <section id="exercises" class="level1 unnumbered">
 <h1 class="unnumbered">Exercises</h1>
 <p>Download it locally and try to solve the exercises. <br></p>
-<p><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/">Basic Python</a></p>
+<p><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1.zip">Basic Python</a></p>
 <p>Or open it in <code>Google Colab</code>:</p>
 <p><a href="https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material/student/BasicExercises.ipynb">Basic Python</a></p>
 
@@ -2135,707 +2135,713 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb83-12"><a href="#cb83-12"></a><span class="co">    error: true</span></span>
 <span id="cb83-13"><a href="#cb83-13"></a><span class="an">other-links:</span><span class="co">     </span></span>
 <span id="cb83-14"><a href="#cb83-14"></a><span class="co">    - text: "Download Code"</span></span>
-<span id="cb83-15"><a href="#cb83-15"></a><span class="co">      href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/notebooks/Basics.ipynb"</span></span>
+<span id="cb83-15"><a href="#cb83-15"></a><span class="co">      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/Basics.ipynb"</span></span>
 <span id="cb83-16"><a href="#cb83-16"></a><span class="co">      icon: "journal"</span></span>
-<span id="cb83-17"><a href="#cb83-17"></a><span class="an">code-links:</span></span>
-<span id="cb83-18"><a href="#cb83-18"></a><span class="co">      - text: "Open in Colab"</span></span>
-<span id="cb83-19"><a href="#cb83-19"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Basics.ipynb"</span></span>
-<span id="cb83-20"><a href="#cb83-20"></a><span class="co">        icon: "laptop"</span></span>
-<span id="cb83-21"><a href="#cb83-21"></a><span class="co">---</span></span>
-<span id="cb83-22"><a href="#cb83-22"></a></span>
-<span id="cb83-23"><a href="#cb83-23"></a>This will be a very fast and basic start into coding with Python. </span>
-<span id="cb83-24"><a href="#cb83-24"></a></span>
-<span id="cb83-25"><a href="#cb83-25"></a>:::{.callout-note}</span>
-<span id="cb83-26"><a href="#cb83-26"></a><span class="fu">### Let`s make a initial quiz.</span></span>
-<span id="cb83-27"><a href="#cb83-27"></a>You will see coding with Python is very easy and intuitive!</span>
-<span id="cb83-28"><a href="#cb83-28"></a>::: </span>
-<span id="cb83-29"><a href="#cb83-29"></a></span>
-<span id="cb83-30"><a href="#cb83-30"></a>:::{.callout-note collapse=true}</span>
-<span id="cb83-31"><a href="#cb83-31"></a><span class="fu">### Quiz</span></span>
-<span id="cb83-32"><a href="#cb83-32"></a>&lt;div id="quiz-container"&gt;&lt;/div&gt;</span>
-<span id="cb83-33"><a href="#cb83-33"></a>:::</span>
-<span id="cb83-34"><a href="#cb83-34"></a></span>
-<span id="cb83-35"><a href="#cb83-35"></a><span class="fu"># Elemenary Syntax {.unnumbered}</span></span>
-<span id="cb83-36"><a href="#cb83-36"></a></span>
-<span id="cb83-37"><a href="#cb83-37"></a><span class="fu">## Comands{.unnumbered}</span></span>
-<span id="cb83-38"><a href="#cb83-38"></a></span>
-<span id="cb83-39"><a href="#cb83-39"></a>Each line of code is a command. The computer reads the code from top to bottom and executes each command in succession order. </span>
+<span id="cb83-17"><a href="#cb83-17"></a><span class="co">    - text: "Example"</span></span>
+<span id="cb83-18"><a href="#cb83-18"></a><span class="co">      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1.zip"</span></span>
+<span id="cb83-19"><a href="#cb83-19"></a><span class="co">      icon: "zip"</span></span>
+<span id="cb83-20"><a href="#cb83-20"></a><span class="co">    - text: "Open Example in Colab"</span></span>
+<span id="cb83-21"><a href="#cb83-21"></a><span class="co">      href: "https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material/student/BasicExercises.ipynb"</span></span>
+<span id="cb83-22"><a href="#cb83-22"></a><span class="co">      icon: "laptop"</span></span>
+<span id="cb83-23"><a href="#cb83-23"></a><span class="an">code-links:</span></span>
+<span id="cb83-24"><a href="#cb83-24"></a><span class="co">      - text: "Open in Colab"</span></span>
+<span id="cb83-25"><a href="#cb83-25"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Basics.ipynb"</span></span>
+<span id="cb83-26"><a href="#cb83-26"></a><span class="co">        icon: "laptop"</span></span>
+<span id="cb83-27"><a href="#cb83-27"></a><span class="co">---</span></span>
+<span id="cb83-28"><a href="#cb83-28"></a></span>
+<span id="cb83-29"><a href="#cb83-29"></a>This will be a very fast and basic start into coding with Python. </span>
+<span id="cb83-30"><a href="#cb83-30"></a></span>
+<span id="cb83-31"><a href="#cb83-31"></a>:::{.callout-note}</span>
+<span id="cb83-32"><a href="#cb83-32"></a><span class="fu">### Let`s make a initial quiz.</span></span>
+<span id="cb83-33"><a href="#cb83-33"></a>You will see coding with Python is very easy and intuitive!</span>
+<span id="cb83-34"><a href="#cb83-34"></a>::: </span>
+<span id="cb83-35"><a href="#cb83-35"></a></span>
+<span id="cb83-36"><a href="#cb83-36"></a>:::{.callout-note collapse=true}</span>
+<span id="cb83-37"><a href="#cb83-37"></a><span class="fu">### Quiz</span></span>
+<span id="cb83-38"><a href="#cb83-38"></a>&lt;div id="quiz-container"&gt;&lt;/div&gt;</span>
+<span id="cb83-39"><a href="#cb83-39"></a>:::</span>
 <span id="cb83-40"><a href="#cb83-40"></a></span>
-<span id="cb83-41"><a href="#cb83-41"></a></span>
-<span id="cb83-42"><a href="#cb83-42"></a>First of all some terminology:</span>
-<span id="cb83-43"><a href="#cb83-43"></a></span>
-<span id="cb83-44"><a href="#cb83-44"></a>| Term | Definition |</span>
-<span id="cb83-45"><a href="#cb83-45"></a>|:---------|:------------|</span>
-<span id="cb83-46"><a href="#cb83-46"></a>| Command | *A line of code that tells the computer to do something.* |</span>
-<span id="cb83-47"><a href="#cb83-47"></a>| Syntax | *The rules that govern how commands are written.* |</span>
-<span id="cb83-48"><a href="#cb83-48"></a>| Execute | *To run a command.* |</span>
-<span id="cb83-49"><a href="#cb83-49"></a>| Comment | *A note in the code that is not executed.* |</span>
-<span id="cb83-50"><a href="#cb83-50"></a>| Indentation | *The space at the beginning of a line of code that tells the computer that the line is part of a block of code.* |</span>
-<span id="cb83-51"><a href="#cb83-51"></a>| Error | *A message that tells you that something is wrong with your code.* |</span>
-<span id="cb83-52"><a href="#cb83-52"></a>| Stack trace | *A list of error messages that Python prints when an error occurs.* |</span>
-<span id="cb83-53"><a href="#cb83-53"></a>| Variable | *A name that stores a value.* |</span>
-<span id="cb83-54"><a href="#cb83-54"></a>| Data type | *The type of value that a variable stores.* |</span>
-<span id="cb83-55"><a href="#cb83-55"></a>| Declaration | *The process of assigning memory to a variable.* |</span>
-<span id="cb83-56"><a href="#cb83-56"></a>| Integer | *A whole number.* |</span>
-<span id="cb83-57"><a href="#cb83-57"></a>| Float | *A number with a decimal point.* |</span>
-<span id="cb83-58"><a href="#cb83-58"></a>| Boolean | *A value that is either True or False.* |</span>
-<span id="cb83-59"><a href="#cb83-59"></a>| List | *A collection of items.* |</span>
-<span id="cb83-60"><a href="#cb83-60"></a>| Mutable | *A type of object that can be changed.* |</span>
-<span id="cb83-61"><a href="#cb83-61"></a>| Immutable | *A type of object that cannot be changed.* |</span>
-<span id="cb83-62"><a href="#cb83-62"></a>| String | *A sequence of characters.* |</span>
-<span id="cb83-63"><a href="#cb83-63"></a>| Function | *A block of code that performs a specific task.* |</span>
-<span id="cb83-64"><a href="#cb83-64"></a>| Module | *A collection of functions and variables.* |</span>
-<span id="cb83-65"><a href="#cb83-65"></a>| Library | *A collection of modules.* |</span>
-<span id="cb83-66"><a href="#cb83-66"></a>| Package | *A collection of related modules.* |</span>
-<span id="cb83-67"><a href="#cb83-67"></a>| Script | *A file that contains code that can be run independently.* |</span>
-<span id="cb83-68"><a href="#cb83-68"></a>:  {tbl-colwidths="<span class="co">[</span><span class="ot">25,75</span><span class="co">]</span>" .striped .hover}</span>
-<span id="cb83-69"><a href="#cb83-69"></a></span>
-<span id="cb83-70"><a href="#cb83-70"></a></span>
-<span id="cb83-71"><a href="#cb83-71"></a>:::{.callout-note}</span>
-<span id="cb83-72"><a href="#cb83-72"></a><span class="fu">### Example - Hello World</span></span>
-<span id="cb83-73"><a href="#cb83-73"></a><span class="in">`print`</span> is a command that tells the computer to display the text or variable that follows it. </span>
-<span id="cb83-74"><a href="#cb83-74"></a>:::</span>
+<span id="cb83-41"><a href="#cb83-41"></a><span class="fu"># Elemenary Syntax {.unnumbered}</span></span>
+<span id="cb83-42"><a href="#cb83-42"></a></span>
+<span id="cb83-43"><a href="#cb83-43"></a><span class="fu">## Comands{.unnumbered}</span></span>
+<span id="cb83-44"><a href="#cb83-44"></a></span>
+<span id="cb83-45"><a href="#cb83-45"></a>Each line of code is a command. The computer reads the code from top to bottom and executes each command in succession order. </span>
+<span id="cb83-46"><a href="#cb83-46"></a></span>
+<span id="cb83-47"><a href="#cb83-47"></a></span>
+<span id="cb83-48"><a href="#cb83-48"></a>First of all some terminology:</span>
+<span id="cb83-49"><a href="#cb83-49"></a></span>
+<span id="cb83-50"><a href="#cb83-50"></a>| Term | Definition |</span>
+<span id="cb83-51"><a href="#cb83-51"></a>|:---------|:------------|</span>
+<span id="cb83-52"><a href="#cb83-52"></a>| Command | *A line of code that tells the computer to do something.* |</span>
+<span id="cb83-53"><a href="#cb83-53"></a>| Syntax | *The rules that govern how commands are written.* |</span>
+<span id="cb83-54"><a href="#cb83-54"></a>| Execute | *To run a command.* |</span>
+<span id="cb83-55"><a href="#cb83-55"></a>| Comment | *A note in the code that is not executed.* |</span>
+<span id="cb83-56"><a href="#cb83-56"></a>| Indentation | *The space at the beginning of a line of code that tells the computer that the line is part of a block of code.* |</span>
+<span id="cb83-57"><a href="#cb83-57"></a>| Error | *A message that tells you that something is wrong with your code.* |</span>
+<span id="cb83-58"><a href="#cb83-58"></a>| Stack trace | *A list of error messages that Python prints when an error occurs.* |</span>
+<span id="cb83-59"><a href="#cb83-59"></a>| Variable | *A name that stores a value.* |</span>
+<span id="cb83-60"><a href="#cb83-60"></a>| Data type | *The type of value that a variable stores.* |</span>
+<span id="cb83-61"><a href="#cb83-61"></a>| Declaration | *The process of assigning memory to a variable.* |</span>
+<span id="cb83-62"><a href="#cb83-62"></a>| Integer | *A whole number.* |</span>
+<span id="cb83-63"><a href="#cb83-63"></a>| Float | *A number with a decimal point.* |</span>
+<span id="cb83-64"><a href="#cb83-64"></a>| Boolean | *A value that is either True or False.* |</span>
+<span id="cb83-65"><a href="#cb83-65"></a>| List | *A collection of items.* |</span>
+<span id="cb83-66"><a href="#cb83-66"></a>| Mutable | *A type of object that can be changed.* |</span>
+<span id="cb83-67"><a href="#cb83-67"></a>| Immutable | *A type of object that cannot be changed.* |</span>
+<span id="cb83-68"><a href="#cb83-68"></a>| String | *A sequence of characters.* |</span>
+<span id="cb83-69"><a href="#cb83-69"></a>| Function | *A block of code that performs a specific task.* |</span>
+<span id="cb83-70"><a href="#cb83-70"></a>| Module | *A collection of functions and variables.* |</span>
+<span id="cb83-71"><a href="#cb83-71"></a>| Library | *A collection of modules.* |</span>
+<span id="cb83-72"><a href="#cb83-72"></a>| Package | *A collection of related modules.* |</span>
+<span id="cb83-73"><a href="#cb83-73"></a>| Script | *A file that contains code that can be run independently.* |</span>
+<span id="cb83-74"><a href="#cb83-74"></a>:  {tbl-colwidths="<span class="co">[</span><span class="ot">25,75</span><span class="co">]</span>" .striped .hover}</span>
 <span id="cb83-75"><a href="#cb83-75"></a></span>
-<span id="cb83-76"><a href="#cb83-76"></a>Try it out:</span>
-<span id="cb83-77"><a href="#cb83-77"></a></span>
-<span id="cb83-78"><a href="#cb83-78"></a><span class="ss">- </span>Copy the code below and paste it into a code cell.</span>
-<span id="cb83-79"><a href="#cb83-79"></a><span class="ss">- </span>Or open this file in <span class="in">`Google Colab`</span> and run the code.</span>
-<span id="cb83-80"><a href="#cb83-80"></a><span class="ss">- </span>Or download this file and run it on your local machine.</span>
+<span id="cb83-76"><a href="#cb83-76"></a></span>
+<span id="cb83-77"><a href="#cb83-77"></a>:::{.callout-note}</span>
+<span id="cb83-78"><a href="#cb83-78"></a><span class="fu">### Example - Hello World</span></span>
+<span id="cb83-79"><a href="#cb83-79"></a><span class="in">`print`</span> is a command that tells the computer to display the text or variable that follows it. </span>
+<span id="cb83-80"><a href="#cb83-80"></a>:::</span>
 <span id="cb83-81"><a href="#cb83-81"></a></span>
-<span id="cb83-84"><a href="#cb83-84"></a><span class="in">```{python}</span></span>
-<span id="cb83-85"><a href="#cb83-85"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span>
-<span id="cb83-86"><a href="#cb83-86"></a><span class="in">```</span></span>
+<span id="cb83-82"><a href="#cb83-82"></a>Try it out:</span>
+<span id="cb83-83"><a href="#cb83-83"></a></span>
+<span id="cb83-84"><a href="#cb83-84"></a><span class="ss">- </span>Copy the code below and paste it into a code cell.</span>
+<span id="cb83-85"><a href="#cb83-85"></a><span class="ss">- </span>Or open this file in <span class="in">`Google Colab`</span> and run the code.</span>
+<span id="cb83-86"><a href="#cb83-86"></a><span class="ss">- </span>Or download this file and run it on your local machine.</span>
 <span id="cb83-87"><a href="#cb83-87"></a></span>
-<span id="cb83-88"><a href="#cb83-88"></a>If you want to span a command over multiple lines you can use <span class="in">`\`</span> or &lt;br&gt; </span>
-<span id="cb83-89"><a href="#cb83-89"></a>if you are using parenthesis in your command you can directly use a new line.</span>
-<span id="cb83-90"><a href="#cb83-90"></a></span>
-<span id="cb83-91"><a href="#cb83-91"></a></span>
-<span id="cb83-94"><a href="#cb83-94"></a><span class="in">```{python}</span></span>
-<span id="cb83-95"><a href="#cb83-95"></a> result <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb83-96"><a href="#cb83-96"></a>          <span class="dv">7</span> <span class="op">+</span> <span class="dv">8</span> <span class="op">+</span> <span class="dv">9</span></span>
-<span id="cb83-97"><a href="#cb83-97"></a> numbers <span class="op">=</span> [</span>
-<span id="cb83-98"><a href="#cb83-98"></a>     <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>,</span>
-<span id="cb83-99"><a href="#cb83-99"></a>     <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>,</span>
-<span id="cb83-100"><a href="#cb83-100"></a>     <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span></span>
-<span id="cb83-101"><a href="#cb83-101"></a> ]</span>
-<span id="cb83-102"><a href="#cb83-102"></a><span class="in">```</span></span>
-<span id="cb83-103"><a href="#cb83-103"></a></span>
-<span id="cb83-104"><a href="#cb83-104"></a> </span>
-<span id="cb83-105"><a href="#cb83-105"></a></span>
-<span id="cb83-106"><a href="#cb83-106"></a><span class="fu">## Indentation {.unnumbered}</span></span>
-<span id="cb83-107"><a href="#cb83-107"></a>In Python code blocks are not structured by brackets or semicolons like <span class="in">`C/C++`</span> or <span class="in">`Java`</span> but by indentation. This means that the code inside a loop or a function is indented by a tab or four spaces.</span>
-<span id="cb83-108"><a href="#cb83-108"></a></span>
-<span id="cb83-109"><a href="#cb83-109"></a>:::{.callout-warning}</span>
-<span id="cb83-110"><a href="#cb83-110"></a>Indentations are curcial in Python. </span>
-<span id="cb83-111"><a href="#cb83-111"></a>If you don't indent your code correctly, you will get an typical beginner error.</span>
-<span id="cb83-112"><a href="#cb83-112"></a></span>
-<span id="cb83-113"><a href="#cb83-113"></a>Pay attention to not mix tabs and spaces in your code.</span>
-<span id="cb83-114"><a href="#cb83-114"></a>:::</span>
-<span id="cb83-115"><a href="#cb83-115"></a></span>
-<span id="cb83-116"><a href="#cb83-116"></a></span>
-<span id="cb83-117"><a href="#cb83-117"></a></span>
-<span id="cb83-118"><a href="#cb83-118"></a>:::{.callout-note}</span>
-<span id="cb83-119"><a href="#cb83-119"></a><span class="fu">### Example - Wrong Indentation</span></span>
+<span id="cb83-90"><a href="#cb83-90"></a><span class="in">```{python}</span></span>
+<span id="cb83-91"><a href="#cb83-91"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span>
+<span id="cb83-92"><a href="#cb83-92"></a><span class="in">```</span></span>
+<span id="cb83-93"><a href="#cb83-93"></a></span>
+<span id="cb83-94"><a href="#cb83-94"></a>If you want to span a command over multiple lines you can use <span class="in">`\`</span> or &lt;br&gt; </span>
+<span id="cb83-95"><a href="#cb83-95"></a>if you are using parenthesis in your command you can directly use a new line.</span>
+<span id="cb83-96"><a href="#cb83-96"></a></span>
+<span id="cb83-97"><a href="#cb83-97"></a></span>
+<span id="cb83-100"><a href="#cb83-100"></a><span class="in">```{python}</span></span>
+<span id="cb83-101"><a href="#cb83-101"></a> result <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb83-102"><a href="#cb83-102"></a>          <span class="dv">7</span> <span class="op">+</span> <span class="dv">8</span> <span class="op">+</span> <span class="dv">9</span></span>
+<span id="cb83-103"><a href="#cb83-103"></a> numbers <span class="op">=</span> [</span>
+<span id="cb83-104"><a href="#cb83-104"></a>     <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>,</span>
+<span id="cb83-105"><a href="#cb83-105"></a>     <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>,</span>
+<span id="cb83-106"><a href="#cb83-106"></a>     <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span></span>
+<span id="cb83-107"><a href="#cb83-107"></a> ]</span>
+<span id="cb83-108"><a href="#cb83-108"></a><span class="in">```</span></span>
+<span id="cb83-109"><a href="#cb83-109"></a></span>
+<span id="cb83-110"><a href="#cb83-110"></a> </span>
+<span id="cb83-111"><a href="#cb83-111"></a></span>
+<span id="cb83-112"><a href="#cb83-112"></a><span class="fu">## Indentation {.unnumbered}</span></span>
+<span id="cb83-113"><a href="#cb83-113"></a>In Python code blocks are not structured by brackets or semicolons like <span class="in">`C/C++`</span> or <span class="in">`Java`</span> but by indentation. This means that the code inside a loop or a function is indented by a tab or four spaces.</span>
+<span id="cb83-114"><a href="#cb83-114"></a></span>
+<span id="cb83-115"><a href="#cb83-115"></a>:::{.callout-warning}</span>
+<span id="cb83-116"><a href="#cb83-116"></a>Indentations are curcial in Python. </span>
+<span id="cb83-117"><a href="#cb83-117"></a>If you don't indent your code correctly, you will get an typical beginner error.</span>
+<span id="cb83-118"><a href="#cb83-118"></a></span>
+<span id="cb83-119"><a href="#cb83-119"></a>Pay attention to not mix tabs and spaces in your code.</span>
 <span id="cb83-120"><a href="#cb83-120"></a>:::</span>
 <span id="cb83-121"><a href="#cb83-121"></a></span>
-<span id="cb83-122"><a href="#cb83-122"></a>Try it out:</span>
+<span id="cb83-122"><a href="#cb83-122"></a></span>
 <span id="cb83-123"><a href="#cb83-123"></a></span>
-<span id="cb83-126"><a href="#cb83-126"></a><span class="in">```{python}</span></span>
-<span id="cb83-127"><a href="#cb83-127"></a><span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span>
-<span id="cb83-128"><a href="#cb83-128"></a>    <span class="bu">print</span>(<span class="st">"wrong indentation"</span>)</span>
-<span id="cb83-129"><a href="#cb83-129"></a><span class="in">```</span></span>
-<span id="cb83-130"><a href="#cb83-130"></a></span>
-<span id="cb83-131"><a href="#cb83-131"></a>All the lines in the block must have the same indentation:</span>
-<span id="cb83-132"><a href="#cb83-132"></a></span>
-<span id="cb83-135"><a href="#cb83-135"></a><span class="in">```{python}</span></span>
-<span id="cb83-136"><a href="#cb83-136"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>) </span>
-<span id="cb83-137"><a href="#cb83-137"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span>
-<span id="cb83-138"><a href="#cb83-138"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span>
-<span id="cb83-139"><a href="#cb83-139"></a><span class="in">```</span></span>
-<span id="cb83-140"><a href="#cb83-140"></a></span>
-<span id="cb83-141"><a href="#cb83-141"></a><span class="fu">## Error messages {.unnumbered}</span></span>
-<span id="cb83-142"><a href="#cb83-142"></a></span>
-<span id="cb83-143"><a href="#cb83-143"></a>When you run a command that has an error, Python will print an error message. </span>
-<span id="cb83-144"><a href="#cb83-144"></a></span>
-<span id="cb83-145"><a href="#cb83-145"></a>The so called stack trace. It is a list of error messages that Python prints when an error occurs.</span>
+<span id="cb83-124"><a href="#cb83-124"></a>:::{.callout-note}</span>
+<span id="cb83-125"><a href="#cb83-125"></a><span class="fu">### Example - Wrong Indentation</span></span>
+<span id="cb83-126"><a href="#cb83-126"></a>:::</span>
+<span id="cb83-127"><a href="#cb83-127"></a></span>
+<span id="cb83-128"><a href="#cb83-128"></a>Try it out:</span>
+<span id="cb83-129"><a href="#cb83-129"></a></span>
+<span id="cb83-132"><a href="#cb83-132"></a><span class="in">```{python}</span></span>
+<span id="cb83-133"><a href="#cb83-133"></a><span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span>
+<span id="cb83-134"><a href="#cb83-134"></a>    <span class="bu">print</span>(<span class="st">"wrong indentation"</span>)</span>
+<span id="cb83-135"><a href="#cb83-135"></a><span class="in">```</span></span>
+<span id="cb83-136"><a href="#cb83-136"></a></span>
+<span id="cb83-137"><a href="#cb83-137"></a>All the lines in the block must have the same indentation:</span>
+<span id="cb83-138"><a href="#cb83-138"></a></span>
+<span id="cb83-141"><a href="#cb83-141"></a><span class="in">```{python}</span></span>
+<span id="cb83-142"><a href="#cb83-142"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>) </span>
+<span id="cb83-143"><a href="#cb83-143"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span>
+<span id="cb83-144"><a href="#cb83-144"></a>    <span class="bu">print</span>(<span class="st">"correct indentation"</span>)</span>
+<span id="cb83-145"><a href="#cb83-145"></a><span class="in">```</span></span>
 <span id="cb83-146"><a href="#cb83-146"></a></span>
-<span id="cb83-147"><a href="#cb83-147"></a>It gives you information about the error and the location of the error in your code.</span>
+<span id="cb83-147"><a href="#cb83-147"></a><span class="fu">## Error messages {.unnumbered}</span></span>
 <span id="cb83-148"><a href="#cb83-148"></a></span>
-<span id="cb83-149"><a href="#cb83-149"></a>The strack track is read from bottom to top.</span>
+<span id="cb83-149"><a href="#cb83-149"></a>When you run a command that has an error, Python will print an error message. </span>
 <span id="cb83-150"><a href="#cb83-150"></a></span>
-<span id="cb83-151"><a href="#cb83-151"></a>The last line contains the error message and the line number where the error occured.</span>
+<span id="cb83-151"><a href="#cb83-151"></a>The so called stack trace. It is a list of error messages that Python prints when an error occurs.</span>
 <span id="cb83-152"><a href="#cb83-152"></a></span>
-<span id="cb83-153"><a href="#cb83-153"></a></span>
+<span id="cb83-153"><a href="#cb83-153"></a>It gives you information about the error and the location of the error in your code.</span>
 <span id="cb83-154"><a href="#cb83-154"></a></span>
-<span id="cb83-155"><a href="#cb83-155"></a>::: {.callout-tip}</span>
-<span id="cb83-156"><a href="#cb83-156"></a>Often the error messages are not very clear. You can search for the error message in the internet. <span class="co">[</span><span class="ot">Stackoverflow</span><span class="co">](https://stackoverflow.com/)</span> has a lot of answers to common errors. Or you can ask some AI *e.g.* <span class="co">[</span><span class="ot">ChatGPT</span><span class="co">](https://chat.openai.com/)</span>.</span>
-<span id="cb83-157"><a href="#cb83-157"></a>:::</span>
+<span id="cb83-155"><a href="#cb83-155"></a>The strack track is read from bottom to top.</span>
+<span id="cb83-156"><a href="#cb83-156"></a></span>
+<span id="cb83-157"><a href="#cb83-157"></a>The last line contains the error message and the line number where the error occured.</span>
 <span id="cb83-158"><a href="#cb83-158"></a></span>
 <span id="cb83-159"><a href="#cb83-159"></a></span>
-<span id="cb83-160"><a href="#cb83-160"></a>:::{.callout-note}</span>
-<span id="cb83-161"><a href="#cb83-161"></a>Example - Cryptic Error Message </span>
-<span id="cb83-162"><a href="#cb83-162"></a>What does the error message tell you? If you are not sure ask the internet or your favorite AI.</span>
+<span id="cb83-160"><a href="#cb83-160"></a></span>
+<span id="cb83-161"><a href="#cb83-161"></a>::: {.callout-tip}</span>
+<span id="cb83-162"><a href="#cb83-162"></a>Often the error messages are not very clear. You can search for the error message in the internet. <span class="co">[</span><span class="ot">Stackoverflow</span><span class="co">](https://stackoverflow.com/)</span> has a lot of answers to common errors. Or you can ask some AI *e.g.* <span class="co">[</span><span class="ot">ChatGPT</span><span class="co">](https://chat.openai.com/)</span>.</span>
 <span id="cb83-163"><a href="#cb83-163"></a>:::</span>
 <span id="cb83-164"><a href="#cb83-164"></a></span>
-<span id="cb83-167"><a href="#cb83-167"></a><span class="in">```{python}</span></span>
-<span id="cb83-168"><a href="#cb83-168"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
-<span id="cb83-169"><a href="#cb83-169"></a><span class="bu">print</span>(a[<span class="dv">3</span>])</span>
-<span id="cb83-170"><a href="#cb83-170"></a><span class="in">```</span></span>
-<span id="cb83-171"><a href="#cb83-171"></a></span>
-<span id="cb83-172"><a href="#cb83-172"></a></span>
-<span id="cb83-173"><a href="#cb83-173"></a></span>
-<span id="cb83-174"><a href="#cb83-174"></a></span>
-<span id="cb83-175"><a href="#cb83-175"></a></span>
-<span id="cb83-176"><a href="#cb83-176"></a></span>
-<span id="cb83-177"><a href="#cb83-177"></a>:::{.callout-tip collapse="true"}</span>
-<span id="cb83-178"><a href="#cb83-178"></a><span class="fu">### Solution </span></span>
-<span id="cb83-179"><a href="#cb83-179"></a>The error message tells you that you are trying to access an index that is out of range.</span>
-<span id="cb83-180"><a href="#cb83-180"></a>:::</span>
+<span id="cb83-165"><a href="#cb83-165"></a></span>
+<span id="cb83-166"><a href="#cb83-166"></a>:::{.callout-note}</span>
+<span id="cb83-167"><a href="#cb83-167"></a>Example - Cryptic Error Message </span>
+<span id="cb83-168"><a href="#cb83-168"></a>What does the error message tell you? If you are not sure ask the internet or your favorite AI.</span>
+<span id="cb83-169"><a href="#cb83-169"></a>:::</span>
+<span id="cb83-170"><a href="#cb83-170"></a></span>
+<span id="cb83-173"><a href="#cb83-173"></a><span class="in">```{python}</span></span>
+<span id="cb83-174"><a href="#cb83-174"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
+<span id="cb83-175"><a href="#cb83-175"></a><span class="bu">print</span>(a[<span class="dv">3</span>])</span>
+<span id="cb83-176"><a href="#cb83-176"></a><span class="in">```</span></span>
+<span id="cb83-177"><a href="#cb83-177"></a></span>
+<span id="cb83-178"><a href="#cb83-178"></a></span>
+<span id="cb83-179"><a href="#cb83-179"></a></span>
+<span id="cb83-180"><a href="#cb83-180"></a></span>
 <span id="cb83-181"><a href="#cb83-181"></a></span>
 <span id="cb83-182"><a href="#cb83-182"></a></span>
-<span id="cb83-183"><a href="#cb83-183"></a><span class="fu">## Comments {.unnumbered}</span></span>
-<span id="cb83-184"><a href="#cb83-184"></a>Comments are important. They help you and others to understand your code. &lt;br&gt;</span>
-<span id="cb83-185"><a href="#cb83-185"></a>You can use the <span class="sc">\`</span> symbol to write comments.</span>
-<span id="cb83-186"><a href="#cb83-186"></a></span>
-<span id="cb83-187"><a href="#cb83-187"></a>Docstrings are used to document the code for example with <span class="co">[</span><span class="ot">pydoc</span><span class="co">](https://docs.python.org/3/library/pydoc.html)</span>. They are using triple quotes <span class="sc">\`</span>""" """"<span class="sc">\`</span>.</span>
+<span id="cb83-183"><a href="#cb83-183"></a>:::{.callout-tip collapse="true"}</span>
+<span id="cb83-184"><a href="#cb83-184"></a><span class="fu">### Solution </span></span>
+<span id="cb83-185"><a href="#cb83-185"></a>The error message tells you that you are trying to access an index that is out of range.</span>
+<span id="cb83-186"><a href="#cb83-186"></a>:::</span>
+<span id="cb83-187"><a href="#cb83-187"></a></span>
 <span id="cb83-188"><a href="#cb83-188"></a></span>
-<span id="cb83-189"><a href="#cb83-189"></a></span>
-<span id="cb83-190"><a href="#cb83-190"></a></span>
-<span id="cb83-193"><a href="#cb83-193"></a><span class="in">```{python}</span></span>
-<span id="cb83-194"><a href="#cb83-194"></a><span class="co"># This is a comment</span></span>
+<span id="cb83-189"><a href="#cb83-189"></a><span class="fu">## Comments {.unnumbered}</span></span>
+<span id="cb83-190"><a href="#cb83-190"></a>Comments are important. They help you and others to understand your code. &lt;br&gt;</span>
+<span id="cb83-191"><a href="#cb83-191"></a>You can use the <span class="sc">\`</span> symbol to write comments.</span>
+<span id="cb83-192"><a href="#cb83-192"></a></span>
+<span id="cb83-193"><a href="#cb83-193"></a>Docstrings are used to document the code for example with <span class="co">[</span><span class="ot">pydoc</span><span class="co">](https://docs.python.org/3/library/pydoc.html)</span>. They are using triple quotes <span class="sc">\`</span>""" """"<span class="sc">\`</span>.</span>
+<span id="cb83-194"><a href="#cb83-194"></a></span>
 <span id="cb83-195"><a href="#cb83-195"></a></span>
-<span id="cb83-196"><a href="#cb83-196"></a><span class="co">"""</span></span>
-<span id="cb83-197"><a href="#cb83-197"></a><span class="co">This is a documentation.</span></span>
-<span id="cb83-198"><a href="#cb83-198"></a><span class="co">You can document your code for example by pydoc</span></span>
-<span id="cb83-199"><a href="#cb83-199"></a><span class="co">"""</span></span>
-<span id="cb83-200"><a href="#cb83-200"></a><span class="in">```</span></span>
+<span id="cb83-196"><a href="#cb83-196"></a></span>
+<span id="cb83-199"><a href="#cb83-199"></a><span class="in">```{python}</span></span>
+<span id="cb83-200"><a href="#cb83-200"></a><span class="co"># This is a comment</span></span>
 <span id="cb83-201"><a href="#cb83-201"></a></span>
-<span id="cb83-202"><a href="#cb83-202"></a>---</span>
-<span id="cb83-203"><a href="#cb83-203"></a></span>
-<span id="cb83-204"><a href="#cb83-204"></a><span class="fu"># Modules {.unnumbered}</span></span>
-<span id="cb83-205"><a href="#cb83-205"></a></span>
-<span id="cb83-206"><a href="#cb83-206"></a>There exist a lot of libraries and modules in Python. &lt;br&gt;</span>
-<span id="cb83-207"><a href="#cb83-207"></a>Libraries is a term to describe a collection of modules. &lt;br&gt;</span>
-<span id="cb83-208"><a href="#cb83-208"></a>Packages are a way to collect related modules together within a single tree-like hierarchy. &lt;br&gt;</span>
-<span id="cb83-209"><a href="#cb83-209"></a>Modules are a collection of files. &lt;br&gt;</span>
-<span id="cb83-210"><a href="#cb83-210"></a>A script is a file that can be run independently. &lt;br&gt;</span>
-<span id="cb83-211"><a href="#cb83-211"></a>You can use the <span class="in">`import`</span> statement to import the whole module. &lt;br&gt;</span>
-<span id="cb83-212"><a href="#cb83-212"></a>You can use the <span class="in">`from`</span> statement to import a specific part of the module. &lt;br&gt;</span>
-<span id="cb83-213"><a href="#cb83-213"></a>You can use the <span class="in">`dir()`</span> function to list the names in a module. &lt;br&gt;</span>
-<span id="cb83-214"><a href="#cb83-214"></a>You can use the <span class="in">`help()`</span> function to get help on a module. &lt;br&gt;</span>
-<span id="cb83-215"><a href="#cb83-215"></a></span>
-<span id="cb83-216"><a href="#cb83-216"></a></span>
-<span id="cb83-217"><a href="#cb83-217"></a></span>
-<span id="cb83-218"><a href="#cb83-218"></a></span>
-<span id="cb83-219"><a href="#cb83-219"></a></span>
-<span id="cb83-222"><a href="#cb83-222"></a><span class="in">```{python}</span></span>
-<span id="cb83-223"><a href="#cb83-223"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
-<span id="cb83-224"><a href="#cb83-224"></a><span class="co"># the library numpy is imported</span></span>
-<span id="cb83-225"><a href="#cb83-225"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt </span>
-<span id="cb83-226"><a href="#cb83-226"></a><span class="co"># the library pyplot is imported from matplotlib module</span></span>
-<span id="cb83-227"><a href="#cb83-227"></a><span class="in">```</span></span>
-<span id="cb83-228"><a href="#cb83-228"></a></span>
-<span id="cb83-229"><a href="#cb83-229"></a>---</span>
-<span id="cb83-230"><a href="#cb83-230"></a></span>
-<span id="cb83-231"><a href="#cb83-231"></a><span class="fu"># Variables {.unnumbered}</span></span>
-<span id="cb83-232"><a href="#cb83-232"></a></span>
-<span id="cb83-233"><a href="#cb83-233"></a></span>
-<span id="cb83-234"><a href="#cb83-234"></a>In Python, you don't need to declare the type of a variable. &lt;br&gt;</span>
-<span id="cb83-235"><a href="#cb83-235"></a>You can assign a value to a variable using the <span class="in">`=`</span> operator. &lt;br&gt;</span>
-<span id="cb83-236"><a href="#cb83-236"></a>Python is managing the memory allocation for you. &lt;br&gt;</span>
-<span id="cb83-237"><a href="#cb83-237"></a></span>
+<span id="cb83-202"><a href="#cb83-202"></a><span class="co">"""</span></span>
+<span id="cb83-203"><a href="#cb83-203"></a><span class="co">This is a documentation.</span></span>
+<span id="cb83-204"><a href="#cb83-204"></a><span class="co">You can document your code for example by pydoc</span></span>
+<span id="cb83-205"><a href="#cb83-205"></a><span class="co">"""</span></span>
+<span id="cb83-206"><a href="#cb83-206"></a><span class="in">```</span></span>
+<span id="cb83-207"><a href="#cb83-207"></a></span>
+<span id="cb83-208"><a href="#cb83-208"></a>---</span>
+<span id="cb83-209"><a href="#cb83-209"></a></span>
+<span id="cb83-210"><a href="#cb83-210"></a><span class="fu"># Modules {.unnumbered}</span></span>
+<span id="cb83-211"><a href="#cb83-211"></a></span>
+<span id="cb83-212"><a href="#cb83-212"></a>There exist a lot of libraries and modules in Python. &lt;br&gt;</span>
+<span id="cb83-213"><a href="#cb83-213"></a>Libraries is a term to describe a collection of modules. &lt;br&gt;</span>
+<span id="cb83-214"><a href="#cb83-214"></a>Packages are a way to collect related modules together within a single tree-like hierarchy. &lt;br&gt;</span>
+<span id="cb83-215"><a href="#cb83-215"></a>Modules are a collection of files. &lt;br&gt;</span>
+<span id="cb83-216"><a href="#cb83-216"></a>A script is a file that can be run independently. &lt;br&gt;</span>
+<span id="cb83-217"><a href="#cb83-217"></a>You can use the <span class="in">`import`</span> statement to import the whole module. &lt;br&gt;</span>
+<span id="cb83-218"><a href="#cb83-218"></a>You can use the <span class="in">`from`</span> statement to import a specific part of the module. &lt;br&gt;</span>
+<span id="cb83-219"><a href="#cb83-219"></a>You can use the <span class="in">`dir()`</span> function to list the names in a module. &lt;br&gt;</span>
+<span id="cb83-220"><a href="#cb83-220"></a>You can use the <span class="in">`help()`</span> function to get help on a module. &lt;br&gt;</span>
+<span id="cb83-221"><a href="#cb83-221"></a></span>
+<span id="cb83-222"><a href="#cb83-222"></a></span>
+<span id="cb83-223"><a href="#cb83-223"></a></span>
+<span id="cb83-224"><a href="#cb83-224"></a></span>
+<span id="cb83-225"><a href="#cb83-225"></a></span>
+<span id="cb83-228"><a href="#cb83-228"></a><span class="in">```{python}</span></span>
+<span id="cb83-229"><a href="#cb83-229"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
+<span id="cb83-230"><a href="#cb83-230"></a><span class="co"># the library numpy is imported</span></span>
+<span id="cb83-231"><a href="#cb83-231"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt </span>
+<span id="cb83-232"><a href="#cb83-232"></a><span class="co"># the library pyplot is imported from matplotlib module</span></span>
+<span id="cb83-233"><a href="#cb83-233"></a><span class="in">```</span></span>
+<span id="cb83-234"><a href="#cb83-234"></a></span>
+<span id="cb83-235"><a href="#cb83-235"></a>---</span>
+<span id="cb83-236"><a href="#cb83-236"></a></span>
+<span id="cb83-237"><a href="#cb83-237"></a><span class="fu"># Variables {.unnumbered}</span></span>
 <span id="cb83-238"><a href="#cb83-238"></a></span>
-<span id="cb83-241"><a href="#cb83-241"></a><span class="in">```{python}</span></span>
-<span id="cb83-242"><a href="#cb83-242"></a>a <span class="op">=</span> <span class="dv">1</span>  <span class="co">#a is a variable</span></span>
-<span id="cb83-243"><a href="#cb83-243"></a>b <span class="op">=</span> <span class="st">"String"</span> <span class="co">#b is a string</span></span>
-<span id="cb83-244"><a href="#cb83-244"></a><span class="bu">print</span>(<span class="dv">1</span>, <span class="st">" is an"</span>, <span class="bu">type</span>(a))</span>
-<span id="cb83-245"><a href="#cb83-245"></a><span class="bu">print</span>(b, <span class="st">" is a"</span>, <span class="bu">type</span>(b))</span>
-<span id="cb83-246"><a href="#cb83-246"></a></span>
-<span id="cb83-247"><a href="#cb83-247"></a><span class="in">```</span></span>
-<span id="cb83-248"><a href="#cb83-248"></a></span>
-<span id="cb83-249"><a href="#cb83-249"></a>---</span>
-<span id="cb83-250"><a href="#cb83-250"></a></span>
-<span id="cb83-251"><a href="#cb83-251"></a><span class="fu"># Data Types {.unnumbered}</span></span>
+<span id="cb83-239"><a href="#cb83-239"></a></span>
+<span id="cb83-240"><a href="#cb83-240"></a>In Python, you don't need to declare the type of a variable. &lt;br&gt;</span>
+<span id="cb83-241"><a href="#cb83-241"></a>You can assign a value to a variable using the <span class="in">`=`</span> operator. &lt;br&gt;</span>
+<span id="cb83-242"><a href="#cb83-242"></a>Python is managing the memory allocation for you. &lt;br&gt;</span>
+<span id="cb83-243"><a href="#cb83-243"></a></span>
+<span id="cb83-244"><a href="#cb83-244"></a></span>
+<span id="cb83-247"><a href="#cb83-247"></a><span class="in">```{python}</span></span>
+<span id="cb83-248"><a href="#cb83-248"></a>a <span class="op">=</span> <span class="dv">1</span>  <span class="co">#a is a variable</span></span>
+<span id="cb83-249"><a href="#cb83-249"></a>b <span class="op">=</span> <span class="st">"String"</span> <span class="co">#b is a string</span></span>
+<span id="cb83-250"><a href="#cb83-250"></a><span class="bu">print</span>(<span class="dv">1</span>, <span class="st">" is an"</span>, <span class="bu">type</span>(a))</span>
+<span id="cb83-251"><a href="#cb83-251"></a><span class="bu">print</span>(b, <span class="st">" is a"</span>, <span class="bu">type</span>(b))</span>
 <span id="cb83-252"><a href="#cb83-252"></a></span>
-<span id="cb83-253"><a href="#cb83-253"></a></span>
-<span id="cb83-254"><a href="#cb83-254"></a>Python has several data types. The most common are:</span>
-<span id="cb83-255"><a href="#cb83-255"></a></span>
-<span id="cb83-256"><a href="#cb83-256"></a><span class="ss">- </span><span class="in">`int`</span> for integers</span>
-<span id="cb83-257"><a href="#cb83-257"></a><span class="ss">- </span><span class="in">`float`</span> for floating point numbers</span>
-<span id="cb83-258"><a href="#cb83-258"></a><span class="ss">- </span><span class="in">`str`</span> for strings</span>
-<span id="cb83-259"><a href="#cb83-259"></a><span class="ss">- </span><span class="in">`bool`</span> for booleans</span>
-<span id="cb83-260"><a href="#cb83-260"></a><span class="ss">- </span><span class="in">`list`</span> for lists</span>
-<span id="cb83-261"><a href="#cb83-261"></a><span class="ss">- </span><span class="in">`tuple`</span> for tuples</span>
-<span id="cb83-262"><a href="#cb83-262"></a><span class="ss">- </span><span class="in">`dict`</span> for dictionaries</span>
-<span id="cb83-263"><a href="#cb83-263"></a><span class="ss">- </span><span class="in">`set`</span> for sets</span>
-<span id="cb83-264"><a href="#cb83-264"></a></span>
-<span id="cb83-265"><a href="#cb83-265"></a>You can use the <span class="in">`type()`</span> function to get the type of a variable. &lt;br&gt;</span>
-<span id="cb83-266"><a href="#cb83-266"></a>You can use the <span class="in">`isinstance()`</span> function to check if a variable is an instance of a class. &lt;br&gt;</span>
-<span id="cb83-267"><a href="#cb83-267"></a>Type casting is the process of converting one data type to another. &lt;br&gt;</span>
-<span id="cb83-268"><a href="#cb83-268"></a>You can use the <span class="in">`int()`</span>, <span class="in">`float()`</span>, <span class="in">`str()`</span>, <span class="in">`bool()`</span>, <span class="in">`list()`</span>, <span class="in">`tuple()`</span>, <span class="in">`dict()`</span>, <span class="in">`set()`</span> functions to cast a variable to a different type. &lt;br&gt;</span>
-<span id="cb83-269"><a href="#cb83-269"></a></span>
+<span id="cb83-253"><a href="#cb83-253"></a><span class="in">```</span></span>
+<span id="cb83-254"><a href="#cb83-254"></a></span>
+<span id="cb83-255"><a href="#cb83-255"></a>---</span>
+<span id="cb83-256"><a href="#cb83-256"></a></span>
+<span id="cb83-257"><a href="#cb83-257"></a><span class="fu"># Data Types {.unnumbered}</span></span>
+<span id="cb83-258"><a href="#cb83-258"></a></span>
+<span id="cb83-259"><a href="#cb83-259"></a></span>
+<span id="cb83-260"><a href="#cb83-260"></a>Python has several data types. The most common are:</span>
+<span id="cb83-261"><a href="#cb83-261"></a></span>
+<span id="cb83-262"><a href="#cb83-262"></a><span class="ss">- </span><span class="in">`int`</span> for integers</span>
+<span id="cb83-263"><a href="#cb83-263"></a><span class="ss">- </span><span class="in">`float`</span> for floating point numbers</span>
+<span id="cb83-264"><a href="#cb83-264"></a><span class="ss">- </span><span class="in">`str`</span> for strings</span>
+<span id="cb83-265"><a href="#cb83-265"></a><span class="ss">- </span><span class="in">`bool`</span> for booleans</span>
+<span id="cb83-266"><a href="#cb83-266"></a><span class="ss">- </span><span class="in">`list`</span> for lists</span>
+<span id="cb83-267"><a href="#cb83-267"></a><span class="ss">- </span><span class="in">`tuple`</span> for tuples</span>
+<span id="cb83-268"><a href="#cb83-268"></a><span class="ss">- </span><span class="in">`dict`</span> for dictionaries</span>
+<span id="cb83-269"><a href="#cb83-269"></a><span class="ss">- </span><span class="in">`set`</span> for sets</span>
 <span id="cb83-270"><a href="#cb83-270"></a></span>
-<span id="cb83-273"><a href="#cb83-273"></a><span class="in">```{python}</span></span>
-<span id="cb83-274"><a href="#cb83-274"></a>x <span class="op">=</span> <span class="dv">5</span> <span class="bu">int</span></span>
-<span id="cb83-275"><a href="#cb83-275"></a><span class="bu">print</span>(x,<span class="bu">type</span>(x))<span class="co"># print the type of x</span></span>
+<span id="cb83-271"><a href="#cb83-271"></a>You can use the <span class="in">`type()`</span> function to get the type of a variable. &lt;br&gt;</span>
+<span id="cb83-272"><a href="#cb83-272"></a>You can use the <span class="in">`isinstance()`</span> function to check if a variable is an instance of a class. &lt;br&gt;</span>
+<span id="cb83-273"><a href="#cb83-273"></a>Type casting is the process of converting one data type to another. &lt;br&gt;</span>
+<span id="cb83-274"><a href="#cb83-274"></a>You can use the <span class="in">`int()`</span>, <span class="in">`float()`</span>, <span class="in">`str()`</span>, <span class="in">`bool()`</span>, <span class="in">`list()`</span>, <span class="in">`tuple()`</span>, <span class="in">`dict()`</span>, <span class="in">`set()`</span> functions to cast a variable to a different type. &lt;br&gt;</span>
+<span id="cb83-275"><a href="#cb83-275"></a></span>
 <span id="cb83-276"><a href="#cb83-276"></a></span>
-<span id="cb83-277"><a href="#cb83-277"></a><span class="in">```</span></span>
-<span id="cb83-278"><a href="#cb83-278"></a></span>
-<span id="cb83-281"><a href="#cb83-281"></a><span class="in">```{python}</span></span>
-<span id="cb83-282"><a href="#cb83-282"></a>y <span class="op">=</span> <span class="fl">5.12</span> <span class="co">#float</span></span>
-<span id="cb83-283"><a href="#cb83-283"></a><span class="bu">print</span>(y,<span class="bu">type</span>(y))</span>
+<span id="cb83-279"><a href="#cb83-279"></a><span class="in">```{python}</span></span>
+<span id="cb83-280"><a href="#cb83-280"></a>x <span class="op">=</span> <span class="dv">5</span> <span class="bu">int</span></span>
+<span id="cb83-281"><a href="#cb83-281"></a><span class="bu">print</span>(x,<span class="bu">type</span>(x))<span class="co"># print the type of x</span></span>
+<span id="cb83-282"><a href="#cb83-282"></a></span>
+<span id="cb83-283"><a href="#cb83-283"></a><span class="in">```</span></span>
 <span id="cb83-284"><a href="#cb83-284"></a></span>
-<span id="cb83-285"><a href="#cb83-285"></a><span class="in">```</span></span>
-<span id="cb83-286"><a href="#cb83-286"></a></span>
-<span id="cb83-289"><a href="#cb83-289"></a><span class="in">```{python}</span></span>
-<span id="cb83-290"><a href="#cb83-290"></a>c <span class="op">=</span> <span class="ot">2.8j</span> <span class="co">#complex</span></span>
-<span id="cb83-291"><a href="#cb83-291"></a><span class="bu">print</span>(c,<span class="bu">type</span>(c))</span>
+<span id="cb83-287"><a href="#cb83-287"></a><span class="in">```{python}</span></span>
+<span id="cb83-288"><a href="#cb83-288"></a>y <span class="op">=</span> <span class="fl">5.12</span> <span class="co">#float</span></span>
+<span id="cb83-289"><a href="#cb83-289"></a><span class="bu">print</span>(y,<span class="bu">type</span>(y))</span>
+<span id="cb83-290"><a href="#cb83-290"></a></span>
+<span id="cb83-291"><a href="#cb83-291"></a><span class="in">```</span></span>
 <span id="cb83-292"><a href="#cb83-292"></a></span>
-<span id="cb83-293"><a href="#cb83-293"></a><span class="in">```</span></span>
-<span id="cb83-294"><a href="#cb83-294"></a></span>
-<span id="cb83-297"><a href="#cb83-297"></a><span class="in">```{python}</span></span>
-<span id="cb83-298"><a href="#cb83-298"></a>s <span class="op">=</span> <span class="st">"Hello World"</span> <span class="co">#string</span></span>
-<span id="cb83-299"><a href="#cb83-299"></a><span class="bu">print</span>(s,<span class="bu">type</span>(s))</span>
+<span id="cb83-295"><a href="#cb83-295"></a><span class="in">```{python}</span></span>
+<span id="cb83-296"><a href="#cb83-296"></a>c <span class="op">=</span> <span class="ot">2.8j</span> <span class="co">#complex</span></span>
+<span id="cb83-297"><a href="#cb83-297"></a><span class="bu">print</span>(c,<span class="bu">type</span>(c))</span>
+<span id="cb83-298"><a href="#cb83-298"></a></span>
+<span id="cb83-299"><a href="#cb83-299"></a><span class="in">```</span></span>
 <span id="cb83-300"><a href="#cb83-300"></a></span>
-<span id="cb83-301"><a href="#cb83-301"></a><span class="in">```</span></span>
-<span id="cb83-302"><a href="#cb83-302"></a></span>
-<span id="cb83-305"><a href="#cb83-305"></a><span class="in">```{python}</span></span>
-<span id="cb83-306"><a href="#cb83-306"></a><span class="bu">print</span>(<span class="st">"length of word: "</span>, <span class="bu">len</span>(s)) <span class="co"># length of string</span></span>
-<span id="cb83-307"><a href="#cb83-307"></a><span class="bu">print</span>(<span class="st">"character on position 2: "</span>, s[<span class="dv">2</span>]) </span>
-<span id="cb83-308"><a href="#cb83-308"></a><span class="bu">print</span>(<span class="st">"last 3 characters: "</span>, s[<span class="op">-</span><span class="dv">3</span>:])</span>
-<span id="cb83-309"><a href="#cb83-309"></a>s2 <span class="op">=</span> s <span class="op">+</span> <span class="st">"!"</span></span>
-<span id="cb83-310"><a href="#cb83-310"></a><span class="bu">print</span>(s2)</span>
-<span id="cb83-311"><a href="#cb83-311"></a>s3 <span class="op">=</span> <span class="st">"</span><span class="ch">\"</span><span class="st">Hello world</span><span class="ch">\"</span><span class="st">!"</span></span>
-<span id="cb83-312"><a href="#cb83-312"></a><span class="bu">print</span>(s3)</span>
-<span id="cb83-313"><a href="#cb83-313"></a><span class="in">```</span></span>
-<span id="cb83-314"><a href="#cb83-314"></a></span>
-<span id="cb83-315"><a href="#cb83-315"></a></span>
-<span id="cb83-318"><a href="#cb83-318"></a><span class="in">```{python}</span></span>
-<span id="cb83-319"><a href="#cb83-319"></a>d <span class="op">=</span> <span class="bu">dict</span>(name<span class="op">=</span><span class="st">"Max"</span>,lastname<span class="op">=</span><span class="st">"Musterman"</span>,height<span class="op">=</span><span class="fl">1.89</span>) <span class="co"># dictionary</span></span>
-<span id="cb83-320"><a href="#cb83-320"></a><span class="bu">print</span>(d,<span class="bu">type</span>(d))</span>
+<span id="cb83-303"><a href="#cb83-303"></a><span class="in">```{python}</span></span>
+<span id="cb83-304"><a href="#cb83-304"></a>s <span class="op">=</span> <span class="st">"Hello World"</span> <span class="co">#string</span></span>
+<span id="cb83-305"><a href="#cb83-305"></a><span class="bu">print</span>(s,<span class="bu">type</span>(s))</span>
+<span id="cb83-306"><a href="#cb83-306"></a></span>
+<span id="cb83-307"><a href="#cb83-307"></a><span class="in">```</span></span>
+<span id="cb83-308"><a href="#cb83-308"></a></span>
+<span id="cb83-311"><a href="#cb83-311"></a><span class="in">```{python}</span></span>
+<span id="cb83-312"><a href="#cb83-312"></a><span class="bu">print</span>(<span class="st">"length of word: "</span>, <span class="bu">len</span>(s)) <span class="co"># length of string</span></span>
+<span id="cb83-313"><a href="#cb83-313"></a><span class="bu">print</span>(<span class="st">"character on position 2: "</span>, s[<span class="dv">2</span>]) </span>
+<span id="cb83-314"><a href="#cb83-314"></a><span class="bu">print</span>(<span class="st">"last 3 characters: "</span>, s[<span class="op">-</span><span class="dv">3</span>:])</span>
+<span id="cb83-315"><a href="#cb83-315"></a>s2 <span class="op">=</span> s <span class="op">+</span> <span class="st">"!"</span></span>
+<span id="cb83-316"><a href="#cb83-316"></a><span class="bu">print</span>(s2)</span>
+<span id="cb83-317"><a href="#cb83-317"></a>s3 <span class="op">=</span> <span class="st">"</span><span class="ch">\"</span><span class="st">Hello world</span><span class="ch">\"</span><span class="st">!"</span></span>
+<span id="cb83-318"><a href="#cb83-318"></a><span class="bu">print</span>(s3)</span>
+<span id="cb83-319"><a href="#cb83-319"></a><span class="in">```</span></span>
+<span id="cb83-320"><a href="#cb83-320"></a></span>
 <span id="cb83-321"><a href="#cb83-321"></a></span>
-<span id="cb83-322"><a href="#cb83-322"></a><span class="in">```</span></span>
-<span id="cb83-325"><a href="#cb83-325"></a><span class="in">```{python}</span></span>
-<span id="cb83-326"><a href="#cb83-326"></a>b <span class="op">=</span> <span class="va">True</span> <span class="co"># boolean</span></span>
-<span id="cb83-327"><a href="#cb83-327"></a><span class="bu">print</span>(b,<span class="bu">type</span>(b))</span>
+<span id="cb83-324"><a href="#cb83-324"></a><span class="in">```{python}</span></span>
+<span id="cb83-325"><a href="#cb83-325"></a>d <span class="op">=</span> <span class="bu">dict</span>(name<span class="op">=</span><span class="st">"Max"</span>,lastname<span class="op">=</span><span class="st">"Musterman"</span>,height<span class="op">=</span><span class="fl">1.89</span>) <span class="co"># dictionary</span></span>
+<span id="cb83-326"><a href="#cb83-326"></a><span class="bu">print</span>(d,<span class="bu">type</span>(d))</span>
+<span id="cb83-327"><a href="#cb83-327"></a></span>
 <span id="cb83-328"><a href="#cb83-328"></a><span class="in">```</span></span>
-<span id="cb83-329"><a href="#cb83-329"></a></span>
-<span id="cb83-332"><a href="#cb83-332"></a><span class="in">```{python}</span></span>
-<span id="cb83-333"><a href="#cb83-333"></a>dataset <span class="op">=</span> {<span class="dv">1</span>,<span class="dv">12</span>,<span class="dv">3</span>} <span class="co"># set </span></span>
-<span id="cb83-334"><a href="#cb83-334"></a><span class="bu">print</span>(dataset,<span class="bu">type</span>(dataset))</span>
+<span id="cb83-331"><a href="#cb83-331"></a><span class="in">```{python}</span></span>
+<span id="cb83-332"><a href="#cb83-332"></a>b <span class="op">=</span> <span class="va">True</span> <span class="co"># boolean</span></span>
+<span id="cb83-333"><a href="#cb83-333"></a><span class="bu">print</span>(b,<span class="bu">type</span>(b))</span>
+<span id="cb83-334"><a href="#cb83-334"></a><span class="in">```</span></span>
 <span id="cb83-335"><a href="#cb83-335"></a></span>
-<span id="cb83-336"><a href="#cb83-336"></a><span class="in">```</span></span>
-<span id="cb83-337"><a href="#cb83-337"></a></span>
-<span id="cb83-340"><a href="#cb83-340"></a><span class="in">```{python}</span></span>
-<span id="cb83-341"><a href="#cb83-341"></a>dataset2 <span class="op">=</span> <span class="bu">set</span>((<span class="fl">1.2</span>,<span class="dv">2</span>,<span class="dv">2</span>)) <span class="co"># set</span></span>
-<span id="cb83-342"><a href="#cb83-342"></a><span class="bu">print</span>(dataset2,<span class="bu">type</span>(dataset2))</span>
+<span id="cb83-338"><a href="#cb83-338"></a><span class="in">```{python}</span></span>
+<span id="cb83-339"><a href="#cb83-339"></a>dataset <span class="op">=</span> {<span class="dv">1</span>,<span class="dv">12</span>,<span class="dv">3</span>} <span class="co"># set </span></span>
+<span id="cb83-340"><a href="#cb83-340"></a><span class="bu">print</span>(dataset,<span class="bu">type</span>(dataset))</span>
+<span id="cb83-341"><a href="#cb83-341"></a></span>
+<span id="cb83-342"><a href="#cb83-342"></a><span class="in">```</span></span>
 <span id="cb83-343"><a href="#cb83-343"></a></span>
-<span id="cb83-344"><a href="#cb83-344"></a><span class="in">```</span></span>
-<span id="cb83-345"><a href="#cb83-345"></a></span>
-<span id="cb83-348"><a href="#cb83-348"></a><span class="in">```{python}</span></span>
-<span id="cb83-349"><a href="#cb83-349"></a>r <span class="op">=</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">2</span>) <span class="co"># range</span></span>
-<span id="cb83-350"><a href="#cb83-350"></a><span class="bu">print</span>(r,<span class="bu">type</span>(r))</span>
+<span id="cb83-346"><a href="#cb83-346"></a><span class="in">```{python}</span></span>
+<span id="cb83-347"><a href="#cb83-347"></a>dataset2 <span class="op">=</span> <span class="bu">set</span>((<span class="fl">1.2</span>,<span class="dv">2</span>,<span class="dv">2</span>)) <span class="co"># set</span></span>
+<span id="cb83-348"><a href="#cb83-348"></a><span class="bu">print</span>(dataset2,<span class="bu">type</span>(dataset2))</span>
+<span id="cb83-349"><a href="#cb83-349"></a></span>
+<span id="cb83-350"><a href="#cb83-350"></a><span class="in">```</span></span>
 <span id="cb83-351"><a href="#cb83-351"></a></span>
-<span id="cb83-352"><a href="#cb83-352"></a><span class="in">```</span></span>
-<span id="cb83-353"><a href="#cb83-353"></a></span>
-<span id="cb83-356"><a href="#cb83-356"></a><span class="in">```{python}</span></span>
-<span id="cb83-357"><a href="#cb83-357"></a>l <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">3</span>] <span class="co"># list</span></span>
-<span id="cb83-358"><a href="#cb83-358"></a><span class="bu">print</span>(l,<span class="bu">type</span>(l))</span>
-<span id="cb83-359"><a href="#cb83-359"></a><span class="bu">print</span>(<span class="st">"length of list"</span>,<span class="bu">len</span>(l))</span>
-<span id="cb83-360"><a href="#cb83-360"></a></span>
-<span id="cb83-361"><a href="#cb83-361"></a><span class="in">```</span></span>
-<span id="cb83-362"><a href="#cb83-362"></a></span>
-<span id="cb83-365"><a href="#cb83-365"></a><span class="in">```{python}</span></span>
-<span id="cb83-366"><a href="#cb83-366"></a>t <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>)<span class="co"># tuple</span></span>
-<span id="cb83-367"><a href="#cb83-367"></a><span class="bu">print</span>(t,<span class="bu">type</span>(t))</span>
-<span id="cb83-368"><a href="#cb83-368"></a><span class="in">```</span></span>
-<span id="cb83-369"><a href="#cb83-369"></a></span>
-<span id="cb83-372"><a href="#cb83-372"></a><span class="in">```{python}</span></span>
-<span id="cb83-373"><a href="#cb83-373"></a><span class="co">#type conversion</span></span>
-<span id="cb83-374"><a href="#cb83-374"></a>f <span class="op">=</span> <span class="bu">float</span>(x)</span>
-<span id="cb83-375"><a href="#cb83-375"></a><span class="bu">print</span>(f,<span class="bu">type</span>(f))</span>
-<span id="cb83-376"><a href="#cb83-376"></a><span class="in">```</span></span>
-<span id="cb83-377"><a href="#cb83-377"></a></span>
-<span id="cb83-378"><a href="#cb83-378"></a></span>
-<span id="cb83-379"><a href="#cb83-379"></a>---</span>
-<span id="cb83-380"><a href="#cb83-380"></a></span>
-<span id="cb83-381"><a href="#cb83-381"></a><span class="fu"># Lists {.unnumbered}</span></span>
-<span id="cb83-382"><a href="#cb83-382"></a></span>
+<span id="cb83-354"><a href="#cb83-354"></a><span class="in">```{python}</span></span>
+<span id="cb83-355"><a href="#cb83-355"></a>r <span class="op">=</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">2</span>) <span class="co"># range</span></span>
+<span id="cb83-356"><a href="#cb83-356"></a><span class="bu">print</span>(r,<span class="bu">type</span>(r))</span>
+<span id="cb83-357"><a href="#cb83-357"></a></span>
+<span id="cb83-358"><a href="#cb83-358"></a><span class="in">```</span></span>
+<span id="cb83-359"><a href="#cb83-359"></a></span>
+<span id="cb83-362"><a href="#cb83-362"></a><span class="in">```{python}</span></span>
+<span id="cb83-363"><a href="#cb83-363"></a>l <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">3</span>] <span class="co"># list</span></span>
+<span id="cb83-364"><a href="#cb83-364"></a><span class="bu">print</span>(l,<span class="bu">type</span>(l))</span>
+<span id="cb83-365"><a href="#cb83-365"></a><span class="bu">print</span>(<span class="st">"length of list"</span>,<span class="bu">len</span>(l))</span>
+<span id="cb83-366"><a href="#cb83-366"></a></span>
+<span id="cb83-367"><a href="#cb83-367"></a><span class="in">```</span></span>
+<span id="cb83-368"><a href="#cb83-368"></a></span>
+<span id="cb83-371"><a href="#cb83-371"></a><span class="in">```{python}</span></span>
+<span id="cb83-372"><a href="#cb83-372"></a>t <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>)<span class="co"># tuple</span></span>
+<span id="cb83-373"><a href="#cb83-373"></a><span class="bu">print</span>(t,<span class="bu">type</span>(t))</span>
+<span id="cb83-374"><a href="#cb83-374"></a><span class="in">```</span></span>
+<span id="cb83-375"><a href="#cb83-375"></a></span>
+<span id="cb83-378"><a href="#cb83-378"></a><span class="in">```{python}</span></span>
+<span id="cb83-379"><a href="#cb83-379"></a><span class="co">#type conversion</span></span>
+<span id="cb83-380"><a href="#cb83-380"></a>f <span class="op">=</span> <span class="bu">float</span>(x)</span>
+<span id="cb83-381"><a href="#cb83-381"></a><span class="bu">print</span>(f,<span class="bu">type</span>(f))</span>
+<span id="cb83-382"><a href="#cb83-382"></a><span class="in">```</span></span>
 <span id="cb83-383"><a href="#cb83-383"></a></span>
-<span id="cb83-384"><a href="#cb83-384"></a>Lists collect multiple items in a single variable. &lt;br&gt;</span>
-<span id="cb83-385"><a href="#cb83-385"></a></span>
-<span id="cb83-386"><a href="#cb83-386"></a>You can use the <span class="in">`[]`</span> operator to create a list. &lt;br&gt;</span>
-<span id="cb83-387"><a href="#cb83-387"></a>You can use the <span class="in">`append()`</span> method to add an item to a list. &lt;br&gt;</span>
-<span id="cb83-388"><a href="#cb83-388"></a>You can use the <span class="in">`insert()`</span> method to add an item at a specific position. &lt;br&gt;</span>
-<span id="cb83-389"><a href="#cb83-389"></a>You can use the <span class="in">`del`</span> statement to delete an item from a list. &lt;br&gt;</span>
-<span id="cb83-390"><a href="#cb83-390"></a>You can use the <span class="in">`remove()`</span> method to remove an item from a list. &lt;br&gt;</span>
-<span id="cb83-391"><a href="#cb83-391"></a>You can use the <span class="in">`pop()`</span> method to remove an item at a specific position. &lt;br&gt;</span>
-<span id="cb83-392"><a href="#cb83-392"></a>You can use the <span class="in">`clear()`</span> method to remove all items from a list. &lt;br&gt;</span>
-<span id="cb83-393"><a href="#cb83-393"></a>You can use the <span class="in">`copy()`</span> method to copy a list. &lt;br&gt;</span>
-<span id="cb83-394"><a href="#cb83-394"></a>You can use the <span class="in">`count()`</span> method to count the number of items in a list. &lt;br&gt;</span>
-<span id="cb83-395"><a href="#cb83-395"></a>You can use the <span class="in">`sort()`</span> method to sort a list. &lt;br&gt;</span>
-<span id="cb83-396"><a href="#cb83-396"></a>You can use the <span class="in">`reverse()`</span> method to reverse a list. &lt;br&gt;</span>
-<span id="cb83-397"><a href="#cb83-397"></a>You can use the <span class="in">`extend()`</span> method to add items from another list. &lt;br&gt;</span>
-<span id="cb83-398"><a href="#cb83-398"></a>You can use the <span class="in">`index()`</span> method to get the index of an item. &lt;br&gt;</span>
-<span id="cb83-399"><a href="#cb83-399"></a>You can use the <span class="in">`len()`</span> function to get the length of a list. &lt;br&gt;</span>
-<span id="cb83-400"><a href="#cb83-400"></a>You can use the <span class="in">`list()`</span> function to create a list. &lt;br&gt;</span>
-<span id="cb83-401"><a href="#cb83-401"></a></span>
-<span id="cb83-402"><a href="#cb83-402"></a></span>
-<span id="cb83-403"><a href="#cb83-403"></a></span>
-<span id="cb83-404"><a href="#cb83-404"></a></span>
-<span id="cb83-405"><a href="#cb83-405"></a></span>
-<span id="cb83-408"><a href="#cb83-408"></a><span class="in">```{python}</span></span>
-<span id="cb83-409"><a href="#cb83-409"></a>a <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
-<span id="cb83-410"><a href="#cb83-410"></a>b <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">3</span>,<span class="st">'a'</span>, <span class="ot">1j</span>]</span>
-<span id="cb83-411"><a href="#cb83-411"></a><span class="bu">len</span>(a) <span class="co">#length of list</span></span>
-<span id="cb83-412"><a href="#cb83-412"></a></span>
-<span id="cb83-413"><a href="#cb83-413"></a><span class="in">```</span></span>
-<span id="cb83-414"><a href="#cb83-414"></a></span>
-<span id="cb83-415"><a href="#cb83-415"></a>:::{.callout-warning}</span>
-<span id="cb83-416"><a href="#cb83-416"></a>Index is starting with **0** in Python.</span>
-<span id="cb83-417"><a href="#cb83-417"></a>:::</span>
+<span id="cb83-384"><a href="#cb83-384"></a></span>
+<span id="cb83-385"><a href="#cb83-385"></a>---</span>
+<span id="cb83-386"><a href="#cb83-386"></a></span>
+<span id="cb83-387"><a href="#cb83-387"></a><span class="fu"># Lists {.unnumbered}</span></span>
+<span id="cb83-388"><a href="#cb83-388"></a></span>
+<span id="cb83-389"><a href="#cb83-389"></a></span>
+<span id="cb83-390"><a href="#cb83-390"></a>Lists collect multiple items in a single variable. &lt;br&gt;</span>
+<span id="cb83-391"><a href="#cb83-391"></a></span>
+<span id="cb83-392"><a href="#cb83-392"></a>You can use the <span class="in">`[]`</span> operator to create a list. &lt;br&gt;</span>
+<span id="cb83-393"><a href="#cb83-393"></a>You can use the <span class="in">`append()`</span> method to add an item to a list. &lt;br&gt;</span>
+<span id="cb83-394"><a href="#cb83-394"></a>You can use the <span class="in">`insert()`</span> method to add an item at a specific position. &lt;br&gt;</span>
+<span id="cb83-395"><a href="#cb83-395"></a>You can use the <span class="in">`del`</span> statement to delete an item from a list. &lt;br&gt;</span>
+<span id="cb83-396"><a href="#cb83-396"></a>You can use the <span class="in">`remove()`</span> method to remove an item from a list. &lt;br&gt;</span>
+<span id="cb83-397"><a href="#cb83-397"></a>You can use the <span class="in">`pop()`</span> method to remove an item at a specific position. &lt;br&gt;</span>
+<span id="cb83-398"><a href="#cb83-398"></a>You can use the <span class="in">`clear()`</span> method to remove all items from a list. &lt;br&gt;</span>
+<span id="cb83-399"><a href="#cb83-399"></a>You can use the <span class="in">`copy()`</span> method to copy a list. &lt;br&gt;</span>
+<span id="cb83-400"><a href="#cb83-400"></a>You can use the <span class="in">`count()`</span> method to count the number of items in a list. &lt;br&gt;</span>
+<span id="cb83-401"><a href="#cb83-401"></a>You can use the <span class="in">`sort()`</span> method to sort a list. &lt;br&gt;</span>
+<span id="cb83-402"><a href="#cb83-402"></a>You can use the <span class="in">`reverse()`</span> method to reverse a list. &lt;br&gt;</span>
+<span id="cb83-403"><a href="#cb83-403"></a>You can use the <span class="in">`extend()`</span> method to add items from another list. &lt;br&gt;</span>
+<span id="cb83-404"><a href="#cb83-404"></a>You can use the <span class="in">`index()`</span> method to get the index of an item. &lt;br&gt;</span>
+<span id="cb83-405"><a href="#cb83-405"></a>You can use the <span class="in">`len()`</span> function to get the length of a list. &lt;br&gt;</span>
+<span id="cb83-406"><a href="#cb83-406"></a>You can use the <span class="in">`list()`</span> function to create a list. &lt;br&gt;</span>
+<span id="cb83-407"><a href="#cb83-407"></a></span>
+<span id="cb83-408"><a href="#cb83-408"></a></span>
+<span id="cb83-409"><a href="#cb83-409"></a></span>
+<span id="cb83-410"><a href="#cb83-410"></a></span>
+<span id="cb83-411"><a href="#cb83-411"></a></span>
+<span id="cb83-414"><a href="#cb83-414"></a><span class="in">```{python}</span></span>
+<span id="cb83-415"><a href="#cb83-415"></a>a <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
+<span id="cb83-416"><a href="#cb83-416"></a>b <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">3</span>,<span class="st">'a'</span>, <span class="ot">1j</span>]</span>
+<span id="cb83-417"><a href="#cb83-417"></a><span class="bu">len</span>(a) <span class="co">#length of list</span></span>
 <span id="cb83-418"><a href="#cb83-418"></a></span>
-<span id="cb83-421"><a href="#cb83-421"></a><span class="in">```{python}</span></span>
-<span id="cb83-422"><a href="#cb83-422"></a>l <span class="op">=</span> [<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>]</span>
-<span id="cb83-423"><a href="#cb83-423"></a>l[<span class="dv">0</span>]</span>
+<span id="cb83-419"><a href="#cb83-419"></a><span class="in">```</span></span>
+<span id="cb83-420"><a href="#cb83-420"></a></span>
+<span id="cb83-421"><a href="#cb83-421"></a>:::{.callout-warning}</span>
+<span id="cb83-422"><a href="#cb83-422"></a>Index is starting with **0** in Python.</span>
+<span id="cb83-423"><a href="#cb83-423"></a>:::</span>
 <span id="cb83-424"><a href="#cb83-424"></a></span>
-<span id="cb83-425"><a href="#cb83-425"></a><span class="in">```</span></span>
-<span id="cb83-426"><a href="#cb83-426"></a></span>
-<span id="cb83-427"><a href="#cb83-427"></a></span>
-<span id="cb83-428"><a href="#cb83-428"></a>Last element is reached by index -1.</span>
-<span id="cb83-429"><a href="#cb83-429"></a></span>
+<span id="cb83-427"><a href="#cb83-427"></a><span class="in">```{python}</span></span>
+<span id="cb83-428"><a href="#cb83-428"></a>l <span class="op">=</span> [<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>]</span>
+<span id="cb83-429"><a href="#cb83-429"></a>l[<span class="dv">0</span>]</span>
 <span id="cb83-430"><a href="#cb83-430"></a></span>
-<span id="cb83-433"><a href="#cb83-433"></a><span class="in">```{python}</span></span>
-<span id="cb83-434"><a href="#cb83-434"></a>l[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb83-431"><a href="#cb83-431"></a><span class="in">```</span></span>
+<span id="cb83-432"><a href="#cb83-432"></a></span>
+<span id="cb83-433"><a href="#cb83-433"></a></span>
+<span id="cb83-434"><a href="#cb83-434"></a>Last element is reached by index -1.</span>
 <span id="cb83-435"><a href="#cb83-435"></a></span>
-<span id="cb83-436"><a href="#cb83-436"></a><span class="in">```</span></span>
-<span id="cb83-437"><a href="#cb83-437"></a></span>
-<span id="cb83-438"><a href="#cb83-438"></a>---</span>
-<span id="cb83-439"><a href="#cb83-439"></a></span>
-<span id="cb83-440"><a href="#cb83-440"></a><span class="fu"># Mutable and Immutable Objects {.unnumbered}</span></span>
+<span id="cb83-436"><a href="#cb83-436"></a></span>
+<span id="cb83-439"><a href="#cb83-439"></a><span class="in">```{python}</span></span>
+<span id="cb83-440"><a href="#cb83-440"></a>l[<span class="op">-</span><span class="dv">1</span>]</span>
 <span id="cb83-441"><a href="#cb83-441"></a></span>
-<span id="cb83-442"><a href="#cb83-442"></a>Immutable objects cannot be changed. &lt;br&gt;</span>
-<span id="cb83-443"><a href="#cb83-443"></a>Mutable objects can be changed. &lt;br&gt;</span>
-<span id="cb83-444"><a href="#cb83-444"></a>Immutable objects are: <span class="in">`int`</span>, <span class="in">`float`</span>, <span class="in">`bool`</span>, <span class="in">`str`</span>, <span class="in">`tuple`</span>, <span class="in">`frozenset`</span>. &lt;br&gt;</span>
-<span id="cb83-445"><a href="#cb83-445"></a>Mutable objects are: <span class="in">`list`</span>, <span class="in">`dict`</span>, <span class="in">`set`</span>. &lt;br&gt;</span>
-<span id="cb83-446"><a href="#cb83-446"></a></span>
-<span id="cb83-447"><a href="#cb83-447"></a>That means if you change an immutable object, a new object is created. &lt;br&gt;</span>
-<span id="cb83-448"><a href="#cb83-448"></a>If you change a mutable object, the object is changed. &lt;br&gt;</span>
-<span id="cb83-449"><a href="#cb83-449"></a></span>
-<span id="cb83-452"><a href="#cb83-452"></a><span class="in">```{python}</span></span>
-<span id="cb83-453"><a href="#cb83-453"></a>a <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb83-454"><a href="#cb83-454"></a>b <span class="op">=</span> a</span>
+<span id="cb83-442"><a href="#cb83-442"></a><span class="in">```</span></span>
+<span id="cb83-443"><a href="#cb83-443"></a></span>
+<span id="cb83-444"><a href="#cb83-444"></a>---</span>
+<span id="cb83-445"><a href="#cb83-445"></a></span>
+<span id="cb83-446"><a href="#cb83-446"></a><span class="fu"># Mutable and Immutable Objects {.unnumbered}</span></span>
+<span id="cb83-447"><a href="#cb83-447"></a></span>
+<span id="cb83-448"><a href="#cb83-448"></a>Immutable objects cannot be changed. &lt;br&gt;</span>
+<span id="cb83-449"><a href="#cb83-449"></a>Mutable objects can be changed. &lt;br&gt;</span>
+<span id="cb83-450"><a href="#cb83-450"></a>Immutable objects are: <span class="in">`int`</span>, <span class="in">`float`</span>, <span class="in">`bool`</span>, <span class="in">`str`</span>, <span class="in">`tuple`</span>, <span class="in">`frozenset`</span>. &lt;br&gt;</span>
+<span id="cb83-451"><a href="#cb83-451"></a>Mutable objects are: <span class="in">`list`</span>, <span class="in">`dict`</span>, <span class="in">`set`</span>. &lt;br&gt;</span>
+<span id="cb83-452"><a href="#cb83-452"></a></span>
+<span id="cb83-453"><a href="#cb83-453"></a>That means if you change an immutable object, a new object is created. &lt;br&gt;</span>
+<span id="cb83-454"><a href="#cb83-454"></a>If you change a mutable object, the object is changed. &lt;br&gt;</span>
 <span id="cb83-455"><a href="#cb83-455"></a></span>
-<span id="cb83-456"><a href="#cb83-456"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
-<span id="cb83-457"><a href="#cb83-457"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
-<span id="cb83-458"><a href="#cb83-458"></a></span>
-<span id="cb83-459"><a href="#cb83-459"></a>a <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb83-460"><a href="#cb83-460"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
-<span id="cb83-461"><a href="#cb83-461"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
-<span id="cb83-462"><a href="#cb83-462"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
-<span id="cb83-463"><a href="#cb83-463"></a></span>
-<span id="cb83-464"><a href="#cb83-464"></a>b <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb83-465"><a href="#cb83-465"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
-<span id="cb83-466"><a href="#cb83-466"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
-<span id="cb83-467"><a href="#cb83-467"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
-<span id="cb83-468"><a href="#cb83-468"></a></span>
-<span id="cb83-469"><a href="#cb83-469"></a>b <span class="op">=</span> a</span>
-<span id="cb83-470"><a href="#cb83-470"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
-<span id="cb83-471"><a href="#cb83-471"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
-<span id="cb83-472"><a href="#cb83-472"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
-<span id="cb83-473"><a href="#cb83-473"></a><span class="in">```</span></span>
+<span id="cb83-458"><a href="#cb83-458"></a><span class="in">```{python}</span></span>
+<span id="cb83-459"><a href="#cb83-459"></a>a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb83-460"><a href="#cb83-460"></a>b <span class="op">=</span> a</span>
+<span id="cb83-461"><a href="#cb83-461"></a></span>
+<span id="cb83-462"><a href="#cb83-462"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
+<span id="cb83-463"><a href="#cb83-463"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
+<span id="cb83-464"><a href="#cb83-464"></a></span>
+<span id="cb83-465"><a href="#cb83-465"></a>a <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb83-466"><a href="#cb83-466"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
+<span id="cb83-467"><a href="#cb83-467"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
+<span id="cb83-468"><a href="#cb83-468"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
+<span id="cb83-469"><a href="#cb83-469"></a></span>
+<span id="cb83-470"><a href="#cb83-470"></a>b <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb83-471"><a href="#cb83-471"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
+<span id="cb83-472"><a href="#cb83-472"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
+<span id="cb83-473"><a href="#cb83-473"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
 <span id="cb83-474"><a href="#cb83-474"></a></span>
-<span id="cb83-475"><a href="#cb83-475"></a>mutable objects</span>
-<span id="cb83-476"><a href="#cb83-476"></a></span>
-<span id="cb83-479"><a href="#cb83-479"></a><span class="in">```{python}</span></span>
-<span id="cb83-480"><a href="#cb83-480"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
-<span id="cb83-481"><a href="#cb83-481"></a>b <span class="op">=</span> a</span>
+<span id="cb83-475"><a href="#cb83-475"></a>b <span class="op">=</span> a</span>
+<span id="cb83-476"><a href="#cb83-476"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
+<span id="cb83-477"><a href="#cb83-477"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
+<span id="cb83-478"><a href="#cb83-478"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
+<span id="cb83-479"><a href="#cb83-479"></a><span class="in">```</span></span>
+<span id="cb83-480"><a href="#cb83-480"></a></span>
+<span id="cb83-481"><a href="#cb83-481"></a>mutable objects</span>
 <span id="cb83-482"><a href="#cb83-482"></a></span>
-<span id="cb83-483"><a href="#cb83-483"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
-<span id="cb83-484"><a href="#cb83-484"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
-<span id="cb83-485"><a href="#cb83-485"></a></span>
-<span id="cb83-486"><a href="#cb83-486"></a>a[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb83-487"><a href="#cb83-487"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
-<span id="cb83-488"><a href="#cb83-488"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
-<span id="cb83-489"><a href="#cb83-489"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
-<span id="cb83-490"><a href="#cb83-490"></a></span>
-<span id="cb83-491"><a href="#cb83-491"></a>b[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb83-492"><a href="#cb83-492"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
-<span id="cb83-493"><a href="#cb83-493"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
-<span id="cb83-494"><a href="#cb83-494"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
-<span id="cb83-495"><a href="#cb83-495"></a><span class="in">```</span></span>
+<span id="cb83-485"><a href="#cb83-485"></a><span class="in">```{python}</span></span>
+<span id="cb83-486"><a href="#cb83-486"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
+<span id="cb83-487"><a href="#cb83-487"></a>b <span class="op">=</span> a</span>
+<span id="cb83-488"><a href="#cb83-488"></a></span>
+<span id="cb83-489"><a href="#cb83-489"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
+<span id="cb83-490"><a href="#cb83-490"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
+<span id="cb83-491"><a href="#cb83-491"></a></span>
+<span id="cb83-492"><a href="#cb83-492"></a>a[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb83-493"><a href="#cb83-493"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
+<span id="cb83-494"><a href="#cb83-494"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
+<span id="cb83-495"><a href="#cb83-495"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
 <span id="cb83-496"><a href="#cb83-496"></a></span>
-<span id="cb83-497"><a href="#cb83-497"></a></span>
-<span id="cb83-498"><a href="#cb83-498"></a></span>
-<span id="cb83-499"><a href="#cb83-499"></a>This happens because a and b are pointing to the same memory location. So if you change a, b will also change. If you want to avoid this, you can use the copy() method.</span>
-<span id="cb83-500"><a href="#cb83-500"></a></span>
-<span id="cb83-503"><a href="#cb83-503"></a><span class="in">```{python}</span></span>
-<span id="cb83-504"><a href="#cb83-504"></a>b <span class="op">=</span> a.copy()</span>
-<span id="cb83-505"><a href="#cb83-505"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
-<span id="cb83-506"><a href="#cb83-506"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
-<span id="cb83-507"><a href="#cb83-507"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
-<span id="cb83-508"><a href="#cb83-508"></a></span>
-<span id="cb83-509"><a href="#cb83-509"></a>a[<span class="dv">2</span>] <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb83-510"><a href="#cb83-510"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
-<span id="cb83-511"><a href="#cb83-511"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
-<span id="cb83-512"><a href="#cb83-512"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
-<span id="cb83-513"><a href="#cb83-513"></a></span>
-<span id="cb83-514"><a href="#cb83-514"></a>b[<span class="dv">2</span>] <span class="op">=</span> <span class="dv">7</span></span>
-<span id="cb83-515"><a href="#cb83-515"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
-<span id="cb83-516"><a href="#cb83-516"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
-<span id="cb83-517"><a href="#cb83-517"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
-<span id="cb83-518"><a href="#cb83-518"></a><span class="in">```</span></span>
+<span id="cb83-497"><a href="#cb83-497"></a>b[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb83-498"><a href="#cb83-498"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
+<span id="cb83-499"><a href="#cb83-499"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
+<span id="cb83-500"><a href="#cb83-500"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
+<span id="cb83-501"><a href="#cb83-501"></a><span class="in">```</span></span>
+<span id="cb83-502"><a href="#cb83-502"></a></span>
+<span id="cb83-503"><a href="#cb83-503"></a></span>
+<span id="cb83-504"><a href="#cb83-504"></a></span>
+<span id="cb83-505"><a href="#cb83-505"></a>This happens because a and b are pointing to the same memory location. So if you change a, b will also change. If you want to avoid this, you can use the copy() method.</span>
+<span id="cb83-506"><a href="#cb83-506"></a></span>
+<span id="cb83-509"><a href="#cb83-509"></a><span class="in">```{python}</span></span>
+<span id="cb83-510"><a href="#cb83-510"></a>b <span class="op">=</span> a.copy()</span>
+<span id="cb83-511"><a href="#cb83-511"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
+<span id="cb83-512"><a href="#cb83-512"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
+<span id="cb83-513"><a href="#cb83-513"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
+<span id="cb83-514"><a href="#cb83-514"></a></span>
+<span id="cb83-515"><a href="#cb83-515"></a>a[<span class="dv">2</span>] <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb83-516"><a href="#cb83-516"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
+<span id="cb83-517"><a href="#cb83-517"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
+<span id="cb83-518"><a href="#cb83-518"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
 <span id="cb83-519"><a href="#cb83-519"></a></span>
-<span id="cb83-520"><a href="#cb83-520"></a>---</span>
-<span id="cb83-521"><a href="#cb83-521"></a></span>
-<span id="cb83-522"><a href="#cb83-522"></a><span class="fu"># String Formatting {.unnumbered}</span></span>
-<span id="cb83-523"><a href="#cb83-523"></a></span>
-<span id="cb83-524"><a href="#cb83-524"></a></span>
-<span id="cb83-525"><a href="#cb83-525"></a>You can use the following escape characters:</span>
-<span id="cb83-526"><a href="#cb83-526"></a></span>
-<span id="cb83-527"><a href="#cb83-527"></a><span class="ss">- </span><span class="in">`\n`</span>: new line</span>
-<span id="cb83-528"><a href="#cb83-528"></a><span class="ss">- </span><span class="in">`\t`</span>: tab</span>
-<span id="cb83-529"><a href="#cb83-529"></a><span class="ss">- </span><span class="in">`\\`</span>: backslash</span>
-<span id="cb83-530"><a href="#cb83-530"></a><span class="ss">- </span><span class="in">`\'`</span>: single quote</span>
-<span id="cb83-531"><a href="#cb83-531"></a><span class="ss">- </span><span class="in">`\"`</span>: double quote</span>
-<span id="cb83-532"><a href="#cb83-532"></a><span class="ss">- </span><span class="in">`\b`</span>: backspace</span>
-<span id="cb83-533"><a href="#cb83-533"></a><span class="ss">- </span><span class="in">`\r`</span>: carriage return</span>
-<span id="cb83-534"><a href="#cb83-534"></a><span class="ss">- </span><span class="in">`\f`</span>: form feed</span>
-<span id="cb83-535"><a href="#cb83-535"></a><span class="ss">- </span><span class="in">`\ooo`</span>: octal value</span>
-<span id="cb83-536"><a href="#cb83-536"></a><span class="ss">- </span><span class="in">`\xhh`</span>: hex value</span>
-<span id="cb83-537"><a href="#cb83-537"></a></span>
-<span id="cb83-538"><a href="#cb83-538"></a></span>
-<span id="cb83-539"><a href="#cb83-539"></a></span>
-<span id="cb83-540"><a href="#cb83-540"></a>You can use the <span class="in">`+`</span> operator to concatenate strings. &lt;br&gt;</span>
-<span id="cb83-541"><a href="#cb83-541"></a></span>
-<span id="cb83-544"><a href="#cb83-544"></a><span class="in">```{python}</span></span>
-<span id="cb83-545"><a href="#cb83-545"></a>a <span class="op">=</span> <span class="st">"This "</span> </span>
-<span id="cb83-546"><a href="#cb83-546"></a>b <span class="op">=</span> <span class="st">"is a string"</span></span>
-<span id="cb83-547"><a href="#cb83-547"></a><span class="bu">print</span>(a <span class="op">+</span> b)</span>
-<span id="cb83-548"><a href="#cb83-548"></a><span class="in">```</span></span>
-<span id="cb83-549"><a href="#cb83-549"></a></span>
-<span id="cb83-550"><a href="#cb83-550"></a>For print formatting you can use the <span class="in">`format()`</span> method. &lt;br&gt;</span>
-<span id="cb83-551"><a href="#cb83-551"></a>You can use the <span class="in">`f-string`</span> method. &lt;br&gt;</span>
-<span id="cb83-552"><a href="#cb83-552"></a>See for more information <span class="co">[</span><span class="ot">here</span><span class="co">](https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings)</span></span>
-<span id="cb83-553"><a href="#cb83-553"></a></span>
-<span id="cb83-556"><a href="#cb83-556"></a><span class="in">```{python}</span></span>
-<span id="cb83-557"><a href="#cb83-557"></a>a <span class="op">=</span> <span class="fl">1.5434</span></span>
-<span id="cb83-558"><a href="#cb83-558"></a>b <span class="op">=</span> <span class="st">"nm"</span></span>
-<span id="cb83-559"><a href="#cb83-559"></a><span class="bu">print</span>(<span class="st">"This is an integer </span><span class="sc">%d</span><span class="st"> </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (a, b))</span>
-<span id="cb83-560"><a href="#cb83-560"></a><span class="bu">print</span>(<span class="st">"This is a float formating with minimum </span><span class="ch">\</span></span>
-<span id="cb83-561"><a href="#cb83-561"></a><span class="st">1 number of character wide and 2 digits </span><span class="sc">%1.2f</span><span class="st"> </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (a, b))</span>
-<span id="cb83-562"><a href="#cb83-562"></a><span class="bu">print</span>(<span class="st">"This is scientific notation with </span><span class="ch">\</span></span>
-<span id="cb83-563"><a href="#cb83-563"></a><span class="st">2 digits </span><span class="sc">%.2e</span><span class="st"> </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (a, b))</span>
-<span id="cb83-564"><a href="#cb83-564"></a><span class="bu">print</span>(<span class="st">"This is a string </span><span class="sc">%s</span><span class="st"> </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (a, b))</span>
-<span id="cb83-565"><a href="#cb83-565"></a><span class="bu">print</span>(<span class="st">"This is an example of using </span><span class="ch">\</span></span>
-<span id="cb83-566"><a href="#cb83-566"></a><span class="st">format() method </span><span class="sc">{0}</span><span class="st"> </span><span class="sc">{1}</span><span class="st">"</span>.<span class="bu">format</span>(a, b)) </span>
-<span id="cb83-567"><a href="#cb83-567"></a><span class="bu">print</span>(<span class="st">"This is an example of using format() </span><span class="ch">\</span></span>
-<span id="cb83-568"><a href="#cb83-568"></a><span class="st">method with named arguments </span><span class="sc">{a}</span><span class="st"> </span><span class="sc">{b}</span><span class="st">"</span>.<span class="bu">format</span>(a<span class="op">=</span>a, b<span class="op">=</span>b))</span>
-<span id="cb83-569"><a href="#cb83-569"></a><span class="in">```</span></span>
-<span id="cb83-570"><a href="#cb83-570"></a></span>
-<span id="cb83-571"><a href="#cb83-571"></a>---</span>
-<span id="cb83-572"><a href="#cb83-572"></a></span>
-<span id="cb83-573"><a href="#cb83-573"></a><span class="fu"># Operators {.unnumbered}</span></span>
-<span id="cb83-574"><a href="#cb83-574"></a></span>
-<span id="cb83-575"><a href="#cb83-575"></a></span>
-<span id="cb83-576"><a href="#cb83-576"></a>There are different types of operators in Python. &lt;br&gt;</span>
-<span id="cb83-577"><a href="#cb83-577"></a></span>
+<span id="cb83-520"><a href="#cb83-520"></a>b[<span class="dv">2</span>] <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb83-521"><a href="#cb83-521"></a><span class="bu">print</span>(<span class="st">"------"</span>)</span>
+<span id="cb83-522"><a href="#cb83-522"></a><span class="bu">print</span>(<span class="st">"a:"</span>,a)</span>
+<span id="cb83-523"><a href="#cb83-523"></a><span class="bu">print</span>(<span class="st">"b:"</span>,b)</span>
+<span id="cb83-524"><a href="#cb83-524"></a><span class="in">```</span></span>
+<span id="cb83-525"><a href="#cb83-525"></a></span>
+<span id="cb83-526"><a href="#cb83-526"></a>---</span>
+<span id="cb83-527"><a href="#cb83-527"></a></span>
+<span id="cb83-528"><a href="#cb83-528"></a><span class="fu"># String Formatting {.unnumbered}</span></span>
+<span id="cb83-529"><a href="#cb83-529"></a></span>
+<span id="cb83-530"><a href="#cb83-530"></a></span>
+<span id="cb83-531"><a href="#cb83-531"></a>You can use the following escape characters:</span>
+<span id="cb83-532"><a href="#cb83-532"></a></span>
+<span id="cb83-533"><a href="#cb83-533"></a><span class="ss">- </span><span class="in">`\n`</span>: new line</span>
+<span id="cb83-534"><a href="#cb83-534"></a><span class="ss">- </span><span class="in">`\t`</span>: tab</span>
+<span id="cb83-535"><a href="#cb83-535"></a><span class="ss">- </span><span class="in">`\\`</span>: backslash</span>
+<span id="cb83-536"><a href="#cb83-536"></a><span class="ss">- </span><span class="in">`\'`</span>: single quote</span>
+<span id="cb83-537"><a href="#cb83-537"></a><span class="ss">- </span><span class="in">`\"`</span>: double quote</span>
+<span id="cb83-538"><a href="#cb83-538"></a><span class="ss">- </span><span class="in">`\b`</span>: backspace</span>
+<span id="cb83-539"><a href="#cb83-539"></a><span class="ss">- </span><span class="in">`\r`</span>: carriage return</span>
+<span id="cb83-540"><a href="#cb83-540"></a><span class="ss">- </span><span class="in">`\f`</span>: form feed</span>
+<span id="cb83-541"><a href="#cb83-541"></a><span class="ss">- </span><span class="in">`\ooo`</span>: octal value</span>
+<span id="cb83-542"><a href="#cb83-542"></a><span class="ss">- </span><span class="in">`\xhh`</span>: hex value</span>
+<span id="cb83-543"><a href="#cb83-543"></a></span>
+<span id="cb83-544"><a href="#cb83-544"></a></span>
+<span id="cb83-545"><a href="#cb83-545"></a></span>
+<span id="cb83-546"><a href="#cb83-546"></a>You can use the <span class="in">`+`</span> operator to concatenate strings. &lt;br&gt;</span>
+<span id="cb83-547"><a href="#cb83-547"></a></span>
+<span id="cb83-550"><a href="#cb83-550"></a><span class="in">```{python}</span></span>
+<span id="cb83-551"><a href="#cb83-551"></a>a <span class="op">=</span> <span class="st">"This "</span> </span>
+<span id="cb83-552"><a href="#cb83-552"></a>b <span class="op">=</span> <span class="st">"is a string"</span></span>
+<span id="cb83-553"><a href="#cb83-553"></a><span class="bu">print</span>(a <span class="op">+</span> b)</span>
+<span id="cb83-554"><a href="#cb83-554"></a><span class="in">```</span></span>
+<span id="cb83-555"><a href="#cb83-555"></a></span>
+<span id="cb83-556"><a href="#cb83-556"></a>For print formatting you can use the <span class="in">`format()`</span> method. &lt;br&gt;</span>
+<span id="cb83-557"><a href="#cb83-557"></a>You can use the <span class="in">`f-string`</span> method. &lt;br&gt;</span>
+<span id="cb83-558"><a href="#cb83-558"></a>See for more information <span class="co">[</span><span class="ot">here</span><span class="co">](https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings)</span></span>
+<span id="cb83-559"><a href="#cb83-559"></a></span>
+<span id="cb83-562"><a href="#cb83-562"></a><span class="in">```{python}</span></span>
+<span id="cb83-563"><a href="#cb83-563"></a>a <span class="op">=</span> <span class="fl">1.5434</span></span>
+<span id="cb83-564"><a href="#cb83-564"></a>b <span class="op">=</span> <span class="st">"nm"</span></span>
+<span id="cb83-565"><a href="#cb83-565"></a><span class="bu">print</span>(<span class="st">"This is an integer </span><span class="sc">%d</span><span class="st"> </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (a, b))</span>
+<span id="cb83-566"><a href="#cb83-566"></a><span class="bu">print</span>(<span class="st">"This is a float formating with minimum </span><span class="ch">\</span></span>
+<span id="cb83-567"><a href="#cb83-567"></a><span class="st">1 number of character wide and 2 digits </span><span class="sc">%1.2f</span><span class="st"> </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (a, b))</span>
+<span id="cb83-568"><a href="#cb83-568"></a><span class="bu">print</span>(<span class="st">"This is scientific notation with </span><span class="ch">\</span></span>
+<span id="cb83-569"><a href="#cb83-569"></a><span class="st">2 digits </span><span class="sc">%.2e</span><span class="st"> </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (a, b))</span>
+<span id="cb83-570"><a href="#cb83-570"></a><span class="bu">print</span>(<span class="st">"This is a string </span><span class="sc">%s</span><span class="st"> </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span> (a, b))</span>
+<span id="cb83-571"><a href="#cb83-571"></a><span class="bu">print</span>(<span class="st">"This is an example of using </span><span class="ch">\</span></span>
+<span id="cb83-572"><a href="#cb83-572"></a><span class="st">format() method </span><span class="sc">{0}</span><span class="st"> </span><span class="sc">{1}</span><span class="st">"</span>.<span class="bu">format</span>(a, b)) </span>
+<span id="cb83-573"><a href="#cb83-573"></a><span class="bu">print</span>(<span class="st">"This is an example of using format() </span><span class="ch">\</span></span>
+<span id="cb83-574"><a href="#cb83-574"></a><span class="st">method with named arguments </span><span class="sc">{a}</span><span class="st"> </span><span class="sc">{b}</span><span class="st">"</span>.<span class="bu">format</span>(a<span class="op">=</span>a, b<span class="op">=</span>b))</span>
+<span id="cb83-575"><a href="#cb83-575"></a><span class="in">```</span></span>
+<span id="cb83-576"><a href="#cb83-576"></a></span>
+<span id="cb83-577"><a href="#cb83-577"></a>---</span>
 <span id="cb83-578"><a href="#cb83-578"></a></span>
-<span id="cb83-579"><a href="#cb83-579"></a><span class="ss">-  </span>+: addition</span>
-<span id="cb83-580"><a href="#cb83-580"></a><span class="ss">-  </span>-: subtraction</span>
-<span id="cb83-581"><a href="#cb83-581"></a><span class="ss">-  </span>*: multiplication</span>
-<span id="cb83-582"><a href="#cb83-582"></a><span class="ss">-  </span>/: division</span>
-<span id="cb83-583"><a href="#cb83-583"></a><span class="ss">-  </span>%: modulo</span>
-<span id="cb83-584"><a href="#cb83-584"></a><span class="ss">-  </span>**: exponentiation</span>
-<span id="cb83-585"><a href="#cb83-585"></a><span class="ss">-  </span>//: floor division</span>
-<span id="cb83-586"><a href="#cb83-586"></a><span class="ss">-  </span>==: equal</span>
-<span id="cb83-587"><a href="#cb83-587"></a><span class="ss">-  </span>!=: not equal</span>
-<span id="cb83-588"><a href="#cb83-588"></a><span class="ss">-  </span>&lt;: less than    </span>
-<span id="cb83-589"><a href="#cb83-589"></a>-  &gt;: greater than</span>
-<span id="cb83-590"><a href="#cb83-590"></a><span class="ss">-  </span>&lt;=: less than or equal</span>
-<span id="cb83-591"><a href="#cb83-591"></a><span class="ss">-  </span>&gt;=: greater than or equal</span>
-<span id="cb83-592"><a href="#cb83-592"></a><span class="ss">-  </span>and: logical and</span>
-<span id="cb83-593"><a href="#cb83-593"></a><span class="ss">-  </span>or: logical or</span>
-<span id="cb83-594"><a href="#cb83-594"></a><span class="ss">-  </span>not: logical not</span>
-<span id="cb83-595"><a href="#cb83-595"></a><span class="ss">-  </span>is: identity</span>
-<span id="cb83-596"><a href="#cb83-596"></a><span class="ss">-  </span>in: membership</span>
-<span id="cb83-597"><a href="#cb83-597"></a></span>
-<span id="cb83-600"><a href="#cb83-600"></a><span class="in">```{python}</span></span>
-<span id="cb83-601"><a href="#cb83-601"></a>a <span class="op">=</span> <span class="fl">5.3</span></span>
-<span id="cb83-602"><a href="#cb83-602"></a>b <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb83-603"><a href="#cb83-603"></a>c <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb83-604"><a href="#cb83-604"></a></span>
-<span id="cb83-605"><a href="#cb83-605"></a><span class="bu">print</span>(<span class="st">"division: "</span>, a<span class="op">/</span>b)</span>
-<span id="cb83-606"><a href="#cb83-606"></a><span class="bu">print</span>(<span class="st">"division: "</span>, b<span class="op">/</span>c, <span class="st">" type: "</span>, <span class="bu">type</span>(b<span class="op">/</span>c))</span>
-<span id="cb83-607"><a href="#cb83-607"></a><span class="bu">print</span>(<span class="st">"integer division: "</span>, a<span class="op">//</span>b)</span>
-<span id="cb83-608"><a href="#cb83-608"></a><span class="bu">print</span>(<span class="st">"modulo: "</span>, a<span class="op">%</span>b)</span>
-<span id="cb83-609"><a href="#cb83-609"></a><span class="bu">print</span>(<span class="st">"float multiplication: "</span>, a<span class="op">*</span>b, <span class="st">" type: "</span>, <span class="bu">type</span>(a<span class="op">*</span>b))</span>
-<span id="cb83-610"><a href="#cb83-610"></a><span class="bu">print</span>(<span class="st">"integer multiplication: "</span>, b<span class="op">*</span>c, <span class="st">" type: "</span>, <span class="bu">type</span>(b<span class="op">*</span>c))</span>
-<span id="cb83-611"><a href="#cb83-611"></a><span class="bu">print</span>(<span class="st">"exponentiation: "</span>, a<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb83-612"><a href="#cb83-612"></a><span class="in">```</span></span>
-<span id="cb83-613"><a href="#cb83-613"></a></span>
-<span id="cb83-614"><a href="#cb83-614"></a>---</span>
-<span id="cb83-615"><a href="#cb83-615"></a></span>
-<span id="cb83-616"><a href="#cb83-616"></a><span class="fu"># Control Structures {.unnumbered}</span></span>
-<span id="cb83-617"><a href="#cb83-617"></a></span>
-<span id="cb83-618"><a href="#cb83-618"></a>Control structures are used to control the flow of a program. &lt;br&gt;</span>
-<span id="cb83-619"><a href="#cb83-619"></a>The most common control structures are:</span>
-<span id="cb83-620"><a href="#cb83-620"></a></span>
-<span id="cb83-621"><a href="#cb83-621"></a><span class="ss">- </span>You can use the <span class="in">`if`</span> statement to execute a block of code if a condition is true. </span>
-<span id="cb83-622"><a href="#cb83-622"></a><span class="ss">- </span>You can use the <span class="in">`elif`</span> statement to execute a block of code if the first condition is - false and the second condition is true.</span>
-<span id="cb83-623"><a href="#cb83-623"></a><span class="ss">- </span>You can use the <span class="in">`else`</span> statement to execute a block of code if the condition is false.</span>
-<span id="cb83-624"><a href="#cb83-624"></a><span class="ss">- </span>You can use the <span class="in">`for`</span> loop to iterate over a sequence. </span>
-<span id="cb83-625"><a href="#cb83-625"></a><span class="ss">- </span>You can use the <span class="in">`while`</span> loop to execute a block of code as long as a condition is true. </span>
-<span id="cb83-626"><a href="#cb83-626"></a><span class="ss">- </span>You can use the <span class="in">`break`</span> statement to exit a loop. </span>
-<span id="cb83-627"><a href="#cb83-627"></a><span class="ss">- </span>You can use the <span class="in">`continue`</span> statement to skip the rest of the code in a loop. </span>
-<span id="cb83-628"><a href="#cb83-628"></a><span class="ss">- </span>You can use the <span class="in">`pass`</span> statement to do nothing.</span>
-<span id="cb83-629"><a href="#cb83-629"></a></span>
-<span id="cb83-630"><a href="#cb83-630"></a><span class="fu">## if statement {.unnumbered}</span></span>
-<span id="cb83-631"><a href="#cb83-631"></a></span>
-<span id="cb83-634"><a href="#cb83-634"></a><span class="in">```{python}</span></span>
-<span id="cb83-635"><a href="#cb83-635"></a>x <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb83-636"><a href="#cb83-636"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
-<span id="cb83-637"><a href="#cb83-637"></a>    <span class="bu">print</span>(<span class="st">"x &lt; 0"</span>)</span>
-<span id="cb83-638"><a href="#cb83-638"></a><span class="cf">elif</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb83-639"><a href="#cb83-639"></a>    <span class="bu">print</span>(<span class="st">"x &gt; 0"</span>)</span>
-<span id="cb83-640"><a href="#cb83-640"></a><span class="cf">else</span>:</span>
-<span id="cb83-641"><a href="#cb83-641"></a>    <span class="bu">print</span>(<span class="st">"x = 0"</span>)</span>
-<span id="cb83-642"><a href="#cb83-642"></a><span class="in">```</span></span>
-<span id="cb83-643"><a href="#cb83-643"></a></span>
-<span id="cb83-644"><a href="#cb83-644"></a><span class="fu">## break,continue,pass {.unnumbered}</span></span>
-<span id="cb83-645"><a href="#cb83-645"></a></span>
-<span id="cb83-646"><a href="#cb83-646"></a></span>
-<span id="cb83-649"><a href="#cb83-649"></a><span class="in">```{python}</span></span>
-<span id="cb83-650"><a href="#cb83-650"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb83-651"><a href="#cb83-651"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
-<span id="cb83-652"><a href="#cb83-652"></a>        <span class="cf">break</span></span>
-<span id="cb83-653"><a href="#cb83-653"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb83-654"><a href="#cb83-654"></a><span class="in">```</span></span>
-<span id="cb83-655"><a href="#cb83-655"></a></span>
-<span id="cb83-656"><a href="#cb83-656"></a></span>
-<span id="cb83-659"><a href="#cb83-659"></a><span class="in">```{python}</span></span>
-<span id="cb83-660"><a href="#cb83-660"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb83-661"><a href="#cb83-661"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
-<span id="cb83-662"><a href="#cb83-662"></a>        <span class="cf">continue</span></span>
-<span id="cb83-663"><a href="#cb83-663"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb83-664"><a href="#cb83-664"></a><span class="in">```</span>   </span>
-<span id="cb83-665"><a href="#cb83-665"></a></span>
-<span id="cb83-666"><a href="#cb83-666"></a></span>
-<span id="cb83-667"><a href="#cb83-667"></a></span>
-<span id="cb83-670"><a href="#cb83-670"></a><span class="in">```{python}</span></span>
-<span id="cb83-671"><a href="#cb83-671"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb83-672"><a href="#cb83-672"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
-<span id="cb83-673"><a href="#cb83-673"></a>        <span class="cf">pass</span></span>
-<span id="cb83-674"><a href="#cb83-674"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb83-675"><a href="#cb83-675"></a><span class="in">```</span></span>
-<span id="cb83-676"><a href="#cb83-676"></a></span>
-<span id="cb83-677"><a href="#cb83-677"></a><span class="fu">## For Loops {.unnumbered}</span></span>
-<span id="cb83-678"><a href="#cb83-678"></a></span>
-<span id="cb83-681"><a href="#cb83-681"></a><span class="in">```{python}</span></span>
-<span id="cb83-682"><a href="#cb83-682"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>): <span class="co">#from 0 to 4 </span></span>
-<span id="cb83-683"><a href="#cb83-683"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb83-684"><a href="#cb83-684"></a><span class="in">```</span></span>
-<span id="cb83-685"><a href="#cb83-685"></a></span>
-<span id="cb83-688"><a href="#cb83-688"></a><span class="in">```{python}</span></span>
-<span id="cb83-689"><a href="#cb83-689"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">2</span>): <span class="co"># start 1, stop 10 excluded, step 2</span></span>
-<span id="cb83-690"><a href="#cb83-690"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb83-691"><a href="#cb83-691"></a><span class="in">```</span></span>
-<span id="cb83-692"><a href="#cb83-692"></a></span>
-<span id="cb83-695"><a href="#cb83-695"></a><span class="in">```{python}</span></span>
-<span id="cb83-696"><a href="#cb83-696"></a>l <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>))</span>
+<span id="cb83-579"><a href="#cb83-579"></a><span class="fu"># Operators {.unnumbered}</span></span>
+<span id="cb83-580"><a href="#cb83-580"></a></span>
+<span id="cb83-581"><a href="#cb83-581"></a></span>
+<span id="cb83-582"><a href="#cb83-582"></a>There are different types of operators in Python. &lt;br&gt;</span>
+<span id="cb83-583"><a href="#cb83-583"></a></span>
+<span id="cb83-584"><a href="#cb83-584"></a></span>
+<span id="cb83-585"><a href="#cb83-585"></a><span class="ss">-  </span>+: addition</span>
+<span id="cb83-586"><a href="#cb83-586"></a><span class="ss">-  </span>-: subtraction</span>
+<span id="cb83-587"><a href="#cb83-587"></a><span class="ss">-  </span>*: multiplication</span>
+<span id="cb83-588"><a href="#cb83-588"></a><span class="ss">-  </span>/: division</span>
+<span id="cb83-589"><a href="#cb83-589"></a><span class="ss">-  </span>%: modulo</span>
+<span id="cb83-590"><a href="#cb83-590"></a><span class="ss">-  </span>**: exponentiation</span>
+<span id="cb83-591"><a href="#cb83-591"></a><span class="ss">-  </span>//: floor division</span>
+<span id="cb83-592"><a href="#cb83-592"></a><span class="ss">-  </span>==: equal</span>
+<span id="cb83-593"><a href="#cb83-593"></a><span class="ss">-  </span>!=: not equal</span>
+<span id="cb83-594"><a href="#cb83-594"></a><span class="ss">-  </span>&lt;: less than    </span>
+<span id="cb83-595"><a href="#cb83-595"></a>-  &gt;: greater than</span>
+<span id="cb83-596"><a href="#cb83-596"></a><span class="ss">-  </span>&lt;=: less than or equal</span>
+<span id="cb83-597"><a href="#cb83-597"></a><span class="ss">-  </span>&gt;=: greater than or equal</span>
+<span id="cb83-598"><a href="#cb83-598"></a><span class="ss">-  </span>and: logical and</span>
+<span id="cb83-599"><a href="#cb83-599"></a><span class="ss">-  </span>or: logical or</span>
+<span id="cb83-600"><a href="#cb83-600"></a><span class="ss">-  </span>not: logical not</span>
+<span id="cb83-601"><a href="#cb83-601"></a><span class="ss">-  </span>is: identity</span>
+<span id="cb83-602"><a href="#cb83-602"></a><span class="ss">-  </span>in: membership</span>
+<span id="cb83-603"><a href="#cb83-603"></a></span>
+<span id="cb83-606"><a href="#cb83-606"></a><span class="in">```{python}</span></span>
+<span id="cb83-607"><a href="#cb83-607"></a>a <span class="op">=</span> <span class="fl">5.3</span></span>
+<span id="cb83-608"><a href="#cb83-608"></a>b <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb83-609"><a href="#cb83-609"></a>c <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb83-610"><a href="#cb83-610"></a></span>
+<span id="cb83-611"><a href="#cb83-611"></a><span class="bu">print</span>(<span class="st">"division: "</span>, a<span class="op">/</span>b)</span>
+<span id="cb83-612"><a href="#cb83-612"></a><span class="bu">print</span>(<span class="st">"division: "</span>, b<span class="op">/</span>c, <span class="st">" type: "</span>, <span class="bu">type</span>(b<span class="op">/</span>c))</span>
+<span id="cb83-613"><a href="#cb83-613"></a><span class="bu">print</span>(<span class="st">"integer division: "</span>, a<span class="op">//</span>b)</span>
+<span id="cb83-614"><a href="#cb83-614"></a><span class="bu">print</span>(<span class="st">"modulo: "</span>, a<span class="op">%</span>b)</span>
+<span id="cb83-615"><a href="#cb83-615"></a><span class="bu">print</span>(<span class="st">"float multiplication: "</span>, a<span class="op">*</span>b, <span class="st">" type: "</span>, <span class="bu">type</span>(a<span class="op">*</span>b))</span>
+<span id="cb83-616"><a href="#cb83-616"></a><span class="bu">print</span>(<span class="st">"integer multiplication: "</span>, b<span class="op">*</span>c, <span class="st">" type: "</span>, <span class="bu">type</span>(b<span class="op">*</span>c))</span>
+<span id="cb83-617"><a href="#cb83-617"></a><span class="bu">print</span>(<span class="st">"exponentiation: "</span>, a<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb83-618"><a href="#cb83-618"></a><span class="in">```</span></span>
+<span id="cb83-619"><a href="#cb83-619"></a></span>
+<span id="cb83-620"><a href="#cb83-620"></a>---</span>
+<span id="cb83-621"><a href="#cb83-621"></a></span>
+<span id="cb83-622"><a href="#cb83-622"></a><span class="fu"># Control Structures {.unnumbered}</span></span>
+<span id="cb83-623"><a href="#cb83-623"></a></span>
+<span id="cb83-624"><a href="#cb83-624"></a>Control structures are used to control the flow of a program. &lt;br&gt;</span>
+<span id="cb83-625"><a href="#cb83-625"></a>The most common control structures are:</span>
+<span id="cb83-626"><a href="#cb83-626"></a></span>
+<span id="cb83-627"><a href="#cb83-627"></a><span class="ss">- </span>You can use the <span class="in">`if`</span> statement to execute a block of code if a condition is true. </span>
+<span id="cb83-628"><a href="#cb83-628"></a><span class="ss">- </span>You can use the <span class="in">`elif`</span> statement to execute a block of code if the first condition is - false and the second condition is true.</span>
+<span id="cb83-629"><a href="#cb83-629"></a><span class="ss">- </span>You can use the <span class="in">`else`</span> statement to execute a block of code if the condition is false.</span>
+<span id="cb83-630"><a href="#cb83-630"></a><span class="ss">- </span>You can use the <span class="in">`for`</span> loop to iterate over a sequence. </span>
+<span id="cb83-631"><a href="#cb83-631"></a><span class="ss">- </span>You can use the <span class="in">`while`</span> loop to execute a block of code as long as a condition is true. </span>
+<span id="cb83-632"><a href="#cb83-632"></a><span class="ss">- </span>You can use the <span class="in">`break`</span> statement to exit a loop. </span>
+<span id="cb83-633"><a href="#cb83-633"></a><span class="ss">- </span>You can use the <span class="in">`continue`</span> statement to skip the rest of the code in a loop. </span>
+<span id="cb83-634"><a href="#cb83-634"></a><span class="ss">- </span>You can use the <span class="in">`pass`</span> statement to do nothing.</span>
+<span id="cb83-635"><a href="#cb83-635"></a></span>
+<span id="cb83-636"><a href="#cb83-636"></a><span class="fu">## if statement {.unnumbered}</span></span>
+<span id="cb83-637"><a href="#cb83-637"></a></span>
+<span id="cb83-640"><a href="#cb83-640"></a><span class="in">```{python}</span></span>
+<span id="cb83-641"><a href="#cb83-641"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb83-642"><a href="#cb83-642"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb83-643"><a href="#cb83-643"></a>    <span class="bu">print</span>(<span class="st">"x &lt; 0"</span>)</span>
+<span id="cb83-644"><a href="#cb83-644"></a><span class="cf">elif</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb83-645"><a href="#cb83-645"></a>    <span class="bu">print</span>(<span class="st">"x &gt; 0"</span>)</span>
+<span id="cb83-646"><a href="#cb83-646"></a><span class="cf">else</span>:</span>
+<span id="cb83-647"><a href="#cb83-647"></a>    <span class="bu">print</span>(<span class="st">"x = 0"</span>)</span>
+<span id="cb83-648"><a href="#cb83-648"></a><span class="in">```</span></span>
+<span id="cb83-649"><a href="#cb83-649"></a></span>
+<span id="cb83-650"><a href="#cb83-650"></a><span class="fu">## break,continue,pass {.unnumbered}</span></span>
+<span id="cb83-651"><a href="#cb83-651"></a></span>
+<span id="cb83-652"><a href="#cb83-652"></a></span>
+<span id="cb83-655"><a href="#cb83-655"></a><span class="in">```{python}</span></span>
+<span id="cb83-656"><a href="#cb83-656"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb83-657"><a href="#cb83-657"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb83-658"><a href="#cb83-658"></a>        <span class="cf">break</span></span>
+<span id="cb83-659"><a href="#cb83-659"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb83-660"><a href="#cb83-660"></a><span class="in">```</span></span>
+<span id="cb83-661"><a href="#cb83-661"></a></span>
+<span id="cb83-662"><a href="#cb83-662"></a></span>
+<span id="cb83-665"><a href="#cb83-665"></a><span class="in">```{python}</span></span>
+<span id="cb83-666"><a href="#cb83-666"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb83-667"><a href="#cb83-667"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb83-668"><a href="#cb83-668"></a>        <span class="cf">continue</span></span>
+<span id="cb83-669"><a href="#cb83-669"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb83-670"><a href="#cb83-670"></a><span class="in">```</span>   </span>
+<span id="cb83-671"><a href="#cb83-671"></a></span>
+<span id="cb83-672"><a href="#cb83-672"></a></span>
+<span id="cb83-673"><a href="#cb83-673"></a></span>
+<span id="cb83-676"><a href="#cb83-676"></a><span class="in">```{python}</span></span>
+<span id="cb83-677"><a href="#cb83-677"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb83-678"><a href="#cb83-678"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb83-679"><a href="#cb83-679"></a>        <span class="cf">pass</span></span>
+<span id="cb83-680"><a href="#cb83-680"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb83-681"><a href="#cb83-681"></a><span class="in">```</span></span>
+<span id="cb83-682"><a href="#cb83-682"></a></span>
+<span id="cb83-683"><a href="#cb83-683"></a><span class="fu">## For Loops {.unnumbered}</span></span>
+<span id="cb83-684"><a href="#cb83-684"></a></span>
+<span id="cb83-687"><a href="#cb83-687"></a><span class="in">```{python}</span></span>
+<span id="cb83-688"><a href="#cb83-688"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>): <span class="co">#from 0 to 4 </span></span>
+<span id="cb83-689"><a href="#cb83-689"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb83-690"><a href="#cb83-690"></a><span class="in">```</span></span>
+<span id="cb83-691"><a href="#cb83-691"></a></span>
+<span id="cb83-694"><a href="#cb83-694"></a><span class="in">```{python}</span></span>
+<span id="cb83-695"><a href="#cb83-695"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">2</span>): <span class="co"># start 1, stop 10 excluded, step 2</span></span>
+<span id="cb83-696"><a href="#cb83-696"></a>    <span class="bu">print</span>(i)</span>
 <span id="cb83-697"><a href="#cb83-697"></a><span class="in">```</span></span>
 <span id="cb83-698"><a href="#cb83-698"></a></span>
 <span id="cb83-701"><a href="#cb83-701"></a><span class="in">```{python}</span></span>
-<span id="cb83-702"><a href="#cb83-702"></a>l</span>
+<span id="cb83-702"><a href="#cb83-702"></a>l <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>))</span>
 <span id="cb83-703"><a href="#cb83-703"></a><span class="in">```</span></span>
 <span id="cb83-704"><a href="#cb83-704"></a></span>
 <span id="cb83-707"><a href="#cb83-707"></a><span class="in">```{python}</span></span>
-<span id="cb83-708"><a href="#cb83-708"></a><span class="cf">for</span> i <span class="kw">in</span> l:  <span class="co"># using list</span></span>
-<span id="cb83-709"><a href="#cb83-709"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb83-710"><a href="#cb83-710"></a><span class="in">```</span></span>
-<span id="cb83-711"><a href="#cb83-711"></a></span>
-<span id="cb83-712"><a href="#cb83-712"></a><span class="fu">## While Loops {.unnumbered}</span></span>
-<span id="cb83-713"><a href="#cb83-713"></a></span>
-<span id="cb83-716"><a href="#cb83-716"></a><span class="in">```{python}</span></span>
-<span id="cb83-717"><a href="#cb83-717"></a>x <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb83-718"><a href="#cb83-718"></a><span class="cf">while</span> x  <span class="op">&lt;</span> <span class="dv">4</span>:</span>
-<span id="cb83-719"><a href="#cb83-719"></a>    <span class="bu">print</span>(l[x])</span>
-<span id="cb83-720"><a href="#cb83-720"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb83-721"><a href="#cb83-721"></a><span class="in">```</span></span>
-<span id="cb83-722"><a href="#cb83-722"></a></span>
-<span id="cb83-725"><a href="#cb83-725"></a><span class="in">```{python}</span></span>
-<span id="cb83-726"><a href="#cb83-726"></a><span class="bu">print</span>(<span class="st">"while loop with continue and break statement"</span>)</span>
-<span id="cb83-727"><a href="#cb83-727"></a>n <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb83-728"><a href="#cb83-728"></a><span class="cf">while</span>(n <span class="op">&lt;</span> <span class="dv">10</span>):</span>
-<span id="cb83-729"><a href="#cb83-729"></a>    n<span class="op">+=</span><span class="dv">1</span></span>
-<span id="cb83-730"><a href="#cb83-730"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">5</span>:</span>
-<span id="cb83-731"><a href="#cb83-731"></a>        <span class="cf">continue</span></span>
-<span id="cb83-732"><a href="#cb83-732"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">7</span>:</span>
-<span id="cb83-733"><a href="#cb83-733"></a>        <span class="bu">print</span>(<span class="st">"The loop reached 7 and will break now."</span>)</span>
-<span id="cb83-734"><a href="#cb83-734"></a>        <span class="cf">break</span></span>
-<span id="cb83-735"><a href="#cb83-735"></a>    <span class="bu">print</span>(n)</span>
-<span id="cb83-736"><a href="#cb83-736"></a><span class="in">```</span></span>
-<span id="cb83-737"><a href="#cb83-737"></a></span>
-<span id="cb83-738"><a href="#cb83-738"></a><span class="fu">## Functions {.unnumbered}</span></span>
-<span id="cb83-739"><a href="#cb83-739"></a></span>
-<span id="cb83-740"><a href="#cb83-740"></a></span>
-<span id="cb83-741"><a href="#cb83-741"></a>Functions are defined using the <span class="in">`def`</span> keyword. &lt;br&gt;</span>
-<span id="cb83-742"><a href="#cb83-742"></a>You can use the <span class="in">`return`</span> keyword to return a value from a function. &lt;br&gt;</span>
-<span id="cb83-743"><a href="#cb83-743"></a>The parameters of a function are defined in the parentheses. &lt;br&gt;</span>
-<span id="cb83-744"><a href="#cb83-744"></a>Multiple parameters are separated by commas. &lt;br&gt;</span>
-<span id="cb83-745"><a href="#cb83-745"></a>You can use default values for the parameter *e.g.* <span class="in">`b=5`</span>. &lt;br&gt;</span>
-<span id="cb83-746"><a href="#cb83-746"></a>Multiple return values are separated by commas. &lt;br&gt;</span>
-<span id="cb83-747"><a href="#cb83-747"></a>They are stored in a tuple. &lt;br&gt;</span>
-<span id="cb83-748"><a href="#cb83-748"></a></span>
-<span id="cb83-749"><a href="#cb83-749"></a></span>
-<span id="cb83-752"><a href="#cb83-752"></a><span class="in">```{python}</span></span>
-<span id="cb83-753"><a href="#cb83-753"></a><span class="kw">def</span> summation(a,b<span class="op">=</span><span class="dv">5</span>):</span>
-<span id="cb83-754"><a href="#cb83-754"></a>    <span class="cf">return</span> a<span class="op">+</span>b, a<span class="op">-</span>b</span>
-<span id="cb83-755"><a href="#cb83-755"></a><span class="in">```</span></span>
-<span id="cb83-756"><a href="#cb83-756"></a></span>
-<span id="cb83-759"><a href="#cb83-759"></a><span class="in">```{python}</span></span>
-<span id="cb83-760"><a href="#cb83-760"></a>summation(<span class="dv">4</span>,<span class="dv">2</span>)</span>
+<span id="cb83-708"><a href="#cb83-708"></a>l</span>
+<span id="cb83-709"><a href="#cb83-709"></a><span class="in">```</span></span>
+<span id="cb83-710"><a href="#cb83-710"></a></span>
+<span id="cb83-713"><a href="#cb83-713"></a><span class="in">```{python}</span></span>
+<span id="cb83-714"><a href="#cb83-714"></a><span class="cf">for</span> i <span class="kw">in</span> l:  <span class="co"># using list</span></span>
+<span id="cb83-715"><a href="#cb83-715"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb83-716"><a href="#cb83-716"></a><span class="in">```</span></span>
+<span id="cb83-717"><a href="#cb83-717"></a></span>
+<span id="cb83-718"><a href="#cb83-718"></a><span class="fu">## While Loops {.unnumbered}</span></span>
+<span id="cb83-719"><a href="#cb83-719"></a></span>
+<span id="cb83-722"><a href="#cb83-722"></a><span class="in">```{python}</span></span>
+<span id="cb83-723"><a href="#cb83-723"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb83-724"><a href="#cb83-724"></a><span class="cf">while</span> x  <span class="op">&lt;</span> <span class="dv">4</span>:</span>
+<span id="cb83-725"><a href="#cb83-725"></a>    <span class="bu">print</span>(l[x])</span>
+<span id="cb83-726"><a href="#cb83-726"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb83-727"><a href="#cb83-727"></a><span class="in">```</span></span>
+<span id="cb83-728"><a href="#cb83-728"></a></span>
+<span id="cb83-731"><a href="#cb83-731"></a><span class="in">```{python}</span></span>
+<span id="cb83-732"><a href="#cb83-732"></a><span class="bu">print</span>(<span class="st">"while loop with continue and break statement"</span>)</span>
+<span id="cb83-733"><a href="#cb83-733"></a>n <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb83-734"><a href="#cb83-734"></a><span class="cf">while</span>(n <span class="op">&lt;</span> <span class="dv">10</span>):</span>
+<span id="cb83-735"><a href="#cb83-735"></a>    n<span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb83-736"><a href="#cb83-736"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb83-737"><a href="#cb83-737"></a>        <span class="cf">continue</span></span>
+<span id="cb83-738"><a href="#cb83-738"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">7</span>:</span>
+<span id="cb83-739"><a href="#cb83-739"></a>        <span class="bu">print</span>(<span class="st">"The loop reached 7 and will break now."</span>)</span>
+<span id="cb83-740"><a href="#cb83-740"></a>        <span class="cf">break</span></span>
+<span id="cb83-741"><a href="#cb83-741"></a>    <span class="bu">print</span>(n)</span>
+<span id="cb83-742"><a href="#cb83-742"></a><span class="in">```</span></span>
+<span id="cb83-743"><a href="#cb83-743"></a></span>
+<span id="cb83-744"><a href="#cb83-744"></a><span class="fu">## Functions {.unnumbered}</span></span>
+<span id="cb83-745"><a href="#cb83-745"></a></span>
+<span id="cb83-746"><a href="#cb83-746"></a></span>
+<span id="cb83-747"><a href="#cb83-747"></a>Functions are defined using the <span class="in">`def`</span> keyword. &lt;br&gt;</span>
+<span id="cb83-748"><a href="#cb83-748"></a>You can use the <span class="in">`return`</span> keyword to return a value from a function. &lt;br&gt;</span>
+<span id="cb83-749"><a href="#cb83-749"></a>The parameters of a function are defined in the parentheses. &lt;br&gt;</span>
+<span id="cb83-750"><a href="#cb83-750"></a>Multiple parameters are separated by commas. &lt;br&gt;</span>
+<span id="cb83-751"><a href="#cb83-751"></a>You can use default values for the parameter *e.g.* <span class="in">`b=5`</span>. &lt;br&gt;</span>
+<span id="cb83-752"><a href="#cb83-752"></a>Multiple return values are separated by commas. &lt;br&gt;</span>
+<span id="cb83-753"><a href="#cb83-753"></a>They are stored in a tuple. &lt;br&gt;</span>
+<span id="cb83-754"><a href="#cb83-754"></a></span>
+<span id="cb83-755"><a href="#cb83-755"></a></span>
+<span id="cb83-758"><a href="#cb83-758"></a><span class="in">```{python}</span></span>
+<span id="cb83-759"><a href="#cb83-759"></a><span class="kw">def</span> summation(a,b<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb83-760"><a href="#cb83-760"></a>    <span class="cf">return</span> a<span class="op">+</span>b, a<span class="op">-</span>b</span>
 <span id="cb83-761"><a href="#cb83-761"></a><span class="in">```</span></span>
 <span id="cb83-762"><a href="#cb83-762"></a></span>
 <span id="cb83-765"><a href="#cb83-765"></a><span class="in">```{python}</span></span>
-<span id="cb83-766"><a href="#cb83-766"></a><span class="bu">sum</span>, sub <span class="op">=</span> summation(<span class="dv">4</span>)</span>
-<span id="cb83-767"><a href="#cb83-767"></a><span class="bu">print</span>(<span class="bu">sum</span>)</span>
-<span id="cb83-768"><a href="#cb83-768"></a><span class="bu">print</span>(sub)</span>
-<span id="cb83-769"><a href="#cb83-769"></a><span class="in">```</span></span>
-<span id="cb83-770"><a href="#cb83-770"></a></span>
-<span id="cb83-773"><a href="#cb83-773"></a><span class="in">```{python}</span></span>
-<span id="cb83-774"><a href="#cb83-774"></a>x <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb83-775"><a href="#cb83-775"></a></span>
-<span id="cb83-776"><a href="#cb83-776"></a><span class="kw">def</span> multiple_return_value(x,a,b):</span>
-<span id="cb83-777"><a href="#cb83-777"></a>    n <span class="op">=</span> x<span class="op">+</span>a</span>
-<span id="cb83-778"><a href="#cb83-778"></a>    m <span class="op">=</span> x<span class="op">-</span>b</span>
-<span id="cb83-779"><a href="#cb83-779"></a>    <span class="cf">return</span> [n,m]</span>
-<span id="cb83-780"><a href="#cb83-780"></a><span class="bu">print</span>(multiple_return_value(x,<span class="dv">5</span>,<span class="dv">10</span>)[<span class="dv">0</span>],multiple_return_value(x,<span class="dv">5</span>,<span class="dv">10</span>)[<span class="dv">1</span>])</span>
-<span id="cb83-781"><a href="#cb83-781"></a><span class="in">```</span></span>
-<span id="cb83-782"><a href="#cb83-782"></a></span>
-<span id="cb83-783"><a href="#cb83-783"></a>---</span>
-<span id="cb83-784"><a href="#cb83-784"></a></span>
-<span id="cb83-785"><a href="#cb83-785"></a><span class="fu">## Style guideline for writing python code {.unnumbered}</span></span>
-<span id="cb83-786"><a href="#cb83-786"></a></span>
-<span id="cb83-787"><a href="#cb83-787"></a></span>
-<span id="cb83-788"><a href="#cb83-788"></a>For writing a readable code, it is important to follow a style guideline. &lt;br&gt;</span>
-<span id="cb83-789"><a href="#cb83-789"></a>The most common style guideline for Python is <span class="co">[</span><span class="ot">PEP 8</span><span class="co">](https://www.python.org/dev/peps/pep-0008/)</span>. &lt;br&gt;</span>
+<span id="cb83-766"><a href="#cb83-766"></a>summation(<span class="dv">4</span>,<span class="dv">2</span>)</span>
+<span id="cb83-767"><a href="#cb83-767"></a><span class="in">```</span></span>
+<span id="cb83-768"><a href="#cb83-768"></a></span>
+<span id="cb83-771"><a href="#cb83-771"></a><span class="in">```{python}</span></span>
+<span id="cb83-772"><a href="#cb83-772"></a><span class="bu">sum</span>, sub <span class="op">=</span> summation(<span class="dv">4</span>)</span>
+<span id="cb83-773"><a href="#cb83-773"></a><span class="bu">print</span>(<span class="bu">sum</span>)</span>
+<span id="cb83-774"><a href="#cb83-774"></a><span class="bu">print</span>(sub)</span>
+<span id="cb83-775"><a href="#cb83-775"></a><span class="in">```</span></span>
+<span id="cb83-776"><a href="#cb83-776"></a></span>
+<span id="cb83-779"><a href="#cb83-779"></a><span class="in">```{python}</span></span>
+<span id="cb83-780"><a href="#cb83-780"></a>x <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb83-781"><a href="#cb83-781"></a></span>
+<span id="cb83-782"><a href="#cb83-782"></a><span class="kw">def</span> multiple_return_value(x,a,b):</span>
+<span id="cb83-783"><a href="#cb83-783"></a>    n <span class="op">=</span> x<span class="op">+</span>a</span>
+<span id="cb83-784"><a href="#cb83-784"></a>    m <span class="op">=</span> x<span class="op">-</span>b</span>
+<span id="cb83-785"><a href="#cb83-785"></a>    <span class="cf">return</span> [n,m]</span>
+<span id="cb83-786"><a href="#cb83-786"></a><span class="bu">print</span>(multiple_return_value(x,<span class="dv">5</span>,<span class="dv">10</span>)[<span class="dv">0</span>],multiple_return_value(x,<span class="dv">5</span>,<span class="dv">10</span>)[<span class="dv">1</span>])</span>
+<span id="cb83-787"><a href="#cb83-787"></a><span class="in">```</span></span>
+<span id="cb83-788"><a href="#cb83-788"></a></span>
+<span id="cb83-789"><a href="#cb83-789"></a>---</span>
 <span id="cb83-790"><a href="#cb83-790"></a></span>
-<span id="cb83-791"><a href="#cb83-791"></a>---</span>
+<span id="cb83-791"><a href="#cb83-791"></a><span class="fu">## Style guideline for writing python code {.unnumbered}</span></span>
 <span id="cb83-792"><a href="#cb83-792"></a></span>
-<span id="cb83-793"><a href="#cb83-793"></a><span class="fu"># Exercises {.unnumbered}</span></span>
-<span id="cb83-794"><a href="#cb83-794"></a>Download it locally and try to solve the exercises. &lt;br&gt;</span>
-<span id="cb83-795"><a href="#cb83-795"></a></span>
-<span id="cb83-796"><a href="#cb83-796"></a><span class="co">[</span><span class="ot">Basic Python</span><span class="co">](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/)</span></span>
-<span id="cb83-797"><a href="#cb83-797"></a></span>
+<span id="cb83-793"><a href="#cb83-793"></a></span>
+<span id="cb83-794"><a href="#cb83-794"></a>For writing a readable code, it is important to follow a style guideline. &lt;br&gt;</span>
+<span id="cb83-795"><a href="#cb83-795"></a>The most common style guideline for Python is <span class="co">[</span><span class="ot">PEP 8</span><span class="co">](https://www.python.org/dev/peps/pep-0008/)</span>. &lt;br&gt;</span>
+<span id="cb83-796"><a href="#cb83-796"></a></span>
+<span id="cb83-797"><a href="#cb83-797"></a>---</span>
 <span id="cb83-798"><a href="#cb83-798"></a></span>
-<span id="cb83-799"><a href="#cb83-799"></a></span>
-<span id="cb83-800"><a href="#cb83-800"></a>Or open it in <span class="in">`Google Colab`</span>:</span>
+<span id="cb83-799"><a href="#cb83-799"></a><span class="fu"># Exercises {.unnumbered}</span></span>
+<span id="cb83-800"><a href="#cb83-800"></a>Download it locally and try to solve the exercises. &lt;br&gt;</span>
 <span id="cb83-801"><a href="#cb83-801"></a></span>
-<span id="cb83-802"><a href="#cb83-802"></a><span class="co">[</span><span class="ot">Basic Python</span><span class="co">](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material/student/BasicExercises.ipynb)</span></span>
+<span id="cb83-802"><a href="#cb83-802"></a><span class="co">[</span><span class="ot">Basic Python</span><span class="co">](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1.zip)</span></span>
 <span id="cb83-803"><a href="#cb83-803"></a></span>
 <span id="cb83-804"><a href="#cb83-804"></a></span>
 <span id="cb83-805"><a href="#cb83-805"></a></span>
+<span id="cb83-806"><a href="#cb83-806"></a>Or open it in <span class="in">`Google Colab`</span>:</span>
+<span id="cb83-807"><a href="#cb83-807"></a></span>
+<span id="cb83-808"><a href="#cb83-808"></a><span class="co">[</span><span class="ot">Basic Python</span><span class="co">](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material/student/BasicExercises.ipynb)</span></span>
+<span id="cb83-809"><a href="#cb83-809"></a></span>
+<span id="cb83-810"><a href="#cb83-810"></a></span>
+<span id="cb83-811"><a href="#cb83-811"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
