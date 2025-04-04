@@ -23,7 +23,7 @@ format: html
 
 Van Rossum designed Python as a "Computer Programming Language for Everybody".
 
----
+
 
 ## What is Python? {.unnumbered}
 
@@ -43,7 +43,7 @@ Van Rossum designed Python as a "Computer Programming Language for Everybody".
 
 If you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).
 
-![alt](../../images/python_scheme.png){width=300px}
+![Interpreter Scheme - Simplified](https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/images/python_scheme.png){width=300px}
 
 <!-- If you want to learn more about Python Interpreter, you can read the  -->
 
