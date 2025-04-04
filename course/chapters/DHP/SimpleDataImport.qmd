@@ -18,7 +18,7 @@ other-links:
         href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.dat"
         icon: "filetype-txt"
       - text: "Download Code"
-        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/SimpleDataImport.ipynb"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimpleDataImport.ipynb"
         icon: "journal"
 code-links:
       - text: "Open in Colab"

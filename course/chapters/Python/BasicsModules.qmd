@@ -5,7 +5,7 @@ execute:
   execute: false
 other-links:     
     - text: "Download Code"
-      href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/notebooks/BasicsModules.ipynb"
+      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/BasicsModules.ipynb"
       icon: "journal"
 code-links:
       - text: "Open in Colab"

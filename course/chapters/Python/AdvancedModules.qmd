@@ -5,11 +5,11 @@ execute:
   execute: false
 other-links:     
     - text: "Download Code"
-      href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/notebooks/AdvancedModules.ipynb"
+      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/AdvancedModules.ipynb"
       icon: "journal"
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/AdvancedModules.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/notebooks/AdvancedModules.ipynb"
         icon: "laptop"
 ---
 

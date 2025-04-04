@@ -6,8 +6,14 @@ execute:
   error: True
 other-links: 
       - text: "Download Code"
-        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/SimplePlots.ipynb"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimplePlots.ipynb"
         icon: "journal"
+      - text: "Example"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/examples/SimplePlotExmple.ipynb"
+        icon: journal
+      - text: "Open Example in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/SimplePlotExample.ipynb"
+        icon: "laptop"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimplePlot.ipynb"

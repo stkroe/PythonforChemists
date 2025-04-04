@@ -5,7 +5,7 @@ execute:
   eval: True
 other-links: 
       - text: "Download Code"
-        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/SimpleDataModels.ipynb"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimpleDataModels.ipynb"
         icon: "journal"
 code-links:
       - text: "Open in Colab"
