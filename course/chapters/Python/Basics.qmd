@@ -12,8 +12,14 @@ execute:
     error: true
 other-links:     
     - text: "Download Code"
-      href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/notebooks/Basics.ipynb"
+      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/Basics.ipynb"
       icon: "journal"
+    - text: "Example"
+      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1.zip"
+      icon: "zip"
+    - text: "Open Example in Colab"
+      href: "https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material/student/BasicExercises.ipynb"
+      icon: "laptop"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Basics.ipynb"
@@ -708,7 +714,7 @@ The most common style guideline for Python is [PEP 8](https://www.python.org/dev
 # Exercises {.unnumbered}
 Download it locally and try to solve the exercises. <br>
 
-[Basic Python](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/)
+[Basic Python](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1.zip)
 
 
 
