@@ -17,11 +17,11 @@ code-links:
 
 ## Scipy {.unnumbered}
 
-Scipy is a library that builds on Numpy. It is specialized in **scientific computing**. It includes modules for statistical calculations , optimization, linear algebra, integration, interpolation, special functions, FFT, signal and image processing, ODE solvers and more.
+Scipy is a library that builds on Numpy. It is specialized in **scientific computing**. It includes modules for statistical calculations, optimization, linear algebra, integration, interpolation, special functions, FFT, signal and image processing, ODE solvers and more.
 
 More information can be found at the [Scipy website](https://www.scipy.org/).
 
-Later on we will see how to use Scipy for statistical calculations and for anlaysis of spectra.
+Later on we will see how to use Scipy for statistical calculations and for analysis of spectra.
 
 ---
 

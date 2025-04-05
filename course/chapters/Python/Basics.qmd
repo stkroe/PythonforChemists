@@ -29,7 +29,7 @@ code-links:
 This will be a very fast and basic start into coding with Python. 
 
 :::{.callout-note}
-### Let`s make a initial quiz.
+### Let`s make an initial quiz.
 You will see coding with Python is very easy and intuitive!
 ::: 
 
@@ -38,14 +38,14 @@ You will see coding with Python is very easy and intuitive!
 <div id="quiz-container"></div>
 :::
 
-# Elemenary Syntax {.unnumbered}
+# Elementary Syntax {.unnumbered}
 
-## Comands{.unnumbered}
+## Commands{.unnumbered}
 
 Each line of code is a command. The computer reads the code from top to bottom and executes each command in succession order. 
 
 
-First of all some terminology:
+First some terminology:
 
 | Term | Definition |
 |:---------|:------------|
@@ -109,13 +109,13 @@ if you are using parenthesis in your command you can directly use a new line.
 In Python code blocks are not structured by brackets or semicolons like `C/C++` or `Java` but by indentation. This means that the code inside a loop or a function is indented by a tab or four spaces.
 
 :::{.callout-warning}
-Indentations are curcial in Python. 
-If you don't indent your code correctly, you will get an typical beginner error.
+Indentations are crucial in Python. 
+If you don't indent your code correctly, you will get a typical beginner error.
 
 Pay attention to not mix tabs and spaces in your code.
 :::
 
-
+s
 
 :::{.callout-note}
 ### Example - Wrong Indentation
@@ -140,13 +140,13 @@ All the lines in the block must have the same indentation:
 
 When you run a command that has an error, Python will print an error message. 
 
-The so called stack trace. It is a list of error messages that Python prints when an error occurs.
+The so-called stack trace. It is a list of error messages that Python prints when an error occurs.
 
 It gives you information about the error and the location of the error in your code.
 
-The strack track is read from bottom to top.
+The stack track is read from bottom to top.
 
-The last line contains the error message and the line number where the error occured.
+The last line contains the error message and the line number where the error occurred.
 
 
 
@@ -259,7 +259,7 @@ You can use the `int()`, `float()`, `str()`, `bool()`, `list()`, `tuple()`, `dic
 
 
 ```{python}
-x = 5 int
+x = 5 #int
 print(x,type(x))# print the type of x
 
 ```
@@ -336,6 +336,7 @@ print(t,type(t))
 
 ```{python}
 #type conversion
+x = 5 #int
 f = float(x)
 print(f,type(f))
 ```

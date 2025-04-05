@@ -17,8 +17,8 @@ format: html
 - 1994: Python 1.0 was released
 - 2000: Python 2.0 was released
 - 2008: Python 3.0 was released with new syntax and features
-- Important: **python3 to python2 is backward incompatible**  *e.g.* `print("Hello World")` python3 and `print "Hello World"` python2. 
-- `python2` is nowdays outdated. It is not recommended to use it for new projects.
+- Important: **python3 to python2 is backward incompatible** *e.g.* `print("Hello World")` python3 and `print "Hello World"` python2. 
+- `python2` is nowadays outdated. It is not recommended using it for new projects.
 
 
 Van Rossum designed Python as a "Computer Programming Language for Everybody".
@@ -41,11 +41,11 @@ Van Rossum designed Python as a "Computer Programming Language for Everybody".
 
 ### Simplified Scheme how Python works internally: {.unnumbered}
 
-If you execute a python programe, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).
+If you execute a python program, the python interpreter will convert the code into byte code and then the byte code will be executed by the python virtual machine (PVM).
 
 ![Interpreter Scheme - Simplified](https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/images/python_scheme.png){width=300px}
 
-<!-- If you want to learn more about Python Interpreter, you can read the  -->
+
 
 ## How I can learn Python? {.unnumbered}
 

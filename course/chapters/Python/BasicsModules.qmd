@@ -28,7 +28,7 @@ code-links:
 - The libary also includes many mathematical functions and methods for linear algebra. 
 
 
-More information can found at the [Numpy website](https://numpy.org/).
+More information can be found at the [Numpy website](https://numpy.org/).
 
 Load the required libraries
 
