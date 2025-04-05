@@ -106,13 +106,13 @@ if you are using parenthesis in your command you can directly use a new line.
  
 
 ## Indentation {.unnumbered}
-In Python code blocks are not structured by brackets or semicolons like `C/C++` or `Java` but by indentation. This means that the code inside a loop or a function is indented by a tab or four spaces.
+In Python code blocks are not structured by brackets or semicolons like `C/C++` or `Java` but by indentation. This means that the code inside a loop or a function is indented by a tab or spaces.
 
 :::{.callout-warning}
 Indentations are crucial in Python. 
 If you don't indent your code correctly, you will get a typical beginner error.
 
-Pay attention to not mix tabs and spaces in your code.
+Pay attention **do not mix tabs and spaces** in your code.
 :::
 
 s
