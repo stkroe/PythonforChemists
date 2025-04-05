@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,8 +71,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a185852c63625fd9ffbdc57047c9a77e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-a185852c63625fd9ffbdc57047c9a77e.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-4f17641596142cbde708c01b3a465e62.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4f17641596142cbde708c01b3a465e62.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-e73e8d7a663c5560bcf23225ddbdc55a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -549,7 +549,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="choose-an-editor" class="level1 unnumbered">
 <h1 class="unnumbered">Choose an editor</h1>
-<p>After you installed Python successfully you need a editor for writing your Python programs. Technical you could use everything where you can write text but it is not really purposeful.</p>
+<p>After you installed Python successfully you need an editor for writing your Python programs. Technicallly you could use everything where you can write text, but it is not really purposeful.</p>
 <p>An editor with <strong>syntax highlighting</strong>, <strong>code completion</strong> and <strong>debugging</strong> is very useful.</p>
 <section id="editors" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="editors">Editors:</h3>
@@ -590,7 +590,7 @@ Tip
 <li>Jupyter Notebooks can also handle different programming languages like <code>R</code>or <code>Julia</code>.</li>
 <li>Also <code>Markdown</code> and <code>LaTeX</code> can be used to write text and equations.</li>
 <li>The output of the code can be visualized directly in the notebook.</li>
-<li>Therefore it is very popular in the data science community.</li>
+<li>Therefore, it is very popular in the data science community.</li>
 </ul>
 <p>Jupyter Notebooks can be used in <code>VS Code</code>, <code>Jupyter Lab</code>, <code>Jupyter Notebook</code> or <code>Google Colab</code>.</p>
 <div class="callout-information">
@@ -647,19 +647,19 @@ Tip
 </figure>
 </div>
 <p>Upload data on Google Colab:</p>
-<div id="5fa05a8b" class="cell" data-execution_count="1">
+<div id="b6e656ca" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="upload-a-file" class="level3">
 <h3 class="anchored" data-anchor-id="upload-a-file">Upload a file</h3>
-<div id="05700955" class="cell" data-execution_count="2">
+<div id="bad3c291" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>uploaded <span class="op">=</span> files.upload()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="access-the-uploaded-file" class="level3">
 <h3 class="anchored" data-anchor-id="access-the-uploaded-file">Access the uploaded file</h3>
-<div id="8dd281c1" class="cell" data-execution_count="3">
+<div id="29d3337b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="cf">for</span> filename <span class="kw">in</span> uploaded.keys():</span>
 <span id="cb3-2"><a href="#cb3-2"></a>    <span class="bu">print</span>(<span class="ss">f'User uploaded file "</span><span class="sc">{</span>filename<span class="sc">}</span><span class="ss">" with size </span><span class="sc">{</span><span class="bu">len</span>(uploaded[filename])<span class="sc">}</span><span class="ss"> bytes.'</span>)<span class="co">#</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1356,7 +1356,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-6"><a href="#cb6-6"></a><span class="fu"># Choose an editor {.unnumbered}</span></span>
 <span id="cb6-7"><a href="#cb6-7"></a></span>
 <span id="cb6-8"><a href="#cb6-8"></a></span>
-<span id="cb6-9"><a href="#cb6-9"></a>After you installed Python successfully you need a editor for writing your Python programs. Technical you could use everything where you can write text but it is not really purposeful. </span>
+<span id="cb6-9"><a href="#cb6-9"></a>After you installed Python successfully you need an editor for writing your Python programs. Technicallly you could use everything where you can write text, but it is not really purposeful. </span>
 <span id="cb6-10"><a href="#cb6-10"></a></span>
 <span id="cb6-11"><a href="#cb6-11"></a></span>
 <span id="cb6-12"><a href="#cb6-12"></a>An editor with **syntax highlighting**, **code completion** and **debugging** is very useful.</span>
@@ -1398,7 +1398,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-48"><a href="#cb6-48"></a><span class="ss">- </span>Jupyter Notebooks can also handle different programming languages like <span class="in">`R`</span>or <span class="in">`Julia`</span>.</span>
 <span id="cb6-49"><a href="#cb6-49"></a><span class="ss">- </span>Also <span class="in">`Markdown`</span> and <span class="in">`LaTeX`</span> can be used to write text and equations.</span>
 <span id="cb6-50"><a href="#cb6-50"></a><span class="ss">- </span>The output of the code can be visualized directly in the notebook.</span>
-<span id="cb6-51"><a href="#cb6-51"></a><span class="ss">- </span>Therefore it is very popular in the data science community.</span>
+<span id="cb6-51"><a href="#cb6-51"></a><span class="ss">- </span>Therefore, it is very popular in the data science community.</span>
 <span id="cb6-52"><a href="#cb6-52"></a></span>
 <span id="cb6-53"><a href="#cb6-53"></a></span>
 <span id="cb6-54"><a href="#cb6-54"></a>Jupyter Notebooks can be used in <span class="in">`VS Code`</span>, <span class="in">`Jupyter Lab`</span>, <span class="in">`Jupyter Notebook`</span> or <span class="in">`Google Colab`</span>.</span>

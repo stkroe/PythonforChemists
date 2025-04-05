@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,8 +71,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a185852c63625fd9ffbdc57047c9a77e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-a185852c63625fd9ffbdc57047c9a77e.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-4f17641596142cbde708c01b3a465e62.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4f17641596142cbde708c01b3a465e62.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-e73e8d7a663c5560bcf23225ddbdc55a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -511,7 +511,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#clustering-techniques" id="toc-clustering-techniques" class="nav-link" data-scroll-target="#clustering-techniques">Clustering Techniques</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SEDA/AdvancedAnalysis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/MultiVariantAnalysis.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/MultiVariantAnalysis.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SEDA/AdvancedAnalysis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/MultiVariantAnalysis.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/MultiVariantAnalysis.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -547,7 +547,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li><strong>Principal Component Analysis (PCA):</strong> reduces the dimensionality of data by transforming variables into uncorrelated components. It retains most of the variance in the data while reducing noise and redundancy. The PCA decomposition is based on the eigenvalues and eigenvectors of the covariance matrix of the data to identify the principal components with the highest variance.</li>
 </ol>
-<div id="1e1d4727" class="cell" data-execution_count="1">
+<div id="84759ba4" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
@@ -572,7 +572,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Sometimes the data needs to be scaled before applying PCA. The <code>StandardScaler</code> from <code>sklearn</code> can be used to scale the data.</p>
-<div id="beb027bf" class="cell" data-execution_count="2">
+<div id="e8ee4722" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
@@ -595,7 +595,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-20"><a href="#cb2-20"></a>plt.title(<span class="st">'PCA Analysis'</span>)</span>
 <span id="cb2-21"><a href="#cb2-21"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Explained Variance Ratio: [0.59495304 0.23032119]</code></pre>
+<pre><code>Explained Variance Ratio: [0.48390371 0.33314994]</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
@@ -606,7 +606,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>Independent Component Analysis (ICA):</strong> Separates a multivariate signal into additive subcomponents.</p>
-<div id="86a2c6e6" class="cell" data-execution_count="3">
+<div id="5b3d4dc5" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> FastICA</span>
@@ -631,7 +631,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>t-Distributed Stochastic Neighbor Embedding (t-SNE):</strong> Visualizes high-dimensional data in lower dimensions.</p>
-<div id="f7d9c31c" class="cell" data-execution_count="4">
+<div id="42e38b0f" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="im">from</span> sklearn.manifold <span class="im">import</span> TSNE</span>
@@ -656,7 +656,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>UMAP (Uniform Manifold Approximation and Projection):</strong> Reduces the dimensionality of data while preserving local and global structure.</p>
-<div id="ea631a1f" class="cell" data-execution_count="5">
+<div id="441e96df" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-2"><a href="#cb6-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3"></a><span class="im">import</span> umap</span>
@@ -681,7 +681,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>Factor Analysis:</strong> Identifies latent factors that explain the variance in observed variables.</p>
-<div id="ec02cfd5" class="cell" data-execution_count="6">
+<div id="b7fb9d44" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> FactorAnalysis</span>
@@ -706,7 +706,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>Canonical Correlation Analysis (CCA):</strong> Analyzes the relationship between two sets of variables.</p>
-<div id="9306b354" class="cell" data-execution_count="7">
+<div id="cbc6ebd3" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="im">from</span> sklearn.cross_decomposition <span class="im">import</span> CCA</span>
@@ -738,7 +738,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>k-Means Clustering:</strong> Partitions data into k clusters based on similarity.</li>
 </ul>
-<div id="8dbac552" class="cell" data-execution_count="8">
+<div id="37bbcde0" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
@@ -764,7 +764,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Hierarchical Clustering:</strong> Builds a tree of clusters using agglomerative or divisive methods.</li>
 </ul>
-<div id="608642a1" class="cell" data-execution_count="9">
+<div id="8d96b3aa" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb10-3"><a href="#cb10-3"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> AgglomerativeClustering</span>
@@ -1432,7 +1432,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-5"><a href="#cb11-5"></a><span class="co">  eval: True</span></span>
 <span id="cb11-6"><a href="#cb11-6"></a><span class="an">other-links:</span><span class="co"> </span></span>
 <span id="cb11-7"><a href="#cb11-7"></a><span class="co">      - text: "Download Code"</span></span>
-<span id="cb11-8"><a href="#cb11-8"></a><span class="co">        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/MultiVariantAnalysis.ipynb"</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a><span class="co">        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/MultiVariantAnalysis.ipynb"</span></span>
 <span id="cb11-9"><a href="#cb11-9"></a><span class="co">        icon: "journal"</span></span>
 <span id="cb11-10"><a href="#cb11-10"></a><span class="an">code-links:</span></span>
 <span id="cb11-11"><a href="#cb11-11"></a><span class="co">      - text: "Open in Colab"</span></span>

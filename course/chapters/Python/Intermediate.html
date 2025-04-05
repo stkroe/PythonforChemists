@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,8 +71,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a185852c63625fd9ffbdc57047c9a77e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-a185852c63625fd9ffbdc57047c9a77e.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-4f17641596142cbde708c01b3a465e62.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4f17641596142cbde708c01b3a465e62.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-e73e8d7a663c5560bcf23225ddbdc55a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -509,7 +509,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#system" id="toc-system" class="nav-link" data-scroll-target="#system">System</a></li>
   <li><a href="#paths" id="toc-paths" class="nav-link" data-scroll-target="#paths">Paths</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Python/Intermediate.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/notebooks/Intermediate.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Intermediate.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Python/Intermediate.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/intermediate.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Intermediate.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -538,32 +538,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">I/O (Input/Output)</h1>
 <p>You can use the <code>print()</code> function to <strong>print a message</strong> to the screen. <br> You can use the <code>input()</code> function to get <strong>input from the user</strong>. <br> You can use the <code>open()</code> function to <strong>open a file</strong>. <br> You can use the <code>write()</code> function to <strong>write to a file</strong>. <br> You can use the <code>read()</code> function to <strong>read from a file</strong>. <br> You can use the <code>close()</code> function to <strong>close a file</strong>. <br> You can use the <code>with</code> statement to <strong>open a file</strong> and <strong>automatically close</strong> it when you are done. <br> You can use the <code>os</code> module to <strong>work with files and directories</strong>. <br> You can use the <code>sys</code> module to <strong>work with command line arguments</strong>. <br> You can use the <code>argparse</code> module to work also with <strong>command line arguments</strong>. <br></p>
 <p>This should print “Hello World!” to the console</p>
-<div id="239190d4" class="cell" data-execution_count="1">
+<div id="710ba81b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
 </div>
 <p>This should ask the user to enter a number and print it to the console</p>
-<div id="fd610f5b" class="cell" data-execution_count="2">
+<div id="6bd68c4f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">print</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This should write “Hello World!” to the file “file.txt”</p>
-<div id="53845ecf" class="cell" data-execution_count="3">
+<div id="179c07a5" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>).write(<span class="st">"Hello World!"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>12</code></pre>
 </div>
 </div>
 <p>This should read the file “file.txt” and print the content to the console</p>
-<div id="d02b772e" class="cell" data-execution_count="4">
+<div id="e6e4fd11" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">print</span>(<span class="bu">open</span>(<span class="st">"file.txt"</span>).read()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
 </div>
 <p>This should print “Hello World!” to the console without a newline</p>
-<div id="3bbfac48" class="cell" data-execution_count="5">
+<div id="45b1f5e9" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="bu">print</span>(<span class="st">"Hello World without newline."</span>, end<span class="op">=</span><span class="st">""</span>) </span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="bu">print</span>(<span class="st">"Next print statement."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -571,14 +571,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>This should read the file “file.txt” and print the content to the console</p>
-<div id="eb2f0acb" class="cell" data-execution_count="6">
+<div id="34754b91" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>: <span class="bu">print</span>(<span class="bu">file</span>.read()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
 </div>
 <p>Write a file with the content “Hello World!” and close it</p>
-<div id="670c2a5e" class="cell" data-execution_count="7">
+<div id="3c3326c2" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb12-2"><a href="#cb12-2"></a><span class="bu">file</span>.write(<span class="st">"Hello World!"</span>)</span>
 <span id="cb12-3"><a href="#cb12-3"></a><span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -600,18 +600,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>parse_args()</code> to parse the command line arguments. <br></p></li>
 </ul>
 <p>This should remove the file “file.txt”</p>
-<div id="ab7c2ec7" class="cell" data-execution_count="8">
+<div id="3339a829" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> os</span>
 <span id="cb13-2"><a href="#cb13-2"></a>os.remove(<span class="st">"file.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For <code>sys</code> you can use the <code>sys.argv</code> to get the command line arguments. <br> <code>sys.argv</code> is a list of the command line arguments. <br> <code>sys.argv[0]</code> is the name of the script. <br> <code>sys.argv[1]</code> is the first argument. <br></p>
-<div id="800c5a4a" class="cell" data-execution_count="9">
+<div id="0600ef65" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="im">import</span> sys</span>
 <span id="cb14-2"><a href="#cb14-2"></a>first_argument <span class="op">=</span> sys.argv[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For more information about the sys module you can visit the <a href="https://docs.python.org/3/library/sys.html">official documentation</a>.</p>
 <p>For <code>Argparse</code> you can use the following code: For python scripts: You can use argparse to parse command line arguments.</p>
-<div id="1dcb8be6" class="cell" data-execution_count="10">
+<div id="04f328d0" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">from</span> argparse <span class="im">import</span> ArgumentParser</span>
 <span id="cb15-2"><a href="#cb15-2"></a></span>
 <span id="cb15-3"><a href="#cb15-3"></a>parser <span class="op">=</span> ArgumentParser(description<span class="op">=</span><span class="st">"This is a description."</span>)</span>
@@ -626,7 +626,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">Paths</h1>
 <p>Pay attention to the paths in your code. They are different defined in Windows and Linux. In Windows and macOS, you use backslashes <code>/</code> and in Linux, you use forward slashes <code>\</code>.</p>
 <p>To avoid this problem you can use the <code>os</code> or <code>pathlib</code> module to make your code platform independent.</p>
-<div id="91dd3fa4" class="cell" data-execution_count="11">
+<div id="bd8d715e" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="im">import</span> os</span>
 <span id="cb16-2"><a href="#cb16-2"></a></span>
 <span id="cb16-3"><a href="#cb16-3"></a>path <span class="op">=</span> os.path.join(<span class="st">'folder1'</span>, <span class="st">'folder2'</span>, <span class="st">'folder3'</span>, <span class="st">'data.dat'</span>)</span>
@@ -635,14 +635,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>folder1/folder2/folder3/data.dat</code></pre>
 </div>
 </div>
-<div id="16c4074f" class="cell" data-execution_count="12">
+<div id="f6b43623" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>working_dir <span class="op">=</span> os.getcwd()</span>
 <span id="cb18-2"><a href="#cb18-2"></a><span class="bu">print</span>(working_dir)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>/home/runner/work/PythonforChemists/PythonforChemists/course/chapters/Python</code></pre>
 </div>
 </div>
-<div id="6984f048" class="cell" data-execution_count="13">
+<div id="7ad3a822" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb20-2"><a href="#cb20-2"></a></span>
 <span id="cb20-3"><a href="#cb20-3"></a>path <span class="op">=</span> Path(<span class="st">'folder1'</span>) <span class="op">/</span> <span class="st">'folder2'</span> <span class="op">/</span> <span class="st">'folder3'</span> <span class="op">/</span> <span class="st">'data.dat'</span></span>
@@ -651,7 +651,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>folder1/folder2/folder3/data.dat</code></pre>
 </div>
 </div>
-<div id="10e38e89" class="cell" data-execution_count="14">
+<div id="6563cb15" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>working_dir <span class="op">=</span> Path.cwd()</span>
 <span id="cb22-2"><a href="#cb22-2"></a><span class="bu">print</span>(working_dir)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1304,7 +1304,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb24-6"><a href="#cb24-6"></a><span class="co">    error: true</span></span>
 <span id="cb24-7"><a href="#cb24-7"></a><span class="an">other-links:</span><span class="co">     </span></span>
 <span id="cb24-8"><a href="#cb24-8"></a><span class="co">    - text: "Download Code"</span></span>
-<span id="cb24-9"><a href="#cb24-9"></a><span class="co">      href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/notebooks/Intermediate.ipynb"</span></span>
+<span id="cb24-9"><a href="#cb24-9"></a><span class="co">      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/intermediate.ipynb"</span></span>
 <span id="cb24-10"><a href="#cb24-10"></a><span class="co">      icon: "journal"</span></span>
 <span id="cb24-11"><a href="#cb24-11"></a><span class="an">code-links:</span></span>
 <span id="cb24-12"><a href="#cb24-12"></a><span class="co">      - text: "Open in Colab"</span></span>
@@ -1457,38 +1457,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb24-179"><a href="#cb24-179"></a></span>
 <span id="cb24-180"><a href="#cb24-180"></a><span class="fu"># Paths {.unnumbered}</span></span>
 <span id="cb24-181"><a href="#cb24-181"></a></span>
-<span id="cb24-182"><a href="#cb24-182"></a>Pay attention to the paths in your code. They</span>
-<span id="cb24-183"><a href="#cb24-183"></a>are different defined in Windows and Linux. In Windows and macOS, you use backslashes <span class="in">`/`</span> and in Linux, you use forward slashes <span class="in">`\`</span>. </span>
-<span id="cb24-184"><a href="#cb24-184"></a></span>
-<span id="cb24-185"><a href="#cb24-185"></a>To avoid this problem you can use the <span class="in">`os`</span> or <span class="in">`pathlib`</span> module to make your code platform independent.</span>
+<span id="cb24-182"><a href="#cb24-182"></a>Pay attention to the paths in your code. They are different defined in Windows and Linux. In Windows and macOS, you use backslashes <span class="in">`/`</span> and in Linux, you use forward slashes <span class="in">`\`</span>. </span>
+<span id="cb24-183"><a href="#cb24-183"></a></span>
+<span id="cb24-184"><a href="#cb24-184"></a>To avoid this problem you can use the <span class="in">`os`</span> or <span class="in">`pathlib`</span> module to make your code platform independent.</span>
+<span id="cb24-185"><a href="#cb24-185"></a></span>
 <span id="cb24-186"><a href="#cb24-186"></a></span>
-<span id="cb24-187"><a href="#cb24-187"></a></span>
-<span id="cb24-190"><a href="#cb24-190"></a><span class="in">```{python}</span></span>
-<span id="cb24-191"><a href="#cb24-191"></a><span class="im">import</span> os</span>
-<span id="cb24-192"><a href="#cb24-192"></a></span>
-<span id="cb24-193"><a href="#cb24-193"></a>path <span class="op">=</span> os.path.join(<span class="st">'folder1'</span>, <span class="st">'folder2'</span>, <span class="st">'folder3'</span>, <span class="st">'data.dat'</span>)</span>
-<span id="cb24-194"><a href="#cb24-194"></a><span class="bu">print</span>(path)</span>
-<span id="cb24-195"><a href="#cb24-195"></a><span class="in">```</span></span>
+<span id="cb24-189"><a href="#cb24-189"></a><span class="in">```{python}</span></span>
+<span id="cb24-190"><a href="#cb24-190"></a><span class="im">import</span> os</span>
+<span id="cb24-191"><a href="#cb24-191"></a></span>
+<span id="cb24-192"><a href="#cb24-192"></a>path <span class="op">=</span> os.path.join(<span class="st">'folder1'</span>, <span class="st">'folder2'</span>, <span class="st">'folder3'</span>, <span class="st">'data.dat'</span>)</span>
+<span id="cb24-193"><a href="#cb24-193"></a><span class="bu">print</span>(path)</span>
+<span id="cb24-194"><a href="#cb24-194"></a><span class="in">```</span></span>
+<span id="cb24-195"><a href="#cb24-195"></a></span>
 <span id="cb24-196"><a href="#cb24-196"></a></span>
-<span id="cb24-197"><a href="#cb24-197"></a></span>
-<span id="cb24-200"><a href="#cb24-200"></a><span class="in">```{python}</span></span>
-<span id="cb24-201"><a href="#cb24-201"></a>working_dir <span class="op">=</span> os.getcwd()</span>
-<span id="cb24-202"><a href="#cb24-202"></a><span class="bu">print</span>(working_dir)</span>
-<span id="cb24-203"><a href="#cb24-203"></a><span class="in">```</span></span>
+<span id="cb24-199"><a href="#cb24-199"></a><span class="in">```{python}</span></span>
+<span id="cb24-200"><a href="#cb24-200"></a>working_dir <span class="op">=</span> os.getcwd()</span>
+<span id="cb24-201"><a href="#cb24-201"></a><span class="bu">print</span>(working_dir)</span>
+<span id="cb24-202"><a href="#cb24-202"></a><span class="in">```</span></span>
+<span id="cb24-203"><a href="#cb24-203"></a></span>
 <span id="cb24-204"><a href="#cb24-204"></a></span>
-<span id="cb24-205"><a href="#cb24-205"></a></span>
-<span id="cb24-208"><a href="#cb24-208"></a><span class="in">```{python}</span></span>
-<span id="cb24-209"><a href="#cb24-209"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb24-210"><a href="#cb24-210"></a></span>
-<span id="cb24-211"><a href="#cb24-211"></a>path <span class="op">=</span> Path(<span class="st">'folder1'</span>) <span class="op">/</span> <span class="st">'folder2'</span> <span class="op">/</span> <span class="st">'folder3'</span> <span class="op">/</span> <span class="st">'data.dat'</span></span>
-<span id="cb24-212"><a href="#cb24-212"></a><span class="bu">print</span>(path)</span>
-<span id="cb24-213"><a href="#cb24-213"></a><span class="in">```</span></span>
+<span id="cb24-207"><a href="#cb24-207"></a><span class="in">```{python}</span></span>
+<span id="cb24-208"><a href="#cb24-208"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb24-209"><a href="#cb24-209"></a></span>
+<span id="cb24-210"><a href="#cb24-210"></a>path <span class="op">=</span> Path(<span class="st">'folder1'</span>) <span class="op">/</span> <span class="st">'folder2'</span> <span class="op">/</span> <span class="st">'folder3'</span> <span class="op">/</span> <span class="st">'data.dat'</span></span>
+<span id="cb24-211"><a href="#cb24-211"></a><span class="bu">print</span>(path)</span>
+<span id="cb24-212"><a href="#cb24-212"></a><span class="in">```</span></span>
+<span id="cb24-213"><a href="#cb24-213"></a></span>
 <span id="cb24-214"><a href="#cb24-214"></a></span>
-<span id="cb24-215"><a href="#cb24-215"></a></span>
-<span id="cb24-218"><a href="#cb24-218"></a><span class="in">```{python}</span></span>
-<span id="cb24-219"><a href="#cb24-219"></a>working_dir <span class="op">=</span> Path.cwd()</span>
-<span id="cb24-220"><a href="#cb24-220"></a><span class="bu">print</span>(working_dir)</span>
-<span id="cb24-221"><a href="#cb24-221"></a><span class="in">```</span></span>
+<span id="cb24-217"><a href="#cb24-217"></a><span class="in">```{python}</span></span>
+<span id="cb24-218"><a href="#cb24-218"></a>working_dir <span class="op">=</span> Path.cwd()</span>
+<span id="cb24-219"><a href="#cb24-219"></a><span class="bu">print</span>(working_dir)</span>
+<span id="cb24-220"><a href="#cb24-220"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
