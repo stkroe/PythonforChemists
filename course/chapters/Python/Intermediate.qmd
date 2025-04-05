@@ -6,7 +6,7 @@ execute:
     error: true
 other-links:     
     - text: "Download Code"
-      href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/notebooks/Intermediate.ipynb"
+      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/intermediate.ipynb"
       icon: "journal"
 code-links:
       - text: "Open in Colab"
@@ -159,8 +159,7 @@ For more information about `Argparse` you can visit the [official documentation]
 
 # Paths {.unnumbered}
 
-Pay attention to the paths in your code. They
-are different defined in Windows and Linux. In Windows and macOS, you use backslashes `/` and in Linux, you use forward slashes `\`. 
+Pay attention to the paths in your code. They are different defined in Windows and Linux. In Windows and macOS, you use backslashes `/` and in Linux, you use forward slashes `\`. 
 
 To avoid this problem you can use the `os` or `pathlib` module to make your code platform independent.
 

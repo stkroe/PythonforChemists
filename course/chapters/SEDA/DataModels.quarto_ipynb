@@ -1,0 +1,284 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Inferential Statistics\"\n",
+        "execute: \n",
+        "  echo: True\n",
+        "  eval: True\n",
+        "other-links: \n",
+        "      - text: \"Download Code\"\n",
+        "        href: \"https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimpleDataModels.ipynb\"\n",
+        "        icon: \"journal\"\n",
+        "code-links:\n",
+        "      - text: \"Open in Colab\"\n",
+        "        href: \"https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataModels.ipynb\"\n",
+        "        icon: \"laptop\"\n",
+        "--- \n",
+        "\n",
+        "# Data Models {.unnumbered}\n",
+        "\n",
+        "## Linear Regression {.unnumbered}\n",
+        "\n",
+        "Often we want to find a model which can explain the data.\n",
+        "It is important to understand the data and the model to be able to interpret the results and make predictions.\n",
+        "\n",
+        "The simplest model is the linear regression model. It assumes that the data has a linear relationship with the target variable. \n",
+        "For example, if we have a single feature $x$ and a target variable $y$, the linear regression model can be defined as:\n",
+        "\n",
+        "$$\n",
+        "y = \\beta_0 + \\beta_1 x + \\epsilon\n",
+        "$$\n",
+        "\n",
+        "where $y$ is the target variable, $x$ is the feature, $\\beta_0$ and $\\beta_1$ are the coefficients, and $\\epsilon$ is the error term.\n",
+        "\n",
+        "For multiple features $x_1, x_2, \\ldots, x_n$, the linear regression model can be defined as:\n",
+        "\n",
+        "$$\n",
+        "y = \\beta_0 + \\beta_1 x_1 + \\beta_2 x_2 + \\ldots + \\beta_n x_n + \\epsilon\n",
+        "$$\n",
+        "\n",
+        "where $y$ is the target variable, $x_1, x_2, \\ldots, x_n$ are the features, $\\beta_0, \\beta_1, \\ldots, \\beta_n$ are the coefficients, and $\\epsilon$ is the error term.\n",
+        "\n",
+        "\n",
+        "In `python` there exists serveral libraries which can be used to fit a linear regression model.\n",
+        "\n",
+        "### Using `scipy`{.unnumbered}\n",
+        "\n",
+        "A easy way is to use `scipy` library. The `scipy` library has a function called `linregress` which can be used to fit a linear regression model. The function returns the slope, intercept, r-value, p-value, and the standard error of the estimate. And with scipy version 1.15.2 also the intercept error.\n"
+      ],
+      "id": "02bdb3f7"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from scipy.stats import linregress\n",
+        "import numpy as np\n",
+        "\n",
+        "x = [1, 2, 3, 4, 5]\n",
+        "y = x*np.random.normal(0, 1, 5)+np.random.normal(0, 1, 5)\n",
+        "\n",
+        "results = linregress(x, y)\n",
+        "\n",
+        "slope = results.slope\n",
+        "intercept = results.intercept\n",
+        "r_value = results.rvalue\n",
+        "p_value = results.pvalue\n",
+        "std_err = results.stderr\n",
+        "intercept_err = results.intercept_stderr\n",
+        "print(\"slope: %f    intercept: %f\" % (slope, intercept))\n",
+        "print(\"R-squared: %f\" % r_value**2)\n",
+        "print(\"p-value: %f\" % p_value)\n",
+        "print(\"standard error: %f\" % std_err)\n",
+        "print(\"Intercept error: %f\" %intercept_err)\n",
+        "# Two-sided inverse Students t-distribution\n",
+        "# p - probability, df - degrees of freedom\n",
+        "from scipy.stats import t\n",
+        "tinv = lambda p, df: abs(t.ppf(p/2, df))\n",
+        "print(\"95% confidence interval: \" + str(intercept - tinv(0.05, len(x)-2)*intercept_err) + \" to \" + str(intercept + tinv(0.05, len(x)-2)*intercept_err))"
+      ],
+      "id": "fe7e3cce",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::{.callout-important}\n",
+        "For older version `scipy`only returned 5 values with fields slope, intercept, rvalue, pvalue and stderr. For compatiblity reasons the return values are 5 elements tuple.\n"
+      ],
+      "id": "6453f29d"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from scipy.stats import linregress\n",
+        "slope, intercept, r, p, se = linregress(x, y)"
+      ],
+      "id": "bbef079c",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "And if you want to get the intercept error you can use the following return value as a object:\n"
+      ],
+      "id": "d0d58b3c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from scipy.stats import linregress\n",
+        "results = linregress(x, y)\n",
+        "print(results.intercept_stderr)"
+      ],
+      "id": "1b1a0c92",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::\n",
+        "\n",
+        "### Using `statsmodels`{.unnumbered}\n",
+        "\n",
+        "Another library is `statsmodels`. The `statsmodels` library provides more detailed information about the model, such as the coefficients, standard errors, t-values, p-values, and confidence intervals.\n"
+      ],
+      "id": "a60a3daa"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import statsmodels.api as sm\n",
+        "import numpy as np\n",
+        "\n",
+        "X = np.array([1, 2, 3, 4, 5])\n",
+        "y = X*np.random.normal(0, 1, 5)+np.random.normal(0, 1, 5)\n",
+        "\n",
+        "X_with_const = sm.add_constant(X)  # Add intercept term\n",
+        "model = sm.OLS(y, X_with_const).fit()\n",
+        "print(model.summary())"
+      ],
+      "id": "82a22789",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Using `scikit-learn` {.unnumbered}\n",
+        "One of the most popular libraries is `scikit-learn`. The following code shows how to fit a linear regression model using `scikit-learn`:\n"
+      ],
+      "id": "e2e94e3c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from sklearn.linear_model import LinearRegression\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Sample data\n",
+        "X = np.linspace(1, 5, 100).reshape(-1, 1)\n",
+        "y = 2 * X + 1 + np.random.normal(0, 1, 100).reshape(-1, 1)\n",
+        "\n",
+        "# Model fitting\n",
+        "model = LinearRegression()\n",
+        "model.fit(X, y)\n",
+        "\n",
+        "# Predictions\n",
+        "y_pred = model.predict(X)\n",
+        "\n",
+        "# Plot\n",
+        "plt.scatter(X, y, color='blue', label='Data')\n",
+        "plt.plot(X, y_pred, color='red', label='Linear Fit')\n",
+        "plt.legend()\n",
+        "plt.show()"
+      ],
+      "id": "f3161f83",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "\n",
+        "## Non-Linear Fits\n",
+        "Linear regression may not always be sufficient, especially for complex relationships. Non-linear models provide more flexibility.\n",
+        "\n",
+        "### Polynomial Regression\n",
+        "\n",
+        "Polynomial regression is a type of linear regression where the relationship between the independent variable $x$ and the dependent variable $y$ is modeled as an $n$-th degree polynomial."
+      ],
+      "id": "b5aef8db"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "\n",
+        "# Sample data\n",
+        "X = np.linspace(1, 5, 100)\n",
+        "y = X**2 + np.random.normal(0, 1, 100)\n",
+        "\n",
+        "model = np.polyfit(X, y, 2)\n",
+        "\n",
+        "model = np.poly1d(model)\n",
+        "\n",
+        "X_range = np.linspace(1, 5, 100)\n",
+        "y_fit = model(X_range)\n",
+        "\n",
+        "print(model)\n",
+        "\n",
+        "plt.scatter(X, y, color='blue', label='Data')\n",
+        "plt.plot(X_range, y_fit, color='purple', label='Polynomial Fit')\n",
+        "plt.legend()\n"
+      ],
+      "id": "7fc64ebe",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Curve Fitting with `scipy`\n",
+        "\n",
+        "`scipy` provides the `curve_fit` function to fit a non-linear model to the data. The function requires the model function and the data as input."
+      ],
+      "id": "f1e79f7f"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from scipy.optimize import curve_fit\n",
+        "\n",
+        "def nonlinear_func(x, a, b, c):\n",
+        "    return a * np.sin(b * x) + c\n",
+        "\n",
+        "params, _ = curve_fit(nonlinear_func, X.flatten(), y)\n",
+        "\n",
+        "X_range = np.linspace(1, 5, 100)\n",
+        "y_fit = nonlinear_func(X_range, *params)\n",
+        "\n",
+        "plt.scatter(X, y, color='blue', label='Data')\n",
+        "plt.plot(X_range, y_fit, color='purple', label='Non-Linear Fit')\n",
+        "plt.legend()\n",
+        "plt.show()"
+      ],
+      "id": "124df9ee",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/stk/y/envs/myenv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

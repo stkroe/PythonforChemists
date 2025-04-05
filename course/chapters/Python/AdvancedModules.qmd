@@ -5,11 +5,11 @@ execute:
   execute: false
 other-links:     
     - text: "Download Code"
-      href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/notebooks/AdvancedModules.ipynb"
+      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/AdvancedModules.ipynb"
       icon: "journal"
 code-links:
       - text: "Open in Colab"
-        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/AdvancedModules.ipynb"
+        href: "https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/notebooks/AdvancedModules.ipynb"
         icon: "laptop"
 ---
 
@@ -17,11 +17,11 @@ code-links:
 
 ## Scipy {.unnumbered}
 
-Scipy is a library that builds on Numpy. It is specialized in **scientific computing**. It includes modules for statistical calculations , optimization, linear algebra, integration, interpolation, special functions, FFT, signal and image processing, ODE solvers and more.
+Scipy is a library that builds on Numpy. It is specialized in **scientific computing**. It includes modules for statistical calculations, optimization, linear algebra, integration, interpolation, special functions, FFT, signal and image processing, ODE solvers and more.
 
 More information can be found at the [Scipy website](https://www.scipy.org/).
 
-Later on we will see how to use Scipy for statistical calculations and for anlaysis of spectra.
+Later on we will see how to use Scipy for statistical calculations and for analysis of spectra.
 
 ---
 

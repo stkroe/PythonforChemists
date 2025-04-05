@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             answer: 1
         },
         {
-            question: "How do assign a value to a variable in Python?",
+            question: "How do you assign a value to a variable in Python?",
             options: [
                 "x is 5",
                 "x = 5",
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             answer: 1
         },
         {
-            question: "How to store a list of numbers in Python?",
+            question: "How do you store a list of numbers in Python?",
             options: [
                 "x = [1, 2, 3]",
                 "x = 1, 2, 3",
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             answer: 0
         },
         {
-            question: "What this code snippet means: " +
+            question: "What does this code snippet mean?" +
                       "<pre>if x > 5:</pre>" +
                       "<pre>   print('x is greater than 5')</pre>",
             options: [

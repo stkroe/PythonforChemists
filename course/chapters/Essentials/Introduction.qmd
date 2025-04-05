@@ -15,7 +15,7 @@ A very simple approach would be the use of basic spreadsheet programs with graph
 [Excel](https://www.microsoft.com/de-at/microsoft-365/excel), [LibreOffice Calc](https://de.libreoffice.org/) ...
 
 
-But for more advanced analysis you need probably specifc plotting and analysis tools: 
+But for more advanced analysis you need probably specific plotting and analysis tools: 
 
 - You can either use programs with GUIs *e.g.* [LabPlot](https://labplot.kde.org/), [QtiPlot](https://www.qtiplot.com/), [Scilab](https://www.scilab.org/), [SciDAVis](https://scidavis.sourceforge.net/), [Origin](https://www.originlab.com/) ...
 - or a GUI based program with command line interface *e.g.* [Xmgrace](https://plasma-gate.weizmann.ac.il/Grace/),  [GNU Octave](https://octave.org/) ...
@@ -27,7 +27,7 @@ But for more advanced analysis you need probably specifc plotting and analysis t
 This is a small election of tools, that can be used for data analysis and plotting.
 
 
-For a larger list see these wikipedia lists:
+For a larger list see these Wikipedia lists:
 
 
 - [List of Numerical Analysis Software](https://en.wikipedia.org/wiki/List_of_numerical_analysis_software) 

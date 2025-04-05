@@ -6,7 +6,7 @@ execute:
   error: True
 other-links: 
       - text: "Download Code"
-        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/ModelTesting.ipynb"
+        href: https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/notebooks/ModelTesting.ipynb"
         icon: "journal"
 code-links:
       - text: "Open in Colab"

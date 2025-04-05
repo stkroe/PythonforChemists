@@ -1,0 +1,326 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Simple Plot Types\"\n",
+        "execute: \n",
+        "  echo: True\n",
+        "  eval: True\n",
+        "other-links: \n",
+        "      - text: \"Download Code\"\n",
+        "        href: \"https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimplePlotTypes.ipynb\"\n",
+        "        icon: \"journal\"\n",
+        "code-links:\n",
+        "      - text: \"Open in Colab\"\n",
+        "        href: \"https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimplePlotTypes.ipynb\"\n",
+        "        icon: \"laptop\"\n",
+        "--- \n",
+        "\n",
+        "\n",
+        "## Types of Plots {.unnumbered}\n",
+        "\n",
+        "There exists are lot of different visualization techniques.\n",
+        "\n",
+        "How you should visualize the data depends on the data and the question you want to answer. \n",
+        "\n",
+        "- **Distributions** can be visualized with a boxplot, a *violinplot*, a *histogram* or a *density plot*.\n",
+        "\n",
+        "- **Relationships** between two variables can be visualized with a *scatterplot*, a *lineplot*, a *regplot* or a *jointplot*. \n",
+        "\n",
+        "- **Descriptions** of the data can be visualized with a *barplot*, *network plot* or a *pie chart*.\n",
+        "\n",
+        "\n",
+        "## Relationship plots\n",
+        "\n",
+        "### Scatter Plot {.unnumberd}\n",
+        "\n",
+        "[Scatter plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html) shows the relationship of observable over the abscissa *e.g.* time vs temperature as **discrete** function.\n",
+        "\n",
+        "The `scatter()` function creates a scatter plot.\n"
+      ],
+      "id": "f7588f8c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| eval: False\n",
+        "plt.scatter()"
+      ],
+      "id": "e0d6e088",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::{.callout-note}\n",
+        "The marker size can be adjusted with the `s` parameter.\n",
+        ":::\n"
+      ],
+      "id": "025b01b8"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import numpy as np\n",
+        "\n",
+        "x = np.linspace(0, 10, 100)\n",
+        "y = np.random.rand(100)*298\n",
+        "\n",
+        "plt.scatter(x, y, color='red', marker='o', label='sin(x)',s=5)\n",
+        "plt.xlabel('x')\n",
+        "plt.ylabel('y')\n",
+        "plt.legend()\n",
+        "plt.show()"
+      ],
+      "id": "8df64417",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Line Plot {.unnumberd}\n",
+        "\n",
+        "[Line plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) shows the relationship of observable over the abscissa *e.g.* time vs radioactivity decay as **continuous** function.\n",
+        "\n",
+        "The `plot()` function creates a line plot but can also be used to create scatter plots.\n",
+        "\n",
+        ":::{.callout-note}\n",
+        "The marker size can be adjusted with the `markersize` parameter.\n",
+        ":::\n"
+      ],
+      "id": "d8bf334f"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import numpy as np\n",
+        "\n",
+        "x = np.linspace(0, 10, 100)\n",
+        "y = np.random.rand(100)*298\n",
+        "\n",
+        "plt.plot(x, y, color='red', marker='o', label='sin(x)',markersize=5,linewidth=2,linestyle='--')\n",
+        "plt.xlabel('x')\n",
+        "plt.ylabel('y')\n",
+        "plt.legend()\n",
+        "plt.show()"
+      ],
+      "id": "33e12c1c",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Errorbars {.unnumberd}\n",
+        "\n",
+        "Errorbars can be added to the plot with the `errorbar()` function and the `yerr` parameter.\n"
+      ],
+      "id": "6b634f65"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import numpy as np\n",
+        "\n",
+        "x = np.linspace(0, 10, 100)\n",
+        "y = np.random.rand(100)*298\n",
+        "yerr = np.random.rand(100)*10\n",
+        "\n",
+        "plt.errorbar(x, y, yerr=yerr, color='red', marker='o', label='sin(x)',markersize=5,linewidth=2)\n",
+        "plt.xlabel('x')\n",
+        "plt.ylabel('y')\n",
+        "plt.legend()\n",
+        "plt.show()"
+      ],
+      "id": "8e2ea659",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "\n",
+        "## Distribution Plots {.unnumberd}\n",
+        " \n",
+        "### Histogram Plot {.unnumbered}\n",
+        "\n",
+        "[Histogram] (https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html) shows the distribution of a single variable *e.g.* count of a mass of individuals in a population. The data is divided into bins and the number of data points in each bin is plotted.\n",
+        "\n",
+        "The `hist()` function creates a histogram with `bins` number of bins.\n"
+      ],
+      "id": "f46751e6"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import numpy as np\n",
+        "\n",
+        "x = np.random.randn(1000)\n",
+        "\n",
+        "plt.hist(x, bins=30, color='red', edgecolor='black')\n",
+        "\n",
+        "plt.xlabel('x')\n",
+        "plt.ylabel('y')\n",
+        "plt.show()"
+      ],
+      "id": "b6b9c087",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Boxplot {.unnumbered}\n",
+        "\n",
+        "[Box plot](https://seaborn.pydata.org/generated/seaborn.boxplot.html) shows the distribution of a numerical variable for different categories. It shows the minimum, first quartile, median, third quartile and maximum of your data. Outliers can be identified. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.\n",
+        "\n",
+        "\n",
+        "The `boxplot()` function creates a boxplot.\n"
+      ],
+      "id": "37181470"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import numpy as np\n",
+        "\n",
+        "data = [np.random.normal(0, std, 100) for std in range(1, 4)]\n",
+        "\n",
+        "plt.boxplot(data, patch_artist=True, notch=True, showmeans=True, meanline=True, showfliers=True)\n",
+        "\n",
+        "plt.xlabel('x')\n",
+        "plt.ylabel('y')\n",
+        "plt.show()"
+      ],
+      "id": "f52db1a5",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### 2D Histogram Plot  {.unnumbered}\n",
+        "\n",
+        "A 2D histogram can be created with the `hist2d()` function.\n"
+      ],
+      "id": "fe4cad6c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import numpy as np\n",
+        "\n",
+        "x = np.random.randn(1000)\n",
+        "y = np.random.randn(1000)\n",
+        "\n",
+        "plt.hist2d(x, y, bins=30, cmap='Blues')\n",
+        "\n",
+        "plt.xlabel('x')\n",
+        "plt.ylabel('y')\n",
+        "plt.show()"
+      ],
+      "id": "8a28c4e1",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Proportion Plots {.unnumbered}\n",
+        "\n",
+        "## Bar Plot {.unnumbered}\n",
+        "[Bar plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html) shows the relationship of a categorical variable with a numerical variable *e.g.* cancer cell survival time for different treatment groups. The height of the bar is proportional to the value of the investigated variable.\n",
+        "\n",
+        "The `bar()` function creates a bar plot.\n"
+      ],
+      "id": "6e0f5403"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import numpy as np\n",
+        "\n",
+        "x = ['A', 'B', 'C', 'D']\n",
+        "y = [10, 20, 30, 40]\n",
+        "\n",
+        "plt.bar(x, y, color='red')\n",
+        "\n",
+        "plt.xlabel('x')\n",
+        "plt.ylabel('y')\n",
+        "plt.show()"
+      ],
+      "id": "7277a99e",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Pie Chart {.unnumbered}\n",
+        "\n",
+        "\n",
+        "[Pie chart](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pie.html) show the proportion of different categories in a single variable *e.g.* the content of different amino acids in a protein.\n",
+        "\n",
+        "The `pie()` function creates a pie chart.\n"
+      ],
+      "id": "44308759"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import numpy as np\n",
+        "\n",
+        "x = [10, 20, 30, 40]\n",
+        "labels = ['A', 'B', 'C', 'D']\n",
+        "\n",
+        "plt.pie(x, labels=labels)\n",
+        "\n",
+        "plt.show()"
+      ],
+      "id": "835f5fcf",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/stk/y/envs/myenv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

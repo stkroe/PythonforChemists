@@ -30,7 +30,7 @@ Your preferred searching engine is your friend to find the best way to install P
 Please choose that method which is suitable for you.
 
 
-Python can be install by severals ways:
+Python can be installed by several ways:
 
 
 
@@ -39,24 +39,24 @@ Python can be install by severals ways:
 - or via package manager of your os: 
     - *e.g.:* `sudo apt install python` (linux debian) or `brew install python` (macOS)
 - or via [docker](https://www.docker.com/), [wsl](https://learn.microsoft.com/de-de/windows/wsl/install) ect.
-- or via a [conda](https://docs.conda.io/projects/conda/en/latest/index.html) or [mamba](https://mamba.readthedocs.io/en/latest/index.html) python package and environment managers which have a python interpreter on board and are avaiable for Windows, Linux and macOS [my recomendation]
+- or via a [conda](https://docs.conda.io/projects/conda/en/latest/index.html) or [mamba](https://mamba.readthedocs.io/en/latest/index.html) python package and environment managers which have a python interpreter on board and are available for Windows, Linux and macOS [my recommendation]
 
 
 
 ## 2. Python Package and Environment manager {.unnumbered}
 
 
-The advantage of using a python package and environment manager is that you have a python interpreter directly on board but you can also directly create different python enviroments and install and remove python packages.
+The advantage of using a python package and environment manager is that you have a python interpreter directly on board, but you can also directly create different python enviroments and install and remove python packages.
 
 
 ### Conda {.unnumbered}
 
 
-There are differerent `conda`installer:
+There are differerent `conda` installer:
 (Please pay attention which one is suitable for you ([https://docs.anaconda.com/distro-or-miniconda/](https://docs.anaconda.com/distro-or-miniconda/)).
 
 :::{.callout-warning}
-Please read the [Anaconda Terms of Service FAQs](https://www.anaconda.com/pricing/terms-of-service-faqs) and [Terms of Service](https://legal.anaconda.com/policies/en/)) **not** every case is **free** of use. 
+Please read the [Anaconda Terms of Service FAQs](https://www.anaconda.com/pricing/terms-of-service-faqs) and [Terms of Service](https://legal.anaconda.com/policies/en/)) **not** every case is **free** of charge of use. 
 
 :::
 
@@ -70,30 +70,30 @@ Please read the [Anaconda Terms of Service FAQs](https://www.anaconda.com/pricin
 ### Mamba {.unnumbered}
 
 
-Another python package and environment managers is [mamba](https://mamba.readthedocs.io/en/latest/index.html).
+Another python package and environment manager is [mamba](https://mamba.readthedocs.io/en/latest/index.html).
 `mamba` is a reimplementation of `conda`:
- - [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html) is a statically linked version  of `mamba` 
- - `mamba`and it at the moment faster than `conda`
+ - [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html) is a statically linked version of `mamba` 
+ - `mamba`and it is currently faster than `conda`
 
 
 :::{.callout-tip}
- **Recommondation: *micromamba* ** <br>
+ **Recommendation: *micromamba* ** <br>
 
 Install it like it is explained under the micromamba documentation:
 - [https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html)
 :::
 
 
-Please install in one of the above explained ways Python and use your preferred searching enging to get more information.
+Please install in one of the above explained ways Python and use your preferred searching engine to get more information.
 
 
 ## 3. Set up an environment {.unnumbered}
 
-It is often very useful to have different python enviroments for different python projects because of the need of different python package versions.
+It is often very useful to have different python environments for different python projects because of the need of different python package versions.
 
 You can use `conda` or `micromamba` to create different environments. There exists also other virtual environment manager.
 
-In this course the explaination is restricted to `micromamba` as an example. If you want to use something else there exists tons of information online how to use other programs.
+In this course the explanation is restricted to `micromamba` as an example. If you want to use something else there exists tons of information online how to use other programs.
 
 
 
@@ -101,7 +101,7 @@ In this course the explaination is restricted to `micromamba` as an example. If 
 ### Micromamba: Most important commands are: {.unnumbered}
 
 
-Read for more detail:  [https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html)
+Read for more detail: [https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html)
 
 
 
@@ -145,7 +145,7 @@ micromamba list
 ```
 
 
-## 4. Usefull packages for Data Analyse and Visualization:  {.unnumbered}
+## 4. Usefull packages for Data Analysis and Visualization:  {.unnumbered}
 - [pip](https://packaging.python.org/en/latest/guides/tool-recommendations/) - package installer for python instead of conda
 - [jupyter-notebook/jupyterlab](https://jupyter.org/) - interactive computing environment
 - [ipykernel](https://pypi.org/project/ipykernel/) - IPython Kernel for Jupyter
@@ -185,7 +185,7 @@ Use *yml-file* with all needed packages and configurations:
 :::
 
 
-Save your needed packgess in a *environment.yml* file *e.g.*:
+Save your needed packages in an `environment.yml` file *e.g.*:
 
 
  ```{yml}
@@ -215,7 +215,7 @@ micromamba env create -f environment.yml
 ```
 
 
-Test your installation by opening the interactive python mode by typing in your terminal (Linux, macOS) / comand prompt (Windows):
+Test your installation by opening the interactive python mode by typing in your terminal (Linux, macOS) / command prompt (Windows):
 
 
 
@@ -224,7 +224,7 @@ python
 ``` 
 
 
-then something like this should be opened in your terminal (Linux, macOS) / comand prompt (Windows)
+then something like this should be opened in your terminal (Linux, macOS) / command prompt (Windows)
 
 ```bash
 Python 3.12.7 | packaged by conda-forge | (main, Oct  4 2024, 15:57:01) [Clang 17.0.6 ] on darwin

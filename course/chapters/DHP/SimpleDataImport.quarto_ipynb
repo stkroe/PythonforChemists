@@ -1,0 +1,563 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Simple Data Import\"\n",
+        "execute: \n",
+        "  echo: True\n",
+        "  eval: True\n",
+        "  error: True\n",
+        "other-links: \n",
+        "      - text: \"Data tempearture_data\"\n",
+        "        href: \"https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.csv\"\n",
+        "        icon: \"filetype-csv\"\n",
+        "      - text: \"Data temperature_nan_data\"\n",
+        "        href: \"https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.csv\"\n",
+        "        icon: \"filetype-csv\"\n",
+        "      - text: \"Data temperature_dat\"\n",
+        "        href: \"https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.dat\"\n",
+        "        icon: \"filetype-txt\"\n",
+        "      - text: \"Data temperature_nan_dat\"\n",
+        "        href: \"https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.dat\"\n",
+        "        icon: \"filetype-txt\"\n",
+        "      - text: \"Download Code\"\n",
+        "        href: \"https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimpleDataImport.ipynb\"\n",
+        "        icon: \"journal\"\n",
+        "code-links:\n",
+        "      - text: \"Open in Colab\"\n",
+        "        href: \"https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataImport.ipynb\"\n",
+        "        icon: \"laptop\"\n",
+        "--- \n",
+        "\n",
+        "\n",
+        "\n",
+        "# Data Reading {.unnumbered}\n",
+        "\n",
+        "\n",
+        "## How do you read the data? {.unnumbered}\n",
+        "\n",
+        "\n",
+        "Depending on the data format, you can use different libraries to read the data.\n",
+        "\n",
+        "\n",
+        "### Reading Plain Text Files {.unnumbered}\n",
+        "\n",
+        "You can use the `pandas`  or `numpy` library to read CSV files. \n",
+        "\n",
+        "\n",
+        "\n",
+        "## Pandas {.unnumbered}\n",
+        "\n",
+        "Pandas is read function is quite fast and can read large files.\n",
+        "The advantage is that different data types can be read in the same file. \n",
+        "The reading functions return a DataFrame object. \n",
+        "\n",
+        "Pandas has different functions to read different file formats.\n",
+        "\n",
+        "- `pandas.read_csv()` function is can read CSV files.\n",
+        "\n",
+        "- `pandas.read_table()` function is can read general delimiter files.\n",
+        "\n",
+        "- `pandas.read_fwf()` function is can read fixed-width files.\n",
+        "\n",
+        "\n",
+        "Mostly used function is `pandas.read_csv()` because you can specify the delimiter, header, and other options.\n"
+      ],
+      "id": "4facb224"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| echo: false\n",
+        "#| eval: true\n",
+        "temperature_data = \"https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.csv\"\n",
+        "temperature_nan_data =\"https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.csv\"\n",
+        "temperature_dat = \"https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures.dat\"\n",
+        "temperature_nan_dat=\"https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.dat\""
+      ],
+      "id": "36edd10b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "data = pd.read_csv(temperature_data)\n",
+        "data"
+      ],
+      "id": "dd03a2eb",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "The data has a different delimiter than the default `comma`. You can specify the delimiter using the `sep` parameter.\n"
+      ],
+      "id": "67c7867c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = pd.read_csv(temperature_data, sep=';')\n",
+        "data"
+      ],
+      "id": "c2872e6c",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Now the data is read correctly. The header is already taken from the first row. If you want to specify the header, you can use the `header` parameter.\n"
+      ],
+      "id": "1f801f9b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| eval: false\n",
+        "import pandas as pd\n",
+        "df = pd.read_csv('file.csv', header=None) # No header\n",
+        "df = pd.read_csv('file.csv', header=0) # Header is in the first row\n",
+        "df = pd.read_csv('file.csv', header=1) # Header is in the second row"
+      ],
+      "id": "c3bc5d63",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = pd.read_csv(temperature_data, sep=';', header=0)\n",
+        "data"
+      ],
+      "id": "d272e1b8",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "If your data contains whitespace, you can use the `skipinitialspace` parameter to remove initial whitespaces.\n"
+      ],
+      "id": "e73503c2"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = pd.read_csv(temperature_dat, skipinitialspace=True, sep=\" \")\n",
+        "data"
+      ],
+      "id": "e003248f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Now the data has no header. You can specify the header using the `names` parameter.\n"
+      ],
+      "id": "74bcf04b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = pd.read_csv(temperature_dat, sep=' ', skipinitialspace=True,header=1,names=['t', 'T'])\n",
+        "# important to set header=None, otherwise the first line is used as header\n",
+        "data"
+      ],
+      "id": "dda0d87f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "You see that also not `.csv` files can be read with the `read_csv()` function.\n",
+        "\n",
+        "\n",
+        "The `read_csv()` function has a lot of parameters. \n",
+        "Look in the documentation. You can see which parameters you can set [https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)\n",
+        "\n",
+        "For example,\n",
+        "\n",
+        "- `delimiter` parameter can be used to specify the delimiter instead of `sep`. Both are the same. Default is `,`.\n",
+        "\n",
+        "- `header` parameter can be used to specify the header row. Default is inferred from the file.\n",
+        "\n",
+        "- `skipinitialspace` parameter can be used to remove initial whitespaces. Default is `False`.\n",
+        "\n",
+        "- `names` parameter can be used to specify the column names.\n",
+        "\n",
+        "- `skiprows` parameter can be used to skip rows at the beginning of the file.\n",
+        "\n",
+        "- `skipfooter` parameter can be used to skip rows at the end of the file.\n",
+        "\n",
+        "- `nrows` parameter can be used to read only a specific number of rows.\n",
+        "\n",
+        "- `usecols` parameter can be used to read only specific columns.\n",
+        "\n",
+        "- `dtype` parameter can be used to specify the data type of the columns.\n",
+        "\n",
+        "- `na_values` parameter can be used to specify the missing values.\n",
+        "\n",
+        "- `keep_default_na` parameter can be used to specify if the default missing values should be kept. Default is `True`.\n",
+        "\n",
+        "- `na_filter` parameter can be used to recognize missing values without `NA` or `NaN` values. Default is `True`.\n",
+        "\n",
+        "- `true_values` parameter can be used to specify the values that should be recognized as `True`.\n",
+        "\n",
+        "- `false_values` parameter can be used to specify the values that should be recognized as `False`.\n",
+        "\n",
+        "- `parse_dates` parameter can be used to parse dates. Default is `False`.\n",
+        "\n",
+        "\n",
+        "---\n",
+        "\n",
+        "Some examples are:\n"
+      ],
+      "id": "b363bf52"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = pd.read_csv(temperature_data, sep=';', header=0, names=['t', 'T'], skiprows=1)"
+      ],
+      "id": "e1c7167e",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Now the first row is skipped, only 44638 rows are read instead of 44639.\n",
+        "\n",
+        "Missing value examples:\n"
+      ],
+      "id": "4029b9b3"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = pd.read_csv(temperature_nan_dat, sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=False)\n",
+        "print(data.loc[20:26]) #print some rows to see the NaN values"
+      ],
+      "id": "8fc5cf85",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "If the `na_filter`is set to `False`, the missing values are not recognized. But if it set on `True`, the missing values are recognized.\n"
+      ],
+      "id": "0891cc21"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = pd.read_csv(temperature_nan_dat, sep=' ', skipinitialspace=True,header=None,names=['t', 'T'],  keep_default_na=True,na_filter=True)\n",
+        "print(data.loc[20:26]) #print some rows to see the NaN values"
+      ],
+      "id": "b0e598cb",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "\n",
+        "## Numpy {.unnumbered}\n",
+        "Numpy has two main functions to read text files.\n",
+        "- `numpy.loadtxt()` function is used to read text files.\n",
+        "- `numpy.genfromtxt()` function is used to read text files with missing values.\n",
+        "\n",
+        "In comparison to the `pandas` library, the `numpy` library is slower and can not read different data types in the same file.\n",
+        "So you can not read a file with strings and numbers in the same file.\n",
+        "\n",
+        "\n",
+        "\n",
+        "If you try to read a file with a header row, you will get an **error**. \n"
+      ],
+      "id": "a0dfdfc3"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import numpy as np\n",
+        "data = np.loadtxt(temperature_data, delimiter=';')"
+      ],
+      "id": "44e24bc1",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "You can specify the header row using the `skiprows` parameter.\n",
+        "If you want to skip one row, the `skiprows=1` parameter is set at `1`.\n"
+      ],
+      "id": "4c238b0c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = np.loadtxt(temperature_data, delimiter=';', skiprows=1)\n",
+        "data"
+      ],
+      "id": "6873e46f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Now the data is read correctly. You can see that the data is read as a numpy array and not as a DataFrame. This can be a disadvantage if you want to use the data as a DataFrame but an advantage if you want to use numpy functions to process the data.\n",
+        "\n",
+        "\n",
+        "\n",
+        "---\n",
+        "\n",
+        "If you have data with whitespace, you do not need to specify the `delimiter`paramter because the default is whitespace.\n"
+      ],
+      "id": "5e73db27"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = np.loadtxt(temperature_dat)\n",
+        "data"
+      ],
+      "id": "52e663b5",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "`genfromtxt()` gives you more flexibility to read files with missing values. \n",
+        "\n",
+        "\n",
+        "First using the `loadtxt()` function, you get an **error** because of the missing values. \n"
+      ],
+      "id": "957d65b0"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = np.loadtxt(temperature_nan_dat)\n",
+        "data"
+      ],
+      "id": "824981a3",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "If you try to read the file with an empty entrance at row 22, you wil get still an **error** with the `genfromtxt()` function. \n"
+      ],
+      "id": "4ae260cc"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = np.genfromtxt(temperature_nan_dat)\n",
+        "data"
+      ],
+      "id": "851f6901",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "**But why? What do you think is the reason for the error?**\n",
+        "\n",
+        "\n",
+        "::: {.callout-caution collapse=\"true\"}\n",
+        "The reason is that the `genfromtxt()` function expects the same number of columns in each row. The delimiter is set default to `whitespace`. But if you have a missing value, the function expects a value.\n",
+        "An error is raised because at row 22 the function is detecting only one column due to the missing value.\n",
+        ":::\n",
+        "\n",
+        "\n",
+        "**How can you solve this problem?**\n",
+        "\n",
+        "::: {.callout-caution collapse=\"true\"}\n",
+        "You can **NOT** solve this problem with the `genfromtxt()` function if you have missing values and delimiter is whitespace.\n",
+        "Either you have to fill the missing value with a value or you have to use the `pandas` library.\n",
+        ":::\n",
+        "\n",
+        "\n",
+        "\n",
+        "If you have not `whitespace` as delimiter, you can use the `genfromtxt()` function with missing values.\n"
+      ],
+      "id": "3ec6d6ac"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "data = np.genfromtxt(temperature_nan_data,delimiter=';')\n",
+        "data[20:26] # print some rows to see the NaN values"
+      ],
+      "id": "1f990d13",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "The different parameters that can be set are for `loadtxt()` function:\n",
+        "\n",
+        "(see documentation [https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html) \n",
+        "\n",
+        "- `delimiter` parameter can be used to specify the delimiter. Default is whitespace.\n",
+        "\n",
+        "- `skiprows` parameter can be used to skip rows at the beginning of the file.\n",
+        "\n",
+        "- `usecols` parameter can be used to read only specific columns.\n",
+        "\n",
+        "- `dtype` parameter can be used to specify the data type of the columns.\n",
+        "\n",
+        "- `comments` parameter can be used to specify the comment character. Default is `#`.\n",
+        "\n",
+        "- `max_rows` parameter can be used to read only a specific number of rows after skipping rows.\n",
+        "\n",
+        "- `unpack` parameter can be used to unpack the columns, so each column is returned as a separate array.\n",
+        "\n",
+        "and for `genfromtxt()` function\n",
+        "\n",
+        "(see documentation [https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html#numpy.genfromtxt](https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html#numpy.genfromtxt))\n",
+        "\n",
+        "- `delimiter` parameter can be used to specify the delimiter. Default is whitespace.\n",
+        "\n",
+        "- `skip_header` parameter can be used to skip rows at the beginning of the file.\n",
+        "\n",
+        "- `skip_footer` parameter can be used to skip rows at the end of the file.\n",
+        "\n",
+        "- `usecols` parameter can be used to read only specific columns.\n",
+        "\n",
+        "- `dtype` parameter can be used to specify the data type of the columns.\n",
+        "\n",
+        "- `comments` parameter can be used to specify the comment character. Default is `#`.\n",
+        "\n",
+        "- `max_rows` parameter can be used to read only a specific number of rows after skipping rows.\n",
+        "\n",
+        "- `unpack` parameter can be used to unpack the columns, so each column is returned as a separate array.\n",
+        "\n",
+        "- `missing_values` parameter can be used to specify which values should be recognized as missing values.\n",
+        "\n",
+        "- `filling_values` parameter can be used to specify the filling values for the missing values.\n",
+        "\n",
+        "- `usemask` parameter can be used to return a masked array with missing values.\n",
+        "\n",
+        "- `names` parameter can be used to specify the column names. If `names=True`, the column names are read from the first row.\n",
+        "\n",
+        "- `replace_space` parameter can be used to replace spaces in the column names. Default is `_`.\n",
+        "\n",
+        "etc.\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "::: {.callout-important}\n",
+        "The `pandas` library is faster and more flexible than the `numpy` library.\n",
+        "Choose wisely which library you want to use.\n",
+        "It depends on the data format, the data type and what kind of processing you want to do.\n",
+        ":::\n",
+        "\n",
+        "\n",
+        "# Data Writing {.unnumbered}\n",
+        "\n",
+        "## Numpy {.unnumbered}\n",
+        "\n",
+        "Numpy has one function to write text files.\n",
+        "\n",
+        "- `numpy.savetxt()` function is used to write text files.\n"
+      ],
+      "id": "c68fd5e6"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| eval: false\n",
+        "np.savetxt('file.txt', data)"
+      ],
+      "id": "48185859",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "::: {.callout-important}\n",
+        "# Problems {.unnumbered}\n",
+        "If you have problems with importing data please check the following:\n",
+        "- Have first a look at the data file.\n",
+        "- Check the delimiter.\n",
+        "- Check the header.\n",
+        "- Check the missing values.\n",
+        "- Check the data type.\n",
+        "- Check the encoding.\n",
+        "- Check the file format.\n",
+        "- Check the file path.\n",
+        "- Check the file name.\n",
+        "\n",
+        "You can use AI tool to get a code snippet for reading the data.\n",
+        "- *e.g.* give the AI tool the one or two line of the as an example and ask for the code snippet.\n",
+        "- *e.g.* beaware do that only if you do not have sensitive data.\n",
+        ":::\n"
+      ],
+      "id": "3a0ee9a6"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/stk/y/envs/myenv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

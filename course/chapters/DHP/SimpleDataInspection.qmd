@@ -18,8 +18,14 @@ other-links:
         href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.dat"
         icon: "filetype-txt"
       - text: "Download Code"
-        href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/notebooks/SimpleDataInspection.ipynb"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
         icon: "journal"
+      - text: "Example"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/examples/DHP_Example.ipynb"
+        icon: journal
+      - text: "Open Example in Colab"
+        href: "https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/DHP_Example.ipynb"
+        icon: "laptop"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
