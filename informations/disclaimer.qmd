@@ -14,3 +14,4 @@ It is crucial to acknowledge that the website author is not held responsible for
 :::
 
 
+For some code snippets, examples and rephrasing sentences, the help of AI tools like ChatGPT, Copilot and DeepL was used.
