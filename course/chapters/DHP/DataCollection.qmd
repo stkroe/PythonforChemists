@@ -2,9 +2,10 @@
 title: "Introduction to Data Science in Chemistry and Materials Science"
 format: 
     html:
-        css: ../../quizzes/quiz.css
-        include-in-header:
-         text: |
+      css: 
+            - ../../quizzes/quiz_dark.css
+      include-in-header:
+        text: |
             <script src="../../quizzes/typofdata.js"></script>
 execute:
     echo: true
@@ -271,7 +272,7 @@ For example,
 
 ---
 
-:::{.callout-note collapse="true"}
+:::{.callout-note collapse=true}
 ### Quiz
 <div id="quiz-container"></div>
 :::
