@@ -59,6 +59,8 @@ What we will discuss today:
 - [Data Visualization](ttps://stkroe.github.io/PythonforChemists/course/chapters/Plots/DataVisualization.qmd)
 - [Simple Plots](ttps://stkroe.github.io/PythonforChemists/course/chapters/Plots/SimplePlots.qmd)
 
+
+## Organization of the course
 ### Exercise Block 1 
 
 **Exercise A 1**
@@ -94,6 +96,8 @@ All educational information of the course can be found on the website: [https://
 - First you get some time to solve the exercises on your own.
 - After that we will go through the exercises together.
 
+## Organization of the course
+
 **Final Exam**: will take around 2 hours.
 
 - The final exam will be (2-3) exercises (depending how far we get) that you have to solve on your own.
@@ -105,7 +109,7 @@ All educational information of the course can be found on the website: [https://
 The different difficulty levels are marked with the following icons:
 
 - Introduction Parts: &nbsp;&nbsp;&nbsp;  <span style="color:#2B7492">{{< bi star >}} </span>
-- Beginner Path:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2B7492" >{{< bi star-fill >}}</span>
+- Beginner Path:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2B7492" >{{< bi star-fill >}}</span>
 - Advanced Path: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} </span>
 - Challenging Path:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <span 
 style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} {{< bi star-fill >}} </span>
@@ -132,7 +136,7 @@ style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} {{< bi star-fil
 
 # Let's start with the first lecture
 
-### Introduction Lecture Python
+## Introduction Lecture: Python
 
 
 - [Introduction to Python](https://stkroe.github.io/PythonforChemists/ttps://stkroe.github.io/PythonforChemists/course/chapters/Essentials/Introduction.html)
