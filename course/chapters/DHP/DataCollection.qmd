@@ -6,7 +6,7 @@ format:
             - ../../quizzes/quiz_dark.css
       include-in-header:
         text: |
-            <script src="../../quizzes/typofdata.js"></script>
+            <script src="../../quizzes/typeofdata.js"></script>
 execute:
     echo: true
     eval: false

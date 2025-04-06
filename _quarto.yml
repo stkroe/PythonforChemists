@@ -117,7 +117,7 @@ format:
       theme: 
         light: [cosmo, light.scss]
         dark: [darkly, dark.scss]
-      highlight-style: a11y
+      highlight-style: github
       code-copy: true
       code-overflow: scroll
       code-fold: false
