@@ -10,16 +10,6 @@ execute:
     echo: true
     eval: true
     error: true
-other-links:     
-    - text: "Example"
-      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1.zip"
-      icon: "zip"
-    - text: "Open Example in Colab"
-      href: "https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material/student/BasicExercises.ipynb"
-      icon: "laptop"
-    - text: "Download Example"
-      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooksBasicExercises.ipynb"
-      icon: "journal"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Basics.ipynb"

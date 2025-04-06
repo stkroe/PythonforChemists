@@ -113,9 +113,9 @@ bibliography: references.bib
 format:
   html: 
       theme: 
-        light: [cosmo]
-        dark: [darkly]
-      highlight-style: pygments
+        light: [cosmo, light.scss]
+        dark: [darkly, dark.scss]
+      highlight-style: a11y
       code-copy: true
       code-overflow: scroll
       code-fold: false

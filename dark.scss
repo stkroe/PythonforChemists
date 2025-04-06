@@ -1,0 +1,27 @@
+/*-- scss:defaults --*/
+$body-bg: #0b3646; /* Background color */
+$body-color: #e7eff4; /* Text color */
+$link-color: #addce6; /* Link color */
+$code-bg: rgb(5, 29, 70); /* Code block background */
+$code-color: #51afea; /* Light theme text color */
+
+/*-- scss:rules --*/
+.reveal .slide {
+    border-left: 3px solid $link-color;
+    padding-left: 1em;
+}
+body {
+    font-family: "Roboto", sans-serif; // Consider adding web fonts
+    font-size: 1.1rem; // ~19.8px (18px * 1.1)
+}
+
+code {
+    font-size: 0.9em; // 90% of parent element's size
+    background-color: $code-bg;
+    padding: 2px 4px;
+}
+
+pre code {
+    font-size: 0.85em; // Smaller for code blocks
+    background-color: darken($code-bg, 5%);
+}
