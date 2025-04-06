@@ -12,7 +12,7 @@ code-links:
         icon: "journal"
 ---
 
-Difficulty level: <span style="color:#2B7492">{{< bi star-fill >}} {{< bi star-fill >}} </span>
+Difficulty level: <span style="color:#2B7492">{{< bi star-fill >}} </span>
 
 # Numpy and Pandas {.unnumbered}
 

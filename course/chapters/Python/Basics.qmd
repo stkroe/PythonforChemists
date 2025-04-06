@@ -112,7 +112,7 @@ If you don't indent your code correctly, you will get a typical beginner error.
 Pay attention **do not mix tabs and spaces** in your code.
 :::
 
-s
+
 
 :::{.callout-note}
 ### Example - Wrong Indentation
