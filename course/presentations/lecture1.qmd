@@ -1,66 +1,21 @@
 ---
-title: "Lecture 1"
-subtitle: "Introduction to Python and Data Science"
+title: "Lecture 1: Data Handling and Preprocessing"
+subtitle: VU Data Science and Visualization Primer for Chemists and Material Scientistsn"
 format: 
-  metropolis-beamer-revealjs: default
-    # theme: style.scss
-header-logo: ../../logo.png
-slide-number: "c"
-author:
-   - name: Stefanie Kröll
-#     orcid: 0000-0000-0000-0000
-#     email: author.x@email.com
-#     affiliations: Institution X
-#   - name: Author Y
-#     orcid: 0000-0000-0000-0001
-#     email: author.y@email.com
-#     affiliations: Institution Y
+  metropolis-beamer-revealjs: 
+   theme: style.scss
+reveal-header:
+  sc-sb-title: true
+  header-logo: ../../logo.png
+execute: 
+  eval: true
+  echo: true
+slide-number: true
+slide-level: 2
+code-fullscreen: true
+logo:  ../../logo.png
 date: last-modified
 bibliography: references.bib
 embed-resources: true
----
-
-#  Welcome to "VU Data Science and Visualization Primer for Chemists and Material Scientists"
-
-Timeschedule for a week: 
-
-
-
-| Time        | Monday           | Tuesday           | Wednesday            | Thursday          | Friday       |
-|-------------|------------------|-------------------|----------------------|-------------------|--------------|
-| 13:00-14:00 | Introduction     | Lecture 2         | Lecture 3            | Exercise Block 4  | F&Q          |
-| 14:00-15:00 | Lecture 1        | Lecture 2         | Lecture 3            | Exercise Block 4  | F&Q          |
-| 15:00-16:00 | Lecture 1        | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
-| 16:00-17:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
-| 17:00-18:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
----
-
-# Introduction 
-
-**Introduction to Python - Essentials**
-
-- [Introduction to Python](course/chapters/Essentials/Introduction.qmd)
-- [What is Python?](course/chapters/Essentials/WhatIsPython.qmd)
-- [Python Basics](course/chapters/Python/Basics.qmd)
-- [Python Libraries](course/chapters/Python/BasicsModules.qmd)
-
----
-# Lecture 1 
-
-**Data Handling and Preprocessing**
-
-- [Data Collection](course/chapters/DHP/DataCollection.qmd)
-- [Data Import](course/chapters/DHP/SimpleDataImport.qmd)
-- [Data Inspection](course/chapters/DHP/DataInspection.qmd)
-
-**First Data Visualization Techniques - Datra Visualization 1**
-
-- [Data Visualization](course/chapters/Plots/DataVisualization.qmd)
-- [Simple Plots](course/chapters/Plots/SimplePlots.qmd)
-
-Exercise Block 1 
-**Exercise A 1**
-- [Exercise A 1](course/exercises/exercises/exerciseA_1.ipynb)
-
 ---
 

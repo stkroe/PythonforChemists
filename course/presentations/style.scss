@@ -1,3 +1,62 @@
 /*-- scss:defaults --*/
 
 $primary-color: #3e6c77;
+/*-- scss:defaults --*/
+// $body-bg: #f1f1f1; /* Background color */
+// $body-color: #2b7492; /* Text color */
+// $link-color: #3e6c77; /* Link color */
+// $code-bg: #d9dfe263; /* Code block background */
+// $code-color: #042d3d; /* Light theme text color */
+
+/*-- scss:rules --*/
+// .reveal .slide {
+//     border-left: 3px solid;
+//     padding-left: 1em;
+// }
+
+title {
+    font-family: "Roboto", sans-serif; // Consider adding web fonts
+    font-size: 1.5rem; // ~19.8px (18px * 1.1)
+    font-weight: 400; // Normal weight
+}
+body {
+    font-family: "Roboto", sans-serif; // Consider adding web fonts
+    font-size: 1.1rem; // ~19.8px (18px * 1.1)
+}
+
+code {
+    font-size: 0.9em; // 90% of parent element's size
+    padding: 2px 4px;
+}
+
+pre code {
+    font-size: 0.85em; // Smaller for code blocks
+}
+canvas {
+    font-size: 2em; // 200% of parent element's size
+}
+
+blockquote {
+    font-size: 2em;
+}
+/* custom.scss */
+.callout {
+    font-size: 2em;
+
+    &-title {
+        font-size: 2.2em;
+    }
+}
+
+.reveal .slides section {
+    padding-top: 2rem; /* Slide top margin */
+}
+
+/* Specific element targeting */
+.reveal li {
+    margin-bottom: 1.5rem !important; /* List item spacing */
+}
+
+.reveal p {
+    margin: 1rem 0;
+}
