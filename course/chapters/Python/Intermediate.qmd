@@ -5,7 +5,7 @@ execute:
     eval: true
     error: true
 other-links:     
-    - text: "Example"
+    - text: "Download Example"
       href: "https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1.zip"
       icon: "zip"
     - text: "Open Example in Colab"
