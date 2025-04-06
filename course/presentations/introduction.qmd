@@ -1,13 +1,12 @@
 ---
 title: "Welcome to VU Data Science and Visualization Primer for Chemists and Material Scientists"
-subtitle: "Introduction to Python and Data Science"
+subtitle: "Introduction to Python"
 format: 
   metropolis-beamer-revealjs: 
    theme: style.scss
 reveal-header:
   sc-sb-title: true
   header-logo: ../../logo.png
-  header-text:  Quarto Presentations with beautiful slide decks made by RevealJs
 execute: 
   eval: true
   echo: true
@@ -33,32 +32,35 @@ Approximate Timeschedule:
 | 16:00-17:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
 | 17:00-18:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
 
-
-## Introduction 
+## Organization of the course
+### Introduction 
 
 What we will discuss today:
 **Introduction to Python - Essentials**
 
-- [Introduction to Python](course/chapters/Essentials/Introduction.qmd)
-- [What is Python?](course/chapters/Essentials/WhatIsPython.qmd)
-- [Python Basics](course/chapters/Python/Basics.qmd)
-- [Python Libraries](course/chapters/Python/BasicsModules.qmd)
+- [Introduction to Python](https://stkroe.github.io/PythonforChemists/ttps://stkroe.github.io/PythonforChemists/course/chapters/Essentials/Introduction.html)
+- [What is Python?](ttps://stkroe.github.io/PythonforChemists/course/chapters/Essentials/WhatIsPython.qmd)
+- [Python Basics](ttps://stkroe.github.io/PythonforChemists/course/chapters/Python/Basics.qmd)
+- [Python Libraries](ttps://stkroe.github.io/PythonforChemists/course/chapters/Python/BasicsModules.qmd)
 
 
-## Lecture 1 
+## Organization of the course
+
+### Lecture 1
 
 **Data Handling and Preprocessing**
 
-- [Data Collection](course/chapters/DHP/DataCollection.qmd)
-- [Data Import](course/chapters/DHP/SimpleDataImport.qmd)
-- [Data Inspection](course/chapters/DHP/DataInspection.qmd)
+- [Data Collection](ttps://stkroe.github.io/PythonforChemists/course/chapters/DHP/DataCollection.qmd)
+- [Data Import](ttps://stkroe.github.io/PythonforChemists/course/chapters/DHP/SimpleDataImport.qmd)
+- [Data Inspection](ttps://stkroe.github.io/PythonforChemists/course/chapters/DHP/DataInspection.qmd)
 
 **First Data Visualization Techniques - Datra Visualization 1**
 
-- [Data Visualization](course/chapters/Plots/DataVisualization.qmd)
-- [Simple Plots](course/chapters/Plots/SimplePlots.qmd)
+- [Data Visualization](ttps://stkroe.github.io/PythonforChemists/course/chapters/Plots/DataVisualization.qmd)
+- [Simple Plots](ttps://stkroe.github.io/PythonforChemists/course/chapters/Plots/SimplePlots.qmd)
 
-Exercise Block 1 
+### Exercise Block 1 
+
 **Exercise A 1**
 - [Exercise A 1](course/exercises/exercises/exerciseA_1.ipynb)
 
@@ -66,9 +68,14 @@ Exercise Block 1
 
 ## Organization of the course
 
+:::{.callout-important}
 All educational information of the course can be found on the website: [https://stkroe.github.io/PythonforChemists/](https://stkroe.github.io/PythonforChemists/)
+:::
 
-**Lecture Blocks**: will take araound 2h hours (first day +1h because of the introduction):
+## Organization of the course
+
+**Lecture Blocks**: will take around 2h hours (first day +1h because of the introduction):
+
 - Lecture Blocks explains different concepts and tools for data analysis and visualization 
 - We try to keep the lectures as interactive as possible.
 - Every lecture with code can be opened as Jupyter notebook locally {{< bi journal >}} or in Google Colab{{< bi laptop >}}.
@@ -81,19 +88,73 @@ All educational information of the course can be found on the website: [https://
 ## Organization of the course
 
 **Exercise Blocks**: will take around 2-3 hourse depending on the length of the exercises.
+
 - Exercise Blocks are meant to practice the learned concepts and tools.
 - This exercises try to be close to real life examples.
 - First you get some time to solve the exercises on your own.
 - After that we will go through the exercises together.
 
 **Final Exam**: will take around 2 hours.
+
 - The final exam will be (2-3) exercises (depending how far we get) that you have to solve on your own.
 - You should create from the given data publications ready figures.
 - This figures are the basis for the final exam.
 
+## Organization of the course
+
+The different difficulty levels are marked with the following icons:
+
+- Introduction Parts: &nbsp;&nbsp;&nbsp;  <span style="color:#2B7492">{{< bi star >}} </span>
+- Beginner Path:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2B7492" >{{< bi star-fill >}}</span>
+- Advanced Path: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} </span>
+- Challenging Path:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <span 
+style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} {{< bi star-fill >}} </span>
+
+::: {.extrapad}
 
 
+:::{.callout-important}
 **Do you have any questions?**
+:::
+
+:::
 
 
-## F
+
+## Some questions to start with
+
+
+- Do you have any experience with a programming language? Which one?
+- Do you have any experience with Python?
+- What kind of data do you normally work with?
+- What kind of data analysis do you normally do?
+- What kind of data visualization do you normally do?
+
+# Let's start with the first lecture
+
+### Introduction Lecture Python
+
+
+- [Introduction to Python](https://stkroe.github.io/PythonforChemists/ttps://stkroe.github.io/PythonforChemists/course/chapters/Essentials/Introduction.html)
+- [What is Python?](ttps://stkroe.github.io/PythonforChemists/course/chapters/Essentials/WhatIsPython.qmd)
+- [Python Basics](ttps://stkroe.github.io/PythonforChemists/course/chapters/Python/Basics.qmd)
+- [Python Libraries](ttps://stkroe.github.io/PythonforChemists/course/chapters/Python/BasicsModules.qmd)
+
+
+## Lecture 1: Data Handling and Preprocessing
+
+**Data Handling and Preprocessing**
+
+- [Data Collection](ttps://stkroe.github.io/PythonforChemists/course/chapters/DHP/DataCollection.qmd)
+- [Data Import](ttps://stkroe.github.io/PythonforChemists/course/chapters/DHP/SimpleDataImport.qmd)
+- [Data Inspection](ttps://stkroe.github.io/PythonforChemists/course/chapters/DHP/DataInspection.qmd)
+
+**First Data Visualization Techniques - Datra Visualization 1**
+
+- [Data Visualization](ttps://stkroe.github.io/PythonforChemists/course/chapters/Plots/DataVisualization.qmd)
+- [Simple Plots](ttps://stkroe.github.io/PythonforChemists/course/chapters/Plots/SimplePlots.qmd)
+
+## Exercise Block 1 
+
+**Exercise A 1**
+- [Exercise A 1](course/exercises/exercises/exerciseA_1.ipynb)

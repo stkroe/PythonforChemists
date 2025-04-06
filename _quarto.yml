@@ -32,8 +32,10 @@ book:
     tools: 
       - icon: "substack"
         menu:
-          - text: Lecture 1
-            href: course/presentations/lecture1.html
+          - text: Introduction
+            href: course/presentations/introduction.html
+          - text: Example 1
+            href: course/exercises/solutions/ExerciseA.pdf
 
   chapters:
       - index.qmd
