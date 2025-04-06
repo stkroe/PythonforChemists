@@ -71,12 +71,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-0f9ab1647048413cbab2c193a4590f70.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-c44ea0d3856dd046b875089f7fe24e46.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7fd0fe4245b865325b8ce8dccb604d59.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-5b8acf006e36e3381834f191bff43af0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-4af86e1aa8709b2820968e7ff6056de9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-92b6c6361227b6d7ffb0ef9f7ef1dd57.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-516d921ec8d526d3fe54a05c4dfe7a3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -558,7 +558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">Data Manipulation</h1>
 <section id="numpy" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="numpy">Numpy</h2>
-<div id="e7536bd9" class="cell" data-execution_count="1">
+<div id="b81c728b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="array-manipulation" class="level3 unnumbered">
@@ -575,7 +575,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>etc.</p>
 <section id="sort-arrays" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="sort-arrays">Sort arrays:</h4>
-<div id="1608e93c" class="cell" data-execution_count="2">
+<div id="a4a7e0f2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>unsorted_arr <span class="op">=</span> np.array([[<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">8</span>, <span class="dv">1</span>], [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">9</span>, <span class="dv">4</span> , <span class="dv">5</span>]])</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(<span class="st">"unsortd_arr: </span><span class="ch">\n</span><span class="st">"</span>, unsorted_arr)</span>
 <span id="cb2-3"><a href="#cb2-3"></a>sorted_arr <span class="op">=</span> np.sort(unsorted_arr,axis <span class="op">=</span> <span class="dv">0</span>) <span class="co"># sorted along the column</span></span>
@@ -600,7 +600,7 @@ sorted_arr along rows:
 </section>
 <section id="concatenate-arrays" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="concatenate-arrays">Concatenate arrays:</h4>
-<div id="9332c880" class="cell" data-execution_count="3">
+<div id="a20cba73" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]) </span>
 <span id="cb4-2"><a href="#cb4-2"></a>b <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
 <span id="cb4-3"><a href="#cb4-3"></a>c <span class="op">=</span> np.concatenate((a, b))</span>
@@ -612,7 +612,7 @@ sorted_arr along rows:
 </section>
 <section id="reshape-arrays" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="reshape-arrays">Reshape arrays:</h4>
-<div id="8fa094a6" class="cell" data-execution_count="4">
+<div id="ab5ba5f4" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>],[<span class="dv">3</span>, <span class="dv">4</span>],[<span class="dv">5</span>, <span class="dv">6</span>]])</span>
 <span id="cb6-2"><a href="#cb6-2"></a>b <span class="op">=</span> np.array([[<span class="dv">7</span>, <span class="dv">8</span>],[<span class="dv">9</span>, <span class="dv">10</span>],[<span class="dv">11</span>, <span class="dv">12</span>]])</span>
 <span id="cb6-3"><a href="#cb6-3"></a>c <span class="op">=</span> np.vstack((a, b)) <span class="co"># vertical stack</span></span>
@@ -660,7 +660,7 @@ flatten array:
 <li><code>np.linalg.solve(a,b)</code> returns the <strong>solution of a linear system of equations</strong></li>
 <li><code>np.convolv(a,b)</code> returns the <strong>convolution</strong> of two arrays</li>
 </ul>
-<div id="e893ad1f" class="cell" data-execution_count="5">
+<div id="728753cf" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>],[<span class="dv">3</span>, <span class="dv">4</span>],[<span class="dv">5</span>, <span class="dv">6</span>]])</span>
 <span id="cb8-2"><a href="#cb8-2"></a>b <span class="op">=</span> np.array([[<span class="dv">7</span>, <span class="dv">8</span>],[<span class="dv">9</span>, <span class="dv">10</span>],[<span class="dv">11</span>, <span class="dv">12</span>]])</span>
 <span id="cb8-3"><a href="#cb8-3"></a>c <span class="op">=</span> np.<span class="bu">sum</span>(a) <span class="co"># sum of all elements</span></span>
@@ -678,7 +678,7 @@ Element wise addition:  [[ 8 10]
 <section id="question" class="level4 callout-information">
 <h4 class="anchored" data-anchor-id="question">Question:</h4>
 <p>What does the following code snippet do?</p>
-<div id="497bfcf5" class="cell" data-execution_count="6">
+<div id="4cf4b428" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>temperatures <span class="op">=</span> np.array([<span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">100</span>])</span>
 <span id="cb10-2"><a href="#cb10-2"></a>window <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a>np.convolve(temperatures,np.ones(window) <span class="op">/</span> window,</span>
@@ -704,7 +704,7 @@ Answer:
 </section>
 <section id="pandas" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="pandas">Pandas</h2>
-<div id="cc8b652e" class="cell" data-execution_count="7">
+<div id="09935055" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb11-2"><a href="#cb11-2"></a>data <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb11-3"><a href="#cb11-3"></a>    <span class="st">"Name"</span>: [<span class="st">"Water"</span>, <span class="st">"Sulfuric Acid"</span>, <span class="st">"Ethanol"</span>, <span class="st">"Acetone"</span>, <span class="st">"Ammonia"</span>, <span class="st">"Benzene"</span>, <span class="st">"Methanol"</span>, <span class="st">"Glycerol"</span>],</span>
@@ -715,7 +715,7 @@ Answer:
 <span id="cb11-8"><a href="#cb11-8"></a>    <span class="st">"Chemical Type"</span>: [<span class="st">"Inorganic"</span>, <span class="st">"Acid"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Ketone"</span>, <span class="st">"Base"</span>, <span class="st">"Aromatic Hydrocarbon"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Polyol"</span>],</span>
 <span id="cb11-9"><a href="#cb11-9"></a>    <span class="st">"Concentration (M)"</span>: [<span class="fl">55.5</span>, <span class="fl">18.0</span>, <span class="fl">1.0</span>, <span class="fl">0.8</span>, <span class="fl">0.5</span>, <span class="fl">0.1</span>, <span class="fl">1.5</span>, <span class="fl">1.2</span>]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="1700b2ef" class="cell" data-execution_count="8">
+<div id="bdb594b7" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">print</span>(<span class="st">"head of data: </span><span class="ch">\n</span><span class="st">"</span>,data.head()) <span class="co"># print the first 5 rows</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb12-3"><a href="#cb12-3"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span>
@@ -770,7 +770,7 @@ Name: 1, dtype: object</code></pre>
 <section id="select-subsets-of-the-data" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="select-subsets-of-the-data">Select subsets of the data:</h4>
 <p>Often you need only a specific part of your data with <code>pandas</code>it is quite easy to filter the data after specific properties.</p>
-<div id="b36ebf14" class="cell" data-execution_count="9">
+<div id="ddec20c2" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># filter the rows where concentration is greater than 5</span></span>
 <span id="cb14-2"><a href="#cb14-2"></a><span class="bu">print</span>(<span class="st">"Filter the rows where concentration is greater than 5: </span><span class="ch">\n</span><span class="st">"</span>, data[data[<span class="st">"Concentration (M)"</span>] <span class="op">&gt;</span> <span class="dv">5</span>]) </span>
 <span id="cb14-3"><a href="#cb14-3"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
@@ -803,7 +803,7 @@ Name: Chemical Type, dtype: object
 <p>You can - <code>df.copy()</code>: copy the data - <code>df.drop(columns=[...])</code>: drop columns - <code>df.drop(index=[...])</code>: drop rows - <code>df.drop_duplicates()</code>: drop duplicates - <code>df.fillna(...)</code>: fill NaNs - <code>df.dropna()</code>: drop NaNs - <code>df.replace(...)</code>: replace values - <code>pd.concat([df1, df2])</code>: concatenate data (concatenate along the rows) - <code>pd.concat([df1, df2], axis=1)</code>: concatenate data (concatenate along the columns) - <code>pd.merge(df1, df2)</code>: merge data in the sense of inner, outer, left, right join, see <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.merge.html">pandas documentation</a> - <code>df.agg(...)</code>: aggregate the data - <code>df.transform(...)</code>: transform the data - <code>df.value_counts()</code>: count the values - <code>df.apply(...)</code>: apply a function to the data - <code>df.groupby(...)</code>: group the data and perform operations on the groups - <code>df.sort_values(...)</code>: sort the data - <code>df.shift(...)</code>: shift the data - <code>df.diff(...)</code>: get the difference between the data - <code>df.ptc_shift(...)</code>: get the percentage change between the data - <code>df.to_numpy()</code>: convert the dataframe to a numpy array - <code>pd.DataFrame(arr)</code>: convert the numpy array to a dataframe etc.</p>
 <section id="copy-and-concatenate-data" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="copy-and-concatenate-data">Copy and concatenate data:</h4>
-<div id="e6187ed3" class="cell" data-execution_count="10">
+<div id="5da0a012" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>data2 <span class="op">=</span> data.copy()</span>
 <span id="cb16-2"><a href="#cb16-2"></a>data2[<span class="st">"Concentration 2 (M)"</span>] <span class="op">=</span> data2[<span class="st">"Concentration (M)"</span>] <span class="op">+</span> <span class="dv">10</span> <span class="co"># increase the concentration by 10 M</span></span>
 <span id="cb16-3"><a href="#cb16-3"></a><span class="bu">print</span>(<span class="st">"data2: </span><span class="ch">\n</span><span class="st">"</span> , data2)</span>
@@ -870,7 +870,7 @@ concated data:
 7          5.50                Polyol                1.2                 11.2  </code></pre>
 </div>
 </div>
-<div id="97dcb0e5" class="cell" data-execution_count="11">
+<div id="626f793c" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a> <span class="co"># create a Panda Series</span></span>
 <span id="cb18-2"><a href="#cb18-2"></a>acidity <span class="op">=</span> pd.Series([<span class="st">"basic"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"neutral"</span>,</span>
 <span id="cb18-3"><a href="#cb18-3"></a>                    <span class="st">"acid"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"basic"</span>], name<span class="op">=</span><span class="st">"Aciditiy Type"</span>)</span>
@@ -948,7 +948,7 @@ concated data:
 </section>
 <section id="drop-columns-and-rows" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="drop-columns-and-rows">Drop columns and rows:</h4>
-<div id="49b32f4e" class="cell" data-execution_count="12">
+<div id="b25858fc" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>data4 <span class="op">=</span> data4.drop(columns<span class="op">=</span>[<span class="st">"Concentration 2 (M)"</span>]) <span class="co"># drop the column "Concentration 2 (M)"</span></span>
 <span id="cb20-2"><a href="#cb20-2"></a><span class="bu">print</span>(<span class="st">"data4: </span><span class="ch">\n</span><span class="st">"</span>, data4)</span>
 <span id="cb20-3"><a href="#cb20-3"></a></span>
@@ -1055,7 +1055,7 @@ data6:
 </section>
 <section id="drop-duplicates-fill-nans-and-drop-nans" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="drop-duplicates-fill-nans-and-drop-nans">Drop duplicates, fill NaNs and drop NaNs</h4>
-<div id="824d1c1a" class="cell" data-execution_count="13">
+<div id="bccb5cfa" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>data5 <span class="op">=</span> data4.drop_duplicates() <span class="co"># drop the duplicates</span></span>
 <span id="cb22-2"><a href="#cb22-2"></a><span class="bu">print</span>(<span class="st">"data5: </span><span class="ch">\n</span><span class="st">"</span>, data5)</span>
 <span id="cb22-3"><a href="#cb22-3"></a></span>
@@ -1130,7 +1130,7 @@ data7:
 </section>
 <section id="replace-values" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="replace-values">Replace values:</h4>
-<div id="842317e8" class="cell" data-execution_count="14">
+<div id="482da0c9" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># replace the values</span></span>
 <span id="cb24-2"><a href="#cb24-2"></a>data6[<span class="st">"Aciditiy Type"</span>].replace({<span class="st">"acid"</span>: <span class="st">"Acidic"</span>, <span class="st">"basic"</span>: <span class="st">"Basic"</span>, <span class="st">"neutral"</span>: <span class="st">"Neutral"</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb24-3"><a href="#cb24-3"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1161,7 +1161,7 @@ data7:
 </section>
 <section id="count-the-values" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="count-the-values">Count the values</h3>
-<div id="b3d5c526" class="cell" data-execution_count="15">
+<div id="506837f4" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="co"># count the chemicals with different concentration</span></span>
 <span id="cb26-2"><a href="#cb26-2"></a><span class="bu">print</span>(<span class="st">"Count the chemicals with the different concentrations </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].value_counts())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1181,7 +1181,7 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="appply-a-function-to-the-data" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="appply-a-function-to-the-data">Appply a function to the data</h3>
-<div id="a93cf921" class="cell" data-execution_count="16">
+<div id="e0c749db" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="bu">print</span>(<span class="st">"Apply a function to the data: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x<span class="op">*</span><span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Apply a function to the data: 
@@ -1199,7 +1199,7 @@ Name: Concentration (M), dtype: float64</code></pre>
 </section>
 <section id="transform-data" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="transform-data">Transform data</h3>
-<div id="33b3ff13" class="cell" data-execution_count="17">
+<div id="f927403e" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="co"># transform the data</span></span>
 <span id="cb30-2"><a href="#cb30-2"></a>data6[<span class="st">"Concentration (M)"</span>] <span class="op">=</span> data6[<span class="st">"Concentration (M)"</span>].transform(<span class="kw">lambda</span> x: x<span class="op">*</span><span class="dv">2</span>)</span>
 <span id="cb30-3"><a href="#cb30-3"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1229,7 +1229,7 @@ Name: Concentration (M), dtype: float64</code></pre>
 </section>
 <section id="sort-data" class="level3">
 <h3 class="anchored" data-anchor-id="sort-data">Sort data</h3>
-<div id="faeecc99" class="cell" data-execution_count="18">
+<div id="3d50ac90" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a><span class="bu">print</span>(<span class="st">"sorted after concentration: "</span>,data.sort_values(by<span class="op">=</span><span class="st">"Concentration (M)"</span>, ascending<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>sorted after concentration:              Name Formula  Molecular Weight (g/mol)  Viscosity (mPa·s)  \
@@ -1257,7 +1257,7 @@ Name: Concentration (M), dtype: float64</code></pre>
 <section id="group-data" class="level3">
 <h3 class="anchored" data-anchor-id="group-data">Group data</h3>
 <p>In pandas you can group data by a specific column and perform operations on the groups.</p>
-<div id="37882cc0" class="cell" data-execution_count="19">
+<div id="e714376c" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># sum of concentration by filter</span></span>
 <span id="cb34-2"><a href="#cb34-2"></a><span class="bu">print</span>(<span class="st">"sum of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">sum</span>()) </span>
 <span id="cb34-3"><a href="#cb34-3"></a><span class="co"># sum of concentration group by type</span></span>
@@ -1280,7 +1280,7 @@ Name: Concentration (M), dtype: float64</code></pre>
 </section>
 <section id="transform-pandas-dataframe-to-numpy-array-and-viceversa" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="transform-pandas-dataframe-to-numpy-array-and-viceversa">Transform Pandas DataFrame to Numpy Array and viceversa</h3>
-<div id="96fd1601" class="cell" data-execution_count="20">
+<div id="ba7201f8" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"></a><span class="bu">print</span>(<span class="st">"Names: "</span>, data5.columns)</span>
 <span id="cb36-2"><a href="#cb36-2"></a>df <span class="op">=</span> data5.copy()</span>
 <span id="cb36-3"><a href="#cb36-3"></a><span class="bu">print</span>(<span class="bu">len</span>(df))</span>
