@@ -4,7 +4,7 @@ execute:
     echo: true
     eval: false
 --- 
-
+Difficulty level: <span style="color:#2B7492">{{< bi star >}} </span>
 
 # Data Visualization {.unnumbered}
 

@@ -13,6 +13,7 @@ code-links:
         icon: "laptop"
 --- 
 
+Difficulty level: <span style="color:#2B7492">{{< bi star-fill >}} {{< bi star-fill >}} </span>
 
 ## Plotting with Seaborn {.unnumbered}
 

@@ -11,6 +11,7 @@ execute:
     eval: false
 --- 
 
+Difficulty level: <span style="color:#2B7492">{{< bi star >}} </span>
 
 ### More information {.unnumbered}
 
@@ -82,14 +83,14 @@ If you measure data yourself, either your measurement device will store the data
 
 If you use data from external sources, you have to make sure that you have legal rights to use the data. Check the data license and terms of use.
 
-Further make sure how the data is stored and how you can access it.
+Further, make sure how the data is stored and how you can access it.
 
 ---
 
 ## How do you access external data? {.unnumbered}
 
 
-To access data from exeternal sources, you can use different tools and libraries.
+To access data from external sources, you can use different tools and libraries.
 
 For example, if you want to access data from a chemical database e.g. 
 
@@ -120,7 +121,7 @@ etc.
 
 ### Plain Text Files {.unnumbered}
 
-A text file often contains a header with the names of the columns and then the data in rows. Columns can be seperated by different delimiters (`spaces`, `,`, `;`, `tabs`, ...). <br> For example, a file with data from an experiment could look like this:
+A text file often contains a header with the names of the columns and then the data in rows. Columns can be separated by different delimiters (`spaces`, `,`, `;`, `tabs`, ...). <br> For example, a file with data from an experiment could look like this:
 
 ```plaintext
 Time/s  Temperature/°C

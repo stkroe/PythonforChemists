@@ -17,15 +17,16 @@ other-links:
       - text: "Data temperature_nan_dat"
         href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.dat"
         icon: "filetype-txt"
-      - text: "Download Code"
-        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimpleDataImport.ipynb"
-        icon: "journal"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataImport.ipynb"
         icon: "laptop"
+      - text: "Download Code"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimpleDataImport.ipynb"
+        icon: "journal"
 --- 
 
+Difficulty level: <span style="color:#2B7492">{{< bi star-fill >}} </span>
 
 # Data Reading {.unnumbered}
 
@@ -38,7 +39,7 @@ Depending on the data format, you can use different libraries to read the data.
 
 ### Reading Plain Text Files {.unnumbered}
 
-You can use the `pandas`  or `numpy` library to read CSV files. 
+You can use the `pandas` or `numpy` library to read CSV files. 
 
 
 
@@ -362,7 +363,7 @@ If you have problems with importing data please check the following:
 
 You can use AI tool to get a code snippet for reading the data.
 - *e.g.* give the AI tool the one or two line of the as an example and ask for the code snippet.
-- *e.g.* beaware do that only if you do not have sensitive data.
+- *e.g.* beware do that only if you do not have sensitive data.
 :::
 
 

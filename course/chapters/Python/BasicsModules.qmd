@@ -3,16 +3,16 @@ title: "Basic Modules"
 execute: 
   echo: true
   execute: false
-other-links:     
-    - text: "Download Code"
-      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/BasicsModules.ipynb"
-      icon: "journal"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/BasicsModules.ipynb"
         icon: "laptop"
+      - text: "Download Code"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/BasicsModules.ipynb"
+        icon: "journal"
 ---
 
+Difficulty level: <span style="color:#2B7492">{{< bi star-fill >}} {{< bi star-fill >}} </span>
 
 # Numpy and Pandas {.unnumbered}
 

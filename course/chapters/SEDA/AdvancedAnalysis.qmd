@@ -3,16 +3,15 @@ title: "Advanced Statistical Analysis"
 execute: 
   echo: True
   eval: True
-other-links: 
-      - text: "Download Code"
-        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/MultiVariantAnalysis.ipynb"
-        icon: "journal"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/MultiVariantAnalysis.ipynb"
         icon: "laptop"
+      - text: "Download Code"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/MultiVariantAnalysis.ipynb"
+        icon: "journal"
 --- 
-
+Difficulty level: <span style="color:#2B7492">{{< bi star-fill >}} {{< bi star-fill >}} </span>
 
 Often data has multi dimensions and it is not easy to analyze it. <br>
 Multivariate analysis is a set of statistical techniques used to analyze data with multiple variables.
@@ -206,7 +205,7 @@ plt.title('K-Means Clustering')
 plt.show()
 ```
 
-- **Hierarchical Clustering:** Builds a tree of clusters using agglomerative or divisive methods.
+- **Hierarchical Clustering:** Builds a tree of clusters using agglomerating or divisive methods.
 
 ```{python}
 import numpy as np
