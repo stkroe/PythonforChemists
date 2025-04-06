@@ -351,6 +351,7 @@ np.savetxt('file.txt', data)
 ::: {.callout-important}
 # Problems {.unnumbered}
 If you have problems with importing data please check the following:
+
 - Have first a look at the data file.
 - Check the delimiter.
 - Check the header.
@@ -362,6 +363,7 @@ If you have problems with importing data please check the following:
 - Check the file name.
 
 You can use AI tool to get a code snippet for reading the data.
+
 - *e.g.* give the AI tool the one or two line of the as an example and ask for the code snippet.
 - *e.g.* beware do that only if you do not have sensitive data.
 :::

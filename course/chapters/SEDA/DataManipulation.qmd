@@ -67,6 +67,13 @@ print("flatten array: \n", c.flatten())
 
 #### Linear algebra operations *e.g.*: {.unnumbered}
 
+- `np.log(a)` returns the **natural logarithm** of an array
+- `np.log10(a)` returns the **base 10 logarithm** of an array
+- `np.log2(a)` returns the **base 2 logarithm** of an array
+- `np.log1p(a)` returns the **natural logarithm** of an array plus one
+- `np.exp(a)` returns the **exponential** of an array
+- `np.sqrt(a)` returns the **square root** of an array
+- `np.abs(a)` returns the **absolute value** of an array
 - `np.sum(a)` returns **element-wise sum** of two arrays
 - `np.add(a)` returns **sum of all elements** arrays
 - `np.subtract(a,b)` returns the **difference** of two arrays
