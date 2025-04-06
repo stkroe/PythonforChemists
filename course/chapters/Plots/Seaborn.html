@@ -77,6 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-e73e8d7a663c5560bcf23225ddbdc55a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-90ea52f1b8d8195fbfcbff9552eb0e88.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -540,13 +541,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p>Difficulty level: <span style="color:#2B7492"><i class="bi-star-fill " style="" role="img" aria-hidden="true"></i> <i class="bi-star-fill " style="" role="img" aria-hidden="true"></i> </span></p>
 <section id="plotting-with-seaborn" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="plotting-with-seaborn">Plotting with Seaborn</h2>
 <p>Seaborn is a Python data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Seaborn is built on top of Matplotlib and closely integrated with pandas data structures.</p>
 <section id="kde-plot" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="kde-plot">KDE Plot</h3>
 <p><a href="https://seaborn.pydata.org/generated/seaborn.kdeplot.html">Kernel density plot</a> show the distribution of a single variable <em>e.g.</em> distribution of a mass of individuals in a population. The data is smoothed by a kernel density and the density of the data is plotted continuously.</p>
-<div id="beaaa652" class="cell" data-execution_count="1">
+<div id="cd677ecf" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -573,7 +575,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="https://seaborn.pydata.org/generated/seaborn.violinplot.html">Violin plot</a>: Show the distribution of a numerical variable for different categories. It is similar to a box plot but it also shows the probability density of the data at different values. An example of this <em>e.g.</em> is the distribution of cancer cell survival time for different treatment groups.</li>
 </ul>
-<div id="700f2e04" class="cell" data-execution_count="2">
+<div id="378f47fb" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -601,7 +603,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="https://seaborn.pydata.org/generated/seaborn.regplot.html">Regression plot</a>: Show a regression model between two variables <em>e.g.</em> the relationship between the concentration and the time.</li>
 </ul>
-<div id="1dcd089d" class="cell" data-execution_count="3">
+<div id="0b784c95" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -626,7 +628,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="https://seaborn.pydata.org/generated/seaborn.heatmap.html">Heatmap</a> shows the relationship of two categorical variables with a numerical variable <em>e.g.</em> cancer cell survival time for different treatment groups and different cancer types. The color of the cell is proportional to the value of the investigated variable.</li>
 </ul>
-<div id="0cd391f6" class="cell" data-execution_count="4">
+<div id="7373238d" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1309,95 +1311,96 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb5-13"><a href="#cb5-13"></a><span class="co">        icon: "laptop"</span></span>
 <span id="cb5-14"><a href="#cb5-14"></a><span class="co">---</span> </span>
 <span id="cb5-15"><a href="#cb5-15"></a></span>
-<span id="cb5-16"><a href="#cb5-16"></a></span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="fu">## Plotting with Seaborn {.unnumbered}</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a></span>
-<span id="cb5-19"><a href="#cb5-19"></a>Seaborn is a Python data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Seaborn is built on top of Matplotlib and closely integrated with pandas data structures.</span>
-<span id="cb5-20"><a href="#cb5-20"></a></span>
+<span id="cb5-16"><a href="#cb5-16"></a>Difficulty level: &lt;span style="color:#2B7492"&gt;{{&lt; bi star-fill &gt;}} {{&lt; bi star-fill &gt;}} &lt;/span&gt;</span>
+<span id="cb5-17"><a href="#cb5-17"></a></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="fu">## Plotting with Seaborn {.unnumbered}</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a></span>
+<span id="cb5-20"><a href="#cb5-20"></a>Seaborn is a Python data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Seaborn is built on top of Matplotlib and closely integrated with pandas data structures.</span>
 <span id="cb5-21"><a href="#cb5-21"></a></span>
-<span id="cb5-22"><a href="#cb5-22"></a><span class="fu">### KDE Plot {.unnumbered}</span></span>
-<span id="cb5-23"><a href="#cb5-23"></a><span class="co">[</span><span class="ot">Kernel density plot</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.kdeplot.html)</span> show the distribution of a single variable *e.g.* distribution of a mass of individuals in a population. The data is smoothed by a kernel density and the density of the data is plotted continuously.</span>
-<span id="cb5-24"><a href="#cb5-24"></a></span>
-<span id="cb5-27"><a href="#cb5-27"></a><span class="in">```{python}</span></span>
-<span id="cb5-28"><a href="#cb5-28"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb5-29"><a href="#cb5-29"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-30"><a href="#cb5-30"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-31"><a href="#cb5-31"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb5-32"><a href="#cb5-32"></a></span>
-<span id="cb5-33"><a href="#cb5-33"></a><span class="co"># Create a dataset</span></span>
-<span id="cb5-34"><a href="#cb5-34"></a>data <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb5-35"><a href="#cb5-35"></a>df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>[<span class="st">"Data"</span>])</span>
-<span id="cb5-36"><a href="#cb5-36"></a></span>
-<span id="cb5-37"><a href="#cb5-37"></a><span class="co"># Create a KDE plot</span></span>
-<span id="cb5-38"><a href="#cb5-38"></a>sns.kdeplot(data<span class="op">=</span>df[<span class="st">"Data"</span>], color<span class="op">=</span><span class="st">"blue"</span>, shade<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb5-39"><a href="#cb5-39"></a>plt.show()</span>
-<span id="cb5-40"><a href="#cb5-40"></a><span class="in">```</span></span>
-<span id="cb5-41"><a href="#cb5-41"></a></span>
+<span id="cb5-22"><a href="#cb5-22"></a></span>
+<span id="cb5-23"><a href="#cb5-23"></a><span class="fu">### KDE Plot {.unnumbered}</span></span>
+<span id="cb5-24"><a href="#cb5-24"></a><span class="co">[</span><span class="ot">Kernel density plot</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.kdeplot.html)</span> show the distribution of a single variable *e.g.* distribution of a mass of individuals in a population. The data is smoothed by a kernel density and the density of the data is plotted continuously.</span>
+<span id="cb5-25"><a href="#cb5-25"></a></span>
+<span id="cb5-28"><a href="#cb5-28"></a><span class="in">```{python}</span></span>
+<span id="cb5-29"><a href="#cb5-29"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb5-30"><a href="#cb5-30"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-31"><a href="#cb5-31"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-32"><a href="#cb5-32"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-33"><a href="#cb5-33"></a></span>
+<span id="cb5-34"><a href="#cb5-34"></a><span class="co"># Create a dataset</span></span>
+<span id="cb5-35"><a href="#cb5-35"></a>data <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb5-36"><a href="#cb5-36"></a>df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>[<span class="st">"Data"</span>])</span>
+<span id="cb5-37"><a href="#cb5-37"></a></span>
+<span id="cb5-38"><a href="#cb5-38"></a><span class="co"># Create a KDE plot</span></span>
+<span id="cb5-39"><a href="#cb5-39"></a>sns.kdeplot(data<span class="op">=</span>df[<span class="st">"Data"</span>], color<span class="op">=</span><span class="st">"blue"</span>, shade<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-40"><a href="#cb5-40"></a>plt.show()</span>
+<span id="cb5-41"><a href="#cb5-41"></a><span class="in">```</span></span>
 <span id="cb5-42"><a href="#cb5-42"></a></span>
-<span id="cb5-43"><a href="#cb5-43"></a><span class="fu">### Violin Plot {.unnumbered}</span></span>
-<span id="cb5-44"><a href="#cb5-44"></a></span>
-<span id="cb5-45"><a href="#cb5-45"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Violin plot</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.violinplot.html)</span>: Show the distribution of a numerical variable for different categories. It is similar to a box plot but it also shows the probability density of the data at different values. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.</span>
-<span id="cb5-46"><a href="#cb5-46"></a></span>
-<span id="cb5-49"><a href="#cb5-49"></a><span class="in">```{python}</span></span>
-<span id="cb5-50"><a href="#cb5-50"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb5-51"><a href="#cb5-51"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-52"><a href="#cb5-52"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-53"><a href="#cb5-53"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb5-54"><a href="#cb5-54"></a></span>
-<span id="cb5-55"><a href="#cb5-55"></a><span class="co"># Create a dataset</span></span>
-<span id="cb5-56"><a href="#cb5-56"></a>data <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb5-57"><a href="#cb5-57"></a>df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>[<span class="st">"Data"</span>])</span>
-<span id="cb5-58"><a href="#cb5-58"></a></span>
-<span id="cb5-59"><a href="#cb5-59"></a><span class="co"># Create a Violin plot</span></span>
-<span id="cb5-60"><a href="#cb5-60"></a>sns.violinplot(data<span class="op">=</span>df[<span class="st">"Data"</span>], color<span class="op">=</span><span class="st">"blue"</span>)</span>
-<span id="cb5-61"><a href="#cb5-61"></a>plt.show()</span>
-<span id="cb5-62"><a href="#cb5-62"></a><span class="in">```</span></span>
-<span id="cb5-63"><a href="#cb5-63"></a></span>
+<span id="cb5-43"><a href="#cb5-43"></a></span>
+<span id="cb5-44"><a href="#cb5-44"></a><span class="fu">### Violin Plot {.unnumbered}</span></span>
+<span id="cb5-45"><a href="#cb5-45"></a></span>
+<span id="cb5-46"><a href="#cb5-46"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Violin plot</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.violinplot.html)</span>: Show the distribution of a numerical variable for different categories. It is similar to a box plot but it also shows the probability density of the data at different values. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.</span>
+<span id="cb5-47"><a href="#cb5-47"></a></span>
+<span id="cb5-50"><a href="#cb5-50"></a><span class="in">```{python}</span></span>
+<span id="cb5-51"><a href="#cb5-51"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb5-52"><a href="#cb5-52"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-53"><a href="#cb5-53"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-54"><a href="#cb5-54"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-55"><a href="#cb5-55"></a></span>
+<span id="cb5-56"><a href="#cb5-56"></a><span class="co"># Create a dataset</span></span>
+<span id="cb5-57"><a href="#cb5-57"></a>data <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb5-58"><a href="#cb5-58"></a>df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>[<span class="st">"Data"</span>])</span>
+<span id="cb5-59"><a href="#cb5-59"></a></span>
+<span id="cb5-60"><a href="#cb5-60"></a><span class="co"># Create a Violin plot</span></span>
+<span id="cb5-61"><a href="#cb5-61"></a>sns.violinplot(data<span class="op">=</span>df[<span class="st">"Data"</span>], color<span class="op">=</span><span class="st">"blue"</span>)</span>
+<span id="cb5-62"><a href="#cb5-62"></a>plt.show()</span>
+<span id="cb5-63"><a href="#cb5-63"></a><span class="in">```</span></span>
 <span id="cb5-64"><a href="#cb5-64"></a></span>
-<span id="cb5-65"><a href="#cb5-65"></a><span class="fu">## Correlation plots {.unnumbered}</span></span>
-<span id="cb5-66"><a href="#cb5-66"></a></span>
-<span id="cb5-67"><a href="#cb5-67"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Regression plot</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.regplot.html)</span>:</span>
-<span id="cb5-68"><a href="#cb5-68"></a>Show a regression model between two variables *e.g.* the relationship between the concentration and the time.</span>
-<span id="cb5-69"><a href="#cb5-69"></a></span>
-<span id="cb5-72"><a href="#cb5-72"></a><span class="in">```{python}</span></span>
-<span id="cb5-73"><a href="#cb5-73"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb5-74"><a href="#cb5-74"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-75"><a href="#cb5-75"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-76"><a href="#cb5-76"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb5-77"><a href="#cb5-77"></a></span>
-<span id="cb5-78"><a href="#cb5-78"></a><span class="co"># Create a dataset</span></span>
-<span id="cb5-79"><a href="#cb5-79"></a></span>
-<span id="cb5-80"><a href="#cb5-80"></a>data <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb5-81"><a href="#cb5-81"></a>df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>[<span class="st">"Data"</span>])</span>
-<span id="cb5-82"><a href="#cb5-82"></a></span>
-<span id="cb5-83"><a href="#cb5-83"></a><span class="co"># Create a Regression plot</span></span>
-<span id="cb5-84"><a href="#cb5-84"></a>sns.regplot(x<span class="op">=</span>np.arange(<span class="dv">0</span>, <span class="bu">len</span>(df)), y<span class="op">=</span>df[<span class="st">"Data"</span>], color<span class="op">=</span><span class="st">"blue"</span>)</span>
-<span id="cb5-85"><a href="#cb5-85"></a>plt.show()</span>
-<span id="cb5-86"><a href="#cb5-86"></a><span class="in">```</span> </span>
-<span id="cb5-87"><a href="#cb5-87"></a></span>
-<span id="cb5-88"><a href="#cb5-88"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Heatmap</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.heatmap.html)</span> shows the relationship of two categorical variables with a numerical variable *e.g.* cancer cell survival time for different treatment groups and different cancer types. The color of the cell is proportional to the value of the investigated variable.</span>
-<span id="cb5-89"><a href="#cb5-89"></a></span>
-<span id="cb5-92"><a href="#cb5-92"></a><span class="in">```{python}</span></span>
-<span id="cb5-93"><a href="#cb5-93"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb5-94"><a href="#cb5-94"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-95"><a href="#cb5-95"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-96"><a href="#cb5-96"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb5-97"><a href="#cb5-97"></a></span>
-<span id="cb5-98"><a href="#cb5-98"></a><span class="co"># Create a dataset</span></span>
-<span id="cb5-99"><a href="#cb5-99"></a>data <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>(<span class="dv">100</span>, <span class="dv">100</span>))</span>
-<span id="cb5-100"><a href="#cb5-100"></a>df <span class="op">=</span> pd.DataFrame(data)</span>
-<span id="cb5-101"><a href="#cb5-101"></a></span>
-<span id="cb5-102"><a href="#cb5-102"></a><span class="co"># Create a Heatmap</span></span>
-<span id="cb5-103"><a href="#cb5-103"></a>sns.heatmap(data<span class="op">=</span>df, cmap<span class="op">=</span><span class="st">"coolwarm"</span>)</span>
-<span id="cb5-104"><a href="#cb5-104"></a>plt.show()</span>
-<span id="cb5-105"><a href="#cb5-105"></a><span class="in">```</span></span>
-<span id="cb5-106"><a href="#cb5-106"></a></span>
-<span id="cb5-107"><a href="#cb5-107"></a><span class="fu">### Additional resources {.unnumbered}</span></span>
-<span id="cb5-108"><a href="#cb5-108"></a></span>
-<span id="cb5-109"><a href="#cb5-109"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Seaborn Gallery</span><span class="co">](https://seaborn.pydata.org/examples/index.html)</span></span>
-<span id="cb5-110"><a href="#cb5-110"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Seaborn API</span><span class="co">](https://seaborn.pydata.org/api.html)</span></span>
-<span id="cb5-111"><a href="#cb5-111"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Seaborn Tutorial</span><span class="co">](https://seaborn.pydata.org/tutorial.html)</span></span>
-<span id="cb5-112"><a href="#cb5-112"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Seaborn Documentation</span><span class="co">](https://seaborn.pydata.org/index.html)</span></span>
+<span id="cb5-65"><a href="#cb5-65"></a></span>
+<span id="cb5-66"><a href="#cb5-66"></a><span class="fu">## Correlation plots {.unnumbered}</span></span>
+<span id="cb5-67"><a href="#cb5-67"></a></span>
+<span id="cb5-68"><a href="#cb5-68"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Regression plot</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.regplot.html)</span>:</span>
+<span id="cb5-69"><a href="#cb5-69"></a>Show a regression model between two variables *e.g.* the relationship between the concentration and the time.</span>
+<span id="cb5-70"><a href="#cb5-70"></a></span>
+<span id="cb5-73"><a href="#cb5-73"></a><span class="in">```{python}</span></span>
+<span id="cb5-74"><a href="#cb5-74"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb5-75"><a href="#cb5-75"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-76"><a href="#cb5-76"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-77"><a href="#cb5-77"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-78"><a href="#cb5-78"></a></span>
+<span id="cb5-79"><a href="#cb5-79"></a><span class="co"># Create a dataset</span></span>
+<span id="cb5-80"><a href="#cb5-80"></a></span>
+<span id="cb5-81"><a href="#cb5-81"></a>data <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb5-82"><a href="#cb5-82"></a>df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>[<span class="st">"Data"</span>])</span>
+<span id="cb5-83"><a href="#cb5-83"></a></span>
+<span id="cb5-84"><a href="#cb5-84"></a><span class="co"># Create a Regression plot</span></span>
+<span id="cb5-85"><a href="#cb5-85"></a>sns.regplot(x<span class="op">=</span>np.arange(<span class="dv">0</span>, <span class="bu">len</span>(df)), y<span class="op">=</span>df[<span class="st">"Data"</span>], color<span class="op">=</span><span class="st">"blue"</span>)</span>
+<span id="cb5-86"><a href="#cb5-86"></a>plt.show()</span>
+<span id="cb5-87"><a href="#cb5-87"></a><span class="in">```</span> </span>
+<span id="cb5-88"><a href="#cb5-88"></a></span>
+<span id="cb5-89"><a href="#cb5-89"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Heatmap</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.heatmap.html)</span> shows the relationship of two categorical variables with a numerical variable *e.g.* cancer cell survival time for different treatment groups and different cancer types. The color of the cell is proportional to the value of the investigated variable.</span>
+<span id="cb5-90"><a href="#cb5-90"></a></span>
+<span id="cb5-93"><a href="#cb5-93"></a><span class="in">```{python}</span></span>
+<span id="cb5-94"><a href="#cb5-94"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb5-95"><a href="#cb5-95"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-96"><a href="#cb5-96"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-97"><a href="#cb5-97"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-98"><a href="#cb5-98"></a></span>
+<span id="cb5-99"><a href="#cb5-99"></a><span class="co"># Create a dataset</span></span>
+<span id="cb5-100"><a href="#cb5-100"></a>data <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>(<span class="dv">100</span>, <span class="dv">100</span>))</span>
+<span id="cb5-101"><a href="#cb5-101"></a>df <span class="op">=</span> pd.DataFrame(data)</span>
+<span id="cb5-102"><a href="#cb5-102"></a></span>
+<span id="cb5-103"><a href="#cb5-103"></a><span class="co"># Create a Heatmap</span></span>
+<span id="cb5-104"><a href="#cb5-104"></a>sns.heatmap(data<span class="op">=</span>df, cmap<span class="op">=</span><span class="st">"coolwarm"</span>)</span>
+<span id="cb5-105"><a href="#cb5-105"></a>plt.show()</span>
+<span id="cb5-106"><a href="#cb5-106"></a><span class="in">```</span></span>
+<span id="cb5-107"><a href="#cb5-107"></a></span>
+<span id="cb5-108"><a href="#cb5-108"></a><span class="fu">### Additional resources {.unnumbered}</span></span>
+<span id="cb5-109"><a href="#cb5-109"></a></span>
+<span id="cb5-110"><a href="#cb5-110"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Seaborn Gallery</span><span class="co">](https://seaborn.pydata.org/examples/index.html)</span></span>
+<span id="cb5-111"><a href="#cb5-111"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Seaborn API</span><span class="co">](https://seaborn.pydata.org/api.html)</span></span>
+<span id="cb5-112"><a href="#cb5-112"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Seaborn Tutorial</span><span class="co">](https://seaborn.pydata.org/tutorial.html)</span></span>
+<span id="cb5-113"><a href="#cb5-113"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Seaborn Documentation</span><span class="co">](https://seaborn.pydata.org/index.html)</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

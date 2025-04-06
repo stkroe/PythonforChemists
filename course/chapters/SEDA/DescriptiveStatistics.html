@@ -77,6 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-e73e8d7a663c5560bcf23225ddbdc55a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-90ea52f1b8d8195fbfcbff9552eb0e88.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -517,7 +518,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SEDA/DescriptiveStatistics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/DescriptiveStatistics.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/DescriptiveStatistics.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SEDA/DescriptiveStatistics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/DescriptiveStatistics.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/DescriptiveStatistics.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -541,6 +542,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p>Difficulty level: <span style="color:#2B7492"><i class="bi-star-fill " style="" role="img" aria-hidden="true"></i> </span></p>
 <section id="descriptive-statistics-and-analysis" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="descriptive-statistics-and-analysis">Descriptive Statistics and Analysis</h2>
 <p>Descriptive statistics summarize and analyze datasets by providing measures of central tendency, dispersion, and correlation. These statistics help in understanding the underlying patterns in chemical and materials science data.</p>
@@ -552,7 +554,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <section id="numpy" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="numpy">Numpy</h3>
-<div id="f006c8b0" class="cell" data-execution_count="1">
+<div id="5245020c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
@@ -572,7 +574,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>np.histogram2d(a,b, [,bins,range,density,weights])</code> returns the <strong>2D histogram</strong> of the elements of an array</p></li>
 <li><p><code>np.histogramdd(a, [,bins,range,density,weights])</code> returns the <strong>nD histogram</strong> of the elements of an array</p></li>
 </ul>
-<div id="953e61b1" class="cell" data-execution_count="2">
+<div id="02e08ad9" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(arr)</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="bu">print</span>(<span class="st">"Mean: "</span>, np.mean(arr))</span>
@@ -606,7 +608,7 @@ IQR:  0.040000000000000036</code></pre>
 <li><code>np.searchsorted(a,v)</code> returns the <strong>index of the first element</strong> of an array <br> <strong>that is greater than or equal to a value</strong></li>
 <li><code>np.extract(condition,a)</code> returns the <strong>elements of an array that satisfy a condition</strong></li>
 </ul>
-<div id="c8536a7a" class="cell" data-execution_count="3">
+<div id="491abf76" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="bu">print</span>(arr)</span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="bu">print</span>(<span class="st">"Index of the maximum element: "</span>, np.argmax(arr))</span>
@@ -633,7 +635,7 @@ Find the index of element "&gt;4":  [[4]
 </section>
 <section id="pandas" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="pandas">Pandas</h3>
-<div id="c5860583" class="cell" data-execution_count="4">
+<div id="6ed47f55" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb6-2"><a href="#cb6-2"></a>data <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb6-3"><a href="#cb6-3"></a>    <span class="st">"Name"</span>: [<span class="st">"Water"</span>, <span class="st">"Sulfuric Acid"</span>, <span class="st">"Ethanol"</span>, <span class="st">"Acetone"</span>, <span class="st">"Ammonia"</span>, <span class="st">"Benzene"</span>, <span class="st">"Methanol"</span>, <span class="st">"Glycerol"</span>],</span>
@@ -650,7 +652,7 @@ Find the index of element "&gt;4":  [[4]
 <ul>
 <li><code>data.head()</code>: Returns the first 5 rows of the dataframe</li>
 </ul>
-<div id="12cf7f65" class="cell" data-execution_count="5">
+<div id="89be0fb5" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">print</span>(<span class="st">"head of data: </span><span class="ch">\n</span><span class="st">"</span>,data.head()) <span class="co"># print the first 5 rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>head of data: 
@@ -672,7 +674,7 @@ Find the index of element "&gt;4":  [[4]
 <ul>
 <li><code>data.shape[0]</code>: Returns the number of rows in the dataframe</li>
 </ul>
-<div id="e003df2c" class="cell" data-execution_count="6">
+<div id="67bb6b70" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of data set: 
@@ -682,7 +684,7 @@ Find the index of element "&gt;4":  [[4]
 <ul>
 <li><code>data.shape[1]</code>: Returns the number of columns in the dataframe</li>
 </ul>
-<div id="9b5e3334" class="cell" data-execution_count="7">
+<div id="8ac32f2c" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of data set: 
@@ -692,7 +694,7 @@ Find the index of element "&gt;4":  [[4]
 <ul>
 <li><code>data["Name"]</code>: Returns the column “Name” of the dataframe</li>
 </ul>
-<div id="1257c1ef" class="cell" data-execution_count="8">
+<div id="faad58f3" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="bu">print</span>(<span class="st">"Name of chemicals: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Name"</span>]) <span class="co"># print the column "Name"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Name of chemicals: 
@@ -710,7 +712,7 @@ Name: Name, dtype: object</code></pre>
 <ul>
 <li><code>data.iloc[1]</code>: Returns the second row of the dataframe</li>
 </ul>
-<div id="defc9027" class="cell" data-execution_count="9">
+<div id="82823a4c" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="bu">print</span>(<span class="st">"2. Row: </span><span class="ch">\n</span><span class="st">"</span>, data.iloc[<span class="dv">1</span>]) <span class="co"># print the second row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2. Row: 
@@ -728,7 +730,7 @@ Name: 1, dtype: object</code></pre>
 <li><code>data[data["Concentration (M)"] &gt; 5]</code>: Returns the rows where the concentration is greater than 5</li>
 <li><code>data.loc[data["Concentration (M)"]&gt;5,"Chemical Type"]</code>: Returns the chemical type with a concentration higher than 5</li>
 </ul>
-<div id="a5718a11" class="cell" data-execution_count="10">
+<div id="4737b1c2" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="bu">print</span>(<span class="st">"Filter the rows where concentration is greater than 5: </span><span class="ch">\n</span><span class="st">"</span>, data[data[<span class="st">"Concentration (M)"</span>] <span class="op">&gt;</span> <span class="dv">5</span>])</span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="bu">print</span>(<span class="st">"Get the chemical type with a concentration higher than 5: </span><span class="ch">\n</span><span class="st">"</span>, </span>
 <span id="cb17-3"><a href="#cb17-3"></a>      data.loc[data[<span class="st">"Concentration (M)"</span>]<span class="op">&gt;</span><span class="dv">5</span>,<span class="st">"Chemical Type"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -753,7 +755,7 @@ Name: Chemical Type, dtype: object</code></pre>
 <ul>
 <li><code>data.info()</code>: Returns the information of the dataframe</li>
 </ul>
-<div id="45c15a60" class="cell" data-execution_count="11">
+<div id="54ca908e" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="bu">print</span>(<span class="st">"Information of data: </span><span class="ch">\n</span><span class="st">"</span>, data.info()) <span class="co"># information of data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -778,7 +780,7 @@ Information of data:
 <ul>
 <li><code>data.describe()</code>: Returns the statistical summary of the dataframe</li>
 </ul>
-<div id="5c748209" class="cell" data-execution_count="12">
+<div id="9cb003eb" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="bu">print</span>(<span class="st">"Statistical summary: </span><span class="ch">\n</span><span class="st">"</span>, data.describe()) <span class="co"># statistical summary</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Statistical summary: 
@@ -814,7 +816,7 @@ max            55.500000  </code></pre>
 <li><code>data["Concentration (M)"].mode()</code>: Returns the mode of the column “Concentration (M)”</li>
 <li><code>data["Concentration (M)"].percentile(q)</code>: Returns the q-th percentile of the column “Concentration (M)”</li>
 </ul>
-<div id="cc9549d7" class="cell" data-execution_count="13">
+<div id="d0b5e863" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="bu">print</span>(<span class="st">"mean of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].mean()) <span class="co"># mean of concentration</span></span>
 <span id="cb23-2"><a href="#cb23-2"></a><span class="bu">print</span>(<span class="st">"std of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].std()) <span class="co"># standard deviation of concentration</span></span>
 <span id="cb23-3"><a href="#cb23-3"></a><span class="bu">print</span>(<span class="st">"median of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].median()) <span class="co"># median of concentration</span></span>
@@ -856,7 +858,7 @@ IQR of concentration:
 <ul>
 <li><code>data.groupby("Chemical Type")["Concentration (M)"].mean()</code>: Returns the mean of the column “Concentration (M)” grouped by “Chemical Type”</li>
 </ul>
-<div id="a9aa2ee1" class="cell" data-execution_count="14">
+<div id="3c97ae97" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a><span class="bu">print</span>(<span class="st">"Mean of concentration group by type: </span><span class="ch">\n</span><span class="st">"</span>, data.groupby(<span class="st">"Chemical Type"</span>)[<span class="st">"Concentration (M)"</span>].mean())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Mean of concentration group by type: 
@@ -874,7 +876,7 @@ Name: Concentration (M), dtype: float64</code></pre>
 <ul>
 <li><code>data.agg({"Concentration (M)": ["mean", "std", "median", "max", "min", "sum"]})</code>: Returns the mean, standard deviation, median, maximum, minimum, and sum of the column “Concentration (M)”</li>
 </ul>
-<div id="c4a14b8b" class="cell" data-execution_count="15">
+<div id="929dcaa9" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="bu">print</span>(<span class="st">"Aggregate the data: </span><span class="ch">\n</span><span class="st">"</span>, data.agg({<span class="st">"Concentration (M)"</span>: [<span class="st">"mean"</span>, <span class="st">"std"</span>, <span class="st">"median"</span>, <span class="st">"max"</span>, <span class="st">"min"</span>, <span class="st">"sum"</span>]}))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Aggregate the data: 
@@ -892,7 +894,7 @@ sum             78.600000</code></pre>
 <li><code>data.corr()</code>: Returns the correlation matrix of the dataframe</li>
 <li><code>data.cov()</code>: Returns the covariance matrix of the dataframe</li>
 </ul>
-<div id="2e510480" class="cell" data-execution_count="16">
+<div id="78867acc" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a><span class="bu">print</span>(<span class="st">"Correlation matrix: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].corr(data[<span class="st">"Molecular Weight (g/mol)"</span>]))</span>
 <span id="cb29-2"><a href="#cb29-2"></a><span class="bu">print</span>(<span class="st">"Covariance matrix: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].cov(data[<span class="st">"Molecular Weight (g/mol)"</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -903,7 +905,7 @@ Covariance matrix:
 </div>
 </div>
 <p><strong>Pivot Tables</strong> Pivot tables are used to summarize and aggregate data inside a dataframe. - <code>data.pivot_table(index="Chemical Type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean")</code>: Returns a pivot table of the dataframe</p>
-<div id="d7de5ecb" class="cell" data-execution_count="17">
+<div id="72acb2e9" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a>data.pivot_table(index<span class="op">=</span><span class="st">"Chemical Type"</span>, columns<span class="op">=</span><span class="st">"Concentration (M)"</span>, values<span class="op">=</span><span class="st">"Molecular Weight (g/mol)"</span>, aggfunc<span class="op">=</span><span class="st">"mean"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <div>
@@ -1022,7 +1024,7 @@ Covariance matrix:
 <ul>
 <li><code>data1 = data.compare(data2)</code>: Compares two dataframes and returns the differences</li>
 </ul>
-<div id="68b6ae72" class="cell" data-execution_count="18">
+<div id="1e6b69ef" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a>data1 <span class="op">=</span> data.copy()</span>
 <span id="cb32-2"><a href="#cb32-2"></a>data1[<span class="st">"Concentration (M)"</span>].iloc[<span class="dv">0</span>] <span class="op">=</span> <span class="fl">0.5</span></span>
 <span id="cb32-3"><a href="#cb32-3"></a><span class="bu">print</span>(<span class="st">"Comparison of data: </span><span class="ch">\n</span><span class="st">"</span>, </span>
@@ -1049,7 +1051,7 @@ Covariance matrix:
 <li><code>df.rolling(...).transform(...)</code>: transform the data in the rolling window</li>
 <li><code>df.rolling(...).count()</code>: count the data in the rolling window</li>
 </ul>
-<div id="e70c90bb" class="cell" data-execution_count="19">
+<div id="f11daa50" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># calculate the rolling mean</span></span>
 <span id="cb34-2"><a href="#cb34-2"></a><span class="bu">print</span>(<span class="st">"rolling mean: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].rolling(window<span class="op">=</span><span class="dv">2</span>).mean())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1713,253 +1715,252 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb36-3"><a href="#cb36-3"></a><span class="an">execute:</span><span class="co"> </span></span>
 <span id="cb36-4"><a href="#cb36-4"></a><span class="co">  echo: True</span></span>
 <span id="cb36-5"><a href="#cb36-5"></a><span class="co">  eval: True</span></span>
-<span id="cb36-6"><a href="#cb36-6"></a><span class="an">other-links:</span><span class="co"> </span></span>
-<span id="cb36-7"><a href="#cb36-7"></a><span class="co">      - text: "Download Code"</span></span>
-<span id="cb36-8"><a href="#cb36-8"></a><span class="co">        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/DescriptiveStatistics.ipynb"</span></span>
-<span id="cb36-9"><a href="#cb36-9"></a><span class="co">        icon: "journal"</span></span>
-<span id="cb36-10"><a href="#cb36-10"></a><span class="an">code-links:</span></span>
-<span id="cb36-11"><a href="#cb36-11"></a><span class="co">      - text: "Open in Colab"</span></span>
-<span id="cb36-12"><a href="#cb36-12"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/DescriptiveStatistics.ipynb"</span></span>
-<span id="cb36-13"><a href="#cb36-13"></a><span class="co">        icon: "laptop"</span></span>
-<span id="cb36-14"><a href="#cb36-14"></a><span class="co">---</span> </span>
+<span id="cb36-6"><a href="#cb36-6"></a><span class="an">code-links:</span></span>
+<span id="cb36-7"><a href="#cb36-7"></a><span class="co">      - text: "Open in Colab"</span></span>
+<span id="cb36-8"><a href="#cb36-8"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/DescriptiveStatistics.ipynb"</span></span>
+<span id="cb36-9"><a href="#cb36-9"></a><span class="co">        icon: "laptop"</span></span>
+<span id="cb36-10"><a href="#cb36-10"></a><span class="co">      - text: "Download Code"</span></span>
+<span id="cb36-11"><a href="#cb36-11"></a><span class="co">        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/DescriptiveStatistics.ipynb"</span></span>
+<span id="cb36-12"><a href="#cb36-12"></a><span class="co">        icon: "journal"</span></span>
+<span id="cb36-13"><a href="#cb36-13"></a><span class="co">---</span> </span>
+<span id="cb36-14"><a href="#cb36-14"></a>Difficulty level: &lt;span style="color:#2B7492"&gt;{{&lt; bi star-fill &gt;}} &lt;/span&gt;</span>
 <span id="cb36-15"><a href="#cb36-15"></a></span>
-<span id="cb36-16"><a href="#cb36-16"></a></span>
-<span id="cb36-17"><a href="#cb36-17"></a><span class="fu">## Descriptive Statistics and Analysis{.unnumbered}</span></span>
+<span id="cb36-16"><a href="#cb36-16"></a><span class="fu">## Descriptive Statistics and Analysis{.unnumbered}</span></span>
+<span id="cb36-17"><a href="#cb36-17"></a></span>
 <span id="cb36-18"><a href="#cb36-18"></a></span>
 <span id="cb36-19"><a href="#cb36-19"></a></span>
 <span id="cb36-20"><a href="#cb36-20"></a></span>
-<span id="cb36-21"><a href="#cb36-21"></a></span>
-<span id="cb36-22"><a href="#cb36-22"></a>Descriptive statistics summarize and analyze datasets by providing measures of central tendency, dispersion, and correlation. These statistics help in understanding the underlying patterns in chemical and materials science data.</span>
-<span id="cb36-23"><a href="#cb36-23"></a></span>
-<span id="cb36-24"><a href="#cb36-24"></a><span class="ss">- </span>**Measures of Central Tendency:** Mean, median, and mode provide insights into the average or most common values in the dataset.</span>
-<span id="cb36-25"><a href="#cb36-25"></a><span class="ss">- </span>**Variability:** Variance, standard deviation, and interquartile range (IQR) measure how spread out the data is.</span>
-<span id="cb36-26"><a href="#cb36-26"></a><span class="ss">- </span>**Correlation &amp; Covariance:** Determine relationships between two or more variables, useful for identifying dependencies in experimental data.</span>
-<span id="cb36-27"><a href="#cb36-27"></a><span class="ss">- </span>**Summary Statistics:** Pandas provides built-in functions to calculate descriptive statistics for dataframes, including mean, median, standard deviation, and more. Further you can get a fast overview of the data using the <span class="in">`describe()`</span> function.</span>
+<span id="cb36-21"><a href="#cb36-21"></a>Descriptive statistics summarize and analyze datasets by providing measures of central tendency, dispersion, and correlation. These statistics help in understanding the underlying patterns in chemical and materials science data.</span>
+<span id="cb36-22"><a href="#cb36-22"></a></span>
+<span id="cb36-23"><a href="#cb36-23"></a><span class="ss">- </span>**Measures of Central Tendency:** Mean, median, and mode provide insights into the average or most common values in the dataset.</span>
+<span id="cb36-24"><a href="#cb36-24"></a><span class="ss">- </span>**Variability:** Variance, standard deviation, and interquartile range (IQR) measure how spread out the data is.</span>
+<span id="cb36-25"><a href="#cb36-25"></a><span class="ss">- </span>**Correlation &amp; Covariance:** Determine relationships between two or more variables, useful for identifying dependencies in experimental data.</span>
+<span id="cb36-26"><a href="#cb36-26"></a><span class="ss">- </span>**Summary Statistics:** Pandas provides built-in functions to calculate descriptive statistics for dataframes, including mean, median, standard deviation, and more. Further you can get a fast overview of the data using the <span class="in">`describe()`</span> function.</span>
+<span id="cb36-27"><a href="#cb36-27"></a></span>
 <span id="cb36-28"><a href="#cb36-28"></a></span>
 <span id="cb36-29"><a href="#cb36-29"></a></span>
-<span id="cb36-30"><a href="#cb36-30"></a></span>
-<span id="cb36-31"><a href="#cb36-31"></a><span class="fu">### Numpy {.unnumbered}</span></span>
-<span id="cb36-32"><a href="#cb36-32"></a></span>
-<span id="cb36-35"><a href="#cb36-35"></a><span class="in">```{python}</span></span>
-<span id="cb36-36"><a href="#cb36-36"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb36-37"><a href="#cb36-37"></a><span class="in">```</span></span>
-<span id="cb36-38"><a href="#cb36-38"></a></span>
-<span id="cb36-39"><a href="#cb36-39"></a><span class="ss">- </span><span class="in">`np.mean(a)`</span> returns the **mean** of the elements of an array</span>
-<span id="cb36-40"><a href="#cb36-40"></a><span class="ss">- </span><span class="in">`np.average(a)`</span> returns the **weighted average** of the elements of an array</span>
-<span id="cb36-41"><a href="#cb36-41"></a><span class="ss">- </span><span class="in">`np.median(a)`</span> returns the **median** of the elements of an array</span>
-<span id="cb36-42"><a href="#cb36-42"></a><span class="ss">- </span><span class="in">`np.max(a)`</span> returns the **maximum** of the elements of an array</span>
-<span id="cb36-43"><a href="#cb36-43"></a><span class="ss">- </span><span class="in">`np.min(a)`</span> returns **the minimum** of the elements of an array</span>
-<span id="cb36-44"><a href="#cb36-44"></a><span class="ss">- </span><span class="in">`np.std(a)`</span> returns **the standard** deviation of the elements of an array</span>
-<span id="cb36-45"><a href="#cb36-45"></a></span>
-<span id="cb36-46"><a href="#cb36-46"></a><span class="ss">- </span><span class="in">`np.var(a)`</span> returns **the variance** of the elements of an array</span>
-<span id="cb36-47"><a href="#cb36-47"></a><span class="ss">- </span><span class="in">`np.covar(a)`</span> returns the **covariance** of the elements of an array</span>
-<span id="cb36-48"><a href="#cb36-48"></a><span class="ss">- </span><span class="in">`np.percentile(a,p)`</span> returns the **p-th percentile** of the elements of an array</span>
-<span id="cb36-49"><a href="#cb36-49"></a><span class="ss">- </span><span class="in">`np.quantile(a,q)`</span> returns the **q-th quantile** of the elements of an array</span>
-<span id="cb36-50"><a href="#cb36-50"></a><span class="ss">- </span><span class="in">`np.corrcoef(a)`</span> returns the **correlation coefficient** of the elements of an array</span>
-<span id="cb36-51"><a href="#cb36-51"></a><span class="ss">- </span><span class="in">`np.corrcoef(a,b)`</span> returns the **correlation coefficient** of two arrays</span>
-<span id="cb36-52"><a href="#cb36-52"></a><span class="ss">- </span><span class="in">`np.histogram(a, [,bins,range,density,weights])`</span> returns the **histogram** of the elements of an array</span>
-<span id="cb36-53"><a href="#cb36-53"></a><span class="ss">- </span><span class="in">`np.histogram2d(a,b, [,bins,range,density,weights])`</span> returns the **2D histogram** of the elements of an array</span>
-<span id="cb36-54"><a href="#cb36-54"></a><span class="ss">- </span><span class="in">`np.histogramdd(a, [,bins,range,density,weights])`</span> returns the **nD histogram** of the elements of an array</span>
-<span id="cb36-55"><a href="#cb36-55"></a></span>
-<span id="cb36-58"><a href="#cb36-58"></a><span class="in">```{python}</span></span>
-<span id="cb36-59"><a href="#cb36-59"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
-<span id="cb36-60"><a href="#cb36-60"></a><span class="bu">print</span>(arr)</span>
-<span id="cb36-61"><a href="#cb36-61"></a><span class="bu">print</span>(<span class="st">"Mean: "</span>, np.mean(arr))</span>
-<span id="cb36-62"><a href="#cb36-62"></a><span class="bu">print</span>(<span class="st">"Weighted average: "</span>, np.average(arr, weights<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>]))</span>
-<span id="cb36-63"><a href="#cb36-63"></a><span class="bu">print</span>(<span class="st">"Median: "</span>, np.median(arr))</span>
-<span id="cb36-64"><a href="#cb36-64"></a><span class="bu">print</span>(<span class="st">"Standard deviation: "</span>, np.std(arr))</span>
-<span id="cb36-65"><a href="#cb36-65"></a><span class="bu">print</span>(<span class="st">"Variance: "</span>, np.var(arr))</span>
-<span id="cb36-66"><a href="#cb36-66"></a><span class="bu">print</span>(<span class="st">"Correlation coefficient: "</span>, np.corrcoef(arr))</span>
-<span id="cb36-67"><a href="#cb36-67"></a><span class="bu">print</span>(<span class="st">"Percentile: "</span>, np.percentile(arr, <span class="fl">0.25</span>))</span>
-<span id="cb36-68"><a href="#cb36-68"></a><span class="bu">print</span>(<span class="st">"Quantile: "</span>, np.quantile(arr, <span class="fl">0.75</span>))</span>
-<span id="cb36-69"><a href="#cb36-69"></a><span class="bu">print</span>(<span class="st">"IQR: "</span>, np.percentile(arr, <span class="fl">0.75</span>) <span class="op">-</span> np.percentile(arr, <span class="fl">0.25</span>))</span>
-<span id="cb36-70"><a href="#cb36-70"></a><span class="in">```</span></span>
-<span id="cb36-71"><a href="#cb36-71"></a></span>
-<span id="cb36-72"><a href="#cb36-72"></a><span class="ss">- </span><span class="in">`np.argmin(a)`</span> returns the **index of the minimum** element of an array</span>
-<span id="cb36-73"><a href="#cb36-73"></a><span class="ss">- </span><span class="in">`np.argmax(a)`</span> returns the **index of the maximum** element of an array</span>
-<span id="cb36-74"><a href="#cb36-74"></a><span class="ss">- </span><span class="in">`np.where(a)`</span> returns the **indices of the elements** of an array that are non-zero</span>
-<span id="cb36-75"><a href="#cb36-75"></a><span class="ss">- </span><span class="in">`np.argwhere(a)`</span> returns the **indices of the elements** of an array that are non-zero</span>
-<span id="cb36-76"><a href="#cb36-76"></a><span class="ss">- </span><span class="in">`np.nonzero(a)`</span> returns the **indices of the elements** of an array that are non-zero</span>
-<span id="cb36-77"><a href="#cb36-77"></a><span class="ss">- </span><span class="in">`np.searchsorted(a,v)`</span> returns the **index of the first element** of an array &lt;br&gt; </span>
-<span id="cb36-78"><a href="#cb36-78"></a>    **that is greater than or equal to a value**</span>
-<span id="cb36-79"><a href="#cb36-79"></a><span class="ss">- </span><span class="in">`np.extract(condition,a)`</span> returns the **elements of an array that satisfy a condition**</span>
+<span id="cb36-30"><a href="#cb36-30"></a><span class="fu">### Numpy {.unnumbered}</span></span>
+<span id="cb36-31"><a href="#cb36-31"></a></span>
+<span id="cb36-34"><a href="#cb36-34"></a><span class="in">```{python}</span></span>
+<span id="cb36-35"><a href="#cb36-35"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb36-36"><a href="#cb36-36"></a><span class="in">```</span></span>
+<span id="cb36-37"><a href="#cb36-37"></a></span>
+<span id="cb36-38"><a href="#cb36-38"></a><span class="ss">- </span><span class="in">`np.mean(a)`</span> returns the **mean** of the elements of an array</span>
+<span id="cb36-39"><a href="#cb36-39"></a><span class="ss">- </span><span class="in">`np.average(a)`</span> returns the **weighted average** of the elements of an array</span>
+<span id="cb36-40"><a href="#cb36-40"></a><span class="ss">- </span><span class="in">`np.median(a)`</span> returns the **median** of the elements of an array</span>
+<span id="cb36-41"><a href="#cb36-41"></a><span class="ss">- </span><span class="in">`np.max(a)`</span> returns the **maximum** of the elements of an array</span>
+<span id="cb36-42"><a href="#cb36-42"></a><span class="ss">- </span><span class="in">`np.min(a)`</span> returns **the minimum** of the elements of an array</span>
+<span id="cb36-43"><a href="#cb36-43"></a><span class="ss">- </span><span class="in">`np.std(a)`</span> returns **the standard** deviation of the elements of an array</span>
+<span id="cb36-44"><a href="#cb36-44"></a></span>
+<span id="cb36-45"><a href="#cb36-45"></a><span class="ss">- </span><span class="in">`np.var(a)`</span> returns **the variance** of the elements of an array</span>
+<span id="cb36-46"><a href="#cb36-46"></a><span class="ss">- </span><span class="in">`np.covar(a)`</span> returns the **covariance** of the elements of an array</span>
+<span id="cb36-47"><a href="#cb36-47"></a><span class="ss">- </span><span class="in">`np.percentile(a,p)`</span> returns the **p-th percentile** of the elements of an array</span>
+<span id="cb36-48"><a href="#cb36-48"></a><span class="ss">- </span><span class="in">`np.quantile(a,q)`</span> returns the **q-th quantile** of the elements of an array</span>
+<span id="cb36-49"><a href="#cb36-49"></a><span class="ss">- </span><span class="in">`np.corrcoef(a)`</span> returns the **correlation coefficient** of the elements of an array</span>
+<span id="cb36-50"><a href="#cb36-50"></a><span class="ss">- </span><span class="in">`np.corrcoef(a,b)`</span> returns the **correlation coefficient** of two arrays</span>
+<span id="cb36-51"><a href="#cb36-51"></a><span class="ss">- </span><span class="in">`np.histogram(a, [,bins,range,density,weights])`</span> returns the **histogram** of the elements of an array</span>
+<span id="cb36-52"><a href="#cb36-52"></a><span class="ss">- </span><span class="in">`np.histogram2d(a,b, [,bins,range,density,weights])`</span> returns the **2D histogram** of the elements of an array</span>
+<span id="cb36-53"><a href="#cb36-53"></a><span class="ss">- </span><span class="in">`np.histogramdd(a, [,bins,range,density,weights])`</span> returns the **nD histogram** of the elements of an array</span>
+<span id="cb36-54"><a href="#cb36-54"></a></span>
+<span id="cb36-57"><a href="#cb36-57"></a><span class="in">```{python}</span></span>
+<span id="cb36-58"><a href="#cb36-58"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
+<span id="cb36-59"><a href="#cb36-59"></a><span class="bu">print</span>(arr)</span>
+<span id="cb36-60"><a href="#cb36-60"></a><span class="bu">print</span>(<span class="st">"Mean: "</span>, np.mean(arr))</span>
+<span id="cb36-61"><a href="#cb36-61"></a><span class="bu">print</span>(<span class="st">"Weighted average: "</span>, np.average(arr, weights<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>]))</span>
+<span id="cb36-62"><a href="#cb36-62"></a><span class="bu">print</span>(<span class="st">"Median: "</span>, np.median(arr))</span>
+<span id="cb36-63"><a href="#cb36-63"></a><span class="bu">print</span>(<span class="st">"Standard deviation: "</span>, np.std(arr))</span>
+<span id="cb36-64"><a href="#cb36-64"></a><span class="bu">print</span>(<span class="st">"Variance: "</span>, np.var(arr))</span>
+<span id="cb36-65"><a href="#cb36-65"></a><span class="bu">print</span>(<span class="st">"Correlation coefficient: "</span>, np.corrcoef(arr))</span>
+<span id="cb36-66"><a href="#cb36-66"></a><span class="bu">print</span>(<span class="st">"Percentile: "</span>, np.percentile(arr, <span class="fl">0.25</span>))</span>
+<span id="cb36-67"><a href="#cb36-67"></a><span class="bu">print</span>(<span class="st">"Quantile: "</span>, np.quantile(arr, <span class="fl">0.75</span>))</span>
+<span id="cb36-68"><a href="#cb36-68"></a><span class="bu">print</span>(<span class="st">"IQR: "</span>, np.percentile(arr, <span class="fl">0.75</span>) <span class="op">-</span> np.percentile(arr, <span class="fl">0.25</span>))</span>
+<span id="cb36-69"><a href="#cb36-69"></a><span class="in">```</span></span>
+<span id="cb36-70"><a href="#cb36-70"></a></span>
+<span id="cb36-71"><a href="#cb36-71"></a><span class="ss">- </span><span class="in">`np.argmin(a)`</span> returns the **index of the minimum** element of an array</span>
+<span id="cb36-72"><a href="#cb36-72"></a><span class="ss">- </span><span class="in">`np.argmax(a)`</span> returns the **index of the maximum** element of an array</span>
+<span id="cb36-73"><a href="#cb36-73"></a><span class="ss">- </span><span class="in">`np.where(a)`</span> returns the **indices of the elements** of an array that are non-zero</span>
+<span id="cb36-74"><a href="#cb36-74"></a><span class="ss">- </span><span class="in">`np.argwhere(a)`</span> returns the **indices of the elements** of an array that are non-zero</span>
+<span id="cb36-75"><a href="#cb36-75"></a><span class="ss">- </span><span class="in">`np.nonzero(a)`</span> returns the **indices of the elements** of an array that are non-zero</span>
+<span id="cb36-76"><a href="#cb36-76"></a><span class="ss">- </span><span class="in">`np.searchsorted(a,v)`</span> returns the **index of the first element** of an array &lt;br&gt; </span>
+<span id="cb36-77"><a href="#cb36-77"></a>    **that is greater than or equal to a value**</span>
+<span id="cb36-78"><a href="#cb36-78"></a><span class="ss">- </span><span class="in">`np.extract(condition,a)`</span> returns the **elements of an array that satisfy a condition**</span>
+<span id="cb36-79"><a href="#cb36-79"></a></span>
 <span id="cb36-80"><a href="#cb36-80"></a></span>
-<span id="cb36-81"><a href="#cb36-81"></a></span>
-<span id="cb36-84"><a href="#cb36-84"></a><span class="in">```{python}</span></span>
-<span id="cb36-85"><a href="#cb36-85"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
-<span id="cb36-86"><a href="#cb36-86"></a><span class="bu">print</span>(arr)</span>
-<span id="cb36-87"><a href="#cb36-87"></a><span class="bu">print</span>(<span class="st">"Index of the maximum element: "</span>, np.argmax(arr))</span>
-<span id="cb36-88"><a href="#cb36-88"></a><span class="bu">print</span>(<span class="st">"Index of the minimum element: "</span>, np.argmin(arr))</span>
-<span id="cb36-89"><a href="#cb36-89"></a><span class="bu">print</span>(<span class="st">"Maximum element: "</span>, np.<span class="bu">max</span>(arr))</span>
-<span id="cb36-90"><a href="#cb36-90"></a><span class="bu">print</span>(<span class="st">"Minimum element: "</span>, np.<span class="bu">min</span>(arr))</span>
-<span id="cb36-91"><a href="#cb36-91"></a><span class="bu">print</span>(<span class="st">"Find the index of element </span><span class="ch">\"</span><span class="st">4</span><span class="ch">\"</span><span class="st">: "</span>, np.where(arr <span class="op">==</span> <span class="dv">4</span>))</span>
-<span id="cb36-92"><a href="#cb36-92"></a><span class="bu">print</span>(<span class="st">"Find the index of element </span><span class="ch">\"</span><span class="st">&gt;4</span><span class="ch">\"</span><span class="st">: "</span>, np.argwhere(arr <span class="op">&gt;</span> <span class="dv">4</span>),</span>
-<span id="cb36-93"><a href="#cb36-93"></a>       <span class="st">" and the elements are: "</span>, arr[np.where(arr <span class="op">&gt;</span> <span class="dv">4</span>)])</span>
-<span id="cb36-94"><a href="#cb36-94"></a><span class="in">```</span></span>
-<span id="cb36-95"><a href="#cb36-95"></a></span>
-<span id="cb36-96"><a href="#cb36-96"></a>---</span>
-<span id="cb36-97"><a href="#cb36-97"></a></span>
-<span id="cb36-98"><a href="#cb36-98"></a><span class="fu">### Pandas {.unnumbered}</span></span>
-<span id="cb36-99"><a href="#cb36-99"></a></span>
-<span id="cb36-102"><a href="#cb36-102"></a><span class="in">```{python}</span></span>
-<span id="cb36-103"><a href="#cb36-103"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb36-104"><a href="#cb36-104"></a>data <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb36-105"><a href="#cb36-105"></a>    <span class="st">"Name"</span>: [<span class="st">"Water"</span>, <span class="st">"Sulfuric Acid"</span>, <span class="st">"Ethanol"</span>, <span class="st">"Acetone"</span>, <span class="st">"Ammonia"</span>, <span class="st">"Benzene"</span>, <span class="st">"Methanol"</span>, <span class="st">"Glycerol"</span>],</span>
-<span id="cb36-106"><a href="#cb36-106"></a>    <span class="st">"Formula"</span>: [<span class="st">"H2O"</span>, <span class="st">"H2SO4"</span>, <span class="st">"C2H5OH"</span>, <span class="st">"C3H6O"</span>, <span class="st">"NH3"</span>, <span class="st">"C6H6"</span>, <span class="st">"CH3OH"</span>, <span class="st">"C3H8O3"</span>],</span>
-<span id="cb36-107"><a href="#cb36-107"></a>    <span class="st">"Molecular Weight (g/mol)"</span>: [<span class="fl">18.015</span>, <span class="fl">98.079</span>, <span class="fl">46.07</span>, <span class="fl">58.08</span>, <span class="fl">17.03</span>, <span class="fl">78.11</span>, <span class="fl">32.04</span>, <span class="fl">92.09</span>],</span>
-<span id="cb36-108"><a href="#cb36-108"></a>    <span class="st">"Viscosity (mPa·s)"</span>: [<span class="fl">1.002</span>, <span class="fl">24.0</span>, <span class="fl">1.2</span>, <span class="fl">0.32</span>, <span class="fl">0.26</span>, <span class="fl">0.65</span>, <span class="fl">0.544</span>, <span class="dv">1412</span>],</span>
-<span id="cb36-109"><a href="#cb36-109"></a>    <span class="st">"pH (Acidity)"</span>: [<span class="dv">7</span>, <span class="dv">1</span>, <span class="fl">7.33</span>, <span class="dv">7</span>, <span class="fl">11.6</span>, <span class="dv">7</span>, <span class="fl">7.4</span>, <span class="fl">5.5</span>],</span>
-<span id="cb36-110"><a href="#cb36-110"></a>    <span class="st">"Chemical Type"</span>: [<span class="st">"Inorganic"</span>, <span class="st">"Acid"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Ketone"</span>, <span class="st">"Base"</span>, <span class="st">"Aromatic Hydrocarbon"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Polyol"</span>],</span>
-<span id="cb36-111"><a href="#cb36-111"></a>    <span class="st">"Concentration (M)"</span>: [<span class="fl">55.5</span>, <span class="fl">18.0</span>, <span class="fl">1.0</span>, <span class="fl">0.8</span>, <span class="fl">0.5</span>, <span class="fl">0.1</span>, <span class="fl">1.5</span>, <span class="fl">1.2</span>]})</span>
-<span id="cb36-112"><a href="#cb36-112"></a><span class="in">```</span></span>
-<span id="cb36-113"><a href="#cb36-113"></a></span>
-<span id="cb36-114"><a href="#cb36-114"></a><span class="fu">### Repeation how to get an overview of the data {.unnumbered}</span></span>
-<span id="cb36-115"><a href="#cb36-115"></a><span class="ss">- </span><span class="in">`data.head()`</span>: Returns the first 5 rows of the dataframe</span>
-<span id="cb36-118"><a href="#cb36-118"></a><span class="in">```{python}</span></span>
-<span id="cb36-119"><a href="#cb36-119"></a><span class="bu">print</span>(<span class="st">"head of data: </span><span class="ch">\n</span><span class="st">"</span>,data.head()) <span class="co"># print the first 5 rows</span></span>
-<span id="cb36-120"><a href="#cb36-120"></a><span class="in">```</span></span>
-<span id="cb36-121"><a href="#cb36-121"></a></span>
-<span id="cb36-122"><a href="#cb36-122"></a><span class="ss">- </span><span class="in">`data.shape[0]`</span>: Returns the number of rows in the dataframe</span>
-<span id="cb36-123"><a href="#cb36-123"></a></span>
-<span id="cb36-126"><a href="#cb36-126"></a><span class="in">```{python}</span></span>
-<span id="cb36-127"><a href="#cb36-127"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span>
-<span id="cb36-128"><a href="#cb36-128"></a><span class="in">```</span></span>
-<span id="cb36-129"><a href="#cb36-129"></a></span>
-<span id="cb36-130"><a href="#cb36-130"></a><span class="ss">- </span><span class="in">`data.shape[1]`</span>: Returns the number of columns in the dataframe</span>
-<span id="cb36-131"><a href="#cb36-131"></a></span>
-<span id="cb36-134"><a href="#cb36-134"></a><span class="in">```{python}</span></span>
-<span id="cb36-135"><a href="#cb36-135"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span>
-<span id="cb36-136"><a href="#cb36-136"></a><span class="in">```</span></span>
-<span id="cb36-137"><a href="#cb36-137"></a></span>
-<span id="cb36-138"><a href="#cb36-138"></a><span class="ss">- </span><span class="in">`data["Name"]`</span>: Returns the column "Name" of the dataframe</span>
-<span id="cb36-139"><a href="#cb36-139"></a></span>
-<span id="cb36-142"><a href="#cb36-142"></a><span class="in">```{python}</span></span>
-<span id="cb36-143"><a href="#cb36-143"></a><span class="bu">print</span>(<span class="st">"Name of chemicals: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Name"</span>]) <span class="co"># print the column "Name"</span></span>
-<span id="cb36-144"><a href="#cb36-144"></a><span class="in">```</span></span>
-<span id="cb36-145"><a href="#cb36-145"></a></span>
-<span id="cb36-146"><a href="#cb36-146"></a><span class="ss">- </span><span class="in">`data.iloc[1]`</span>: Returns the second row of the dataframe</span>
-<span id="cb36-147"><a href="#cb36-147"></a></span>
-<span id="cb36-150"><a href="#cb36-150"></a><span class="in">```{python}</span></span>
-<span id="cb36-151"><a href="#cb36-151"></a><span class="bu">print</span>(<span class="st">"2. Row: </span><span class="ch">\n</span><span class="st">"</span>, data.iloc[<span class="dv">1</span>]) <span class="co"># print the second row</span></span>
-<span id="cb36-152"><a href="#cb36-152"></a><span class="in">```</span></span>
-<span id="cb36-153"><a href="#cb36-153"></a></span>
-<span id="cb36-154"><a href="#cb36-154"></a><span class="ss">- </span><span class="in">`data[data["Concentration (M)"] &gt; 5]`</span>: Returns the rows where the concentration is greater than 5</span>
-<span id="cb36-155"><a href="#cb36-155"></a><span class="ss">- </span><span class="in">`data.loc[data["Concentration (M)"]&gt;5,"Chemical Type"]`</span>: Returns the chemical type with a concentration higher than 5</span>
-<span id="cb36-156"><a href="#cb36-156"></a></span>
-<span id="cb36-159"><a href="#cb36-159"></a><span class="in">```{python}</span></span>
-<span id="cb36-160"><a href="#cb36-160"></a><span class="bu">print</span>(<span class="st">"Filter the rows where concentration is greater than 5: </span><span class="ch">\n</span><span class="st">"</span>, data[data[<span class="st">"Concentration (M)"</span>] <span class="op">&gt;</span> <span class="dv">5</span>])</span>
-<span id="cb36-161"><a href="#cb36-161"></a><span class="bu">print</span>(<span class="st">"Get the chemical type with a concentration higher than 5: </span><span class="ch">\n</span><span class="st">"</span>, </span>
-<span id="cb36-162"><a href="#cb36-162"></a>      data.loc[data[<span class="st">"Concentration (M)"</span>]<span class="op">&gt;</span><span class="dv">5</span>,<span class="st">"Chemical Type"</span>])</span>
-<span id="cb36-163"><a href="#cb36-163"></a><span class="in">```</span></span>
-<span id="cb36-164"><a href="#cb36-164"></a></span>
-<span id="cb36-165"><a href="#cb36-165"></a><span class="fu">### Descriptive Statistics {.unnumbered}</span></span>
-<span id="cb36-166"><a href="#cb36-166"></a></span>
-<span id="cb36-167"><a href="#cb36-167"></a><span class="ss">- </span><span class="in">`data.info()`</span>: Returns the information of the dataframe</span>
-<span id="cb36-168"><a href="#cb36-168"></a></span>
-<span id="cb36-171"><a href="#cb36-171"></a><span class="in">```{python}</span></span>
-<span id="cb36-172"><a href="#cb36-172"></a><span class="bu">print</span>(<span class="st">"Information of data: </span><span class="ch">\n</span><span class="st">"</span>, data.info()) <span class="co"># information of data</span></span>
-<span id="cb36-173"><a href="#cb36-173"></a><span class="in">```</span></span>
-<span id="cb36-174"><a href="#cb36-174"></a></span>
-<span id="cb36-175"><a href="#cb36-175"></a>**Statistical Summary**</span>
-<span id="cb36-176"><a href="#cb36-176"></a></span>
-<span id="cb36-177"><a href="#cb36-177"></a><span class="ss">- </span><span class="in">`data.describe()`</span>: Returns the statistical summary of the dataframe</span>
-<span id="cb36-178"><a href="#cb36-178"></a></span>
-<span id="cb36-181"><a href="#cb36-181"></a><span class="in">```{python}</span></span>
-<span id="cb36-182"><a href="#cb36-182"></a><span class="bu">print</span>(<span class="st">"Statistical summary: </span><span class="ch">\n</span><span class="st">"</span>, data.describe()) <span class="co"># statistical summary</span></span>
-<span id="cb36-183"><a href="#cb36-183"></a><span class="in">```</span></span>
-<span id="cb36-184"><a href="#cb36-184"></a></span>
-<span id="cb36-185"><a href="#cb36-185"></a>**Statistical Measures** </span>
-<span id="cb36-186"><a href="#cb36-186"></a></span>
-<span id="cb36-187"><a href="#cb36-187"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].mean()`</span>: Returns the mean of the column "Concentration (M)"</span>
-<span id="cb36-188"><a href="#cb36-188"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].std()`</span>: Returns the standard deviation of the column "Concentration (M)"</span>
-<span id="cb36-189"><a href="#cb36-189"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].median()`</span>: Returns the median of the column "Concentration (M)"</span>
-<span id="cb36-190"><a href="#cb36-190"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].max()`</span>: Returns the maximum of the column "Concentration (M)"</span>
-<span id="cb36-191"><a href="#cb36-191"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].min()`</span>: Returns the minimum of the column "Concentration (M)"</span>
-<span id="cb36-192"><a href="#cb36-192"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].sum()`</span>: Returns the sum of the column "Concentration (M)"</span>
-<span id="cb36-193"><a href="#cb36-193"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].mode()`</span>: Returns the mode of the column "Concentration (M)"</span>
-<span id="cb36-194"><a href="#cb36-194"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].percentile(q)`</span>: Returns the q-th percentile of the column "Concentration (M)"</span>
+<span id="cb36-83"><a href="#cb36-83"></a><span class="in">```{python}</span></span>
+<span id="cb36-84"><a href="#cb36-84"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
+<span id="cb36-85"><a href="#cb36-85"></a><span class="bu">print</span>(arr)</span>
+<span id="cb36-86"><a href="#cb36-86"></a><span class="bu">print</span>(<span class="st">"Index of the maximum element: "</span>, np.argmax(arr))</span>
+<span id="cb36-87"><a href="#cb36-87"></a><span class="bu">print</span>(<span class="st">"Index of the minimum element: "</span>, np.argmin(arr))</span>
+<span id="cb36-88"><a href="#cb36-88"></a><span class="bu">print</span>(<span class="st">"Maximum element: "</span>, np.<span class="bu">max</span>(arr))</span>
+<span id="cb36-89"><a href="#cb36-89"></a><span class="bu">print</span>(<span class="st">"Minimum element: "</span>, np.<span class="bu">min</span>(arr))</span>
+<span id="cb36-90"><a href="#cb36-90"></a><span class="bu">print</span>(<span class="st">"Find the index of element </span><span class="ch">\"</span><span class="st">4</span><span class="ch">\"</span><span class="st">: "</span>, np.where(arr <span class="op">==</span> <span class="dv">4</span>))</span>
+<span id="cb36-91"><a href="#cb36-91"></a><span class="bu">print</span>(<span class="st">"Find the index of element </span><span class="ch">\"</span><span class="st">&gt;4</span><span class="ch">\"</span><span class="st">: "</span>, np.argwhere(arr <span class="op">&gt;</span> <span class="dv">4</span>),</span>
+<span id="cb36-92"><a href="#cb36-92"></a>       <span class="st">" and the elements are: "</span>, arr[np.where(arr <span class="op">&gt;</span> <span class="dv">4</span>)])</span>
+<span id="cb36-93"><a href="#cb36-93"></a><span class="in">```</span></span>
+<span id="cb36-94"><a href="#cb36-94"></a></span>
+<span id="cb36-95"><a href="#cb36-95"></a>---</span>
+<span id="cb36-96"><a href="#cb36-96"></a></span>
+<span id="cb36-97"><a href="#cb36-97"></a><span class="fu">### Pandas {.unnumbered}</span></span>
+<span id="cb36-98"><a href="#cb36-98"></a></span>
+<span id="cb36-101"><a href="#cb36-101"></a><span class="in">```{python}</span></span>
+<span id="cb36-102"><a href="#cb36-102"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb36-103"><a href="#cb36-103"></a>data <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb36-104"><a href="#cb36-104"></a>    <span class="st">"Name"</span>: [<span class="st">"Water"</span>, <span class="st">"Sulfuric Acid"</span>, <span class="st">"Ethanol"</span>, <span class="st">"Acetone"</span>, <span class="st">"Ammonia"</span>, <span class="st">"Benzene"</span>, <span class="st">"Methanol"</span>, <span class="st">"Glycerol"</span>],</span>
+<span id="cb36-105"><a href="#cb36-105"></a>    <span class="st">"Formula"</span>: [<span class="st">"H2O"</span>, <span class="st">"H2SO4"</span>, <span class="st">"C2H5OH"</span>, <span class="st">"C3H6O"</span>, <span class="st">"NH3"</span>, <span class="st">"C6H6"</span>, <span class="st">"CH3OH"</span>, <span class="st">"C3H8O3"</span>],</span>
+<span id="cb36-106"><a href="#cb36-106"></a>    <span class="st">"Molecular Weight (g/mol)"</span>: [<span class="fl">18.015</span>, <span class="fl">98.079</span>, <span class="fl">46.07</span>, <span class="fl">58.08</span>, <span class="fl">17.03</span>, <span class="fl">78.11</span>, <span class="fl">32.04</span>, <span class="fl">92.09</span>],</span>
+<span id="cb36-107"><a href="#cb36-107"></a>    <span class="st">"Viscosity (mPa·s)"</span>: [<span class="fl">1.002</span>, <span class="fl">24.0</span>, <span class="fl">1.2</span>, <span class="fl">0.32</span>, <span class="fl">0.26</span>, <span class="fl">0.65</span>, <span class="fl">0.544</span>, <span class="dv">1412</span>],</span>
+<span id="cb36-108"><a href="#cb36-108"></a>    <span class="st">"pH (Acidity)"</span>: [<span class="dv">7</span>, <span class="dv">1</span>, <span class="fl">7.33</span>, <span class="dv">7</span>, <span class="fl">11.6</span>, <span class="dv">7</span>, <span class="fl">7.4</span>, <span class="fl">5.5</span>],</span>
+<span id="cb36-109"><a href="#cb36-109"></a>    <span class="st">"Chemical Type"</span>: [<span class="st">"Inorganic"</span>, <span class="st">"Acid"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Ketone"</span>, <span class="st">"Base"</span>, <span class="st">"Aromatic Hydrocarbon"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Polyol"</span>],</span>
+<span id="cb36-110"><a href="#cb36-110"></a>    <span class="st">"Concentration (M)"</span>: [<span class="fl">55.5</span>, <span class="fl">18.0</span>, <span class="fl">1.0</span>, <span class="fl">0.8</span>, <span class="fl">0.5</span>, <span class="fl">0.1</span>, <span class="fl">1.5</span>, <span class="fl">1.2</span>]})</span>
+<span id="cb36-111"><a href="#cb36-111"></a><span class="in">```</span></span>
+<span id="cb36-112"><a href="#cb36-112"></a></span>
+<span id="cb36-113"><a href="#cb36-113"></a><span class="fu">### Repeation how to get an overview of the data {.unnumbered}</span></span>
+<span id="cb36-114"><a href="#cb36-114"></a><span class="ss">- </span><span class="in">`data.head()`</span>: Returns the first 5 rows of the dataframe</span>
+<span id="cb36-117"><a href="#cb36-117"></a><span class="in">```{python}</span></span>
+<span id="cb36-118"><a href="#cb36-118"></a><span class="bu">print</span>(<span class="st">"head of data: </span><span class="ch">\n</span><span class="st">"</span>,data.head()) <span class="co"># print the first 5 rows</span></span>
+<span id="cb36-119"><a href="#cb36-119"></a><span class="in">```</span></span>
+<span id="cb36-120"><a href="#cb36-120"></a></span>
+<span id="cb36-121"><a href="#cb36-121"></a><span class="ss">- </span><span class="in">`data.shape[0]`</span>: Returns the number of rows in the dataframe</span>
+<span id="cb36-122"><a href="#cb36-122"></a></span>
+<span id="cb36-125"><a href="#cb36-125"></a><span class="in">```{python}</span></span>
+<span id="cb36-126"><a href="#cb36-126"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span>
+<span id="cb36-127"><a href="#cb36-127"></a><span class="in">```</span></span>
+<span id="cb36-128"><a href="#cb36-128"></a></span>
+<span id="cb36-129"><a href="#cb36-129"></a><span class="ss">- </span><span class="in">`data.shape[1]`</span>: Returns the number of columns in the dataframe</span>
+<span id="cb36-130"><a href="#cb36-130"></a></span>
+<span id="cb36-133"><a href="#cb36-133"></a><span class="in">```{python}</span></span>
+<span id="cb36-134"><a href="#cb36-134"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span>
+<span id="cb36-135"><a href="#cb36-135"></a><span class="in">```</span></span>
+<span id="cb36-136"><a href="#cb36-136"></a></span>
+<span id="cb36-137"><a href="#cb36-137"></a><span class="ss">- </span><span class="in">`data["Name"]`</span>: Returns the column "Name" of the dataframe</span>
+<span id="cb36-138"><a href="#cb36-138"></a></span>
+<span id="cb36-141"><a href="#cb36-141"></a><span class="in">```{python}</span></span>
+<span id="cb36-142"><a href="#cb36-142"></a><span class="bu">print</span>(<span class="st">"Name of chemicals: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Name"</span>]) <span class="co"># print the column "Name"</span></span>
+<span id="cb36-143"><a href="#cb36-143"></a><span class="in">```</span></span>
+<span id="cb36-144"><a href="#cb36-144"></a></span>
+<span id="cb36-145"><a href="#cb36-145"></a><span class="ss">- </span><span class="in">`data.iloc[1]`</span>: Returns the second row of the dataframe</span>
+<span id="cb36-146"><a href="#cb36-146"></a></span>
+<span id="cb36-149"><a href="#cb36-149"></a><span class="in">```{python}</span></span>
+<span id="cb36-150"><a href="#cb36-150"></a><span class="bu">print</span>(<span class="st">"2. Row: </span><span class="ch">\n</span><span class="st">"</span>, data.iloc[<span class="dv">1</span>]) <span class="co"># print the second row</span></span>
+<span id="cb36-151"><a href="#cb36-151"></a><span class="in">```</span></span>
+<span id="cb36-152"><a href="#cb36-152"></a></span>
+<span id="cb36-153"><a href="#cb36-153"></a><span class="ss">- </span><span class="in">`data[data["Concentration (M)"] &gt; 5]`</span>: Returns the rows where the concentration is greater than 5</span>
+<span id="cb36-154"><a href="#cb36-154"></a><span class="ss">- </span><span class="in">`data.loc[data["Concentration (M)"]&gt;5,"Chemical Type"]`</span>: Returns the chemical type with a concentration higher than 5</span>
+<span id="cb36-155"><a href="#cb36-155"></a></span>
+<span id="cb36-158"><a href="#cb36-158"></a><span class="in">```{python}</span></span>
+<span id="cb36-159"><a href="#cb36-159"></a><span class="bu">print</span>(<span class="st">"Filter the rows where concentration is greater than 5: </span><span class="ch">\n</span><span class="st">"</span>, data[data[<span class="st">"Concentration (M)"</span>] <span class="op">&gt;</span> <span class="dv">5</span>])</span>
+<span id="cb36-160"><a href="#cb36-160"></a><span class="bu">print</span>(<span class="st">"Get the chemical type with a concentration higher than 5: </span><span class="ch">\n</span><span class="st">"</span>, </span>
+<span id="cb36-161"><a href="#cb36-161"></a>      data.loc[data[<span class="st">"Concentration (M)"</span>]<span class="op">&gt;</span><span class="dv">5</span>,<span class="st">"Chemical Type"</span>])</span>
+<span id="cb36-162"><a href="#cb36-162"></a><span class="in">```</span></span>
+<span id="cb36-163"><a href="#cb36-163"></a></span>
+<span id="cb36-164"><a href="#cb36-164"></a><span class="fu">### Descriptive Statistics {.unnumbered}</span></span>
+<span id="cb36-165"><a href="#cb36-165"></a></span>
+<span id="cb36-166"><a href="#cb36-166"></a><span class="ss">- </span><span class="in">`data.info()`</span>: Returns the information of the dataframe</span>
+<span id="cb36-167"><a href="#cb36-167"></a></span>
+<span id="cb36-170"><a href="#cb36-170"></a><span class="in">```{python}</span></span>
+<span id="cb36-171"><a href="#cb36-171"></a><span class="bu">print</span>(<span class="st">"Information of data: </span><span class="ch">\n</span><span class="st">"</span>, data.info()) <span class="co"># information of data</span></span>
+<span id="cb36-172"><a href="#cb36-172"></a><span class="in">```</span></span>
+<span id="cb36-173"><a href="#cb36-173"></a></span>
+<span id="cb36-174"><a href="#cb36-174"></a>**Statistical Summary**</span>
+<span id="cb36-175"><a href="#cb36-175"></a></span>
+<span id="cb36-176"><a href="#cb36-176"></a><span class="ss">- </span><span class="in">`data.describe()`</span>: Returns the statistical summary of the dataframe</span>
+<span id="cb36-177"><a href="#cb36-177"></a></span>
+<span id="cb36-180"><a href="#cb36-180"></a><span class="in">```{python}</span></span>
+<span id="cb36-181"><a href="#cb36-181"></a><span class="bu">print</span>(<span class="st">"Statistical summary: </span><span class="ch">\n</span><span class="st">"</span>, data.describe()) <span class="co"># statistical summary</span></span>
+<span id="cb36-182"><a href="#cb36-182"></a><span class="in">```</span></span>
+<span id="cb36-183"><a href="#cb36-183"></a></span>
+<span id="cb36-184"><a href="#cb36-184"></a>**Statistical Measures** </span>
+<span id="cb36-185"><a href="#cb36-185"></a></span>
+<span id="cb36-186"><a href="#cb36-186"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].mean()`</span>: Returns the mean of the column "Concentration (M)"</span>
+<span id="cb36-187"><a href="#cb36-187"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].std()`</span>: Returns the standard deviation of the column "Concentration (M)"</span>
+<span id="cb36-188"><a href="#cb36-188"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].median()`</span>: Returns the median of the column "Concentration (M)"</span>
+<span id="cb36-189"><a href="#cb36-189"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].max()`</span>: Returns the maximum of the column "Concentration (M)"</span>
+<span id="cb36-190"><a href="#cb36-190"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].min()`</span>: Returns the minimum of the column "Concentration (M)"</span>
+<span id="cb36-191"><a href="#cb36-191"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].sum()`</span>: Returns the sum of the column "Concentration (M)"</span>
+<span id="cb36-192"><a href="#cb36-192"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].mode()`</span>: Returns the mode of the column "Concentration (M)"</span>
+<span id="cb36-193"><a href="#cb36-193"></a><span class="ss">- </span><span class="in">`data["Concentration (M)"].percentile(q)`</span>: Returns the q-th percentile of the column "Concentration (M)"</span>
+<span id="cb36-194"><a href="#cb36-194"></a></span>
 <span id="cb36-195"><a href="#cb36-195"></a></span>
-<span id="cb36-196"><a href="#cb36-196"></a></span>
-<span id="cb36-199"><a href="#cb36-199"></a><span class="in">```{python}</span></span>
-<span id="cb36-200"><a href="#cb36-200"></a><span class="bu">print</span>(<span class="st">"mean of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].mean()) <span class="co"># mean of concentration</span></span>
-<span id="cb36-201"><a href="#cb36-201"></a><span class="bu">print</span>(<span class="st">"std of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].std()) <span class="co"># standard deviation of concentration</span></span>
-<span id="cb36-202"><a href="#cb36-202"></a><span class="bu">print</span>(<span class="st">"median of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].median()) <span class="co"># median of concentration</span></span>
-<span id="cb36-203"><a href="#cb36-203"></a><span class="bu">print</span>(<span class="st">"max of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">max</span>()) <span class="co"># max of concentration</span></span>
-<span id="cb36-204"><a href="#cb36-204"></a><span class="bu">print</span>(<span class="st">"min of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">min</span>()) <span class="co"># min of concentration</span></span>
-<span id="cb36-205"><a href="#cb36-205"></a><span class="bu">print</span>(<span class="st">"sum of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">sum</span>()) <span class="co"># sum of concentration</span></span>
-<span id="cb36-206"><a href="#cb36-206"></a><span class="bu">print</span>(<span class="st">"mode of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].mode()) <span class="co"># mode of concentration</span></span>
-<span id="cb36-207"><a href="#cb36-207"></a><span class="bu">print</span>(<span class="st">"percentile of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].quantile(<span class="fl">0.25</span>)) <span class="co"># 25th percentile of concentration</span></span>
-<span id="cb36-208"><a href="#cb36-208"></a><span class="bu">print</span>(<span class="st">"IQR of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].quantile(<span class="fl">0.75</span>) <span class="op">-</span> data[<span class="st">"Concentration (M)"</span>].quantile(<span class="fl">0.25</span>)) <span class="co"># IQR of concentration</span></span>
-<span id="cb36-209"><a href="#cb36-209"></a><span class="in">```</span></span>
-<span id="cb36-210"><a href="#cb36-210"></a></span>
-<span id="cb36-211"><a href="#cb36-211"></a><span class="ss">- </span><span class="in">`data.groupby("Chemical Type")["Concentration (M)"].mean()`</span>: Returns the mean of the column "Concentration (M)" grouped by "Chemical Type"</span>
-<span id="cb36-212"><a href="#cb36-212"></a></span>
-<span id="cb36-215"><a href="#cb36-215"></a><span class="in">```{python}</span></span>
-<span id="cb36-216"><a href="#cb36-216"></a><span class="bu">print</span>(<span class="st">"Mean of concentration group by type: </span><span class="ch">\n</span><span class="st">"</span>, data.groupby(<span class="st">"Chemical Type"</span>)[<span class="st">"Concentration (M)"</span>].mean())</span>
-<span id="cb36-217"><a href="#cb36-217"></a><span class="in">```</span></span>
-<span id="cb36-218"><a href="#cb36-218"></a></span>
-<span id="cb36-219"><a href="#cb36-219"></a><span class="ss">- </span><span class="in">`data.agg({"Concentration (M)": ["mean", "std", "median", "max", "min", "sum"]})`</span>: Returns the mean, standard deviation, median, maximum, minimum, and sum of the column "Concentration (M)"</span>
-<span id="cb36-222"><a href="#cb36-222"></a><span class="in">```{python}</span></span>
-<span id="cb36-223"><a href="#cb36-223"></a><span class="bu">print</span>(<span class="st">"Aggregate the data: </span><span class="ch">\n</span><span class="st">"</span>, data.agg({<span class="st">"Concentration (M)"</span>: [<span class="st">"mean"</span>, <span class="st">"std"</span>, <span class="st">"median"</span>, <span class="st">"max"</span>, <span class="st">"min"</span>, <span class="st">"sum"</span>]}))</span>
-<span id="cb36-224"><a href="#cb36-224"></a><span class="in">```</span></span>
-<span id="cb36-225"><a href="#cb36-225"></a></span>
-<span id="cb36-226"><a href="#cb36-226"></a>**Correlation and Covariance**</span>
-<span id="cb36-227"><a href="#cb36-227"></a></span>
-<span id="cb36-228"><a href="#cb36-228"></a><span class="ss">- </span><span class="in">`data.corr()`</span>: Returns the correlation matrix of the dataframe</span>
-<span id="cb36-229"><a href="#cb36-229"></a><span class="ss">- </span><span class="in">`data.cov()`</span>: Returns the covariance matrix of the dataframe</span>
-<span id="cb36-230"><a href="#cb36-230"></a></span>
-<span id="cb36-233"><a href="#cb36-233"></a><span class="in">```{python}</span></span>
-<span id="cb36-234"><a href="#cb36-234"></a><span class="bu">print</span>(<span class="st">"Correlation matrix: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].corr(data[<span class="st">"Molecular Weight (g/mol)"</span>]))</span>
-<span id="cb36-235"><a href="#cb36-235"></a><span class="bu">print</span>(<span class="st">"Covariance matrix: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].cov(data[<span class="st">"Molecular Weight (g/mol)"</span>]))</span>
-<span id="cb36-236"><a href="#cb36-236"></a><span class="in">```</span></span>
-<span id="cb36-237"><a href="#cb36-237"></a></span>
-<span id="cb36-238"><a href="#cb36-238"></a>**Pivot Tables**</span>
-<span id="cb36-239"><a href="#cb36-239"></a>Pivot tables are used to summarize and aggregate data inside a dataframe.</span>
-<span id="cb36-240"><a href="#cb36-240"></a><span class="ss">- </span><span class="in">`data.pivot_table(index="Chemical Type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean")`</span>: Returns a pivot table of the dataframe</span>
-<span id="cb36-241"><a href="#cb36-241"></a></span>
-<span id="cb36-244"><a href="#cb36-244"></a><span class="in">```{python}</span></span>
-<span id="cb36-245"><a href="#cb36-245"></a>data.pivot_table(index<span class="op">=</span><span class="st">"Chemical Type"</span>, columns<span class="op">=</span><span class="st">"Concentration (M)"</span>, values<span class="op">=</span><span class="st">"Molecular Weight (g/mol)"</span>, aggfunc<span class="op">=</span><span class="st">"mean"</span>)</span>
-<span id="cb36-246"><a href="#cb36-246"></a><span class="in">```</span></span>
+<span id="cb36-198"><a href="#cb36-198"></a><span class="in">```{python}</span></span>
+<span id="cb36-199"><a href="#cb36-199"></a><span class="bu">print</span>(<span class="st">"mean of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].mean()) <span class="co"># mean of concentration</span></span>
+<span id="cb36-200"><a href="#cb36-200"></a><span class="bu">print</span>(<span class="st">"std of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].std()) <span class="co"># standard deviation of concentration</span></span>
+<span id="cb36-201"><a href="#cb36-201"></a><span class="bu">print</span>(<span class="st">"median of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].median()) <span class="co"># median of concentration</span></span>
+<span id="cb36-202"><a href="#cb36-202"></a><span class="bu">print</span>(<span class="st">"max of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">max</span>()) <span class="co"># max of concentration</span></span>
+<span id="cb36-203"><a href="#cb36-203"></a><span class="bu">print</span>(<span class="st">"min of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">min</span>()) <span class="co"># min of concentration</span></span>
+<span id="cb36-204"><a href="#cb36-204"></a><span class="bu">print</span>(<span class="st">"sum of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">sum</span>()) <span class="co"># sum of concentration</span></span>
+<span id="cb36-205"><a href="#cb36-205"></a><span class="bu">print</span>(<span class="st">"mode of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].mode()) <span class="co"># mode of concentration</span></span>
+<span id="cb36-206"><a href="#cb36-206"></a><span class="bu">print</span>(<span class="st">"percentile of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].quantile(<span class="fl">0.25</span>)) <span class="co"># 25th percentile of concentration</span></span>
+<span id="cb36-207"><a href="#cb36-207"></a><span class="bu">print</span>(<span class="st">"IQR of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].quantile(<span class="fl">0.75</span>) <span class="op">-</span> data[<span class="st">"Concentration (M)"</span>].quantile(<span class="fl">0.25</span>)) <span class="co"># IQR of concentration</span></span>
+<span id="cb36-208"><a href="#cb36-208"></a><span class="in">```</span></span>
+<span id="cb36-209"><a href="#cb36-209"></a></span>
+<span id="cb36-210"><a href="#cb36-210"></a><span class="ss">- </span><span class="in">`data.groupby("Chemical Type")["Concentration (M)"].mean()`</span>: Returns the mean of the column "Concentration (M)" grouped by "Chemical Type"</span>
+<span id="cb36-211"><a href="#cb36-211"></a></span>
+<span id="cb36-214"><a href="#cb36-214"></a><span class="in">```{python}</span></span>
+<span id="cb36-215"><a href="#cb36-215"></a><span class="bu">print</span>(<span class="st">"Mean of concentration group by type: </span><span class="ch">\n</span><span class="st">"</span>, data.groupby(<span class="st">"Chemical Type"</span>)[<span class="st">"Concentration (M)"</span>].mean())</span>
+<span id="cb36-216"><a href="#cb36-216"></a><span class="in">```</span></span>
+<span id="cb36-217"><a href="#cb36-217"></a></span>
+<span id="cb36-218"><a href="#cb36-218"></a><span class="ss">- </span><span class="in">`data.agg({"Concentration (M)": ["mean", "std", "median", "max", "min", "sum"]})`</span>: Returns the mean, standard deviation, median, maximum, minimum, and sum of the column "Concentration (M)"</span>
+<span id="cb36-221"><a href="#cb36-221"></a><span class="in">```{python}</span></span>
+<span id="cb36-222"><a href="#cb36-222"></a><span class="bu">print</span>(<span class="st">"Aggregate the data: </span><span class="ch">\n</span><span class="st">"</span>, data.agg({<span class="st">"Concentration (M)"</span>: [<span class="st">"mean"</span>, <span class="st">"std"</span>, <span class="st">"median"</span>, <span class="st">"max"</span>, <span class="st">"min"</span>, <span class="st">"sum"</span>]}))</span>
+<span id="cb36-223"><a href="#cb36-223"></a><span class="in">```</span></span>
+<span id="cb36-224"><a href="#cb36-224"></a></span>
+<span id="cb36-225"><a href="#cb36-225"></a>**Correlation and Covariance**</span>
+<span id="cb36-226"><a href="#cb36-226"></a></span>
+<span id="cb36-227"><a href="#cb36-227"></a><span class="ss">- </span><span class="in">`data.corr()`</span>: Returns the correlation matrix of the dataframe</span>
+<span id="cb36-228"><a href="#cb36-228"></a><span class="ss">- </span><span class="in">`data.cov()`</span>: Returns the covariance matrix of the dataframe</span>
+<span id="cb36-229"><a href="#cb36-229"></a></span>
+<span id="cb36-232"><a href="#cb36-232"></a><span class="in">```{python}</span></span>
+<span id="cb36-233"><a href="#cb36-233"></a><span class="bu">print</span>(<span class="st">"Correlation matrix: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].corr(data[<span class="st">"Molecular Weight (g/mol)"</span>]))</span>
+<span id="cb36-234"><a href="#cb36-234"></a><span class="bu">print</span>(<span class="st">"Covariance matrix: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].cov(data[<span class="st">"Molecular Weight (g/mol)"</span>]))</span>
+<span id="cb36-235"><a href="#cb36-235"></a><span class="in">```</span></span>
+<span id="cb36-236"><a href="#cb36-236"></a></span>
+<span id="cb36-237"><a href="#cb36-237"></a>**Pivot Tables**</span>
+<span id="cb36-238"><a href="#cb36-238"></a>Pivot tables are used to summarize and aggregate data inside a dataframe.</span>
+<span id="cb36-239"><a href="#cb36-239"></a><span class="ss">- </span><span class="in">`data.pivot_table(index="Chemical Type", columns="Concentration (M)", values="Molecular Weight (g/mol)", aggfunc="mean")`</span>: Returns a pivot table of the dataframe</span>
+<span id="cb36-240"><a href="#cb36-240"></a></span>
+<span id="cb36-243"><a href="#cb36-243"></a><span class="in">```{python}</span></span>
+<span id="cb36-244"><a href="#cb36-244"></a>data.pivot_table(index<span class="op">=</span><span class="st">"Chemical Type"</span>, columns<span class="op">=</span><span class="st">"Concentration (M)"</span>, values<span class="op">=</span><span class="st">"Molecular Weight (g/mol)"</span>, aggfunc<span class="op">=</span><span class="st">"mean"</span>)</span>
+<span id="cb36-245"><a href="#cb36-245"></a><span class="in">```</span></span>
+<span id="cb36-246"><a href="#cb36-246"></a></span>
 <span id="cb36-247"><a href="#cb36-247"></a></span>
-<span id="cb36-248"><a href="#cb36-248"></a></span>
-<span id="cb36-249"><a href="#cb36-249"></a>**Comparison of Data**</span>
+<span id="cb36-248"><a href="#cb36-248"></a>**Comparison of Data**</span>
+<span id="cb36-249"><a href="#cb36-249"></a></span>
 <span id="cb36-250"><a href="#cb36-250"></a></span>
-<span id="cb36-251"><a href="#cb36-251"></a></span>
-<span id="cb36-252"><a href="#cb36-252"></a><span class="ss">- </span><span class="in">`data1 = data.compare(data2)`</span>: Compares two dataframes and returns the differences</span>
-<span id="cb36-253"><a href="#cb36-253"></a></span>
-<span id="cb36-256"><a href="#cb36-256"></a><span class="in">```{python}</span></span>
-<span id="cb36-257"><a href="#cb36-257"></a>data1 <span class="op">=</span> data.copy()</span>
-<span id="cb36-258"><a href="#cb36-258"></a>data1[<span class="st">"Concentration (M)"</span>].iloc[<span class="dv">0</span>] <span class="op">=</span> <span class="fl">0.5</span></span>
-<span id="cb36-259"><a href="#cb36-259"></a><span class="bu">print</span>(<span class="st">"Comparison of data: </span><span class="ch">\n</span><span class="st">"</span>, </span>
-<span id="cb36-260"><a href="#cb36-260"></a>data.compare(data1))</span>
-<span id="cb36-261"><a href="#cb36-261"></a><span class="in">```</span></span>
-<span id="cb36-262"><a href="#cb36-262"></a></span>
-<span id="cb36-263"><a href="#cb36-263"></a>**Window Functions**</span>
-<span id="cb36-264"><a href="#cb36-264"></a></span>
-<span id="cb36-265"><a href="#cb36-265"></a>Window functions are used to perform calculations on a subset of the data.</span>
-<span id="cb36-266"><a href="#cb36-266"></a>It is useful for calculating moving averages, cumulative sums, and other rolling calculations.</span>
-<span id="cb36-267"><a href="#cb36-267"></a>It helps to smooth out the data and identify trends.</span>
-<span id="cb36-268"><a href="#cb36-268"></a></span>
-<span id="cb36-269"><a href="#cb36-269"></a><span class="ss">- </span><span class="in">`df.rolling(...)`</span>: perform rolling window calculations</span>
+<span id="cb36-251"><a href="#cb36-251"></a><span class="ss">- </span><span class="in">`data1 = data.compare(data2)`</span>: Compares two dataframes and returns the differences</span>
+<span id="cb36-252"><a href="#cb36-252"></a></span>
+<span id="cb36-255"><a href="#cb36-255"></a><span class="in">```{python}</span></span>
+<span id="cb36-256"><a href="#cb36-256"></a>data1 <span class="op">=</span> data.copy()</span>
+<span id="cb36-257"><a href="#cb36-257"></a>data1[<span class="st">"Concentration (M)"</span>].iloc[<span class="dv">0</span>] <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb36-258"><a href="#cb36-258"></a><span class="bu">print</span>(<span class="st">"Comparison of data: </span><span class="ch">\n</span><span class="st">"</span>, </span>
+<span id="cb36-259"><a href="#cb36-259"></a>data.compare(data1))</span>
+<span id="cb36-260"><a href="#cb36-260"></a><span class="in">```</span></span>
+<span id="cb36-261"><a href="#cb36-261"></a></span>
+<span id="cb36-262"><a href="#cb36-262"></a>**Window Functions**</span>
+<span id="cb36-263"><a href="#cb36-263"></a></span>
+<span id="cb36-264"><a href="#cb36-264"></a>Window functions are used to perform calculations on a subset of the data.</span>
+<span id="cb36-265"><a href="#cb36-265"></a>It is useful for calculating moving averages, cumulative sums, and other rolling calculations.</span>
+<span id="cb36-266"><a href="#cb36-266"></a>It helps to smooth out the data and identify trends.</span>
+<span id="cb36-267"><a href="#cb36-267"></a></span>
+<span id="cb36-268"><a href="#cb36-268"></a><span class="ss">- </span><span class="in">`df.rolling(...)`</span>: perform rolling window calculations</span>
+<span id="cb36-269"><a href="#cb36-269"></a><span class="ss">- </span><span class="in">`df.rolling(...).mean()`</span>: calculate the rolling mean</span>
 <span id="cb36-270"><a href="#cb36-270"></a><span class="ss">- </span><span class="in">`df.rolling(...).mean()`</span>: calculate the rolling mean</span>
-<span id="cb36-271"><a href="#cb36-271"></a><span class="ss">- </span><span class="in">`df.rolling(...).mean()`</span>: calculate the rolling mean</span>
-<span id="cb36-272"><a href="#cb36-272"></a><span class="ss">- </span><span class="in">`df.rolling(...).sum()`</span>: calculate the rolling sum</span>
-<span id="cb36-273"><a href="#cb36-273"></a><span class="ss">- </span><span class="in">`df.rolling(...).std()`</span>: calculate the rolling standard deviation</span>
-<span id="cb36-274"><a href="#cb36-274"></a><span class="ss">- </span><span class="in">`df.rolling(...).min()`</span>: calculate the rolling minimum</span>
-<span id="cb36-275"><a href="#cb36-275"></a><span class="ss">- </span><span class="in">`df.rolling(...).max()`</span>: calculate the rolling maximum</span>
-<span id="cb36-276"><a href="#cb36-276"></a><span class="ss">- </span><span class="in">`df.rolling(...).apply(...)`</span>: apply a function to the rolling window</span>
-<span id="cb36-277"><a href="#cb36-277"></a><span class="ss">- </span><span class="in">`df.rolling(...).agg(...)`</span>: aggregate the data in the rolling window</span>
-<span id="cb36-278"><a href="#cb36-278"></a><span class="ss">- </span><span class="in">`df.rolling(...).transform(...)`</span>: transform the data in the rolling window</span>
-<span id="cb36-279"><a href="#cb36-279"></a><span class="ss">- </span><span class="in">`df.rolling(...).count()`</span>: count the data in the rolling window</span>
-<span id="cb36-280"><a href="#cb36-280"></a></span>
-<span id="cb36-283"><a href="#cb36-283"></a><span class="in">```{python}</span></span>
-<span id="cb36-284"><a href="#cb36-284"></a><span class="co"># calculate the rolling mean</span></span>
-<span id="cb36-285"><a href="#cb36-285"></a><span class="bu">print</span>(<span class="st">"rolling mean: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].rolling(window<span class="op">=</span><span class="dv">2</span>).mean())</span>
-<span id="cb36-286"><a href="#cb36-286"></a><span class="in">```</span></span>
-<span id="cb36-287"><a href="#cb36-287"></a></span>
-<span id="cb36-288"><a href="#cb36-288"></a>---</span>
-<span id="cb36-289"><a href="#cb36-289"></a></span>
-<span id="cb36-290"><a href="#cb36-290"></a><span class="fu">## Example {.unnumbered}</span></span>
+<span id="cb36-271"><a href="#cb36-271"></a><span class="ss">- </span><span class="in">`df.rolling(...).sum()`</span>: calculate the rolling sum</span>
+<span id="cb36-272"><a href="#cb36-272"></a><span class="ss">- </span><span class="in">`df.rolling(...).std()`</span>: calculate the rolling standard deviation</span>
+<span id="cb36-273"><a href="#cb36-273"></a><span class="ss">- </span><span class="in">`df.rolling(...).min()`</span>: calculate the rolling minimum</span>
+<span id="cb36-274"><a href="#cb36-274"></a><span class="ss">- </span><span class="in">`df.rolling(...).max()`</span>: calculate the rolling maximum</span>
+<span id="cb36-275"><a href="#cb36-275"></a><span class="ss">- </span><span class="in">`df.rolling(...).apply(...)`</span>: apply a function to the rolling window</span>
+<span id="cb36-276"><a href="#cb36-276"></a><span class="ss">- </span><span class="in">`df.rolling(...).agg(...)`</span>: aggregate the data in the rolling window</span>
+<span id="cb36-277"><a href="#cb36-277"></a><span class="ss">- </span><span class="in">`df.rolling(...).transform(...)`</span>: transform the data in the rolling window</span>
+<span id="cb36-278"><a href="#cb36-278"></a><span class="ss">- </span><span class="in">`df.rolling(...).count()`</span>: count the data in the rolling window</span>
+<span id="cb36-279"><a href="#cb36-279"></a></span>
+<span id="cb36-282"><a href="#cb36-282"></a><span class="in">```{python}</span></span>
+<span id="cb36-283"><a href="#cb36-283"></a><span class="co"># calculate the rolling mean</span></span>
+<span id="cb36-284"><a href="#cb36-284"></a><span class="bu">print</span>(<span class="st">"rolling mean: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].rolling(window<span class="op">=</span><span class="dv">2</span>).mean())</span>
+<span id="cb36-285"><a href="#cb36-285"></a><span class="in">```</span></span>
+<span id="cb36-286"><a href="#cb36-286"></a></span>
+<span id="cb36-287"><a href="#cb36-287"></a>---</span>
+<span id="cb36-288"><a href="#cb36-288"></a></span>
+<span id="cb36-289"><a href="#cb36-289"></a><span class="fu">## Example {.unnumbered}</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

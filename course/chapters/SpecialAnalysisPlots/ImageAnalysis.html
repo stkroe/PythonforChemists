@@ -77,6 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-e73e8d7a663c5560bcf23225ddbdc55a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-90ea52f1b8d8195fbfcbff9552eb0e88.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -107,6 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="Analysis of Image Data – Data Analysis and Visualization for Chemists and Material Scientists">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
 
@@ -506,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#image-data-analysis" id="toc-image-data-analysis" class="nav-link active" data-scroll-target="#image-data-analysis">Image Data Analysis</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SpecialAnalysisPlots/ImageAnalysis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/ImageAnalysis.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/ImageAnalysis.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SpecialAnalysisPlots/ImageAnalysis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/ImageAnalysis.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/ImageAnalysis.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -530,6 +532,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p>Difficulty level: <span style="color:#2B7492"><i class="bi-star-fill " style="" role="img" aria-hidden="true"></i> <i class="bi-star-fill " style="" role="img" aria-hidden="true"></i> </span></p>
 <section id="image-data-analysis" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="image-data-analysis">Image Data Analysis</h2>
 
@@ -1175,17 +1178,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-3"><a href="#cb1-3"></a><span class="an">execute:</span><span class="co"> </span></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="co">  echo: True</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a><span class="co">  eval: True</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="an">other-links:</span><span class="co"> </span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co">      - text: "Download Code"</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co">        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/ImageAnalysis.ipynb"</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co">        icon: "journal"</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="an">code-links:</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="co">      - text: "Open in Colab"</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/ImageAnalysis.ipynb"</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co">        icon: "laptop"</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="an">code-links:</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">      - text: "Open in Colab"</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/ImageAnalysis.ipynb"</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co">        icon: "laptop"</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">      - text: "Download Code"</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co">        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/ImageAnalysis.ipynb"</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co">        icon: "journal"</span></span>
 <span id="cb1-14"><a href="#cb1-14"></a><span class="co">---</span> </span>
-<span id="cb1-15"><a href="#cb1-15"></a></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="fu">##   Image Data Analysis {.unnumbered}</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-15"><a href="#cb1-15"></a>Difficulty level: &lt;span style="color:#2B7492"&gt;{{&lt; bi star-fill &gt;}} {{&lt; bi star-fill &gt;}} &lt;/span&gt;</span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="fu">##   Image Data Analysis {.unnumbered}</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

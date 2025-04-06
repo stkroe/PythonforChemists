@@ -77,6 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-e73e8d7a663c5560bcf23225ddbdc55a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-90ea52f1b8d8195fbfcbff9552eb0e88.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -107,6 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="Advanced Plot Types – Data Analysis and Visualization for Chemists and Material Scientists">
+<meta property="og:description" content="">
 <meta property="og:image" content="AdvancedPlotTypes_files/figure-html/cell-2-output-1.png">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
@@ -510,7 +512,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#network-plot" id="toc-network-plot" class="nav-link" data-scroll-target="#network-plot">Network Plot</a></li>
   <li><a href="#d-plot" id="toc-d-plot" class="nav-link" data-scroll-target="#d-plot">3D Plot</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/PlotTypes/AdvancedPlotTypes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/AdvancedPlotTypes.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/AdvancedPlotTypes.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/PlotTypes/AdvancedPlotTypes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/AdvancedPlotTypes.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/AdvancedPlotTypes.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -534,12 +536,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p>Difficulty level: <span style="color:#2B7492"><i class="bi-star-fill " style="" role="img" aria-hidden="true"></i> <i class="bi-star-fill " style="" role="img" aria-hidden="true"></i> </span></p>
 <ul>
 <li><a href="https://networkx.org/documentation/stable/auto_examples/index.html">Network plot</a>: It is used to show the relationship between different nodes. It is used to show the relationship between different entities <em>e.g.</em> protein-protein interaction network <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/pmc4017556/">PPI</a>.</li>
 </ul>
 <section id="multiple-correlation-analysis" class="level2 unnumberd">
 <h2 class="unnumberd anchored" data-anchor-id="multiple-correlation-analysis">Multiple Correlation Analysis</h2>
-<div id="cae1a8f9" class="cell" data-execution_count="1">
+<div id="58f5b522" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -567,7 +570,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="pca-plot" class="level2 unnumberd">
 <h2 class="unnumberd anchored" data-anchor-id="pca-plot">PCA Plot</h2>
-<div id="76815ed8" class="cell" data-execution_count="2">
+<div id="becd6832" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
@@ -602,7 +605,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="network-plot" class="level2 unnumberd">
 <h2 class="unnumberd anchored" data-anchor-id="network-plot">Network Plot</h2>
-<div id="537c1b6d" class="cell" data-execution_count="3">
+<div id="8114ee22" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> networkx <span class="im">as</span> nx</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3"></a></span>
@@ -625,7 +628,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="d-plot" class="level2 unnumberd">
 <h2 class="unnumberd anchored" data-anchor-id="d-plot">3D Plot</h2>
-<div id="99b736e9" class="cell" data-execution_count="4">
+<div id="b5866850" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
@@ -1290,107 +1293,106 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb5-3"><a href="#cb5-3"></a><span class="an">execute:</span><span class="co"> </span></span>
 <span id="cb5-4"><a href="#cb5-4"></a><span class="co">  echo: True</span></span>
 <span id="cb5-5"><a href="#cb5-5"></a><span class="co">  eval: True</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="an">other-links:</span><span class="co"> </span></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="co">      - text: "Download Code"</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a><span class="co">        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/AdvancedPlotTypes.ipynb"</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a><span class="co">        icon: "journal"</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a><span class="an">code-links:</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="co">      - text: "Open in Colab"</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/AdvancedPlotTypes.ipynb"</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a><span class="co">        icon: "laptop"</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a><span class="co">---</span> </span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="an">code-links:</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co">      - text: "Open in Colab"</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/AdvancedPlotTypes.ipynb"</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="co">        icon: "laptop"</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="co">      - text: "Download Code"</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="co">        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/AdvancedPlotTypes.ipynb"</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="co">        icon: "journal"</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="co">---</span> </span>
+<span id="cb5-14"><a href="#cb5-14"></a>Difficulty level: &lt;span style="color:#2B7492"&gt;{{&lt; bi star-fill &gt;}} {{&lt; bi star-fill &gt;}} &lt;/span&gt;</span>
 <span id="cb5-15"><a href="#cb5-15"></a></span>
-<span id="cb5-16"><a href="#cb5-16"></a></span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Network plot</span><span class="co">](https://networkx.org/documentation/stable/auto_examples/index.html)</span>:</span>
-<span id="cb5-18"><a href="#cb5-18"></a>It is used to show the relationship between different nodes. It is used to show the relationship between different entities *e.g.*  protein-protein interaction network <span class="co">[</span><span class="ot">PPI</span><span class="co">](http://www.ncbi.nlm.nih.gov/pmc/articles/pmc4017556/)</span>.</span>
-<span id="cb5-19"><a href="#cb5-19"></a></span>
-<span id="cb5-20"><a href="#cb5-20"></a><span class="fu">## Multiple Correlation Analysis {.unnumberd}</span></span>
-<span id="cb5-21"><a href="#cb5-21"></a></span>
-<span id="cb5-24"><a href="#cb5-24"></a><span class="in">```{python}</span></span>
-<span id="cb5-25"><a href="#cb5-25"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-26"><a href="#cb5-26"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb5-27"><a href="#cb5-27"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-28"><a href="#cb5-28"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb5-29"><a href="#cb5-29"></a></span>
-<span id="cb5-30"><a href="#cb5-30"></a>rs <span class="op">=</span> np.random.RandomState(<span class="dv">33</span>)</span>
-<span id="cb5-31"><a href="#cb5-31"></a>df <span class="op">=</span> pd.DataFrame(data<span class="op">=</span>rs.normal(size<span class="op">=</span>(<span class="dv">100</span>, <span class="dv">4</span>)), columns<span class="op">=</span>[<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>])</span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Network plot</span><span class="co">](https://networkx.org/documentation/stable/auto_examples/index.html)</span>:</span>
+<span id="cb5-17"><a href="#cb5-17"></a>It is used to show the relationship between different nodes. It is used to show the relationship between different entities *e.g.*  protein-protein interaction network <span class="co">[</span><span class="ot">PPI</span><span class="co">](http://www.ncbi.nlm.nih.gov/pmc/articles/pmc4017556/)</span>.</span>
+<span id="cb5-18"><a href="#cb5-18"></a></span>
+<span id="cb5-19"><a href="#cb5-19"></a><span class="fu">## Multiple Correlation Analysis {.unnumberd}</span></span>
+<span id="cb5-20"><a href="#cb5-20"></a></span>
+<span id="cb5-23"><a href="#cb5-23"></a><span class="in">```{python}</span></span>
+<span id="cb5-24"><a href="#cb5-24"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-25"><a href="#cb5-25"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb5-26"><a href="#cb5-26"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-27"><a href="#cb5-27"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-28"><a href="#cb5-28"></a></span>
+<span id="cb5-29"><a href="#cb5-29"></a>rs <span class="op">=</span> np.random.RandomState(<span class="dv">33</span>)</span>
+<span id="cb5-30"><a href="#cb5-30"></a>df <span class="op">=</span> pd.DataFrame(data<span class="op">=</span>rs.normal(size<span class="op">=</span>(<span class="dv">100</span>, <span class="dv">4</span>)), columns<span class="op">=</span>[<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>])</span>
+<span id="cb5-31"><a href="#cb5-31"></a></span>
 <span id="cb5-32"><a href="#cb5-32"></a></span>
-<span id="cb5-33"><a href="#cb5-33"></a></span>
-<span id="cb5-34"><a href="#cb5-34"></a><span class="co"># Compute correlation matrix</span></span>
-<span id="cb5-35"><a href="#cb5-35"></a>corr_matrix <span class="op">=</span> df.corr()</span>
-<span id="cb5-36"><a href="#cb5-36"></a></span>
-<span id="cb5-37"><a href="#cb5-37"></a><span class="co"># Visualizing with a heatmap</span></span>
-<span id="cb5-38"><a href="#cb5-38"></a>sns.heatmap(corr_matrix, annot<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">"coolwarm"</span>)</span>
-<span id="cb5-39"><a href="#cb5-39"></a></span>
-<span id="cb5-40"><a href="#cb5-40"></a>plt.show()</span>
-<span id="cb5-41"><a href="#cb5-41"></a><span class="in">```</span></span>
+<span id="cb5-33"><a href="#cb5-33"></a><span class="co"># Compute correlation matrix</span></span>
+<span id="cb5-34"><a href="#cb5-34"></a>corr_matrix <span class="op">=</span> df.corr()</span>
+<span id="cb5-35"><a href="#cb5-35"></a></span>
+<span id="cb5-36"><a href="#cb5-36"></a><span class="co"># Visualizing with a heatmap</span></span>
+<span id="cb5-37"><a href="#cb5-37"></a>sns.heatmap(corr_matrix, annot<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">"coolwarm"</span>)</span>
+<span id="cb5-38"><a href="#cb5-38"></a></span>
+<span id="cb5-39"><a href="#cb5-39"></a>plt.show()</span>
+<span id="cb5-40"><a href="#cb5-40"></a><span class="in">```</span></span>
+<span id="cb5-41"><a href="#cb5-41"></a></span>
 <span id="cb5-42"><a href="#cb5-42"></a></span>
-<span id="cb5-43"><a href="#cb5-43"></a></span>
-<span id="cb5-44"><a href="#cb5-44"></a><span class="fu">## PCA Plot {.unnumberd}</span></span>
-<span id="cb5-45"><a href="#cb5-45"></a></span>
-<span id="cb5-48"><a href="#cb5-48"></a><span class="in">```{python}</span></span>
-<span id="cb5-49"><a href="#cb5-49"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-50"><a href="#cb5-50"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-51"><a href="#cb5-51"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
-<span id="cb5-52"><a href="#cb5-52"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
-<span id="cb5-53"><a href="#cb5-53"></a></span>
-<span id="cb5-54"><a href="#cb5-54"></a><span class="co"># Sample dataset</span></span>
-<span id="cb5-55"><a href="#cb5-55"></a>X <span class="op">=</span> np.random.rand(<span class="dv">10</span>, <span class="dv">3</span>)</span>
-<span id="cb5-56"><a href="#cb5-56"></a></span>
-<span id="cb5-57"><a href="#cb5-57"></a><span class="co"># Standardizing Data</span></span>
-<span id="cb5-58"><a href="#cb5-58"></a>scaler <span class="op">=</span> StandardScaler()</span>
-<span id="cb5-59"><a href="#cb5-59"></a></span>
-<span id="cb5-60"><a href="#cb5-60"></a>X_scaled <span class="op">=</span> scaler.fit_transform(X)</span>
-<span id="cb5-61"><a href="#cb5-61"></a></span>
-<span id="cb5-62"><a href="#cb5-62"></a><span class="co"># Applying PCA</span></span>
-<span id="cb5-63"><a href="#cb5-63"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb5-64"><a href="#cb5-64"></a>X_pca <span class="op">=</span> pca.fit_transform(X_scaled)</span>
-<span id="cb5-65"><a href="#cb5-65"></a></span>
-<span id="cb5-66"><a href="#cb5-66"></a><span class="co"># Plot PCA results</span></span>
-<span id="cb5-67"><a href="#cb5-67"></a>plt.scatter(X_pca[:, <span class="dv">0</span>], X_pca[:, <span class="dv">1</span>])</span>
-<span id="cb5-68"><a href="#cb5-68"></a>plt.xlabel(<span class="st">'PC1'</span>)</span>
-<span id="cb5-69"><a href="#cb5-69"></a>plt.ylabel(<span class="st">'PC2'</span>)</span>
-<span id="cb5-70"><a href="#cb5-70"></a>plt.title(<span class="st">'PCA Analysis'</span>)</span>
-<span id="cb5-71"><a href="#cb5-71"></a>plt.show()</span>
-<span id="cb5-72"><a href="#cb5-72"></a><span class="in">```</span></span>
-<span id="cb5-73"><a href="#cb5-73"></a></span>
-<span id="cb5-74"><a href="#cb5-74"></a><span class="fu">## Network Plot {.unnumberd}</span></span>
-<span id="cb5-75"><a href="#cb5-75"></a></span>
-<span id="cb5-78"><a href="#cb5-78"></a><span class="in">```{python}</span></span>
-<span id="cb5-79"><a href="#cb5-79"></a><span class="im">import</span> networkx <span class="im">as</span> nx</span>
-<span id="cb5-80"><a href="#cb5-80"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-81"><a href="#cb5-81"></a></span>
-<span id="cb5-82"><a href="#cb5-82"></a>G <span class="op">=</span> nx.Graph()</span>
-<span id="cb5-83"><a href="#cb5-83"></a>G.add_node(<span class="dv">1</span>)</span>
-<span id="cb5-84"><a href="#cb5-84"></a>G.add_nodes_from([<span class="dv">2</span>, <span class="dv">3</span>])</span>
-<span id="cb5-85"><a href="#cb5-85"></a>G.add_edge(<span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb5-86"><a href="#cb5-86"></a>G.add_edges_from([(<span class="dv">1</span>, <span class="dv">2</span>), (<span class="dv">1</span>, <span class="dv">3</span>)])</span>
-<span id="cb5-87"><a href="#cb5-87"></a>nx.draw(G, with_labels<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb5-88"><a href="#cb5-88"></a>plt.show()</span>
-<span id="cb5-89"><a href="#cb5-89"></a><span class="in">```</span></span>
+<span id="cb5-43"><a href="#cb5-43"></a><span class="fu">## PCA Plot {.unnumberd}</span></span>
+<span id="cb5-44"><a href="#cb5-44"></a></span>
+<span id="cb5-47"><a href="#cb5-47"></a><span class="in">```{python}</span></span>
+<span id="cb5-48"><a href="#cb5-48"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-49"><a href="#cb5-49"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-50"><a href="#cb5-50"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
+<span id="cb5-51"><a href="#cb5-51"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb5-52"><a href="#cb5-52"></a></span>
+<span id="cb5-53"><a href="#cb5-53"></a><span class="co"># Sample dataset</span></span>
+<span id="cb5-54"><a href="#cb5-54"></a>X <span class="op">=</span> np.random.rand(<span class="dv">10</span>, <span class="dv">3</span>)</span>
+<span id="cb5-55"><a href="#cb5-55"></a></span>
+<span id="cb5-56"><a href="#cb5-56"></a><span class="co"># Standardizing Data</span></span>
+<span id="cb5-57"><a href="#cb5-57"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb5-58"><a href="#cb5-58"></a></span>
+<span id="cb5-59"><a href="#cb5-59"></a>X_scaled <span class="op">=</span> scaler.fit_transform(X)</span>
+<span id="cb5-60"><a href="#cb5-60"></a></span>
+<span id="cb5-61"><a href="#cb5-61"></a><span class="co"># Applying PCA</span></span>
+<span id="cb5-62"><a href="#cb5-62"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb5-63"><a href="#cb5-63"></a>X_pca <span class="op">=</span> pca.fit_transform(X_scaled)</span>
+<span id="cb5-64"><a href="#cb5-64"></a></span>
+<span id="cb5-65"><a href="#cb5-65"></a><span class="co"># Plot PCA results</span></span>
+<span id="cb5-66"><a href="#cb5-66"></a>plt.scatter(X_pca[:, <span class="dv">0</span>], X_pca[:, <span class="dv">1</span>])</span>
+<span id="cb5-67"><a href="#cb5-67"></a>plt.xlabel(<span class="st">'PC1'</span>)</span>
+<span id="cb5-68"><a href="#cb5-68"></a>plt.ylabel(<span class="st">'PC2'</span>)</span>
+<span id="cb5-69"><a href="#cb5-69"></a>plt.title(<span class="st">'PCA Analysis'</span>)</span>
+<span id="cb5-70"><a href="#cb5-70"></a>plt.show()</span>
+<span id="cb5-71"><a href="#cb5-71"></a><span class="in">```</span></span>
+<span id="cb5-72"><a href="#cb5-72"></a></span>
+<span id="cb5-73"><a href="#cb5-73"></a><span class="fu">## Network Plot {.unnumberd}</span></span>
+<span id="cb5-74"><a href="#cb5-74"></a></span>
+<span id="cb5-77"><a href="#cb5-77"></a><span class="in">```{python}</span></span>
+<span id="cb5-78"><a href="#cb5-78"></a><span class="im">import</span> networkx <span class="im">as</span> nx</span>
+<span id="cb5-79"><a href="#cb5-79"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-80"><a href="#cb5-80"></a></span>
+<span id="cb5-81"><a href="#cb5-81"></a>G <span class="op">=</span> nx.Graph()</span>
+<span id="cb5-82"><a href="#cb5-82"></a>G.add_node(<span class="dv">1</span>)</span>
+<span id="cb5-83"><a href="#cb5-83"></a>G.add_nodes_from([<span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb5-84"><a href="#cb5-84"></a>G.add_edge(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb5-85"><a href="#cb5-85"></a>G.add_edges_from([(<span class="dv">1</span>, <span class="dv">2</span>), (<span class="dv">1</span>, <span class="dv">3</span>)])</span>
+<span id="cb5-86"><a href="#cb5-86"></a>nx.draw(G, with_labels<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-87"><a href="#cb5-87"></a>plt.show()</span>
+<span id="cb5-88"><a href="#cb5-88"></a><span class="in">```</span></span>
+<span id="cb5-89"><a href="#cb5-89"></a></span>
 <span id="cb5-90"><a href="#cb5-90"></a></span>
 <span id="cb5-91"><a href="#cb5-91"></a></span>
 <span id="cb5-92"><a href="#cb5-92"></a></span>
-<span id="cb5-93"><a href="#cb5-93"></a></span>
-<span id="cb5-94"><a href="#cb5-94"></a>---</span>
-<span id="cb5-95"><a href="#cb5-95"></a></span>
-<span id="cb5-96"><a href="#cb5-96"></a><span class="fu">## 3D Plot {.unnumberd}</span></span>
-<span id="cb5-97"><a href="#cb5-97"></a></span>
-<span id="cb5-100"><a href="#cb5-100"></a><span class="in">```{python}</span></span>
-<span id="cb5-101"><a href="#cb5-101"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-102"><a href="#cb5-102"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-103"><a href="#cb5-103"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
-<span id="cb5-104"><a href="#cb5-104"></a></span>
-<span id="cb5-105"><a href="#cb5-105"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>) </span>
-<span id="cb5-106"><a href="#cb5-106"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
-<span id="cb5-107"><a href="#cb5-107"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
-<span id="cb5-108"><a href="#cb5-108"></a>Z <span class="op">=</span> np.sin(np.sqrt(X<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> Y<span class="op">**</span><span class="dv">2</span>))</span>
-<span id="cb5-109"><a href="#cb5-109"></a></span>
-<span id="cb5-110"><a href="#cb5-110"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb5-111"><a href="#cb5-111"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
-<span id="cb5-112"><a href="#cb5-112"></a>ax.plot_surface(X, Y, Z)</span>
-<span id="cb5-113"><a href="#cb5-113"></a>plt.show()</span>
-<span id="cb5-114"><a href="#cb5-114"></a><span class="in">```</span></span>
+<span id="cb5-93"><a href="#cb5-93"></a>---</span>
+<span id="cb5-94"><a href="#cb5-94"></a></span>
+<span id="cb5-95"><a href="#cb5-95"></a><span class="fu">## 3D Plot {.unnumberd}</span></span>
+<span id="cb5-96"><a href="#cb5-96"></a></span>
+<span id="cb5-99"><a href="#cb5-99"></a><span class="in">```{python}</span></span>
+<span id="cb5-100"><a href="#cb5-100"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-101"><a href="#cb5-101"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-102"><a href="#cb5-102"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb5-103"><a href="#cb5-103"></a></span>
+<span id="cb5-104"><a href="#cb5-104"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>) </span>
+<span id="cb5-105"><a href="#cb5-105"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb5-106"><a href="#cb5-106"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb5-107"><a href="#cb5-107"></a>Z <span class="op">=</span> np.sin(np.sqrt(X<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> Y<span class="op">**</span><span class="dv">2</span>))</span>
+<span id="cb5-108"><a href="#cb5-108"></a></span>
+<span id="cb5-109"><a href="#cb5-109"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb5-110"><a href="#cb5-110"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
+<span id="cb5-111"><a href="#cb5-111"></a>ax.plot_surface(X, Y, Z)</span>
+<span id="cb5-112"><a href="#cb5-112"></a>plt.show()</span>
+<span id="cb5-113"><a href="#cb5-113"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

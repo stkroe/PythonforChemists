@@ -77,6 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-e73e8d7a663c5560bcf23225ddbdc55a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-90ea52f1b8d8195fbfcbff9552eb0e88.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -508,8 +509,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#io-inputoutput" id="toc-io-inputoutput" class="nav-link active" data-scroll-target="#io-inputoutput">I/O (Input/Output)</a></li>
   <li><a href="#system" id="toc-system" class="nav-link" data-scroll-target="#system">System</a></li>
   <li><a href="#paths" id="toc-paths" class="nav-link" data-scroll-target="#paths">Paths</a></li>
+  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a></li>
+  <li><a href="#control-structures" id="toc-control-structures" class="nav-link" data-scroll-target="#control-structures">Control Structures</a>
+  <ul class="collapse">
+  <li><a href="#if-statement" id="toc-if-statement" class="nav-link" data-scroll-target="#if-statement">if statement</a></li>
+  <li><a href="#breakcontinuepass" id="toc-breakcontinuepass" class="nav-link" data-scroll-target="#breakcontinuepass">break,continue,pass</a></li>
+  <li><a href="#for-loops" id="toc-for-loops" class="nav-link" data-scroll-target="#for-loops">For Loops</a></li>
+  <li><a href="#while-loops" id="toc-while-loops" class="nav-link" data-scroll-target="#while-loops">While Loops</a></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
+  <li><a href="#style-guideline-for-writing-python-code" id="toc-style-guideline-for-writing-python-code" class="nav-link" data-scroll-target="#style-guideline-for-writing-python-code">Style guideline for writing python code</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Python/Intermediate.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/intermediate.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Intermediate.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/Python/Intermediate.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Intermediate.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/intermediate.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -533,37 +545,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p>Difficulty level: <span style="color:#2B7492"><i class="bi-star-fill " style="" role="img" aria-hidden="true"></i> <i class="bi-star-fill " style="" role="img" aria-hidden="true"></i> </span></p>
 <p>Often we need with user input, files, system and paths. In this chapter we will cover these topics.</p>
 <section id="io-inputoutput" class="level1 unnumbered">
 <h1 class="unnumbered">I/O (Input/Output)</h1>
 <p>You can use the <code>print()</code> function to <strong>print a message</strong> to the screen. <br> You can use the <code>input()</code> function to get <strong>input from the user</strong>. <br> You can use the <code>open()</code> function to <strong>open a file</strong>. <br> You can use the <code>write()</code> function to <strong>write to a file</strong>. <br> You can use the <code>read()</code> function to <strong>read from a file</strong>. <br> You can use the <code>close()</code> function to <strong>close a file</strong>. <br> You can use the <code>with</code> statement to <strong>open a file</strong> and <strong>automatically close</strong> it when you are done. <br> You can use the <code>os</code> module to <strong>work with files and directories</strong>. <br> You can use the <code>sys</code> module to <strong>work with command line arguments</strong>. <br> You can use the <code>argparse</code> module to work also with <strong>command line arguments</strong>. <br></p>
 <p>This should print “Hello World!” to the console</p>
-<div id="0224a41f" class="cell" data-execution_count="1">
+<div id="07668598" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
 </div>
 <p>This should ask the user to enter a number and print it to the console</p>
-<div id="8c614728" class="cell" data-execution_count="2">
+<div id="3745ae1d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">print</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This should write “Hello World!” to the file “file.txt”</p>
-<div id="883c6a49" class="cell" data-execution_count="3">
+<div id="95b70951" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>).write(<span class="st">"Hello World!"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>12</code></pre>
 </div>
 </div>
 <p>This should read the file “file.txt” and print the content to the console</p>
-<div id="be480ae7" class="cell" data-execution_count="4">
+<div id="d6e56e8c" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">print</span>(<span class="bu">open</span>(<span class="st">"file.txt"</span>).read()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
 </div>
 <p>This should print “Hello World!” to the console without a newline</p>
-<div id="470f1486" class="cell" data-execution_count="5">
+<div id="c375a351" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="bu">print</span>(<span class="st">"Hello World without newline."</span>, end<span class="op">=</span><span class="st">""</span>) </span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="bu">print</span>(<span class="st">"Next print statement."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -571,14 +584,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>This should read the file “file.txt” and print the content to the console</p>
-<div id="f5e83d5e" class="cell" data-execution_count="6">
+<div id="ebeb1224" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>: <span class="bu">print</span>(<span class="bu">file</span>.read()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
 </div>
 <p>Write a file with the content “Hello World!” and close it</p>
-<div id="c5406a00" class="cell" data-execution_count="7">
+<div id="a1ae1226" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb12-2"><a href="#cb12-2"></a><span class="bu">file</span>.write(<span class="st">"Hello World!"</span>)</span>
 <span id="cb12-3"><a href="#cb12-3"></a><span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -600,18 +613,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>parse_args()</code> to parse the command line arguments. <br></p></li>
 </ul>
 <p>This should remove the file “file.txt”</p>
-<div id="4a757ff0" class="cell" data-execution_count="8">
+<div id="69ae0316" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> os</span>
 <span id="cb13-2"><a href="#cb13-2"></a>os.remove(<span class="st">"file.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For <code>sys</code> you can use the <code>sys.argv</code> to get the command line arguments. <br> <code>sys.argv</code> is a list of the command line arguments. <br> <code>sys.argv[0]</code> is the name of the script. <br> <code>sys.argv[1]</code> is the first argument. <br></p>
-<div id="625032ae" class="cell" data-execution_count="9">
+<div id="1c4091a1" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="im">import</span> sys</span>
 <span id="cb14-2"><a href="#cb14-2"></a>first_argument <span class="op">=</span> sys.argv[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For more information about the sys module you can visit the <a href="https://docs.python.org/3/library/sys.html">official documentation</a>.</p>
 <p>For <code>Argparse</code> you can use the following code: For python scripts: You can use argparse to parse command line arguments.</p>
-<div id="11637fdb" class="cell" data-execution_count="10">
+<div id="56f37e1f" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">from</span> argparse <span class="im">import</span> ArgumentParser</span>
 <span id="cb15-2"><a href="#cb15-2"></a></span>
 <span id="cb15-3"><a href="#cb15-3"></a>parser <span class="op">=</span> ArgumentParser(description<span class="op">=</span><span class="st">"This is a description."</span>)</span>
@@ -626,7 +639,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">Paths</h1>
 <p>Pay attention to the paths in your code. They are different defined in Windows and Linux. In Windows and macOS, you use backslashes <code>/</code> and in Linux, you use forward slashes <code>\</code>.</p>
 <p>To avoid this problem you can use the <code>os</code> or <code>pathlib</code> module to make your code platform independent.</p>
-<div id="f223d9f7" class="cell" data-execution_count="11">
+<div id="25d662ef" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="im">import</span> os</span>
 <span id="cb16-2"><a href="#cb16-2"></a></span>
 <span id="cb16-3"><a href="#cb16-3"></a>path <span class="op">=</span> os.path.join(<span class="st">'folder1'</span>, <span class="st">'folder2'</span>, <span class="st">'folder3'</span>, <span class="st">'data.dat'</span>)</span>
@@ -635,14 +648,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>folder1/folder2/folder3/data.dat</code></pre>
 </div>
 </div>
-<div id="072a5422" class="cell" data-execution_count="12">
+<div id="24410e0c" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>working_dir <span class="op">=</span> os.getcwd()</span>
 <span id="cb18-2"><a href="#cb18-2"></a><span class="bu">print</span>(working_dir)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>/home/runner/work/PythonforChemists/PythonforChemists/course/chapters/Python</code></pre>
 </div>
 </div>
-<div id="6e449cbb" class="cell" data-execution_count="13">
+<div id="4694aced" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb20-2"><a href="#cb20-2"></a></span>
 <span id="cb20-3"><a href="#cb20-3"></a>path <span class="op">=</span> Path(<span class="st">'folder1'</span>) <span class="op">/</span> <span class="st">'folder2'</span> <span class="op">/</span> <span class="st">'folder3'</span> <span class="op">/</span> <span class="st">'data.dat'</span></span>
@@ -651,13 +664,268 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>folder1/folder2/folder3/data.dat</code></pre>
 </div>
 </div>
-<div id="4a785d86" class="cell" data-execution_count="14">
+<div id="9552eac5" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>working_dir <span class="op">=</span> Path.cwd()</span>
 <span id="cb22-2"><a href="#cb22-2"></a><span class="bu">print</span>(working_dir)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>/home/runner/work/PythonforChemists/PythonforChemists/course/chapters/Python</code></pre>
 </div>
 </div>
+</section>
+<section id="lists" class="level1 unnumbered">
+<h1 class="unnumbered">Lists</h1>
+<p>Lists collect multiple items in a single variable. <br></p>
+<p>You can use the <code>[]</code> operator to create a list. <br> You can use the <code>append()</code> method to add an item to a list. <br> You can use the <code>insert()</code> method to add an item at a specific position. <br> You can use the <code>del</code> statement to delete an item from a list. <br> You can use the <code>remove()</code> method to remove an item from a list. <br> You can use the <code>pop()</code> method to remove an item at a specific position. <br> You can use the <code>clear()</code> method to remove all items from a list. <br> You can use the <code>copy()</code> method to copy a list. <br> You can use the <code>count()</code> method to count the number of items in a list. <br> You can use the <code>sort()</code> method to sort a list. <br> You can use the <code>reverse()</code> method to reverse a list. <br> You can use the <code>extend()</code> method to add items from another list. <br> You can use the <code>index()</code> method to get the index of an item. <br> You can use the <code>len()</code> function to get the length of a list. <br> You can use the <code>list()</code> function to create a list. <br></p>
+<div id="055ad87c" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a>a <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
+<span id="cb24-2"><a href="#cb24-2"></a>b <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">3</span>,<span class="st">'a'</span>, <span class="ot">1j</span>]</span>
+<span id="cb24-3"><a href="#cb24-3"></a><span class="bu">len</span>(a) <span class="co">#length of list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>3</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Index is starting with <strong>0</strong> in Python.</p>
+</div>
+</div>
+<div id="031eaa15" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a>l <span class="op">=</span> [<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>]</span>
+<span id="cb26-2"><a href="#cb26-2"></a>l[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>'first'</code></pre>
+</div>
+</div>
+<p>Last element is reached by index -1.</p>
+<div id="ea3a5fad" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a>l[<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>'third'</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="control-structures" class="level1 unnumbered">
+<h1 class="unnumbered">Control Structures</h1>
+<p>Control structures are used to control the flow of a program. <br> The most common control structures are:</p>
+<ul>
+<li>You can use the <code>if</code> statement to execute a block of code if a condition is true.</li>
+<li>You can use the <code>elif</code> statement to execute a block of code if the first condition is - false and the second condition is true.</li>
+<li>You can use the <code>else</code> statement to execute a block of code if the condition is false.</li>
+<li>You can use the <code>for</code> loop to iterate over a sequence.</li>
+<li>You can use the <code>while</code> loop to execute a block of code as long as a condition is true.</li>
+<li>You can use the <code>break</code> statement to exit a loop.</li>
+<li>You can use the <code>continue</code> statement to skip the rest of the code in a loop.</li>
+<li>You can use the <code>pass</code> statement to do nothing.</li>
+</ul>
+<section id="if-statement" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="if-statement">if statement</h2>
+<div id="fa61ddda" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb30-3"><a href="#cb30-3"></a>    <span class="bu">print</span>(<span class="st">"x &lt; 0"</span>)</span>
+<span id="cb30-4"><a href="#cb30-4"></a><span class="cf">elif</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb30-5"><a href="#cb30-5"></a>    <span class="bu">print</span>(<span class="st">"x &gt; 0"</span>)</span>
+<span id="cb30-6"><a href="#cb30-6"></a><span class="cf">else</span>:</span>
+<span id="cb30-7"><a href="#cb30-7"></a>    <span class="bu">print</span>(<span class="st">"x = 0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>x = 0</code></pre>
+</div>
+</div>
+</section>
+<section id="breakcontinuepass" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="breakcontinuepass">break,continue,pass</h2>
+<div id="46e9f5c3" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb32-2"><a href="#cb32-2"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb32-3"><a href="#cb32-3"></a>        <span class="cf">break</span></span>
+<span id="cb32-4"><a href="#cb32-4"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2
+3
+4</code></pre>
+</div>
+</div>
+<div id="fc6072c9" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb34-2"><a href="#cb34-2"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb34-3"><a href="#cb34-3"></a>        <span class="cf">continue</span></span>
+<span id="cb34-4"><a href="#cb34-4"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2
+3
+4
+6
+7
+8
+9</code></pre>
+</div>
+</div>
+<div id="9c1ebd96" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb36-2"><a href="#cb36-2"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb36-3"><a href="#cb36-3"></a>        <span class="cf">pass</span></span>
+<span id="cb36-4"><a href="#cb36-4"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2
+3
+4
+5
+6
+7
+8
+9</code></pre>
+</div>
+</div>
+</section>
+<section id="for-loops" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="for-loops">For Loops</h2>
+<div id="e21483d3" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>): <span class="co">#from 0 to 4 </span></span>
+<span id="cb38-2"><a href="#cb38-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2
+3
+4</code></pre>
+</div>
+</div>
+<div id="4af26414" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">2</span>): <span class="co"># start 1, stop 10 excluded, step 2</span></span>
+<span id="cb40-2"><a href="#cb40-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+3
+5
+7
+9</code></pre>
+</div>
+</div>
+<div id="4979aefb" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1"></a>l <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="3eb9352a" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1"></a>l</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="23">
+<pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+</div>
+</div>
+<div id="ab847281" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1"></a><span class="cf">for</span> i <span class="kw">in</span> l:  <span class="co"># using list</span></span>
+<span id="cb45-2"><a href="#cb45-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2
+3
+4
+5
+6
+7
+8
+9</code></pre>
+</div>
+</div>
+</section>
+<section id="while-loops" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="while-loops">While Loops</h2>
+<div id="65f03363" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb47-2"><a href="#cb47-2"></a><span class="cf">while</span> x  <span class="op">&lt;</span> <span class="dv">4</span>:</span>
+<span id="cb47-3"><a href="#cb47-3"></a>    <span class="bu">print</span>(l[x])</span>
+<span id="cb47-4"><a href="#cb47-4"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2
+3</code></pre>
+</div>
+</div>
+<div id="dd5b0963" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1"></a><span class="bu">print</span>(<span class="st">"while loop with continue and break statement"</span>)</span>
+<span id="cb49-2"><a href="#cb49-2"></a>n <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb49-3"><a href="#cb49-3"></a><span class="cf">while</span>(n <span class="op">&lt;</span> <span class="dv">10</span>):</span>
+<span id="cb49-4"><a href="#cb49-4"></a>    n<span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb49-5"><a href="#cb49-5"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb49-6"><a href="#cb49-6"></a>        <span class="cf">continue</span></span>
+<span id="cb49-7"><a href="#cb49-7"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">7</span>:</span>
+<span id="cb49-8"><a href="#cb49-8"></a>        <span class="bu">print</span>(<span class="st">"The loop reached 7 and will break now."</span>)</span>
+<span id="cb49-9"><a href="#cb49-9"></a>        <span class="cf">break</span></span>
+<span id="cb49-10"><a href="#cb49-10"></a>    <span class="bu">print</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>while loop with continue and break statement
+1
+2
+3
+4
+6
+The loop reached 7 and will break now.</code></pre>
+</div>
+</div>
+</section>
+<section id="functions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="functions">Functions</h2>
+<p>Functions are defined using the <code>def</code> keyword. <br> You can use the <code>return</code> keyword to return a value from a function. <br> The parameters of a function are defined in the parentheses. <br> Multiple parameters are separated by commas. <br> You can use default values for the parameter <em>e.g.</em> <code>b=5</code>. <br> Multiple return values are separated by commas. <br> They are stored in a tuple. <br></p>
+<div id="ab37ed4b" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1"></a><span class="kw">def</span> summation(a,b<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb51-2"><a href="#cb51-2"></a>    <span class="cf">return</span> a<span class="op">+</span>b, a<span class="op">-</span>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="9bf399a6" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1"></a>summation(<span class="dv">4</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="28">
+<pre><code>(6, 2)</code></pre>
+</div>
+</div>
+<div id="c8e244f0" class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1"></a><span class="bu">sum</span>, sub <span class="op">=</span> summation(<span class="dv">4</span>)</span>
+<span id="cb54-2"><a href="#cb54-2"></a><span class="bu">print</span>(<span class="bu">sum</span>)</span>
+<span id="cb54-3"><a href="#cb54-3"></a><span class="bu">print</span>(sub)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>9
+-1</code></pre>
+</div>
+</div>
+<div id="e2783ed3" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb56-2"><a href="#cb56-2"></a></span>
+<span id="cb56-3"><a href="#cb56-3"></a><span class="kw">def</span> multiple_return_value(x,a,b):</span>
+<span id="cb56-4"><a href="#cb56-4"></a>    n <span class="op">=</span> x<span class="op">+</span>a</span>
+<span id="cb56-5"><a href="#cb56-5"></a>    m <span class="op">=</span> x<span class="op">-</span>b</span>
+<span id="cb56-6"><a href="#cb56-6"></a>    <span class="cf">return</span> [n,m]</span>
+<span id="cb56-7"><a href="#cb56-7"></a><span class="bu">print</span>(multiple_return_value(x,<span class="dv">5</span>,<span class="dv">10</span>)[<span class="dv">0</span>],multiple_return_value(x,<span class="dv">5</span>,<span class="dv">10</span>)[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>8 -7</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="style-guideline-for-writing-python-code" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="style-guideline-for-writing-python-code">Style guideline for writing python code</h2>
+<p>For writing a readable code, it is important to follow a style guideline. <br> The most common style guideline for Python is <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a>. <br></p>
+<hr>
+</section>
+</section>
+<section id="exercises" class="level1 unnumbered">
+<h1 class="unnumbered">Exercises</h1>
+<p>Download it locally and try to solve the exercises. <br></p>
+<p><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1.zip">Basic Python</a></p>
+<p>Or open it in <code>Google Colab</code>:</p>
+<p><a href="https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material/student/BasicExercises.ipynb">Basic Python</a></p>
 
 
 <!-- -->
@@ -1296,198 +1564,413 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb24" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1"></a><span class="co">---</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a><span class="an">title:</span><span class="co"> "Python Intermediate"</span></span>
-<span id="cb24-3"><a href="#cb24-3"></a><span class="an">execute:</span></span>
-<span id="cb24-4"><a href="#cb24-4"></a><span class="co">    echo: true</span></span>
-<span id="cb24-5"><a href="#cb24-5"></a><span class="co">    eval: true</span></span>
-<span id="cb24-6"><a href="#cb24-6"></a><span class="co">    error: true</span></span>
-<span id="cb24-7"><a href="#cb24-7"></a><span class="an">other-links:</span><span class="co">     </span></span>
-<span id="cb24-8"><a href="#cb24-8"></a><span class="co">    - text: "Download Code"</span></span>
-<span id="cb24-9"><a href="#cb24-9"></a><span class="co">      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/intermediate.ipynb"</span></span>
-<span id="cb24-10"><a href="#cb24-10"></a><span class="co">      icon: "journal"</span></span>
-<span id="cb24-11"><a href="#cb24-11"></a><span class="an">code-links:</span></span>
-<span id="cb24-12"><a href="#cb24-12"></a><span class="co">      - text: "Open in Colab"</span></span>
-<span id="cb24-13"><a href="#cb24-13"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Intermediate.ipynb"</span></span>
-<span id="cb24-14"><a href="#cb24-14"></a><span class="co">        icon: "laptop"</span></span>
-<span id="cb24-15"><a href="#cb24-15"></a><span class="co">---</span></span>
-<span id="cb24-16"><a href="#cb24-16"></a></span>
-<span id="cb24-17"><a href="#cb24-17"></a>Often we need with user input, files, system and paths. In this chapter we will cover these topics.</span>
-<span id="cb24-18"><a href="#cb24-18"></a></span>
-<span id="cb24-19"><a href="#cb24-19"></a><span class="fu"># I/O (Input/Output) {.unnumbered}</span></span>
-<span id="cb24-20"><a href="#cb24-20"></a></span>
-<span id="cb24-21"><a href="#cb24-21"></a></span>
-<span id="cb24-22"><a href="#cb24-22"></a>You can use the <span class="in">`print()`</span> function to **print a message** to the screen. &lt;br&gt;</span>
-<span id="cb24-23"><a href="#cb24-23"></a>You can use the <span class="in">`input()`</span> function to get **input from the user**. &lt;br&gt;</span>
-<span id="cb24-24"><a href="#cb24-24"></a>You can use the <span class="in">`open()`</span> function to **open a file**. &lt;br&gt;</span>
-<span id="cb24-25"><a href="#cb24-25"></a>You can use the <span class="in">`write()`</span> function to **write to a file**. &lt;br&gt;</span>
-<span id="cb24-26"><a href="#cb24-26"></a>You can use the <span class="in">`read()`</span> function to **read from a file**. &lt;br&gt;</span>
-<span id="cb24-27"><a href="#cb24-27"></a>You can use the <span class="in">`close()`</span> function to **close a file**. &lt;br&gt;</span>
-<span id="cb24-28"><a href="#cb24-28"></a>You can use the <span class="in">`with`</span> statement to **open a file** and **automatically close** it when you are done. &lt;br&gt;</span>
-<span id="cb24-29"><a href="#cb24-29"></a>You can use the <span class="in">`os`</span> module to **work with files and directories**. &lt;br&gt;</span>
-<span id="cb24-30"><a href="#cb24-30"></a>You can use the <span class="in">`sys`</span> module to **work with command line arguments**. &lt;br&gt;</span>
-<span id="cb24-31"><a href="#cb24-31"></a>You can use the <span class="in">`argparse`</span> module to work also with **command line arguments**. &lt;br&gt;</span>
-<span id="cb24-32"><a href="#cb24-32"></a></span>
-<span id="cb24-33"><a href="#cb24-33"></a> This should print "Hello World!" to the console</span>
-<span id="cb24-36"><a href="#cb24-36"></a><span class="in">```{python}</span></span>
-<span id="cb24-37"><a href="#cb24-37"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span>
-<span id="cb24-38"><a href="#cb24-38"></a><span class="in">```</span></span>
-<span id="cb24-39"><a href="#cb24-39"></a></span>
-<span id="cb24-40"><a href="#cb24-40"></a>This should ask the user to enter a number and print it to the console</span>
-<span id="cb24-43"><a href="#cb24-43"></a><span class="in">```{python}</span></span>
-<span id="cb24-44"><a href="#cb24-44"></a><span class="co">#| eval: false</span></span>
-<span id="cb24-45"><a href="#cb24-45"></a><span class="bu">print</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))</span>
-<span id="cb24-46"><a href="#cb24-46"></a><span class="in">```</span></span>
-<span id="cb24-47"><a href="#cb24-47"></a></span>
-<span id="cb24-48"><a href="#cb24-48"></a>This should write "Hello World!" to the file "file.txt"</span>
-<span id="cb24-51"><a href="#cb24-51"></a><span class="in">```{python}</span></span>
-<span id="cb24-52"><a href="#cb24-52"></a><span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>).write(<span class="st">"Hello World!"</span>) </span>
-<span id="cb24-53"><a href="#cb24-53"></a><span class="in">```</span></span>
-<span id="cb24-54"><a href="#cb24-54"></a></span>
-<span id="cb24-55"><a href="#cb24-55"></a>This should read the file "file.txt" and print the content to the console</span>
-<span id="cb24-58"><a href="#cb24-58"></a><span class="in">```{python}</span></span>
-<span id="cb24-59"><a href="#cb24-59"></a><span class="bu">print</span>(<span class="bu">open</span>(<span class="st">"file.txt"</span>).read()) </span>
-<span id="cb24-60"><a href="#cb24-60"></a></span>
-<span id="cb24-61"><a href="#cb24-61"></a><span class="in">```</span></span>
-<span id="cb24-62"><a href="#cb24-62"></a></span>
-<span id="cb24-63"><a href="#cb24-63"></a>This should print "Hello World!" to the console without a newline</span>
-<span id="cb24-64"><a href="#cb24-64"></a></span>
-<span id="cb24-67"><a href="#cb24-67"></a><span class="in">```{python}</span></span>
-<span id="cb24-68"><a href="#cb24-68"></a><span class="bu">print</span>(<span class="st">"Hello World without newline."</span>, end<span class="op">=</span><span class="st">""</span>) </span>
-<span id="cb24-69"><a href="#cb24-69"></a><span class="bu">print</span>(<span class="st">"Next print statement."</span>)</span>
-<span id="cb24-70"><a href="#cb24-70"></a><span class="in">```</span></span>
-<span id="cb24-71"><a href="#cb24-71"></a></span>
-<span id="cb24-72"><a href="#cb24-72"></a>This should read the file "file.txt" and print the content to the console</span>
-<span id="cb24-73"><a href="#cb24-73"></a></span>
-<span id="cb24-76"><a href="#cb24-76"></a><span class="in">```{python}</span></span>
-<span id="cb24-77"><a href="#cb24-77"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>: <span class="bu">print</span>(<span class="bu">file</span>.read()) </span>
-<span id="cb24-78"><a href="#cb24-78"></a><span class="in">```</span></span>
-<span id="cb24-79"><a href="#cb24-79"></a></span>
-<span id="cb24-80"><a href="#cb24-80"></a>Write a file with the content "Hello World!" and close it</span>
-<span id="cb24-81"><a href="#cb24-81"></a></span>
-<span id="cb24-84"><a href="#cb24-84"></a><span class="in">```{python}</span></span>
-<span id="cb24-85"><a href="#cb24-85"></a><span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>)</span>
-<span id="cb24-86"><a href="#cb24-86"></a><span class="bu">file</span>.write(<span class="st">"Hello World!"</span>)</span>
-<span id="cb24-87"><a href="#cb24-87"></a><span class="bu">file</span>.close()</span>
-<span id="cb24-88"><a href="#cb24-88"></a><span class="in">```</span></span>
-<span id="cb24-89"><a href="#cb24-89"></a></span>
-<span id="cb24-90"><a href="#cb24-90"></a>---</span>
-<span id="cb24-91"><a href="#cb24-91"></a></span>
-<span id="cb24-92"><a href="#cb24-92"></a><span class="fu"># System {.unnumbered}</span></span>
-<span id="cb24-93"><a href="#cb24-93"></a></span>
-<span id="cb24-94"><a href="#cb24-94"></a></span>
-<span id="cb24-95"><a href="#cb24-95"></a>There are a lot of modules in Python to work with the system. &lt;br&gt;</span>
-<span id="cb24-96"><a href="#cb24-96"></a>You can use the <span class="in">`os`</span> module to **work with files and directories**. &lt;br&gt;</span>
-<span id="cb24-97"><a href="#cb24-97"></a>You can use the <span class="in">`sys`</span> module to **work with command line arguments**. &lt;br&gt;</span>
-<span id="cb24-98"><a href="#cb24-98"></a>You can use the <span class="in">`argparse`</span> module to work also with **command line arguments**. &lt;br&gt;</span>
-<span id="cb24-99"><a href="#cb24-99"></a></span>
-<span id="cb24-100"><a href="#cb24-100"></a>Most important functions are: &lt;br&gt;</span>
-<span id="cb24-101"><a href="#cb24-101"></a><span class="ss">- </span><span class="in">`os.getcwd()`</span> to get the current working directory. &lt;br&gt;</span>
-<span id="cb24-102"><a href="#cb24-102"></a><span class="ss">- </span><span class="in">`os.chdir()`</span> to change the current working directory. &lt;br&gt;</span>
-<span id="cb24-103"><a href="#cb24-103"></a><span class="ss">- </span><span class="in">`os.listdir()`</span> to list the files in a directory. &lt;br&gt;</span>
-<span id="cb24-104"><a href="#cb24-104"></a><span class="ss">- </span><span class="in">`os.mkdir()`</span> to create a directory. &lt;br&gt;</span>
-<span id="cb24-105"><a href="#cb24-105"></a><span class="ss">- </span><span class="in">`os.rmdir()`</span> to remove a directory. &lt;br&gt;</span>
-<span id="cb24-106"><a href="#cb24-106"></a><span class="ss">- </span><span class="in">`os.remove()`</span> to remove a file. &lt;br&gt;</span>
-<span id="cb24-107"><a href="#cb24-107"></a><span class="ss">- </span><span class="in">`os.rename()`</span> to rename a file. &lt;br&gt;</span>
-<span id="cb24-108"><a href="#cb24-108"></a><span class="ss">- </span><span class="in">`os.path.exists()`</span> to check if a file or directory exists. &lt;br&gt;</span>
-<span id="cb24-109"><a href="#cb24-109"></a><span class="ss">- </span><span class="in">`os.path.isfile()`</span> to check if a file exists. &lt;br&gt;</span>
-<span id="cb24-110"><a href="#cb24-110"></a><span class="ss">- </span><span class="in">`os.path.isdir()`</span> to check if a directory exists. &lt;br&gt;</span>
-<span id="cb24-111"><a href="#cb24-111"></a><span class="ss">- </span><span class="in">`os.path.join()`</span> to join two paths. &lt;br&gt;</span>
-<span id="cb24-112"><a href="#cb24-112"></a><span class="ss">- </span><span class="in">`os.path.basename()`</span> to get the base name of a path. &lt;br&gt;</span>
-<span id="cb24-113"><a href="#cb24-113"></a><span class="ss">- </span><span class="in">`os.path.dirname()`</span> to get the directory name of a path. &lt;br&gt;</span>
-<span id="cb24-114"><a href="#cb24-114"></a><span class="ss">- </span><span class="in">`os.path.abspath()`</span> to get the absolute path of a path. &lt;br&gt;</span>
-<span id="cb24-115"><a href="#cb24-115"></a><span class="ss">- </span><span class="in">`os.path.split()`</span> to split a path into a directory and a file. &lt;br&gt;</span>
-<span id="cb24-116"><a href="#cb24-116"></a><span class="ss">- </span><span class="in">`os.path.splitext()`</span> to split a path into a base name and an extension. &lt;br&gt;</span>
-<span id="cb24-117"><a href="#cb24-117"></a><span class="ss">- </span><span class="in">`os.path.getsize()`</span> to get the size of a file. &lt;br&gt;</span>
-<span id="cb24-118"><a href="#cb24-118"></a><span class="ss">- </span><span class="in">`os.path.getmtime()`</span> to get the modification time of a file. &lt;br&gt;</span>
-<span id="cb24-119"><a href="#cb24-119"></a></span>
-<span id="cb24-120"><a href="#cb24-120"></a><span class="ss">- </span><span class="in">`sys.argv`</span> to get the command line arguments. &lt;br&gt;</span>
-<span id="cb24-121"><a href="#cb24-121"></a><span class="ss">- </span><span class="in">`sys.exit()`</span> to exit the program. &lt;br&gt;</span>
-<span id="cb24-122"><a href="#cb24-122"></a><span class="ss">- </span><span class="in">`sys.stdin`</span> to read from the standard input. &lt;br&gt;</span>
-<span id="cb24-123"><a href="#cb24-123"></a><span class="ss">- </span><span class="in">`sys.stdout`</span> to write to the standard output. &lt;br&gt;</span>
-<span id="cb24-124"><a href="#cb24-124"></a><span class="ss">- </span><span class="in">`sys.stderr`</span> to write to the standard error. &lt;br&gt;</span>
-<span id="cb24-125"><a href="#cb24-125"></a></span>
-<span id="cb24-126"><a href="#cb24-126"></a><span class="ss">- </span><span class="in">`argparse.ArgumentParser()`</span> to create a parser. &lt;br&gt;</span>
-<span id="cb24-127"><a href="#cb24-127"></a><span class="ss">- </span><span class="in">`add_argument()`</span> to add an argument to the parser. &lt;br&gt;</span>
-<span id="cb24-128"><a href="#cb24-128"></a><span class="ss">- </span><span class="in">`parse_args()`</span> to parse the command line arguments. &lt;br&gt;</span>
-<span id="cb24-129"><a href="#cb24-129"></a></span>
-<span id="cb24-130"><a href="#cb24-130"></a></span>
-<span id="cb24-131"><a href="#cb24-131"></a>This should remove the file "file.txt"</span>
-<span id="cb24-134"><a href="#cb24-134"></a><span class="in">```{python}</span></span>
-<span id="cb24-135"><a href="#cb24-135"></a><span class="im">import</span> os</span>
-<span id="cb24-136"><a href="#cb24-136"></a>os.remove(<span class="st">"file.txt"</span>)</span>
-<span id="cb24-137"><a href="#cb24-137"></a><span class="in">```</span></span>
-<span id="cb24-138"><a href="#cb24-138"></a></span>
-<span id="cb24-139"><a href="#cb24-139"></a></span>
-<span id="cb24-140"><a href="#cb24-140"></a>For <span class="in">`sys`</span> you can use the <span class="in">`sys.argv`</span> to get the command line arguments. &lt;br&gt;</span>
-<span id="cb24-141"><a href="#cb24-141"></a><span class="in">`sys.argv`</span> is a list of the command line arguments. &lt;br&gt;</span>
-<span id="cb24-142"><a href="#cb24-142"></a><span class="in">`sys.argv[0]`</span> is the name of the script. &lt;br&gt;</span>
-<span id="cb24-143"><a href="#cb24-143"></a><span class="in">`sys.argv[1]`</span> is the first argument. &lt;br&gt;</span>
-<span id="cb24-144"><a href="#cb24-144"></a></span>
-<span id="cb24-145"><a href="#cb24-145"></a></span>
-<span id="cb24-146"><a href="#cb24-146"></a></span>
-<span id="cb24-149"><a href="#cb24-149"></a><span class="in">```{python}</span></span>
-<span id="cb24-150"><a href="#cb24-150"></a><span class="im">import</span> sys</span>
-<span id="cb24-151"><a href="#cb24-151"></a>first_argument <span class="op">=</span> sys.argv[<span class="dv">1</span>]</span>
-<span id="cb24-152"><a href="#cb24-152"></a><span class="in">```</span></span>
-<span id="cb24-153"><a href="#cb24-153"></a></span>
-<span id="cb24-154"><a href="#cb24-154"></a></span>
-<span id="cb24-155"><a href="#cb24-155"></a></span>
-<span id="cb24-156"><a href="#cb24-156"></a></span>
-<span id="cb24-157"><a href="#cb24-157"></a>For more information about the sys module you can visit the <span class="co">[</span><span class="ot">official documentation</span><span class="co">](https://docs.python.org/3/library/sys.html)</span>.</span>
-<span id="cb24-158"><a href="#cb24-158"></a></span>
-<span id="cb24-159"><a href="#cb24-159"></a></span>
-<span id="cb24-160"><a href="#cb24-160"></a>For <span class="in">`Argparse`</span> you can use the following code:</span>
-<span id="cb24-161"><a href="#cb24-161"></a>For python scripts:</span>
-<span id="cb24-162"><a href="#cb24-162"></a>You can use argparse to parse command line arguments.</span>
-<span id="cb24-163"><a href="#cb24-163"></a></span>
-<span id="cb24-166"><a href="#cb24-166"></a><span class="in">```{python}</span></span>
-<span id="cb24-167"><a href="#cb24-167"></a><span class="co">#| eval: false</span></span>
-<span id="cb24-168"><a href="#cb24-168"></a><span class="im">from</span> argparse <span class="im">import</span> ArgumentParser</span>
-<span id="cb24-169"><a href="#cb24-169"></a></span>
-<span id="cb24-170"><a href="#cb24-170"></a>parser <span class="op">=</span> ArgumentParser(description<span class="op">=</span><span class="st">"This is a description."</span>)</span>
-<span id="cb24-171"><a href="#cb24-171"></a>parser.add_argument(<span class="st">"--arg1"</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"This is the first argument."</span>)</span>
-<span id="cb24-172"><a href="#cb24-172"></a>parser.add_argument(<span class="st">"---arg2"</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"This is the second argument."</span>)</span>
-<span id="cb24-173"><a href="#cb24-173"></a>args <span class="op">=</span> parser.parse_args()</span>
-<span id="cb24-174"><a href="#cb24-174"></a><span class="in">```</span></span>
-<span id="cb24-175"><a href="#cb24-175"></a></span>
-<span id="cb24-176"><a href="#cb24-176"></a>For more information about <span class="in">`Argparse`</span> you can visit the <span class="co">[</span><span class="ot">official documentation</span><span class="co">](https://docs.python.org/3/library/argparse.html)</span>.</span>
-<span id="cb24-177"><a href="#cb24-177"></a></span>
-<span id="cb24-178"><a href="#cb24-178"></a>---</span>
-<span id="cb24-179"><a href="#cb24-179"></a></span>
-<span id="cb24-180"><a href="#cb24-180"></a><span class="fu"># Paths {.unnumbered}</span></span>
-<span id="cb24-181"><a href="#cb24-181"></a></span>
-<span id="cb24-182"><a href="#cb24-182"></a>Pay attention to the paths in your code. They are different defined in Windows and Linux. In Windows and macOS, you use backslashes <span class="in">`/`</span> and in Linux, you use forward slashes <span class="in">`\`</span>. </span>
-<span id="cb24-183"><a href="#cb24-183"></a></span>
-<span id="cb24-184"><a href="#cb24-184"></a>To avoid this problem you can use the <span class="in">`os`</span> or <span class="in">`pathlib`</span> module to make your code platform independent.</span>
-<span id="cb24-185"><a href="#cb24-185"></a></span>
-<span id="cb24-186"><a href="#cb24-186"></a></span>
-<span id="cb24-189"><a href="#cb24-189"></a><span class="in">```{python}</span></span>
-<span id="cb24-190"><a href="#cb24-190"></a><span class="im">import</span> os</span>
-<span id="cb24-191"><a href="#cb24-191"></a></span>
-<span id="cb24-192"><a href="#cb24-192"></a>path <span class="op">=</span> os.path.join(<span class="st">'folder1'</span>, <span class="st">'folder2'</span>, <span class="st">'folder3'</span>, <span class="st">'data.dat'</span>)</span>
-<span id="cb24-193"><a href="#cb24-193"></a><span class="bu">print</span>(path)</span>
-<span id="cb24-194"><a href="#cb24-194"></a><span class="in">```</span></span>
-<span id="cb24-195"><a href="#cb24-195"></a></span>
-<span id="cb24-196"><a href="#cb24-196"></a></span>
-<span id="cb24-199"><a href="#cb24-199"></a><span class="in">```{python}</span></span>
-<span id="cb24-200"><a href="#cb24-200"></a>working_dir <span class="op">=</span> os.getcwd()</span>
-<span id="cb24-201"><a href="#cb24-201"></a><span class="bu">print</span>(working_dir)</span>
-<span id="cb24-202"><a href="#cb24-202"></a><span class="in">```</span></span>
-<span id="cb24-203"><a href="#cb24-203"></a></span>
-<span id="cb24-204"><a href="#cb24-204"></a></span>
-<span id="cb24-207"><a href="#cb24-207"></a><span class="in">```{python}</span></span>
-<span id="cb24-208"><a href="#cb24-208"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb24-209"><a href="#cb24-209"></a></span>
-<span id="cb24-210"><a href="#cb24-210"></a>path <span class="op">=</span> Path(<span class="st">'folder1'</span>) <span class="op">/</span> <span class="st">'folder2'</span> <span class="op">/</span> <span class="st">'folder3'</span> <span class="op">/</span> <span class="st">'data.dat'</span></span>
-<span id="cb24-211"><a href="#cb24-211"></a><span class="bu">print</span>(path)</span>
-<span id="cb24-212"><a href="#cb24-212"></a><span class="in">```</span></span>
-<span id="cb24-213"><a href="#cb24-213"></a></span>
-<span id="cb24-214"><a href="#cb24-214"></a></span>
-<span id="cb24-217"><a href="#cb24-217"></a><span class="in">```{python}</span></span>
-<span id="cb24-218"><a href="#cb24-218"></a>working_dir <span class="op">=</span> Path.cwd()</span>
-<span id="cb24-219"><a href="#cb24-219"></a><span class="bu">print</span>(working_dir)</span>
-<span id="cb24-220"><a href="#cb24-220"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb58" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb58-1"><a href="#cb58-1"></a><span class="co">---</span></span>
+<span id="cb58-2"><a href="#cb58-2"></a><span class="an">title:</span><span class="co"> "Python Intermediate"</span></span>
+<span id="cb58-3"><a href="#cb58-3"></a><span class="an">execute:</span></span>
+<span id="cb58-4"><a href="#cb58-4"></a><span class="co">    echo: true</span></span>
+<span id="cb58-5"><a href="#cb58-5"></a><span class="co">    eval: true</span></span>
+<span id="cb58-6"><a href="#cb58-6"></a><span class="co">    error: true</span></span>
+<span id="cb58-7"><a href="#cb58-7"></a><span class="an">code-links:</span></span>
+<span id="cb58-8"><a href="#cb58-8"></a><span class="co">      - text: "Open in Colab"</span></span>
+<span id="cb58-9"><a href="#cb58-9"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Intermediate.ipynb"</span></span>
+<span id="cb58-10"><a href="#cb58-10"></a><span class="co">        icon: "laptop"</span></span>
+<span id="cb58-11"><a href="#cb58-11"></a><span class="co">      - text: "Download Code"</span></span>
+<span id="cb58-12"><a href="#cb58-12"></a><span class="co">        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/intermediate.ipynb"</span></span>
+<span id="cb58-13"><a href="#cb58-13"></a><span class="co">        icon: "journal"</span></span>
+<span id="cb58-14"><a href="#cb58-14"></a><span class="co">---</span></span>
+<span id="cb58-15"><a href="#cb58-15"></a>Difficulty level: &lt;span style="color:#2B7492"&gt;{{&lt; bi star-fill &gt;}} {{&lt; bi star-fill &gt;}} &lt;/span&gt;</span>
+<span id="cb58-16"><a href="#cb58-16"></a></span>
+<span id="cb58-17"><a href="#cb58-17"></a>Often we need with user input, files, system and paths. In this chapter we will cover these topics.</span>
+<span id="cb58-18"><a href="#cb58-18"></a></span>
+<span id="cb58-19"><a href="#cb58-19"></a><span class="fu"># I/O (Input/Output) {.unnumbered}</span></span>
+<span id="cb58-20"><a href="#cb58-20"></a></span>
+<span id="cb58-21"><a href="#cb58-21"></a></span>
+<span id="cb58-22"><a href="#cb58-22"></a>You can use the <span class="in">`print()`</span> function to **print a message** to the screen. &lt;br&gt;</span>
+<span id="cb58-23"><a href="#cb58-23"></a>You can use the <span class="in">`input()`</span> function to get **input from the user**. &lt;br&gt;</span>
+<span id="cb58-24"><a href="#cb58-24"></a>You can use the <span class="in">`open()`</span> function to **open a file**. &lt;br&gt;</span>
+<span id="cb58-25"><a href="#cb58-25"></a>You can use the <span class="in">`write()`</span> function to **write to a file**. &lt;br&gt;</span>
+<span id="cb58-26"><a href="#cb58-26"></a>You can use the <span class="in">`read()`</span> function to **read from a file**. &lt;br&gt;</span>
+<span id="cb58-27"><a href="#cb58-27"></a>You can use the <span class="in">`close()`</span> function to **close a file**. &lt;br&gt;</span>
+<span id="cb58-28"><a href="#cb58-28"></a>You can use the <span class="in">`with`</span> statement to **open a file** and **automatically close** it when you are done. &lt;br&gt;</span>
+<span id="cb58-29"><a href="#cb58-29"></a>You can use the <span class="in">`os`</span> module to **work with files and directories**. &lt;br&gt;</span>
+<span id="cb58-30"><a href="#cb58-30"></a>You can use the <span class="in">`sys`</span> module to **work with command line arguments**. &lt;br&gt;</span>
+<span id="cb58-31"><a href="#cb58-31"></a>You can use the <span class="in">`argparse`</span> module to work also with **command line arguments**. &lt;br&gt;</span>
+<span id="cb58-32"><a href="#cb58-32"></a></span>
+<span id="cb58-33"><a href="#cb58-33"></a> This should print "Hello World!" to the console</span>
+<span id="cb58-36"><a href="#cb58-36"></a><span class="in">```{python}</span></span>
+<span id="cb58-37"><a href="#cb58-37"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span>
+<span id="cb58-38"><a href="#cb58-38"></a><span class="in">```</span></span>
+<span id="cb58-39"><a href="#cb58-39"></a></span>
+<span id="cb58-40"><a href="#cb58-40"></a>This should ask the user to enter a number and print it to the console</span>
+<span id="cb58-43"><a href="#cb58-43"></a><span class="in">```{python}</span></span>
+<span id="cb58-44"><a href="#cb58-44"></a><span class="co">#| eval: false</span></span>
+<span id="cb58-45"><a href="#cb58-45"></a><span class="bu">print</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))</span>
+<span id="cb58-46"><a href="#cb58-46"></a><span class="in">```</span></span>
+<span id="cb58-47"><a href="#cb58-47"></a></span>
+<span id="cb58-48"><a href="#cb58-48"></a>This should write "Hello World!" to the file "file.txt"</span>
+<span id="cb58-51"><a href="#cb58-51"></a><span class="in">```{python}</span></span>
+<span id="cb58-52"><a href="#cb58-52"></a><span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>).write(<span class="st">"Hello World!"</span>) </span>
+<span id="cb58-53"><a href="#cb58-53"></a><span class="in">```</span></span>
+<span id="cb58-54"><a href="#cb58-54"></a></span>
+<span id="cb58-55"><a href="#cb58-55"></a>This should read the file "file.txt" and print the content to the console</span>
+<span id="cb58-58"><a href="#cb58-58"></a><span class="in">```{python}</span></span>
+<span id="cb58-59"><a href="#cb58-59"></a><span class="bu">print</span>(<span class="bu">open</span>(<span class="st">"file.txt"</span>).read()) </span>
+<span id="cb58-60"><a href="#cb58-60"></a></span>
+<span id="cb58-61"><a href="#cb58-61"></a><span class="in">```</span></span>
+<span id="cb58-62"><a href="#cb58-62"></a></span>
+<span id="cb58-63"><a href="#cb58-63"></a>This should print "Hello World!" to the console without a newline</span>
+<span id="cb58-64"><a href="#cb58-64"></a></span>
+<span id="cb58-67"><a href="#cb58-67"></a><span class="in">```{python}</span></span>
+<span id="cb58-68"><a href="#cb58-68"></a><span class="bu">print</span>(<span class="st">"Hello World without newline."</span>, end<span class="op">=</span><span class="st">""</span>) </span>
+<span id="cb58-69"><a href="#cb58-69"></a><span class="bu">print</span>(<span class="st">"Next print statement."</span>)</span>
+<span id="cb58-70"><a href="#cb58-70"></a><span class="in">```</span></span>
+<span id="cb58-71"><a href="#cb58-71"></a></span>
+<span id="cb58-72"><a href="#cb58-72"></a>This should read the file "file.txt" and print the content to the console</span>
+<span id="cb58-73"><a href="#cb58-73"></a></span>
+<span id="cb58-76"><a href="#cb58-76"></a><span class="in">```{python}</span></span>
+<span id="cb58-77"><a href="#cb58-77"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>: <span class="bu">print</span>(<span class="bu">file</span>.read()) </span>
+<span id="cb58-78"><a href="#cb58-78"></a><span class="in">```</span></span>
+<span id="cb58-79"><a href="#cb58-79"></a></span>
+<span id="cb58-80"><a href="#cb58-80"></a>Write a file with the content "Hello World!" and close it</span>
+<span id="cb58-81"><a href="#cb58-81"></a></span>
+<span id="cb58-84"><a href="#cb58-84"></a><span class="in">```{python}</span></span>
+<span id="cb58-85"><a href="#cb58-85"></a><span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb58-86"><a href="#cb58-86"></a><span class="bu">file</span>.write(<span class="st">"Hello World!"</span>)</span>
+<span id="cb58-87"><a href="#cb58-87"></a><span class="bu">file</span>.close()</span>
+<span id="cb58-88"><a href="#cb58-88"></a><span class="in">```</span></span>
+<span id="cb58-89"><a href="#cb58-89"></a></span>
+<span id="cb58-90"><a href="#cb58-90"></a>---</span>
+<span id="cb58-91"><a href="#cb58-91"></a></span>
+<span id="cb58-92"><a href="#cb58-92"></a><span class="fu"># System {.unnumbered}</span></span>
+<span id="cb58-93"><a href="#cb58-93"></a></span>
+<span id="cb58-94"><a href="#cb58-94"></a></span>
+<span id="cb58-95"><a href="#cb58-95"></a>There are a lot of modules in Python to work with the system. &lt;br&gt;</span>
+<span id="cb58-96"><a href="#cb58-96"></a>You can use the <span class="in">`os`</span> module to **work with files and directories**. &lt;br&gt;</span>
+<span id="cb58-97"><a href="#cb58-97"></a>You can use the <span class="in">`sys`</span> module to **work with command line arguments**. &lt;br&gt;</span>
+<span id="cb58-98"><a href="#cb58-98"></a>You can use the <span class="in">`argparse`</span> module to work also with **command line arguments**. &lt;br&gt;</span>
+<span id="cb58-99"><a href="#cb58-99"></a></span>
+<span id="cb58-100"><a href="#cb58-100"></a>Most important functions are: &lt;br&gt;</span>
+<span id="cb58-101"><a href="#cb58-101"></a><span class="ss">- </span><span class="in">`os.getcwd()`</span> to get the current working directory. &lt;br&gt;</span>
+<span id="cb58-102"><a href="#cb58-102"></a><span class="ss">- </span><span class="in">`os.chdir()`</span> to change the current working directory. &lt;br&gt;</span>
+<span id="cb58-103"><a href="#cb58-103"></a><span class="ss">- </span><span class="in">`os.listdir()`</span> to list the files in a directory. &lt;br&gt;</span>
+<span id="cb58-104"><a href="#cb58-104"></a><span class="ss">- </span><span class="in">`os.mkdir()`</span> to create a directory. &lt;br&gt;</span>
+<span id="cb58-105"><a href="#cb58-105"></a><span class="ss">- </span><span class="in">`os.rmdir()`</span> to remove a directory. &lt;br&gt;</span>
+<span id="cb58-106"><a href="#cb58-106"></a><span class="ss">- </span><span class="in">`os.remove()`</span> to remove a file. &lt;br&gt;</span>
+<span id="cb58-107"><a href="#cb58-107"></a><span class="ss">- </span><span class="in">`os.rename()`</span> to rename a file. &lt;br&gt;</span>
+<span id="cb58-108"><a href="#cb58-108"></a><span class="ss">- </span><span class="in">`os.path.exists()`</span> to check if a file or directory exists. &lt;br&gt;</span>
+<span id="cb58-109"><a href="#cb58-109"></a><span class="ss">- </span><span class="in">`os.path.isfile()`</span> to check if a file exists. &lt;br&gt;</span>
+<span id="cb58-110"><a href="#cb58-110"></a><span class="ss">- </span><span class="in">`os.path.isdir()`</span> to check if a directory exists. &lt;br&gt;</span>
+<span id="cb58-111"><a href="#cb58-111"></a><span class="ss">- </span><span class="in">`os.path.join()`</span> to join two paths. &lt;br&gt;</span>
+<span id="cb58-112"><a href="#cb58-112"></a><span class="ss">- </span><span class="in">`os.path.basename()`</span> to get the base name of a path. &lt;br&gt;</span>
+<span id="cb58-113"><a href="#cb58-113"></a><span class="ss">- </span><span class="in">`os.path.dirname()`</span> to get the directory name of a path. &lt;br&gt;</span>
+<span id="cb58-114"><a href="#cb58-114"></a><span class="ss">- </span><span class="in">`os.path.abspath()`</span> to get the absolute path of a path. &lt;br&gt;</span>
+<span id="cb58-115"><a href="#cb58-115"></a><span class="ss">- </span><span class="in">`os.path.split()`</span> to split a path into a directory and a file. &lt;br&gt;</span>
+<span id="cb58-116"><a href="#cb58-116"></a><span class="ss">- </span><span class="in">`os.path.splitext()`</span> to split a path into a base name and an extension. &lt;br&gt;</span>
+<span id="cb58-117"><a href="#cb58-117"></a><span class="ss">- </span><span class="in">`os.path.getsize()`</span> to get the size of a file. &lt;br&gt;</span>
+<span id="cb58-118"><a href="#cb58-118"></a><span class="ss">- </span><span class="in">`os.path.getmtime()`</span> to get the modification time of a file. &lt;br&gt;</span>
+<span id="cb58-119"><a href="#cb58-119"></a></span>
+<span id="cb58-120"><a href="#cb58-120"></a><span class="ss">- </span><span class="in">`sys.argv`</span> to get the command line arguments. &lt;br&gt;</span>
+<span id="cb58-121"><a href="#cb58-121"></a><span class="ss">- </span><span class="in">`sys.exit()`</span> to exit the program. &lt;br&gt;</span>
+<span id="cb58-122"><a href="#cb58-122"></a><span class="ss">- </span><span class="in">`sys.stdin`</span> to read from the standard input. &lt;br&gt;</span>
+<span id="cb58-123"><a href="#cb58-123"></a><span class="ss">- </span><span class="in">`sys.stdout`</span> to write to the standard output. &lt;br&gt;</span>
+<span id="cb58-124"><a href="#cb58-124"></a><span class="ss">- </span><span class="in">`sys.stderr`</span> to write to the standard error. &lt;br&gt;</span>
+<span id="cb58-125"><a href="#cb58-125"></a></span>
+<span id="cb58-126"><a href="#cb58-126"></a><span class="ss">- </span><span class="in">`argparse.ArgumentParser()`</span> to create a parser. &lt;br&gt;</span>
+<span id="cb58-127"><a href="#cb58-127"></a><span class="ss">- </span><span class="in">`add_argument()`</span> to add an argument to the parser. &lt;br&gt;</span>
+<span id="cb58-128"><a href="#cb58-128"></a><span class="ss">- </span><span class="in">`parse_args()`</span> to parse the command line arguments. &lt;br&gt;</span>
+<span id="cb58-129"><a href="#cb58-129"></a></span>
+<span id="cb58-130"><a href="#cb58-130"></a></span>
+<span id="cb58-131"><a href="#cb58-131"></a>This should remove the file "file.txt"</span>
+<span id="cb58-134"><a href="#cb58-134"></a><span class="in">```{python}</span></span>
+<span id="cb58-135"><a href="#cb58-135"></a><span class="im">import</span> os</span>
+<span id="cb58-136"><a href="#cb58-136"></a>os.remove(<span class="st">"file.txt"</span>)</span>
+<span id="cb58-137"><a href="#cb58-137"></a><span class="in">```</span></span>
+<span id="cb58-138"><a href="#cb58-138"></a></span>
+<span id="cb58-139"><a href="#cb58-139"></a></span>
+<span id="cb58-140"><a href="#cb58-140"></a>For <span class="in">`sys`</span> you can use the <span class="in">`sys.argv`</span> to get the command line arguments. &lt;br&gt;</span>
+<span id="cb58-141"><a href="#cb58-141"></a><span class="in">`sys.argv`</span> is a list of the command line arguments. &lt;br&gt;</span>
+<span id="cb58-142"><a href="#cb58-142"></a><span class="in">`sys.argv[0]`</span> is the name of the script. &lt;br&gt;</span>
+<span id="cb58-143"><a href="#cb58-143"></a><span class="in">`sys.argv[1]`</span> is the first argument. &lt;br&gt;</span>
+<span id="cb58-144"><a href="#cb58-144"></a></span>
+<span id="cb58-145"><a href="#cb58-145"></a></span>
+<span id="cb58-146"><a href="#cb58-146"></a></span>
+<span id="cb58-149"><a href="#cb58-149"></a><span class="in">```{python}</span></span>
+<span id="cb58-150"><a href="#cb58-150"></a><span class="im">import</span> sys</span>
+<span id="cb58-151"><a href="#cb58-151"></a>first_argument <span class="op">=</span> sys.argv[<span class="dv">1</span>]</span>
+<span id="cb58-152"><a href="#cb58-152"></a><span class="in">```</span></span>
+<span id="cb58-153"><a href="#cb58-153"></a></span>
+<span id="cb58-154"><a href="#cb58-154"></a></span>
+<span id="cb58-155"><a href="#cb58-155"></a></span>
+<span id="cb58-156"><a href="#cb58-156"></a></span>
+<span id="cb58-157"><a href="#cb58-157"></a>For more information about the sys module you can visit the <span class="co">[</span><span class="ot">official documentation</span><span class="co">](https://docs.python.org/3/library/sys.html)</span>.</span>
+<span id="cb58-158"><a href="#cb58-158"></a></span>
+<span id="cb58-159"><a href="#cb58-159"></a></span>
+<span id="cb58-160"><a href="#cb58-160"></a>For <span class="in">`Argparse`</span> you can use the following code:</span>
+<span id="cb58-161"><a href="#cb58-161"></a>For python scripts:</span>
+<span id="cb58-162"><a href="#cb58-162"></a>You can use argparse to parse command line arguments.</span>
+<span id="cb58-163"><a href="#cb58-163"></a></span>
+<span id="cb58-166"><a href="#cb58-166"></a><span class="in">```{python}</span></span>
+<span id="cb58-167"><a href="#cb58-167"></a><span class="co">#| eval: false</span></span>
+<span id="cb58-168"><a href="#cb58-168"></a><span class="im">from</span> argparse <span class="im">import</span> ArgumentParser</span>
+<span id="cb58-169"><a href="#cb58-169"></a></span>
+<span id="cb58-170"><a href="#cb58-170"></a>parser <span class="op">=</span> ArgumentParser(description<span class="op">=</span><span class="st">"This is a description."</span>)</span>
+<span id="cb58-171"><a href="#cb58-171"></a>parser.add_argument(<span class="st">"--arg1"</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"This is the first argument."</span>)</span>
+<span id="cb58-172"><a href="#cb58-172"></a>parser.add_argument(<span class="st">"---arg2"</span>, <span class="bu">help</span><span class="op">=</span><span class="st">"This is the second argument."</span>)</span>
+<span id="cb58-173"><a href="#cb58-173"></a>args <span class="op">=</span> parser.parse_args()</span>
+<span id="cb58-174"><a href="#cb58-174"></a><span class="in">```</span></span>
+<span id="cb58-175"><a href="#cb58-175"></a></span>
+<span id="cb58-176"><a href="#cb58-176"></a>For more information about <span class="in">`Argparse`</span> you can visit the <span class="co">[</span><span class="ot">official documentation</span><span class="co">](https://docs.python.org/3/library/argparse.html)</span>.</span>
+<span id="cb58-177"><a href="#cb58-177"></a></span>
+<span id="cb58-178"><a href="#cb58-178"></a>---</span>
+<span id="cb58-179"><a href="#cb58-179"></a></span>
+<span id="cb58-180"><a href="#cb58-180"></a><span class="fu"># Paths {.unnumbered}</span></span>
+<span id="cb58-181"><a href="#cb58-181"></a></span>
+<span id="cb58-182"><a href="#cb58-182"></a>Pay attention to the paths in your code. They are different defined in Windows and Linux. In Windows and macOS, you use backslashes <span class="in">`/`</span> and in Linux, you use forward slashes <span class="in">`\`</span>. </span>
+<span id="cb58-183"><a href="#cb58-183"></a></span>
+<span id="cb58-184"><a href="#cb58-184"></a>To avoid this problem you can use the <span class="in">`os`</span> or <span class="in">`pathlib`</span> module to make your code platform independent.</span>
+<span id="cb58-185"><a href="#cb58-185"></a></span>
+<span id="cb58-186"><a href="#cb58-186"></a></span>
+<span id="cb58-189"><a href="#cb58-189"></a><span class="in">```{python}</span></span>
+<span id="cb58-190"><a href="#cb58-190"></a><span class="im">import</span> os</span>
+<span id="cb58-191"><a href="#cb58-191"></a></span>
+<span id="cb58-192"><a href="#cb58-192"></a>path <span class="op">=</span> os.path.join(<span class="st">'folder1'</span>, <span class="st">'folder2'</span>, <span class="st">'folder3'</span>, <span class="st">'data.dat'</span>)</span>
+<span id="cb58-193"><a href="#cb58-193"></a><span class="bu">print</span>(path)</span>
+<span id="cb58-194"><a href="#cb58-194"></a><span class="in">```</span></span>
+<span id="cb58-195"><a href="#cb58-195"></a></span>
+<span id="cb58-196"><a href="#cb58-196"></a></span>
+<span id="cb58-199"><a href="#cb58-199"></a><span class="in">```{python}</span></span>
+<span id="cb58-200"><a href="#cb58-200"></a>working_dir <span class="op">=</span> os.getcwd()</span>
+<span id="cb58-201"><a href="#cb58-201"></a><span class="bu">print</span>(working_dir)</span>
+<span id="cb58-202"><a href="#cb58-202"></a><span class="in">```</span></span>
+<span id="cb58-203"><a href="#cb58-203"></a></span>
+<span id="cb58-204"><a href="#cb58-204"></a></span>
+<span id="cb58-207"><a href="#cb58-207"></a><span class="in">```{python}</span></span>
+<span id="cb58-208"><a href="#cb58-208"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb58-209"><a href="#cb58-209"></a></span>
+<span id="cb58-210"><a href="#cb58-210"></a>path <span class="op">=</span> Path(<span class="st">'folder1'</span>) <span class="op">/</span> <span class="st">'folder2'</span> <span class="op">/</span> <span class="st">'folder3'</span> <span class="op">/</span> <span class="st">'data.dat'</span></span>
+<span id="cb58-211"><a href="#cb58-211"></a><span class="bu">print</span>(path)</span>
+<span id="cb58-212"><a href="#cb58-212"></a><span class="in">```</span></span>
+<span id="cb58-213"><a href="#cb58-213"></a></span>
+<span id="cb58-214"><a href="#cb58-214"></a></span>
+<span id="cb58-217"><a href="#cb58-217"></a><span class="in">```{python}</span></span>
+<span id="cb58-218"><a href="#cb58-218"></a>working_dir <span class="op">=</span> Path.cwd()</span>
+<span id="cb58-219"><a href="#cb58-219"></a><span class="bu">print</span>(working_dir)</span>
+<span id="cb58-220"><a href="#cb58-220"></a><span class="in">```</span></span>
+<span id="cb58-221"><a href="#cb58-221"></a></span>
+<span id="cb58-222"><a href="#cb58-222"></a></span>
+<span id="cb58-223"><a href="#cb58-223"></a></span>
+<span id="cb58-224"><a href="#cb58-224"></a><span class="fu"># Lists {.unnumbered}</span></span>
+<span id="cb58-225"><a href="#cb58-225"></a></span>
+<span id="cb58-226"><a href="#cb58-226"></a></span>
+<span id="cb58-227"><a href="#cb58-227"></a>Lists collect multiple items in a single variable. &lt;br&gt;</span>
+<span id="cb58-228"><a href="#cb58-228"></a></span>
+<span id="cb58-229"><a href="#cb58-229"></a>You can use the <span class="in">`[]`</span> operator to create a list. &lt;br&gt;</span>
+<span id="cb58-230"><a href="#cb58-230"></a>You can use the <span class="in">`append()`</span> method to add an item to a list. &lt;br&gt;</span>
+<span id="cb58-231"><a href="#cb58-231"></a>You can use the <span class="in">`insert()`</span> method to add an item at a specific position. &lt;br&gt;</span>
+<span id="cb58-232"><a href="#cb58-232"></a>You can use the <span class="in">`del`</span> statement to delete an item from a list. &lt;br&gt;</span>
+<span id="cb58-233"><a href="#cb58-233"></a>You can use the <span class="in">`remove()`</span> method to remove an item from a list. &lt;br&gt;</span>
+<span id="cb58-234"><a href="#cb58-234"></a>You can use the <span class="in">`pop()`</span> method to remove an item at a specific position. &lt;br&gt;</span>
+<span id="cb58-235"><a href="#cb58-235"></a>You can use the <span class="in">`clear()`</span> method to remove all items from a list. &lt;br&gt;</span>
+<span id="cb58-236"><a href="#cb58-236"></a>You can use the <span class="in">`copy()`</span> method to copy a list. &lt;br&gt;</span>
+<span id="cb58-237"><a href="#cb58-237"></a>You can use the <span class="in">`count()`</span> method to count the number of items in a list. &lt;br&gt;</span>
+<span id="cb58-238"><a href="#cb58-238"></a>You can use the <span class="in">`sort()`</span> method to sort a list. &lt;br&gt;</span>
+<span id="cb58-239"><a href="#cb58-239"></a>You can use the <span class="in">`reverse()`</span> method to reverse a list. &lt;br&gt;</span>
+<span id="cb58-240"><a href="#cb58-240"></a>You can use the <span class="in">`extend()`</span> method to add items from another list. &lt;br&gt;</span>
+<span id="cb58-241"><a href="#cb58-241"></a>You can use the <span class="in">`index()`</span> method to get the index of an item. &lt;br&gt;</span>
+<span id="cb58-242"><a href="#cb58-242"></a>You can use the <span class="in">`len()`</span> function to get the length of a list. &lt;br&gt;</span>
+<span id="cb58-243"><a href="#cb58-243"></a>You can use the <span class="in">`list()`</span> function to create a list. &lt;br&gt;</span>
+<span id="cb58-244"><a href="#cb58-244"></a></span>
+<span id="cb58-245"><a href="#cb58-245"></a></span>
+<span id="cb58-246"><a href="#cb58-246"></a></span>
+<span id="cb58-247"><a href="#cb58-247"></a></span>
+<span id="cb58-248"><a href="#cb58-248"></a></span>
+<span id="cb58-251"><a href="#cb58-251"></a><span class="in">```{python}</span></span>
+<span id="cb58-252"><a href="#cb58-252"></a>a <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
+<span id="cb58-253"><a href="#cb58-253"></a>b <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">3</span>,<span class="st">'a'</span>, <span class="ot">1j</span>]</span>
+<span id="cb58-254"><a href="#cb58-254"></a><span class="bu">len</span>(a) <span class="co">#length of list</span></span>
+<span id="cb58-255"><a href="#cb58-255"></a></span>
+<span id="cb58-256"><a href="#cb58-256"></a><span class="in">```</span></span>
+<span id="cb58-257"><a href="#cb58-257"></a></span>
+<span id="cb58-258"><a href="#cb58-258"></a>:::{.callout-warning}</span>
+<span id="cb58-259"><a href="#cb58-259"></a>Index is starting with **0** in Python.</span>
+<span id="cb58-260"><a href="#cb58-260"></a>:::</span>
+<span id="cb58-261"><a href="#cb58-261"></a></span>
+<span id="cb58-264"><a href="#cb58-264"></a><span class="in">```{python}</span></span>
+<span id="cb58-265"><a href="#cb58-265"></a>l <span class="op">=</span> [<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>]</span>
+<span id="cb58-266"><a href="#cb58-266"></a>l[<span class="dv">0</span>]</span>
+<span id="cb58-267"><a href="#cb58-267"></a></span>
+<span id="cb58-268"><a href="#cb58-268"></a><span class="in">```</span></span>
+<span id="cb58-269"><a href="#cb58-269"></a></span>
+<span id="cb58-270"><a href="#cb58-270"></a></span>
+<span id="cb58-271"><a href="#cb58-271"></a>Last element is reached by index -1.</span>
+<span id="cb58-272"><a href="#cb58-272"></a></span>
+<span id="cb58-273"><a href="#cb58-273"></a></span>
+<span id="cb58-276"><a href="#cb58-276"></a><span class="in">```{python}</span></span>
+<span id="cb58-277"><a href="#cb58-277"></a>l[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb58-278"><a href="#cb58-278"></a></span>
+<span id="cb58-279"><a href="#cb58-279"></a><span class="in">```</span></span>
+<span id="cb58-280"><a href="#cb58-280"></a></span>
+<span id="cb58-281"><a href="#cb58-281"></a>---</span>
+<span id="cb58-282"><a href="#cb58-282"></a></span>
+<span id="cb58-283"><a href="#cb58-283"></a></span>
+<span id="cb58-284"><a href="#cb58-284"></a><span class="fu"># Control Structures {.unnumbered}</span></span>
+<span id="cb58-285"><a href="#cb58-285"></a></span>
+<span id="cb58-286"><a href="#cb58-286"></a>Control structures are used to control the flow of a program. &lt;br&gt;</span>
+<span id="cb58-287"><a href="#cb58-287"></a>The most common control structures are:</span>
+<span id="cb58-288"><a href="#cb58-288"></a></span>
+<span id="cb58-289"><a href="#cb58-289"></a><span class="ss">- </span>You can use the <span class="in">`if`</span> statement to execute a block of code if a condition is true. </span>
+<span id="cb58-290"><a href="#cb58-290"></a><span class="ss">- </span>You can use the <span class="in">`elif`</span> statement to execute a block of code if the first condition is - false and the second condition is true.</span>
+<span id="cb58-291"><a href="#cb58-291"></a><span class="ss">- </span>You can use the <span class="in">`else`</span> statement to execute a block of code if the condition is false.</span>
+<span id="cb58-292"><a href="#cb58-292"></a><span class="ss">- </span>You can use the <span class="in">`for`</span> loop to iterate over a sequence. </span>
+<span id="cb58-293"><a href="#cb58-293"></a><span class="ss">- </span>You can use the <span class="in">`while`</span> loop to execute a block of code as long as a condition is true. </span>
+<span id="cb58-294"><a href="#cb58-294"></a><span class="ss">- </span>You can use the <span class="in">`break`</span> statement to exit a loop. </span>
+<span id="cb58-295"><a href="#cb58-295"></a><span class="ss">- </span>You can use the <span class="in">`continue`</span> statement to skip the rest of the code in a loop. </span>
+<span id="cb58-296"><a href="#cb58-296"></a><span class="ss">- </span>You can use the <span class="in">`pass`</span> statement to do nothing.</span>
+<span id="cb58-297"><a href="#cb58-297"></a></span>
+<span id="cb58-298"><a href="#cb58-298"></a><span class="fu">## if statement {.unnumbered}</span></span>
+<span id="cb58-299"><a href="#cb58-299"></a></span>
+<span id="cb58-302"><a href="#cb58-302"></a><span class="in">```{python}</span></span>
+<span id="cb58-303"><a href="#cb58-303"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb58-304"><a href="#cb58-304"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb58-305"><a href="#cb58-305"></a>    <span class="bu">print</span>(<span class="st">"x &lt; 0"</span>)</span>
+<span id="cb58-306"><a href="#cb58-306"></a><span class="cf">elif</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb58-307"><a href="#cb58-307"></a>    <span class="bu">print</span>(<span class="st">"x &gt; 0"</span>)</span>
+<span id="cb58-308"><a href="#cb58-308"></a><span class="cf">else</span>:</span>
+<span id="cb58-309"><a href="#cb58-309"></a>    <span class="bu">print</span>(<span class="st">"x = 0"</span>)</span>
+<span id="cb58-310"><a href="#cb58-310"></a><span class="in">```</span></span>
+<span id="cb58-311"><a href="#cb58-311"></a></span>
+<span id="cb58-312"><a href="#cb58-312"></a><span class="fu">## break,continue,pass {.unnumbered}</span></span>
+<span id="cb58-313"><a href="#cb58-313"></a></span>
+<span id="cb58-314"><a href="#cb58-314"></a></span>
+<span id="cb58-317"><a href="#cb58-317"></a><span class="in">```{python}</span></span>
+<span id="cb58-318"><a href="#cb58-318"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb58-319"><a href="#cb58-319"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb58-320"><a href="#cb58-320"></a>        <span class="cf">break</span></span>
+<span id="cb58-321"><a href="#cb58-321"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb58-322"><a href="#cb58-322"></a><span class="in">```</span></span>
+<span id="cb58-323"><a href="#cb58-323"></a></span>
+<span id="cb58-324"><a href="#cb58-324"></a></span>
+<span id="cb58-327"><a href="#cb58-327"></a><span class="in">```{python}</span></span>
+<span id="cb58-328"><a href="#cb58-328"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb58-329"><a href="#cb58-329"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb58-330"><a href="#cb58-330"></a>        <span class="cf">continue</span></span>
+<span id="cb58-331"><a href="#cb58-331"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb58-332"><a href="#cb58-332"></a><span class="in">```</span>   </span>
+<span id="cb58-333"><a href="#cb58-333"></a></span>
+<span id="cb58-334"><a href="#cb58-334"></a></span>
+<span id="cb58-335"><a href="#cb58-335"></a></span>
+<span id="cb58-338"><a href="#cb58-338"></a><span class="in">```{python}</span></span>
+<span id="cb58-339"><a href="#cb58-339"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb58-340"><a href="#cb58-340"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb58-341"><a href="#cb58-341"></a>        <span class="cf">pass</span></span>
+<span id="cb58-342"><a href="#cb58-342"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb58-343"><a href="#cb58-343"></a><span class="in">```</span></span>
+<span id="cb58-344"><a href="#cb58-344"></a></span>
+<span id="cb58-345"><a href="#cb58-345"></a><span class="fu">## For Loops {.unnumbered}</span></span>
+<span id="cb58-346"><a href="#cb58-346"></a></span>
+<span id="cb58-349"><a href="#cb58-349"></a><span class="in">```{python}</span></span>
+<span id="cb58-350"><a href="#cb58-350"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>): <span class="co">#from 0 to 4 </span></span>
+<span id="cb58-351"><a href="#cb58-351"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb58-352"><a href="#cb58-352"></a><span class="in">```</span></span>
+<span id="cb58-353"><a href="#cb58-353"></a></span>
+<span id="cb58-356"><a href="#cb58-356"></a><span class="in">```{python}</span></span>
+<span id="cb58-357"><a href="#cb58-357"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">2</span>): <span class="co"># start 1, stop 10 excluded, step 2</span></span>
+<span id="cb58-358"><a href="#cb58-358"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb58-359"><a href="#cb58-359"></a><span class="in">```</span></span>
+<span id="cb58-360"><a href="#cb58-360"></a></span>
+<span id="cb58-363"><a href="#cb58-363"></a><span class="in">```{python}</span></span>
+<span id="cb58-364"><a href="#cb58-364"></a>l <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>))</span>
+<span id="cb58-365"><a href="#cb58-365"></a><span class="in">```</span></span>
+<span id="cb58-366"><a href="#cb58-366"></a></span>
+<span id="cb58-369"><a href="#cb58-369"></a><span class="in">```{python}</span></span>
+<span id="cb58-370"><a href="#cb58-370"></a>l</span>
+<span id="cb58-371"><a href="#cb58-371"></a><span class="in">```</span></span>
+<span id="cb58-372"><a href="#cb58-372"></a></span>
+<span id="cb58-375"><a href="#cb58-375"></a><span class="in">```{python}</span></span>
+<span id="cb58-376"><a href="#cb58-376"></a><span class="cf">for</span> i <span class="kw">in</span> l:  <span class="co"># using list</span></span>
+<span id="cb58-377"><a href="#cb58-377"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb58-378"><a href="#cb58-378"></a><span class="in">```</span></span>
+<span id="cb58-379"><a href="#cb58-379"></a></span>
+<span id="cb58-380"><a href="#cb58-380"></a><span class="fu">## While Loops {.unnumbered}</span></span>
+<span id="cb58-381"><a href="#cb58-381"></a></span>
+<span id="cb58-384"><a href="#cb58-384"></a><span class="in">```{python}</span></span>
+<span id="cb58-385"><a href="#cb58-385"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb58-386"><a href="#cb58-386"></a><span class="cf">while</span> x  <span class="op">&lt;</span> <span class="dv">4</span>:</span>
+<span id="cb58-387"><a href="#cb58-387"></a>    <span class="bu">print</span>(l[x])</span>
+<span id="cb58-388"><a href="#cb58-388"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb58-389"><a href="#cb58-389"></a><span class="in">```</span></span>
+<span id="cb58-390"><a href="#cb58-390"></a></span>
+<span id="cb58-393"><a href="#cb58-393"></a><span class="in">```{python}</span></span>
+<span id="cb58-394"><a href="#cb58-394"></a><span class="bu">print</span>(<span class="st">"while loop with continue and break statement"</span>)</span>
+<span id="cb58-395"><a href="#cb58-395"></a>n <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb58-396"><a href="#cb58-396"></a><span class="cf">while</span>(n <span class="op">&lt;</span> <span class="dv">10</span>):</span>
+<span id="cb58-397"><a href="#cb58-397"></a>    n<span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb58-398"><a href="#cb58-398"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb58-399"><a href="#cb58-399"></a>        <span class="cf">continue</span></span>
+<span id="cb58-400"><a href="#cb58-400"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">7</span>:</span>
+<span id="cb58-401"><a href="#cb58-401"></a>        <span class="bu">print</span>(<span class="st">"The loop reached 7 and will break now."</span>)</span>
+<span id="cb58-402"><a href="#cb58-402"></a>        <span class="cf">break</span></span>
+<span id="cb58-403"><a href="#cb58-403"></a>    <span class="bu">print</span>(n)</span>
+<span id="cb58-404"><a href="#cb58-404"></a><span class="in">```</span></span>
+<span id="cb58-405"><a href="#cb58-405"></a></span>
+<span id="cb58-406"><a href="#cb58-406"></a><span class="fu">## Functions {.unnumbered}</span></span>
+<span id="cb58-407"><a href="#cb58-407"></a></span>
+<span id="cb58-408"><a href="#cb58-408"></a></span>
+<span id="cb58-409"><a href="#cb58-409"></a>Functions are defined using the <span class="in">`def`</span> keyword. &lt;br&gt;</span>
+<span id="cb58-410"><a href="#cb58-410"></a>You can use the <span class="in">`return`</span> keyword to return a value from a function. &lt;br&gt;</span>
+<span id="cb58-411"><a href="#cb58-411"></a>The parameters of a function are defined in the parentheses. &lt;br&gt;</span>
+<span id="cb58-412"><a href="#cb58-412"></a>Multiple parameters are separated by commas. &lt;br&gt;</span>
+<span id="cb58-413"><a href="#cb58-413"></a>You can use default values for the parameter *e.g.* <span class="in">`b=5`</span>. &lt;br&gt;</span>
+<span id="cb58-414"><a href="#cb58-414"></a>Multiple return values are separated by commas. &lt;br&gt;</span>
+<span id="cb58-415"><a href="#cb58-415"></a>They are stored in a tuple. &lt;br&gt;</span>
+<span id="cb58-416"><a href="#cb58-416"></a></span>
+<span id="cb58-417"><a href="#cb58-417"></a></span>
+<span id="cb58-420"><a href="#cb58-420"></a><span class="in">```{python}</span></span>
+<span id="cb58-421"><a href="#cb58-421"></a><span class="kw">def</span> summation(a,b<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb58-422"><a href="#cb58-422"></a>    <span class="cf">return</span> a<span class="op">+</span>b, a<span class="op">-</span>b</span>
+<span id="cb58-423"><a href="#cb58-423"></a><span class="in">```</span></span>
+<span id="cb58-424"><a href="#cb58-424"></a></span>
+<span id="cb58-427"><a href="#cb58-427"></a><span class="in">```{python}</span></span>
+<span id="cb58-428"><a href="#cb58-428"></a>summation(<span class="dv">4</span>,<span class="dv">2</span>)</span>
+<span id="cb58-429"><a href="#cb58-429"></a><span class="in">```</span></span>
+<span id="cb58-430"><a href="#cb58-430"></a></span>
+<span id="cb58-433"><a href="#cb58-433"></a><span class="in">```{python}</span></span>
+<span id="cb58-434"><a href="#cb58-434"></a><span class="bu">sum</span>, sub <span class="op">=</span> summation(<span class="dv">4</span>)</span>
+<span id="cb58-435"><a href="#cb58-435"></a><span class="bu">print</span>(<span class="bu">sum</span>)</span>
+<span id="cb58-436"><a href="#cb58-436"></a><span class="bu">print</span>(sub)</span>
+<span id="cb58-437"><a href="#cb58-437"></a><span class="in">```</span></span>
+<span id="cb58-438"><a href="#cb58-438"></a></span>
+<span id="cb58-441"><a href="#cb58-441"></a><span class="in">```{python}</span></span>
+<span id="cb58-442"><a href="#cb58-442"></a>x <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb58-443"><a href="#cb58-443"></a></span>
+<span id="cb58-444"><a href="#cb58-444"></a><span class="kw">def</span> multiple_return_value(x,a,b):</span>
+<span id="cb58-445"><a href="#cb58-445"></a>    n <span class="op">=</span> x<span class="op">+</span>a</span>
+<span id="cb58-446"><a href="#cb58-446"></a>    m <span class="op">=</span> x<span class="op">-</span>b</span>
+<span id="cb58-447"><a href="#cb58-447"></a>    <span class="cf">return</span> [n,m]</span>
+<span id="cb58-448"><a href="#cb58-448"></a><span class="bu">print</span>(multiple_return_value(x,<span class="dv">5</span>,<span class="dv">10</span>)[<span class="dv">0</span>],multiple_return_value(x,<span class="dv">5</span>,<span class="dv">10</span>)[<span class="dv">1</span>])</span>
+<span id="cb58-449"><a href="#cb58-449"></a><span class="in">```</span></span>
+<span id="cb58-450"><a href="#cb58-450"></a></span>
+<span id="cb58-451"><a href="#cb58-451"></a>---</span>
+<span id="cb58-452"><a href="#cb58-452"></a></span>
+<span id="cb58-453"><a href="#cb58-453"></a><span class="fu">## Style guideline for writing python code {.unnumbered}</span></span>
+<span id="cb58-454"><a href="#cb58-454"></a></span>
+<span id="cb58-455"><a href="#cb58-455"></a></span>
+<span id="cb58-456"><a href="#cb58-456"></a>For writing a readable code, it is important to follow a style guideline. &lt;br&gt;</span>
+<span id="cb58-457"><a href="#cb58-457"></a>The most common style guideline for Python is <span class="co">[</span><span class="ot">PEP 8</span><span class="co">](https://www.python.org/dev/peps/pep-0008/)</span>. &lt;br&gt;</span>
+<span id="cb58-458"><a href="#cb58-458"></a></span>
+<span id="cb58-459"><a href="#cb58-459"></a>---</span>
+<span id="cb58-460"><a href="#cb58-460"></a></span>
+<span id="cb58-461"><a href="#cb58-461"></a><span class="fu"># Exercises {.unnumbered}</span></span>
+<span id="cb58-462"><a href="#cb58-462"></a>Download it locally and try to solve the exercises. &lt;br&gt;</span>
+<span id="cb58-463"><a href="#cb58-463"></a></span>
+<span id="cb58-464"><a href="#cb58-464"></a><span class="co">[</span><span class="ot">Basic Python</span><span class="co">](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1.zip)</span></span>
+<span id="cb58-465"><a href="#cb58-465"></a></span>
+<span id="cb58-466"><a href="#cb58-466"></a></span>
+<span id="cb58-467"><a href="#cb58-467"></a></span>
+<span id="cb58-468"><a href="#cb58-468"></a>Or open it in <span class="in">`Google Colab`</span>:</span>
+<span id="cb58-469"><a href="#cb58-469"></a></span>
+<span id="cb58-470"><a href="#cb58-470"></a><span class="co">[</span><span class="ot">Basic Python</span><span class="co">](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material/student/BasicExercises.ipynb)</span></span>
+<span id="cb58-471"><a href="#cb58-471"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
