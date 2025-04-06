@@ -2,9 +2,10 @@
 title: "Python Start"
 format: 
     html:
-        css: ../../quizzes/quiz.css
-        include-in-header:
-         text: |
+      css: 
+            - ../../quizzes/quiz_dark.css
+      include-in-header:
+        text: |
             <script src="../../quizzes/basic_python.js"></script>
 execute:
     echo: true
