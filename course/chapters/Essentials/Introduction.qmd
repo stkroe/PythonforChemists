@@ -2,9 +2,9 @@
 title: "Introduction"
 ---
 
+Difficulty level: <span style="color:#2B7492">{{< bi star >}} </span>
 
 ## What do you need for data analysis and visualization? {.unnumbered}
-
 
 - Research normally contains handling a lot of data.
 - Clear presentation of data is essential to the understanding of data.

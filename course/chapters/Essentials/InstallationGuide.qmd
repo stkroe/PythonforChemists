@@ -5,7 +5,7 @@ execute:
     eval: false
     collaps: false
 ---
-
+Difficulty level: <span style="color:#2B7492">{{< bi star >}} </span>
 
 Here is a short instruction how to install Python on your local PC or you can use [Google Colab](https://colab.research.google.com) to solve all the exercises of this course.
 

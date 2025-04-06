@@ -17,9 +17,6 @@ other-links:
       - text: "Data temperature_nan_dat"
         href: "https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/lectures/temperatures_nan.dat"
         icon: "filetype-txt"
-      - text: "Download Code"
-        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
-        icon: "journal"
       - text: "Example"
         href: "https://github.com/stkroe/PythonforChemists/blob/main/course/examples/DHP_Example.ipynb"
         icon: journal
@@ -30,8 +27,12 @@ code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
         icon: "laptop"
+      - text: "Download Code"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimpleDataInspection.ipynb"
+        icon: "journal"
 --- 
 
+Difficulty level: <span style="color:#2B7492">{{< bi star-fill >}} </span>
 
 ## Inspection of Data {.unnumbered}
 
@@ -190,7 +191,7 @@ At index 21 at time 22 s the temperature is missing.
 The handling of missing data is a complex topic.
 First of all you have to check why the data is missing. Is it a measurement error, a data processing error etc.
 
-You have to decide if you want to fill the missing data with a specific value, drop the row or column or interpolate the missing data. The decision depends on the data and the analysis you want to perform. Droping Data is always a delicate decision because you loose information. Sometimes it is not good scientific practice to drop data. 
+You have to decide if you want to fill the missing data with a specific value, drop the row or column or interpolate the missing data. The decision depends on the data and the analysis you want to perform. Dropping Data is always a delicate decision because you loose information. Sometimes it is not good scientific practice to drop data. 
 For more information there a lot of research in this topic [https://doi.org/10.1076/edre.7.4.353.8937](https://doi.org/10.1076/edre.7.4.353.8937)
 :::
 

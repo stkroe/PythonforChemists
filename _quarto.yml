@@ -113,8 +113,8 @@ bibliography: references.bib
 format:
   html: 
       theme: 
-        light: [cosmo]  # Light theme
-        dark: [darkly]   # Dark theme
+        light: [cosmo]
+        dark: [darkly]
       highlight-style: pygments
       code-copy: true
       code-overflow: scroll

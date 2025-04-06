@@ -4,6 +4,7 @@ format: html
 
 ---
 
+Difficulty level: <span style="color:#2B7492">{{< bi star >}} </span>
 
 ## Short History of Python {.unnumbered}
 

@@ -4,15 +4,15 @@ execute:
     echo: true
     eval: true
     error: true
-other-links:     
-    - text: "Download Code"
-      href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/intermediate.ipynb"
-      icon: "journal"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Intermediate.ipynb"
         icon: "laptop"
+      - text: "Download Code"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/intermediate.ipynb"
+        icon: "journal"
 ---
+Difficulty level: <span style="color:#2B7492">{{< bi star-fill >}} {{< bi star-fill >}} </span>
 
 Often we need with user input, files, system and paths. In this chapter we will cover these topics.
 
@@ -190,3 +190,222 @@ print(path)
 working_dir = Path.cwd()
 print(working_dir)
 ```
+
+
+
+# Lists {.unnumbered}
+
+
+Lists collect multiple items in a single variable. <br>
+
+You can use the `[]` operator to create a list. <br>
+You can use the `append()` method to add an item to a list. <br>
+You can use the `insert()` method to add an item at a specific position. <br>
+You can use the `del` statement to delete an item from a list. <br>
+You can use the `remove()` method to remove an item from a list. <br>
+You can use the `pop()` method to remove an item at a specific position. <br>
+You can use the `clear()` method to remove all items from a list. <br>
+You can use the `copy()` method to copy a list. <br>
+You can use the `count()` method to count the number of items in a list. <br>
+You can use the `sort()` method to sort a list. <br>
+You can use the `reverse()` method to reverse a list. <br>
+You can use the `extend()` method to add items from another list. <br>
+You can use the `index()` method to get the index of an item. <br>
+You can use the `len()` function to get the length of a list. <br>
+You can use the `list()` function to create a list. <br>
+
+
+
+
+
+```{python}
+
+a = ['a', 'b', 'c']
+b = [1,3,'a', 1j]
+len(a) #length of list
+
+```
+
+:::{.callout-warning}
+Index is starting with **0** in Python.
+:::
+
+```{python}
+
+l = ['first', 'second', 'third']
+l[0]
+
+```
+
+
+Last element is reached by index -1.
+
+
+```{python}
+l[-1]
+
+```
+
+---
+
+
+# Control Structures {.unnumbered}
+
+Control structures are used to control the flow of a program. <br>
+The most common control structures are:
+
+- You can use the `if` statement to execute a block of code if a condition is true. 
+- You can use the `elif` statement to execute a block of code if the first condition is - false and the second condition is true.
+- You can use the `else` statement to execute a block of code if the condition is false.
+- You can use the `for` loop to iterate over a sequence. 
+- You can use the `while` loop to execute a block of code as long as a condition is true. 
+- You can use the `break` statement to exit a loop. 
+- You can use the `continue` statement to skip the rest of the code in a loop. 
+- You can use the `pass` statement to do nothing.
+
+## if statement {.unnumbered}
+
+```{python}
+x = 0
+if x < 0:
+    print("x < 0")
+elif x > 0:
+    print("x > 0")
+else:
+    print("x = 0")
+```
+
+## break,continue,pass {.unnumbered}
+
+
+```{python}
+
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+```
+
+
+```{python}
+for i in range(10):
+    if i == 5:
+        continue
+    print(i)
+```   
+
+
+
+```{python} 
+for i in range(10):
+    if i == 5:
+        pass
+    print(i)
+```
+
+## For Loops {.unnumbered}
+
+```{python} 
+for i in range(5): #from 0 to 4 
+    print(i)
+```
+
+```{python} 
+for i in range(1,10,2): # start 1, stop 10 excluded, step 2
+    print(i)
+```
+
+```{python} 
+l = list(range(0,10))
+```
+
+```{python} 
+l
+```
+
+```{python} 
+for i in l:  # using list
+    print(i)
+```
+
+## While Loops {.unnumbered}
+
+```{python} 
+x = 0
+while x  < 4:
+    print(l[x])
+    x = x + 1
+```
+
+```{python} 
+print("while loop with continue and break statement")
+n = 0
+while(n < 10):
+    n+=1
+    if n == 5:
+        continue
+    if n == 7:
+        print("The loop reached 7 and will break now.")
+        break
+    print(n)
+```
+
+## Functions {.unnumbered}
+
+
+Functions are defined using the `def` keyword. <br>
+You can use the `return` keyword to return a value from a function. <br>
+The parameters of a function are defined in the parentheses. <br>
+Multiple parameters are separated by commas. <br>
+You can use default values for the parameter *e.g.* `b=5`. <br>
+Multiple return values are separated by commas. <br>
+They are stored in a tuple. <br>
+
+
+```{python} 
+def summation(a,b=5):
+    return a+b, a-b
+```
+
+```{python} 
+summation(4,2)
+```
+
+```{python} 
+sum, sub = summation(4)
+print(sum)
+print(sub)
+```
+
+```{python} 
+x = 3
+
+def multiple_return_value(x,a,b):
+    n = x+a
+    m = x-b
+    return [n,m]
+print(multiple_return_value(x,5,10)[0],multiple_return_value(x,5,10)[1])
+```
+
+---
+
+## Style guideline for writing python code {.unnumbered}
+
+
+For writing a readable code, it is important to follow a style guideline. <br>
+The most common style guideline for Python is [PEP 8](https://www.python.org/dev/peps/pep-0008/). <br>
+
+---
+
+# Exercises {.unnumbered}
+Download it locally and try to solve the exercises. <br>
+
+[Basic Python](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1.zip)
+
+
+
+Or open it in `Google Colab`:
+
+[Basic Python](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/notebooks/ex1/material/student/BasicExercises.ipynb)
+
+

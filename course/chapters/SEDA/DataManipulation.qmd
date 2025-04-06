@@ -3,15 +3,15 @@ title: "Data Manipulation"
 execute: 
   echo: True
   eval: True
-other-links: 
-      - text: "Download Code"
-        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/DataManipulation.ipynb"
-        icon: "journal"
 code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/DataManipulation.ipynb"
         icon: "laptop"
+      - text: "Download Code"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/DataManipulation.ipynb"
+        icon: "journal"
 --- 
+Difficulty level: <span style="color:#2B7492">{{< bi star-fill >}} </span>
 
 # Data Manipulation {.unnumbered}
 
@@ -68,7 +68,7 @@ print("flatten array: \n", c.flatten())
 #### Linear algebra operations *e.g.*: {.unnumbered}
 
 - `np.sum(a)` returns **element-wise sum** of two arrays
-- `np.add(a)` returns **sum of all elements** an arrays
+- `np.add(a)` returns **sum of all elements** arrays
 - `np.subtract(a,b)` returns the **difference** of two arrays
 - `np.multiply(a,b)` returns the **product** of two arrays
 - `np.divide(a,b)` returns the **division** of two arrays

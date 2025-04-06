@@ -5,9 +5,6 @@ execute:
   eval: True
   error: True
 other-links: 
-      - text: "Download Code"
-        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimplePlots.ipynb"
-        icon: "journal"
       - text: "Example"
         href: "https://github.com/stkroe/PythonforChemists/blob/main/course/examples/SimplePlotExmple.ipynb"
         icon: journal
@@ -18,8 +15,11 @@ code-links:
       - text: "Open in Colab"
         href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/SimplePlot.ipynb"
         icon: "laptop"
+      - text: "Download Code"
+        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/SimplePlots.ipynb"
+        icon: "journal"
 ---
-
+Difficulty level: <span style="color:#2B7r492">{{< bi star-fill >}} </span>
 
 ## Basic Data Visualization Technique {.unnumbered}
 
@@ -198,7 +198,7 @@ subR.suptitle('Right subfigure')
 
 ### Subfigures and Gridspec
 
-You can also create subfigures and gridspecs to create more complex layouts.
+You can also create `subplots` and `gridspecs` to create more complex layouts.
 
 ```{python}
 from matplotlib.gridspec import GridSpec
@@ -248,81 +248,6 @@ Download it locally and try to solve the exercises. <br>
 Or open it in `Google Colab`:
 
 [Simple Plot Example](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/SimplePlotExample.ipynb)
-
-
-
-
-
-<!-- Let`s try to create 4x3 subplots with specific adjustments.
-
-- `plt.subplots(4, 3)`: create 4x3 subplots
-- `figsize=(3, 4)`: set the figure size to 3x4 inches
-- `sharex=True`: all subplots share the x-axis
-- `sharey=True`: all subplots share the y-axis
--  `constraint_layout=True`: automatically adjust the subplot parameters to give the specified padding around the subplots
-- `gridspec_kw={'hspace': 0.5, 'wspace': 0.5}`: set the horizontal and vertical space between the subplots to 0.5 inches
-
-
-Play with the code below to understand the different parameters:
-
-
-```{ojs}
-//| echo: false
-
-viewof figx = Inputs.range(
-  [1, 10], 
-  {value: 5, step: 0.5, label: "Figure x-size:"}
-)
-viewof figy = Inputs.range(
-  [1, 10], 
-  {value: 5, step: 0.5, label: "Figure y-size:"}
-)
-viewof constrained = Inputs.select(["True", "False"], {label: "Select an option:"})
-viewof dpi = Inputs.range(
-  [70, 100], 
-  {value:75, step:5 , label: "Dpi:"}
-)
-viewof space_h = Inputs.range(
-  [0.1, 1], 
-  {value: 0.5, step: 0.05, label: "horizonatal space:"}
-)
-viewof space_w = Inputs.range(
-  [0.1, 1], 
-  {value: 0.5, step: 0.05, label: "width space:"}
-)
-```
-
-```{python}
-#| edit: False
-#| runbutton: True
-#| input:
-#|   - figx
-#|   - figy
-#|   - constrained
-#|   - dpi
-#|   - space_w
-#|   - space_h
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
-
-fig, ax = plt.subplots(3,2, figsize=(figx,figy), dpi=dpi, sharex=True, sharey=True, constrained_layout=constrained,gridspec_kw={'hspace': space_h, 'wspace': space_w})
-
-for i in range(3):
-    for j in range(2):
-        ax[i,j].plot(x, y*(i+1)*(j+1))
-
-plt.show()
-
-``` -->
-
-
-
-
-
 
 
 
