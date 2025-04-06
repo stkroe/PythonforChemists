@@ -240,14 +240,16 @@ print(b, " is a", type(b))
 
 Python has several data types. The most common are:
 
-- `int` for integers
-- `float` for floating point numbers
-- `str` for strings
-- `bool` for booleans
-- `list` for lists
-- `tuple` for tuples
-- `dict` for dictionaries
-- `set` for sets
+| Data Type | Description                     |
+|-----------|---------------------------------|
+| `int`     | Integers                       |
+| `float`   | Floating point numbers         |
+| `str`     | Strings                        |
+| `bool`    | Booleans                       |
+| `list`    | Lists                          |
+| `tuple`   | Tuples                         |
+| `dict`    | Dictionaries                   |
+| `set`     | Sets                           |
 
 You can use the `type()` function to get the type of a variable. <br>
 You can use the `isinstance()` function to check if a variable is an instance of a class. <br>
@@ -424,16 +426,18 @@ print("b:",b)
 
 You can use the following escape characters:
 
-- `\n`: new line
-- `\t`: tab
-- `\\`: backslash
-- `\'`: single quote
-- `\"`: double quote
-- `\b`: backspace
-- `\r`: carriage return
-- `\f`: form feed
-- `\ooo`: octal value
-- `\xhh`: hex value
+| Escape Character | Description         |
+|------------------|---------------------|
+| `\n`             | New line           |
+| `\t`             | Tab                |
+| `\\`             | Backslash          |
+| `\'`             | Single quote       |
+| `\"`             | Double quote       |
+| `\b`             | Backspace          |
+| `\r`             | Carriage return    |
+| `\f`             | Form feed          |
+| `\ooo`           | Octal value        |
+| `\xhh`           | Hex value          |
 
 
 
