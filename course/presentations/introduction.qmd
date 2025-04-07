@@ -26,11 +26,11 @@ Approximate Timeschedule:
 
 | Time        | Monday           | Tuesday           | Wednesday            | Thursday          | Friday       |
 |-------------|------------------|-------------------|----------------------|-------------------|--------------|
-| 13:00-14:00 | Introduction     | Lecture 2         | Lecture 3            | Exercise Block 4  | F&Q          |
-| 14:00-15:00 | Lecture 1        | Lecture 2         | Lecture 3            | Exercise Block 4  | F&Q          |
-| 15:00-16:00 | Lecture 1        | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
-| 16:00-17:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
-| 17:00-18:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
+| 13:00-14:00 | Introduction     | Lecture 2         | Lecture 3            | Exercise Block 3  | F&Q          |
+| 14:00-15:00 | Lecture 1        | Lecture 2         | Lecture 3            | Exercise Block 3  | F&Q          |
+| 15:00-16:00 | Lecture 1        | Exercise Block 2  | Exercise Block 2     | Exercise Block 3  | Final Exam   |
+| 16:00-17:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 3  | Final Exam   |
+| 17:00-18:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 3  | Final Exam   |
 
 ## Organization of the course
 ### Introduction 
@@ -61,6 +61,7 @@ What we will discuss today:
 
 
 ## Organization of the course
+
 ### Exercise Block 1 
 
 **Exercise A 1**
@@ -84,6 +85,7 @@ All educational information of the course can be found on the website: [https://
 - Also for the lectures there are smaller exercises to practice the learned concepts.
 - The exercises are not mandatory but we highly recommend to do them.
 
+## Organization of the course
 - For people who are more advanced in Python, they can skip the Essentials and the parts that they already know.
 - They can concentrate more on the exercises and go though the lectures in a more self-paced way.
 
@@ -125,7 +127,7 @@ style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} {{< bi star-fil
 
 
 
-## Some questions to start with
+## Questions from my side
 
 
 - Do you have any experience with a programming language? Which one?
@@ -133,6 +135,7 @@ style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} {{< bi star-fil
 - What kind of data do you normally work with?
 - What kind of data analysis do you normally do?
 - What kind of data visualization do you normally do?
+- Which tools do you use for data analysis and visualization?
 
 # Let's start with the first lecture
 
