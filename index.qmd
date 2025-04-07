@@ -116,7 +116,7 @@ Timeschedule for a week:
 
 - [Data Collection](course/chapters/DHP/DataCollection.qmd)
 - [Data Import](course/chapters/DHP/SimpleDataImport.qmd)
-- [Data Inspection](course/chapters/DHP/DataInspection.qmd)
+- [Data Inspection](course/chapters/DHP/SimpleDataInspection.qmd)
 
 **First Data Visualization Techniques - Datra Visualization 1**
 
@@ -151,8 +151,6 @@ Timeschedule for a week:
 **Exercise B 2**
 - [Exercise B 2](course/exercises/exercises/exerciseB_2.ipynb)
 
-**Exercise B 3**
-- [Exercise B 3](course/exercises/exercises/exerciseB_3.ipynb)
 
 
 ### Lecture 3 {.unnumbered}
@@ -160,8 +158,8 @@ Timeschedule for a week:
 **Special Data Visualization and Analysis Techniques**
 
 - [Advanced Plot Types](course/chapters/PlotTypes/AdvancedPlotTypes.qmd)
-- [Spectroscopy Data Analysis](course/chapters/SDVA/SpectroscopyDataAnalysis.qmd)
-- [Image Data Analysis](course/chapters/SDVA/ImageDataAnalysis.qmd)
+- [Spectroscopy Data Analysis](course/chapters/SpecialAnalysisPlots//Spectroscopy.qmd)
+- [Image Data Analysis](course/chapters/SpecialAnalysisPlots/ImageAnalysis.qmd)
 
 
 ### Exercise Block 3 {.unnumbered}
