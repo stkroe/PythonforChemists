@@ -111,7 +111,7 @@ All educational information of the course can be found on the website: [https://
 The different difficulty levels are marked with the following icons:
 
 - Introduction Parts: &nbsp;&nbsp;&nbsp;  <span style="color:#2B7492">{{< bi star >}} </span>
-- Beginner Path:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2B7492" >{{< bi star-fill >}}</span>
+- Beginner Path:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span style="color:#2B7492" >{{< bi star-fill >}}</span>
 - Advanced Path: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} </span>
 - Challenging Path:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <span 
 style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} {{< bi star-fill >}} </span>
