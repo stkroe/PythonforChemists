@@ -142,23 +142,23 @@ style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} {{< bi star-fil
 ## Introduction Lecture: Python
 
 
-- [Introduction to Python](https://stkroe.github.io/PythonforChemists/ttps://stkroe.github.io/PythonforChemists/course/chapters/Essentials/Introduction.html)
-- [What is Python?](ttps://stkroe.github.io/PythonforChemists/course/chapters/Essentials/WhatIsPython.qmd)
-- [Python Basics](ttps://stkroe.github.io/PythonforChemists/course/chapters/Python/Basics.qmd)
-- [Python Libraries](ttps://stkroe.github.io/PythonforChemists/course/chapters/Python/BasicsModules.qmd)
+- [Introduction to Python](https://stkroe.github.io/PythonforChemists/course/chapters/Essentials/Introduction.html)
+- [What is Python?](https://stkroe.github.io/PythonforChemists/course/chapters/Essentials/WhatIsPython.qmd)
+- [Python Basics](https://stkroe.github.io/PythonforChemists/course/chapters/Python/Basics.qmd)
+- [Python Libraries](https://stkroe.github.io/PythonforChemists/course/chapters/Python/BasicsModules.qmd)
 
 
 ## Lecture 1: Data Handling and Preprocessing
 
 **Data Handling and Preprocessing**
 
-- [Data Collection](ttps://stkroe.github.io/PythonforChemists/course/chapters/DHP/DataCollection.qmd)
-- [Data Import](ttps://stkroe.github.io/PythonforChemists/course/chapters/DHP/SimpleDataImport.qmd)
-- [Data Inspection](ttps://stkroe.github.io/PythonforChemists/course/chapters/DHP/DataInspection.qmd)
+- [Data Collection](https://stkroe.github.io/PythonforChemists/course/chapters/DHP/DataCollection.qmd)
+- [Data Import](https://stkroe.github.io/PythonforChemists/course/chapters/DHP/SimpleDataImport.qmd)
+- [Data Inspection](https://stkroe.github.io/PythonforChemists/course/chapters/DHP/DataInspection.qmd)
 
 **First Data Visualization Techniques - Datra Visualization 1**
 
-- [Data Visualization](ttps://stkroe.github.io/PythonforChemists/course/chapters/Plots/DataVisualization.qmd)
+- [Data Visualization](https://stkroe.github.io/PythonforChemists/course/chapters/Plots/DataVisualization.qmd)
 - [Simple Plots](ttps://stkroe.github.io/PythonforChemists/course/chapters/Plots/SimplePlots.qmd)
 
 ## Exercise Block 1 
