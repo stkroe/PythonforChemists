@@ -99,7 +99,7 @@ print(mat.shape) # (3, 3) 3 rows and 3 columns
 print(mat.size)  # 9 total number of elements
 print(mat.ndim)  # 2 number of dimensions
 print(mat.dtype) # int64 data type of the elements
-````
+```
 
 
 ---
