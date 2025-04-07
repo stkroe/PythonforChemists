@@ -68,6 +68,7 @@ The different difficulty levels are marked with the following icons:
 - Beginner Path:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#2B7492" >{{< bi star-fill >}}</span>
 - Advanced Path: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} </span>
 - Challenging Path:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <span style="color:#2B7492"> {{< bi star-fill >}} {{< bi star-fill >}} {{< bi star-fill >}} </span>
+
 The icons are located under the title of each lecture. The more stars you see, the more difficult the content is.
 
 Each lecture includes examples related to chemistry and material science. At the end of each part, there are exercises to test your understanding and reinforce the concepts learned. These exercises are designed to be practical and relevant to real-world scenarios in chemistry and materials science.

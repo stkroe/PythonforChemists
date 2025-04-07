@@ -168,6 +168,7 @@ print("\n")
 ### Manipulate data {.unnumbered}
 
 You can
+
 - `df.copy()`: copy the data
 - `df.drop(columns=[...])`: drop columns
 - `df.drop(index=[...])`: drop rows

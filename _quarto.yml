@@ -62,8 +62,8 @@ book:
         chapters:
           - course/chapters/Plots/DataVisualization.qmd
           - course/chapters/Plots/SimplePlots.qmd
-          - course/chapters/Plots/Seaborn.qmd
           - course/chapters/Plots/SimplePlotTypes.qmd
+          - course/chapters/Plots/Seaborn.qmd
       - part: "Exercises"
         chapters:
           - course/exercises/exercises/exerciseA_1.ipynb

@@ -42,3 +42,35 @@ A baseline correction is often needed to remove background noise from the signal
 The baseline correction can be done by different methods *e.g.*:
 
 - Polynomial fitting
+- Spline fitting
+- Minimum value fitting
+- Moving average
+- Savitzky-Golay filter
+- Wavelet transform
+- Fourier transform
+- etc.
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import savgol_filter
+from scipy.optimize import curve_fit
+from scipy import stats
+from scipy.interpolate import UnivariateSpline
+from scipy.ndimage import gaussian_filter1d
+from scipy.signal import find_peaks
+from scipy.signal import argrelextrema
+from scipy.stats import linregress
+from scipy.signal import peak_widths
+from scipy.signal import peak_prominences
+from scipy.signal import peak_widths
+from scipy.signal import argrelextrema
+from scipy.signal import find_peaks
+
+
+
+data = np.random.normal(0, 1, 1000)*np.sin(np.linspace(0, 10, 1000))*np.random.normal(0, 1, 1000)
+data = data + np.random.normal(0, 1, 1000)
+data = data + np.random.normal(0, 1, 1000)
+
+```
