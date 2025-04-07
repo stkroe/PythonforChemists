@@ -91,6 +91,17 @@ rand_mat = np.random.rand(3,3) # a 3x3 matrix with random numbers between 0 and 
 print(rand_mat)
 ```
 
+
+
+Often you need to know the shape of an array. The shape of an array is a tuple that contains the number of elements in each dimension.
+```{python}
+print(mat.shape) # (3, 3) 3 rows and 3 columns
+print(mat.size)  # 9 total number of elements
+print(mat.ndim)  # 2 number of dimensions
+print(mat.dtype) # int64 data type of the elements
+````
+
+
 ---
 
 
