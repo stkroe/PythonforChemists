@@ -34,7 +34,7 @@ book:
         menu:
           - text: Introduction
             href: course/presentations/introduction.html
-          - text: Example 1
+          - text: Exercise A
             href: course/exercises/solutions/ExerciseA.pdf
 
   chapters:
