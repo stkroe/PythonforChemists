@@ -150,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="./course/exercises/solutions/ExerciseA.pdf">
-            Example 1
+            Exercise A
             </a>
           </li>
       </ul>
@@ -752,7 +752,7 @@ Important
 <ul>
 <li><a href="./course/chapters/DHP/DataCollection.html">Data Collection</a></li>
 <li><a href="./course/chapters/DHP/SimpleDataImport.html">Data Import</a></li>
-<li><a href="course/chapters/DHP/DataInspection.qmd">Data Inspection</a></li>
+<li><a href="./course/chapters/DHP/SimpleDataInspection.html">Data Inspection</a></li>
 </ul>
 <p><strong>First Data Visualization Techniques - Datra Visualization 1</strong></p>
 <ul>
@@ -783,15 +783,14 @@ Important
 <p><strong>Exercise A 2</strong> - <a href="./course/exercises/exercises/exerciseA_2.html">Exercise A 2</a></p>
 <p><strong>Exercise B 1</strong> - <a href="./course/exercises/exercises/exerciseB_1.html">Exercise B 1</a></p>
 <p><strong>Exercise B 2</strong> - <a href="./course/exercises/exercises/exerciseB_2.html">Exercise B 2</a></p>
-<p><strong>Exercise B 3</strong> - <a href="course/exercises/exercises/exerciseB_3.ipynb">Exercise B 3</a></p>
 </section>
 <section id="lecture-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecture-3">Lecture 3</h3>
 <p><strong>Special Data Visualization and Analysis Techniques</strong></p>
 <ul>
 <li><a href="./course/chapters/PlotTypes/AdvancedPlotTypes.html">Advanced Plot Types</a></li>
-<li><a href="course/chapters/SDVA/SpectroscopyDataAnalysis.qmd">Spectroscopy Data Analysis</a></li>
-<li><a href="course/chapters/SDVA/ImageDataAnalysis.qmd">Image Data Analysis</a></li>
+<li><a href="./course/chapters/SpecialAnalysisPlots/Spectroscopy.html">Spectroscopy Data Analysis</a></li>
+<li><a href="./course/chapters/SpecialAnalysisPlots/ImageAnalysis.html">Image Data Analysis</a></li>
 </ul>
 </section>
 <section id="exercise-block-3" class="level3 unnumbered">
@@ -1560,7 +1559,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-116"><a href="#cb1-116"></a></span>
 <span id="cb1-117"><a href="#cb1-117"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Collection</span><span class="co">](course/chapters/DHP/DataCollection.qmd)</span></span>
 <span id="cb1-118"><a href="#cb1-118"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Import</span><span class="co">](course/chapters/DHP/SimpleDataImport.qmd)</span></span>
-<span id="cb1-119"><a href="#cb1-119"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Inspection</span><span class="co">](course/chapters/DHP/DataInspection.qmd)</span></span>
+<span id="cb1-119"><a href="#cb1-119"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Inspection</span><span class="co">](course/chapters/DHP/SimpleDataInspection.qmd)</span></span>
 <span id="cb1-120"><a href="#cb1-120"></a></span>
 <span id="cb1-121"><a href="#cb1-121"></a>**First Data Visualization Techniques - Datra Visualization 1**</span>
 <span id="cb1-122"><a href="#cb1-122"></a></span>
@@ -1595,39 +1594,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-151"><a href="#cb1-151"></a>**Exercise B 2**</span>
 <span id="cb1-152"><a href="#cb1-152"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise B 2</span><span class="co">](course/exercises/exercises/exerciseB_2.ipynb)</span></span>
 <span id="cb1-153"><a href="#cb1-153"></a></span>
-<span id="cb1-154"><a href="#cb1-154"></a>**Exercise B 3**</span>
-<span id="cb1-155"><a href="#cb1-155"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise B 3</span><span class="co">](course/exercises/exercises/exerciseB_3.ipynb)</span></span>
-<span id="cb1-156"><a href="#cb1-156"></a></span>
+<span id="cb1-154"><a href="#cb1-154"></a></span>
+<span id="cb1-155"><a href="#cb1-155"></a></span>
+<span id="cb1-156"><a href="#cb1-156"></a><span class="fu">### Lecture 3 {.unnumbered}</span></span>
 <span id="cb1-157"><a href="#cb1-157"></a></span>
-<span id="cb1-158"><a href="#cb1-158"></a><span class="fu">### Lecture 3 {.unnumbered}</span></span>
+<span id="cb1-158"><a href="#cb1-158"></a>**Special Data Visualization and Analysis Techniques**</span>
 <span id="cb1-159"><a href="#cb1-159"></a></span>
-<span id="cb1-160"><a href="#cb1-160"></a>**Special Data Visualization and Analysis Techniques**</span>
-<span id="cb1-161"><a href="#cb1-161"></a></span>
-<span id="cb1-162"><a href="#cb1-162"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Advanced Plot Types</span><span class="co">](course/chapters/PlotTypes/AdvancedPlotTypes.qmd)</span></span>
-<span id="cb1-163"><a href="#cb1-163"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Spectroscopy Data Analysis</span><span class="co">](course/chapters/SDVA/SpectroscopyDataAnalysis.qmd)</span></span>
-<span id="cb1-164"><a href="#cb1-164"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Image Data Analysis</span><span class="co">](course/chapters/SDVA/ImageDataAnalysis.qmd)</span></span>
-<span id="cb1-165"><a href="#cb1-165"></a></span>
+<span id="cb1-160"><a href="#cb1-160"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Advanced Plot Types</span><span class="co">](course/chapters/PlotTypes/AdvancedPlotTypes.qmd)</span></span>
+<span id="cb1-161"><a href="#cb1-161"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Spectroscopy Data Analysis</span><span class="co">](course/chapters/SpecialAnalysisPlots//Spectroscopy.qmd)</span></span>
+<span id="cb1-162"><a href="#cb1-162"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Image Data Analysis</span><span class="co">](course/chapters/SpecialAnalysisPlots/ImageAnalysis.qmd)</span></span>
+<span id="cb1-163"><a href="#cb1-163"></a></span>
+<span id="cb1-164"><a href="#cb1-164"></a></span>
+<span id="cb1-165"><a href="#cb1-165"></a><span class="fu">### Exercise Block 3 {.unnumbered}</span></span>
 <span id="cb1-166"><a href="#cb1-166"></a></span>
-<span id="cb1-167"><a href="#cb1-167"></a><span class="fu">### Exercise Block 3 {.unnumbered}</span></span>
-<span id="cb1-168"><a href="#cb1-168"></a></span>
-<span id="cb1-169"><a href="#cb1-169"></a>**Exercise C 1**</span>
-<span id="cb1-170"><a href="#cb1-170"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise C 2</span><span class="co">](course/exercises/exercises/exerciseC_1.ipynb)</span></span>
-<span id="cb1-171"><a href="#cb1-171"></a></span>
-<span id="cb1-172"><a href="#cb1-172"></a>**Exercise C 2**</span>
-<span id="cb1-173"><a href="#cb1-173"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise C 3</span><span class="co">](course/exercises/exercises/exerciseC_2.ipynb)</span></span>
-<span id="cb1-174"><a href="#cb1-174"></a></span>
-<span id="cb1-175"><a href="#cb1-175"></a>**Exercise D 1**</span>
-<span id="cb1-176"><a href="#cb1-176"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise D 1</span><span class="co">](course/exercises/exercises/exerciseD_1.ipynb)</span></span>
-<span id="cb1-177"><a href="#cb1-177"></a></span>
-<span id="cb1-178"><a href="#cb1-178"></a>**Exercise D 2**</span>
-<span id="cb1-179"><a href="#cb1-179"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise D 2</span><span class="co">](course/exercises/exercises/exerciseD_2.ipynb)</span></span>
+<span id="cb1-167"><a href="#cb1-167"></a>**Exercise C 1**</span>
+<span id="cb1-168"><a href="#cb1-168"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise C 2</span><span class="co">](course/exercises/exercises/exerciseC_1.ipynb)</span></span>
+<span id="cb1-169"><a href="#cb1-169"></a></span>
+<span id="cb1-170"><a href="#cb1-170"></a>**Exercise C 2**</span>
+<span id="cb1-171"><a href="#cb1-171"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise C 3</span><span class="co">](course/exercises/exercises/exerciseC_2.ipynb)</span></span>
+<span id="cb1-172"><a href="#cb1-172"></a></span>
+<span id="cb1-173"><a href="#cb1-173"></a>**Exercise D 1**</span>
+<span id="cb1-174"><a href="#cb1-174"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise D 1</span><span class="co">](course/exercises/exercises/exerciseD_1.ipynb)</span></span>
+<span id="cb1-175"><a href="#cb1-175"></a></span>
+<span id="cb1-176"><a href="#cb1-176"></a>**Exercise D 2**</span>
+<span id="cb1-177"><a href="#cb1-177"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Exercise D 2</span><span class="co">](course/exercises/exercises/exerciseD_2.ipynb)</span></span>
+<span id="cb1-178"><a href="#cb1-178"></a></span>
+<span id="cb1-179"><a href="#cb1-179"></a><span class="fu">### Final Exam {.unnumbered}</span></span>
 <span id="cb1-180"><a href="#cb1-180"></a></span>
-<span id="cb1-181"><a href="#cb1-181"></a><span class="fu">### Final Exam {.unnumbered}</span></span>
+<span id="cb1-181"><a href="#cb1-181"></a>Everyone gets a different data set and has to analyze the data and visualize the results.</span>
 <span id="cb1-182"><a href="#cb1-182"></a></span>
-<span id="cb1-183"><a href="#cb1-183"></a>Everyone gets a different data set and has to analyze the data and visualize the results.</span>
-<span id="cb1-184"><a href="#cb1-184"></a></span>
-<span id="cb1-185"><a href="#cb1-185"></a>**Exam**</span>
-<span id="cb1-186"><a href="#cb1-186"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Final Exam</span><span class="co">](course/exam/final_exam.ipynb)</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-183"><a href="#cb1-183"></a>**Exam**</span>
+<span id="cb1-184"><a href="#cb1-184"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Final Exam</span><span class="co">](course/exam/final_exam.ipynb)</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
