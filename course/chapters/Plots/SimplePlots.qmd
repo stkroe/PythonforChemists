@@ -94,8 +94,8 @@ plt.figure()
 plt.plot(x, y, color='red', linestyle='dashed', linewidth=2, marker='o', 
             markerfacecolor='blue', markersize=5,
             label='sin(x)')
-plt.plot(x, 2*y, color='green', linestyle='dotted', linewidth=2, marker='x',
-            markerfacecolor='yellow', markersize=5,
+plt.plot(x, 2*y, color='darkgrey', linestyle='dotted', linewidth=2, marker='x',
+            markerfacecolor='grey', markersize=5,
             label='2*sin(x)')
 plt.legend()
 plt.show()
@@ -129,8 +129,8 @@ plt.figure(figsize=(4, 4), dpi=100)
 plt.plot(x, y, color='red', linestyle='dashed', linewidth=2, marker='o', 
             markerfacecolor='blue', markersize=5,
             label='sin(x)')
-plt.plot(x, 2*y, color='green', linestyle='dotted', linewidth=2, marker='x',
-            markerfacecolor='yellow', markersize=5,
+plt.plot(x, 2*y, color='darkgrey', linestyle='dotted', linewidth=2, marker='x',
+            markerfacecolor='grey', markersize=5,
             label='2*sin(x)')
 plt.xlim([0, 10]) # set the x-axis limits
 plt.ylim([-3, 3]) # set the y-axis limits
@@ -167,8 +167,8 @@ plt.title('Sine Function')
 plt.legend()
 
 plt.subplot(2, 1, 2)
-plt.plot(x, 2*y, color='green', linestyle='dotted', linewidth=2, marker='x',
-            markerfacecolor='yellow', markersize=5,
+plt.plot(x, 2*y, color='darkgrey', linestyle='dotted', linewidth=2, marker='x',
+            markerfacecolor='grey', markersize=5,
             label='2*sin(x)')
 plt.xlabel('x')
 plt.ylabel('y')
@@ -179,7 +179,7 @@ plt.show()
 ```
 
 ```{python}
-fig = plt.figure(figsize=(4,2),dpi=72,layout='constrained', facecolor='lightskyblue')
+fig = plt.figure(figsize=(4,2),dpi=72,layout='constrained', facecolor='lightyellow')
 # Create a figure with a specific layout and background color
 # constrained layout automatically adjusts the subplots to fit the figure
 fig.suptitle('Figure') # set the title of the figure object
@@ -188,7 +188,7 @@ subL.set_facecolor('thistle') # set the background color of the left subfigure
 sub_subL = subL.subplots(2, 1, sharex=True) # create two subplots in the left subfigure
 sub_subL[1].set_xlabel('x [m]')
 subL.suptitle('Left subfigure') # set the title of the left subfigure
-subR.set_facecolor('lightyellow') # set the background color of the right subfigure
+subR.set_facecolor('lightskyblue') # set the background color of the right subfigure
 sub_subR = subR.subplots(1, 2, sharey=True) 
 sub_subR[0].set_title('Axes 1') # set the title of the first subplot in the right subfigure
 sub_subR[1].set_title('Axes 2') # set the title of the second subplot in the right subfigure
@@ -211,7 +211,7 @@ import numpy as np
 x = np.linspace(0, 10, 100)
 y = np.sin(x)
 
-fig, ax = plt.subplots(3,2, figsize=(3,4), dpi=96, sharex=True, sharey=True, constrained_layout=True,gridspec_kw={'hspace': 0.5, 'wspace': 0.5})
+fig, ax = plt.subplots(3,2, figsize=(3,4), dpi=96, sharex=True, sharey=True, constrained_layout=True,gridspec_kw={'hspace': 0.2, 'wspace': 0.2})
 
 for i in range(3):
     for j in range(2):

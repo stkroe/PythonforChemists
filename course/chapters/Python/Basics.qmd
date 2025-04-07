@@ -476,24 +476,26 @@ method with named arguments {a} {b}".format(a=a, b=b))
 There are different types of operators in Python. <br>
 
 
--  +: addition
--  -: subtraction
--  *: multiplication
--  /: division
--  %: modulo
--  **: exponentiation
--  //: floor division
--  ==: equal
--  !=: not equal
--  <: less than    
--  >: greater than
--  <=: less than or equal
--  >=: greater than or equal
--  and: logical and
--  or: logical or
--  not: logical not
--  is: identity
--  in: membership
+| Operator | Description                |
+|----------|----------------------------|
+| `+`      | Addition                  |
+| `-`      | Subtraction               |
+| `*`      | Multiplication            |
+| `/`      | Division                  |
+| `%`      | Modulo                    |
+| `**`     | Exponentiation            |
+| `//`     | Floor division            |
+| `==`     | Equal                     |
+| `!=`     | Not equal                 |
+| `<`      | Less than                 |
+| `>`      | Greater than              |
+| `<=`     | Less than or equal        |
+| `>=`     | Greater than or equal     |
+| `and`    | Logical AND               |
+| `or`     | Logical OR                |
+| `not`    | Logical NOT               |
+| `is`     | Identity                  |
+| `in`     | Membership                |
 
 ```{python}
 a = 5.3

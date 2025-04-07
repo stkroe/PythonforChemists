@@ -71,7 +71,9 @@ Please read the [Anaconda Terms of Service FAQs](https://www.anaconda.com/pricin
 
 
 Another python package and environment manager is [mamba](https://mamba.readthedocs.io/en/latest/index.html).
+
 `mamba` is a reimplementation of `conda`:
+
  - [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html) is a statically linked version of `mamba` 
  - `mamba`and it is currently faster than `conda`
 

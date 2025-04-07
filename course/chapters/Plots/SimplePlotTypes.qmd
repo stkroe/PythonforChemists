@@ -50,9 +50,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 x = np.linspace(0, 10, 100)
-y = np.random.rand(100)*298
+y = np.random.rand(100)*np.sin(x)
 
-plt.scatter(x, y, color='red', marker='o', label='sin(x)',s=5)
+plt.scatter(x, y, color='grey', marker='o', label='sin(x)',s=5)
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
@@ -74,9 +74,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 x = np.linspace(0, 10, 100)
-y = np.random.rand(100)*298
+y = np.random.rand(100)+np.sin(x)
 
-plt.plot(x, y, color='red', marker='o', label='sin(x)',markersize=5,linewidth=2,linestyle='--')
+plt.plot(x, y, color='grey', marker='o', label='sin(x)',markersize=5,linewidth=2,linestyle='--')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
@@ -85,7 +85,7 @@ plt.show()
 
 ### Errorbars {.unnumberd}
 
-Errorbars can be added to the plot with the `errorbar()` function and the `yerr` parameter.
+[Errorbars](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.errorbar.html#matplotlib.axes.Axes.errorbar) can be added to the plot with the `errorbar()` function and the `yerr` parameter.
 
 ```{python}
 
@@ -96,13 +96,21 @@ x = np.linspace(0, 10, 100)
 y = np.random.rand(100)*298
 yerr = np.random.rand(100)*10
 
-plt.errorbar(x, y, yerr=yerr, color='red', marker='o', label='sin(x)',markersize=5,linewidth=2)
+plt.errorbar(x, y, yerr=yerr, color='grey', marker='o', label='sin(x)',markersize=5,linewidth=2,elinewidth=3,errorevery=(10, 3), capsize=5, ecolor='black')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
 plt.show()
 
 ```
+
+- The `yerr` parameter can be used to set the error bars for the y-axis.
+- The `xerr` parameter can be used to set the error bars for the x-axis.
+- The parameter `errorevery` can be used to show only every 3th error bar - starting from the 10th error bar.
+- The `capsize` parameter can be used to set the size of the error bar caps.
+- The `elinewidth` parameter can be used to set the width of the error bar line.
+- The `ecolor` parameter can be used to set the color of the error bar line.
+
 
 ---
 
@@ -112,6 +120,8 @@ plt.show()
 
 [Histogram] (https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html) shows the distribution of a single variable *e.g.* count of a mass of individuals in a population. The data is divided into bins and the number of data points in each bin is plotted.
 
+The histogram visualizes the skewness, kurtosis and outliers of the data.
+
 The `hist()` function creates a histogram with `bins` number of bins.
 
 ```{python}
@@ -120,17 +130,33 @@ import numpy as np
 
 x = np.random.randn(1000)
 
-plt.hist(x, bins=30, color='red', edgecolor='black')
+plt.hist(x, bins=30, color='grey', edgecolor='black')
 
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
 ```
 
+[2D histograms](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist2d.html#matplotlib.axes.Axes.hist2d) can be created with the `hist2d()` function.
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.randn(1000)
+y = np.random.randn(1000)
+plt.hist2d(x, y, bins=30, cmap='Greys')
+plt.colorbar()
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
+```
+
+- The `cmap` parameter is used to set the color map of the histogram. 
+- The `colorbar()` function adds a color bar to the plot.
 
 ### Boxplot {.unnumbered}
 
-[Box plot](https://seaborn.pydata.org/generated/seaborn.boxplot.html) shows the distribution of a numerical variable for different categories. It shows the minimum, first quartile, median, third quartile and maximum of your data. Outliers can be identified. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.
+[Box plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html) shows the distribution of a numerical variable for different categories. It shows the minimum, first quartile, median, third quartile and maximum of your data. Outliers can be identified. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.
 
 
 The `boxplot()` function creates a boxplot.
@@ -139,35 +165,37 @@ The `boxplot()` function creates a boxplot.
 import matplotlib.pyplot as plt
 import numpy as np
 
+std = 2
 data = [np.random.normal(0, std, 100) for std in range(1, 4)]
 
-plt.boxplot(data, patch_artist=True, notch=True, showmeans=True, meanline=True, showfliers=True)
 
+plt.boxplot(data, patch_artist=True, notch=True, showmeans=True, meanline=True, showfliers=True, showbox=True, showcaps=True, orientation='horizontal',sym='C0+',
+            boxprops=dict(facecolor='darkgrey', color='black'),
+            medianprops=dict(color='grey'),
+            whiskerprops=dict(color='black'),
+            capprops=dict(color='black'),
+            meanprops=dict(color='black', linewidth=2))
+plt.yticks([1, 2, 3], ['A', 'B', 'C'])
+plt.title('Boxplot')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
 ```
 
-### 2D Histogram Plot  {.unnumbered}
-
-A 2D histogram can be created with the `hist2d()` function.
-
-```{python}
-import matplotlib.pyplot as plt
-import numpy as np
-
-x = np.random.randn(1000)
-y = np.random.randn(1000)
-
-plt.hist2d(x, y, bins=30, cmap='Blues')
-
-plt.xlabel('x')
-plt.ylabel('y')
-plt.show()
-```
-
-
-
+- The `patch_artist` parameter is used to fill the box with color.
+- The `notch` parameter is used to create a notch in the box.
+- The `showmeans` parameter is used to show the mean of the data.
+- The `meanline` parameter is used to show the mean line.
+- The `showfliers` parameter is used to show the outliers of the data.
+- The `showbox` parameter is used to show the box of the data.
+- The `showcaps` parameter is used to show the caps of the data.
+- The `orientation` parameter is used to set the orientation of the boxplot. The default is `vertical`. If you want to create a horizontal boxplot, set it to `horizontal`.
+- The `sym` parameter is used to set the symbol of the outliers. The default is `o`. If you want to use a different symbol, set it to `r+` or any other symbol you want to use.
+- The `boxprops` parameter is used to set the properties of the box. The `facecolor` parameter is used to set the color of the box. The `color` parameter is used to set the color of the box outline.
+- The `medianprops` parameter is used to set the properties of the median line. The `color` parameter is used to set the color of the median line.
+- The `whiskerprops` parameter is used to set the properties of the whiskers. The `color` parameter is used to set the color of the whiskers.
+- The `meanprops` parameter is used to set the properties of the mean line. The `color` parameter is used to set the color of the mean line.
+- The `capprops` parameter is used to set the properties of the caps. The `color` parameter is used to set the color of the caps.
 
 
 ### Proportion Plots {.unnumbered}
@@ -180,16 +208,22 @@ The `bar()` function creates a bar plot.
 ```{python}
 import matplotlib.pyplot as plt
 import numpy as np
+import scipy.stats as stats
 
 x = ['A', 'B', 'C', 'D']
 y = [10, 20, 30, 40]
+yerr = np.random.rand(4)*10
 
-plt.bar(x, y, color='red')
+plt.bar(x, y,yerr=yerr, color='grey')
 
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
 ```
+
+
+You can draw a star sign to indicate the significance of the data.
+
 
 ## Pie Chart {.unnumbered}
 
@@ -205,7 +239,8 @@ import numpy as np
 x = [10, 20, 30, 40]
 labels = ['A', 'B', 'C', 'D']
 
-plt.pie(x, labels=labels)
+plt.pie(x, labels=labels, autopct='%1.1f%%', startangle=90, colors=['lightgrey', 'grey', 'darkgrey', 'dimgrey'], explode=(0.1, 0, 0, 0), shadow=True)
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
 plt.show()
 ```
