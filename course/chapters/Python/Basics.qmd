@@ -162,6 +162,13 @@ a = [1,2,3]
 print(a[3])
 ```
 
+:::{.callout-tip collapse="true"}
+### Solution 
+The error message tells you that you are trying to access an index that is out of range.
+:::
+
+
+
 
 :::{.callout-important}
 ### Python counts from 0. 
@@ -181,10 +188,7 @@ The last element is at index `N-1`. <br>
 
 
 
-:::{.callout-tip collapse="true"}
-### Solution 
-The error message tells you that you are trying to access an index that is out of range.
-:::
+
 
 
 ## Comments {.unnumbered}
