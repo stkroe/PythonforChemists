@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../course/chapters/Plots/SimplePlotTypes.html" rel="next">
-<link href="../../../course/chapters/Plots/SimplePlots.html" rel="prev">
+<link href="../../../course/exercises/exercises/exerciseA_1.html" rel="next">
+<link href="../../../course/chapters/Plots/SimplePlotTypes.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-92b6c6361227b6d7ffb0ef9f7ef1dd57.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-9dc44f3162c39531be84931020d3c4ca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-516d921ec8d526d3fe54a05c4dfe7a3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -288,12 +288,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Seaborn Plots</span></a>
+  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
+  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Seaborn Plots</span></a>
   </div>
 </li>
       </ul>
@@ -553,7 +553,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="kde-plot" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="kde-plot">KDE Plot</h3>
 <p><a href="https://seaborn.pydata.org/generated/seaborn.kdeplot.html">Kernel density plot</a> show the distribution of a single variable <em>e.g.</em> distribution of a mass of individuals in a population. The data is smoothed by a kernel density and the density of the data is plotted continuously.</p>
-<div id="72e35ecb" class="cell" data-execution_count="1">
+<div id="6960647f" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -580,7 +580,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="https://seaborn.pydata.org/generated/seaborn.violinplot.html">Violin plot</a>: Show the distribution of a numerical variable for different categories. It is similar to a box plot but it also shows the probability density of the data at different values. An example of this <em>e.g.</em> is the distribution of cancer cell survival time for different treatment groups.</li>
 </ul>
-<div id="698059e4" class="cell" data-execution_count="2">
+<div id="756c92df" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -608,7 +608,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="https://seaborn.pydata.org/generated/seaborn.regplot.html">Regression plot</a>: Show a regression model between two variables <em>e.g.</em> the relationship between the concentration and the time.</li>
 </ul>
-<div id="6bc789b9" class="cell" data-execution_count="3">
+<div id="082e71fd" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -633,7 +633,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="https://seaborn.pydata.org/generated/seaborn.heatmap.html">Heatmap</a> shows the relationship of two categorical variables with a numerical variable <em>e.g.</em> cancer cell survival time for different treatment groups and different cancer types. The color of the cell is proportional to the value of the investigated variable.</li>
 </ul>
-<div id="2872c568" class="cell" data-execution_count="4">
+<div id="db4718d7" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1291,13 +1291,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../course/chapters/Plots/SimplePlots.html" class="pagination-link" aria-label="Basic Data Visualization Techniques">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Basic Data Visualization Techniques</span></span>
+      <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="pagination-link" aria-label="Simple Plot Types">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Simple Plot Types</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="pagination-link" aria-label="Simple Plot Types">
-        <span class="nav-page-text"><span class="chapter-title">Simple Plot Types</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../course/exercises/exercises/exerciseA_1.html" class="pagination-link" aria-label="Exercise A 1">
+        <span class="nav-page-text"><span class="chapter-title">Exercise A 1</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">

@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-92b6c6361227b6d7ffb0ef9f7ef1dd57.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-9dc44f3162c39531be84931020d3c4ca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-516d921ec8d526d3fe54a05c4dfe7a3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -287,12 +287,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
+  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
+  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
   </div>
 </li>
       </ul>
@@ -566,7 +566,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The baseline correction can be done by different methods <em>e.g.</em>:</p>
 <ul>
 <li>Polynomial fitting</li>
+<li>Spline fitting</li>
+<li>Minimum value fitting</li>
+<li>Moving average</li>
+<li>Savitzky-Golay filter</li>
+<li>Wavelet transform</li>
+<li>Fourier transform</li>
+<li>etc.</li>
 </ul>
+<div id="bfcbcfbc" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">from</span> scipy.signal <span class="im">import</span> savgol_filter</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="im">from</span> scipy.interpolate <span class="im">import</span> UnivariateSpline</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="im">from</span> scipy.ndimage <span class="im">import</span> gaussian_filter1d</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="im">from</span> scipy.signal <span class="im">import</span> find_peaks</span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="im">from</span> scipy.signal <span class="im">import</span> argrelextrema</span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="im">from</span> scipy.stats <span class="im">import</span> linregress</span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="im">from</span> scipy.signal <span class="im">import</span> peak_widths</span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="im">from</span> scipy.signal <span class="im">import</span> peak_prominences</span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="im">from</span> scipy.signal <span class="im">import</span> peak_widths</span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="im">from</span> scipy.signal <span class="im">import</span> argrelextrema</span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="im">from</span> scipy.signal <span class="im">import</span> find_peaks</span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a></span>
+<span id="cb1-19"><a href="#cb1-19"></a>data <span class="op">=</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)<span class="op">*</span>np.sin(np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">1000</span>))<span class="op">*</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span>
+<span id="cb1-20"><a href="#cb1-20"></a>data <span class="op">=</span> data <span class="op">+</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span>
+<span id="cb1-21"><a href="#cb1-21"></a>data <span class="op">=</span> data <span class="op">+</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 <!-- -->
@@ -1206,50 +1236,83 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Analysis of Spectroscopy Data"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="an">execute:</span><span class="co"> </span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co">  echo: True</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">  eval: True</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="an">code-links:</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co">      - text: "Open in Colab"</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Spectroscopy.ipynb"</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co">        icon: "laptop"</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="co">      - text: "Download Code"</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="co">        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/Spectroscopy.ipynb"</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="co">        icon: "journal"</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co">---</span> </span>
-<span id="cb1-14"><a href="#cb1-14"></a>Difficulty level: &lt;span style="color:#2B7492"&gt;{{&lt; bi star-fill &gt;}} {{&lt; bi star-fill &gt;}} &lt;/span&gt;</span>
-<span id="cb1-15"><a href="#cb1-15"></a></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="fu">##   Spectroscopy Data Analysis {.unnumbered}</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a></span>
-<span id="cb1-18"><a href="#cb1-18"></a></span>
-<span id="cb1-19"><a href="#cb1-19"></a>Spectroscopy is one of the most used experimental techniques in chemistry *e.g.*:</span>
-<span id="cb1-20"><a href="#cb1-20"></a></span>
-<span id="cb1-21"><a href="#cb1-21"></a><span class="ss">- </span>UV/Vis spectroscopy</span>
-<span id="cb1-22"><a href="#cb1-22"></a><span class="ss">- </span>IR spectroscopy</span>
-<span id="cb1-23"><a href="#cb1-23"></a><span class="ss">- </span>NMR spectroscopy</span>
-<span id="cb1-24"><a href="#cb1-24"></a><span class="ss">- </span>Mass spectroscopy</span>
-<span id="cb1-25"><a href="#cb1-25"></a></span>
-<span id="cb1-26"><a href="#cb1-26"></a></span>
-<span id="cb1-27"><a href="#cb1-27"></a>The analysis of spectroscopy needs often some preprocessing steps *e.g.*:</span>
-<span id="cb1-28"><a href="#cb1-28"></a></span>
-<span id="cb1-29"><a href="#cb1-29"></a><span class="ss">- </span>Baseline correction</span>
-<span id="cb1-30"><a href="#cb1-30"></a><span class="ss">- </span>Smoothing</span>
-<span id="cb1-31"><a href="#cb1-31"></a><span class="ss">- </span>Normalization</span>
-<span id="cb1-32"><a href="#cb1-32"></a><span class="ss">- </span>Peak assignment</span>
-<span id="cb1-33"><a href="#cb1-33"></a><span class="ss">- </span>Peak fitting</span>
-<span id="cb1-34"><a href="#cb1-34"></a><span class="ss">- </span>Peak integration</span>
-<span id="cb1-35"><a href="#cb1-35"></a><span class="ss">- </span>Peak deconvolution</span>
-<span id="cb1-36"><a href="#cb1-36"></a></span>
-<span id="cb1-37"><a href="#cb1-37"></a></span>
-<span id="cb1-38"><a href="#cb1-38"></a><span class="fu">### Baseline Correction {.unnumbered}</span></span>
-<span id="cb1-39"><a href="#cb1-39"></a></span>
-<span id="cb1-40"><a href="#cb1-40"></a>A baseline correction is often needed to remove background noise from the signal and </span>
-<span id="cb1-41"><a href="#cb1-41"></a></span>
-<span id="cb1-42"><a href="#cb1-42"></a>The baseline correction can be done by different methods *e.g.*:</span>
-<span id="cb1-43"><a href="#cb1-43"></a></span>
-<span id="cb1-44"><a href="#cb1-44"></a><span class="ss">- </span>Polynomial fitting</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> "Analysis of Spectroscopy Data"</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="an">execute:</span><span class="co"> </span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co">  echo: True</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co">  eval: True</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="an">code-links:</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co">      - text: "Open in Colab"</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/Spectroscopy.ipynb"</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co">        icon: "laptop"</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="co">      - text: "Download Code"</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="co">        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/Spectroscopy.ipynb"</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="co">        icon: "journal"</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="co">---</span> </span>
+<span id="cb2-14"><a href="#cb2-14"></a>Difficulty level: &lt;span style="color:#2B7492"&gt;{{&lt; bi star-fill &gt;}} {{&lt; bi star-fill &gt;}} &lt;/span&gt;</span>
+<span id="cb2-15"><a href="#cb2-15"></a></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="fu">##   Spectroscopy Data Analysis {.unnumbered}</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a></span>
+<span id="cb2-18"><a href="#cb2-18"></a></span>
+<span id="cb2-19"><a href="#cb2-19"></a>Spectroscopy is one of the most used experimental techniques in chemistry *e.g.*:</span>
+<span id="cb2-20"><a href="#cb2-20"></a></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="ss">- </span>UV/Vis spectroscopy</span>
+<span id="cb2-22"><a href="#cb2-22"></a><span class="ss">- </span>IR spectroscopy</span>
+<span id="cb2-23"><a href="#cb2-23"></a><span class="ss">- </span>NMR spectroscopy</span>
+<span id="cb2-24"><a href="#cb2-24"></a><span class="ss">- </span>Mass spectroscopy</span>
+<span id="cb2-25"><a href="#cb2-25"></a></span>
+<span id="cb2-26"><a href="#cb2-26"></a></span>
+<span id="cb2-27"><a href="#cb2-27"></a>The analysis of spectroscopy needs often some preprocessing steps *e.g.*:</span>
+<span id="cb2-28"><a href="#cb2-28"></a></span>
+<span id="cb2-29"><a href="#cb2-29"></a><span class="ss">- </span>Baseline correction</span>
+<span id="cb2-30"><a href="#cb2-30"></a><span class="ss">- </span>Smoothing</span>
+<span id="cb2-31"><a href="#cb2-31"></a><span class="ss">- </span>Normalization</span>
+<span id="cb2-32"><a href="#cb2-32"></a><span class="ss">- </span>Peak assignment</span>
+<span id="cb2-33"><a href="#cb2-33"></a><span class="ss">- </span>Peak fitting</span>
+<span id="cb2-34"><a href="#cb2-34"></a><span class="ss">- </span>Peak integration</span>
+<span id="cb2-35"><a href="#cb2-35"></a><span class="ss">- </span>Peak deconvolution</span>
+<span id="cb2-36"><a href="#cb2-36"></a></span>
+<span id="cb2-37"><a href="#cb2-37"></a></span>
+<span id="cb2-38"><a href="#cb2-38"></a><span class="fu">### Baseline Correction {.unnumbered}</span></span>
+<span id="cb2-39"><a href="#cb2-39"></a></span>
+<span id="cb2-40"><a href="#cb2-40"></a>A baseline correction is often needed to remove background noise from the signal and </span>
+<span id="cb2-41"><a href="#cb2-41"></a></span>
+<span id="cb2-42"><a href="#cb2-42"></a>The baseline correction can be done by different methods *e.g.*:</span>
+<span id="cb2-43"><a href="#cb2-43"></a></span>
+<span id="cb2-44"><a href="#cb2-44"></a><span class="ss">- </span>Polynomial fitting</span>
+<span id="cb2-45"><a href="#cb2-45"></a><span class="ss">- </span>Spline fitting</span>
+<span id="cb2-46"><a href="#cb2-46"></a><span class="ss">- </span>Minimum value fitting</span>
+<span id="cb2-47"><a href="#cb2-47"></a><span class="ss">- </span>Moving average</span>
+<span id="cb2-48"><a href="#cb2-48"></a><span class="ss">- </span>Savitzky-Golay filter</span>
+<span id="cb2-49"><a href="#cb2-49"></a><span class="ss">- </span>Wavelet transform</span>
+<span id="cb2-50"><a href="#cb2-50"></a><span class="ss">- </span>Fourier transform</span>
+<span id="cb2-51"><a href="#cb2-51"></a><span class="ss">- </span>etc.</span>
+<span id="cb2-52"><a href="#cb2-52"></a></span>
+<span id="cb2-55"><a href="#cb2-55"></a><span class="in">```{python}</span></span>
+<span id="cb2-56"><a href="#cb2-56"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-57"><a href="#cb2-57"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-58"><a href="#cb2-58"></a><span class="im">from</span> scipy.signal <span class="im">import</span> savgol_filter</span>
+<span id="cb2-59"><a href="#cb2-59"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span>
+<span id="cb2-60"><a href="#cb2-60"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb2-61"><a href="#cb2-61"></a><span class="im">from</span> scipy.interpolate <span class="im">import</span> UnivariateSpline</span>
+<span id="cb2-62"><a href="#cb2-62"></a><span class="im">from</span> scipy.ndimage <span class="im">import</span> gaussian_filter1d</span>
+<span id="cb2-63"><a href="#cb2-63"></a><span class="im">from</span> scipy.signal <span class="im">import</span> find_peaks</span>
+<span id="cb2-64"><a href="#cb2-64"></a><span class="im">from</span> scipy.signal <span class="im">import</span> argrelextrema</span>
+<span id="cb2-65"><a href="#cb2-65"></a><span class="im">from</span> scipy.stats <span class="im">import</span> linregress</span>
+<span id="cb2-66"><a href="#cb2-66"></a><span class="im">from</span> scipy.signal <span class="im">import</span> peak_widths</span>
+<span id="cb2-67"><a href="#cb2-67"></a><span class="im">from</span> scipy.signal <span class="im">import</span> peak_prominences</span>
+<span id="cb2-68"><a href="#cb2-68"></a><span class="im">from</span> scipy.signal <span class="im">import</span> peak_widths</span>
+<span id="cb2-69"><a href="#cb2-69"></a><span class="im">from</span> scipy.signal <span class="im">import</span> argrelextrema</span>
+<span id="cb2-70"><a href="#cb2-70"></a><span class="im">from</span> scipy.signal <span class="im">import</span> find_peaks</span>
+<span id="cb2-71"><a href="#cb2-71"></a></span>
+<span id="cb2-72"><a href="#cb2-72"></a></span>
+<span id="cb2-73"><a href="#cb2-73"></a></span>
+<span id="cb2-74"><a href="#cb2-74"></a>data <span class="op">=</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)<span class="op">*</span>np.sin(np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">1000</span>))<span class="op">*</span>np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span>
+<span id="cb2-75"><a href="#cb2-75"></a>data <span class="op">=</span> data <span class="op">+</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span>
+<span id="cb2-76"><a href="#cb2-76"></a>data <span class="op">=</span> data <span class="op">+</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span>
+<span id="cb2-77"><a href="#cb2-77"></a></span>
+<span id="cb2-78"><a href="#cb2-78"></a><span class="in">```</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

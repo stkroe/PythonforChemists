@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-92b6c6361227b6d7ffb0ef9f7ef1dd57.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-9dc44f3162c39531be84931020d3c4ca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-516d921ec8d526d3fe54a05c4dfe7a3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -287,12 +287,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
+  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
+  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
   </div>
 </li>
       </ul>
@@ -558,7 +558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">Data Manipulation</h1>
 <section id="numpy" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="numpy">Numpy</h2>
-<div id="b81c728b" class="cell" data-execution_count="1">
+<div id="fde1b212" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="array-manipulation" class="level3 unnumbered">
@@ -575,7 +575,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>etc.</p>
 <section id="sort-arrays" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="sort-arrays">Sort arrays:</h4>
-<div id="a4a7e0f2" class="cell" data-execution_count="2">
+<div id="4fd5be22" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>unsorted_arr <span class="op">=</span> np.array([[<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">8</span>, <span class="dv">1</span>], [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">9</span>, <span class="dv">4</span> , <span class="dv">5</span>]])</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(<span class="st">"unsortd_arr: </span><span class="ch">\n</span><span class="st">"</span>, unsorted_arr)</span>
 <span id="cb2-3"><a href="#cb2-3"></a>sorted_arr <span class="op">=</span> np.sort(unsorted_arr,axis <span class="op">=</span> <span class="dv">0</span>) <span class="co"># sorted along the column</span></span>
@@ -600,7 +600,7 @@ sorted_arr along rows:
 </section>
 <section id="concatenate-arrays" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="concatenate-arrays">Concatenate arrays:</h4>
-<div id="a20cba73" class="cell" data-execution_count="3">
+<div id="db42e6eb" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]) </span>
 <span id="cb4-2"><a href="#cb4-2"></a>b <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
 <span id="cb4-3"><a href="#cb4-3"></a>c <span class="op">=</span> np.concatenate((a, b))</span>
@@ -612,7 +612,7 @@ sorted_arr along rows:
 </section>
 <section id="reshape-arrays" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="reshape-arrays">Reshape arrays:</h4>
-<div id="ab5ba5f4" class="cell" data-execution_count="4">
+<div id="8307bbbd" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>],[<span class="dv">3</span>, <span class="dv">4</span>],[<span class="dv">5</span>, <span class="dv">6</span>]])</span>
 <span id="cb6-2"><a href="#cb6-2"></a>b <span class="op">=</span> np.array([[<span class="dv">7</span>, <span class="dv">8</span>],[<span class="dv">9</span>, <span class="dv">10</span>],[<span class="dv">11</span>, <span class="dv">12</span>]])</span>
 <span id="cb6-3"><a href="#cb6-3"></a>c <span class="op">=</span> np.vstack((a, b)) <span class="co"># vertical stack</span></span>
@@ -660,7 +660,7 @@ flatten array:
 <li><code>np.linalg.solve(a,b)</code> returns the <strong>solution of a linear system of equations</strong></li>
 <li><code>np.convolv(a,b)</code> returns the <strong>convolution</strong> of two arrays</li>
 </ul>
-<div id="728753cf" class="cell" data-execution_count="5">
+<div id="24f45e8f" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>],[<span class="dv">3</span>, <span class="dv">4</span>],[<span class="dv">5</span>, <span class="dv">6</span>]])</span>
 <span id="cb8-2"><a href="#cb8-2"></a>b <span class="op">=</span> np.array([[<span class="dv">7</span>, <span class="dv">8</span>],[<span class="dv">9</span>, <span class="dv">10</span>],[<span class="dv">11</span>, <span class="dv">12</span>]])</span>
 <span id="cb8-3"><a href="#cb8-3"></a>c <span class="op">=</span> np.<span class="bu">sum</span>(a) <span class="co"># sum of all elements</span></span>
@@ -678,7 +678,7 @@ Element wise addition:  [[ 8 10]
 <section id="question" class="level4 callout-information">
 <h4 class="anchored" data-anchor-id="question">Question:</h4>
 <p>What does the following code snippet do?</p>
-<div id="4cf4b428" class="cell" data-execution_count="6">
+<div id="3d9755b4" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>temperatures <span class="op">=</span> np.array([<span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">100</span>])</span>
 <span id="cb10-2"><a href="#cb10-2"></a>window <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a>np.convolve(temperatures,np.ones(window) <span class="op">/</span> window,</span>
@@ -704,7 +704,7 @@ Answer:
 </section>
 <section id="pandas" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="pandas">Pandas</h2>
-<div id="09935055" class="cell" data-execution_count="7">
+<div id="21457527" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb11-2"><a href="#cb11-2"></a>data <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb11-3"><a href="#cb11-3"></a>    <span class="st">"Name"</span>: [<span class="st">"Water"</span>, <span class="st">"Sulfuric Acid"</span>, <span class="st">"Ethanol"</span>, <span class="st">"Acetone"</span>, <span class="st">"Ammonia"</span>, <span class="st">"Benzene"</span>, <span class="st">"Methanol"</span>, <span class="st">"Glycerol"</span>],</span>
@@ -715,7 +715,7 @@ Answer:
 <span id="cb11-8"><a href="#cb11-8"></a>    <span class="st">"Chemical Type"</span>: [<span class="st">"Inorganic"</span>, <span class="st">"Acid"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Ketone"</span>, <span class="st">"Base"</span>, <span class="st">"Aromatic Hydrocarbon"</span>, <span class="st">"Alcohol"</span>, <span class="st">"Polyol"</span>],</span>
 <span id="cb11-9"><a href="#cb11-9"></a>    <span class="st">"Concentration (M)"</span>: [<span class="fl">55.5</span>, <span class="fl">18.0</span>, <span class="fl">1.0</span>, <span class="fl">0.8</span>, <span class="fl">0.5</span>, <span class="fl">0.1</span>, <span class="fl">1.5</span>, <span class="fl">1.2</span>]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="bdb594b7" class="cell" data-execution_count="8">
+<div id="99b3f813" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">print</span>(<span class="st">"head of data: </span><span class="ch">\n</span><span class="st">"</span>,data.head()) <span class="co"># print the first 5 rows</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb12-3"><a href="#cb12-3"></a><span class="bu">print</span>(<span class="st">"Number of data set: </span><span class="ch">\n</span><span class="st">"</span>, data.shape[<span class="dv">0</span>]) <span class="co"># number of data set</span></span>
@@ -770,7 +770,7 @@ Name: 1, dtype: object</code></pre>
 <section id="select-subsets-of-the-data" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="select-subsets-of-the-data">Select subsets of the data:</h4>
 <p>Often you need only a specific part of your data with <code>pandas</code>it is quite easy to filter the data after specific properties.</p>
-<div id="ddec20c2" class="cell" data-execution_count="9">
+<div id="7a41155c" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># filter the rows where concentration is greater than 5</span></span>
 <span id="cb14-2"><a href="#cb14-2"></a><span class="bu">print</span>(<span class="st">"Filter the rows where concentration is greater than 5: </span><span class="ch">\n</span><span class="st">"</span>, data[data[<span class="st">"Concentration (M)"</span>] <span class="op">&gt;</span> <span class="dv">5</span>]) </span>
 <span id="cb14-3"><a href="#cb14-3"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
@@ -800,10 +800,33 @@ Name: Chemical Type, dtype: object
 </section>
 <section id="manipulate-data" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="manipulate-data">Manipulate data</h3>
-<p>You can - <code>df.copy()</code>: copy the data - <code>df.drop(columns=[...])</code>: drop columns - <code>df.drop(index=[...])</code>: drop rows - <code>df.drop_duplicates()</code>: drop duplicates - <code>df.fillna(...)</code>: fill NaNs - <code>df.dropna()</code>: drop NaNs - <code>df.replace(...)</code>: replace values - <code>pd.concat([df1, df2])</code>: concatenate data (concatenate along the rows) - <code>pd.concat([df1, df2], axis=1)</code>: concatenate data (concatenate along the columns) - <code>pd.merge(df1, df2)</code>: merge data in the sense of inner, outer, left, right join, see <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.merge.html">pandas documentation</a> - <code>df.agg(...)</code>: aggregate the data - <code>df.transform(...)</code>: transform the data - <code>df.value_counts()</code>: count the values - <code>df.apply(...)</code>: apply a function to the data - <code>df.groupby(...)</code>: group the data and perform operations on the groups - <code>df.sort_values(...)</code>: sort the data - <code>df.shift(...)</code>: shift the data - <code>df.diff(...)</code>: get the difference between the data - <code>df.ptc_shift(...)</code>: get the percentage change between the data - <code>df.to_numpy()</code>: convert the dataframe to a numpy array - <code>pd.DataFrame(arr)</code>: convert the numpy array to a dataframe etc.</p>
+<p>You can</p>
+<ul>
+<li><code>df.copy()</code>: copy the data</li>
+<li><code>df.drop(columns=[...])</code>: drop columns</li>
+<li><code>df.drop(index=[...])</code>: drop rows</li>
+<li><code>df.drop_duplicates()</code>: drop duplicates</li>
+<li><code>df.fillna(...)</code>: fill NaNs</li>
+<li><code>df.dropna()</code>: drop NaNs</li>
+<li><code>df.replace(...)</code>: replace values</li>
+<li><code>pd.concat([df1, df2])</code>: concatenate data (concatenate along the rows)</li>
+<li><code>pd.concat([df1, df2], axis=1)</code>: concatenate data (concatenate along the columns)</li>
+<li><code>pd.merge(df1, df2)</code>: merge data in the sense of inner, outer, left, right join, see <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.merge.html">pandas documentation</a></li>
+<li><code>df.agg(...)</code>: aggregate the data</li>
+<li><code>df.transform(...)</code>: transform the data</li>
+<li><code>df.value_counts()</code>: count the values</li>
+<li><code>df.apply(...)</code>: apply a function to the data</li>
+<li><code>df.groupby(...)</code>: group the data and perform operations on the groups</li>
+<li><code>df.sort_values(...)</code>: sort the data</li>
+<li><code>df.shift(...)</code>: shift the data</li>
+<li><code>df.diff(...)</code>: get the difference between the data</li>
+<li><code>df.ptc_shift(...)</code>: get the percentage change between the data</li>
+<li><code>df.to_numpy()</code>: convert the dataframe to a numpy array</li>
+<li><code>pd.DataFrame(arr)</code>: convert the numpy array to a dataframe etc.</li>
+</ul>
 <section id="copy-and-concatenate-data" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="copy-and-concatenate-data">Copy and concatenate data:</h4>
-<div id="5da0a012" class="cell" data-execution_count="10">
+<div id="60aad8a9" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>data2 <span class="op">=</span> data.copy()</span>
 <span id="cb16-2"><a href="#cb16-2"></a>data2[<span class="st">"Concentration 2 (M)"</span>] <span class="op">=</span> data2[<span class="st">"Concentration (M)"</span>] <span class="op">+</span> <span class="dv">10</span> <span class="co"># increase the concentration by 10 M</span></span>
 <span id="cb16-3"><a href="#cb16-3"></a><span class="bu">print</span>(<span class="st">"data2: </span><span class="ch">\n</span><span class="st">"</span> , data2)</span>
@@ -870,7 +893,7 @@ concated data:
 7          5.50                Polyol                1.2                 11.2  </code></pre>
 </div>
 </div>
-<div id="626f793c" class="cell" data-execution_count="11">
+<div id="6f25c2e0" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a> <span class="co"># create a Panda Series</span></span>
 <span id="cb18-2"><a href="#cb18-2"></a>acidity <span class="op">=</span> pd.Series([<span class="st">"basic"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"neutral"</span>,</span>
 <span id="cb18-3"><a href="#cb18-3"></a>                    <span class="st">"acid"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"basic"</span>], name<span class="op">=</span><span class="st">"Aciditiy Type"</span>)</span>
@@ -948,7 +971,7 @@ concated data:
 </section>
 <section id="drop-columns-and-rows" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="drop-columns-and-rows">Drop columns and rows:</h4>
-<div id="b25858fc" class="cell" data-execution_count="12">
+<div id="41ee320d" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>data4 <span class="op">=</span> data4.drop(columns<span class="op">=</span>[<span class="st">"Concentration 2 (M)"</span>]) <span class="co"># drop the column "Concentration 2 (M)"</span></span>
 <span id="cb20-2"><a href="#cb20-2"></a><span class="bu">print</span>(<span class="st">"data4: </span><span class="ch">\n</span><span class="st">"</span>, data4)</span>
 <span id="cb20-3"><a href="#cb20-3"></a></span>
@@ -1055,7 +1078,7 @@ data6:
 </section>
 <section id="drop-duplicates-fill-nans-and-drop-nans" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="drop-duplicates-fill-nans-and-drop-nans">Drop duplicates, fill NaNs and drop NaNs</h4>
-<div id="bccb5cfa" class="cell" data-execution_count="13">
+<div id="fa6c68a4" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>data5 <span class="op">=</span> data4.drop_duplicates() <span class="co"># drop the duplicates</span></span>
 <span id="cb22-2"><a href="#cb22-2"></a><span class="bu">print</span>(<span class="st">"data5: </span><span class="ch">\n</span><span class="st">"</span>, data5)</span>
 <span id="cb22-3"><a href="#cb22-3"></a></span>
@@ -1130,7 +1153,7 @@ data7:
 </section>
 <section id="replace-values" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="replace-values">Replace values:</h4>
-<div id="482da0c9" class="cell" data-execution_count="14">
+<div id="f2cc42e6" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># replace the values</span></span>
 <span id="cb24-2"><a href="#cb24-2"></a>data6[<span class="st">"Aciditiy Type"</span>].replace({<span class="st">"acid"</span>: <span class="st">"Acidic"</span>, <span class="st">"basic"</span>: <span class="st">"Basic"</span>, <span class="st">"neutral"</span>: <span class="st">"Neutral"</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb24-3"><a href="#cb24-3"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1161,7 +1184,7 @@ data7:
 </section>
 <section id="count-the-values" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="count-the-values">Count the values</h3>
-<div id="506837f4" class="cell" data-execution_count="15">
+<div id="f9f5670d" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="co"># count the chemicals with different concentration</span></span>
 <span id="cb26-2"><a href="#cb26-2"></a><span class="bu">print</span>(<span class="st">"Count the chemicals with the different concentrations </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].value_counts())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1181,7 +1204,7 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="appply-a-function-to-the-data" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="appply-a-function-to-the-data">Appply a function to the data</h3>
-<div id="e0c749db" class="cell" data-execution_count="16">
+<div id="69ffa7d1" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="bu">print</span>(<span class="st">"Apply a function to the data: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x<span class="op">*</span><span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Apply a function to the data: 
@@ -1199,7 +1222,7 @@ Name: Concentration (M), dtype: float64</code></pre>
 </section>
 <section id="transform-data" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="transform-data">Transform data</h3>
-<div id="f927403e" class="cell" data-execution_count="17">
+<div id="799e9f99" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="co"># transform the data</span></span>
 <span id="cb30-2"><a href="#cb30-2"></a>data6[<span class="st">"Concentration (M)"</span>] <span class="op">=</span> data6[<span class="st">"Concentration (M)"</span>].transform(<span class="kw">lambda</span> x: x<span class="op">*</span><span class="dv">2</span>)</span>
 <span id="cb30-3"><a href="#cb30-3"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1229,7 +1252,7 @@ Name: Concentration (M), dtype: float64</code></pre>
 </section>
 <section id="sort-data" class="level3">
 <h3 class="anchored" data-anchor-id="sort-data">Sort data</h3>
-<div id="3d50ac90" class="cell" data-execution_count="18">
+<div id="31b8e683" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a><span class="bu">print</span>(<span class="st">"sorted after concentration: "</span>,data.sort_values(by<span class="op">=</span><span class="st">"Concentration (M)"</span>, ascending<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>sorted after concentration:              Name Formula  Molecular Weight (g/mol)  Viscosity (mPa·s)  \
@@ -1257,7 +1280,7 @@ Name: Concentration (M), dtype: float64</code></pre>
 <section id="group-data" class="level3">
 <h3 class="anchored" data-anchor-id="group-data">Group data</h3>
 <p>In pandas you can group data by a specific column and perform operations on the groups.</p>
-<div id="e714376c" class="cell" data-execution_count="19">
+<div id="a1ee5b49" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># sum of concentration by filter</span></span>
 <span id="cb34-2"><a href="#cb34-2"></a><span class="bu">print</span>(<span class="st">"sum of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">sum</span>()) </span>
 <span id="cb34-3"><a href="#cb34-3"></a><span class="co"># sum of concentration group by type</span></span>
@@ -1280,7 +1303,7 @@ Name: Concentration (M), dtype: float64</code></pre>
 </section>
 <section id="transform-pandas-dataframe-to-numpy-array-and-viceversa" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="transform-pandas-dataframe-to-numpy-array-and-viceversa">Transform Pandas DataFrame to Numpy Array and viceversa</h3>
-<div id="ba7201f8" class="cell" data-execution_count="20">
+<div id="d2a8d8cf" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"></a><span class="bu">print</span>(<span class="st">"Names: "</span>, data5.columns)</span>
 <span id="cb36-2"><a href="#cb36-2"></a>df <span class="op">=</span> data5.copy()</span>
 <span id="cb36-3"><a href="#cb36-3"></a><span class="bu">print</span>(<span class="bu">len</span>(df))</span>
@@ -2136,135 +2159,136 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb38-186"><a href="#cb38-186"></a><span class="fu">### Manipulate data {.unnumbered}</span></span>
 <span id="cb38-187"><a href="#cb38-187"></a></span>
 <span id="cb38-188"><a href="#cb38-188"></a>You can</span>
-<span id="cb38-189"><a href="#cb38-189"></a><span class="ss">- </span><span class="in">`df.copy()`</span>: copy the data</span>
-<span id="cb38-190"><a href="#cb38-190"></a><span class="ss">- </span><span class="in">`df.drop(columns=[...])`</span>: drop columns</span>
-<span id="cb38-191"><a href="#cb38-191"></a><span class="ss">- </span><span class="in">`df.drop(index=[...])`</span>: drop rows</span>
-<span id="cb38-192"><a href="#cb38-192"></a><span class="ss">- </span><span class="in">`df.drop_duplicates()`</span>: drop duplicates</span>
-<span id="cb38-193"><a href="#cb38-193"></a><span class="ss">- </span><span class="in">`df.fillna(...)`</span>: fill NaNs</span>
-<span id="cb38-194"><a href="#cb38-194"></a><span class="ss">- </span><span class="in">`df.dropna()`</span>: drop NaNs</span>
-<span id="cb38-195"><a href="#cb38-195"></a><span class="ss">- </span><span class="in">`df.replace(...)`</span>: replace values</span>
-<span id="cb38-196"><a href="#cb38-196"></a><span class="ss">- </span><span class="in">`pd.concat([df1, df2])`</span>: concatenate data (concatenate along the rows)</span>
-<span id="cb38-197"><a href="#cb38-197"></a><span class="ss">- </span><span class="in">`pd.concat([df1, df2], axis=1)`</span>: concatenate data (concatenate along the columns)</span>
-<span id="cb38-198"><a href="#cb38-198"></a><span class="ss">- </span><span class="in">`pd.merge(df1, df2)`</span>: merge data in the sense of inner, outer, left, right join, see <span class="co">[</span><span class="ot">pandas documentation</span><span class="co">](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.merge.html)</span></span>
-<span id="cb38-199"><a href="#cb38-199"></a><span class="ss">- </span><span class="in">`df.agg(...)`</span>: aggregate the data</span>
-<span id="cb38-200"><a href="#cb38-200"></a><span class="ss">- </span><span class="in">`df.transform(...)`</span>: transform the data </span>
-<span id="cb38-201"><a href="#cb38-201"></a><span class="ss">- </span><span class="in">`df.value_counts()`</span>: count the values</span>
-<span id="cb38-202"><a href="#cb38-202"></a><span class="ss">- </span><span class="in">`df.apply(...)`</span>: apply a function to the data</span>
-<span id="cb38-203"><a href="#cb38-203"></a><span class="ss">- </span><span class="in">`df.groupby(...)`</span>: group the data and perform operations on the groups</span>
-<span id="cb38-204"><a href="#cb38-204"></a><span class="ss">- </span><span class="in">`df.sort_values(...)`</span>: sort the data</span>
-<span id="cb38-205"><a href="#cb38-205"></a><span class="ss">- </span><span class="in">`df.shift(...)`</span>: shift the data</span>
-<span id="cb38-206"><a href="#cb38-206"></a><span class="ss">- </span><span class="in">`df.diff(...)`</span>: get the difference between the data</span>
-<span id="cb38-207"><a href="#cb38-207"></a><span class="ss">- </span><span class="in">`df.ptc_shift(...)`</span>: get the percentage change between the data</span>
-<span id="cb38-208"><a href="#cb38-208"></a><span class="ss">- </span><span class="in">`df.to_numpy()`</span>: convert the dataframe to a numpy array</span>
-<span id="cb38-209"><a href="#cb38-209"></a><span class="ss">- </span><span class="in">`pd.DataFrame(arr)`</span>: convert the numpy array to a dataframe</span>
-<span id="cb38-210"><a href="#cb38-210"></a>etc.</span>
-<span id="cb38-211"><a href="#cb38-211"></a></span>
-<span id="cb38-212"><a href="#cb38-212"></a><span class="fu">#### Copy and concatenate data: {.unnumbered}</span></span>
-<span id="cb38-215"><a href="#cb38-215"></a><span class="in">```{python}</span></span>
-<span id="cb38-216"><a href="#cb38-216"></a>data2 <span class="op">=</span> data.copy()</span>
-<span id="cb38-217"><a href="#cb38-217"></a>data2[<span class="st">"Concentration 2 (M)"</span>] <span class="op">=</span> data2[<span class="st">"Concentration (M)"</span>] <span class="op">+</span> <span class="dv">10</span> <span class="co"># increase the concentration by 10 M</span></span>
-<span id="cb38-218"><a href="#cb38-218"></a><span class="bu">print</span>(<span class="st">"data2: </span><span class="ch">\n</span><span class="st">"</span> , data2)</span>
-<span id="cb38-219"><a href="#cb38-219"></a></span>
+<span id="cb38-189"><a href="#cb38-189"></a></span>
+<span id="cb38-190"><a href="#cb38-190"></a><span class="ss">- </span><span class="in">`df.copy()`</span>: copy the data</span>
+<span id="cb38-191"><a href="#cb38-191"></a><span class="ss">- </span><span class="in">`df.drop(columns=[...])`</span>: drop columns</span>
+<span id="cb38-192"><a href="#cb38-192"></a><span class="ss">- </span><span class="in">`df.drop(index=[...])`</span>: drop rows</span>
+<span id="cb38-193"><a href="#cb38-193"></a><span class="ss">- </span><span class="in">`df.drop_duplicates()`</span>: drop duplicates</span>
+<span id="cb38-194"><a href="#cb38-194"></a><span class="ss">- </span><span class="in">`df.fillna(...)`</span>: fill NaNs</span>
+<span id="cb38-195"><a href="#cb38-195"></a><span class="ss">- </span><span class="in">`df.dropna()`</span>: drop NaNs</span>
+<span id="cb38-196"><a href="#cb38-196"></a><span class="ss">- </span><span class="in">`df.replace(...)`</span>: replace values</span>
+<span id="cb38-197"><a href="#cb38-197"></a><span class="ss">- </span><span class="in">`pd.concat([df1, df2])`</span>: concatenate data (concatenate along the rows)</span>
+<span id="cb38-198"><a href="#cb38-198"></a><span class="ss">- </span><span class="in">`pd.concat([df1, df2], axis=1)`</span>: concatenate data (concatenate along the columns)</span>
+<span id="cb38-199"><a href="#cb38-199"></a><span class="ss">- </span><span class="in">`pd.merge(df1, df2)`</span>: merge data in the sense of inner, outer, left, right join, see <span class="co">[</span><span class="ot">pandas documentation</span><span class="co">](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.merge.html)</span></span>
+<span id="cb38-200"><a href="#cb38-200"></a><span class="ss">- </span><span class="in">`df.agg(...)`</span>: aggregate the data</span>
+<span id="cb38-201"><a href="#cb38-201"></a><span class="ss">- </span><span class="in">`df.transform(...)`</span>: transform the data </span>
+<span id="cb38-202"><a href="#cb38-202"></a><span class="ss">- </span><span class="in">`df.value_counts()`</span>: count the values</span>
+<span id="cb38-203"><a href="#cb38-203"></a><span class="ss">- </span><span class="in">`df.apply(...)`</span>: apply a function to the data</span>
+<span id="cb38-204"><a href="#cb38-204"></a><span class="ss">- </span><span class="in">`df.groupby(...)`</span>: group the data and perform operations on the groups</span>
+<span id="cb38-205"><a href="#cb38-205"></a><span class="ss">- </span><span class="in">`df.sort_values(...)`</span>: sort the data</span>
+<span id="cb38-206"><a href="#cb38-206"></a><span class="ss">- </span><span class="in">`df.shift(...)`</span>: shift the data</span>
+<span id="cb38-207"><a href="#cb38-207"></a><span class="ss">- </span><span class="in">`df.diff(...)`</span>: get the difference between the data</span>
+<span id="cb38-208"><a href="#cb38-208"></a><span class="ss">- </span><span class="in">`df.ptc_shift(...)`</span>: get the percentage change between the data</span>
+<span id="cb38-209"><a href="#cb38-209"></a><span class="ss">- </span><span class="in">`df.to_numpy()`</span>: convert the dataframe to a numpy array</span>
+<span id="cb38-210"><a href="#cb38-210"></a><span class="ss">- </span><span class="in">`pd.DataFrame(arr)`</span>: convert the numpy array to a dataframe</span>
+<span id="cb38-211"><a href="#cb38-211"></a>etc.</span>
+<span id="cb38-212"><a href="#cb38-212"></a></span>
+<span id="cb38-213"><a href="#cb38-213"></a><span class="fu">#### Copy and concatenate data: {.unnumbered}</span></span>
+<span id="cb38-216"><a href="#cb38-216"></a><span class="in">```{python}</span></span>
+<span id="cb38-217"><a href="#cb38-217"></a>data2 <span class="op">=</span> data.copy()</span>
+<span id="cb38-218"><a href="#cb38-218"></a>data2[<span class="st">"Concentration 2 (M)"</span>] <span class="op">=</span> data2[<span class="st">"Concentration (M)"</span>] <span class="op">+</span> <span class="dv">10</span> <span class="co"># increase the concentration by 10 M</span></span>
+<span id="cb38-219"><a href="#cb38-219"></a><span class="bu">print</span>(<span class="st">"data2: </span><span class="ch">\n</span><span class="st">"</span> , data2)</span>
 <span id="cb38-220"><a href="#cb38-220"></a></span>
-<span id="cb38-221"><a href="#cb38-221"></a>data3 <span class="op">=</span> pd.concat([data, data2]) <span class="co"># concatenate the dataframes</span></span>
-<span id="cb38-222"><a href="#cb38-222"></a><span class="bu">print</span>(<span class="st">"concated data: </span><span class="ch">\n</span><span class="st">"</span>, data3)</span>
-<span id="cb38-223"><a href="#cb38-223"></a><span class="in">```</span></span>
-<span id="cb38-224"><a href="#cb38-224"></a></span>
-<span id="cb38-227"><a href="#cb38-227"></a><span class="in">```{python}</span></span>
-<span id="cb38-228"><a href="#cb38-228"></a> <span class="co"># create a Panda Series</span></span>
-<span id="cb38-229"><a href="#cb38-229"></a>acidity <span class="op">=</span> pd.Series([<span class="st">"basic"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"neutral"</span>,</span>
-<span id="cb38-230"><a href="#cb38-230"></a>                    <span class="st">"acid"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"basic"</span>], name<span class="op">=</span><span class="st">"Aciditiy Type"</span>)</span>
-<span id="cb38-231"><a href="#cb38-231"></a><span class="bu">print</span>(<span class="st">"acidity: </span><span class="ch">\n</span><span class="st">"</span>,acidity)</span>
-<span id="cb38-232"><a href="#cb38-232"></a><span class="co"># concatenate the dataframes</span></span>
-<span id="cb38-233"><a href="#cb38-233"></a>data4 <span class="op">=</span> pd.concat([data3, acidity], axis<span class="op">=</span><span class="dv">1</span>) </span>
-<span id="cb38-234"><a href="#cb38-234"></a><span class="bu">print</span>(<span class="st">"concated data: </span><span class="ch">\n</span><span class="st">"</span>, data4)</span>
-<span id="cb38-235"><a href="#cb38-235"></a><span class="in">```</span></span>
-<span id="cb38-236"><a href="#cb38-236"></a></span>
-<span id="cb38-237"><a href="#cb38-237"></a><span class="fu">#### Drop columns and rows: {.unnumbered}</span></span>
-<span id="cb38-240"><a href="#cb38-240"></a><span class="in">```{python}</span></span>
-<span id="cb38-241"><a href="#cb38-241"></a>data4 <span class="op">=</span> data4.drop(columns<span class="op">=</span>[<span class="st">"Concentration 2 (M)"</span>]) <span class="co"># drop the column "Concentration 2 (M)"</span></span>
-<span id="cb38-242"><a href="#cb38-242"></a><span class="bu">print</span>(<span class="st">"data4: </span><span class="ch">\n</span><span class="st">"</span>, data4)</span>
-<span id="cb38-243"><a href="#cb38-243"></a></span>
-<span id="cb38-244"><a href="#cb38-244"></a>data5 <span class="op">=</span> data4.drop(index<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>]) <span class="co"># drop the rows with index 0 and 1</span></span>
-<span id="cb38-245"><a href="#cb38-245"></a><span class="bu">print</span>(<span class="st">"data5: </span><span class="ch">\n</span><span class="st">"</span>, data5)</span>
-<span id="cb38-246"><a href="#cb38-246"></a></span>
-<span id="cb38-247"><a href="#cb38-247"></a>data6 <span class="op">=</span> data5.drop(columns<span class="op">=</span>[<span class="st">"Aciditiy Type"</span>]) <span class="co"># drop the column "Aciditiy Type"</span></span>
-<span id="cb38-248"><a href="#cb38-248"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span>
-<span id="cb38-249"><a href="#cb38-249"></a><span class="in">```</span></span>
-<span id="cb38-250"><a href="#cb38-250"></a></span>
+<span id="cb38-221"><a href="#cb38-221"></a></span>
+<span id="cb38-222"><a href="#cb38-222"></a>data3 <span class="op">=</span> pd.concat([data, data2]) <span class="co"># concatenate the dataframes</span></span>
+<span id="cb38-223"><a href="#cb38-223"></a><span class="bu">print</span>(<span class="st">"concated data: </span><span class="ch">\n</span><span class="st">"</span>, data3)</span>
+<span id="cb38-224"><a href="#cb38-224"></a><span class="in">```</span></span>
+<span id="cb38-225"><a href="#cb38-225"></a></span>
+<span id="cb38-228"><a href="#cb38-228"></a><span class="in">```{python}</span></span>
+<span id="cb38-229"><a href="#cb38-229"></a> <span class="co"># create a Panda Series</span></span>
+<span id="cb38-230"><a href="#cb38-230"></a>acidity <span class="op">=</span> pd.Series([<span class="st">"basic"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"neutral"</span>,</span>
+<span id="cb38-231"><a href="#cb38-231"></a>                    <span class="st">"acid"</span>, <span class="st">"acid"</span>, <span class="st">"basic"</span>, <span class="st">"basic"</span>], name<span class="op">=</span><span class="st">"Aciditiy Type"</span>)</span>
+<span id="cb38-232"><a href="#cb38-232"></a><span class="bu">print</span>(<span class="st">"acidity: </span><span class="ch">\n</span><span class="st">"</span>,acidity)</span>
+<span id="cb38-233"><a href="#cb38-233"></a><span class="co"># concatenate the dataframes</span></span>
+<span id="cb38-234"><a href="#cb38-234"></a>data4 <span class="op">=</span> pd.concat([data3, acidity], axis<span class="op">=</span><span class="dv">1</span>) </span>
+<span id="cb38-235"><a href="#cb38-235"></a><span class="bu">print</span>(<span class="st">"concated data: </span><span class="ch">\n</span><span class="st">"</span>, data4)</span>
+<span id="cb38-236"><a href="#cb38-236"></a><span class="in">```</span></span>
+<span id="cb38-237"><a href="#cb38-237"></a></span>
+<span id="cb38-238"><a href="#cb38-238"></a><span class="fu">#### Drop columns and rows: {.unnumbered}</span></span>
+<span id="cb38-241"><a href="#cb38-241"></a><span class="in">```{python}</span></span>
+<span id="cb38-242"><a href="#cb38-242"></a>data4 <span class="op">=</span> data4.drop(columns<span class="op">=</span>[<span class="st">"Concentration 2 (M)"</span>]) <span class="co"># drop the column "Concentration 2 (M)"</span></span>
+<span id="cb38-243"><a href="#cb38-243"></a><span class="bu">print</span>(<span class="st">"data4: </span><span class="ch">\n</span><span class="st">"</span>, data4)</span>
+<span id="cb38-244"><a href="#cb38-244"></a></span>
+<span id="cb38-245"><a href="#cb38-245"></a>data5 <span class="op">=</span> data4.drop(index<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>]) <span class="co"># drop the rows with index 0 and 1</span></span>
+<span id="cb38-246"><a href="#cb38-246"></a><span class="bu">print</span>(<span class="st">"data5: </span><span class="ch">\n</span><span class="st">"</span>, data5)</span>
+<span id="cb38-247"><a href="#cb38-247"></a></span>
+<span id="cb38-248"><a href="#cb38-248"></a>data6 <span class="op">=</span> data5.drop(columns<span class="op">=</span>[<span class="st">"Aciditiy Type"</span>]) <span class="co"># drop the column "Aciditiy Type"</span></span>
+<span id="cb38-249"><a href="#cb38-249"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span>
+<span id="cb38-250"><a href="#cb38-250"></a><span class="in">```</span></span>
 <span id="cb38-251"><a href="#cb38-251"></a></span>
 <span id="cb38-252"><a href="#cb38-252"></a></span>
-<span id="cb38-253"><a href="#cb38-253"></a><span class="fu">#### Drop duplicates, fill NaNs and drop NaNs {.unnumbered}</span></span>
-<span id="cb38-256"><a href="#cb38-256"></a><span class="in">```{python}</span></span>
-<span id="cb38-257"><a href="#cb38-257"></a>data5 <span class="op">=</span> data4.drop_duplicates() <span class="co"># drop the duplicates</span></span>
-<span id="cb38-258"><a href="#cb38-258"></a><span class="bu">print</span>(<span class="st">"data5: </span><span class="ch">\n</span><span class="st">"</span>, data5)</span>
-<span id="cb38-259"><a href="#cb38-259"></a></span>
-<span id="cb38-260"><a href="#cb38-260"></a>data6 <span class="op">=</span> data5.fillna(<span class="dv">0</span>) <span class="co"># fill the NaNs with 0</span></span>
-<span id="cb38-261"><a href="#cb38-261"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span>
-<span id="cb38-262"><a href="#cb38-262"></a></span>
-<span id="cb38-263"><a href="#cb38-263"></a>data7 <span class="op">=</span> data5.dropna() <span class="co"># drop the NaNs</span></span>
-<span id="cb38-264"><a href="#cb38-264"></a><span class="bu">print</span>(<span class="st">"data7: </span><span class="ch">\n</span><span class="st">"</span>, data7)</span>
-<span id="cb38-265"><a href="#cb38-265"></a><span class="in">```</span></span>
-<span id="cb38-266"><a href="#cb38-266"></a></span>
-<span id="cb38-267"><a href="#cb38-267"></a><span class="fu">#### Replace values: {.unnumbered}</span></span>
-<span id="cb38-270"><a href="#cb38-270"></a><span class="in">```{python}</span></span>
-<span id="cb38-271"><a href="#cb38-271"></a><span class="co"># replace the values</span></span>
-<span id="cb38-272"><a href="#cb38-272"></a>data6[<span class="st">"Aciditiy Type"</span>].replace({<span class="st">"acid"</span>: <span class="st">"Acidic"</span>, <span class="st">"basic"</span>: <span class="st">"Basic"</span>, <span class="st">"neutral"</span>: <span class="st">"Neutral"</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb38-273"><a href="#cb38-273"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span>
-<span id="cb38-274"><a href="#cb38-274"></a><span class="in">```</span></span>
-<span id="cb38-275"><a href="#cb38-275"></a></span>
-<span id="cb38-276"><a href="#cb38-276"></a><span class="fu">### Count the values {.unnumbered}</span></span>
-<span id="cb38-277"><a href="#cb38-277"></a></span>
-<span id="cb38-280"><a href="#cb38-280"></a><span class="in">```{python}</span></span>
-<span id="cb38-281"><a href="#cb38-281"></a><span class="co"># count the chemicals with different concentration</span></span>
-<span id="cb38-282"><a href="#cb38-282"></a><span class="bu">print</span>(<span class="st">"Count the chemicals with the different concentrations </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].value_counts())</span>
-<span id="cb38-283"><a href="#cb38-283"></a><span class="in">```</span></span>
-<span id="cb38-284"><a href="#cb38-284"></a></span>
-<span id="cb38-285"><a href="#cb38-285"></a><span class="fu">### Appply a function to the data {.unnumbered}</span></span>
-<span id="cb38-288"><a href="#cb38-288"></a><span class="in">```{python}</span></span>
-<span id="cb38-289"><a href="#cb38-289"></a><span class="bu">print</span>(<span class="st">"Apply a function to the data: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x<span class="op">*</span><span class="dv">2</span>))</span>
-<span id="cb38-290"><a href="#cb38-290"></a><span class="in">```</span></span>
-<span id="cb38-291"><a href="#cb38-291"></a></span>
-<span id="cb38-292"><a href="#cb38-292"></a><span class="fu">### Transform data {.unnumbered}</span></span>
-<span id="cb38-293"><a href="#cb38-293"></a></span>
-<span id="cb38-296"><a href="#cb38-296"></a><span class="in">```{python}</span></span>
-<span id="cb38-297"><a href="#cb38-297"></a><span class="co"># transform the data</span></span>
-<span id="cb38-298"><a href="#cb38-298"></a>data6[<span class="st">"Concentration (M)"</span>] <span class="op">=</span> data6[<span class="st">"Concentration (M)"</span>].transform(<span class="kw">lambda</span> x: x<span class="op">*</span><span class="dv">2</span>)</span>
-<span id="cb38-299"><a href="#cb38-299"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span>
-<span id="cb38-300"><a href="#cb38-300"></a><span class="in">```</span></span>
-<span id="cb38-301"><a href="#cb38-301"></a></span>
-<span id="cb38-302"><a href="#cb38-302"></a><span class="fu">### Sort data</span></span>
-<span id="cb38-303"><a href="#cb38-303"></a></span>
-<span id="cb38-306"><a href="#cb38-306"></a><span class="in">```{python}</span></span>
-<span id="cb38-307"><a href="#cb38-307"></a><span class="bu">print</span>(<span class="st">"sorted after concentration: "</span>,data.sort_values(by<span class="op">=</span><span class="st">"Concentration (M)"</span>, ascending<span class="op">=</span><span class="va">True</span>))</span>
-<span id="cb38-308"><a href="#cb38-308"></a><span class="in">```</span></span>
-<span id="cb38-309"><a href="#cb38-309"></a></span>
-<span id="cb38-310"><a href="#cb38-310"></a><span class="fu">### Group data </span></span>
-<span id="cb38-311"><a href="#cb38-311"></a></span>
-<span id="cb38-312"><a href="#cb38-312"></a>In pandas you can group data by a specific column and perform operations on the groups.</span>
-<span id="cb38-313"><a href="#cb38-313"></a></span>
-<span id="cb38-316"><a href="#cb38-316"></a><span class="in">```{python}</span></span>
-<span id="cb38-317"><a href="#cb38-317"></a><span class="co"># sum of concentration by filter</span></span>
-<span id="cb38-318"><a href="#cb38-318"></a><span class="bu">print</span>(<span class="st">"sum of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">sum</span>()) </span>
-<span id="cb38-319"><a href="#cb38-319"></a><span class="co"># sum of concentration group by type</span></span>
-<span id="cb38-320"><a href="#cb38-320"></a><span class="bu">print</span>(<span class="st">"Sum of concentration group by type: </span><span class="ch">\n</span><span class="st">"</span>, data.groupby(<span class="st">"Chemical Type"</span>)[<span class="st">"Concentration (M)"</span>].<span class="bu">sum</span>())</span>
-<span id="cb38-321"><a href="#cb38-321"></a><span class="in">```</span></span>
-<span id="cb38-322"><a href="#cb38-322"></a></span>
-<span id="cb38-323"><a href="#cb38-323"></a><span class="fu">### Transform Pandas DataFrame to Numpy Array and viceversa {.unnumbered}</span></span>
-<span id="cb38-324"><a href="#cb38-324"></a></span>
+<span id="cb38-253"><a href="#cb38-253"></a></span>
+<span id="cb38-254"><a href="#cb38-254"></a><span class="fu">#### Drop duplicates, fill NaNs and drop NaNs {.unnumbered}</span></span>
+<span id="cb38-257"><a href="#cb38-257"></a><span class="in">```{python}</span></span>
+<span id="cb38-258"><a href="#cb38-258"></a>data5 <span class="op">=</span> data4.drop_duplicates() <span class="co"># drop the duplicates</span></span>
+<span id="cb38-259"><a href="#cb38-259"></a><span class="bu">print</span>(<span class="st">"data5: </span><span class="ch">\n</span><span class="st">"</span>, data5)</span>
+<span id="cb38-260"><a href="#cb38-260"></a></span>
+<span id="cb38-261"><a href="#cb38-261"></a>data6 <span class="op">=</span> data5.fillna(<span class="dv">0</span>) <span class="co"># fill the NaNs with 0</span></span>
+<span id="cb38-262"><a href="#cb38-262"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span>
+<span id="cb38-263"><a href="#cb38-263"></a></span>
+<span id="cb38-264"><a href="#cb38-264"></a>data7 <span class="op">=</span> data5.dropna() <span class="co"># drop the NaNs</span></span>
+<span id="cb38-265"><a href="#cb38-265"></a><span class="bu">print</span>(<span class="st">"data7: </span><span class="ch">\n</span><span class="st">"</span>, data7)</span>
+<span id="cb38-266"><a href="#cb38-266"></a><span class="in">```</span></span>
+<span id="cb38-267"><a href="#cb38-267"></a></span>
+<span id="cb38-268"><a href="#cb38-268"></a><span class="fu">#### Replace values: {.unnumbered}</span></span>
+<span id="cb38-271"><a href="#cb38-271"></a><span class="in">```{python}</span></span>
+<span id="cb38-272"><a href="#cb38-272"></a><span class="co"># replace the values</span></span>
+<span id="cb38-273"><a href="#cb38-273"></a>data6[<span class="st">"Aciditiy Type"</span>].replace({<span class="st">"acid"</span>: <span class="st">"Acidic"</span>, <span class="st">"basic"</span>: <span class="st">"Basic"</span>, <span class="st">"neutral"</span>: <span class="st">"Neutral"</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb38-274"><a href="#cb38-274"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span>
+<span id="cb38-275"><a href="#cb38-275"></a><span class="in">```</span></span>
+<span id="cb38-276"><a href="#cb38-276"></a></span>
+<span id="cb38-277"><a href="#cb38-277"></a><span class="fu">### Count the values {.unnumbered}</span></span>
+<span id="cb38-278"><a href="#cb38-278"></a></span>
+<span id="cb38-281"><a href="#cb38-281"></a><span class="in">```{python}</span></span>
+<span id="cb38-282"><a href="#cb38-282"></a><span class="co"># count the chemicals with different concentration</span></span>
+<span id="cb38-283"><a href="#cb38-283"></a><span class="bu">print</span>(<span class="st">"Count the chemicals with the different concentrations </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].value_counts())</span>
+<span id="cb38-284"><a href="#cb38-284"></a><span class="in">```</span></span>
+<span id="cb38-285"><a href="#cb38-285"></a></span>
+<span id="cb38-286"><a href="#cb38-286"></a><span class="fu">### Appply a function to the data {.unnumbered}</span></span>
+<span id="cb38-289"><a href="#cb38-289"></a><span class="in">```{python}</span></span>
+<span id="cb38-290"><a href="#cb38-290"></a><span class="bu">print</span>(<span class="st">"Apply a function to the data: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x<span class="op">*</span><span class="dv">2</span>))</span>
+<span id="cb38-291"><a href="#cb38-291"></a><span class="in">```</span></span>
+<span id="cb38-292"><a href="#cb38-292"></a></span>
+<span id="cb38-293"><a href="#cb38-293"></a><span class="fu">### Transform data {.unnumbered}</span></span>
+<span id="cb38-294"><a href="#cb38-294"></a></span>
+<span id="cb38-297"><a href="#cb38-297"></a><span class="in">```{python}</span></span>
+<span id="cb38-298"><a href="#cb38-298"></a><span class="co"># transform the data</span></span>
+<span id="cb38-299"><a href="#cb38-299"></a>data6[<span class="st">"Concentration (M)"</span>] <span class="op">=</span> data6[<span class="st">"Concentration (M)"</span>].transform(<span class="kw">lambda</span> x: x<span class="op">*</span><span class="dv">2</span>)</span>
+<span id="cb38-300"><a href="#cb38-300"></a><span class="bu">print</span>(<span class="st">"data6: </span><span class="ch">\n</span><span class="st">"</span>, data6)</span>
+<span id="cb38-301"><a href="#cb38-301"></a><span class="in">```</span></span>
+<span id="cb38-302"><a href="#cb38-302"></a></span>
+<span id="cb38-303"><a href="#cb38-303"></a><span class="fu">### Sort data</span></span>
+<span id="cb38-304"><a href="#cb38-304"></a></span>
+<span id="cb38-307"><a href="#cb38-307"></a><span class="in">```{python}</span></span>
+<span id="cb38-308"><a href="#cb38-308"></a><span class="bu">print</span>(<span class="st">"sorted after concentration: "</span>,data.sort_values(by<span class="op">=</span><span class="st">"Concentration (M)"</span>, ascending<span class="op">=</span><span class="va">True</span>))</span>
+<span id="cb38-309"><a href="#cb38-309"></a><span class="in">```</span></span>
+<span id="cb38-310"><a href="#cb38-310"></a></span>
+<span id="cb38-311"><a href="#cb38-311"></a><span class="fu">### Group data </span></span>
+<span id="cb38-312"><a href="#cb38-312"></a></span>
+<span id="cb38-313"><a href="#cb38-313"></a>In pandas you can group data by a specific column and perform operations on the groups.</span>
+<span id="cb38-314"><a href="#cb38-314"></a></span>
+<span id="cb38-317"><a href="#cb38-317"></a><span class="in">```{python}</span></span>
+<span id="cb38-318"><a href="#cb38-318"></a><span class="co"># sum of concentration by filter</span></span>
+<span id="cb38-319"><a href="#cb38-319"></a><span class="bu">print</span>(<span class="st">"sum of concentration: </span><span class="ch">\n</span><span class="st">"</span>, data[<span class="st">"Concentration (M)"</span>].<span class="bu">sum</span>()) </span>
+<span id="cb38-320"><a href="#cb38-320"></a><span class="co"># sum of concentration group by type</span></span>
+<span id="cb38-321"><a href="#cb38-321"></a><span class="bu">print</span>(<span class="st">"Sum of concentration group by type: </span><span class="ch">\n</span><span class="st">"</span>, data.groupby(<span class="st">"Chemical Type"</span>)[<span class="st">"Concentration (M)"</span>].<span class="bu">sum</span>())</span>
+<span id="cb38-322"><a href="#cb38-322"></a><span class="in">```</span></span>
+<span id="cb38-323"><a href="#cb38-323"></a></span>
+<span id="cb38-324"><a href="#cb38-324"></a><span class="fu">### Transform Pandas DataFrame to Numpy Array and viceversa {.unnumbered}</span></span>
 <span id="cb38-325"><a href="#cb38-325"></a></span>
-<span id="cb38-328"><a href="#cb38-328"></a><span class="in">```{python}</span></span>
-<span id="cb38-329"><a href="#cb38-329"></a><span class="bu">print</span>(<span class="st">"Names: "</span>, data5.columns)</span>
-<span id="cb38-330"><a href="#cb38-330"></a>df <span class="op">=</span> data5.copy()</span>
-<span id="cb38-331"><a href="#cb38-331"></a><span class="bu">print</span>(<span class="bu">len</span>(df))</span>
-<span id="cb38-332"><a href="#cb38-332"></a><span class="co"># convert the dataframe to a numpy array</span></span>
-<span id="cb38-333"><a href="#cb38-333"></a>arr <span class="op">=</span> df.to_numpy() </span>
-<span id="cb38-334"><a href="#cb38-334"></a><span class="bu">print</span>(<span class="st">"arr: </span><span class="ch">\n</span><span class="st">"</span>, arr)</span>
-<span id="cb38-335"><a href="#cb38-335"></a><span class="co"># convert the numpy array to a dataframe</span></span>
-<span id="cb38-336"><a href="#cb38-336"></a>df2 <span class="op">=</span> pd.DataFrame(arr, columns<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Formula"</span>, <span class="st">"Molecular Weight (g/mol)"</span>,<span class="st">"Viscosity (mPa·s)"</span>,<span class="st">"pH (Acidity)"</span>,<span class="st">"Chemical Type"</span>,<span class="st">"Concentration (M)"</span>, <span class="st">"Aciditiy Type"</span>])</span>
-<span id="cb38-337"><a href="#cb38-337"></a><span class="bu">print</span>(<span class="st">"df2: </span><span class="ch">\n</span><span class="st">"</span>, df2)</span>
-<span id="cb38-338"><a href="#cb38-338"></a><span class="in">```</span></span>
-<span id="cb38-339"><a href="#cb38-339"></a></span>
+<span id="cb38-326"><a href="#cb38-326"></a></span>
+<span id="cb38-329"><a href="#cb38-329"></a><span class="in">```{python}</span></span>
+<span id="cb38-330"><a href="#cb38-330"></a><span class="bu">print</span>(<span class="st">"Names: "</span>, data5.columns)</span>
+<span id="cb38-331"><a href="#cb38-331"></a>df <span class="op">=</span> data5.copy()</span>
+<span id="cb38-332"><a href="#cb38-332"></a><span class="bu">print</span>(<span class="bu">len</span>(df))</span>
+<span id="cb38-333"><a href="#cb38-333"></a><span class="co"># convert the dataframe to a numpy array</span></span>
+<span id="cb38-334"><a href="#cb38-334"></a>arr <span class="op">=</span> df.to_numpy() </span>
+<span id="cb38-335"><a href="#cb38-335"></a><span class="bu">print</span>(<span class="st">"arr: </span><span class="ch">\n</span><span class="st">"</span>, arr)</span>
+<span id="cb38-336"><a href="#cb38-336"></a><span class="co"># convert the numpy array to a dataframe</span></span>
+<span id="cb38-337"><a href="#cb38-337"></a>df2 <span class="op">=</span> pd.DataFrame(arr, columns<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Formula"</span>, <span class="st">"Molecular Weight (g/mol)"</span>,<span class="st">"Viscosity (mPa·s)"</span>,<span class="st">"pH (Acidity)"</span>,<span class="st">"Chemical Type"</span>,<span class="st">"Concentration (M)"</span>, <span class="st">"Aciditiy Type"</span>])</span>
+<span id="cb38-338"><a href="#cb38-338"></a><span class="bu">print</span>(<span class="st">"df2: </span><span class="ch">\n</span><span class="st">"</span>, df2)</span>
+<span id="cb38-339"><a href="#cb38-339"></a><span class="in">```</span></span>
+<span id="cb38-340"><a href="#cb38-340"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

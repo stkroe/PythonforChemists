@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-92b6c6361227b6d7ffb0ef9f7ef1dd57.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-9dc44f3162c39531be84931020d3c4ca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-516d921ec8d526d3fe54a05c4dfe7a3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -287,12 +287,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
+  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
+  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
   </div>
 </li>
       </ul>
@@ -606,7 +606,12 @@ Warning
 </section>
 <section id="mamba" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="mamba">Mamba</h3>
-<p>Another python package and environment manager is <a href="https://mamba.readthedocs.io/en/latest/index.html">mamba</a>. <code>mamba</code> is a reimplementation of <code>conda</code>: - <a href="https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html">micromamba</a> is a statically linked version of <code>mamba</code> - <code>mamba</code>and it is currently faster than <code>conda</code></p>
+<p>Another python package and environment manager is <a href="https://mamba.readthedocs.io/en/latest/index.html">mamba</a>.</p>
+<p><code>mamba</code> is a reimplementation of <code>conda</code>:</p>
+<ul>
+<li><a href="https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html">micromamba</a> is a statically linked version of <code>mamba</code></li>
+<li><code>mamba</code>and it is currently faster than <code>conda</code></li>
+</ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1428,176 +1433,178 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-71"><a href="#cb11-71"></a></span>
 <span id="cb11-72"><a href="#cb11-72"></a></span>
 <span id="cb11-73"><a href="#cb11-73"></a>Another python package and environment manager is <span class="co">[</span><span class="ot">mamba</span><span class="co">](https://mamba.readthedocs.io/en/latest/index.html)</span>.</span>
-<span id="cb11-74"><a href="#cb11-74"></a><span class="in">`mamba`</span> is a reimplementation of <span class="in">`conda`</span>:</span>
-<span id="cb11-75"><a href="#cb11-75"></a><span class="ss"> - </span><span class="co">[</span><span class="ot">micromamba</span><span class="co">](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html)</span> is a statically linked version of <span class="in">`mamba`</span> </span>
-<span id="cb11-76"><a href="#cb11-76"></a><span class="ss"> - </span><span class="in">`mamba`</span>and it is currently faster than <span class="in">`conda`</span></span>
-<span id="cb11-77"><a href="#cb11-77"></a></span>
-<span id="cb11-78"><a href="#cb11-78"></a></span>
-<span id="cb11-79"><a href="#cb11-79"></a>:::{.callout-tip}</span>
-<span id="cb11-80"><a href="#cb11-80"></a> **Recommendation: *micromamba* ** &lt;br&gt;</span>
-<span id="cb11-81"><a href="#cb11-81"></a></span>
-<span id="cb11-82"><a href="#cb11-82"></a>Install it like it is explained under the micromamba documentation:</span>
-<span id="cb11-83"><a href="#cb11-83"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html</span><span class="co">](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html)</span></span>
-<span id="cb11-84"><a href="#cb11-84"></a>:::</span>
-<span id="cb11-85"><a href="#cb11-85"></a></span>
-<span id="cb11-86"><a href="#cb11-86"></a></span>
-<span id="cb11-87"><a href="#cb11-87"></a>Please install in one of the above explained ways Python and use your preferred searching engine to get more information.</span>
+<span id="cb11-74"><a href="#cb11-74"></a></span>
+<span id="cb11-75"><a href="#cb11-75"></a><span class="in">`mamba`</span> is a reimplementation of <span class="in">`conda`</span>:</span>
+<span id="cb11-76"><a href="#cb11-76"></a></span>
+<span id="cb11-77"><a href="#cb11-77"></a><span class="ss"> - </span><span class="co">[</span><span class="ot">micromamba</span><span class="co">](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html)</span> is a statically linked version of <span class="in">`mamba`</span> </span>
+<span id="cb11-78"><a href="#cb11-78"></a><span class="ss"> - </span><span class="in">`mamba`</span>and it is currently faster than <span class="in">`conda`</span></span>
+<span id="cb11-79"><a href="#cb11-79"></a></span>
+<span id="cb11-80"><a href="#cb11-80"></a></span>
+<span id="cb11-81"><a href="#cb11-81"></a>:::{.callout-tip}</span>
+<span id="cb11-82"><a href="#cb11-82"></a> **Recommendation: *micromamba* ** &lt;br&gt;</span>
+<span id="cb11-83"><a href="#cb11-83"></a></span>
+<span id="cb11-84"><a href="#cb11-84"></a>Install it like it is explained under the micromamba documentation:</span>
+<span id="cb11-85"><a href="#cb11-85"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html</span><span class="co">](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html)</span></span>
+<span id="cb11-86"><a href="#cb11-86"></a>:::</span>
+<span id="cb11-87"><a href="#cb11-87"></a></span>
 <span id="cb11-88"><a href="#cb11-88"></a></span>
-<span id="cb11-89"><a href="#cb11-89"></a></span>
-<span id="cb11-90"><a href="#cb11-90"></a><span class="fu">## 3. Set up an environment {.unnumbered}</span></span>
+<span id="cb11-89"><a href="#cb11-89"></a>Please install in one of the above explained ways Python and use your preferred searching engine to get more information.</span>
+<span id="cb11-90"><a href="#cb11-90"></a></span>
 <span id="cb11-91"><a href="#cb11-91"></a></span>
-<span id="cb11-92"><a href="#cb11-92"></a>It is often very useful to have different python environments for different python projects because of the need of different python package versions.</span>
+<span id="cb11-92"><a href="#cb11-92"></a><span class="fu">## 3. Set up an environment {.unnumbered}</span></span>
 <span id="cb11-93"><a href="#cb11-93"></a></span>
-<span id="cb11-94"><a href="#cb11-94"></a>You can use <span class="in">`conda`</span> or <span class="in">`micromamba`</span> to create different environments. There exists also other virtual environment manager.</span>
+<span id="cb11-94"><a href="#cb11-94"></a>It is often very useful to have different python environments for different python projects because of the need of different python package versions.</span>
 <span id="cb11-95"><a href="#cb11-95"></a></span>
-<span id="cb11-96"><a href="#cb11-96"></a>In this course the explanation is restricted to <span class="in">`micromamba`</span> as an example. If you want to use something else there exists tons of information online how to use other programs.</span>
+<span id="cb11-96"><a href="#cb11-96"></a>You can use <span class="in">`conda`</span> or <span class="in">`micromamba`</span> to create different environments. There exists also other virtual environment manager.</span>
 <span id="cb11-97"><a href="#cb11-97"></a></span>
-<span id="cb11-98"><a href="#cb11-98"></a></span>
+<span id="cb11-98"><a href="#cb11-98"></a>In this course the explanation is restricted to <span class="in">`micromamba`</span> as an example. If you want to use something else there exists tons of information online how to use other programs.</span>
 <span id="cb11-99"><a href="#cb11-99"></a></span>
 <span id="cb11-100"><a href="#cb11-100"></a></span>
-<span id="cb11-101"><a href="#cb11-101"></a><span class="fu">### Micromamba: Most important commands are: {.unnumbered}</span></span>
+<span id="cb11-101"><a href="#cb11-101"></a></span>
 <span id="cb11-102"><a href="#cb11-102"></a></span>
-<span id="cb11-103"><a href="#cb11-103"></a></span>
-<span id="cb11-104"><a href="#cb11-104"></a>Read for more detail: <span class="co">[</span><span class="ot">https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html</span><span class="co">](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html)</span></span>
+<span id="cb11-103"><a href="#cb11-103"></a><span class="fu">### Micromamba: Most important commands are: {.unnumbered}</span></span>
+<span id="cb11-104"><a href="#cb11-104"></a></span>
 <span id="cb11-105"><a href="#cb11-105"></a></span>
-<span id="cb11-106"><a href="#cb11-106"></a></span>
+<span id="cb11-106"><a href="#cb11-106"></a>Read for more detail: <span class="co">[</span><span class="ot">https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html</span><span class="co">](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html)</span></span>
 <span id="cb11-107"><a href="#cb11-107"></a></span>
-<span id="cb11-108"><a href="#cb11-108"></a>Creating a new virtual environment:</span>
+<span id="cb11-108"><a href="#cb11-108"></a></span>
 <span id="cb11-109"><a href="#cb11-109"></a></span>
-<span id="cb11-110"><a href="#cb11-110"></a></span>
-<span id="cb11-111"><a href="#cb11-111"></a><span class="in">```bash</span></span>
-<span id="cb11-112"><a href="#cb11-112"></a><span class="ex">micromamba</span> create <span class="at">--name</span> <span class="op">&lt;</span>myenvname<span class="op">&gt;</span></span>
-<span id="cb11-113"><a href="#cb11-113"></a><span class="in">```</span></span>
-<span id="cb11-114"><a href="#cb11-114"></a></span>
-<span id="cb11-115"><a href="#cb11-115"></a></span>
-<span id="cb11-116"><a href="#cb11-116"></a>Install new packages:</span>
+<span id="cb11-110"><a href="#cb11-110"></a>Creating a new virtual environment:</span>
+<span id="cb11-111"><a href="#cb11-111"></a></span>
+<span id="cb11-112"><a href="#cb11-112"></a></span>
+<span id="cb11-113"><a href="#cb11-113"></a><span class="in">```bash</span></span>
+<span id="cb11-114"><a href="#cb11-114"></a><span class="ex">micromamba</span> create <span class="at">--name</span> <span class="op">&lt;</span>myenvname<span class="op">&gt;</span></span>
+<span id="cb11-115"><a href="#cb11-115"></a><span class="in">```</span></span>
+<span id="cb11-116"><a href="#cb11-116"></a></span>
 <span id="cb11-117"><a href="#cb11-117"></a></span>
-<span id="cb11-118"><a href="#cb11-118"></a></span>
-<span id="cb11-119"><a href="#cb11-119"></a><span class="in">```bash</span></span>
-<span id="cb11-120"><a href="#cb11-120"></a><span class="ex">micromamba</span> install <span class="op">&lt;</span>packagename<span class="op">&gt;</span></span>
-<span id="cb11-121"><a href="#cb11-121"></a><span class="in">```</span></span>
-<span id="cb11-122"><a href="#cb11-122"></a></span>
-<span id="cb11-123"><a href="#cb11-123"></a></span>
-<span id="cb11-124"><a href="#cb11-124"></a>List all environments:</span>
+<span id="cb11-118"><a href="#cb11-118"></a>Install new packages:</span>
+<span id="cb11-119"><a href="#cb11-119"></a></span>
+<span id="cb11-120"><a href="#cb11-120"></a></span>
+<span id="cb11-121"><a href="#cb11-121"></a><span class="in">```bash</span></span>
+<span id="cb11-122"><a href="#cb11-122"></a><span class="ex">micromamba</span> install <span class="op">&lt;</span>packagename<span class="op">&gt;</span></span>
+<span id="cb11-123"><a href="#cb11-123"></a><span class="in">```</span></span>
+<span id="cb11-124"><a href="#cb11-124"></a></span>
 <span id="cb11-125"><a href="#cb11-125"></a></span>
-<span id="cb11-126"><a href="#cb11-126"></a></span>
-<span id="cb11-127"><a href="#cb11-127"></a><span class="in">```bash</span></span>
-<span id="cb11-128"><a href="#cb11-128"></a><span class="ex">micromamba</span> env list</span>
-<span id="cb11-129"><a href="#cb11-129"></a><span class="in">```</span></span>
-<span id="cb11-130"><a href="#cb11-130"></a></span>
-<span id="cb11-131"><a href="#cb11-131"></a></span>
-<span id="cb11-132"><a href="#cb11-132"></a>Activate an environment:</span>
+<span id="cb11-126"><a href="#cb11-126"></a>List all environments:</span>
+<span id="cb11-127"><a href="#cb11-127"></a></span>
+<span id="cb11-128"><a href="#cb11-128"></a></span>
+<span id="cb11-129"><a href="#cb11-129"></a><span class="in">```bash</span></span>
+<span id="cb11-130"><a href="#cb11-130"></a><span class="ex">micromamba</span> env list</span>
+<span id="cb11-131"><a href="#cb11-131"></a><span class="in">```</span></span>
+<span id="cb11-132"><a href="#cb11-132"></a></span>
 <span id="cb11-133"><a href="#cb11-133"></a></span>
-<span id="cb11-134"><a href="#cb11-134"></a></span>
-<span id="cb11-135"><a href="#cb11-135"></a><span class="in">```bash</span></span>
-<span id="cb11-136"><a href="#cb11-136"></a><span class="ex">micromamba</span> activate <span class="op">&lt;</span>myenvname<span class="op">&gt;</span></span>
-<span id="cb11-137"><a href="#cb11-137"></a><span class="in">```</span></span>
-<span id="cb11-138"><a href="#cb11-138"></a></span>
-<span id="cb11-139"><a href="#cb11-139"></a></span>
-<span id="cb11-140"><a href="#cb11-140"></a>List all packages of this environment:</span>
+<span id="cb11-134"><a href="#cb11-134"></a>Activate an environment:</span>
+<span id="cb11-135"><a href="#cb11-135"></a></span>
+<span id="cb11-136"><a href="#cb11-136"></a></span>
+<span id="cb11-137"><a href="#cb11-137"></a><span class="in">```bash</span></span>
+<span id="cb11-138"><a href="#cb11-138"></a><span class="ex">micromamba</span> activate <span class="op">&lt;</span>myenvname<span class="op">&gt;</span></span>
+<span id="cb11-139"><a href="#cb11-139"></a><span class="in">```</span></span>
+<span id="cb11-140"><a href="#cb11-140"></a></span>
 <span id="cb11-141"><a href="#cb11-141"></a></span>
-<span id="cb11-142"><a href="#cb11-142"></a></span>
-<span id="cb11-143"><a href="#cb11-143"></a><span class="in">```bash</span></span>
-<span id="cb11-144"><a href="#cb11-144"></a><span class="ex">micromamba</span> list</span>
-<span id="cb11-145"><a href="#cb11-145"></a><span class="in">```</span></span>
-<span id="cb11-146"><a href="#cb11-146"></a></span>
-<span id="cb11-147"><a href="#cb11-147"></a></span>
-<span id="cb11-148"><a href="#cb11-148"></a><span class="fu">## 4. Usefull packages for Data Analysis and Visualization:  {.unnumbered}</span></span>
-<span id="cb11-149"><a href="#cb11-149"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pip</span><span class="co">](https://packaging.python.org/en/latest/guides/tool-recommendations/)</span> - package installer for python instead of conda</span>
-<span id="cb11-150"><a href="#cb11-150"></a><span class="ss">- </span><span class="co">[</span><span class="ot">jupyter-notebook/jupyterlab</span><span class="co">](https://jupyter.org/)</span> - interactive computing environment</span>
-<span id="cb11-151"><a href="#cb11-151"></a><span class="ss">- </span><span class="co">[</span><span class="ot">ipykernel</span><span class="co">](https://pypi.org/project/ipykernel/)</span> - IPython Kernel for Jupyter</span>
-<span id="cb11-152"><a href="#cb11-152"></a><span class="ss">- </span><span class="co">[</span><span class="ot">matplotlib</span><span class="co">](https://matplotlib.org)</span> - data visualization library</span>
-<span id="cb11-153"><a href="#cb11-153"></a><span class="ss">- </span><span class="co">[</span><span class="ot">numpy</span><span class="co">](https://numpy.org)</span> - numerical library</span>
-<span id="cb11-154"><a href="#cb11-154"></a><span class="ss">- </span><span class="co">[</span><span class="ot">scipy</span><span class="co">](https://docs.scipy.org/doc/scipy/reference/)</span> - scientific library</span>
-<span id="cb11-155"><a href="#cb11-155"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pandas</span><span class="co">](https://pandas.pydata.org/docs/)</span> - data manipulation library</span>
-<span id="cb11-156"><a href="#cb11-156"></a><span class="ss">- </span><span class="co">[</span><span class="ot">seaborn</span><span class="co">](https://seaborn.pydata.org/examples/index.html)</span> - data visualization library</span>
-<span id="cb11-157"><a href="#cb11-157"></a><span class="ss">- </span><span class="co">[</span><span class="ot">scikit-learn</span><span class="co">](https://scikit-learn.org/stable/)</span> - machine learning library</span>
-<span id="cb11-158"><a href="#cb11-158"></a><span class="ss">- </span><span class="co">[</span><span class="ot">statsmodels</span><span class="co">](https://www.statsmodels.org/stable/index.html)</span> - statistical library</span>
-<span id="cb11-159"><a href="#cb11-159"></a></span>
-<span id="cb11-160"><a href="#cb11-160"></a>**special packages for data visualization:**</span>
+<span id="cb11-142"><a href="#cb11-142"></a>List all packages of this environment:</span>
+<span id="cb11-143"><a href="#cb11-143"></a></span>
+<span id="cb11-144"><a href="#cb11-144"></a></span>
+<span id="cb11-145"><a href="#cb11-145"></a><span class="in">```bash</span></span>
+<span id="cb11-146"><a href="#cb11-146"></a><span class="ex">micromamba</span> list</span>
+<span id="cb11-147"><a href="#cb11-147"></a><span class="in">```</span></span>
+<span id="cb11-148"><a href="#cb11-148"></a></span>
+<span id="cb11-149"><a href="#cb11-149"></a></span>
+<span id="cb11-150"><a href="#cb11-150"></a><span class="fu">## 4. Usefull packages for Data Analysis and Visualization:  {.unnumbered}</span></span>
+<span id="cb11-151"><a href="#cb11-151"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pip</span><span class="co">](https://packaging.python.org/en/latest/guides/tool-recommendations/)</span> - package installer for python instead of conda</span>
+<span id="cb11-152"><a href="#cb11-152"></a><span class="ss">- </span><span class="co">[</span><span class="ot">jupyter-notebook/jupyterlab</span><span class="co">](https://jupyter.org/)</span> - interactive computing environment</span>
+<span id="cb11-153"><a href="#cb11-153"></a><span class="ss">- </span><span class="co">[</span><span class="ot">ipykernel</span><span class="co">](https://pypi.org/project/ipykernel/)</span> - IPython Kernel for Jupyter</span>
+<span id="cb11-154"><a href="#cb11-154"></a><span class="ss">- </span><span class="co">[</span><span class="ot">matplotlib</span><span class="co">](https://matplotlib.org)</span> - data visualization library</span>
+<span id="cb11-155"><a href="#cb11-155"></a><span class="ss">- </span><span class="co">[</span><span class="ot">numpy</span><span class="co">](https://numpy.org)</span> - numerical library</span>
+<span id="cb11-156"><a href="#cb11-156"></a><span class="ss">- </span><span class="co">[</span><span class="ot">scipy</span><span class="co">](https://docs.scipy.org/doc/scipy/reference/)</span> - scientific library</span>
+<span id="cb11-157"><a href="#cb11-157"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pandas</span><span class="co">](https://pandas.pydata.org/docs/)</span> - data manipulation library</span>
+<span id="cb11-158"><a href="#cb11-158"></a><span class="ss">- </span><span class="co">[</span><span class="ot">seaborn</span><span class="co">](https://seaborn.pydata.org/examples/index.html)</span> - data visualization library</span>
+<span id="cb11-159"><a href="#cb11-159"></a><span class="ss">- </span><span class="co">[</span><span class="ot">scikit-learn</span><span class="co">](https://scikit-learn.org/stable/)</span> - machine learning library</span>
+<span id="cb11-160"><a href="#cb11-160"></a><span class="ss">- </span><span class="co">[</span><span class="ot">statsmodels</span><span class="co">](https://www.statsmodels.org/stable/index.html)</span> - statistical library</span>
 <span id="cb11-161"><a href="#cb11-161"></a></span>
-<span id="cb11-162"><a href="#cb11-162"></a><span class="ss">- </span><span class="co">[</span><span class="ot">bokeh</span><span class="co">](https://docs.bokeh.org/en/latest/index.html)</span> - interactive data visualization library</span>
-<span id="cb11-163"><a href="#cb11-163"></a><span class="ss">- </span><span class="co">[</span><span class="ot">plotly</span><span class="co">](https://plotly.com/python/)</span> - interactive data visualization library</span>
-<span id="cb11-164"><a href="#cb11-164"></a><span class="ss">- </span><span class="co">[</span><span class="ot">networkx</span><span class="co">](https://networkx.org/documentation/stable/)</span> - network analysis library</span>
-<span id="cb11-165"><a href="#cb11-165"></a><span class="ss">- </span><span class="co">[</span><span class="ot">python-ternary</span><span class="co">](https://python-ternary.readthedocs.io/en/latest/)</span> - ternary plot library</span>
-<span id="cb11-166"><a href="#cb11-166"></a><span class="ss">- </span><span class="co">[</span><span class="ot">altair</span><span class="co">](https://altair-viz.github.io/)</span> - declarative statistical visualization library</span>
-<span id="cb11-167"><a href="#cb11-167"></a><span class="ss">- </span><span class="co">[</span><span class="ot">umap-learn</span><span class="co">](https://umap-learn.readthedocs.io/en/latest/)</span> - dimensionality reduction library</span>
-<span id="cb11-168"><a href="#cb11-168"></a></span>
-<span id="cb11-169"><a href="#cb11-169"></a>**special packages for chemistry and material science:**</span>
+<span id="cb11-162"><a href="#cb11-162"></a>**special packages for data visualization:**</span>
+<span id="cb11-163"><a href="#cb11-163"></a></span>
+<span id="cb11-164"><a href="#cb11-164"></a><span class="ss">- </span><span class="co">[</span><span class="ot">bokeh</span><span class="co">](https://docs.bokeh.org/en/latest/index.html)</span> - interactive data visualization library</span>
+<span id="cb11-165"><a href="#cb11-165"></a><span class="ss">- </span><span class="co">[</span><span class="ot">plotly</span><span class="co">](https://plotly.com/python/)</span> - interactive data visualization library</span>
+<span id="cb11-166"><a href="#cb11-166"></a><span class="ss">- </span><span class="co">[</span><span class="ot">networkx</span><span class="co">](https://networkx.org/documentation/stable/)</span> - network analysis library</span>
+<span id="cb11-167"><a href="#cb11-167"></a><span class="ss">- </span><span class="co">[</span><span class="ot">python-ternary</span><span class="co">](https://python-ternary.readthedocs.io/en/latest/)</span> - ternary plot library</span>
+<span id="cb11-168"><a href="#cb11-168"></a><span class="ss">- </span><span class="co">[</span><span class="ot">altair</span><span class="co">](https://altair-viz.github.io/)</span> - declarative statistical visualization library</span>
+<span id="cb11-169"><a href="#cb11-169"></a><span class="ss">- </span><span class="co">[</span><span class="ot">umap-learn</span><span class="co">](https://umap-learn.readthedocs.io/en/latest/)</span> - dimensionality reduction library</span>
 <span id="cb11-170"><a href="#cb11-170"></a></span>
-<span id="cb11-171"><a href="#cb11-171"></a><span class="ss">- </span><span class="co">[</span><span class="ot">ase</span><span class="co">](https://wiki.fysik.dtu.dk/ase/)</span> - atomic simulation environment</span>
-<span id="cb11-172"><a href="#cb11-172"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pymatgen</span><span class="co">](https://pymatgen.org/)</span> - Python Materials Genomics</span>
-<span id="cb11-173"><a href="#cb11-173"></a><span class="ss">- </span><span class="co">[</span><span class="ot">RdKit</span><span class="co">](https://www.rdkit.org/docs/index.html)</span> - cheminformatics library</span>
-<span id="cb11-174"><a href="#cb11-174"></a><span class="ss">- </span><span class="co">[</span><span class="ot">openbabel</span><span class="co">](https://openbabel.org/index.html)</span> - cheminformatics library</span>
-<span id="cb11-175"><a href="#cb11-175"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pymol-opensource</span><span class="co">](https://pymol.org/#opensource)</span> - molecular visualization library</span>
-<span id="cb11-176"><a href="#cb11-176"></a></span>
-<span id="cb11-177"><a href="#cb11-177"></a>For more chemistry and material science packages please check the <span class="co">[</span><span class="ot">Awesome Python Chemistry</span><span class="co">](https://github.com/lmmentel/awesome-python-chemistry)</span> repository.</span>
+<span id="cb11-171"><a href="#cb11-171"></a>**special packages for chemistry and material science:**</span>
+<span id="cb11-172"><a href="#cb11-172"></a></span>
+<span id="cb11-173"><a href="#cb11-173"></a><span class="ss">- </span><span class="co">[</span><span class="ot">ase</span><span class="co">](https://wiki.fysik.dtu.dk/ase/)</span> - atomic simulation environment</span>
+<span id="cb11-174"><a href="#cb11-174"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pymatgen</span><span class="co">](https://pymatgen.org/)</span> - Python Materials Genomics</span>
+<span id="cb11-175"><a href="#cb11-175"></a><span class="ss">- </span><span class="co">[</span><span class="ot">RdKit</span><span class="co">](https://www.rdkit.org/docs/index.html)</span> - cheminformatics library</span>
+<span id="cb11-176"><a href="#cb11-176"></a><span class="ss">- </span><span class="co">[</span><span class="ot">openbabel</span><span class="co">](https://openbabel.org/index.html)</span> - cheminformatics library</span>
+<span id="cb11-177"><a href="#cb11-177"></a><span class="ss">- </span><span class="co">[</span><span class="ot">pymol-opensource</span><span class="co">](https://pymol.org/#opensource)</span> - molecular visualization library</span>
 <span id="cb11-178"><a href="#cb11-178"></a></span>
-<span id="cb11-179"><a href="#cb11-179"></a></span>
+<span id="cb11-179"><a href="#cb11-179"></a>For more chemistry and material science packages please check the <span class="co">[</span><span class="ot">Awesome Python Chemistry</span><span class="co">](https://github.com/lmmentel/awesome-python-chemistry)</span> repository.</span>
 <span id="cb11-180"><a href="#cb11-180"></a></span>
 <span id="cb11-181"><a href="#cb11-181"></a></span>
-<span id="cb11-182"><a href="#cb11-182"></a>:::{.callout-tip}</span>
-<span id="cb11-183"><a href="#cb11-183"></a>**Recommendation** &lt;br&gt; </span>
-<span id="cb11-184"><a href="#cb11-184"></a>Use *yml-file* with all needed packages and configurations:</span>
-<span id="cb11-185"><a href="#cb11-185"></a>:::</span>
-<span id="cb11-186"><a href="#cb11-186"></a></span>
-<span id="cb11-187"><a href="#cb11-187"></a></span>
-<span id="cb11-188"><a href="#cb11-188"></a>Save your needed packages in an <span class="in">`environment.yml`</span> file *e.g.*:</span>
+<span id="cb11-182"><a href="#cb11-182"></a></span>
+<span id="cb11-183"><a href="#cb11-183"></a></span>
+<span id="cb11-184"><a href="#cb11-184"></a>:::{.callout-tip}</span>
+<span id="cb11-185"><a href="#cb11-185"></a>**Recommendation** &lt;br&gt; </span>
+<span id="cb11-186"><a href="#cb11-186"></a>Use *yml-file* with all needed packages and configurations:</span>
+<span id="cb11-187"><a href="#cb11-187"></a>:::</span>
+<span id="cb11-188"><a href="#cb11-188"></a></span>
 <span id="cb11-189"><a href="#cb11-189"></a></span>
-<span id="cb11-190"><a href="#cb11-190"></a></span>
-<span id="cb11-191"><a href="#cb11-191"></a> <span class="in">```{yml}</span></span>
-<span id="cb11-192"><a href="#cb11-192"></a><span class="in"> name: myenv</span></span>
-<span id="cb11-193"><a href="#cb11-193"></a><span class="in">channels:</span></span>
-<span id="cb11-194"><a href="#cb11-194"></a><span class="in">  - conda-forge</span></span>
-<span id="cb11-195"><a href="#cb11-195"></a><span class="in">dependencies:</span></span>
-<span id="cb11-196"><a href="#cb11-196"></a><span class="in">  - python=3.12</span></span>
-<span id="cb11-197"><a href="#cb11-197"></a><span class="in">  - pip</span></span>
-<span id="cb11-198"><a href="#cb11-198"></a><span class="in">  - ipykernel</span></span>
-<span id="cb11-199"><a href="#cb11-199"></a><span class="in">  - jupyterlab</span></span>
-<span id="cb11-200"><a href="#cb11-200"></a><span class="in">  - pandas</span></span>
-<span id="cb11-201"><a href="#cb11-201"></a><span class="in">  - numpy</span></span>
-<span id="cb11-202"><a href="#cb11-202"></a><span class="in">  - matplotlib</span></span>
-<span id="cb11-203"><a href="#cb11-203"></a><span class="in">  - scikit-learn</span></span>
-<span id="cb11-204"><a href="#cb11-204"></a><span class="in">  - scipy</span></span>
-<span id="cb11-205"><a href="#cb11-205"></a><span class="in">  - seaborn</span></span>
-<span id="cb11-206"><a href="#cb11-206"></a><span class="in">  - statsmodels</span></span>
-<span id="cb11-207"><a href="#cb11-207"></a><span class="in"> ```</span></span>
-<span id="cb11-208"><a href="#cb11-208"></a></span>
-<span id="cb11-209"><a href="#cb11-209"></a></span>
-<span id="cb11-210"><a href="#cb11-210"></a>and create an environment with this specific packages:</span>
+<span id="cb11-190"><a href="#cb11-190"></a>Save your needed packages in an <span class="in">`environment.yml`</span> file *e.g.*:</span>
+<span id="cb11-191"><a href="#cb11-191"></a></span>
+<span id="cb11-192"><a href="#cb11-192"></a></span>
+<span id="cb11-193"><a href="#cb11-193"></a> <span class="in">```{yml}</span></span>
+<span id="cb11-194"><a href="#cb11-194"></a><span class="in"> name: myenv</span></span>
+<span id="cb11-195"><a href="#cb11-195"></a><span class="in">channels:</span></span>
+<span id="cb11-196"><a href="#cb11-196"></a><span class="in">  - conda-forge</span></span>
+<span id="cb11-197"><a href="#cb11-197"></a><span class="in">dependencies:</span></span>
+<span id="cb11-198"><a href="#cb11-198"></a><span class="in">  - python=3.12</span></span>
+<span id="cb11-199"><a href="#cb11-199"></a><span class="in">  - pip</span></span>
+<span id="cb11-200"><a href="#cb11-200"></a><span class="in">  - ipykernel</span></span>
+<span id="cb11-201"><a href="#cb11-201"></a><span class="in">  - jupyterlab</span></span>
+<span id="cb11-202"><a href="#cb11-202"></a><span class="in">  - pandas</span></span>
+<span id="cb11-203"><a href="#cb11-203"></a><span class="in">  - numpy</span></span>
+<span id="cb11-204"><a href="#cb11-204"></a><span class="in">  - matplotlib</span></span>
+<span id="cb11-205"><a href="#cb11-205"></a><span class="in">  - scikit-learn</span></span>
+<span id="cb11-206"><a href="#cb11-206"></a><span class="in">  - scipy</span></span>
+<span id="cb11-207"><a href="#cb11-207"></a><span class="in">  - seaborn</span></span>
+<span id="cb11-208"><a href="#cb11-208"></a><span class="in">  - statsmodels</span></span>
+<span id="cb11-209"><a href="#cb11-209"></a><span class="in"> ```</span></span>
+<span id="cb11-210"><a href="#cb11-210"></a></span>
 <span id="cb11-211"><a href="#cb11-211"></a></span>
-<span id="cb11-212"><a href="#cb11-212"></a></span>
-<span id="cb11-213"><a href="#cb11-213"></a><span class="in">```bash</span></span>
-<span id="cb11-214"><a href="#cb11-214"></a><span class="ex">micromamba</span> env create <span class="at">-f</span> environment.yml</span>
-<span id="cb11-215"><a href="#cb11-215"></a><span class="in">```</span></span>
-<span id="cb11-216"><a href="#cb11-216"></a></span>
-<span id="cb11-217"><a href="#cb11-217"></a></span>
-<span id="cb11-218"><a href="#cb11-218"></a>Test your installation by opening the interactive python mode by typing in your terminal (Linux, macOS) / command prompt (Windows):</span>
+<span id="cb11-212"><a href="#cb11-212"></a>and create an environment with this specific packages:</span>
+<span id="cb11-213"><a href="#cb11-213"></a></span>
+<span id="cb11-214"><a href="#cb11-214"></a></span>
+<span id="cb11-215"><a href="#cb11-215"></a><span class="in">```bash</span></span>
+<span id="cb11-216"><a href="#cb11-216"></a><span class="ex">micromamba</span> env create <span class="at">-f</span> environment.yml</span>
+<span id="cb11-217"><a href="#cb11-217"></a><span class="in">```</span></span>
+<span id="cb11-218"><a href="#cb11-218"></a></span>
 <span id="cb11-219"><a href="#cb11-219"></a></span>
-<span id="cb11-220"><a href="#cb11-220"></a></span>
+<span id="cb11-220"><a href="#cb11-220"></a>Test your installation by opening the interactive python mode by typing in your terminal (Linux, macOS) / command prompt (Windows):</span>
 <span id="cb11-221"><a href="#cb11-221"></a></span>
-<span id="cb11-222"><a href="#cb11-222"></a><span class="in">```bash</span></span>
-<span id="cb11-223"><a href="#cb11-223"></a><span class="ex">python</span></span>
-<span id="cb11-224"><a href="#cb11-224"></a><span class="in">```</span> </span>
-<span id="cb11-225"><a href="#cb11-225"></a></span>
-<span id="cb11-226"><a href="#cb11-226"></a></span>
-<span id="cb11-227"><a href="#cb11-227"></a>then something like this should be opened in your terminal (Linux, macOS) / command prompt (Windows)</span>
+<span id="cb11-222"><a href="#cb11-222"></a></span>
+<span id="cb11-223"><a href="#cb11-223"></a></span>
+<span id="cb11-224"><a href="#cb11-224"></a><span class="in">```bash</span></span>
+<span id="cb11-225"><a href="#cb11-225"></a><span class="ex">python</span></span>
+<span id="cb11-226"><a href="#cb11-226"></a><span class="in">```</span> </span>
+<span id="cb11-227"><a href="#cb11-227"></a></span>
 <span id="cb11-228"><a href="#cb11-228"></a></span>
-<span id="cb11-229"><a href="#cb11-229"></a><span class="in">```bash</span></span>
-<span id="cb11-230"><a href="#cb11-230"></a><span class="ex">Python</span> 3.12.7 <span class="kw">|</span> <span class="ex">packaged</span> by conda-forge <span class="kw">|</span> <span class="kw">(</span><span class="ex">main,</span> Oct  4 2024, 15:57:01<span class="kw">)</span> <span class="ex">[Clang</span> 17.0.6 ] on darwin</span>
-<span id="cb11-231"><a href="#cb11-231"></a><span class="ex">Type</span> <span class="st">"help"</span>, <span class="st">"copyright"</span>, <span class="st">"credits"</span> or <span class="st">"license"</span> for more information.</span>
-<span id="cb11-232"><a href="#cb11-232"></a><span class="op">&gt;&gt;&gt;</span> </span>
-<span id="cb11-233"><a href="#cb11-233"></a><span class="in">```</span></span>
-<span id="cb11-234"><a href="#cb11-234"></a></span>
-<span id="cb11-235"><a href="#cb11-235"></a></span>
-<span id="cb11-236"><a href="#cb11-236"></a>then type:</span>
+<span id="cb11-229"><a href="#cb11-229"></a>then something like this should be opened in your terminal (Linux, macOS) / command prompt (Windows)</span>
+<span id="cb11-230"><a href="#cb11-230"></a></span>
+<span id="cb11-231"><a href="#cb11-231"></a><span class="in">```bash</span></span>
+<span id="cb11-232"><a href="#cb11-232"></a><span class="ex">Python</span> 3.12.7 <span class="kw">|</span> <span class="ex">packaged</span> by conda-forge <span class="kw">|</span> <span class="kw">(</span><span class="ex">main,</span> Oct  4 2024, 15:57:01<span class="kw">)</span> <span class="ex">[Clang</span> 17.0.6 ] on darwin</span>
+<span id="cb11-233"><a href="#cb11-233"></a><span class="ex">Type</span> <span class="st">"help"</span>, <span class="st">"copyright"</span>, <span class="st">"credits"</span> or <span class="st">"license"</span> for more information.</span>
+<span id="cb11-234"><a href="#cb11-234"></a><span class="op">&gt;&gt;&gt;</span> </span>
+<span id="cb11-235"><a href="#cb11-235"></a><span class="in">```</span></span>
+<span id="cb11-236"><a href="#cb11-236"></a></span>
 <span id="cb11-237"><a href="#cb11-237"></a></span>
-<span id="cb11-238"><a href="#cb11-238"></a></span>
-<span id="cb11-239"><a href="#cb11-239"></a><span class="in">```python</span></span>
-<span id="cb11-240"><a href="#cb11-240"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span>
-<span id="cb11-241"><a href="#cb11-241"></a><span class="in">```</span></span>
-<span id="cb11-242"><a href="#cb11-242"></a></span>
-<span id="cb11-243"><a href="#cb11-243"></a>If this works your installation was successful!</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb11-238"><a href="#cb11-238"></a>then type:</span>
+<span id="cb11-239"><a href="#cb11-239"></a></span>
+<span id="cb11-240"><a href="#cb11-240"></a></span>
+<span id="cb11-241"><a href="#cb11-241"></a><span class="in">```python</span></span>
+<span id="cb11-242"><a href="#cb11-242"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span>
+<span id="cb11-243"><a href="#cb11-243"></a><span class="in">```</span></span>
+<span id="cb11-244"><a href="#cb11-244"></a></span>
+<span id="cb11-245"><a href="#cb11-245"></a>If this works your installation was successful!</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

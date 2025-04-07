@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../course/exercises/exercises/exerciseA_1.html" rel="next">
-<link href="../../../course/chapters/Plots/Seaborn.html" rel="prev">
+<link href="../../../course/chapters/Plots/Seaborn.html" rel="next">
+<link href="../../../course/chapters/Plots/SimplePlots.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-92b6c6361227b6d7ffb0ef9f7ef1dd57.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-9dc44f3162c39531be84931020d3c4ca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-516d921ec8d526d3fe54a05c4dfe7a3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -288,12 +288,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
+  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Simple Plot Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Simple Plot Types</span></a>
+  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
   </div>
 </li>
       </ul>
@@ -523,7 +523,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#histogram-plot" id="toc-histogram-plot" class="nav-link" data-scroll-target="#histogram-plot">Histogram Plot</a></li>
   <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot">Boxplot</a></li>
-  <li><a href="#d-histogram-plot" id="toc-d-histogram-plot" class="nav-link" data-scroll-target="#d-histogram-plot">2D Histogram Plot</a></li>
   <li><a href="#proportion-plots" id="toc-proportion-plots" class="nav-link" data-scroll-target="#proportion-plots">Proportion Plots</a></li>
   </ul></li>
   <li><a href="#bar-plot" id="toc-bar-plot" class="nav-link" data-scroll-target="#bar-plot">Bar Plot</a></li>
@@ -570,7 +569,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="unnumberd anchored" data-anchor-id="scatter-plot">Scatter Plot</h3>
 <p><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html">Scatter plot</a> shows the relationship of observable over the abscissa <em>e.g.</em> time vs temperature as <strong>discrete</strong> function.</p>
 <p>The <code>scatter()</code> function creates a scatter plot.</p>
-<div id="a00e817c" class="cell" data-execution_count="1">
+<div id="5a1252b1" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>plt.scatter()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -586,14 +585,14 @@ Note
 <p>The marker size can be adjusted with the <code>s</code> parameter.</p>
 </div>
 </div>
-<div id="cca74621" class="cell" data-execution_count="2">
+<div id="25edb1e4" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3"></a></span>
 <span id="cb2-4"><a href="#cb2-4"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
-<span id="cb2-5"><a href="#cb2-5"></a>y <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">*</span><span class="dv">298</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>y <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">*</span>np.sin(x)</span>
 <span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a>plt.scatter(x, y, color<span class="op">=</span><span class="st">'red'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,s<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a>plt.scatter(x, y, color<span class="op">=</span><span class="st">'grey'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,s<span class="op">=</span><span class="dv">5</span>)</span>
 <span id="cb2-8"><a href="#cb2-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
 <span id="cb2-9"><a href="#cb2-9"></a>plt.ylabel(<span class="st">'y'</span>)</span>
 <span id="cb2-10"><a href="#cb2-10"></a>plt.legend()</span>
@@ -624,14 +623,14 @@ Note
 <p>The marker size can be adjusted with the <code>markersize</code> parameter.</p>
 </div>
 </div>
-<div id="e9a3a951" class="cell" data-execution_count="3">
+<div id="4481865c" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3"></a></span>
 <span id="cb3-4"><a href="#cb3-4"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
-<span id="cb3-5"><a href="#cb3-5"></a>y <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">*</span><span class="dv">298</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>y <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">+</span>np.sin(x)</span>
 <span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,markersize<span class="op">=</span><span class="dv">5</span>,linewidth<span class="op">=</span><span class="dv">2</span>,linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'grey'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,markersize<span class="op">=</span><span class="dv">5</span>,linewidth<span class="op">=</span><span class="dv">2</span>,linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
 <span id="cb3-8"><a href="#cb3-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
 <span id="cb3-9"><a href="#cb3-9"></a>plt.ylabel(<span class="st">'y'</span>)</span>
 <span id="cb3-10"><a href="#cb3-10"></a>plt.legend()</span>
@@ -647,8 +646,8 @@ Note
 </section>
 <section id="errorbars" class="level3 unnumberd">
 <h3 class="unnumberd anchored" data-anchor-id="errorbars">Errorbars</h3>
-<p>Errorbars can be added to the plot with the <code>errorbar()</code> function and the <code>yerr</code> parameter.</p>
-<div id="6d1bfb6a" class="cell" data-execution_count="4">
+<p><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.errorbar.html#matplotlib.axes.Axes.errorbar">Errorbars</a> can be added to the plot with the <code>errorbar()</code> function and the <code>yerr</code> parameter.</p>
+<div id="a5b89d0f" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-3"><a href="#cb4-3"></a></span>
@@ -656,7 +655,7 @@ Note
 <span id="cb4-5"><a href="#cb4-5"></a>y <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">*</span><span class="dv">298</span></span>
 <span id="cb4-6"><a href="#cb4-6"></a>yerr <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">*</span><span class="dv">10</span></span>
 <span id="cb4-7"><a href="#cb4-7"></a></span>
-<span id="cb4-8"><a href="#cb4-8"></a>plt.errorbar(x, y, yerr<span class="op">=</span>yerr, color<span class="op">=</span><span class="st">'red'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,markersize<span class="op">=</span><span class="dv">5</span>,linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-8"><a href="#cb4-8"></a>plt.errorbar(x, y, yerr<span class="op">=</span>yerr, color<span class="op">=</span><span class="st">'grey'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,markersize<span class="op">=</span><span class="dv">5</span>,linewidth<span class="op">=</span><span class="dv">2</span>,elinewidth<span class="op">=</span><span class="dv">3</span>,errorevery<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">3</span>), capsize<span class="op">=</span><span class="dv">5</span>, ecolor<span class="op">=</span><span class="st">'black'</span>)</span>
 <span id="cb4-9"><a href="#cb4-9"></a>plt.xlabel(<span class="st">'x'</span>)</span>
 <span id="cb4-10"><a href="#cb4-10"></a>plt.ylabel(<span class="st">'y'</span>)</span>
 <span id="cb4-11"><a href="#cb4-11"></a>plt.legend()</span>
@@ -669,6 +668,14 @@ Note
 </div>
 </div>
 </div>
+<ul>
+<li>The <code>yerr</code> parameter can be used to set the error bars for the y-axis.</li>
+<li>The <code>xerr</code> parameter can be used to set the error bars for the x-axis.</li>
+<li>The parameter <code>errorevery</code> can be used to show only every 3th error bar - starting from the 10th error bar.</li>
+<li>The <code>capsize</code> parameter can be used to set the size of the error bar caps.</li>
+<li>The <code>elinewidth</code> parameter can be used to set the width of the error bar line.</li>
+<li>The <code>ecolor</code> parameter can be used to set the color of the error bar line.</li>
+</ul>
 <hr>
 </section>
 </section>
@@ -677,14 +684,15 @@ Note
 <section id="histogram-plot" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="histogram-plot">Histogram Plot</h3>
 <p>[Histogram] (https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html) shows the distribution of a single variable <em>e.g.</em> count of a mass of individuals in a population. The data is divided into bins and the number of data points in each bin is plotted.</p>
+<p>The histogram visualizes the skewness, kurtosis and outliers of the data.</p>
 <p>The <code>hist()</code> function creates a histogram with <code>bins</code> number of bins.</p>
-<div id="cda06a01" class="cell" data-execution_count="5">
+<div id="27eb64ef" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-3"><a href="#cb5-3"></a></span>
 <span id="cb5-4"><a href="#cb5-4"></a>x <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
 <span id="cb5-5"><a href="#cb5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6"></a>plt.hist(x, bins<span class="op">=</span><span class="dv">30</span>, color<span class="op">=</span><span class="st">'red'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6"></a>plt.hist(x, bins<span class="op">=</span><span class="dv">30</span>, color<span class="op">=</span><span class="st">'grey'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
 <span id="cb5-7"><a href="#cb5-7"></a></span>
 <span id="cb5-8"><a href="#cb5-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
 <span id="cb5-9"><a href="#cb5-9"></a>plt.ylabel(<span class="st">'y'</span>)</span>
@@ -697,19 +705,15 @@ Note
 </div>
 </div>
 </div>
-</section>
-<section id="boxplot" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="boxplot">Boxplot</h3>
-<p><a href="https://seaborn.pydata.org/generated/seaborn.boxplot.html">Box plot</a> shows the distribution of a numerical variable for different categories. It shows the minimum, first quartile, median, third quartile and maximum of your data. Outliers can be identified. An example of this <em>e.g.</em> is the distribution of cancer cell survival time for different treatment groups.</p>
-<p>The <code>boxplot()</code> function creates a boxplot.</p>
-<div id="5b8eebfa" class="cell" data-execution_count="6">
+<p><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist2d.html#matplotlib.axes.Axes.hist2d">2D histograms</a> can be created with the <code>hist2d()</code> function.</p>
+<div id="bfb42ac3" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-2"><a href="#cb6-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a>data <span class="op">=</span> [np.random.normal(<span class="dv">0</span>, std, <span class="dv">100</span>) <span class="cf">for</span> std <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>)]</span>
-<span id="cb6-5"><a href="#cb6-5"></a></span>
-<span id="cb6-6"><a href="#cb6-6"></a>plt.boxplot(data, patch_artist<span class="op">=</span><span class="va">True</span>, notch<span class="op">=</span><span class="va">True</span>, showmeans<span class="op">=</span><span class="va">True</span>, meanline<span class="op">=</span><span class="va">True</span>, showfliers<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb6-7"><a href="#cb6-7"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a>x <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a>y <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a>plt.hist2d(x, y, bins<span class="op">=</span><span class="dv">30</span>, cmap<span class="op">=</span><span class="st">'Greys'</span>)</span>
+<span id="cb6-7"><a href="#cb6-7"></a>plt.colorbar()</span>
 <span id="cb6-8"><a href="#cb6-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
 <span id="cb6-9"><a href="#cb6-9"></a>plt.ylabel(<span class="st">'y'</span>)</span>
 <span id="cb6-10"><a href="#cb6-10"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -721,22 +725,34 @@ Note
 </div>
 </div>
 </div>
+<ul>
+<li>The <code>cmap</code> parameter is used to set the color map of the histogram.</li>
+<li>The <code>colorbar()</code> function adds a color bar to the plot.</li>
+</ul>
 </section>
-<section id="d-histogram-plot" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="d-histogram-plot">2D Histogram Plot</h3>
-<p>A 2D histogram can be created with the <code>hist2d()</code> function.</p>
-<div id="023669b4" class="cell" data-execution_count="7">
+<section id="boxplot" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="boxplot">Boxplot</h3>
+<p><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html">Box plot</a> shows the distribution of a numerical variable for different categories. It shows the minimum, first quartile, median, third quartile and maximum of your data. Outliers can be identified. An example of this <em>e.g.</em> is the distribution of cancer cell survival time for different treatment groups.</p>
+<p>The <code>boxplot()</code> function creates a boxplot.</p>
+<div id="25375b13" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3"></a></span>
-<span id="cb7-4"><a href="#cb7-4"></a>x <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
-<span id="cb7-5"><a href="#cb7-5"></a>y <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a>std <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>data <span class="op">=</span> [np.random.normal(<span class="dv">0</span>, std, <span class="dv">100</span>) <span class="cf">for</span> std <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>)]</span>
 <span id="cb7-6"><a href="#cb7-6"></a></span>
-<span id="cb7-7"><a href="#cb7-7"></a>plt.hist2d(x, y, bins<span class="op">=</span><span class="dv">30</span>, cmap<span class="op">=</span><span class="st">'Blues'</span>)</span>
-<span id="cb7-8"><a href="#cb7-8"></a></span>
-<span id="cb7-9"><a href="#cb7-9"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb7-10"><a href="#cb7-10"></a>plt.ylabel(<span class="st">'y'</span>)</span>
-<span id="cb7-11"><a href="#cb7-11"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a>plt.boxplot(data, patch_artist<span class="op">=</span><span class="va">True</span>, notch<span class="op">=</span><span class="va">True</span>, showmeans<span class="op">=</span><span class="va">True</span>, meanline<span class="op">=</span><span class="va">True</span>, showfliers<span class="op">=</span><span class="va">True</span>, showbox<span class="op">=</span><span class="va">True</span>, showcaps<span class="op">=</span><span class="va">True</span>, orientation<span class="op">=</span><span class="st">'horizontal'</span>,sym<span class="op">=</span><span class="st">'C0+'</span>,</span>
+<span id="cb7-9"><a href="#cb7-9"></a>            boxprops<span class="op">=</span><span class="bu">dict</span>(facecolor<span class="op">=</span><span class="st">'darkgrey'</span>, color<span class="op">=</span><span class="st">'black'</span>),</span>
+<span id="cb7-10"><a href="#cb7-10"></a>            medianprops<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'grey'</span>),</span>
+<span id="cb7-11"><a href="#cb7-11"></a>            whiskerprops<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>),</span>
+<span id="cb7-12"><a href="#cb7-12"></a>            capprops<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>),</span>
+<span id="cb7-13"><a href="#cb7-13"></a>            meanprops<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">2</span>))</span>
+<span id="cb7-14"><a href="#cb7-14"></a>plt.yticks([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>])</span>
+<span id="cb7-15"><a href="#cb7-15"></a>plt.title(<span class="st">'Boxplot'</span>)</span>
+<span id="cb7-16"><a href="#cb7-16"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb7-17"><a href="#cb7-17"></a>plt.ylabel(<span class="st">'y'</span>)</span>
+<span id="cb7-18"><a href="#cb7-18"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -745,6 +761,22 @@ Note
 </div>
 </div>
 </div>
+<ul>
+<li>The <code>patch_artist</code> parameter is used to fill the box with color.</li>
+<li>The <code>notch</code> parameter is used to create a notch in the box.</li>
+<li>The <code>showmeans</code> parameter is used to show the mean of the data.</li>
+<li>The <code>meanline</code> parameter is used to show the mean line.</li>
+<li>The <code>showfliers</code> parameter is used to show the outliers of the data.</li>
+<li>The <code>showbox</code> parameter is used to show the box of the data.</li>
+<li>The <code>showcaps</code> parameter is used to show the caps of the data.</li>
+<li>The <code>orientation</code> parameter is used to set the orientation of the boxplot. The default is <code>vertical</code>. If you want to create a horizontal boxplot, set it to <code>horizontal</code>.</li>
+<li>The <code>sym</code> parameter is used to set the symbol of the outliers. The default is <code>o</code>. If you want to use a different symbol, set it to <code>r+</code> or any other symbol you want to use.</li>
+<li>The <code>boxprops</code> parameter is used to set the properties of the box. The <code>facecolor</code> parameter is used to set the color of the box. The <code>color</code> parameter is used to set the color of the box outline.</li>
+<li>The <code>medianprops</code> parameter is used to set the properties of the median line. The <code>color</code> parameter is used to set the color of the median line.</li>
+<li>The <code>whiskerprops</code> parameter is used to set the properties of the whiskers. The <code>color</code> parameter is used to set the color of the whiskers.</li>
+<li>The <code>meanprops</code> parameter is used to set the properties of the mean line. The <code>color</code> parameter is used to set the color of the mean line.</li>
+<li>The <code>capprops</code> parameter is used to set the properties of the caps. The <code>color</code> parameter is used to set the color of the caps.</li>
+</ul>
 </section>
 <section id="proportion-plots" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="proportion-plots">Proportion Plots</h3>
@@ -754,18 +786,20 @@ Note
 <h2 class="unnumbered anchored" data-anchor-id="bar-plot">Bar Plot</h2>
 <p><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html">Bar plot</a> shows the relationship of a categorical variable with a numerical variable <em>e.g.</em> cancer cell survival time for different treatment groups. The height of the bar is proportional to the value of the investigated variable.</p>
 <p>The <code>bar()</code> function creates a bar plot.</p>
-<div id="3ee6efdf" class="cell" data-execution_count="8">
+<div id="57c8986b" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-3"><a href="#cb8-3"></a></span>
-<span id="cb8-4"><a href="#cb8-4"></a>x <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
-<span id="cb8-5"><a href="#cb8-5"></a>y <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
-<span id="cb8-6"><a href="#cb8-6"></a></span>
-<span id="cb8-7"><a href="#cb8-7"></a>plt.bar(x, y, color<span class="op">=</span><span class="st">'red'</span>)</span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
+<span id="cb8-4"><a href="#cb8-4"></a></span>
+<span id="cb8-5"><a href="#cb8-5"></a>x <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
+<span id="cb8-6"><a href="#cb8-6"></a>y <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
+<span id="cb8-7"><a href="#cb8-7"></a>yerr <span class="op">=</span> np.random.rand(<span class="dv">4</span>)<span class="op">*</span><span class="dv">10</span></span>
 <span id="cb8-8"><a href="#cb8-8"></a></span>
-<span id="cb8-9"><a href="#cb8-9"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb8-10"><a href="#cb8-10"></a>plt.ylabel(<span class="st">'y'</span>)</span>
-<span id="cb8-11"><a href="#cb8-11"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-9"><a href="#cb8-9"></a>plt.bar(x, y,yerr<span class="op">=</span>yerr, color<span class="op">=</span><span class="st">'grey'</span>)</span>
+<span id="cb8-10"><a href="#cb8-10"></a></span>
+<span id="cb8-11"><a href="#cb8-11"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb8-12"><a href="#cb8-12"></a>plt.ylabel(<span class="st">'y'</span>)</span>
+<span id="cb8-13"><a href="#cb8-13"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -774,21 +808,23 @@ Note
 </div>
 </div>
 </div>
+<p>You can draw a star sign to indicate the significance of the data.</p>
 </section>
 <section id="pie-chart" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="pie-chart">Pie Chart</h2>
 <p><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pie.html">Pie chart</a> show the proportion of different categories in a single variable <em>e.g.</em> the content of different amino acids in a protein.</p>
 <p>The <code>pie()</code> function creates a pie chart.</p>
-<div id="030f4283" class="cell" data-execution_count="9">
+<div id="3acd6f03" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb9-3"><a href="#cb9-3"></a></span>
 <span id="cb9-4"><a href="#cb9-4"></a>x <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
 <span id="cb9-5"><a href="#cb9-5"></a>labels <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
 <span id="cb9-6"><a href="#cb9-6"></a></span>
-<span id="cb9-7"><a href="#cb9-7"></a>plt.pie(x, labels<span class="op">=</span>labels)</span>
-<span id="cb9-8"><a href="#cb9-8"></a></span>
-<span id="cb9-9"><a href="#cb9-9"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-7"><a href="#cb9-7"></a>plt.pie(x, labels<span class="op">=</span>labels, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>, startangle<span class="op">=</span><span class="dv">90</span>, colors<span class="op">=</span>[<span class="st">'lightgrey'</span>, <span class="st">'grey'</span>, <span class="st">'darkgrey'</span>, <span class="st">'dimgrey'</span>], explode<span class="op">=</span>(<span class="fl">0.1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>), shadow<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb9-8"><a href="#cb9-8"></a>plt.axis(<span class="st">'equal'</span>)  <span class="co"># Equal aspect ratio ensures that pie is drawn as a circle.</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a></span>
+<span id="cb9-10"><a href="#cb9-10"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1425,13 +1461,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../course/chapters/Plots/Seaborn.html" class="pagination-link" aria-label="Seaborn Plots">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Seaborn Plots</span></span>
+      <a href="../../../course/chapters/Plots/SimplePlots.html" class="pagination-link" aria-label="Basic Data Visualization Techniques">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Basic Data Visualization Techniques</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../course/exercises/exercises/exerciseA_1.html" class="pagination-link" aria-label="Exercise A 1">
-        <span class="nav-page-text"><span class="chapter-title">Exercise A 1</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../course/chapters/Plots/Seaborn.html" class="pagination-link" aria-label="Seaborn Plots">
+        <span class="nav-page-text"><span class="chapter-title">Seaborn Plots</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -1487,9 +1523,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-54"><a href="#cb10-54"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb10-55"><a href="#cb10-55"></a></span>
 <span id="cb10-56"><a href="#cb10-56"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
-<span id="cb10-57"><a href="#cb10-57"></a>y <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">*</span><span class="dv">298</span></span>
+<span id="cb10-57"><a href="#cb10-57"></a>y <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">*</span>np.sin(x)</span>
 <span id="cb10-58"><a href="#cb10-58"></a></span>
-<span id="cb10-59"><a href="#cb10-59"></a>plt.scatter(x, y, color<span class="op">=</span><span class="st">'red'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,s<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb10-59"><a href="#cb10-59"></a>plt.scatter(x, y, color<span class="op">=</span><span class="st">'grey'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,s<span class="op">=</span><span class="dv">5</span>)</span>
 <span id="cb10-60"><a href="#cb10-60"></a>plt.xlabel(<span class="st">'x'</span>)</span>
 <span id="cb10-61"><a href="#cb10-61"></a>plt.ylabel(<span class="st">'y'</span>)</span>
 <span id="cb10-62"><a href="#cb10-62"></a>plt.legend()</span>
@@ -1511,9 +1547,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-80"><a href="#cb10-80"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb10-81"><a href="#cb10-81"></a></span>
 <span id="cb10-82"><a href="#cb10-82"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
-<span id="cb10-83"><a href="#cb10-83"></a>y <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">*</span><span class="dv">298</span></span>
+<span id="cb10-83"><a href="#cb10-83"></a>y <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">+</span>np.sin(x)</span>
 <span id="cb10-84"><a href="#cb10-84"></a></span>
-<span id="cb10-85"><a href="#cb10-85"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,markersize<span class="op">=</span><span class="dv">5</span>,linewidth<span class="op">=</span><span class="dv">2</span>,linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb10-85"><a href="#cb10-85"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'grey'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,markersize<span class="op">=</span><span class="dv">5</span>,linewidth<span class="op">=</span><span class="dv">2</span>,linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
 <span id="cb10-86"><a href="#cb10-86"></a>plt.xlabel(<span class="st">'x'</span>)</span>
 <span id="cb10-87"><a href="#cb10-87"></a>plt.ylabel(<span class="st">'y'</span>)</span>
 <span id="cb10-88"><a href="#cb10-88"></a>plt.legend()</span>
@@ -1522,7 +1558,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-91"><a href="#cb10-91"></a></span>
 <span id="cb10-92"><a href="#cb10-92"></a><span class="fu">### Errorbars {.unnumberd}</span></span>
 <span id="cb10-93"><a href="#cb10-93"></a></span>
-<span id="cb10-94"><a href="#cb10-94"></a>Errorbars can be added to the plot with the <span class="in">`errorbar()`</span> function and the <span class="in">`yerr`</span> parameter.</span>
+<span id="cb10-94"><a href="#cb10-94"></a><span class="co">[</span><span class="ot">Errorbars</span><span class="co">](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.errorbar.html#matplotlib.axes.Axes.errorbar)</span> can be added to the plot with the <span class="in">`errorbar()`</span> function and the <span class="in">`yerr`</span> parameter.</span>
 <span id="cb10-95"><a href="#cb10-95"></a></span>
 <span id="cb10-98"><a href="#cb10-98"></a><span class="in">```{python}</span></span>
 <span id="cb10-99"><a href="#cb10-99"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1532,7 +1568,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-103"><a href="#cb10-103"></a>y <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">*</span><span class="dv">298</span></span>
 <span id="cb10-104"><a href="#cb10-104"></a>yerr <span class="op">=</span> np.random.rand(<span class="dv">100</span>)<span class="op">*</span><span class="dv">10</span></span>
 <span id="cb10-105"><a href="#cb10-105"></a></span>
-<span id="cb10-106"><a href="#cb10-106"></a>plt.errorbar(x, y, yerr<span class="op">=</span>yerr, color<span class="op">=</span><span class="st">'red'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,markersize<span class="op">=</span><span class="dv">5</span>,linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb10-106"><a href="#cb10-106"></a>plt.errorbar(x, y, yerr<span class="op">=</span>yerr, color<span class="op">=</span><span class="st">'grey'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>,markersize<span class="op">=</span><span class="dv">5</span>,linewidth<span class="op">=</span><span class="dv">2</span>,elinewidth<span class="op">=</span><span class="dv">3</span>,errorevery<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">3</span>), capsize<span class="op">=</span><span class="dv">5</span>, ecolor<span class="op">=</span><span class="st">'black'</span>)</span>
 <span id="cb10-107"><a href="#cb10-107"></a>plt.xlabel(<span class="st">'x'</span>)</span>
 <span id="cb10-108"><a href="#cb10-108"></a>plt.ylabel(<span class="st">'y'</span>)</span>
 <span id="cb10-109"><a href="#cb10-109"></a>plt.legend()</span>
@@ -1540,112 +1576,147 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-111"><a href="#cb10-111"></a></span>
 <span id="cb10-112"><a href="#cb10-112"></a><span class="in">```</span></span>
 <span id="cb10-113"><a href="#cb10-113"></a></span>
-<span id="cb10-114"><a href="#cb10-114"></a>---</span>
-<span id="cb10-115"><a href="#cb10-115"></a></span>
-<span id="cb10-116"><a href="#cb10-116"></a><span class="fu">## Distribution Plots {.unnumberd}</span></span>
-<span id="cb10-117"><a href="#cb10-117"></a> </span>
-<span id="cb10-118"><a href="#cb10-118"></a><span class="fu">### Histogram Plot {.unnumbered}</span></span>
-<span id="cb10-119"><a href="#cb10-119"></a></span>
-<span id="cb10-120"><a href="#cb10-120"></a><span class="co">[</span><span class="ot">Histogram</span><span class="co">]</span> (https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html) shows the distribution of a single variable *e.g.* count of a mass of individuals in a population. The data is divided into bins and the number of data points in each bin is plotted.</span>
+<span id="cb10-114"><a href="#cb10-114"></a><span class="ss">- </span>The <span class="in">`yerr`</span> parameter can be used to set the error bars for the y-axis.</span>
+<span id="cb10-115"><a href="#cb10-115"></a><span class="ss">- </span>The <span class="in">`xerr`</span> parameter can be used to set the error bars for the x-axis.</span>
+<span id="cb10-116"><a href="#cb10-116"></a><span class="ss">- </span>The parameter <span class="in">`errorevery`</span> can be used to show only every 3th error bar - starting from the 10th error bar.</span>
+<span id="cb10-117"><a href="#cb10-117"></a><span class="ss">- </span>The <span class="in">`capsize`</span> parameter can be used to set the size of the error bar caps.</span>
+<span id="cb10-118"><a href="#cb10-118"></a><span class="ss">- </span>The <span class="in">`elinewidth`</span> parameter can be used to set the width of the error bar line.</span>
+<span id="cb10-119"><a href="#cb10-119"></a><span class="ss">- </span>The <span class="in">`ecolor`</span> parameter can be used to set the color of the error bar line.</span>
+<span id="cb10-120"><a href="#cb10-120"></a></span>
 <span id="cb10-121"><a href="#cb10-121"></a></span>
-<span id="cb10-122"><a href="#cb10-122"></a>The <span class="in">`hist()`</span> function creates a histogram with <span class="in">`bins`</span> number of bins.</span>
+<span id="cb10-122"><a href="#cb10-122"></a>---</span>
 <span id="cb10-123"><a href="#cb10-123"></a></span>
-<span id="cb10-126"><a href="#cb10-126"></a><span class="in">```{python}</span></span>
-<span id="cb10-127"><a href="#cb10-127"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb10-128"><a href="#cb10-128"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-124"><a href="#cb10-124"></a><span class="fu">## Distribution Plots {.unnumberd}</span></span>
+<span id="cb10-125"><a href="#cb10-125"></a> </span>
+<span id="cb10-126"><a href="#cb10-126"></a><span class="fu">### Histogram Plot {.unnumbered}</span></span>
+<span id="cb10-127"><a href="#cb10-127"></a></span>
+<span id="cb10-128"><a href="#cb10-128"></a><span class="co">[</span><span class="ot">Histogram</span><span class="co">]</span> (https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html) shows the distribution of a single variable *e.g.* count of a mass of individuals in a population. The data is divided into bins and the number of data points in each bin is plotted.</span>
 <span id="cb10-129"><a href="#cb10-129"></a></span>
-<span id="cb10-130"><a href="#cb10-130"></a>x <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
+<span id="cb10-130"><a href="#cb10-130"></a>The histogram visualizes the skewness, kurtosis and outliers of the data.</span>
 <span id="cb10-131"><a href="#cb10-131"></a></span>
-<span id="cb10-132"><a href="#cb10-132"></a>plt.hist(x, bins<span class="op">=</span><span class="dv">30</span>, color<span class="op">=</span><span class="st">'red'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb10-132"><a href="#cb10-132"></a>The <span class="in">`hist()`</span> function creates a histogram with <span class="in">`bins`</span> number of bins.</span>
 <span id="cb10-133"><a href="#cb10-133"></a></span>
-<span id="cb10-134"><a href="#cb10-134"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb10-135"><a href="#cb10-135"></a>plt.ylabel(<span class="st">'y'</span>)</span>
-<span id="cb10-136"><a href="#cb10-136"></a>plt.show()</span>
-<span id="cb10-137"><a href="#cb10-137"></a><span class="in">```</span></span>
-<span id="cb10-138"><a href="#cb10-138"></a></span>
+<span id="cb10-136"><a href="#cb10-136"></a><span class="in">```{python}</span></span>
+<span id="cb10-137"><a href="#cb10-137"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-138"><a href="#cb10-138"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb10-139"><a href="#cb10-139"></a></span>
-<span id="cb10-140"><a href="#cb10-140"></a><span class="fu">### Boxplot {.unnumbered}</span></span>
+<span id="cb10-140"><a href="#cb10-140"></a>x <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
 <span id="cb10-141"><a href="#cb10-141"></a></span>
-<span id="cb10-142"><a href="#cb10-142"></a><span class="co">[</span><span class="ot">Box plot</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.boxplot.html)</span> shows the distribution of a numerical variable for different categories. It shows the minimum, first quartile, median, third quartile and maximum of your data. Outliers can be identified. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.</span>
+<span id="cb10-142"><a href="#cb10-142"></a>plt.hist(x, bins<span class="op">=</span><span class="dv">30</span>, color<span class="op">=</span><span class="st">'grey'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
 <span id="cb10-143"><a href="#cb10-143"></a></span>
-<span id="cb10-144"><a href="#cb10-144"></a></span>
-<span id="cb10-145"><a href="#cb10-145"></a>The <span class="in">`boxplot()`</span> function creates a boxplot.</span>
-<span id="cb10-146"><a href="#cb10-146"></a></span>
-<span id="cb10-149"><a href="#cb10-149"></a><span class="in">```{python}</span></span>
-<span id="cb10-150"><a href="#cb10-150"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb10-151"><a href="#cb10-151"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb10-152"><a href="#cb10-152"></a></span>
-<span id="cb10-153"><a href="#cb10-153"></a>data <span class="op">=</span> [np.random.normal(<span class="dv">0</span>, std, <span class="dv">100</span>) <span class="cf">for</span> std <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>)]</span>
-<span id="cb10-154"><a href="#cb10-154"></a></span>
-<span id="cb10-155"><a href="#cb10-155"></a>plt.boxplot(data, patch_artist<span class="op">=</span><span class="va">True</span>, notch<span class="op">=</span><span class="va">True</span>, showmeans<span class="op">=</span><span class="va">True</span>, meanline<span class="op">=</span><span class="va">True</span>, showfliers<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb10-156"><a href="#cb10-156"></a></span>
-<span id="cb10-157"><a href="#cb10-157"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb10-158"><a href="#cb10-158"></a>plt.ylabel(<span class="st">'y'</span>)</span>
-<span id="cb10-159"><a href="#cb10-159"></a>plt.show()</span>
-<span id="cb10-160"><a href="#cb10-160"></a><span class="in">```</span></span>
-<span id="cb10-161"><a href="#cb10-161"></a></span>
-<span id="cb10-162"><a href="#cb10-162"></a><span class="fu">### 2D Histogram Plot  {.unnumbered}</span></span>
-<span id="cb10-163"><a href="#cb10-163"></a></span>
-<span id="cb10-164"><a href="#cb10-164"></a>A 2D histogram can be created with the <span class="in">`hist2d()`</span> function.</span>
-<span id="cb10-165"><a href="#cb10-165"></a></span>
-<span id="cb10-168"><a href="#cb10-168"></a><span class="in">```{python}</span></span>
-<span id="cb10-169"><a href="#cb10-169"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb10-170"><a href="#cb10-170"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-144"><a href="#cb10-144"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb10-145"><a href="#cb10-145"></a>plt.ylabel(<span class="st">'y'</span>)</span>
+<span id="cb10-146"><a href="#cb10-146"></a>plt.show()</span>
+<span id="cb10-147"><a href="#cb10-147"></a><span class="in">```</span></span>
+<span id="cb10-148"><a href="#cb10-148"></a></span>
+<span id="cb10-149"><a href="#cb10-149"></a><span class="co">[</span><span class="ot">2D histograms</span><span class="co">](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist2d.html#matplotlib.axes.Axes.hist2d)</span> can be created with the <span class="in">`hist2d()`</span> function.</span>
+<span id="cb10-152"><a href="#cb10-152"></a><span class="in">```{python}</span></span>
+<span id="cb10-153"><a href="#cb10-153"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-154"><a href="#cb10-154"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-155"><a href="#cb10-155"></a></span>
+<span id="cb10-156"><a href="#cb10-156"></a>x <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
+<span id="cb10-157"><a href="#cb10-157"></a>y <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
+<span id="cb10-158"><a href="#cb10-158"></a>plt.hist2d(x, y, bins<span class="op">=</span><span class="dv">30</span>, cmap<span class="op">=</span><span class="st">'Greys'</span>)</span>
+<span id="cb10-159"><a href="#cb10-159"></a>plt.colorbar()</span>
+<span id="cb10-160"><a href="#cb10-160"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb10-161"><a href="#cb10-161"></a>plt.ylabel(<span class="st">'y'</span>)</span>
+<span id="cb10-162"><a href="#cb10-162"></a>plt.show()</span>
+<span id="cb10-163"><a href="#cb10-163"></a><span class="in">```</span></span>
+<span id="cb10-164"><a href="#cb10-164"></a></span>
+<span id="cb10-165"><a href="#cb10-165"></a><span class="ss">- </span>The <span class="in">`cmap`</span> parameter is used to set the color map of the histogram. </span>
+<span id="cb10-166"><a href="#cb10-166"></a><span class="ss">- </span>The <span class="in">`colorbar()`</span> function adds a color bar to the plot.</span>
+<span id="cb10-167"><a href="#cb10-167"></a></span>
+<span id="cb10-168"><a href="#cb10-168"></a><span class="fu">### Boxplot {.unnumbered}</span></span>
+<span id="cb10-169"><a href="#cb10-169"></a></span>
+<span id="cb10-170"><a href="#cb10-170"></a><span class="co">[</span><span class="ot">Box plot</span><span class="co">](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html)</span> shows the distribution of a numerical variable for different categories. It shows the minimum, first quartile, median, third quartile and maximum of your data. Outliers can be identified. An example of this *e.g.* is the distribution of cancer cell survival time for different treatment groups.</span>
 <span id="cb10-171"><a href="#cb10-171"></a></span>
-<span id="cb10-172"><a href="#cb10-172"></a>x <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
-<span id="cb10-173"><a href="#cb10-173"></a>y <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
+<span id="cb10-172"><a href="#cb10-172"></a></span>
+<span id="cb10-173"><a href="#cb10-173"></a>The <span class="in">`boxplot()`</span> function creates a boxplot.</span>
 <span id="cb10-174"><a href="#cb10-174"></a></span>
-<span id="cb10-175"><a href="#cb10-175"></a>plt.hist2d(x, y, bins<span class="op">=</span><span class="dv">30</span>, cmap<span class="op">=</span><span class="st">'Blues'</span>)</span>
-<span id="cb10-176"><a href="#cb10-176"></a></span>
-<span id="cb10-177"><a href="#cb10-177"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb10-178"><a href="#cb10-178"></a>plt.ylabel(<span class="st">'y'</span>)</span>
-<span id="cb10-179"><a href="#cb10-179"></a>plt.show()</span>
-<span id="cb10-180"><a href="#cb10-180"></a><span class="in">```</span></span>
-<span id="cb10-181"><a href="#cb10-181"></a></span>
-<span id="cb10-182"><a href="#cb10-182"></a></span>
+<span id="cb10-177"><a href="#cb10-177"></a><span class="in">```{python}</span></span>
+<span id="cb10-178"><a href="#cb10-178"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-179"><a href="#cb10-179"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-180"><a href="#cb10-180"></a></span>
+<span id="cb10-181"><a href="#cb10-181"></a>std <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb10-182"><a href="#cb10-182"></a>data <span class="op">=</span> [np.random.normal(<span class="dv">0</span>, std, <span class="dv">100</span>) <span class="cf">for</span> std <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>)]</span>
 <span id="cb10-183"><a href="#cb10-183"></a></span>
 <span id="cb10-184"><a href="#cb10-184"></a></span>
-<span id="cb10-185"><a href="#cb10-185"></a></span>
-<span id="cb10-186"><a href="#cb10-186"></a><span class="fu">### Proportion Plots {.unnumbered}</span></span>
-<span id="cb10-187"><a href="#cb10-187"></a></span>
-<span id="cb10-188"><a href="#cb10-188"></a><span class="fu">## Bar Plot {.unnumbered}</span></span>
-<span id="cb10-189"><a href="#cb10-189"></a><span class="co">[</span><span class="ot">Bar plot</span><span class="co">](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html)</span> shows the relationship of a categorical variable with a numerical variable *e.g.* cancer cell survival time for different treatment groups. The height of the bar is proportional to the value of the investigated variable.</span>
-<span id="cb10-190"><a href="#cb10-190"></a></span>
-<span id="cb10-191"><a href="#cb10-191"></a>The <span class="in">`bar()`</span> function creates a bar plot.</span>
-<span id="cb10-192"><a href="#cb10-192"></a></span>
-<span id="cb10-195"><a href="#cb10-195"></a><span class="in">```{python}</span></span>
-<span id="cb10-196"><a href="#cb10-196"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb10-197"><a href="#cb10-197"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb10-198"><a href="#cb10-198"></a></span>
-<span id="cb10-199"><a href="#cb10-199"></a>x <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
-<span id="cb10-200"><a href="#cb10-200"></a>y <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
-<span id="cb10-201"><a href="#cb10-201"></a></span>
-<span id="cb10-202"><a href="#cb10-202"></a>plt.bar(x, y, color<span class="op">=</span><span class="st">'red'</span>)</span>
-<span id="cb10-203"><a href="#cb10-203"></a></span>
-<span id="cb10-204"><a href="#cb10-204"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb10-205"><a href="#cb10-205"></a>plt.ylabel(<span class="st">'y'</span>)</span>
-<span id="cb10-206"><a href="#cb10-206"></a>plt.show()</span>
-<span id="cb10-207"><a href="#cb10-207"></a><span class="in">```</span></span>
-<span id="cb10-208"><a href="#cb10-208"></a></span>
-<span id="cb10-209"><a href="#cb10-209"></a><span class="fu">## Pie Chart {.unnumbered}</span></span>
-<span id="cb10-210"><a href="#cb10-210"></a></span>
-<span id="cb10-211"><a href="#cb10-211"></a></span>
-<span id="cb10-212"><a href="#cb10-212"></a><span class="co">[</span><span class="ot">Pie chart</span><span class="co">](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pie.html)</span> show the proportion of different categories in a single variable *e.g.* the content of different amino acids in a protein.</span>
+<span id="cb10-185"><a href="#cb10-185"></a>plt.boxplot(data, patch_artist<span class="op">=</span><span class="va">True</span>, notch<span class="op">=</span><span class="va">True</span>, showmeans<span class="op">=</span><span class="va">True</span>, meanline<span class="op">=</span><span class="va">True</span>, showfliers<span class="op">=</span><span class="va">True</span>, showbox<span class="op">=</span><span class="va">True</span>, showcaps<span class="op">=</span><span class="va">True</span>, orientation<span class="op">=</span><span class="st">'horizontal'</span>,sym<span class="op">=</span><span class="st">'C0+'</span>,</span>
+<span id="cb10-186"><a href="#cb10-186"></a>            boxprops<span class="op">=</span><span class="bu">dict</span>(facecolor<span class="op">=</span><span class="st">'darkgrey'</span>, color<span class="op">=</span><span class="st">'black'</span>),</span>
+<span id="cb10-187"><a href="#cb10-187"></a>            medianprops<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'grey'</span>),</span>
+<span id="cb10-188"><a href="#cb10-188"></a>            whiskerprops<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>),</span>
+<span id="cb10-189"><a href="#cb10-189"></a>            capprops<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>),</span>
+<span id="cb10-190"><a href="#cb10-190"></a>            meanprops<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">2</span>))</span>
+<span id="cb10-191"><a href="#cb10-191"></a>plt.yticks([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>])</span>
+<span id="cb10-192"><a href="#cb10-192"></a>plt.title(<span class="st">'Boxplot'</span>)</span>
+<span id="cb10-193"><a href="#cb10-193"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb10-194"><a href="#cb10-194"></a>plt.ylabel(<span class="st">'y'</span>)</span>
+<span id="cb10-195"><a href="#cb10-195"></a>plt.show()</span>
+<span id="cb10-196"><a href="#cb10-196"></a><span class="in">```</span></span>
+<span id="cb10-197"><a href="#cb10-197"></a></span>
+<span id="cb10-198"><a href="#cb10-198"></a><span class="ss">- </span>The <span class="in">`patch_artist`</span> parameter is used to fill the box with color.</span>
+<span id="cb10-199"><a href="#cb10-199"></a><span class="ss">- </span>The <span class="in">`notch`</span> parameter is used to create a notch in the box.</span>
+<span id="cb10-200"><a href="#cb10-200"></a><span class="ss">- </span>The <span class="in">`showmeans`</span> parameter is used to show the mean of the data.</span>
+<span id="cb10-201"><a href="#cb10-201"></a><span class="ss">- </span>The <span class="in">`meanline`</span> parameter is used to show the mean line.</span>
+<span id="cb10-202"><a href="#cb10-202"></a><span class="ss">- </span>The <span class="in">`showfliers`</span> parameter is used to show the outliers of the data.</span>
+<span id="cb10-203"><a href="#cb10-203"></a><span class="ss">- </span>The <span class="in">`showbox`</span> parameter is used to show the box of the data.</span>
+<span id="cb10-204"><a href="#cb10-204"></a><span class="ss">- </span>The <span class="in">`showcaps`</span> parameter is used to show the caps of the data.</span>
+<span id="cb10-205"><a href="#cb10-205"></a><span class="ss">- </span>The <span class="in">`orientation`</span> parameter is used to set the orientation of the boxplot. The default is <span class="in">`vertical`</span>. If you want to create a horizontal boxplot, set it to <span class="in">`horizontal`</span>.</span>
+<span id="cb10-206"><a href="#cb10-206"></a><span class="ss">- </span>The <span class="in">`sym`</span> parameter is used to set the symbol of the outliers. The default is <span class="in">`o`</span>. If you want to use a different symbol, set it to <span class="in">`r+`</span> or any other symbol you want to use.</span>
+<span id="cb10-207"><a href="#cb10-207"></a><span class="ss">- </span>The <span class="in">`boxprops`</span> parameter is used to set the properties of the box. The <span class="in">`facecolor`</span> parameter is used to set the color of the box. The <span class="in">`color`</span> parameter is used to set the color of the box outline.</span>
+<span id="cb10-208"><a href="#cb10-208"></a><span class="ss">- </span>The <span class="in">`medianprops`</span> parameter is used to set the properties of the median line. The <span class="in">`color`</span> parameter is used to set the color of the median line.</span>
+<span id="cb10-209"><a href="#cb10-209"></a><span class="ss">- </span>The <span class="in">`whiskerprops`</span> parameter is used to set the properties of the whiskers. The <span class="in">`color`</span> parameter is used to set the color of the whiskers.</span>
+<span id="cb10-210"><a href="#cb10-210"></a><span class="ss">- </span>The <span class="in">`meanprops`</span> parameter is used to set the properties of the mean line. The <span class="in">`color`</span> parameter is used to set the color of the mean line.</span>
+<span id="cb10-211"><a href="#cb10-211"></a><span class="ss">- </span>The <span class="in">`capprops`</span> parameter is used to set the properties of the caps. The <span class="in">`color`</span> parameter is used to set the color of the caps.</span>
+<span id="cb10-212"><a href="#cb10-212"></a></span>
 <span id="cb10-213"><a href="#cb10-213"></a></span>
-<span id="cb10-214"><a href="#cb10-214"></a>The <span class="in">`pie()`</span> function creates a pie chart.</span>
+<span id="cb10-214"><a href="#cb10-214"></a><span class="fu">### Proportion Plots {.unnumbered}</span></span>
 <span id="cb10-215"><a href="#cb10-215"></a></span>
-<span id="cb10-218"><a href="#cb10-218"></a><span class="in">```{python}</span></span>
-<span id="cb10-219"><a href="#cb10-219"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb10-220"><a href="#cb10-220"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb10-221"><a href="#cb10-221"></a></span>
-<span id="cb10-222"><a href="#cb10-222"></a>x <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
-<span id="cb10-223"><a href="#cb10-223"></a>labels <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
-<span id="cb10-224"><a href="#cb10-224"></a></span>
-<span id="cb10-225"><a href="#cb10-225"></a>plt.pie(x, labels<span class="op">=</span>labels)</span>
-<span id="cb10-226"><a href="#cb10-226"></a></span>
-<span id="cb10-227"><a href="#cb10-227"></a>plt.show()</span>
-<span id="cb10-228"><a href="#cb10-228"></a><span class="in">```</span></span>
-<span id="cb10-229"><a href="#cb10-229"></a></span>
+<span id="cb10-216"><a href="#cb10-216"></a><span class="fu">## Bar Plot {.unnumbered}</span></span>
+<span id="cb10-217"><a href="#cb10-217"></a><span class="co">[</span><span class="ot">Bar plot</span><span class="co">](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html)</span> shows the relationship of a categorical variable with a numerical variable *e.g.* cancer cell survival time for different treatment groups. The height of the bar is proportional to the value of the investigated variable.</span>
+<span id="cb10-218"><a href="#cb10-218"></a></span>
+<span id="cb10-219"><a href="#cb10-219"></a>The <span class="in">`bar()`</span> function creates a bar plot.</span>
+<span id="cb10-220"><a href="#cb10-220"></a></span>
+<span id="cb10-223"><a href="#cb10-223"></a><span class="in">```{python}</span></span>
+<span id="cb10-224"><a href="#cb10-224"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-225"><a href="#cb10-225"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-226"><a href="#cb10-226"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
+<span id="cb10-227"><a href="#cb10-227"></a></span>
+<span id="cb10-228"><a href="#cb10-228"></a>x <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
+<span id="cb10-229"><a href="#cb10-229"></a>y <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
+<span id="cb10-230"><a href="#cb10-230"></a>yerr <span class="op">=</span> np.random.rand(<span class="dv">4</span>)<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb10-231"><a href="#cb10-231"></a></span>
+<span id="cb10-232"><a href="#cb10-232"></a>plt.bar(x, y,yerr<span class="op">=</span>yerr, color<span class="op">=</span><span class="st">'grey'</span>)</span>
+<span id="cb10-233"><a href="#cb10-233"></a></span>
+<span id="cb10-234"><a href="#cb10-234"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb10-235"><a href="#cb10-235"></a>plt.ylabel(<span class="st">'y'</span>)</span>
+<span id="cb10-236"><a href="#cb10-236"></a>plt.show()</span>
+<span id="cb10-237"><a href="#cb10-237"></a><span class="in">```</span></span>
+<span id="cb10-238"><a href="#cb10-238"></a></span>
+<span id="cb10-239"><a href="#cb10-239"></a></span>
+<span id="cb10-240"><a href="#cb10-240"></a>You can draw a star sign to indicate the significance of the data.</span>
+<span id="cb10-241"><a href="#cb10-241"></a></span>
+<span id="cb10-242"><a href="#cb10-242"></a></span>
+<span id="cb10-243"><a href="#cb10-243"></a><span class="fu">## Pie Chart {.unnumbered}</span></span>
+<span id="cb10-244"><a href="#cb10-244"></a></span>
+<span id="cb10-245"><a href="#cb10-245"></a></span>
+<span id="cb10-246"><a href="#cb10-246"></a><span class="co">[</span><span class="ot">Pie chart</span><span class="co">](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pie.html)</span> show the proportion of different categories in a single variable *e.g.* the content of different amino acids in a protein.</span>
+<span id="cb10-247"><a href="#cb10-247"></a></span>
+<span id="cb10-248"><a href="#cb10-248"></a>The <span class="in">`pie()`</span> function creates a pie chart.</span>
+<span id="cb10-249"><a href="#cb10-249"></a></span>
+<span id="cb10-252"><a href="#cb10-252"></a><span class="in">```{python}</span></span>
+<span id="cb10-253"><a href="#cb10-253"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-254"><a href="#cb10-254"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-255"><a href="#cb10-255"></a></span>
+<span id="cb10-256"><a href="#cb10-256"></a>x <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
+<span id="cb10-257"><a href="#cb10-257"></a>labels <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
+<span id="cb10-258"><a href="#cb10-258"></a></span>
+<span id="cb10-259"><a href="#cb10-259"></a>plt.pie(x, labels<span class="op">=</span>labels, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>, startangle<span class="op">=</span><span class="dv">90</span>, colors<span class="op">=</span>[<span class="st">'lightgrey'</span>, <span class="st">'grey'</span>, <span class="st">'darkgrey'</span>, <span class="st">'dimgrey'</span>], explode<span class="op">=</span>(<span class="fl">0.1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>), shadow<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-260"><a href="#cb10-260"></a>plt.axis(<span class="st">'equal'</span>)  <span class="co"># Equal aspect ratio ensures that pie is drawn as a circle.</span></span>
+<span id="cb10-261"><a href="#cb10-261"></a></span>
+<span id="cb10-262"><a href="#cb10-262"></a>plt.show()</span>
+<span id="cb10-263"><a href="#cb10-263"></a><span class="in">```</span></span>
+<span id="cb10-264"><a href="#cb10-264"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

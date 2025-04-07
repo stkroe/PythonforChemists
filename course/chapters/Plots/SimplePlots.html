@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../course/chapters/Plots/Seaborn.html" rel="next">
+<link href="../../../course/chapters/Plots/SimplePlotTypes.html" rel="next">
 <link href="../../../course/chapters/Plots/DataVisualization.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-92b6c6361227b6d7ffb0ef9f7ef1dd57.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-9dc44f3162c39531be84931020d3c4ca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-516d921ec8d526d3fe54a05c4dfe7a3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -288,12 +288,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
+  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
+  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
   </div>
 </li>
       </ul>
@@ -555,7 +555,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The most popular data visualization libraries in Python is Matplotlib. Let`s start with the basic data visualization techniques using Matplotlib.</p>
 <section id="generate-some-x-y-data-points." class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="generate-some-x-y-data-points.">1. Generate some x-y data points.</h3>
-<div id="582b6824" class="cell" data-execution_count="1">
+<div id="292b1922" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -566,7 +566,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="plot-the-data-points." class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="plot-the-data-points.">2. Plot the data points.</h3>
-<div id="ec416bf8" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="2">
+<div id="f9e8fd53" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>plt.plot(x, y)</span>
 <span id="cb2-2"><a href="#cb2-2"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -578,7 +578,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>To add more graphs to the same figure, use <code>plt.plot()</code> multiple times before <code>plt.show()</code>. If you want to create a new figure, use <code>plt.figure()</code> before <code>plt.plot()</code>.</p>
-<div id="4a297d8f" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="3">
+<div id="dccc2482" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>plt.plot(x,y)</span>
 <span id="cb3-2"><a href="#cb3-2"></a>plt.plot(x,<span class="dv">2</span><span class="op">*</span>y)</span>
 <span id="cb3-3"><a href="#cb3-3"></a>plt.show()</span>
@@ -617,13 +617,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>label - label for the data points</li>
 </ul>
 <p>You have to call <code>plt.legend()</code> to show the labels.</p>
-<div id="a75830f9" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="4">
+<div id="403f506f" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>plt.figure()</span>
 <span id="cb4-2"><a href="#cb4-2"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'o'</span>, </span>
 <span id="cb4-3"><a href="#cb4-3"></a>            markerfacecolor<span class="op">=</span><span class="st">'blue'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
 <span id="cb4-4"><a href="#cb4-4"></a>            label<span class="op">=</span><span class="st">'sin(x)'</span>)</span>
-<span id="cb4-5"><a href="#cb4-5"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
-<span id="cb4-6"><a href="#cb4-6"></a>            markerfacecolor<span class="op">=</span><span class="st">'yellow'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb4-5"><a href="#cb4-5"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'darkgrey'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
+<span id="cb4-6"><a href="#cb4-6"></a>            markerfacecolor<span class="op">=</span><span class="st">'grey'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
 <span id="cb4-7"><a href="#cb4-7"></a>            label<span class="op">=</span><span class="st">'2*sin(x)'</span>)</span>
 <span id="cb4-8"><a href="#cb4-8"></a>plt.legend()</span>
 <span id="cb4-9"><a href="#cb4-9"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -653,14 +653,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>plt.figure()</code>: Create a new figure.</li>
 <li><code>plt.show()</code>: Display a figure.</li>
 </ul>
-<div id="3ba16eed" class="cell" data-fig-dpi="72" data-fig-height="4" data-fig-width="5" data-execution_count="5">
+<div id="451d31ec" class="cell" data-fig-dpi="72" data-fig-height="4" data-fig-width="5" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>), dpi<span class="op">=</span><span class="dv">100</span>)</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="co"># Create a figure with a specific size and resolution</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'o'</span>, </span>
 <span id="cb5-4"><a href="#cb5-4"></a>            markerfacecolor<span class="op">=</span><span class="st">'blue'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
 <span id="cb5-5"><a href="#cb5-5"></a>            label<span class="op">=</span><span class="st">'sin(x)'</span>)</span>
-<span id="cb5-6"><a href="#cb5-6"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
-<span id="cb5-7"><a href="#cb5-7"></a>            markerfacecolor<span class="op">=</span><span class="st">'yellow'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'darkgrey'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>            markerfacecolor<span class="op">=</span><span class="st">'grey'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
 <span id="cb5-8"><a href="#cb5-8"></a>            label<span class="op">=</span><span class="st">'2*sin(x)'</span>)</span>
 <span id="cb5-9"><a href="#cb5-9"></a>plt.xlim([<span class="dv">0</span>, <span class="dv">10</span>]) <span class="co"># set the x-axis limits</span></span>
 <span id="cb5-10"><a href="#cb5-10"></a>plt.ylim([<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>]) <span class="co"># set the y-axis limits</span></span>
@@ -686,7 +686,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="creating-multiple-plots" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="creating-multiple-plots">Creating multiple plots</h2>
 <p>You can create multiple plots in the same figure by using the <code>subplot()</code> function.</p>
-<div id="06154211" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="6">
+<div id="779060e9" class="cell" data-fig-dpi="72" data-fig-height="1" data-fig-width="1" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
 <span id="cb6-2"><a href="#cb6-2"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'o'</span>, </span>
 <span id="cb6-3"><a href="#cb6-3"></a>            markerfacecolor<span class="op">=</span><span class="st">'blue'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
@@ -697,8 +697,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-8"><a href="#cb6-8"></a>plt.legend()</span>
 <span id="cb6-9"><a href="#cb6-9"></a></span>
 <span id="cb6-10"><a href="#cb6-10"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb6-11"><a href="#cb6-11"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
-<span id="cb6-12"><a href="#cb6-12"></a>            markerfacecolor<span class="op">=</span><span class="st">'yellow'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb6-11"><a href="#cb6-11"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'darkgrey'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
+<span id="cb6-12"><a href="#cb6-12"></a>            markerfacecolor<span class="op">=</span><span class="st">'grey'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
 <span id="cb6-13"><a href="#cb6-13"></a>            label<span class="op">=</span><span class="st">'2*sin(x)'</span>)</span>
 <span id="cb6-14"><a href="#cb6-14"></a>plt.xlabel(<span class="st">'x'</span>)</span>
 <span id="cb6-15"><a href="#cb6-15"></a>plt.ylabel(<span class="st">'y'</span>)</span>
@@ -714,8 +714,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="8661bb9f" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">2</span>),dpi<span class="op">=</span><span class="dv">72</span>,layout<span class="op">=</span><span class="st">'constrained'</span>, facecolor<span class="op">=</span><span class="st">'lightskyblue'</span>)</span>
+<div id="785637cc" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">2</span>),dpi<span class="op">=</span><span class="dv">72</span>,layout<span class="op">=</span><span class="st">'constrained'</span>, facecolor<span class="op">=</span><span class="st">'lightyellow'</span>)</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="co"># Create a figure with a specific layout and background color</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="co"># constrained layout automatically adjusts the subplots to fit the figure</span></span>
 <span id="cb7-4"><a href="#cb7-4"></a>fig.suptitle(<span class="st">'Figure'</span>) <span class="co"># set the title of the figure object</span></span>
@@ -724,7 +724,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-7"><a href="#cb7-7"></a>sub_subL <span class="op">=</span> subL.subplots(<span class="dv">2</span>, <span class="dv">1</span>, sharex<span class="op">=</span><span class="va">True</span>) <span class="co"># create two subplots in the left subfigure</span></span>
 <span id="cb7-8"><a href="#cb7-8"></a>sub_subL[<span class="dv">1</span>].set_xlabel(<span class="st">'x [m]'</span>)</span>
 <span id="cb7-9"><a href="#cb7-9"></a>subL.suptitle(<span class="st">'Left subfigure'</span>) <span class="co"># set the title of the left subfigure</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a>subR.set_facecolor(<span class="st">'lightyellow'</span>) <span class="co"># set the background color of the right subfigure</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>subR.set_facecolor(<span class="st">'lightskyblue'</span>) <span class="co"># set the background color of the right subfigure</span></span>
 <span id="cb7-11"><a href="#cb7-11"></a>sub_subR <span class="op">=</span> subR.subplots(<span class="dv">1</span>, <span class="dv">2</span>, sharey<span class="op">=</span><span class="va">True</span>) </span>
 <span id="cb7-12"><a href="#cb7-12"></a>sub_subR[<span class="dv">0</span>].set_title(<span class="st">'Axes 1'</span>) <span class="co"># set the title of the first subplot in the right subfigure</span></span>
 <span id="cb7-13"><a href="#cb7-13"></a>sub_subR[<span class="dv">1</span>].set_title(<span class="st">'Axes 2'</span>) <span class="co"># set the title of the second subplot in the right subfigure</span></span>
@@ -743,16 +743,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="subfigures-and-gridspec" class="level3">
 <h3 class="anchored" data-anchor-id="subfigures-and-gridspec">Subfigures and Gridspec</h3>
 <p>You can also create <code>subplots</code> and <code>gridspecs</code> to create more complex layouts.</p>
-<div id="665c71be" class="cell" data-execution_count="8">
+<div id="dbf7a143" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">from</span> matplotlib.gridspec <span class="im">import</span> GridSpec</span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ef2d6704" class="cell" data-execution_count="9">
+<div id="fc1cc950" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
 <span id="cb10-2"><a href="#cb10-2"></a>y <span class="op">=</span> np.sin(x)</span>
 <span id="cb10-3"><a href="#cb10-3"></a></span>
-<span id="cb10-4"><a href="#cb10-4"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">3</span>,<span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">3</span>,<span class="dv">4</span>), dpi<span class="op">=</span><span class="dv">96</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>, constrained_layout<span class="op">=</span><span class="va">True</span>,gridspec_kw<span class="op">=</span>{<span class="st">'hspace'</span>: <span class="fl">0.5</span>, <span class="st">'wspace'</span>: <span class="fl">0.5</span>})</span>
+<span id="cb10-4"><a href="#cb10-4"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">3</span>,<span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">3</span>,<span class="dv">4</span>), dpi<span class="op">=</span><span class="dv">96</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>, constrained_layout<span class="op">=</span><span class="va">True</span>,gridspec_kw<span class="op">=</span>{<span class="st">'hspace'</span>: <span class="fl">0.2</span>, <span class="st">'wspace'</span>: <span class="fl">0.2</span>})</span>
 <span id="cb10-5"><a href="#cb10-5"></a></span>
 <span id="cb10-6"><a href="#cb10-6"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
 <span id="cb10-7"><a href="#cb10-7"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
@@ -767,7 +767,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="9945aad2" class="cell" data-execution_count="10">
+<div id="cbf83f51" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
 <span id="cb11-2"><a href="#cb11-2"></a>y <span class="op">=</span> np.sin(x)</span>
 <span id="cb11-3"><a href="#cb11-3"></a></span>
@@ -1430,8 +1430,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../course/chapters/Plots/Seaborn.html" class="pagination-link" aria-label="Seaborn Plots">
-        <span class="nav-page-text"><span class="chapter-title">Seaborn Plots</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="pagination-link" aria-label="Simple Plot Types">
+        <span class="nav-page-text"><span class="chapter-title">Simple Plot Types</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -1531,8 +1531,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-102"><a href="#cb12-102"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'o'</span>, </span>
 <span id="cb12-103"><a href="#cb12-103"></a>            markerfacecolor<span class="op">=</span><span class="st">'blue'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
 <span id="cb12-104"><a href="#cb12-104"></a>            label<span class="op">=</span><span class="st">'sin(x)'</span>)</span>
-<span id="cb12-105"><a href="#cb12-105"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
-<span id="cb12-106"><a href="#cb12-106"></a>            markerfacecolor<span class="op">=</span><span class="st">'yellow'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb12-105"><a href="#cb12-105"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'darkgrey'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
+<span id="cb12-106"><a href="#cb12-106"></a>            markerfacecolor<span class="op">=</span><span class="st">'grey'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
 <span id="cb12-107"><a href="#cb12-107"></a>            label<span class="op">=</span><span class="st">'2*sin(x)'</span>)</span>
 <span id="cb12-108"><a href="#cb12-108"></a>plt.legend()</span>
 <span id="cb12-109"><a href="#cb12-109"></a>plt.show()</span>
@@ -1566,8 +1566,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-139"><a href="#cb12-139"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'o'</span>, </span>
 <span id="cb12-140"><a href="#cb12-140"></a>            markerfacecolor<span class="op">=</span><span class="st">'blue'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
 <span id="cb12-141"><a href="#cb12-141"></a>            label<span class="op">=</span><span class="st">'sin(x)'</span>)</span>
-<span id="cb12-142"><a href="#cb12-142"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
-<span id="cb12-143"><a href="#cb12-143"></a>            markerfacecolor<span class="op">=</span><span class="st">'yellow'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb12-142"><a href="#cb12-142"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'darkgrey'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
+<span id="cb12-143"><a href="#cb12-143"></a>            markerfacecolor<span class="op">=</span><span class="st">'grey'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
 <span id="cb12-144"><a href="#cb12-144"></a>            label<span class="op">=</span><span class="st">'2*sin(x)'</span>)</span>
 <span id="cb12-145"><a href="#cb12-145"></a>plt.xlim([<span class="dv">0</span>, <span class="dv">10</span>]) <span class="co"># set the x-axis limits</span></span>
 <span id="cb12-146"><a href="#cb12-146"></a>plt.ylim([<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>]) <span class="co"># set the y-axis limits</span></span>
@@ -1604,8 +1604,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-179"><a href="#cb12-179"></a>plt.legend()</span>
 <span id="cb12-180"><a href="#cb12-180"></a></span>
 <span id="cb12-181"><a href="#cb12-181"></a>plt.subplot(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb12-182"><a href="#cb12-182"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
-<span id="cb12-183"><a href="#cb12-183"></a>            markerfacecolor<span class="op">=</span><span class="st">'yellow'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb12-182"><a href="#cb12-182"></a>plt.plot(x, <span class="dv">2</span><span class="op">*</span>y, color<span class="op">=</span><span class="st">'darkgrey'</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">'x'</span>,</span>
+<span id="cb12-183"><a href="#cb12-183"></a>            markerfacecolor<span class="op">=</span><span class="st">'grey'</span>, markersize<span class="op">=</span><span class="dv">5</span>,</span>
 <span id="cb12-184"><a href="#cb12-184"></a>            label<span class="op">=</span><span class="st">'2*sin(x)'</span>)</span>
 <span id="cb12-185"><a href="#cb12-185"></a>plt.xlabel(<span class="st">'x'</span>)</span>
 <span id="cb12-186"><a href="#cb12-186"></a>plt.ylabel(<span class="st">'y'</span>)</span>
@@ -1616,7 +1616,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-191"><a href="#cb12-191"></a><span class="in">```</span></span>
 <span id="cb12-192"><a href="#cb12-192"></a></span>
 <span id="cb12-195"><a href="#cb12-195"></a><span class="in">```{python}</span></span>
-<span id="cb12-196"><a href="#cb12-196"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">2</span>),dpi<span class="op">=</span><span class="dv">72</span>,layout<span class="op">=</span><span class="st">'constrained'</span>, facecolor<span class="op">=</span><span class="st">'lightskyblue'</span>)</span>
+<span id="cb12-196"><a href="#cb12-196"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">2</span>),dpi<span class="op">=</span><span class="dv">72</span>,layout<span class="op">=</span><span class="st">'constrained'</span>, facecolor<span class="op">=</span><span class="st">'lightyellow'</span>)</span>
 <span id="cb12-197"><a href="#cb12-197"></a><span class="co"># Create a figure with a specific layout and background color</span></span>
 <span id="cb12-198"><a href="#cb12-198"></a><span class="co"># constrained layout automatically adjusts the subplots to fit the figure</span></span>
 <span id="cb12-199"><a href="#cb12-199"></a>fig.suptitle(<span class="st">'Figure'</span>) <span class="co"># set the title of the figure object</span></span>
@@ -1625,7 +1625,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-202"><a href="#cb12-202"></a>sub_subL <span class="op">=</span> subL.subplots(<span class="dv">2</span>, <span class="dv">1</span>, sharex<span class="op">=</span><span class="va">True</span>) <span class="co"># create two subplots in the left subfigure</span></span>
 <span id="cb12-203"><a href="#cb12-203"></a>sub_subL[<span class="dv">1</span>].set_xlabel(<span class="st">'x [m]'</span>)</span>
 <span id="cb12-204"><a href="#cb12-204"></a>subL.suptitle(<span class="st">'Left subfigure'</span>) <span class="co"># set the title of the left subfigure</span></span>
-<span id="cb12-205"><a href="#cb12-205"></a>subR.set_facecolor(<span class="st">'lightyellow'</span>) <span class="co"># set the background color of the right subfigure</span></span>
+<span id="cb12-205"><a href="#cb12-205"></a>subR.set_facecolor(<span class="st">'lightskyblue'</span>) <span class="co"># set the background color of the right subfigure</span></span>
 <span id="cb12-206"><a href="#cb12-206"></a>sub_subR <span class="op">=</span> subR.subplots(<span class="dv">1</span>, <span class="dv">2</span>, sharey<span class="op">=</span><span class="va">True</span>) </span>
 <span id="cb12-207"><a href="#cb12-207"></a>sub_subR[<span class="dv">0</span>].set_title(<span class="st">'Axes 1'</span>) <span class="co"># set the title of the first subplot in the right subfigure</span></span>
 <span id="cb12-208"><a href="#cb12-208"></a>sub_subR[<span class="dv">1</span>].set_title(<span class="st">'Axes 2'</span>) <span class="co"># set the title of the second subplot in the right subfigure</span></span>
@@ -1648,7 +1648,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-229"><a href="#cb12-229"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
 <span id="cb12-230"><a href="#cb12-230"></a>y <span class="op">=</span> np.sin(x)</span>
 <span id="cb12-231"><a href="#cb12-231"></a></span>
-<span id="cb12-232"><a href="#cb12-232"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">3</span>,<span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">3</span>,<span class="dv">4</span>), dpi<span class="op">=</span><span class="dv">96</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>, constrained_layout<span class="op">=</span><span class="va">True</span>,gridspec_kw<span class="op">=</span>{<span class="st">'hspace'</span>: <span class="fl">0.5</span>, <span class="st">'wspace'</span>: <span class="fl">0.5</span>})</span>
+<span id="cb12-232"><a href="#cb12-232"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">3</span>,<span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">3</span>,<span class="dv">4</span>), dpi<span class="op">=</span><span class="dv">96</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>, constrained_layout<span class="op">=</span><span class="va">True</span>,gridspec_kw<span class="op">=</span>{<span class="st">'hspace'</span>: <span class="fl">0.2</span>, <span class="st">'wspace'</span>: <span class="fl">0.2</span>})</span>
 <span id="cb12-233"><a href="#cb12-233"></a></span>
 <span id="cb12-234"><a href="#cb12-234"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
 <span id="cb12-235"><a href="#cb12-235"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
