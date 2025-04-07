@@ -153,7 +153,7 @@ Often the error messages are not very clear. You can search for the error messag
 
 
 :::{.callout-note}
-Example - Cryptic Error Message 
+### Example - Cryptic Error Message 
 What does the error message tell you? If you are not sure ask the internet or your favorite AI.
 :::
 
@@ -163,7 +163,21 @@ print(a[3])
 ```
 
 
+:::{.callout-important}
+### Python counts from 0. 
+The **first** element is at **index 0**, the second element is at index 1, and so on.
 
+*e.g.* `weekdays=["Monday", "Tuesday", "Wednesday"]` <br>
+
+| elements | "Monday" | "Tuesday" | "Wednesday" |
+|----------|----------|-----------|-------------|
+| index    | 0        | 1         | 2           |
+
+element `Tuesday` is at index `1`. <br>
+The length of the list is `N`. <br>
+The last element is at index `N-1`. <br>
+
+:::
 
 
 
