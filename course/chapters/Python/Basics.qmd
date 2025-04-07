@@ -189,7 +189,7 @@ The error message tells you that you are trying to access an index that is out o
 
 ## Comments {.unnumbered}
 Comments are important. They help you and others to understand your code. <br>
-You can use the \` symbol to write comments.
+You can use the \# symbol to write comments.
 
 Docstrings are used to document the code for example with [pydoc](https://docs.python.org/3/library/pydoc.html). They are using triple quotes \`""" """"\`.
 
