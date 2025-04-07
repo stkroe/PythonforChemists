@@ -95,11 +95,11 @@ Timeschedule for a week:
 
 | Time        | Monday           | Tuesday           | Wednesday            | Thursday          | Friday       |
 |-------------|------------------|-------------------|----------------------|-------------------|--------------|
-| 13:00-14:00 | Introduction     | Lecture 2         | Lecture 3            | Exercise Block 4  | F&Q          |
-| 14:00-15:00 | Lecture 1        | Lecture 2         | Lecture 3            | Exercise Block 4  | F&Q          |
-| 15:00-16:00 | Lecture 1        | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
-| 16:00-17:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
-| 17:00-18:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 4  | Final Exam   |
+| 13:00-14:00 | Introduction     | Lecture 2         | Lecture 3            | Exercise Block 3  | F&Q          |
+| 14:00-15:00 | Lecture 1        | Lecture 2         | Lecture 3            | Exercise Block 3  | F&Q          |
+| 15:00-16:00 | Lecture 1        | Exercise Block 2  | Exercise Block 2     | Exercise Block 3  | Final Exam   |
+| 16:00-17:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 3  | Final Exam   |
+| 17:00-18:00 | Exercise Block 1 | Exercise Block 2  | Exercise Block 2     | Exercise Block 3  | Final Exam   |
 
 ### Introduction {.unnumbered}
 
