@@ -471,6 +471,9 @@ For print formatting you can use the `format()` method. <br>
 You can use the `f-string` method. <br>
 See for more information [here](https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings)
 
+Other methods are the `%` operator and the `str.format()` method. <br>
+
+
 ```{python}
 a = 1.5434
 b = "nm"
@@ -484,6 +487,8 @@ print("This is an example of using \
 format() method {0} {1}".format(a, b)) 
 print("This is an example of using format() \
 method with named arguments {a} {b}".format(a=a, b=b))
+print(f"This is an example of using f-string {a} {b}")
+
 ```
 
 ---
