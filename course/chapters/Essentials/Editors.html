@@ -556,7 +556,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Difficulty level: <span style="color:#2B7492"><i class="bi-star " style="" role="img" aria-hidden="true"></i> </span></p>
 <section id="choose-an-editor" class="level1 unnumbered">
 <h1 class="unnumbered">Choose an editor</h1>
-<p>After you installed Python successfully you need an editor for writing your Python programs. Technicallly you could use everything where you can write text, but it is not really purposeful.</p>
+<p>After you installed Python successfully you need an editor for writing your Python programs. A python script is a text file with the ending <code>.py</code>. Technicallly you could use everything where you can write text, but it is not really purposeful.</p>
 <p>An editor with <strong>syntax highlighting</strong>, <strong>code completion</strong> and <strong>debugging</strong> is very useful.</p>
 <section id="editors" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="editors">Editors:</h3>
@@ -588,7 +588,7 @@ Tip
 <li>Pylance from Microsoft</li>
 <li>and Jupyter from Microsoft (optional it is only needed if you want to use Jupyter Notebooks in VS Code)</li>
 </ul>
-<p>Alternatively you can use a <code>Jupyter Notebook</code> (<code>*.ipynb</code>) to execute code.</p>
+<p>Alternatively you can use a <code>Jupyter Notebook</code> (<code>*.ipynb</code>) to execute code. Jupyter Notebooks are interactive documents that allow you to write and execute Python code line by line. In comparison to a Python script, which is a plain text file with the <code>.py</code> extension, Jupyter Notebooks provide a more user-friendly interface for data analysis and visualization.</p>
 <p>Write the code in a cell and execute it by pressing the run button.</p>
 <p><strong>Advantage of using Jupyter Notebooks</strong>:</p>
 <ul>
@@ -654,19 +654,19 @@ Tip
 </figure>
 </div>
 <p>Upload data on Google Colab:</p>
-<div id="9b66f68f" class="cell" data-execution_count="1">
+<div id="8f92e052" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="upload-a-file" class="level3">
 <h3 class="anchored" data-anchor-id="upload-a-file">Upload a file</h3>
-<div id="0204bd8b" class="cell" data-execution_count="2">
+<div id="22a9c98e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>uploaded <span class="op">=</span> files.upload()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="access-the-uploaded-file" class="level3">
 <h3 class="anchored" data-anchor-id="access-the-uploaded-file">Access the uploaded file</h3>
-<div id="ce1ff6af" class="cell" data-execution_count="3">
+<div id="6a01ec89" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="cf">for</span> filename <span class="kw">in</span> uploaded.keys():</span>
 <span id="cb3-2"><a href="#cb3-2"></a>    <span class="bu">print</span>(<span class="ss">f'User uploaded file "</span><span class="sc">{</span>filename<span class="sc">}</span><span class="ss">" with size </span><span class="sc">{</span><span class="bu">len</span>(uploaded[filename])<span class="sc">}</span><span class="ss"> bytes.'</span>)<span class="co">#</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1364,169 +1364,168 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-7"><a href="#cb6-7"></a><span class="fu"># Choose an editor {.unnumbered}</span></span>
 <span id="cb6-8"><a href="#cb6-8"></a></span>
 <span id="cb6-9"><a href="#cb6-9"></a></span>
-<span id="cb6-10"><a href="#cb6-10"></a>After you installed Python successfully you need an editor for writing your Python programs. Technicallly you could use everything where you can write text, but it is not really purposeful. </span>
+<span id="cb6-10"><a href="#cb6-10"></a>After you installed Python successfully you need an editor for writing your Python programs. A python script is a text file with the ending <span class="in">`.py`</span>. Technicallly you could use everything where you can write text, but it is not really purposeful. </span>
 <span id="cb6-11"><a href="#cb6-11"></a></span>
-<span id="cb6-12"><a href="#cb6-12"></a></span>
-<span id="cb6-13"><a href="#cb6-13"></a>An editor with **syntax highlighting**, **code completion** and **debugging** is very useful.</span>
+<span id="cb6-12"><a href="#cb6-12"></a>An editor with **syntax highlighting**, **code completion** and **debugging** is very useful.</span>
+<span id="cb6-13"><a href="#cb6-13"></a></span>
 <span id="cb6-14"><a href="#cb6-14"></a></span>
-<span id="cb6-15"><a href="#cb6-15"></a></span>
-<span id="cb6-16"><a href="#cb6-16"></a><span class="fu">### Editors:  {.unnumbered}</span></span>
-<span id="cb6-17"><a href="#cb6-17"></a></span>
-<span id="cb6-18"><a href="#cb6-18"></a><span class="ss"> - </span>Spyder <span class="co">[</span><span class="ot">https://www.spyder-ide.org/</span><span class="co">](https://www.spyder-ide.org/)</span></span>
-<span id="cb6-19"><a href="#cb6-19"></a><span class="ss"> - </span>PyCharm (JetBrains) <span class="co">[</span><span class="ot">https://www.jetbrains.com/products/compare/?product=pycharm&amp;product=pycharm-ce</span><span class="co">](https://www.jetbrains.com/products/compare/?product=pycharm&amp;product=pycharm-ce)</span></span>
-<span id="cb6-20"><a href="#cb6-20"></a><span class="ss">- </span>Jupyter Notebook <span class="co">[</span><span class="ot">https://jupyter.org/</span><span class="co">](https://jupyter.org/)</span> <span class="co">[</span><span class="ot">https://code.visualstudio.com/docs/datascience/jupyter-notebooks</span><span class="co">](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)</span></span>
-<span id="cb6-21"><a href="#cb6-21"></a><span class="ss">- </span>Jupyter Lab <span class="co">[</span><span class="ot">https://jupyter.org/</span><span class="co">](https://jupyter.org/)</span> <span class="co">[</span><span class="ot">https://code.visualstudio.com/docs/datascience/jupyter-notebooks</span><span class="co">](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)</span> </span>
-<span id="cb6-22"><a href="#cb6-22"></a><span class="ss">- </span>Google Google Colab <span class="co">[</span><span class="ot">https://colab.research.google.com/</span><span class="co">](https://colab.research.google.com/)</span></span>
-<span id="cb6-23"><a href="#cb6-23"></a>etc.</span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="fu">### Editors:  {.unnumbered}</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a></span>
+<span id="cb6-17"><a href="#cb6-17"></a><span class="ss"> - </span>Spyder <span class="co">[</span><span class="ot">https://www.spyder-ide.org/</span><span class="co">](https://www.spyder-ide.org/)</span></span>
+<span id="cb6-18"><a href="#cb6-18"></a><span class="ss"> - </span>PyCharm (JetBrains) <span class="co">[</span><span class="ot">https://www.jetbrains.com/products/compare/?product=pycharm&amp;product=pycharm-ce</span><span class="co">](https://www.jetbrains.com/products/compare/?product=pycharm&amp;product=pycharm-ce)</span></span>
+<span id="cb6-19"><a href="#cb6-19"></a><span class="ss">- </span>Jupyter Notebook <span class="co">[</span><span class="ot">https://jupyter.org/</span><span class="co">](https://jupyter.org/)</span> <span class="co">[</span><span class="ot">https://code.visualstudio.com/docs/datascience/jupyter-notebooks</span><span class="co">](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)</span></span>
+<span id="cb6-20"><a href="#cb6-20"></a><span class="ss">- </span>Jupyter Lab <span class="co">[</span><span class="ot">https://jupyter.org/</span><span class="co">](https://jupyter.org/)</span> <span class="co">[</span><span class="ot">https://code.visualstudio.com/docs/datascience/jupyter-notebooks</span><span class="co">](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)</span> </span>
+<span id="cb6-21"><a href="#cb6-21"></a><span class="ss">- </span>Google Google Colab <span class="co">[</span><span class="ot">https://colab.research.google.com/</span><span class="co">](https://colab.research.google.com/)</span></span>
+<span id="cb6-22"><a href="#cb6-22"></a>etc.</span>
+<span id="cb6-23"><a href="#cb6-23"></a></span>
 <span id="cb6-24"><a href="#cb6-24"></a></span>
-<span id="cb6-25"><a href="#cb6-25"></a></span>
-<span id="cb6-26"><a href="#cb6-26"></a>:::{.callout-tip}</span>
-<span id="cb6-27"><a href="#cb6-27"></a>**Recommendation**: *[Visual Studio Code](https://code.visualstudio.com/download)* </span>
-<span id="cb6-28"><a href="#cb6-28"></a>:::</span>
+<span id="cb6-25"><a href="#cb6-25"></a>:::{.callout-tip}</span>
+<span id="cb6-26"><a href="#cb6-26"></a>**Recommendation**: *[Visual Studio Code](https://code.visualstudio.com/download)* </span>
+<span id="cb6-27"><a href="#cb6-27"></a>:::</span>
+<span id="cb6-28"><a href="#cb6-28"></a></span>
 <span id="cb6-29"><a href="#cb6-29"></a></span>
 <span id="cb6-30"><a href="#cb6-30"></a></span>
 <span id="cb6-31"><a href="#cb6-31"></a></span>
-<span id="cb6-32"><a href="#cb6-32"></a></span>
-<span id="cb6-33"><a href="#cb6-33"></a><span class="fu">### Python extension for VS Code:  {.unnumbered}</span></span>
+<span id="cb6-32"><a href="#cb6-32"></a><span class="fu">### Python extension for VS Code:  {.unnumbered}</span></span>
+<span id="cb6-33"><a href="#cb6-33"></a></span>
 <span id="cb6-34"><a href="#cb6-34"></a></span>
-<span id="cb6-35"><a href="#cb6-35"></a></span>
-<span id="cb6-36"><a href="#cb6-36"></a><span class="ss">- </span>Python from Microsoft, </span>
-<span id="cb6-37"><a href="#cb6-37"></a><span class="ss">- </span>Pylance from Microsoft </span>
-<span id="cb6-38"><a href="#cb6-38"></a><span class="ss">- </span>and Jupyter from Microsoft (optional it is only needed if you want to use Jupyter Notebooks in VS Code)</span>
+<span id="cb6-35"><a href="#cb6-35"></a><span class="ss">- </span>Python from Microsoft, </span>
+<span id="cb6-36"><a href="#cb6-36"></a><span class="ss">- </span>Pylance from Microsoft </span>
+<span id="cb6-37"><a href="#cb6-37"></a><span class="ss">- </span>and Jupyter from Microsoft (optional it is only needed if you want to use Jupyter Notebooks in VS Code)</span>
+<span id="cb6-38"><a href="#cb6-38"></a></span>
 <span id="cb6-39"><a href="#cb6-39"></a></span>
-<span id="cb6-40"><a href="#cb6-40"></a></span>
-<span id="cb6-41"><a href="#cb6-41"></a>Alternatively you can use a <span class="in">`Jupyter Notebook`</span> (<span class="in">`*.ipynb`</span>) to execute code.</span>
-<span id="cb6-42"><a href="#cb6-42"></a></span>
-<span id="cb6-43"><a href="#cb6-43"></a>Write the code in a cell and execute it by pressing the run button.</span>
-<span id="cb6-44"><a href="#cb6-44"></a></span>
-<span id="cb6-45"><a href="#cb6-45"></a>**Advantage of using Jupyter Notebooks**:</span>
-<span id="cb6-46"><a href="#cb6-46"></a></span>
-<span id="cb6-47"><a href="#cb6-47"></a><span class="ss">- </span>The code can run cell by cell and the output is directly shown below the cell.</span>
-<span id="cb6-48"><a href="#cb6-48"></a><span class="ss">- </span>Further you can write text and equations in markdown cells. </span>
-<span id="cb6-49"><a href="#cb6-49"></a><span class="ss">- </span>Jupyter Notebooks can also handle different programming languages like <span class="in">`R`</span>or <span class="in">`Julia`</span>.</span>
-<span id="cb6-50"><a href="#cb6-50"></a><span class="ss">- </span>Also <span class="in">`Markdown`</span> and <span class="in">`LaTeX`</span> can be used to write text and equations.</span>
-<span id="cb6-51"><a href="#cb6-51"></a><span class="ss">- </span>The output of the code can be visualized directly in the notebook.</span>
-<span id="cb6-52"><a href="#cb6-52"></a><span class="ss">- </span>Therefore, it is very popular in the data science community.</span>
+<span id="cb6-40"><a href="#cb6-40"></a>Alternatively you can use a <span class="in">`Jupyter Notebook`</span> (<span class="in">`*.ipynb`</span>) to execute code. Jupyter Notebooks are interactive documents that allow you to write and execute Python code line by line. In comparison to a Python script, which is a plain text file with the <span class="in">`.py`</span> extension, Jupyter Notebooks provide a more user-friendly interface for data analysis and visualization.</span>
+<span id="cb6-41"><a href="#cb6-41"></a></span>
+<span id="cb6-42"><a href="#cb6-42"></a>Write the code in a cell and execute it by pressing the run button.</span>
+<span id="cb6-43"><a href="#cb6-43"></a></span>
+<span id="cb6-44"><a href="#cb6-44"></a>**Advantage of using Jupyter Notebooks**:</span>
+<span id="cb6-45"><a href="#cb6-45"></a></span>
+<span id="cb6-46"><a href="#cb6-46"></a><span class="ss">- </span>The code can run cell by cell and the output is directly shown below the cell.</span>
+<span id="cb6-47"><a href="#cb6-47"></a><span class="ss">- </span>Further you can write text and equations in markdown cells. </span>
+<span id="cb6-48"><a href="#cb6-48"></a><span class="ss">- </span>Jupyter Notebooks can also handle different programming languages like <span class="in">`R`</span>or <span class="in">`Julia`</span>.</span>
+<span id="cb6-49"><a href="#cb6-49"></a><span class="ss">- </span>Also <span class="in">`Markdown`</span> and <span class="in">`LaTeX`</span> can be used to write text and equations.</span>
+<span id="cb6-50"><a href="#cb6-50"></a><span class="ss">- </span>The output of the code can be visualized directly in the notebook.</span>
+<span id="cb6-51"><a href="#cb6-51"></a><span class="ss">- </span>Therefore, it is very popular in the data science community.</span>
+<span id="cb6-52"><a href="#cb6-52"></a></span>
 <span id="cb6-53"><a href="#cb6-53"></a></span>
-<span id="cb6-54"><a href="#cb6-54"></a></span>
-<span id="cb6-55"><a href="#cb6-55"></a>Jupyter Notebooks can be used in <span class="in">`VS Code`</span>, <span class="in">`Jupyter Lab`</span>, <span class="in">`Jupyter Notebook`</span> or <span class="in">`Google Colab`</span>.</span>
+<span id="cb6-54"><a href="#cb6-54"></a>Jupyter Notebooks can be used in <span class="in">`VS Code`</span>, <span class="in">`Jupyter Lab`</span>, <span class="in">`Jupyter Notebook`</span> or <span class="in">`Google Colab`</span>.</span>
+<span id="cb6-55"><a href="#cb6-55"></a></span>
 <span id="cb6-56"><a href="#cb6-56"></a></span>
-<span id="cb6-57"><a href="#cb6-57"></a></span>
-<span id="cb6-58"><a href="#cb6-58"></a>:::{.callout-information}</span>
-<span id="cb6-59"><a href="#cb6-59"></a></span>
-<span id="cb6-60"><a href="#cb6-60"></a>In this course all exercises are provided as Jupyter Notebooks. </span>
-<span id="cb6-61"><a href="#cb6-61"></a>You can download it or run it directly in Google Colab.</span>
-<span id="cb6-62"><a href="#cb6-62"></a></span>
-<span id="cb6-63"><a href="#cb6-63"></a>:::</span>
+<span id="cb6-57"><a href="#cb6-57"></a>:::{.callout-information}</span>
+<span id="cb6-58"><a href="#cb6-58"></a></span>
+<span id="cb6-59"><a href="#cb6-59"></a>In this course all exercises are provided as Jupyter Notebooks. </span>
+<span id="cb6-60"><a href="#cb6-60"></a>You can download it or run it directly in Google Colab.</span>
+<span id="cb6-61"><a href="#cb6-61"></a></span>
+<span id="cb6-62"><a href="#cb6-62"></a>:::</span>
+<span id="cb6-63"><a href="#cb6-63"></a></span>
 <span id="cb6-64"><a href="#cb6-64"></a></span>
 <span id="cb6-65"><a href="#cb6-65"></a></span>
-<span id="cb6-66"><a href="#cb6-66"></a></span>
-<span id="cb6-67"><a href="#cb6-67"></a><span class="fu">## Using Jupyter Notebooks in VS Code {.unnumbered}</span></span>
-<span id="cb6-68"><a href="#cb6-68"></a></span>
-<span id="cb6-69"><a href="#cb6-69"></a><span class="al">![VS Code](https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/images/ipynb-vscode.png)</span></span>
-<span id="cb6-70"><a href="#cb6-70"></a></span>
-<span id="cb6-71"><a href="#cb6-71"></a><span class="al">![Python Cell](https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/images/python.png)</span></span>
-<span id="cb6-72"><a href="#cb6-72"></a></span>
-<span id="cb6-73"><a href="#cb6-73"></a><span class="fu">### Difference Between Jupyter Notebooks and Python Scripts</span></span>
-<span id="cb6-74"><a href="#cb6-74"></a></span>
-<span id="cb6-75"><a href="#cb6-75"></a><span class="ss">- </span>**Interactivity**: Jupyter Notebooks allow you to run code in chunks (cells) and see the output immediately, making them ideal for experimentation and visualization. Python scripts (<span class="in">`.py`</span> files) are typically executed all at once.</span>
-<span id="cb6-76"><a href="#cb6-76"></a><span class="ss">- </span>**Documentation**: Notebooks support Markdown cells for adding rich text, equations, and images alongside your code. Python scripts are plain text files and require comments for documentation.</span>
-<span id="cb6-77"><a href="#cb6-77"></a><span class="ss">- </span>**Use Case**: Notebooks are great for exploratory data analysis and teaching, while Python scripts are better suited for production code and automation.</span>
+<span id="cb6-66"><a href="#cb6-66"></a><span class="fu">## Using Jupyter Notebooks in VS Code {.unnumbered}</span></span>
+<span id="cb6-67"><a href="#cb6-67"></a></span>
+<span id="cb6-68"><a href="#cb6-68"></a><span class="al">![VS Code](https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/images/ipynb-vscode.png)</span></span>
+<span id="cb6-69"><a href="#cb6-69"></a></span>
+<span id="cb6-70"><a href="#cb6-70"></a><span class="al">![Python Cell](https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/images/python.png)</span></span>
+<span id="cb6-71"><a href="#cb6-71"></a></span>
+<span id="cb6-72"><a href="#cb6-72"></a><span class="fu">### Difference Between Jupyter Notebooks and Python Scripts</span></span>
+<span id="cb6-73"><a href="#cb6-73"></a></span>
+<span id="cb6-74"><a href="#cb6-74"></a><span class="ss">- </span>**Interactivity**: Jupyter Notebooks allow you to run code in chunks (cells) and see the output immediately, making them ideal for experimentation and visualization. Python scripts (<span class="in">`.py`</span> files) are typically executed all at once.</span>
+<span id="cb6-75"><a href="#cb6-75"></a><span class="ss">- </span>**Documentation**: Notebooks support Markdown cells for adding rich text, equations, and images alongside your code. Python scripts are plain text files and require comments for documentation.</span>
+<span id="cb6-76"><a href="#cb6-76"></a><span class="ss">- </span>**Use Case**: Notebooks are great for exploratory data analysis and teaching, while Python scripts are better suited for production code and automation.</span>
+<span id="cb6-77"><a href="#cb6-77"></a></span>
 <span id="cb6-78"><a href="#cb6-78"></a></span>
 <span id="cb6-79"><a href="#cb6-79"></a></span>
-<span id="cb6-80"><a href="#cb6-80"></a></span>
-<span id="cb6-81"><a href="#cb6-81"></a><span class="fu">## Google Colab Tutorial</span></span>
-<span id="cb6-82"><a href="#cb6-82"></a></span>
-<span id="cb6-83"><a href="#cb6-83"></a>Google Colab is a free, cloud-based platform that allows you to run Jupyter Notebooks without any setup. To get started with Google Colab:</span>
-<span id="cb6-84"><a href="#cb6-84"></a></span>
-<span id="cb6-85"><a href="#cb6-85"></a>:::{.callout-information}</span>
-<span id="cb6-86"><a href="#cb6-86"></a>The use of <span class="co">[</span><span class="ot">Google Colab</span><span class="co">](https://colab.research.google.com)</span> needs a Google Account. Please read the <span class="co">[</span><span class="ot">Terms of Service</span><span class="co">](https://research.google.com/colaboratory/tos_v5.html)</span> and <span class="co">[</span><span class="ot">Privacy Policy</span><span class="co">](https://policies.google.com/privacy)</span></span>
-<span id="cb6-87"><a href="#cb6-87"></a>:::</span>
-<span id="cb6-88"><a href="#cb6-88"></a></span>
-<span id="cb6-89"><a href="#cb6-89"></a><span class="ss">1. </span>Visit <span class="co">[</span><span class="ot">Google Colab</span><span class="co">](https://colab.research.google.com/)</span> and sign in with your Google account.</span>
-<span id="cb6-90"><a href="#cb6-90"></a><span class="ss">2. </span>Create a new notebook or upload an existing <span class="in">`.ipynb`</span> file.</span>
-<span id="cb6-91"><a href="#cb6-91"></a><span class="ss">3. </span>Write and execute code in cells, just like in Jupyter Notebooks.</span>
-<span id="cb6-92"><a href="#cb6-92"></a><span class="ss">4. </span>Save your work to Google Drive or download it as a <span class="in">`.ipynb`</span> file.</span>
-<span id="cb6-93"><a href="#cb6-93"></a></span>
-<span id="cb6-94"><a href="#cb6-94"></a><span class="fu">### Key Features of Google Colab</span></span>
-<span id="cb6-95"><a href="#cb6-95"></a></span>
-<span id="cb6-96"><a href="#cb6-96"></a><span class="ss">- </span>**Free Access to GPUs/TPUs**: Accelerate your computations by enabling GPU or TPU support from the "Runtime" menu.</span>
-<span id="cb6-97"><a href="#cb6-97"></a><span class="ss">- </span>**Collaboration**: Share notebooks with others and work on them simultaneously, similar to Google Docs.</span>
-<span id="cb6-98"><a href="#cb6-98"></a><span class="ss">- </span>**Pre-installed Libraries**: Many popular Python libraries are pre-installed, saving you setup time.</span>
-<span id="cb6-99"><a href="#cb6-99"></a><span class="ss">- </span>**Integration with Google Drive**: Easily access and save files to your Google Drive.</span>
-<span id="cb6-100"><a href="#cb6-100"></a></span>
-<span id="cb6-101"><a href="#cb6-101"></a><span class="al">![Google Colab Interface](https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/images/googlecolab.png)</span></span>
-<span id="cb6-102"><a href="#cb6-102"></a></span>
-<span id="cb6-103"><a href="#cb6-103"></a>Upload data on Google Colab:</span>
-<span id="cb6-106"><a href="#cb6-106"></a><span class="in">```{python}</span></span>
-<span id="cb6-107"><a href="#cb6-107"></a><span class="co">#| eval: false</span></span>
-<span id="cb6-108"><a href="#cb6-108"></a><span class="co">#| echo: true</span></span>
-<span id="cb6-109"><a href="#cb6-109"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
-<span id="cb6-110"><a href="#cb6-110"></a><span class="in">```</span></span>
-<span id="cb6-111"><a href="#cb6-111"></a></span>
-<span id="cb6-112"><a href="#cb6-112"></a><span class="fu">### Upload a file</span></span>
-<span id="cb6-115"><a href="#cb6-115"></a><span class="in">```{python}</span></span>
-<span id="cb6-116"><a href="#cb6-116"></a><span class="co">#| eval: false</span></span>
-<span id="cb6-117"><a href="#cb6-117"></a><span class="co">#| echo: true</span></span>
-<span id="cb6-118"><a href="#cb6-118"></a>uploaded <span class="op">=</span> files.upload()</span>
-<span id="cb6-119"><a href="#cb6-119"></a><span class="in">```</span></span>
-<span id="cb6-120"><a href="#cb6-120"></a></span>
-<span id="cb6-121"><a href="#cb6-121"></a><span class="fu">### Access the uploaded file</span></span>
-<span id="cb6-124"><a href="#cb6-124"></a><span class="in">```{python}</span></span>
-<span id="cb6-125"><a href="#cb6-125"></a><span class="co">#| eval: false</span></span>
-<span id="cb6-126"><a href="#cb6-126"></a><span class="co">#| echo: true</span></span>
-<span id="cb6-127"><a href="#cb6-127"></a><span class="cf">for</span> filename <span class="kw">in</span> uploaded.keys():</span>
-<span id="cb6-128"><a href="#cb6-128"></a>    <span class="bu">print</span>(<span class="ss">f'User uploaded file "</span><span class="sc">{</span>filename<span class="sc">}</span><span class="ss">" with size </span><span class="sc">{</span><span class="bu">len</span>(uploaded[filename])<span class="sc">}</span><span class="ss"> bytes.'</span>)<span class="co">#</span></span>
-<span id="cb6-129"><a href="#cb6-129"></a><span class="in">```</span></span>
-<span id="cb6-130"><a href="#cb6-130"></a></span>
-<span id="cb6-131"><a href="#cb6-131"></a><span class="fu">### Important Short Cuts in Google Colab</span></span>
-<span id="cb6-132"><a href="#cb6-132"></a><span class="ss">- </span>**Run cell and select next cell**: <span class="in">`Shift + Enter`</span></span>
-<span id="cb6-133"><a href="#cb6-133"></a><span class="ss">- </span>**Run focused celll**: <span class="in">`⌘/Ctrl + Enter`</span></span>
-<span id="cb6-134"><a href="#cb6-134"></a><span class="ss">- </span>**Insert cell below**: <span class="in">`⌘/Ctrl + M B`</span></span>
-<span id="cb6-135"><a href="#cb6-135"></a><span class="ss">- </span>**Insert cell above**: <span class="in">`⌘/Ctrl + M A`</span></span>
-<span id="cb6-136"><a href="#cb6-136"></a><span class="ss">- </span>**Delete cell**: <span class="in">`⌘/Ctrl + M D`</span></span>
-<span id="cb6-137"><a href="#cb6-137"></a><span class="ss">- </span>**Undo last action**: <span class="in">`⌘/Ctrl + M Z`</span></span>
-<span id="cb6-138"><a href="#cb6-138"></a><span class="ss">- </span>**Comment/Uncomment line**: <span class="in">`⌘/Ctrl + Alt + M`</span></span>
-<span id="cb6-139"><a href="#cb6-139"></a><span class="ss">- </span>**Find and replace**: <span class="in">`⌘/Ctrl + H`</span></span>
-<span id="cb6-140"><a href="#cb6-140"></a><span class="ss">- </span>**Show keyboard shortcuts**: <span class="in">`⌘/Ctrl + K H`</span></span>
-<span id="cb6-141"><a href="#cb6-141"></a></span>
-<span id="cb6-142"><a href="#cb6-142"></a>---</span>
-<span id="cb6-143"><a href="#cb6-143"></a></span>
-<span id="cb6-144"><a href="#cb6-144"></a><span class="fu"># Test your chosen setup {.unnumbered}</span></span>
+<span id="cb6-80"><a href="#cb6-80"></a><span class="fu">## Google Colab Tutorial</span></span>
+<span id="cb6-81"><a href="#cb6-81"></a></span>
+<span id="cb6-82"><a href="#cb6-82"></a>Google Colab is a free, cloud-based platform that allows you to run Jupyter Notebooks without any setup. To get started with Google Colab:</span>
+<span id="cb6-83"><a href="#cb6-83"></a></span>
+<span id="cb6-84"><a href="#cb6-84"></a>:::{.callout-information}</span>
+<span id="cb6-85"><a href="#cb6-85"></a>The use of <span class="co">[</span><span class="ot">Google Colab</span><span class="co">](https://colab.research.google.com)</span> needs a Google Account. Please read the <span class="co">[</span><span class="ot">Terms of Service</span><span class="co">](https://research.google.com/colaboratory/tos_v5.html)</span> and <span class="co">[</span><span class="ot">Privacy Policy</span><span class="co">](https://policies.google.com/privacy)</span></span>
+<span id="cb6-86"><a href="#cb6-86"></a>:::</span>
+<span id="cb6-87"><a href="#cb6-87"></a></span>
+<span id="cb6-88"><a href="#cb6-88"></a><span class="ss">1. </span>Visit <span class="co">[</span><span class="ot">Google Colab</span><span class="co">](https://colab.research.google.com/)</span> and sign in with your Google account.</span>
+<span id="cb6-89"><a href="#cb6-89"></a><span class="ss">2. </span>Create a new notebook or upload an existing <span class="in">`.ipynb`</span> file.</span>
+<span id="cb6-90"><a href="#cb6-90"></a><span class="ss">3. </span>Write and execute code in cells, just like in Jupyter Notebooks.</span>
+<span id="cb6-91"><a href="#cb6-91"></a><span class="ss">4. </span>Save your work to Google Drive or download it as a <span class="in">`.ipynb`</span> file.</span>
+<span id="cb6-92"><a href="#cb6-92"></a></span>
+<span id="cb6-93"><a href="#cb6-93"></a><span class="fu">### Key Features of Google Colab</span></span>
+<span id="cb6-94"><a href="#cb6-94"></a></span>
+<span id="cb6-95"><a href="#cb6-95"></a><span class="ss">- </span>**Free Access to GPUs/TPUs**: Accelerate your computations by enabling GPU or TPU support from the "Runtime" menu.</span>
+<span id="cb6-96"><a href="#cb6-96"></a><span class="ss">- </span>**Collaboration**: Share notebooks with others and work on them simultaneously, similar to Google Docs.</span>
+<span id="cb6-97"><a href="#cb6-97"></a><span class="ss">- </span>**Pre-installed Libraries**: Many popular Python libraries are pre-installed, saving you setup time.</span>
+<span id="cb6-98"><a href="#cb6-98"></a><span class="ss">- </span>**Integration with Google Drive**: Easily access and save files to your Google Drive.</span>
+<span id="cb6-99"><a href="#cb6-99"></a></span>
+<span id="cb6-100"><a href="#cb6-100"></a><span class="al">![Google Colab Interface](https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/images/googlecolab.png)</span></span>
+<span id="cb6-101"><a href="#cb6-101"></a></span>
+<span id="cb6-102"><a href="#cb6-102"></a>Upload data on Google Colab:</span>
+<span id="cb6-105"><a href="#cb6-105"></a><span class="in">```{python}</span></span>
+<span id="cb6-106"><a href="#cb6-106"></a><span class="co">#| eval: false</span></span>
+<span id="cb6-107"><a href="#cb6-107"></a><span class="co">#| echo: true</span></span>
+<span id="cb6-108"><a href="#cb6-108"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
+<span id="cb6-109"><a href="#cb6-109"></a><span class="in">```</span></span>
+<span id="cb6-110"><a href="#cb6-110"></a></span>
+<span id="cb6-111"><a href="#cb6-111"></a><span class="fu">### Upload a file</span></span>
+<span id="cb6-114"><a href="#cb6-114"></a><span class="in">```{python}</span></span>
+<span id="cb6-115"><a href="#cb6-115"></a><span class="co">#| eval: false</span></span>
+<span id="cb6-116"><a href="#cb6-116"></a><span class="co">#| echo: true</span></span>
+<span id="cb6-117"><a href="#cb6-117"></a>uploaded <span class="op">=</span> files.upload()</span>
+<span id="cb6-118"><a href="#cb6-118"></a><span class="in">```</span></span>
+<span id="cb6-119"><a href="#cb6-119"></a></span>
+<span id="cb6-120"><a href="#cb6-120"></a><span class="fu">### Access the uploaded file</span></span>
+<span id="cb6-123"><a href="#cb6-123"></a><span class="in">```{python}</span></span>
+<span id="cb6-124"><a href="#cb6-124"></a><span class="co">#| eval: false</span></span>
+<span id="cb6-125"><a href="#cb6-125"></a><span class="co">#| echo: true</span></span>
+<span id="cb6-126"><a href="#cb6-126"></a><span class="cf">for</span> filename <span class="kw">in</span> uploaded.keys():</span>
+<span id="cb6-127"><a href="#cb6-127"></a>    <span class="bu">print</span>(<span class="ss">f'User uploaded file "</span><span class="sc">{</span>filename<span class="sc">}</span><span class="ss">" with size </span><span class="sc">{</span><span class="bu">len</span>(uploaded[filename])<span class="sc">}</span><span class="ss"> bytes.'</span>)<span class="co">#</span></span>
+<span id="cb6-128"><a href="#cb6-128"></a><span class="in">```</span></span>
+<span id="cb6-129"><a href="#cb6-129"></a></span>
+<span id="cb6-130"><a href="#cb6-130"></a><span class="fu">### Important Short Cuts in Google Colab</span></span>
+<span id="cb6-131"><a href="#cb6-131"></a><span class="ss">- </span>**Run cell and select next cell**: <span class="in">`Shift + Enter`</span></span>
+<span id="cb6-132"><a href="#cb6-132"></a><span class="ss">- </span>**Run focused celll**: <span class="in">`⌘/Ctrl + Enter`</span></span>
+<span id="cb6-133"><a href="#cb6-133"></a><span class="ss">- </span>**Insert cell below**: <span class="in">`⌘/Ctrl + M B`</span></span>
+<span id="cb6-134"><a href="#cb6-134"></a><span class="ss">- </span>**Insert cell above**: <span class="in">`⌘/Ctrl + M A`</span></span>
+<span id="cb6-135"><a href="#cb6-135"></a><span class="ss">- </span>**Delete cell**: <span class="in">`⌘/Ctrl + M D`</span></span>
+<span id="cb6-136"><a href="#cb6-136"></a><span class="ss">- </span>**Undo last action**: <span class="in">`⌘/Ctrl + M Z`</span></span>
+<span id="cb6-137"><a href="#cb6-137"></a><span class="ss">- </span>**Comment/Uncomment line**: <span class="in">`⌘/Ctrl + Alt + M`</span></span>
+<span id="cb6-138"><a href="#cb6-138"></a><span class="ss">- </span>**Find and replace**: <span class="in">`⌘/Ctrl + H`</span></span>
+<span id="cb6-139"><a href="#cb6-139"></a><span class="ss">- </span>**Show keyboard shortcuts**: <span class="in">`⌘/Ctrl + K H`</span></span>
+<span id="cb6-140"><a href="#cb6-140"></a></span>
+<span id="cb6-141"><a href="#cb6-141"></a>---</span>
+<span id="cb6-142"><a href="#cb6-142"></a></span>
+<span id="cb6-143"><a href="#cb6-143"></a><span class="fu"># Test your chosen setup {.unnumbered}</span></span>
+<span id="cb6-144"><a href="#cb6-144"></a></span>
 <span id="cb6-145"><a href="#cb6-145"></a></span>
-<span id="cb6-146"><a href="#cb6-146"></a></span>
-<span id="cb6-147"><a href="#cb6-147"></a><span class="ss">- </span>open your editor </span>
-<span id="cb6-148"><a href="#cb6-148"></a><span class="ss">- </span>open a new file and save this file as helloworld.py</span>
-<span id="cb6-149"><a href="#cb6-149"></a><span class="ss">- </span>write your first test program:</span>
-<span id="cb6-150"><a href="#cb6-150"></a></span>
-<span id="cb6-151"><a href="#cb6-151"></a><span class="in">```python</span></span>
-<span id="cb6-152"><a href="#cb6-152"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span>
-<span id="cb6-153"><a href="#cb6-153"></a><span class="in">```</span></span>
-<span id="cb6-154"><a href="#cb6-154"></a></span>
-<span id="cb6-155"><a href="#cb6-155"></a><span class="ss">- </span>execute your program by using your IDE/Editor </span>
-<span id="cb6-156"><a href="#cb6-156"></a><span class="ss">- </span>or using command line in the terminal (Linux/MacOS) / command prompt under Windows.</span>
+<span id="cb6-146"><a href="#cb6-146"></a><span class="ss">- </span>open your editor </span>
+<span id="cb6-147"><a href="#cb6-147"></a><span class="ss">- </span>open a new file and save this file as helloworld.py</span>
+<span id="cb6-148"><a href="#cb6-148"></a><span class="ss">- </span>write your first test program:</span>
+<span id="cb6-149"><a href="#cb6-149"></a></span>
+<span id="cb6-150"><a href="#cb6-150"></a><span class="in">```python</span></span>
+<span id="cb6-151"><a href="#cb6-151"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span>
+<span id="cb6-152"><a href="#cb6-152"></a><span class="in">```</span></span>
+<span id="cb6-153"><a href="#cb6-153"></a></span>
+<span id="cb6-154"><a href="#cb6-154"></a><span class="ss">- </span>execute your program by using your IDE/Editor </span>
+<span id="cb6-155"><a href="#cb6-155"></a><span class="ss">- </span>or using command line in the terminal (Linux/MacOS) / command prompt under Windows.</span>
+<span id="cb6-156"><a href="#cb6-156"></a></span>
 <span id="cb6-157"><a href="#cb6-157"></a></span>
-<span id="cb6-158"><a href="#cb6-158"></a></span>
-<span id="cb6-159"><a href="#cb6-159"></a><span class="in">```bash</span></span>
-<span id="cb6-160"><a href="#cb6-160"></a><span class="bu">cd</span> /path/to/file</span>
-<span id="cb6-161"><a href="#cb6-161"></a><span class="ex">python</span> helloworld.py</span>
-<span id="cb6-162"><a href="#cb6-162"></a><span class="in">```</span></span>
+<span id="cb6-158"><a href="#cb6-158"></a><span class="in">```bash</span></span>
+<span id="cb6-159"><a href="#cb6-159"></a><span class="bu">cd</span> /path/to/file</span>
+<span id="cb6-160"><a href="#cb6-160"></a><span class="ex">python</span> helloworld.py</span>
+<span id="cb6-161"><a href="#cb6-161"></a><span class="in">```</span></span>
+<span id="cb6-162"><a href="#cb6-162"></a></span>
 <span id="cb6-163"><a href="#cb6-163"></a></span>
-<span id="cb6-164"><a href="#cb6-164"></a></span>
-<span id="cb6-165"><a href="#cb6-165"></a>The ouput should be: "Hello World!".</span>
+<span id="cb6-164"><a href="#cb6-164"></a>The ouput should be: "Hello World!".</span>
+<span id="cb6-165"><a href="#cb6-165"></a></span>
 <span id="cb6-166"><a href="#cb6-166"></a></span>
-<span id="cb6-167"><a href="#cb6-167"></a></span>
-<span id="cb6-168"><a href="#cb6-168"></a>If you are using Jupyter Notebook you can also write this code in a cell and execute it by pressing the run button.</span>
+<span id="cb6-167"><a href="#cb6-167"></a>If you are using Jupyter Notebook you can also write this code in a cell and execute it by pressing the run button.</span>
+<span id="cb6-168"><a href="#cb6-168"></a></span>
 <span id="cb6-169"><a href="#cb6-169"></a></span>
-<span id="cb6-170"><a href="#cb6-170"></a></span>
-<span id="cb6-171"><a href="#cb6-171"></a>:::{.callout-tip icon=false}</span>
-<span id="cb6-172"><a href="#cb6-172"></a>Congratulations</span>
-<span id="cb6-173"><a href="#cb6-173"></a>**You have successfully set up python!!**</span>
-<span id="cb6-174"><a href="#cb6-174"></a>:::</span>
+<span id="cb6-170"><a href="#cb6-170"></a>:::{.callout-tip icon=false}</span>
+<span id="cb6-171"><a href="#cb6-171"></a>Congratulations</span>
+<span id="cb6-172"><a href="#cb6-172"></a>**You have successfully set up python!!**</span>
+<span id="cb6-173"><a href="#cb6-173"></a>:::</span>
+<span id="cb6-174"><a href="#cb6-174"></a></span>
 <span id="cb6-175"><a href="#cb6-175"></a></span>
 <span id="cb6-176"><a href="#cb6-176"></a></span>
 <span id="cb6-177"><a href="#cb6-177"></a></span>
-<span id="cb6-178"><a href="#cb6-178"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
