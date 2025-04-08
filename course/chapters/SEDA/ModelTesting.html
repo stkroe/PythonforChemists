@@ -109,6 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="Model Testing – Data Analysis and Visualization for Chemists and Material Scientists">
 <meta property="og:description" content="">
+<meta property="og:image" content="ModelTesting_files/figure-html/cell-11-output-1.png">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
 
@@ -548,7 +549,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Null &amp; Alternative Hypothesis:</strong> The null hypothesis (H₀) assumes no effect, while the alternative hypothesis (H₁) suggests a significant difference.</p></li>
 <li><p><strong>t-tests:</strong> Used to compare the means of two groups (one-sample, independent, paired t-tests).</p></li>
 </ul>
-<div id="1122df6e" class="cell" data-execution_count="1">
+<div id="e01f8ecc" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Example: Null hypothesis - The mean is equal to 0</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co">#H0: μ = 0</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -576,7 +577,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Reject the null hypothesis: The mean is significantly different from 0.</code></pre>
 </div>
 </div>
-<div id="57cc4340" class="cell" data-execution_count="2">
+<div id="7892e93e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="co"># Generate two random samples (e.g., control and treatment groups)</span></span>
@@ -600,7 +601,7 @@ Reject the null hypothesis: The mean is significantly different from 0.</code></
 Reject the null hypothesis: The groups have significantly different means.</code></pre>
 </div>
 </div>
-<div id="0f5717c3" class="cell" data-execution_count="3">
+<div id="c9d1c508" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="co"># Generate paired data (e.g., before and after measurements)</span></span>
@@ -627,7 +628,7 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>ANOVA (Analysis of Variance):</strong> Compares means of multiple groups to check for significant differences.</li>
 </ul>
-<div id="33f7fa6d" class="cell" data-execution_count="4">
+<div id="e639a209" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3"></a></span>
@@ -646,7 +647,7 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>Chi-square Test:</strong> Used for categorical data to examine associations between different groups.</li>
 </ul>
-<div id="7d7fdbaa" class="cell" data-execution_count="5">
+<div id="51b44474" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="im">import</span> numpy <span class="im">as</span> nps</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="im">from</span> scipy.stats <span class="im">import</span> chi2_contingency</span>
@@ -668,7 +669,7 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>Z-Score:</strong> Measures how many standard deviations a data point is from the mean.</li>
 </ul>
-<div id="59a4fd17" class="cell" data-execution_count="6">
+<div id="6fdcb5be" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-2"><a href="#cb11-2"></a><span class="co"># Calculate Z-scores for a dataset</span></span>
 <span id="cb11-3"><a href="#cb11-3"></a>data <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span>
@@ -682,7 +683,7 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>IQR (Interquartile Range):</strong> Identifies outliers based on the spread of the data.</li>
 </ul>
-<div id="4a1d1e18" class="cell" data-execution_count="7">
+<div id="4516f01b" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb13-2"><a href="#cb13-2"></a><span class="co"># Calculate IQR for a dataset</span></span>
 <span id="cb13-3"><a href="#cb13-3"></a>q1 <span class="op">=</span> np.percentile(data, <span class="dv">25</span>)</span>
@@ -703,7 +704,7 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>DBSCAN (Density-Based Spatial Clustering of Applications with Noise):</strong> Clustering algorithm that identifies outliers based on density.</li>
 </ul>
-<div id="521f4666" class="cell" data-execution_count="8">
+<div id="9a2607d8" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb15-2"><a href="#cb15-2"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> DBSCAN</span>
 <span id="cb15-3"><a href="#cb15-3"></a></span>
@@ -783,7 +784,7 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>Isolation Forest:</strong> Anomaly detection algorithm that isolates outliers in a dataset.</li>
 </ul>
-<div id="14e98580" class="cell" data-execution_count="9">
+<div id="aa415f96" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> IsolationForest</span>
 <span id="cb17-3"><a href="#cb17-3"></a></span>
@@ -813,25 +814,20 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>Boxplot:</strong> Visual representation of outliers in a dataset.</li>
 </ul>
-<div id="00a7dcff" class="cell" data-execution_count="10">
+<div id="5a86c177" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="co"># Generate sample data</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
-<span id="cb19-4"><a href="#cb19-4"></a></span>
-<span id="cb19-5"><a href="#cb19-5"></a><span class="co"># Create boxplot</span></span>
-<span id="cb19-6"><a href="#cb19-6"></a>plt.boxplot(data)</span>
-<span id="cb19-7"><a href="#cb19-7"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[10]</span><span class="ansi-green-fg">, line 6</span>
-<span class="ansi-green-fg">      3</span> data = np.random.randn(<span class="ansi-green-fg">100</span>)
-<span class="ansi-green-fg">      5</span> <span style="font-style:italic;color:rgb(95,135,135)"># Create boxplot</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">6</span> <span class="ansi-yellow-bg">plt</span>.boxplot(data)
-<span class="ansi-green-fg">      7</span> plt.show()
-
-<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined</pre>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="co"># Generate sample data</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
+<span id="cb19-5"><a href="#cb19-5"></a></span>
+<span id="cb19-6"><a href="#cb19-6"></a><span class="co"># Create boxplot</span></span>
+<span id="cb19-7"><a href="#cb19-7"></a>plt.boxplot(data)</span>
+<span id="cb19-8"><a href="#cb19-8"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ModelTesting_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
 </div>
@@ -1699,28 +1695,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb20-231"><a href="#cb20-231"></a></span>
 <span id="cb20-234"><a href="#cb20-234"></a><span class="in">```{python}</span></span>
 <span id="cb20-235"><a href="#cb20-235"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb20-236"><a href="#cb20-236"></a><span class="co"># Generate sample data</span></span>
-<span id="cb20-237"><a href="#cb20-237"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
-<span id="cb20-238"><a href="#cb20-238"></a></span>
-<span id="cb20-239"><a href="#cb20-239"></a><span class="co"># Create boxplot</span></span>
-<span id="cb20-240"><a href="#cb20-240"></a>plt.boxplot(data)</span>
-<span id="cb20-241"><a href="#cb20-241"></a>plt.show()</span>
-<span id="cb20-242"><a href="#cb20-242"></a><span class="in">```</span></span>
-<span id="cb20-243"><a href="#cb20-243"></a></span>
-<span id="cb20-244"><a href="#cb20-244"></a>For more information on outlier detection, refer to the <span class="co">[</span><span class="ot">Scikit-learn documentation</span><span class="co">](https://scikit-learn.org/stable/modules/outlier_detection.html)</span>.</span>
-<span id="cb20-245"><a href="#cb20-245"></a></span>
+<span id="cb20-236"><a href="#cb20-236"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb20-237"><a href="#cb20-237"></a><span class="co"># Generate sample data</span></span>
+<span id="cb20-238"><a href="#cb20-238"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
+<span id="cb20-239"><a href="#cb20-239"></a></span>
+<span id="cb20-240"><a href="#cb20-240"></a><span class="co"># Create boxplot</span></span>
+<span id="cb20-241"><a href="#cb20-241"></a>plt.boxplot(data)</span>
+<span id="cb20-242"><a href="#cb20-242"></a>plt.show()</span>
+<span id="cb20-243"><a href="#cb20-243"></a><span class="in">```</span></span>
+<span id="cb20-244"><a href="#cb20-244"></a></span>
+<span id="cb20-245"><a href="#cb20-245"></a>For more information on outlier detection, refer to the <span class="co">[</span><span class="ot">Scikit-learn documentation</span><span class="co">](https://scikit-learn.org/stable/modules/outlier_detection.html)</span>.</span>
 <span id="cb20-246"><a href="#cb20-246"></a></span>
-<span id="cb20-247"><a href="#cb20-247"></a><span class="fu">## Example: Model Testing{.unnumbered}</span></span>
-<span id="cb20-248"><a href="#cb20-248"></a></span>
-<span id="cb20-249"><a href="#cb20-249"></a><span class="fu"># Exercises {.unnumbered}</span></span>
-<span id="cb20-250"><a href="#cb20-250"></a>Download it locally and try to solve the exercises. &lt;br&gt;</span>
-<span id="cb20-251"><a href="#cb20-251"></a></span>
-<span id="cb20-252"><a href="#cb20-252"></a><span class="co">[</span><span class="ot">Data Import and Inspection Example</span><span class="co">](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)</span></span>
-<span id="cb20-253"><a href="#cb20-253"></a></span>
+<span id="cb20-247"><a href="#cb20-247"></a></span>
+<span id="cb20-248"><a href="#cb20-248"></a><span class="fu">## Example: Model Testing{.unnumbered}</span></span>
+<span id="cb20-249"><a href="#cb20-249"></a></span>
+<span id="cb20-250"><a href="#cb20-250"></a><span class="fu"># Exercises {.unnumbered}</span></span>
+<span id="cb20-251"><a href="#cb20-251"></a>Download it locally and try to solve the exercises. &lt;br&gt;</span>
+<span id="cb20-252"><a href="#cb20-252"></a></span>
+<span id="cb20-253"><a href="#cb20-253"></a><span class="co">[</span><span class="ot">Data Import and Inspection Example</span><span class="co">](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)</span></span>
 <span id="cb20-254"><a href="#cb20-254"></a></span>
-<span id="cb20-255"><a href="#cb20-255"></a>Or open it in <span class="in">`Google Colab`</span>:</span>
-<span id="cb20-256"><a href="#cb20-256"></a></span>
-<span id="cb20-257"><a href="#cb20-257"></a><span class="co">[</span><span class="ot">Data Import and Inspection Example</span><span class="co">](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)</span></span>
+<span id="cb20-255"><a href="#cb20-255"></a></span>
+<span id="cb20-256"><a href="#cb20-256"></a>Or open it in <span class="in">`Google Colab`</span>:</span>
+<span id="cb20-257"><a href="#cb20-257"></a></span>
+<span id="cb20-258"><a href="#cb20-258"></a><span class="co">[</span><span class="ot">Data Import and Inspection Example</span><span class="co">](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
