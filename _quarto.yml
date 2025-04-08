@@ -36,6 +36,12 @@ book:
             href: course/presentations/introduction.html
           - text: Exercise A
             href: course/exercises/solutions/ExerciseA.pdf
+          - text: Exercise B
+            href: course/exercises/solutions/ExerciseB.pdf
+          - text: Exercise C
+            href: course/exercises/solutions/ExerciseC.pdf
+          - text: Exercise D
+            href: course/exercises/solutions/ExerciseD.pdf
 
   chapters:
       - index.qmd
