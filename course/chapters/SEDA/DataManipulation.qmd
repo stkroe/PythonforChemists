@@ -114,7 +114,7 @@ np.convolve(temperatures,np.ones(window) / window,
 
 If you are not sure, look in the numpy documentation, ask AI, search in the internet or try it out in a code cell.
 
-:::{.callout-important}
+:::{.callout-important collapse="true"}
 #### Answer:
 The code snippet calculates the moving average of the temperatures with a window size of 3.
 :::
