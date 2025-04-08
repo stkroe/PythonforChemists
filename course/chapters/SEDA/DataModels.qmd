@@ -78,13 +78,24 @@ For older version `scipy`only returned 5 values with fields slope, intercept, rv
 ```{python}
 from scipy.stats import linregress
 slope, intercept, r, p, se = linregress(x, y)
+print("slope: ", slope)
+print("intercept: ", intercept)
+print("r-value: ", r)
+print("p-value: ", p)
+print("standard error: ", se)
 ```
 And if you want to get the intercept error you can use the following return value as a object:
 
 ```{python}
 from scipy.stats import linregress
 results = linregress(x, y)
-print(results.intercept_stderr)
+print("slope: ", results.slope)
+print("intercept: ", results.intercept)
+print("r-value: ", results.rvalue)
+print("p-value: ", results.pvalue)
+print("standard error: ", results.stderr)
+print("intercept error: ", results.intercept_stderr)
+
 ```
 :::
 
@@ -121,6 +132,8 @@ y = 2 * X + 1 + np.random.normal(0, 1, 100).reshape(-1, 1)
 # Model fitting
 model = LinearRegression()
 model.fit(X, y)
+print("Parameters:", model.get_params())
+print("R-squared:", model.score(X, y))
 
 # Predictions
 y_pred = model.predict(X)
@@ -151,6 +164,10 @@ y = X**2 + np.random.normal(0, 1, 100)
 
 model = np.polyfit(X, y, 2)
 
+print("Coefficients:", model)
+
+# Create a polynomial function
+
 model = np.poly1d(model)
 
 X_range = np.linspace(1, 5, 100)
@@ -175,7 +192,11 @@ from scipy.optimize import curve_fit
 def nonlinear_func(x, a, b, c):
     return a * np.sin(b * x) + c
 
-params, _ = curve_fit(nonlinear_func, X.flatten(), y)
+popt,pov  = curve_fit(nonlinear_func, X.flatten(), y)
+perr = np.sqrt(np.diag(pov))
+
+print("Fitted parameters:", popt)
+print("Parameter errors:", perr)
 
 X_range = np.linspace(1, 5, 100)
 y_fit = nonlinear_func(X_range, *params)
