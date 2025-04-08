@@ -248,5 +248,17 @@ print("rolling mean: \n", data["Concentration (M)"].rolling(window=2).mean())
 
 ---
 
-## Example {.unnumbered}
+
+## Example: Descriptive Statistics {.unnumbered}
+
+# Exercises {.unnumbered}
+Download it locally and try to solve the exercises. <br>
+
+[Data Import and Inspection Example](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/SEDA_Example.ipynb)
+
+
+Or open it in `Google Colab`:
+
+[Data Import and Inspection Example](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/SEDA_Example.ipynb)
+
 
