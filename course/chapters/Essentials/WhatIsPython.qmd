@@ -69,7 +69,7 @@ There are a lot of resources to dive deeper into Python *e.g.*:
 :::{.callout-important}
 
 - Language Models like GPT-3 can help you to learn Python.
-- Today it is not always necessary to learn the syntax of a programming language by hard.
+- Today it is not always necessary to learn the syntax of a programming languages by heart.
 - You can use AI tools to help you with the syntax and concentrate on the problem-solving part.
 
 - **Learn how to prompt** your problem to the AI and get a proper solution.
