@@ -580,13 +580,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>More information can be found at the <a href="https://numpy.org/">Numpy website</a>.</p>
 <p>Load the required libraries</p>
-<div id="855b8acc" class="cell" data-execution_count="1">
+<div id="072d7d56" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="numpy-arrays" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="numpy-arrays">Numpy Arrays</h3>
 <p>An array can be described as multidimensional lists. For example a matrix is a 2D array.</p>
-<div id="5477f0e6" class="cell" data-execution_count="2">
+<div id="c8535f51" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>mat <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>], [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]])</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -596,7 +596,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The elements of an array can be accessed using the index of the element.</p>
-<div id="0b737c69" class="cell" data-execution_count="3">
+<div id="038dbd0d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">print</span>(mat[<span class="dv">0</span>, <span class="dv">0</span>])   <span class="co"># 1 element at row 0, column 0</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a></span>
 <span id="cb4-3"><a href="#cb4-3"></a></span>
@@ -614,16 +614,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [4 5 6]</code></pre>
 </div>
 </div>
-<div id="357856bc" class="cell" data-execution_count="4">
+<div id="824458a4" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>empty_mat <span class="op">=</span> np.empty((<span class="dv">3</span>,<span class="dv">3</span>),dtype<span class="op">=</span><span class="bu">float</span>)</span>
 <span id="cb6-2"><a href="#cb6-2"></a><span class="bu">print</span>(empty_mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[4.67478094e-310 0.00000000e+000 0.00000000e+000]
+<pre><code>[[4.68604552e-310 0.00000000e+000 0.00000000e+000]
  [0.00000000e+000 0.00000000e+000 0.00000000e+000]
  [0.00000000e+000 0.00000000e+000 0.00000000e+000]]</code></pre>
 </div>
 </div>
-<div id="a89a8b57" class="cell" data-execution_count="5">
+<div id="df14ab47" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>ones_mat <span class="op">=</span> np.ones((<span class="dv">3</span>, <span class="dv">3</span>))</span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="bu">print</span>(ones_mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -632,7 +632,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  [1. 1. 1.]]</code></pre>
 </div>
 </div>
-<div id="2f7a5797" class="cell" data-execution_count="6">
+<div id="761c338d" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>zeros_mat <span class="op">=</span> np.zeros((<span class="dv">3</span>, <span class="dv">3</span>))</span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="bu">print</span>(zeros_mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -641,31 +641,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  [0. 0. 0.]]</code></pre>
 </div>
 </div>
-<div id="a928fe79" class="cell" data-execution_count="7">
+<div id="9186e752" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>arr <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">2</span>) <span class="co"># an array from 1 to 10 with a step of 2</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a><span class="bu">print</span>(arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1 3 5 7 9]</code></pre>
 </div>
 </div>
-<div id="8b70897d" class="cell" data-execution_count="8">
+<div id="51133f57" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>arr2 <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">100</span>,<span class="dv">5</span>) <span class="co"># an array from 0 to 100 with 5 elements</span></span>
 <span id="cb14-2"><a href="#cb14-2"></a><span class="bu">print</span>(arr2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[  0.  25.  50.  75. 100.]</code></pre>
 </div>
 </div>
-<div id="7b4d2f35" class="cell" data-execution_count="9">
+<div id="c498bbdd" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>rand_mat <span class="op">=</span> np.random.rand(<span class="dv">3</span>,<span class="dv">3</span>) <span class="co"># a 3x3 matrix with random numbers between 0 and 1</span></span>
 <span id="cb16-2"><a href="#cb16-2"></a><span class="bu">print</span>(rand_mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[0.29602892 0.10046841 0.08296279]
- [0.13323635 0.48859785 0.83759055]
- [0.82860086 0.27016692 0.36613247]]</code></pre>
+<pre><code>[[0.66910161 0.21816691 0.08035072]
+ [0.16101421 0.77416019 0.39035764]
+ [0.38012203 0.20829717 0.61570318]]</code></pre>
 </div>
 </div>
 <p>Often you need to know the shape of an array. The shape of an array is a tuple that contains the number of elements in each dimension.</p>
-<div id="e266a29c" class="cell" data-execution_count="10">
+<div id="973c33df" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="bu">print</span>(mat.shape) <span class="co"># (3, 3) 3 rows and 3 columns</span></span>
 <span id="cb18-2"><a href="#cb18-2"></a><span class="bu">print</span>(mat.size)  <span class="co"># 9 total number of elements</span></span>
 <span id="cb18-3"><a href="#cb18-3"></a><span class="bu">print</span>(mat.ndim)  <span class="co"># 2 number of dimensions</span></span>
@@ -692,13 +692,13 @@ int64</code></pre>
 <li>You can statistically analyze the data, export the data to different file formats, but also plot the data with the help of <code>matplotlib</code>.</li>
 </ul>
 <p>More information can be found under <a href="https://pandas.pydata.org/">Pandas website</a>.</p>
-<div id="59ad254a" class="cell" data-execution_count="11">
+<div id="ca01fe97" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="panda-dataframes" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="panda-dataframes">Panda DataFrames</h3>
 <p>Panda DataFrames are two-dimensional labeled data structures with columns of potentially different types like a table.</p>
-<div id="f0e4bc0d" class="cell" data-execution_count="12">
+<div id="b35632a3" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>data <span class="op">=</span> {</span>
 <span id="cb21-2"><a href="#cb21-2"></a>    <span class="st">"Name"</span>: [<span class="st">"Water"</span>, <span class="st">"Oxygen"</span>, <span class="st">"Hydrogen"</span>, <span class="st">"Carbon Dioxide"</span>, <span class="st">"Methane"</span>, <span class="st">"Ammonia"</span>, <span class="st">"Nitrogen"</span>, <span class="st">"Sulfur Dioxide"</span>],</span>
 <span id="cb21-3"><a href="#cb21-3"></a>    <span class="st">"Formula"</span>: [<span class="st">"H2O"</span>, <span class="st">"O2"</span>, <span class="st">"H2"</span>, <span class="st">"CO2"</span>, <span class="st">"CH4"</span>, <span class="st">"NH3"</span>, <span class="st">"N2"</span>, <span class="st">"SO2"</span>],</span>
@@ -723,7 +723,7 @@ int64</code></pre>
 <section id="panda-dataseries" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="panda-dataseries">Panda DataSeries</h3>
 <p>Panda DataSeries are one-dimensional labeled arrays.</p>
-<div id="554f4be0" class="cell" data-execution_count="13">
+<div id="c26c5b78" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>series_data <span class="op">=</span> pd.Series([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], index<span class="op">=</span>[<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span>])</span>
 <span id="cb23-2"><a href="#cb23-2"></a><span class="bu">print</span>(series_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
