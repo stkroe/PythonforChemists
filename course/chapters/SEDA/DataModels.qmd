@@ -199,7 +199,7 @@ print("Fitted parameters:", popt)
 print("Parameter errors:", perr)
 
 X_range = np.linspace(1, 5, 100)
-y_fit = nonlinear_func(X_range, *params)
+y_fit = nonlinear_func(X_range, *popt)
 
 plt.scatter(X, y, color='blue', label='Data')
 plt.plot(X_range, y_fit, color='purple', label='Non-Linear Fit')
