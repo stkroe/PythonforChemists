@@ -578,31 +578,75 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="playground-for-python" class="level1">
 <h1>Playground for Python</h1>
 <p>You can use the <code>load_wine</code> dataset from the <code>sklearn</code> library to practice data manipulation and visualization. Below is a code snippet that demonstrates how to load the dataset, perform some basic data analysis, and visualize it using <code>matplotlib</code>.</p>
-<div id="32e65055" class="cell" data-execution_count="8">
+<div id="32e65055" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_wine</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>load_wine</code> dataset contains information about different types of wines, including their chemical properties and quality ratings. You can use this dataset to practice various data manipulation techniques, such as filtering, grouping, and aggregating data.</p>
-<div id="c258dbf0" class="cell" data-execution_count="9">
+<div id="c258dbf0" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>data <span class="op">=</span> load_wine()</span>
-<span id="cb2-2"><a href="#cb2-2"></a>df <span class="op">=</span> pd.DataFrame(data.data, columns<span class="op">=</span>data.feature_names)</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a>df.style <span class="op">\</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>  .<span class="bu">format</span>(precision<span class="op">=</span><span class="dv">2</span>) <span class="op">\</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>  .highlight_max(axis<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'lightgreen'</span>) <span class="op">\</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a>  .highlight_min(axis<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'lightcoral'</span>) <span class="op">\</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>  .set_caption(<span class="st">"Wine Dataset Features"</span>) <span class="op">\</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>  .set_table_styles(</span>
-<span id="cb2-10"><a href="#cb2-10"></a>    [{<span class="st">'selector'</span>: <span class="st">'th.col0'</span>, <span class="st">'props'</span>: [(<span class="st">'color'</span>, <span class="st">'blue'</span>), (<span class="st">'font-weight'</span>, <span class="st">'bold'</span>)]}]</span>
-<span id="cb2-11"><a href="#cb2-11"></a>  ) <span class="op">\</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>  .set_properties(<span class="op">**</span>{<span class="st">'text-align'</span>: <span class="st">'left'</span>}) <span class="op">\</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a>  .set_table_attributes(<span class="st">'style="width: 100%; border: 1px solid black;"'</span>) <span class="op">\</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>  .set_table_styles(</span>
-<span id="cb2-15"><a href="#cb2-15"></a>    [{<span class="st">'selector'</span>: <span class="st">'th'</span>, <span class="st">'props'</span>: [(<span class="st">'background-color'</span>, <span class="st">'#f2f2f2'</span>), (<span class="st">'color'</span>, <span class="st">'black'</span>)]}],</span>
-<span id="cb2-16"><a href="#cb2-16"></a>    axis<span class="op">=</span><span class="dv">0</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a>  )</span>
-<span id="cb2-18"><a href="#cb2-18"></a>display(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>{'data': array([[1.423e+01, 1.710e+00, 2.430e+00, ..., 1.040e+00, 3.920e+00,
+         1.065e+03],
+        [1.320e+01, 1.780e+00, 2.140e+00, ..., 1.050e+00, 3.400e+00,
+         1.050e+03],
+        [1.316e+01, 2.360e+00, 2.670e+00, ..., 1.030e+00, 3.170e+00,
+         1.185e+03],
+        ...,
+        [1.327e+01, 4.280e+00, 2.260e+00, ..., 5.900e-01, 1.560e+00,
+         8.350e+02],
+        [1.317e+01, 2.590e+00, 2.370e+00, ..., 6.000e-01, 1.620e+00,
+         8.400e+02],
+        [1.413e+01, 4.100e+00, 2.740e+00, ..., 6.100e-01, 1.600e+00,
+         5.600e+02]]),
+ 'target': array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]),
+ 'frame': None,
+ 'target_names': array(['class_0', 'class_1', 'class_2'], dtype='&lt;U7'),
+ 'DESCR': '.. _wine_dataset:\n\nWine recognition dataset\n------------------------\n\n**Data Set Characteristics:**\n\n:Number of Instances: 178\n:Number of Attributes: 13 numeric, predictive attributes and the class\n:Attribute Information:\n    - Alcohol\n    - Malic acid\n    - Ash\n    - Alcalinity of ash\n    - Magnesium\n    - Total phenols\n    - Flavanoids\n    - Nonflavanoid phenols\n    - Proanthocyanins\n    - Color intensity\n    - Hue\n    - OD280/OD315 of diluted wines\n    - Proline\n    - class:\n        - class_0\n        - class_1\n        - class_2\n\n:Summary Statistics:\n\n============================= ==== ===== ======= =====\n                                Min   Max   Mean     SD\n============================= ==== ===== ======= =====\nAlcohol:                      11.0  14.8    13.0   0.8\nMalic Acid:                   0.74  5.80    2.34  1.12\nAsh:                          1.36  3.23    2.36  0.27\nAlcalinity of Ash:            10.6  30.0    19.5   3.3\nMagnesium:                    70.0 162.0    99.7  14.3\nTotal Phenols:                0.98  3.88    2.29  0.63\nFlavanoids:                   0.34  5.08    2.03  1.00\nNonflavanoid Phenols:         0.13  0.66    0.36  0.12\nProanthocyanins:              0.41  3.58    1.59  0.57\nColour Intensity:              1.3  13.0     5.1   2.3\nHue:                          0.48  1.71    0.96  0.23\nOD280/OD315 of diluted wines: 1.27  4.00    2.61  0.71\nProline:                       278  1680     746   315\n============================= ==== ===== ======= =====\n\n:Missing Attribute Values: None\n:Class Distribution: class_0 (59), class_1 (71), class_2 (48)\n:Creator: R.A. Fisher\n:Donor: Michael Marshall (MARSHALL%PLU@io.arc.nasa.gov)\n:Date: July, 1988\n\nThis is a copy of UCI ML Wine recognition datasets.\nhttps://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data\n\nThe data is the results of a chemical analysis of wines grown in the same\nregion in Italy by three different cultivators. There are thirteen different\nmeasurements taken for different constituents found in the three types of\nwine.\n\nOriginal Owners:\n\nForina, M. et al, PARVUS -\nAn Extendible Package for Data Exploration, Classification and Correlation.\nInstitute of Pharmaceutical and Food Analysis and Technologies,\nVia Brigata Salerno, 16147 Genoa, Italy.\n\nCitation:\n\nLichman, M. (2013). UCI Machine Learning Repository\n[https://archive.ics.uci.edu/ml]. Irvine, CA: University of California,\nSchool of Information and Computer Science.\n\n.. dropdown:: References\n\n    (1) S. Aeberhard, D. Coomans and O. de Vel,\n    Comparison of Classifiers in High Dimensional Settings,\n    Tech. Rep. no. 92-02, (1992), Dept. of Computer Science and Dept. of\n    Mathematics and Statistics, James Cook University of North Queensland.\n    (Also submitted to Technometrics).\n\n    The data was used with many others for comparing various\n    classifiers. The classes are separable, though only RDA\n    has achieved 100% correct classification.\n    (RDA : 100%, QDA 99.4%, LDA 98.9%, 1NN 96.1% (z-transformed data))\n    (All results using the leave-one-out technique)\n\n    (2) S. Aeberhard, D. Coomans and O. de Vel,\n    "THE CLASSIFICATION PERFORMANCE OF RDA"\n    Tech. Rep. no. 92-01, (1992), Dept. of Computer Science and Dept. of\n    Mathematics and Statistics, James Cook University of North Queensland.\n    (Also submitted to Journal of Chemometrics).\n',
+ 'feature_names': ['alcohol',
+  'malic_acid',
+  'ash',
+  'alcalinity_of_ash',
+  'magnesium',
+  'total_phenols',
+  'flavanoids',
+  'nonflavanoid_phenols',
+  'proanthocyanins',
+  'color_intensity',
+  'hue',
+  'od280/od315_of_diluted_wines',
+  'proline']}</code></pre>
+</div>
+</div>
+<div id="f36ea42d" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>df <span class="op">=</span> pd.DataFrame(data.data, columns<span class="op">=</span>data.feature_names)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>df[<span class="st">'target'</span>] <span class="op">=</span> data.target</span>
+<span id="cb4-3"><a href="#cb4-3"></a>df[<span class="st">'targe_name'</span>] <span class="op">=</span> df[<span class="st">'target'</span>].<span class="bu">map</span>({<span class="dv">0</span>: <span class="st">'Class 0'</span>, <span class="dv">1</span>: <span class="st">'Class 1'</span>, <span class="dv">2</span>: <span class="st">'Class 2'</span>})</span>
+<span id="cb4-4"><a href="#cb4-4"></a>df.style <span class="op">\</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>  .<span class="bu">format</span>(precision<span class="op">=</span><span class="dv">2</span>) <span class="op">\</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>  .highlight_max(axis<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'lightgreen'</span>) <span class="op">\</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>  .highlight_min(axis<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'lightcoral'</span>) <span class="op">\</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>  .set_caption(<span class="st">"Wine Dataset Features"</span>) <span class="op">\</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>  .set_table_styles(</span>
+<span id="cb4-10"><a href="#cb4-10"></a>    [{<span class="st">'selector'</span>: <span class="st">'th.col0'</span>, <span class="st">'props'</span>: [(<span class="st">'color'</span>, <span class="st">'blue'</span>), (<span class="st">'font-weight'</span>, <span class="st">'bold'</span>)]}]</span>
+<span id="cb4-11"><a href="#cb4-11"></a>  ) <span class="op">\</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a>  .set_properties(<span class="op">**</span>{<span class="st">'text-align'</span>: <span class="st">'left'</span>}) <span class="op">\</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a>  .set_table_attributes(<span class="st">'style="width: 100%; border: 1px solid black;"'</span>) <span class="op">\</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a>  .set_table_styles(</span>
+<span id="cb4-15"><a href="#cb4-15"></a>    [{<span class="st">'selector'</span>: <span class="st">'th'</span>, <span class="st">'props'</span>: [(<span class="st">'background-color'</span>, <span class="st">'#f2f2f2'</span>), (<span class="st">'color'</span>, <span class="st">'black'</span>)]}],</span>
+<span id="cb4-16"><a href="#cb4-16"></a>    axis<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a>  )</span>
+<span id="cb4-18"><a href="#cb4-18"></a>display(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 
@@ -624,6 +668,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th">hue</th>
 <th data-quarto-table-cell-role="th">od280/od315_of_diluted_wines</th>
 <th data-quarto-table-cell-role="th">proline</th>
+<th data-quarto-table-cell-role="th">target</th>
+<th data-quarto-table-cell-role="th">targe_name</th>
 </tr>
 </thead>
 <tbody>
@@ -642,6 +688,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>1.04</td>
 <td>3.92</td>
 <td>1065.0</td>
+<td>0</td>
+<td>Class 0</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
@@ -658,6 +706,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>1.05</td>
 <td>3.40</td>
 <td>1050.0</td>
+<td>0</td>
+<td>Class 0</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
@@ -674,6 +724,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>1.03</td>
 <td>3.17</td>
 <td>1185.0</td>
+<td>0</td>
+<td>Class 0</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
@@ -690,6 +742,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>0.86</td>
 <td>3.45</td>
 <td>1480.0</td>
+<td>0</td>
+<td>Class 0</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
@@ -706,9 +760,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>1.04</td>
 <td>2.93</td>
 <td>735.0</td>
+<td>0</td>
+<td>Class 0</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -738,6 +796,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>0.64</td>
 <td>1.74</td>
 <td>740.0</td>
+<td>2</td>
+<td>Class 2</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">174</td>
@@ -754,6 +814,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>0.70</td>
 <td>1.56</td>
 <td>750.0</td>
+<td>2</td>
+<td>Class 2</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">175</td>
@@ -770,6 +832,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>0.59</td>
 <td>1.56</td>
 <td>835.0</td>
+<td>2</td>
+<td>Class 2</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">176</td>
@@ -786,6 +850,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>0.60</td>
 <td>1.62</td>
 <td>840.0</td>
+<td>2</td>
+<td>Class 2</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">177</td>
@@ -802,11 +868,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>0.61</td>
 <td>1.60</td>
 <td>560.0</td>
+<td>2</td>
+<td>Class 2</td>
 </tr>
 </tbody>
 </table>
 
-<p>178 rows × 13 columns</p>
+<p>178 rows × 15 columns</p>
 </div>
 </div>
 </div>

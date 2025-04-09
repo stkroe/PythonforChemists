@@ -690,19 +690,19 @@ Tip
 </figure>
 </div>
 <p>Upload data on Google Colab:</p>
-<div id="311a049a" class="cell" data-execution_count="1">
+<div id="0f2abef6" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="upload-a-file" class="level3">
 <h3 class="anchored" data-anchor-id="upload-a-file">Upload a file</h3>
-<div id="f432f068" class="cell" data-execution_count="2">
+<div id="5b8596a8" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>uploaded <span class="op">=</span> files.upload()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="access-the-uploaded-file" class="level3">
 <h3 class="anchored" data-anchor-id="access-the-uploaded-file">Access the uploaded file</h3>
-<div id="48fbeaf6" class="cell" data-execution_count="3">
+<div id="8f1e0935" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="cf">for</span> filename <span class="kw">in</span> uploaded.keys():</span>
 <span id="cb3-2"><a href="#cb3-2"></a>    <span class="bu">print</span>(<span class="ss">f'User uploaded file "</span><span class="sc">{</span>filename<span class="sc">}</span><span class="ss">" with size </span><span class="sc">{</span><span class="bu">len</span>(uploaded[filename])<span class="sc">}</span><span class="ss"> bytes.'</span>)<span class="co">#</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
