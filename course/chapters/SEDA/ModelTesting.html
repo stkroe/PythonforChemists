@@ -585,7 +585,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Null &amp; Alternative Hypothesis:</strong> The null hypothesis (H₀) assumes no effect, while the alternative hypothesis (H₁) suggests a significant difference.</p></li>
 <li><p><strong>t-tests:</strong> Used to compare the means of two groups (one-sample, independent, paired t-tests).</p></li>
 </ul>
-<div id="01f14f01" class="cell" data-execution_count="1">
+<div id="79cc36d2" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Example: Null hypothesis - The mean is equal to 0</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co">#H0: μ = 0</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -613,7 +613,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Reject the null hypothesis: The mean is significantly different from 0.</code></pre>
 </div>
 </div>
-<div id="534770d8" class="cell" data-execution_count="2">
+<div id="68312085" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="co"># Generate two random samples (e.g., control and treatment groups)</span></span>
@@ -637,7 +637,7 @@ Reject the null hypothesis: The mean is significantly different from 0.</code></
 Reject the null hypothesis: The groups have significantly different means.</code></pre>
 </div>
 </div>
-<div id="0939e8fb" class="cell" data-execution_count="3">
+<div id="19cd35c3" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="co"># Generate paired data (e.g., before and after measurements)</span></span>
@@ -664,7 +664,7 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>ANOVA (Analysis of Variance):</strong> Compares means of multiple groups to check for significant differences.</li>
 </ul>
-<div id="372c0909" class="cell" data-execution_count="4">
+<div id="178b4b1a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3"></a></span>
@@ -683,7 +683,7 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>Chi-square Test:</strong> Used for categorical data to examine associations between different groups.</li>
 </ul>
-<div id="9a3666ce" class="cell" data-execution_count="5">
+<div id="200b4137" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="im">import</span> numpy <span class="im">as</span> nps</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="im">from</span> scipy.stats <span class="im">import</span> chi2_contingency</span>
@@ -705,21 +705,47 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>Z-Score:</strong> Measures how many standard deviations a data point is from the mean.</li>
 </ul>
-<div id="0c598869" class="cell" data-execution_count="6">
+<div id="f8ccbc71" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-2"><a href="#cb11-2"></a><span class="co"># Calculate Z-scores for a dataset</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>data <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span>
-<span id="cb11-4"><a href="#cb11-4"></a>z_scores <span class="op">=</span> stats.zscore(data)</span>
-<span id="cb11-5"><a href="#cb11-5"></a><span class="bu">print</span>(z_scores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-3"><a href="#cb11-3"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
+<span id="cb11-4"><a href="#cb11-4"></a>data[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">100</span>  <span class="co"># Introduce an outlier</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>z_scores <span class="op">=</span> stats.zscore(data)</span>
+<span id="cb11-6"><a href="#cb11-6"></a><span class="bu">print</span>(z_scores)</span>
+<span id="cb11-7"><a href="#cb11-7"></a><span class="bu">print</span>(<span class="st">"Outliers: "</span>, data[np.<span class="bu">abs</span>(z_scores) <span class="op">&gt;</span> <span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[-1.5666989  -1.21854359 -0.87038828 -0.52223297 -0.17407766  0.17407766
-  0.52223297  0.87038828  1.21854359  1.5666989 ]</code></pre>
+<pre><code>[ 9.90505941e+00 -1.17555563e-01 -2.09660373e-01 -2.18651170e-01
+ -1.76967409e-02  3.66966543e-02 -1.06186084e-01  1.41168632e-03
+ -6.28039437e-02 -1.63520210e-01 -6.28279953e-02  5.48836555e-02
+ -1.02566214e-01  5.75454398e-02 -3.61062551e-01 -1.67586938e-02
+ -9.02739371e-02 -1.28894982e-01 -8.98023757e-02 -2.97819382e-01
+ -1.20958229e-01 -6.32564718e-02  4.88669726e-02 -1.50830130e-01
+ -1.79864198e-01 -1.49178145e-01 -7.40495357e-03 -6.60937643e-02
+ -1.51979593e-01 -4.76346746e-02 -8.92704836e-02 -2.07851444e-03
+ -1.69215845e-01 -1.31761619e-01 -1.38208825e-01 -2.45392806e-01
+ -6.93581663e-02 -7.28660840e-02 -9.84706096e-02 -1.22450356e-01
+ -2.40576439e-01 -1.41063695e-01 -1.33267465e-01 -1.79242313e-01
+ -1.15117252e-01 -5.85607463e-02  8.97126597e-02 -8.15173250e-02
+ -7.32167138e-02 -1.06429762e-01 -2.90936832e-01 -1.01634621e-01
+ -9.29567067e-02  1.47441603e-01 -1.18226033e-01 -6.88152405e-02
+ -1.02454742e-01 -2.15897199e-01  1.53463075e-02 -2.37584688e-02
+ -1.98469971e-02 -1.89957661e-01  4.13539641e-02 -2.39223925e-01
+ -4.02727343e-02  1.20151929e-01 -1.98075828e-01 -1.55634822e-01
+ -8.90129980e-02 -1.49350076e-01 -2.54111176e-01 -9.21230935e-02
+ -2.05255467e-01 -5.16037783e-02 -1.90961745e-01  5.60739202e-02
+ -1.77339147e-01 -1.31201330e-01 -1.75975614e-02 -2.22118340e-01
+ -7.62269755e-02  3.17849426e-02 -2.59795453e-01 -8.05113140e-02
+ -7.29833792e-02 -2.07682769e-02 -2.22727225e-01 -2.31081190e-01
+ -4.67669108e-02 -6.92716918e-02 -7.39227531e-02 -6.43233391e-02
+ -1.67012118e-01 -7.57474055e-02 -6.96630699e-02 -1.70446175e-01
+  8.76706957e-02 -5.15797196e-02 -2.18160659e-01 -3.33002660e-02]
+Outliers:  [100.]</code></pre>
 </div>
 </div>
 <ul>
 <li><strong>IQR (Interquartile Range):</strong> Identifies outliers based on the spread of the data.</li>
 </ul>
-<div id="cab5586e" class="cell" data-execution_count="7">
+<div id="2ebea4d8" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb13-2"><a href="#cb13-2"></a><span class="co"># Calculate IQR for a dataset</span></span>
 <span id="cb13-3"><a href="#cb13-3"></a>q1 <span class="op">=</span> np.percentile(data, <span class="dv">25</span>)</span>
@@ -734,13 +760,13 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <span id="cb13-12"><a href="#cb13-12"></a>outliers <span class="op">=</span> data[(data <span class="op">&lt;</span> lower_bound) <span class="op">|</span> (data <span class="op">&gt;</span> upper_bound)]</span>
 <span id="cb13-13"><a href="#cb13-13"></a><span class="bu">print</span>(outliers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[]</code></pre>
+<pre><code>[100.          -2.6197451    2.46324211]</code></pre>
 </div>
 </div>
 <ul>
 <li><strong>DBSCAN (Density-Based Spatial Clustering of Applications with Noise):</strong> Clustering algorithm that identifies outliers based on density.</li>
 </ul>
-<div id="7c1f3705" class="cell" data-execution_count="8">
+<div id="45b684c5" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb15-2"><a href="#cb15-2"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> DBSCAN</span>
 <span id="cb15-3"><a href="#cb15-3"></a></span>
@@ -755,110 +781,98 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <span id="cb15-12"><a href="#cb15-12"></a>outliers <span class="op">=</span> data[dbscan.labels_ <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>]</span>
 <span id="cb15-13"><a href="#cb15-13"></a><span class="bu">print</span>(outliers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[-1.10633497 -1.19620662]
- [ 0.81252582  1.35624003]
- [-0.07201012  1.0035329 ]
- [ 0.36139561  1.53803657]
- [-0.03582604  1.56464366]
- [-2.6197451   0.8219025 ]
- [ 0.09176078 -1.98756891]
- [ 1.47789404 -0.51827022]
- [ 0.91540212  0.32875111]
- [-0.5297602   0.51326743]
- [-0.39210815 -1.46351495]
- [-1.41537074 -0.42064532]
- [-0.34271452 -0.80227727]
- [ 1.8861859   0.17457781]
- [ 0.25755039 -0.07444592]
- [-1.91877122 -0.02651388]
- [ 0.06023021  2.46324211]
- [-0.03471177 -1.16867804]
- [ 1.14282281  0.75193303]
- [ 0.79103195 -0.90938745]
- [ 1.40279431 -1.40185106]
- [ 0.58685709  2.19045563]
- [-1.55066343  0.06856297]
- [-0.91942423  1.54993441]
- [ 0.81351722 -1.23086432]
- [ 0.22745993  1.30714275]
- [-1.60748323  0.18463386]
- [-1.23695071 -1.32045661]
- [-0.68002472  0.2322537 ]
- [ 1.86577451  0.47383292]
+<pre><code>[[-0.97468167  0.7870846 ]
  [ 1.15859558 -0.82068232]
- [ 0.96337613  0.41278093]
  [ 0.82206016  1.89679298]
- [-0.24538812 -0.75373616]
  [-0.88951443 -0.81581028]
  [ 0.01300189  1.45353408]
  [-0.26465683  2.72016917]
  [ 0.62566735 -0.85715756]
+ [-1.0708925   0.48247242]
  [ 0.47323762 -0.07282891]
  [-0.84679372 -1.51484722]
- [ 0.21409374 -1.24573878]
- [ 0.05820872 -1.1429703 ]
  [ 1.08305124  1.05380205]
  [-1.37766937 -0.93782504]
  [ 0.51504769  3.85273149]
- [ 0.95400176  0.65139125]
- [-0.48536355  0.08187414]
  [ 2.31465857 -1.86726519]
  [ 0.68626019 -1.61271587]
- [ 0.06428002 -1.07774478]
- [-0.71530371  0.67959775]
- [-0.73036663  0.21645859]
  [ 2.14394409  0.63391902]
  [-2.02514259  0.18645431]
  [-1.20029641 -0.33450124]
  [-0.47494531 -0.65332923]
  [ 1.76545424  0.40498171]
+ [-1.26088395  0.91786195]
  [ 2.1221562   1.03246526]
  [-1.51936997 -0.48423407]
- [ 1.26691115 -0.70766947]]</code></pre>
+ [ 1.26691115 -0.70766947]
+ [-3.24126734 -1.02438764]
+ [-0.25256815 -1.24778318]
+ [ 1.6324113  -1.43014138]
+ [-0.44004449  0.13074058]
+ [ 1.44127329 -1.43586215]
+ [ 1.16316375  0.01023306]
+ [-0.98150865  0.46210347]
+ [ 1.58601682 -1.2378155 ]
+ [ 2.13303337 -1.9520878 ]
+ [-0.02090159  0.11732738]
+ [ 1.2776649  -0.59157139]
+ [ 0.54709738 -0.20219265]
+ [-0.2176812   1.09877685]
+ [ 1.30547881  0.02100384]
+ [ 0.68195297 -0.31026676]
+ [ 0.32416635 -0.13014305]
+ [-0.81822068  2.09238728]
+ [-1.00601738 -1.21418861]
+ [ 0.97511973 -0.14705738]
+ [-1.44808434 -1.40746377]
+ [ 0.31090757  1.47535622]
+ [ 0.85765962 -0.15993853]]</code></pre>
 </div>
 </div>
 <ul>
 <li><strong>Isolation Forest:</strong> Anomaly detection algorithm that isolates outliers in a dataset.</li>
 </ul>
-<div id="dd12755b" class="cell" data-execution_count="9">
+<div id="324ac680" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> IsolationForest</span>
 <span id="cb17-3"><a href="#cb17-3"></a></span>
 <span id="cb17-4"><a href="#cb17-4"></a><span class="co"># Generate sample data</span></span>
 <span id="cb17-5"><a href="#cb17-5"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>, <span class="dv">2</span>)</span>
-<span id="cb17-6"><a href="#cb17-6"></a></span>
-<span id="cb17-7"><a href="#cb17-7"></a><span class="co"># Fit Isolation Forest model</span></span>
-<span id="cb17-8"><a href="#cb17-8"></a>isoforest <span class="op">=</span> IsolationForest(contamination<span class="op">=</span><span class="fl">0.1</span>)</span>
-<span id="cb17-9"><a href="#cb17-9"></a>isoforest.fit(data)</span>
-<span id="cb17-10"><a href="#cb17-10"></a></span>
-<span id="cb17-11"><a href="#cb17-11"></a><span class="co"># Identify outliers</span></span>
-<span id="cb17-12"><a href="#cb17-12"></a>outliers <span class="op">=</span> data[isoforest.predict(data) <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb17-13"><a href="#cb17-13"></a><span class="bu">print</span>(outliers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-6"><a href="#cb17-6"></a>data[<span class="dv">0</span>] <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">10</span>]  <span class="co"># Introduce an outlier</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a></span>
+<span id="cb17-8"><a href="#cb17-8"></a><span class="co"># Fit Isolation Forest model</span></span>
+<span id="cb17-9"><a href="#cb17-9"></a>isoforest <span class="op">=</span> IsolationForest(contamination<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb17-10"><a href="#cb17-10"></a>isoforest.fit(data)</span>
+<span id="cb17-11"><a href="#cb17-11"></a></span>
+<span id="cb17-12"><a href="#cb17-12"></a><span class="co"># Identify outliers</span></span>
+<span id="cb17-13"><a href="#cb17-13"></a>outliers <span class="op">=</span> data[isoforest.predict(data) <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb17-14"><a href="#cb17-14"></a><span class="bu">print</span>(outliers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[-3.24126734 -1.02438764]
- [ 2.13303337 -1.9520878 ]
- [-0.81822068  2.09238728]
+<pre><code>[[10.         10.        ]
  [-2.12389572 -0.52575502]
  [-1.32023321  1.83145877]
- [-1.71313453  1.35387237]
  [ 2.06074792  1.75534084]
- [ 1.05842449 -1.75873949]
  [-1.18325851 -2.03923218]
- [-2.0674421  -0.08912004]]</code></pre>
+ [-2.0674421  -0.08912004]
+ [-0.2750517  -2.30192116]
+ [ 3.07888081  1.11957491]
+ [ 0.92617755  1.90941664]
+ [-2.4716445  -0.79689526]]</code></pre>
 </div>
 </div>
 <ul>
 <li><strong>Boxplot:</strong> Visual representation of outliers in a dataset.</li>
 </ul>
-<div id="efb5a80b" class="cell" data-execution_count="10">
+<div id="3a9f05ab" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb19-2"><a href="#cb19-2"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb19-3"><a href="#cb19-3"></a><span class="co"># Generate sample data</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="co"># Generate sample data'</span></span>
 <span id="cb19-4"><a href="#cb19-4"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
-<span id="cb19-5"><a href="#cb19-5"></a></span>
-<span id="cb19-6"><a href="#cb19-6"></a><span class="co"># Create boxplot</span></span>
-<span id="cb19-7"><a href="#cb19-7"></a>plt.boxplot(data)</span>
-<span id="cb19-8"><a href="#cb19-8"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-5"><a href="#cb19-5"></a>data[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">10</span>  <span class="co"># Introduce an outlier</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a></span>
+<span id="cb19-7"><a href="#cb19-7"></a><span class="co"># Create boxplot</span></span>
+<span id="cb19-8"><a href="#cb19-8"></a>plt.boxplot(data)</span>
+<span id="cb19-9"><a href="#cb19-9"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -875,9 +889,9 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <section id="exercises" class="level1 unnumbered">
 <h1 class="unnumbered">Exercises</h1>
 <p>Download it locally and try to solve the exercises. <br></p>
-<p><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb">Data Import and Inspection Example</a></p>
+<p><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb">Model Testing Example</a></p>
 <p>Or open it in <code>Google Colab</code>:</p>
-<p><a href="https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb">Data Import and Inspection Example</a></p>
+<p><a href="https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb">Model Testing Example</a></p>
 
 
 <!-- -->
@@ -1665,95 +1679,99 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb20-159"><a href="#cb20-159"></a><span class="in">```{python}</span></span>
 <span id="cb20-160"><a href="#cb20-160"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb20-161"><a href="#cb20-161"></a><span class="co"># Calculate Z-scores for a dataset</span></span>
-<span id="cb20-162"><a href="#cb20-162"></a>data <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span>
-<span id="cb20-163"><a href="#cb20-163"></a>z_scores <span class="op">=</span> stats.zscore(data)</span>
-<span id="cb20-164"><a href="#cb20-164"></a><span class="bu">print</span>(z_scores)</span>
-<span id="cb20-165"><a href="#cb20-165"></a><span class="in">```</span></span>
-<span id="cb20-166"><a href="#cb20-166"></a></span>
-<span id="cb20-167"><a href="#cb20-167"></a><span class="ss">- </span>**IQR (Interquartile Range):** Identifies outliers based on the spread of the data.</span>
+<span id="cb20-162"><a href="#cb20-162"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
+<span id="cb20-163"><a href="#cb20-163"></a>data[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">100</span>  <span class="co"># Introduce an outlier</span></span>
+<span id="cb20-164"><a href="#cb20-164"></a>z_scores <span class="op">=</span> stats.zscore(data)</span>
+<span id="cb20-165"><a href="#cb20-165"></a><span class="bu">print</span>(z_scores)</span>
+<span id="cb20-166"><a href="#cb20-166"></a><span class="bu">print</span>(<span class="st">"Outliers: "</span>, data[np.<span class="bu">abs</span>(z_scores) <span class="op">&gt;</span> <span class="dv">3</span>])</span>
+<span id="cb20-167"><a href="#cb20-167"></a><span class="in">```</span></span>
 <span id="cb20-168"><a href="#cb20-168"></a></span>
-<span id="cb20-171"><a href="#cb20-171"></a><span class="in">```{python}</span></span>
-<span id="cb20-172"><a href="#cb20-172"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb20-173"><a href="#cb20-173"></a><span class="co"># Calculate IQR for a dataset</span></span>
-<span id="cb20-174"><a href="#cb20-174"></a>q1 <span class="op">=</span> np.percentile(data, <span class="dv">25</span>)</span>
-<span id="cb20-175"><a href="#cb20-175"></a>q3 <span class="op">=</span> np.percentile(data, <span class="dv">75</span>)</span>
-<span id="cb20-176"><a href="#cb20-176"></a>iqr <span class="op">=</span> q3 <span class="op">-</span> q1</span>
-<span id="cb20-177"><a href="#cb20-177"></a></span>
-<span id="cb20-178"><a href="#cb20-178"></a><span class="co"># Define outlier thresholds</span></span>
-<span id="cb20-179"><a href="#cb20-179"></a>lower_bound <span class="op">=</span> q1 <span class="op">-</span> <span class="fl">1.5</span> <span class="op">*</span> iqr</span>
-<span id="cb20-180"><a href="#cb20-180"></a>upper_bound <span class="op">=</span> q3 <span class="op">+</span> <span class="fl">1.5</span> <span class="op">*</span> iqr</span>
-<span id="cb20-181"><a href="#cb20-181"></a></span>
-<span id="cb20-182"><a href="#cb20-182"></a><span class="co"># Identify outliers</span></span>
-<span id="cb20-183"><a href="#cb20-183"></a>outliers <span class="op">=</span> data[(data <span class="op">&lt;</span> lower_bound) <span class="op">|</span> (data <span class="op">&gt;</span> upper_bound)]</span>
-<span id="cb20-184"><a href="#cb20-184"></a><span class="bu">print</span>(outliers)</span>
-<span id="cb20-185"><a href="#cb20-185"></a></span>
-<span id="cb20-186"><a href="#cb20-186"></a></span>
-<span id="cb20-187"><a href="#cb20-187"></a><span class="in">```</span></span>
+<span id="cb20-169"><a href="#cb20-169"></a><span class="ss">- </span>**IQR (Interquartile Range):** Identifies outliers based on the spread of the data.</span>
+<span id="cb20-170"><a href="#cb20-170"></a></span>
+<span id="cb20-173"><a href="#cb20-173"></a><span class="in">```{python}</span></span>
+<span id="cb20-174"><a href="#cb20-174"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb20-175"><a href="#cb20-175"></a><span class="co"># Calculate IQR for a dataset</span></span>
+<span id="cb20-176"><a href="#cb20-176"></a>q1 <span class="op">=</span> np.percentile(data, <span class="dv">25</span>)</span>
+<span id="cb20-177"><a href="#cb20-177"></a>q3 <span class="op">=</span> np.percentile(data, <span class="dv">75</span>)</span>
+<span id="cb20-178"><a href="#cb20-178"></a>iqr <span class="op">=</span> q3 <span class="op">-</span> q1</span>
+<span id="cb20-179"><a href="#cb20-179"></a></span>
+<span id="cb20-180"><a href="#cb20-180"></a><span class="co"># Define outlier thresholds</span></span>
+<span id="cb20-181"><a href="#cb20-181"></a>lower_bound <span class="op">=</span> q1 <span class="op">-</span> <span class="fl">1.5</span> <span class="op">*</span> iqr</span>
+<span id="cb20-182"><a href="#cb20-182"></a>upper_bound <span class="op">=</span> q3 <span class="op">+</span> <span class="fl">1.5</span> <span class="op">*</span> iqr</span>
+<span id="cb20-183"><a href="#cb20-183"></a></span>
+<span id="cb20-184"><a href="#cb20-184"></a><span class="co"># Identify outliers</span></span>
+<span id="cb20-185"><a href="#cb20-185"></a>outliers <span class="op">=</span> data[(data <span class="op">&lt;</span> lower_bound) <span class="op">|</span> (data <span class="op">&gt;</span> upper_bound)]</span>
+<span id="cb20-186"><a href="#cb20-186"></a><span class="bu">print</span>(outliers)</span>
+<span id="cb20-187"><a href="#cb20-187"></a></span>
 <span id="cb20-188"><a href="#cb20-188"></a></span>
-<span id="cb20-189"><a href="#cb20-189"></a></span>
-<span id="cb20-190"><a href="#cb20-190"></a><span class="ss">- </span>**DBSCAN (Density-Based Spatial Clustering of Applications with Noise):** Clustering algorithm that identifies outliers based on density.</span>
+<span id="cb20-189"><a href="#cb20-189"></a><span class="in">```</span></span>
+<span id="cb20-190"><a href="#cb20-190"></a></span>
 <span id="cb20-191"><a href="#cb20-191"></a></span>
-<span id="cb20-194"><a href="#cb20-194"></a><span class="in">```{python}</span></span>
-<span id="cb20-195"><a href="#cb20-195"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb20-196"><a href="#cb20-196"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> DBSCAN</span>
-<span id="cb20-197"><a href="#cb20-197"></a></span>
-<span id="cb20-198"><a href="#cb20-198"></a><span class="co"># Generate sample data</span></span>
-<span id="cb20-199"><a href="#cb20-199"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>, <span class="dv">2</span>)</span>
-<span id="cb20-200"><a href="#cb20-200"></a></span>
-<span id="cb20-201"><a href="#cb20-201"></a><span class="co"># Fit DBSCAN model</span></span>
-<span id="cb20-202"><a href="#cb20-202"></a>dbscan <span class="op">=</span> DBSCAN(eps<span class="op">=</span><span class="fl">0.3</span>, min_samples<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb20-203"><a href="#cb20-203"></a>dbscan.fit(data)</span>
-<span id="cb20-204"><a href="#cb20-204"></a></span>
-<span id="cb20-205"><a href="#cb20-205"></a><span class="co"># Identify outliers</span></span>
-<span id="cb20-206"><a href="#cb20-206"></a>outliers <span class="op">=</span> data[dbscan.labels_ <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb20-207"><a href="#cb20-207"></a><span class="bu">print</span>(outliers)</span>
-<span id="cb20-208"><a href="#cb20-208"></a><span class="in">```</span></span>
-<span id="cb20-209"><a href="#cb20-209"></a></span>
-<span id="cb20-210"><a href="#cb20-210"></a><span class="ss">- </span>**Isolation Forest:** Anomaly detection algorithm that isolates outliers in a dataset.</span>
+<span id="cb20-192"><a href="#cb20-192"></a><span class="ss">- </span>**DBSCAN (Density-Based Spatial Clustering of Applications with Noise):** Clustering algorithm that identifies outliers based on density.</span>
+<span id="cb20-193"><a href="#cb20-193"></a></span>
+<span id="cb20-196"><a href="#cb20-196"></a><span class="in">```{python}</span></span>
+<span id="cb20-197"><a href="#cb20-197"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb20-198"><a href="#cb20-198"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> DBSCAN</span>
+<span id="cb20-199"><a href="#cb20-199"></a></span>
+<span id="cb20-200"><a href="#cb20-200"></a><span class="co"># Generate sample data</span></span>
+<span id="cb20-201"><a href="#cb20-201"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>, <span class="dv">2</span>)</span>
+<span id="cb20-202"><a href="#cb20-202"></a></span>
+<span id="cb20-203"><a href="#cb20-203"></a><span class="co"># Fit DBSCAN model</span></span>
+<span id="cb20-204"><a href="#cb20-204"></a>dbscan <span class="op">=</span> DBSCAN(eps<span class="op">=</span><span class="fl">0.3</span>, min_samples<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb20-205"><a href="#cb20-205"></a>dbscan.fit(data)</span>
+<span id="cb20-206"><a href="#cb20-206"></a></span>
+<span id="cb20-207"><a href="#cb20-207"></a><span class="co"># Identify outliers</span></span>
+<span id="cb20-208"><a href="#cb20-208"></a>outliers <span class="op">=</span> data[dbscan.labels_ <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb20-209"><a href="#cb20-209"></a><span class="bu">print</span>(outliers)</span>
+<span id="cb20-210"><a href="#cb20-210"></a><span class="in">```</span></span>
 <span id="cb20-211"><a href="#cb20-211"></a></span>
-<span id="cb20-214"><a href="#cb20-214"></a><span class="in">```{python}</span></span>
-<span id="cb20-215"><a href="#cb20-215"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb20-216"><a href="#cb20-216"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> IsolationForest</span>
-<span id="cb20-217"><a href="#cb20-217"></a></span>
-<span id="cb20-218"><a href="#cb20-218"></a><span class="co"># Generate sample data</span></span>
-<span id="cb20-219"><a href="#cb20-219"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>, <span class="dv">2</span>)</span>
-<span id="cb20-220"><a href="#cb20-220"></a></span>
-<span id="cb20-221"><a href="#cb20-221"></a><span class="co"># Fit Isolation Forest model</span></span>
-<span id="cb20-222"><a href="#cb20-222"></a>isoforest <span class="op">=</span> IsolationForest(contamination<span class="op">=</span><span class="fl">0.1</span>)</span>
-<span id="cb20-223"><a href="#cb20-223"></a>isoforest.fit(data)</span>
-<span id="cb20-224"><a href="#cb20-224"></a></span>
-<span id="cb20-225"><a href="#cb20-225"></a><span class="co"># Identify outliers</span></span>
-<span id="cb20-226"><a href="#cb20-226"></a>outliers <span class="op">=</span> data[isoforest.predict(data) <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb20-227"><a href="#cb20-227"></a><span class="bu">print</span>(outliers)</span>
-<span id="cb20-228"><a href="#cb20-228"></a><span class="in">```</span></span>
-<span id="cb20-229"><a href="#cb20-229"></a></span>
-<span id="cb20-230"><a href="#cb20-230"></a><span class="ss">- </span>**Boxplot:** Visual representation of outliers in a dataset.</span>
-<span id="cb20-231"><a href="#cb20-231"></a></span>
-<span id="cb20-234"><a href="#cb20-234"></a><span class="in">```{python}</span></span>
-<span id="cb20-235"><a href="#cb20-235"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb20-236"><a href="#cb20-236"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb20-237"><a href="#cb20-237"></a><span class="co"># Generate sample data</span></span>
-<span id="cb20-238"><a href="#cb20-238"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
-<span id="cb20-239"><a href="#cb20-239"></a></span>
-<span id="cb20-240"><a href="#cb20-240"></a><span class="co"># Create boxplot</span></span>
-<span id="cb20-241"><a href="#cb20-241"></a>plt.boxplot(data)</span>
-<span id="cb20-242"><a href="#cb20-242"></a>plt.show()</span>
-<span id="cb20-243"><a href="#cb20-243"></a><span class="in">```</span></span>
-<span id="cb20-244"><a href="#cb20-244"></a></span>
-<span id="cb20-245"><a href="#cb20-245"></a>For more information on outlier detection, refer to the <span class="co">[</span><span class="ot">Scikit-learn documentation</span><span class="co">](https://scikit-learn.org/stable/modules/outlier_detection.html)</span>.</span>
-<span id="cb20-246"><a href="#cb20-246"></a></span>
-<span id="cb20-247"><a href="#cb20-247"></a></span>
-<span id="cb20-248"><a href="#cb20-248"></a><span class="fu">## Example: Model Testing{.unnumbered}</span></span>
-<span id="cb20-249"><a href="#cb20-249"></a></span>
-<span id="cb20-250"><a href="#cb20-250"></a><span class="fu"># Exercises {.unnumbered}</span></span>
-<span id="cb20-251"><a href="#cb20-251"></a>Download it locally and try to solve the exercises. &lt;br&gt;</span>
-<span id="cb20-252"><a href="#cb20-252"></a></span>
-<span id="cb20-253"><a href="#cb20-253"></a><span class="co">[</span><span class="ot">Data Import and Inspection Example</span><span class="co">](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)</span></span>
-<span id="cb20-254"><a href="#cb20-254"></a></span>
-<span id="cb20-255"><a href="#cb20-255"></a></span>
-<span id="cb20-256"><a href="#cb20-256"></a>Or open it in <span class="in">`Google Colab`</span>:</span>
-<span id="cb20-257"><a href="#cb20-257"></a></span>
-<span id="cb20-258"><a href="#cb20-258"></a><span class="co">[</span><span class="ot">Data Import and Inspection Example</span><span class="co">](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)</span></span>
+<span id="cb20-212"><a href="#cb20-212"></a><span class="ss">- </span>**Isolation Forest:** Anomaly detection algorithm that isolates outliers in a dataset.</span>
+<span id="cb20-213"><a href="#cb20-213"></a></span>
+<span id="cb20-216"><a href="#cb20-216"></a><span class="in">```{python}</span></span>
+<span id="cb20-217"><a href="#cb20-217"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb20-218"><a href="#cb20-218"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> IsolationForest</span>
+<span id="cb20-219"><a href="#cb20-219"></a></span>
+<span id="cb20-220"><a href="#cb20-220"></a><span class="co"># Generate sample data</span></span>
+<span id="cb20-221"><a href="#cb20-221"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>, <span class="dv">2</span>)</span>
+<span id="cb20-222"><a href="#cb20-222"></a>data[<span class="dv">0</span>] <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">10</span>]  <span class="co"># Introduce an outlier</span></span>
+<span id="cb20-223"><a href="#cb20-223"></a></span>
+<span id="cb20-224"><a href="#cb20-224"></a><span class="co"># Fit Isolation Forest model</span></span>
+<span id="cb20-225"><a href="#cb20-225"></a>isoforest <span class="op">=</span> IsolationForest(contamination<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb20-226"><a href="#cb20-226"></a>isoforest.fit(data)</span>
+<span id="cb20-227"><a href="#cb20-227"></a></span>
+<span id="cb20-228"><a href="#cb20-228"></a><span class="co"># Identify outliers</span></span>
+<span id="cb20-229"><a href="#cb20-229"></a>outliers <span class="op">=</span> data[isoforest.predict(data) <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb20-230"><a href="#cb20-230"></a><span class="bu">print</span>(outliers)</span>
+<span id="cb20-231"><a href="#cb20-231"></a><span class="in">```</span></span>
+<span id="cb20-232"><a href="#cb20-232"></a></span>
+<span id="cb20-233"><a href="#cb20-233"></a><span class="ss">- </span>**Boxplot:** Visual representation of outliers in a dataset.</span>
+<span id="cb20-234"><a href="#cb20-234"></a></span>
+<span id="cb20-237"><a href="#cb20-237"></a><span class="in">```{python}</span></span>
+<span id="cb20-238"><a href="#cb20-238"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb20-239"><a href="#cb20-239"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb20-240"><a href="#cb20-240"></a><span class="co"># Generate sample data'</span></span>
+<span id="cb20-241"><a href="#cb20-241"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
+<span id="cb20-242"><a href="#cb20-242"></a>data[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">10</span>  <span class="co"># Introduce an outlier</span></span>
+<span id="cb20-243"><a href="#cb20-243"></a></span>
+<span id="cb20-244"><a href="#cb20-244"></a><span class="co"># Create boxplot</span></span>
+<span id="cb20-245"><a href="#cb20-245"></a>plt.boxplot(data)</span>
+<span id="cb20-246"><a href="#cb20-246"></a>plt.show()</span>
+<span id="cb20-247"><a href="#cb20-247"></a><span class="in">```</span></span>
+<span id="cb20-248"><a href="#cb20-248"></a></span>
+<span id="cb20-249"><a href="#cb20-249"></a>For more information on outlier detection, refer to the <span class="co">[</span><span class="ot">Scikit-learn documentation</span><span class="co">](https://scikit-learn.org/stable/modules/outlier_detection.html)</span>.</span>
+<span id="cb20-250"><a href="#cb20-250"></a></span>
+<span id="cb20-251"><a href="#cb20-251"></a></span>
+<span id="cb20-252"><a href="#cb20-252"></a><span class="fu">## Example: Model Testing{.unnumbered}</span></span>
+<span id="cb20-253"><a href="#cb20-253"></a></span>
+<span id="cb20-254"><a href="#cb20-254"></a><span class="fu"># Exercises {.unnumbered}</span></span>
+<span id="cb20-255"><a href="#cb20-255"></a>Download it locally and try to solve the exercises. &lt;br&gt;</span>
+<span id="cb20-256"><a href="#cb20-256"></a></span>
+<span id="cb20-257"><a href="#cb20-257"></a><span class="co">[</span><span class="ot">Model Testing Example</span><span class="co">](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)</span></span>
+<span id="cb20-258"><a href="#cb20-258"></a></span>
+<span id="cb20-259"><a href="#cb20-259"></a></span>
+<span id="cb20-260"><a href="#cb20-260"></a>Or open it in <span class="in">`Google Colab`</span>:</span>
+<span id="cb20-261"><a href="#cb20-261"></a></span>
+<span id="cb20-262"><a href="#cb20-262"></a><span class="co">[</span><span class="ot">Model Testing Example</span><span class="co">](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
