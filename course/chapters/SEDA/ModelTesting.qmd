@@ -150,6 +150,7 @@ import numpy as np
 data = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 z_scores = stats.zscore(data)
 print(z_scores)
+print("Outliers:", data[np.abs(z_scores) > 2))  # Outliers are those with Z-score > 3
 ```
 
 - **IQR (Interquartile Range):** Identifies outliers based on the spread of the data.
