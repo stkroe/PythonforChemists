@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercise A 1 – Data Analysis and Visualization for Chemists and Material Scientists</title>
+<title>Exercise Playground – Data Analysis and Visualization for Chemists and Material Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,26 +57,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../course/chapters/SEDA/DataManipulation.html" rel="next">
-<link href="../../../course/chapters/Plots/Seaborn.html" rel="prev">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7fd0fe4245b865325b8ce8dccb604d59.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9dc44f3162c39531be84931020d3c4ca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-516d921ec8d526d3fe54a05c4dfe7a3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../informations/references.html" rel="next">
+<link href="../../course/exercises/exercises/exerciseC_2.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7fd0fe4245b865325b8ce8dccb604d59.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9dc44f3162c39531be84931020d3c4ca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-516d921ec8d526d3fe54a05c4dfe7a3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,9 +104,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<meta property="og:title" content="Exercise A 1 – Data Analysis and Visualization for Chemists and Material Scientists">
+<meta property="og:title" content="Exercise Playground – Data Analysis and Visualization for Chemists and Material Scientists">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
 
@@ -119,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/exercises/exercises/exerciseA_1.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../../course/exercises/exercises/exerciseA_1.html"><span class="chapter-title">Exercise A 1</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../course/exercises/playground.html">Playground</a></li><li class="breadcrumb-item"><a href="../../course/exercises/playground.html"><span class="chapter-title">Exercise Playground</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -133,37 +137,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../../">Data Analysis and Visualization for Chemists and Material Scientists</a> 
+      <a href="../../">Data Analysis and Visualization for Chemists and Material Scientists</a> 
         <div class="sidebar-tools-main tools-wide">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-substack"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../course/presentations/introduction.html">
+            <a class="dropdown-item sidebar-tools-main-item" href="../../course/presentations/introduction.html">
             Introduction
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../course/exercises/solutions/ExerciseA.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../../course/exercises/solutions/ExerciseA.pdf">
             Exercise A
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../course/exercises/solutions/ExerciseB.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../../course/exercises/solutions/ExerciseB.pdf">
             Exercise B
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../course/exercises/solutions/ExerciseC.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../../course/exercises/solutions/ExerciseC.pdf">
             Exercise C
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../course/exercises/solutions/ExerciseD.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../../course/exercises/solutions/ExerciseD.pdf">
             Exercise D
             </a>
           </li>
@@ -188,7 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome to this Course!</span></a>
+  <a href="../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome to this Course!</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -202,22 +206,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Essentials/Introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
+  <a href="../../course/chapters/Essentials/Introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Essentials/WhatIsPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python?</span></a>
+  <a href="../../course/chapters/Essentials/WhatIsPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Essentials/InstallationGuide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installation Guide</span></a>
+  <a href="../../course/chapters/Essentials/InstallationGuide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installation Guide</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Essentials/Editors.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Editors</span></a>
+  <a href="../../course/chapters/Essentials/Editors.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Editors</span></a>
   </div>
 </li>
       </ul>
@@ -233,22 +237,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Python/Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Start</span></a>
+  <a href="../../course/chapters/Python/Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Start</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Python/Intermediate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Intermediate</span></a>
+  <a href="../../course/chapters/Python/Intermediate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Intermediate</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Python/BasicsModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Modules</span></a>
+  <a href="../../course/chapters/Python/BasicsModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Modules</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Python/AdvancedModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Modules</span></a>
+  <a href="../../course/chapters/Python/AdvancedModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Modules</span></a>
   </div>
 </li>
       </ul>
@@ -264,17 +268,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/DHP/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science in Chemistry and Materials Science</span></a>
+  <a href="../../course/chapters/DHP/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science in Chemistry and Materials Science</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/DHP/SimpleDataImport.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Import</span></a>
+  <a href="../../course/chapters/DHP/SimpleDataImport.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Import</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/DHP/SimpleDataInspection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Inspection</span></a>
+  <a href="../../course/chapters/DHP/SimpleDataInspection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Inspection</span></a>
   </div>
 </li>
       </ul>
@@ -290,38 +294,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/DataVisualization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction into Data Visualization</span></a>
+  <a href="../../course/chapters/Plots/DataVisualization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction into Data Visualization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/SimplePlots.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Data Visualization Techniques</span></a>
+  <a href="../../course/chapters/Plots/SimplePlots.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Data Visualization Techniques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
+  <a href="../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
+  <a href="../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseA_1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Exercise A 1</span></a>
+  <a href="../../course/exercises/exercises/exerciseA_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise A 1</span></a>
   </div>
 </li>
       </ul>
@@ -337,27 +341,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/DataManipulation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data Manipulation</span></a>
+  <a href="../../course/chapters/SEDA/DataManipulation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data Manipulation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/DescriptiveStatistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Descriptive Statistics and Analysis</span></a>
+  <a href="../../course/chapters/SEDA/DescriptiveStatistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Descriptive Statistics and Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/ModelTesting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Model Testing</span></a>
+  <a href="../../course/chapters/SEDA/ModelTesting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Model Testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/DataModels.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inferential Statistics</span></a>
+  <a href="../../course/chapters/SEDA/DataModels.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inferential Statistics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/AdvancedAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Statistical Analysis</span></a>
+  <a href="../../course/chapters/SEDA/AdvancedAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Statistical Analysis</span></a>
   </div>
 </li>
       </ul>
@@ -373,22 +377,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseA_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise A 2</span></a>
+  <a href="../../course/exercises/exercises/exerciseA_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise A 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseB_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 1</span></a>
+  <a href="../../course/exercises/exercises/exerciseB_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseB_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 2</span></a>
+  <a href="../../course/exercises/exercises/exerciseB_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseB_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 3</span></a>
+  <a href="../../course/exercises/exercises/exerciseB_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 3</span></a>
   </div>
 </li>
       </ul>
@@ -404,12 +408,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/PlotTypes/AdvancedPlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Plot Types</span></a>
+  <a href="../../course/chapters/PlotTypes/AdvancedPlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Plot Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/PlotTypes/InteractivePlots.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Interactive Plots</span></a>
+  <a href="../../course/chapters/PlotTypes/InteractivePlots.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Interactive Plots</span></a>
   </div>
 </li>
       </ul>
@@ -425,12 +429,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseD_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise D 1</span></a>
+  <a href="../../course/exercises/exercises/exerciseD_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise D 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseD_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise D 2</span></a>
+  <a href="../../course/exercises/exercises/exerciseD_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise D 2</span></a>
   </div>
 </li>
       </ul>
@@ -446,17 +450,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Spectroscopy Data</span></a>
+  <a href="../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Spectroscopy Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SpecialAnalysisPlots/ImageAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Image Data</span></a>
+  <a href="../../course/chapters/SpecialAnalysisPlots/ImageAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Image Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SpecialAnalysisPlots/Ternary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ternary Plot</span></a>
+  <a href="../../course/chapters/SpecialAnalysisPlots/Ternary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ternary Plot</span></a>
   </div>
 </li>
       </ul>
@@ -472,28 +476,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseC_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise C 1</span></a>
+  <a href="../../course/exercises/exercises/exerciseC_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise C 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseC_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise C 2</span></a>
+  <a href="../../course/exercises/exercises/exerciseC_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise C 2</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
  <span class="menu-text">Playground</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/playground.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise Playground</span></a>
+  <a href="../../course/exercises/playground.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Exercise Playground</span></a>
   </div>
 </li>
       </ul>
@@ -509,28 +513,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../informations/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../../informations/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../informations/license.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">License</span></a>
+  <a href="../../informations/license.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">License</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../informations/privacy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Privacy Policy</span></a>
+  <a href="../../informations/privacy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Privacy Policy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../informations/impressum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Impressum</span></a>
+  <a href="../../informations/impressum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Impressum</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../informations/disclaimer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Disclaimers</span></a>
+  <a href="../../informations/disclaimer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Disclaimers</span></a>
   </div>
 </li>
       </ul>
@@ -545,25 +549,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exercise" id="toc-exercise" class="nav-link active" data-scroll-target="#exercise">Exercise:</a>
-  <ul class="collapse">
-  <li><a href="#temperature-in-synthesis-reactor-part-1" id="toc-temperature-in-synthesis-reactor-part-1" class="nav-link" data-scroll-target="#temperature-in-synthesis-reactor-part-1">Temperature in Synthesis Reactor Part 1</a>
-  <ul class="collapse">
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#data-path" id="toc-data-path" class="nav-link" data-scroll-target="#data-path">Data Path:</a></li>
-  <li><a href="#task" id="toc-task" class="nav-link" data-scroll-target="#task">Task</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#playground-for-python" id="toc-playground-for-python" class="nav-link active" data-scroll-target="#playground-for-python">Playground for Python</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/stkroe/PythonForChemists.github.io/blob/master/course/exercises/exercises/exerciseA_1.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/Temperature/Temperature_1.dat"><i class="bi bi-filetype-txt"></i>Data Reactor 1</a></li><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/Temperature/Temperature_2.dat"><i class="bi bi-filetype-txt"></i>Data Reactor 2</a></li><li><a href="https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/Temperature/Temperature_3.dat"><i class="bi bi-filetype-txt"></i>Data Reactor 3</a></li><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/exercises/exercises/exerciseA_1.ipynb"><i class="bi bi-journal"></i>Download Code</a></li><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/exercises/solutions/Exercise_A_Plotting_and_Fitting.ipynb"><i class="bi bi-journal-check"></i>Download Solution</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/exercises/exercises/exerciseA_1.ipynb"><i class="bi bi-laptop"></i>Open in Colab Code</a></li><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/exercises/solutions/Exercise_A_Plotting_and_Fitting.ipynb"><i class="bi bi-laptop"></i>Open in Colab Solution</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/stkroe/PythonForChemists.github.io/blob/master/course/exercises/playground.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/exercises/playground.ipynb"><i class="bi bi-laptop"></i>Open in Colab Code</a></li><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/exercises/playground.ipynb"><i class="bi bi-laptop"></i>Open in Colab Solution</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/exercises/exercises/exerciseA_1.html">Exercises</a></li><li class="breadcrumb-item"><a href="../../../course/exercises/exercises/exerciseA_1.html"><span class="chapter-title">Exercise A 1</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../course/exercises/playground.html">Playground</a></li><li class="breadcrumb-item"><a href="../../course/exercises/playground.html"><span class="chapter-title">Exercise Playground</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Exercise A 1</span></h1>
+<h1 class="title"><span class="chapter-title">Exercise Playground</span></h1>
 </div>
 
 
@@ -580,54 +575,244 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="exercise" class="level1">
-<h1>Exercise:</h1>
-<section id="temperature-in-synthesis-reactor-part-1" class="level2">
-<h2 class="anchored" data-anchor-id="temperature-in-synthesis-reactor-part-1">Temperature in Synthesis Reactor Part 1</h2>
-<p>In this exercise, we will repeat the first part of the course.</p>
-<ul>
-<li>We will learn how to read data from a file.</li>
-<li>We will learn how to inspect the data.</li>
-<li>We will learn how to make quickly some plots.</li>
-</ul>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The experiment:</p>
-<ul>
-<li><p>We have multiple synthesis reactors in which we are running a series of experiments.</p></li>
-<li><p>Each reactor has a temperature sensor which monitors the temperature inside of it every minute for one month.</p></li>
-<li><p>Our task is to check if the temperatures in the reactors are stable.</p></li>
-<li><p>The data for reactor 1 is stored in <code>Temperatures_1.dat</code>.</p></li>
-<li><p>The data for reactor 2 is stored in <code>Temperatures_2.dat</code>.</p></li>
-<li><p>The data for reactor 3 is stored in <code>Temperatures_3.dat</code>.</p></li>
-</ul>
-</section>
-<section id="data-path" class="level3">
-<h3 class="anchored" data-anchor-id="data-path">Data Path:</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>data_path <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/stkroe/PythonForChemists/main/course/data/exercises/Temperature/"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="task" class="level3">
-<h3 class="anchored" data-anchor-id="task">Task</h3>
-<ol start="0" type="1">
-<li>Look at the plain data files. In which format are the data stored?</li>
-<li>Read the data from the files.</li>
-<li>Inspect the data. Are there any missing values? Are the data in the correct format? Is the data measured really over one month?</li>
-<li>Transform the data into days.</li>
-<li>Look at the distribution of the data. Is there some striking pattern?</li>
-<li>Make a plot of the temperatures trend over time for reactor 1, 2 and 3.</li>
-</ol>
-</section>
-<section id="questions" class="level3">
-<h3 class="anchored" data-anchor-id="questions">Questions</h3>
-<ul>
-<li>What do you think?</li>
-<li>Are the temperatures stable in the reactors?</li>
-<li>Which reactor has the most stable temperature?</li>
-</ul>
+<section id="playground-for-python" class="level1">
+<h1>Playground for Python</h1>
+<p>You can use the <code>load_wine</code> dataset from the <code>sklearn</code> library to practice data manipulation and visualization. Below is a code snippet that demonstrates how to load the dataset, perform some basic data analysis, and visualize it using <code>matplotlib</code>.</p>
+<div id="32e65055" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_wine</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The <code>load_wine</code> dataset contains information about different types of wines, including their chemical properties and quality ratings. You can use this dataset to practice various data manipulation techniques, such as filtering, grouping, and aggregating data.</p>
+<div id="c258dbf0" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>data <span class="op">=</span> load_wine()</span>
+<span id="cb2-2"><a href="#cb2-2"></a>df <span class="op">=</span> pd.DataFrame(data.data, columns<span class="op">=</span>data.feature_names)</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a>df.style <span class="op">\</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>  .<span class="bu">format</span>(precision<span class="op">=</span><span class="dv">2</span>) <span class="op">\</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>  .highlight_max(axis<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'lightgreen'</span>) <span class="op">\</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>  .highlight_min(axis<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'lightcoral'</span>) <span class="op">\</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>  .set_caption(<span class="st">"Wine Dataset Features"</span>) <span class="op">\</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>  .set_table_styles(</span>
+<span id="cb2-10"><a href="#cb2-10"></a>    [{<span class="st">'selector'</span>: <span class="st">'th.col0'</span>, <span class="st">'props'</span>: [(<span class="st">'color'</span>, <span class="st">'blue'</span>), (<span class="st">'font-weight'</span>, <span class="st">'bold'</span>)]}]</span>
+<span id="cb2-11"><a href="#cb2-11"></a>  ) <span class="op">\</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a>  .set_properties(<span class="op">**</span>{<span class="st">'text-align'</span>: <span class="st">'left'</span>}) <span class="op">\</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>  .set_table_attributes(<span class="st">'style="width: 100%; border: 1px solid black;"'</span>) <span class="op">\</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>  .set_table_styles(</span>
+<span id="cb2-15"><a href="#cb2-15"></a>    [{<span class="st">'selector'</span>: <span class="st">'th'</span>, <span class="st">'props'</span>: [(<span class="st">'background-color'</span>, <span class="st">'#f2f2f2'</span>), (<span class="st">'color'</span>, <span class="st">'black'</span>)]}],</span>
+<span id="cb2-16"><a href="#cb2-16"></a>    axis<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a>  )</span>
+<span id="cb2-18"><a href="#cb2-18"></a>display(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
 
 
-</section>
-</section>
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">alcohol</th>
+<th data-quarto-table-cell-role="th">malic_acid</th>
+<th data-quarto-table-cell-role="th">ash</th>
+<th data-quarto-table-cell-role="th">alcalinity_of_ash</th>
+<th data-quarto-table-cell-role="th">magnesium</th>
+<th data-quarto-table-cell-role="th">total_phenols</th>
+<th data-quarto-table-cell-role="th">flavanoids</th>
+<th data-quarto-table-cell-role="th">nonflavanoid_phenols</th>
+<th data-quarto-table-cell-role="th">proanthocyanins</th>
+<th data-quarto-table-cell-role="th">color_intensity</th>
+<th data-quarto-table-cell-role="th">hue</th>
+<th data-quarto-table-cell-role="th">od280/od315_of_diluted_wines</th>
+<th data-quarto-table-cell-role="th">proline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>14.23</td>
+<td>1.71</td>
+<td>2.43</td>
+<td>15.6</td>
+<td>127.0</td>
+<td>2.80</td>
+<td>3.06</td>
+<td>0.28</td>
+<td>2.29</td>
+<td>5.64</td>
+<td>1.04</td>
+<td>3.92</td>
+<td>1065.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>13.20</td>
+<td>1.78</td>
+<td>2.14</td>
+<td>11.2</td>
+<td>100.0</td>
+<td>2.65</td>
+<td>2.76</td>
+<td>0.26</td>
+<td>1.28</td>
+<td>4.38</td>
+<td>1.05</td>
+<td>3.40</td>
+<td>1050.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>13.16</td>
+<td>2.36</td>
+<td>2.67</td>
+<td>18.6</td>
+<td>101.0</td>
+<td>2.80</td>
+<td>3.24</td>
+<td>0.30</td>
+<td>2.81</td>
+<td>5.68</td>
+<td>1.03</td>
+<td>3.17</td>
+<td>1185.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>14.37</td>
+<td>1.95</td>
+<td>2.50</td>
+<td>16.8</td>
+<td>113.0</td>
+<td>3.85</td>
+<td>3.49</td>
+<td>0.24</td>
+<td>2.18</td>
+<td>7.80</td>
+<td>0.86</td>
+<td>3.45</td>
+<td>1480.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>13.24</td>
+<td>2.59</td>
+<td>2.87</td>
+<td>21.0</td>
+<td>118.0</td>
+<td>2.80</td>
+<td>2.69</td>
+<td>0.39</td>
+<td>1.82</td>
+<td>4.32</td>
+<td>1.04</td>
+<td>2.93</td>
+<td>735.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">173</td>
+<td>13.71</td>
+<td>5.65</td>
+<td>2.45</td>
+<td>20.5</td>
+<td>95.0</td>
+<td>1.68</td>
+<td>0.61</td>
+<td>0.52</td>
+<td>1.06</td>
+<td>7.70</td>
+<td>0.64</td>
+<td>1.74</td>
+<td>740.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">174</td>
+<td>13.40</td>
+<td>3.91</td>
+<td>2.48</td>
+<td>23.0</td>
+<td>102.0</td>
+<td>1.80</td>
+<td>0.75</td>
+<td>0.43</td>
+<td>1.41</td>
+<td>7.30</td>
+<td>0.70</td>
+<td>1.56</td>
+<td>750.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">175</td>
+<td>13.27</td>
+<td>4.28</td>
+<td>2.26</td>
+<td>20.0</td>
+<td>120.0</td>
+<td>1.59</td>
+<td>0.69</td>
+<td>0.43</td>
+<td>1.35</td>
+<td>10.20</td>
+<td>0.59</td>
+<td>1.56</td>
+<td>835.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">176</td>
+<td>13.17</td>
+<td>2.59</td>
+<td>2.37</td>
+<td>20.0</td>
+<td>120.0</td>
+<td>1.65</td>
+<td>0.68</td>
+<td>0.53</td>
+<td>1.46</td>
+<td>9.30</td>
+<td>0.60</td>
+<td>1.62</td>
+<td>840.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">177</td>
+<td>14.13</td>
+<td>4.10</td>
+<td>2.74</td>
+<td>24.5</td>
+<td>96.0</td>
+<td>2.05</td>
+<td>0.76</td>
+<td>0.56</td>
+<td>1.35</td>
+<td>9.20</td>
+<td>0.61</td>
+<td>1.60</td>
+<td>560.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>178 rows × 13 columns</p>
+</div>
+</div>
+</div>
+<p>What you can do with this dataset: - Load the dataset and explore its structure - Perform basic data analysis, such as calculating summary statistics - Visualize the data using different types of plots (e.g., scatter plots, histograms)</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -1252,13 +1437,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../course/chapters/Plots/Seaborn.html" class="pagination-link" aria-label="Seaborn Plots">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Seaborn Plots</span></span>
+      <a href="../../course/exercises/exercises/exerciseC_2.html" class="pagination-link" aria-label="Exercise C 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Exercise C 2</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../course/chapters/SEDA/DataManipulation.html" class="pagination-link" aria-label="Data Manipulation">
-        <span class="nav-page-text"><span class="chapter-title">Data Manipulation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../informations/references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1270,7 +1455,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/stkroe/PythonForChemists.github.io/blob/master/course/exercises/exercises/exerciseA_1.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/stkroe/PythonForChemists.github.io/blob/master/course/exercises/playground.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <li>
 <a href="https://github.com/stkroe/PythonForChemists.github.io" target="blank">Code source</a>

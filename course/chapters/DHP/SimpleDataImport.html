@@ -391,6 +391,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="../../../course/exercises/exercises/exerciseB_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 2</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/exercises/exercises/exerciseB_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 3</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -485,12 +490,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">Informations</span></a>
+ <span class="menu-text">Playground</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../course/exercises/playground.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise Playground</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">Informations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../informations/references.html" class="sidebar-item-text sidebar-link">
@@ -588,7 +609,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>pandas.read_fwf()</code> function is can read fixed-width files.</p></li>
 </ul>
 <p>Mostly used function is <code>pandas.read_csv()</code> because you can specify the delimiter, header, and other options.</p>
-<div id="a1a1dc49" class="cell" data-execution_count="2">
+<div id="ae981d1e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
 <span id="cb1-3"><a href="#cb1-3"></a>data <span class="op">=</span> pd.read_csv(temperature_data)</span>
@@ -657,7 +678,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The data has a different delimiter than the default <code>comma</code>. You can specify the delimiter using the <code>sep</code> parameter.</p>
-<div id="1355b088" class="cell" data-execution_count="3">
+<div id="42575d79" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>data <span class="op">=</span> pd.read_csv(temperature_data, sep<span class="op">=</span><span class="st">';'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -736,13 +757,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now the data is read correctly. The header is already taken from the first row. If you want to specify the header, you can use the <code>header</code> parameter.</p>
-<div id="840505ff" class="cell" data-execution_count="4">
+<div id="3b39b38e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-2"><a href="#cb3-2"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'file.csv'</span>, header<span class="op">=</span><span class="va">None</span>) <span class="co"># No header</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'file.csv'</span>, header<span class="op">=</span><span class="dv">0</span>) <span class="co"># Header is in the first row</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'file.csv'</span>, header<span class="op">=</span><span class="dv">1</span>) <span class="co"># Header is in the second row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="2c95fcd9" class="cell" data-execution_count="5">
+<div id="5ad8af80" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>data <span class="op">=</span> pd.read_csv(temperature_data, sep<span class="op">=</span><span class="st">';'</span>, header<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb4-2"><a href="#cb4-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
@@ -821,7 +842,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>If your data contains whitespace, you can use the <code>skipinitialspace</code> parameter to remove initial whitespaces.</p>
-<div id="2f632f5c" class="cell" data-execution_count="6">
+<div id="f84294aa" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>data <span class="op">=</span> pd.read_csv(temperature_dat, skipinitialspace<span class="op">=</span><span class="va">True</span>, sep<span class="op">=</span><span class="st">" "</span>)</span>
 <span id="cb5-2"><a href="#cb5-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
@@ -900,7 +921,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now the data has no header. You can specify the header using the <code>names</code> parameter.</p>
-<div id="5f9a58f2" class="cell" data-execution_count="7">
+<div id="e69cc16a" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>data <span class="op">=</span> pd.read_csv(temperature_dat, sep<span class="op">=</span><span class="st">' '</span>, skipinitialspace<span class="op">=</span><span class="va">True</span>,header<span class="op">=</span><span class="dv">1</span>,names<span class="op">=</span>[<span class="st">'t'</span>, <span class="st">'T'</span>])</span>
 <span id="cb6-2"><a href="#cb6-2"></a><span class="co"># important to set header=None, otherwise the first line is used as header</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1001,12 +1022,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <hr>
 <p>Some examples are:</p>
-<div id="7427ac7b" class="cell" data-execution_count="8">
+<div id="9ab7fba7" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>data <span class="op">=</span> pd.read_csv(temperature_data, sep<span class="op">=</span><span class="st">';'</span>, header<span class="op">=</span><span class="dv">0</span>, names<span class="op">=</span>[<span class="st">'t'</span>, <span class="st">'T'</span>], skiprows<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now the first row is skipped, only 44638 rows are read instead of 44639.</p>
 <p>Missing value examples:</p>
-<div id="b8171c84" class="cell" data-execution_count="9">
+<div id="014e1201" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>data <span class="op">=</span> pd.read_csv(temperature_nan_dat, sep<span class="op">=</span><span class="st">' '</span>, skipinitialspace<span class="op">=</span><span class="va">True</span>,header<span class="op">=</span><span class="va">None</span>,names<span class="op">=</span>[<span class="st">'t'</span>, <span class="st">'T'</span>],  keep_default_na<span class="op">=</span><span class="va">True</span>,na_filter<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="bu">print</span>(data.loc[<span class="dv">20</span>:<span class="dv">26</span>]) <span class="co">#print some rows to see the NaN values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1021,7 +1042,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>If the <code>na_filter</code>is set to <code>False</code>, the missing values are not recognized. But if it set on <code>True</code>, the missing values are recognized.</p>
-<div id="0930ebb1" class="cell" data-execution_count="10">
+<div id="4e5fbaa6" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>data <span class="op">=</span> pd.read_csv(temperature_nan_dat, sep<span class="op">=</span><span class="st">' '</span>, skipinitialspace<span class="op">=</span><span class="va">True</span>,header<span class="op">=</span><span class="va">None</span>,names<span class="op">=</span>[<span class="st">'t'</span>, <span class="st">'T'</span>],  keep_default_na<span class="op">=</span><span class="va">True</span>,na_filter<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="bu">print</span>(data.loc[<span class="dv">20</span>:<span class="dv">26</span>]) <span class="co">#print some rows to see the NaN values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1042,7 +1063,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Numpy has two main functions to read text files. - <code>numpy.loadtxt()</code> function is used to read text files. - <code>numpy.genfromtxt()</code> function is used to read text files with missing values.</p>
 <p>In comparison to the <code>pandas</code> library, the <code>numpy</code> library is slower and can not read different data types in the same file. So you can not read a file with strings and numbers in the same file.</p>
 <p>If you try to read a file with a header row, you will get an <strong>error</strong>.</p>
-<div id="2ce25843" class="cell" data-execution_count="11">
+<div id="f3bd0723" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb12-2"><a href="#cb12-2"></a>data <span class="op">=</span> np.loadtxt(temperature_data, delimiter<span class="op">=</span><span class="st">';'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -1058,38 +1079,38 @@ The above exception was the direct cause of the following exception:
 <span class="ansi-green-fg">      1</span> <span style="font-weight:bold;color:rgb(0,135,0)">import</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">numpy</span><span style="color:rgb(188,188,188)"> </span><span style="font-weight:bold;color:rgb(0,135,0)">as</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">np</span>
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> data = <span class="ansi-yellow-bg">np</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">loadtxt</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">temperature_data</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-fg ansi-yellow-bg">'</span><span class="ansi-yellow-fg ansi-yellow-bg">;</span><span class="ansi-yellow-fg ansi-yellow-bg">'</span><span class="ansi-yellow-bg">)</span>
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py:1397</span>, in <span class="ansi-cyan-fg">loadtxt</span><span class="ansi-blue-fg">(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, quotechar, like)</span>
-<span class="ansi-green-fg">   1394</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">isinstance</span>(delimiter, <span style="color:rgb(0,135,0)">bytes</span>):
-<span class="ansi-green-fg">   1395</span>     delimiter = delimiter.decode(<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">latin1</span><span class="ansi-yellow-fg">'</span>)
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1397</span> arr = <span class="ansi-yellow-bg">_read</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">fname</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1398</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">skiprows</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1399</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">unpack</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">unpack</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">ndmin</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">ndmin</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1400</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">quotechar</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   1402</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> arr
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py:1395</span>, in <span class="ansi-cyan-fg">loadtxt</span><span class="ansi-blue-fg">(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, quotechar, like)</span>
+<span class="ansi-green-fg">   1392</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">isinstance</span>(delimiter, <span style="color:rgb(0,135,0)">bytes</span>):
+<span class="ansi-green-fg">   1393</span>     delimiter = delimiter.decode(<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">latin1</span><span class="ansi-yellow-fg">'</span>)
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1395</span> arr = <span class="ansi-yellow-bg">_read</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">fname</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1396</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">skiprows</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1397</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">unpack</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">unpack</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">ndmin</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">ndmin</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1398</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">quotechar</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   1400</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> arr
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py:1036</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(fname, delimiter, comment, quote, imaginary_unit, usecols, skiplines, max_rows, converters, ndmin, unpack, dtype, encoding)</span>
-<span class="ansi-green-fg">   1033</span>     data = _preprocess_comments(data, comments, encoding)
-<span class="ansi-green-fg">   1035</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> read_dtype_via_object_chunks <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1036</span>     arr = <span class="ansi-yellow-bg">_load_from_filelike</span><span class="ansi-yellow-bg">(</span>
-<span class="ansi-green-fg">   1037</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1038</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">imaginary_unit</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">imaginary_unit</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1039</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1040</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1041</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">filelike</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">filelike</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1042</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">byte_converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">byte_converters</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   1044</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">   1045</span>     <span style="font-style:italic;color:rgb(95,135,135)"># This branch reads the file into chunks of object arrays and then</span>
-<span class="ansi-green-fg">   1046</span>     <span style="font-style:italic;color:rgb(95,135,135)"># casts them to the desired actual dtype.  This ensures correct</span>
-<span class="ansi-green-fg">   1047</span>     <span style="font-style:italic;color:rgb(95,135,135)"># string-length and datetime-unit discovery (like `arr.astype()`).</span>
-<span class="ansi-green-fg">   1048</span>     <span style="font-style:italic;color:rgb(95,135,135)"># Due to chunking, certain error reports are less clear, currently.</span>
-<span class="ansi-green-fg">   1049</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> filelike:
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py:1046</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(fname, delimiter, comment, quote, imaginary_unit, usecols, skiplines, max_rows, converters, ndmin, unpack, dtype, encoding)</span>
+<span class="ansi-green-fg">   1043</span>     data = _preprocess_comments(data, comments, encoding)
+<span class="ansi-green-fg">   1045</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> read_dtype_via_object_chunks <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1046</span>     arr = <span class="ansi-yellow-bg">_load_from_filelike</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   1047</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1048</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">imaginary_unit</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">imaginary_unit</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1049</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1050</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1051</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">filelike</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">filelike</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1052</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">byte_converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">byte_converters</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   1054</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">   1055</span>     <span style="font-style:italic;color:rgb(95,135,135)"># This branch reads the file into chunks of object arrays and then</span>
+<span class="ansi-green-fg">   1056</span>     <span style="font-style:italic;color:rgb(95,135,135)"># casts them to the desired actual dtype.  This ensures correct</span>
+<span class="ansi-green-fg">   1057</span>     <span style="font-style:italic;color:rgb(95,135,135)"># string-length and datetime-unit discovery (like `arr.astype()`).</span>
+<span class="ansi-green-fg">   1058</span>     <span style="font-style:italic;color:rgb(95,135,135)"># Due to chunking, certain error reports are less clear, currently.</span>
+<span class="ansi-green-fg">   1059</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> filelike:
 
 <span class="ansi-red-fg">ValueError</span>: could not convert string 'time' to float64 at row 0, column 1.</pre>
 </div>
 </div>
 </div>
 <p>You can specify the header row using the <code>skiprows</code> parameter. If you want to skip one row, the <code>skiprows=1</code> parameter is set at <code>1</code>.</p>
-<div id="5d4db05b" class="cell" data-execution_count="12">
+<div id="4903af36" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>data <span class="op">=</span> np.loadtxt(temperature_data, delimiter<span class="op">=</span><span class="st">';'</span>, skiprows<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb13-2"><a href="#cb13-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
@@ -1099,13 +1120,13 @@ The above exception was the direct cause of the following exception:
        ...,
        [4.46380000e+04, 2.96140001e+02],
        [4.46390000e+04, 2.96169290e+02],
-       [4.46400000e+04, 2.96287904e+02]])</code></pre>
+       [4.46400000e+04, 2.96287904e+02]], shape=(44640, 2))</code></pre>
 </div>
 </div>
 <p>Now the data is read correctly. You can see that the data is read as a numpy array and not as a DataFrame. This can be a disadvantage if you want to use the data as a DataFrame but an advantage if you want to use numpy functions to process the data.</p>
 <hr>
 <p>If you have data with whitespace, you do not need to specify the <code>delimiter</code>paramter because the default is whitespace.</p>
-<div id="c733c622" class="cell" data-execution_count="13">
+<div id="bf528c5b" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>data <span class="op">=</span> np.loadtxt(temperature_dat)</span>
 <span id="cb15-2"><a href="#cb15-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
@@ -1115,12 +1136,12 @@ The above exception was the direct cause of the following exception:
        ...,
        [4.46380000e+04, 2.96140001e+02],
        [4.46390000e+04, 2.96169290e+02],
-       [4.46400000e+04, 2.96287904e+02]])</code></pre>
+       [4.46400000e+04, 2.96287904e+02]], shape=(44640, 2))</code></pre>
 </div>
 </div>
 <p><code>genfromtxt()</code> gives you more flexibility to read files with missing values.</p>
 <p>First using the <code>loadtxt()</code> function, you get an <strong>error</strong> because of the missing values.</p>
-<div id="63a7174e" class="cell" data-execution_count="14">
+<div id="d77545f6" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>data <span class="op">=</span> np.loadtxt(temperature_nan_dat)</span>
 <span id="cb17-2"><a href="#cb17-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -1131,38 +1152,38 @@ The above exception was the direct cause of the following exception:
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> data = <span class="ansi-yellow-bg">np</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">loadtxt</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">temperature_nan_dat</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-fg">      2</span> data
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py:1397</span>, in <span class="ansi-cyan-fg">loadtxt</span><span class="ansi-blue-fg">(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, quotechar, like)</span>
-<span class="ansi-green-fg">   1394</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">isinstance</span>(delimiter, <span style="color:rgb(0,135,0)">bytes</span>):
-<span class="ansi-green-fg">   1395</span>     delimiter = delimiter.decode(<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">latin1</span><span class="ansi-yellow-fg">'</span>)
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1397</span> arr = <span class="ansi-yellow-bg">_read</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">fname</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1398</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">skiprows</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1399</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">unpack</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">unpack</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">ndmin</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">ndmin</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1400</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">quotechar</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   1402</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> arr
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py:1395</span>, in <span class="ansi-cyan-fg">loadtxt</span><span class="ansi-blue-fg">(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, quotechar, like)</span>
+<span class="ansi-green-fg">   1392</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">isinstance</span>(delimiter, <span style="color:rgb(0,135,0)">bytes</span>):
+<span class="ansi-green-fg">   1393</span>     delimiter = delimiter.decode(<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">latin1</span><span class="ansi-yellow-fg">'</span>)
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1395</span> arr = <span class="ansi-yellow-bg">_read</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">fname</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1396</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">skiprows</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1397</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">unpack</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">unpack</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">ndmin</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">ndmin</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1398</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">quotechar</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   1400</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> arr
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py:1036</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(fname, delimiter, comment, quote, imaginary_unit, usecols, skiplines, max_rows, converters, ndmin, unpack, dtype, encoding)</span>
-<span class="ansi-green-fg">   1033</span>     data = _preprocess_comments(data, comments, encoding)
-<span class="ansi-green-fg">   1035</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> read_dtype_via_object_chunks <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1036</span>     arr = <span class="ansi-yellow-bg">_load_from_filelike</span><span class="ansi-yellow-bg">(</span>
-<span class="ansi-green-fg">   1037</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1038</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">imaginary_unit</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">imaginary_unit</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1039</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1040</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1041</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">filelike</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">filelike</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   1042</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">byte_converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">byte_converters</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   1044</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">   1045</span>     <span style="font-style:italic;color:rgb(95,135,135)"># This branch reads the file into chunks of object arrays and then</span>
-<span class="ansi-green-fg">   1046</span>     <span style="font-style:italic;color:rgb(95,135,135)"># casts them to the desired actual dtype.  This ensures correct</span>
-<span class="ansi-green-fg">   1047</span>     <span style="font-style:italic;color:rgb(95,135,135)"># string-length and datetime-unit discovery (like `arr.astype()`).</span>
-<span class="ansi-green-fg">   1048</span>     <span style="font-style:italic;color:rgb(95,135,135)"># Due to chunking, certain error reports are less clear, currently.</span>
-<span class="ansi-green-fg">   1049</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> filelike:
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py:1046</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(fname, delimiter, comment, quote, imaginary_unit, usecols, skiplines, max_rows, converters, ndmin, unpack, dtype, encoding)</span>
+<span class="ansi-green-fg">   1043</span>     data = _preprocess_comments(data, comments, encoding)
+<span class="ansi-green-fg">   1045</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> read_dtype_via_object_chunks <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1046</span>     arr = <span class="ansi-yellow-bg">_load_from_filelike</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   1047</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1048</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">imaginary_unit</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">imaginary_unit</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1049</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1050</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1051</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">filelike</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">filelike</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1052</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">byte_converters</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">byte_converters</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   1054</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">   1055</span>     <span style="font-style:italic;color:rgb(95,135,135)"># This branch reads the file into chunks of object arrays and then</span>
+<span class="ansi-green-fg">   1056</span>     <span style="font-style:italic;color:rgb(95,135,135)"># casts them to the desired actual dtype.  This ensures correct</span>
+<span class="ansi-green-fg">   1057</span>     <span style="font-style:italic;color:rgb(95,135,135)"># string-length and datetime-unit discovery (like `arr.astype()`).</span>
+<span class="ansi-green-fg">   1058</span>     <span style="font-style:italic;color:rgb(95,135,135)"># Due to chunking, certain error reports are less clear, currently.</span>
+<span class="ansi-green-fg">   1059</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> filelike:
 
 <span class="ansi-red-fg">ValueError</span>: the number of columns changed from 2 to 1 at row 22; use `usecols` to select a subset and avoid this error</pre>
 </div>
 </div>
 </div>
 <p>If you try to read the file with an empty entrance at row 22, you wil get still an <strong>error</strong> with the <code>genfromtxt()</code> function.</p>
-<div id="0e921e35" class="cell" data-execution_count="15">
+<div id="11299c10" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>data <span class="op">=</span> np.genfromtxt(temperature_nan_dat)</span>
 <span id="cb18-2"><a href="#cb18-2"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -1173,13 +1194,13 @@ The above exception was the direct cause of the following exception:
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> data = <span class="ansi-yellow-bg">np</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">genfromtxt</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">temperature_nan_dat</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-fg">      2</span> data
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py:2350</span>, in <span class="ansi-cyan-fg">genfromtxt</span><span class="ansi-blue-fg">(fname, dtype, comments, delimiter, skip_header, skip_footer, converters, missing_values, filling_values, usecols, names, excludelist, deletechars, replace_space, autostrip, case_sensitive, defaultfmt, unpack, usemask, loose, invalid_raise, max_rows, encoding, ndmin, like)</span>
-<span class="ansi-green-fg">   2348</span> <span style="font-style:italic;color:rgb(95,135,135)"># Raise an exception ?</span>
-<span class="ansi-green-fg">   2349</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> invalid_raise:
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">2350</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(errmsg)
-<span class="ansi-green-fg">   2351</span> <span style="font-style:italic;color:rgb(95,135,135)"># Issue a warning ?</span>
-<span class="ansi-green-fg">   2352</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">   2353</span>     warnings.warn(errmsg, ConversionWarning, stacklevel=<span class="ansi-green-fg">2</span>)
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py:2333</span>, in <span class="ansi-cyan-fg">genfromtxt</span><span class="ansi-blue-fg">(fname, dtype, comments, delimiter, skip_header, skip_footer, converters, missing_values, filling_values, usecols, names, excludelist, deletechars, replace_space, autostrip, case_sensitive, defaultfmt, unpack, usemask, loose, invalid_raise, max_rows, encoding, ndmin, like)</span>
+<span class="ansi-green-fg">   2331</span> <span style="font-style:italic;color:rgb(95,135,135)"># Raise an exception ?</span>
+<span class="ansi-green-fg">   2332</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> invalid_raise:
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">2333</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(errmsg)
+<span class="ansi-green-fg">   2334</span> <span style="font-style:italic;color:rgb(95,135,135)"># Issue a warning ?</span>
+<span class="ansi-green-fg">   2335</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">   2336</span>     warnings.warn(errmsg, ConversionWarning, stacklevel=<span class="ansi-green-fg">2</span>)
 
 <span class="ansi-red-fg">ValueError</span>: Some errors were detected !
     Line #22 (got 1 columns instead of 2)</pre>
@@ -1221,7 +1242,7 @@ Caution
 </div>
 </div>
 <p>If you have not <code>whitespace</code> as delimiter, you can use the <code>genfromtxt()</code> function with missing values.</p>
-<div id="0f21c9df" class="cell" data-execution_count="16">
+<div id="08847822" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>data <span class="op">=</span> np.genfromtxt(temperature_nan_data,delimiter<span class="op">=</span><span class="st">';'</span>)</span>
 <span id="cb19-2"><a href="#cb19-2"></a>data[<span class="dv">20</span>:<span class="dv">26</span>] <span class="co"># print some rows to see the NaN values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
@@ -1285,7 +1306,7 @@ Important
 <ul>
 <li><code>numpy.savetxt()</code> function is used to write text files.</li>
 </ul>
-<div id="3342bb85" class="cell" data-execution_count="17">
+<div id="ecefdfbf" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>np.savetxt(<span class="st">'file.txt'</span>, data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
