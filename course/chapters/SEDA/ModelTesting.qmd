@@ -147,10 +147,11 @@ They have effect on specific statistical methods and can lead to incorrect concl
 ```{python}
 import numpy as np
 # Calculate Z-scores for a dataset
-data = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+data = np.random.randn(100)
+data[0] = 100  # Introduce an outlier
 z_scores = stats.zscore(data)
 print(z_scores)
-print("Outliers:", data[np.abs(z_scores) > 2))  # Outliers are those with Z-score > 3
+print("Outliers: ", data[np.abs(z_scores) > 3])
 ```
 
 - **IQR (Interquartile Range):** Identifies outliers based on the spread of the data.
@@ -200,6 +201,7 @@ from sklearn.ensemble import IsolationForest
 
 # Generate sample data
 data = np.random.randn(100, 2)
+data[0] = [10, 10]  # Introduce an outlier
 
 # Fit Isolation Forest model
 isoforest = IsolationForest(contamination=0.1)
@@ -215,8 +217,9 @@ print(outliers)
 ```{python}
 import numpy as np
 from matplotlib import pyplot as plt
-# Generate sample data
+# Generate sample data'
 data = np.random.randn(100)
+data[0] = 10  # Introduce an outlier
 
 # Create boxplot
 plt.boxplot(data)
@@ -231,10 +234,10 @@ For more information on outlier detection, refer to the [Scikit-learn documentat
 # Exercises {.unnumbered}
 Download it locally and try to solve the exercises. <br>
 
-[Data Import and Inspection Example](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)
+[Model Testing Example](https://github.com/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)
 
 
 Or open it in `Google Colab`:
 
-[Data Import and Inspection Example](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)
+[Model Testing Example](https://colab.research.google.com/github/stkroe/PythonforChemists/blob/main/course/examples/ModelTesting_Example.ipynb)
 
