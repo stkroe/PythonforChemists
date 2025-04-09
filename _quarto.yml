@@ -85,6 +85,7 @@ book:
             - course/exercises/exercises/exerciseA_2.ipynb
             - course/exercises/exercises/exerciseB_1.ipynb
             - course/exercises/exercises/exerciseB_2.ipynb
+            - course/exercises/exercises/exerciseB_3.ipynb
       - part: "Data Visualization 2"
         chapters:
         - course/chapters/PlotTypes/AdvancedPlotTypes.qmd
@@ -102,6 +103,9 @@ book:
         chapters:
             - course/exercises/exercises/exerciseC_1.ipynb
             - course/exercises/exercises/exerciseC_2.ipynb
+      - part: "Playground"
+        chapters:
+          - course/exercises/playground.ipynb
       # - part: "Machine Learning"
       #   chapters:
       #     - course/chapters/ML/IntroductionML.qmd
