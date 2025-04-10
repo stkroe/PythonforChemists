@@ -3,10 +3,10 @@ title: "Exercise Recap Python"
 format: 
     html:
       css: 
-            - ../../quizzes/quiz_dark.css
+            - ../quizzes/quiz_dark.css
       include-in-header:
         text: |
-            <script src="../../quizzes/recap_python.js"></script>
+            <script src="../quizzes/recap_python.js"></script>
 execute:
     echo: true
     eval: true
@@ -22,11 +22,13 @@ code-links:
 
 
 
-### Quiz
+
+## Quiz {.unnumbered}
+
 <div id="quiz-container"></div>
 
 
-## Exercise Recap Python
+## Exercise Recap Python {.unnumbered}
 
 Open it locally:
 
