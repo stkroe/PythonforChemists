@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "<pre>   return x + 1</pre>" +
             "<pre>result = my_function(3)</pre>", 
             options: [
-                "x is a parameter of `my_function`",
+                "x is a argument of `my_function`",
                 "`my_function` is a function",
                 "`result` is a variable",
                 "`my_function` is a variable",
