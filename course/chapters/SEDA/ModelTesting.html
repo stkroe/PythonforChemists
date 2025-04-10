@@ -601,7 +601,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Null &amp; Alternative Hypothesis:</strong> The null hypothesis (H₀) assumes no effect, while the alternative hypothesis (H₁) suggests a significant difference.</p></li>
 <li><p><strong>t-tests:</strong> Used to compare the means of two groups (one-sample, independent, paired t-tests).</p></li>
 </ul>
-<div id="30060d2d" class="cell" data-execution_count="1">
+<div id="aebebc68" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Example: Null hypothesis - The mean is equal to 0</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co">#H0: μ = 0</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -629,7 +629,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Reject the null hypothesis: The mean is significantly different from 0.</code></pre>
 </div>
 </div>
-<div id="bfec19dd" class="cell" data-execution_count="2">
+<div id="951fdb77" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="co"># Generate two random samples (e.g., control and treatment groups)</span></span>
@@ -653,7 +653,7 @@ Reject the null hypothesis: The mean is significantly different from 0.</code></
 Reject the null hypothesis: The groups have significantly different means.</code></pre>
 </div>
 </div>
-<div id="305ff653" class="cell" data-execution_count="3">
+<div id="4aef5e7d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="co"># Generate paired data (e.g., before and after measurements)</span></span>
@@ -680,7 +680,7 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>ANOVA (Analysis of Variance):</strong> Compares means of multiple groups to check for significant differences.</li>
 </ul>
-<div id="f2950a99" class="cell" data-execution_count="4">
+<div id="6ef64695" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3"></a></span>
@@ -699,7 +699,7 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>Chi-square Test:</strong> Used for categorical data to examine associations between different groups.</li>
 </ul>
-<div id="808532e2" class="cell" data-execution_count="5">
+<div id="28784ac6" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="im">import</span> numpy <span class="im">as</span> nps</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="im">from</span> scipy.stats <span class="im">import</span> chi2_contingency</span>
@@ -721,7 +721,7 @@ Reject the null hypothesis: The means are significantly different.</code></pre>
 <ul>
 <li><strong>Z-Score:</strong> Measures how many standard deviations a data point is from the mean.</li>
 </ul>
-<div id="c226f670" class="cell" data-execution_count="6">
+<div id="b9b6bb56" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-2"><a href="#cb11-2"></a><span class="co"># Calculate Z-scores for a dataset</span></span>
 <span id="cb11-3"><a href="#cb11-3"></a>data <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
@@ -761,7 +761,7 @@ Outliers:  [100.]</code></pre>
 <ul>
 <li><strong>IQR (Interquartile Range):</strong> Identifies outliers based on the spread of the data.</li>
 </ul>
-<div id="bbc0034f" class="cell" data-execution_count="7">
+<div id="21379540" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb13-2"><a href="#cb13-2"></a><span class="co"># Calculate IQR for a dataset</span></span>
 <span id="cb13-3"><a href="#cb13-3"></a>q1 <span class="op">=</span> np.percentile(data, <span class="dv">25</span>)</span>
@@ -782,7 +782,7 @@ Outliers:  [100.]</code></pre>
 <ul>
 <li><strong>DBSCAN (Density-Based Spatial Clustering of Applications with Noise):</strong> Clustering algorithm that identifies outliers based on density.</li>
 </ul>
-<div id="4f06e32e" class="cell" data-execution_count="8">
+<div id="e96d5ece" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb15-2"><a href="#cb15-2"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> DBSCAN</span>
 <span id="cb15-3"><a href="#cb15-3"></a></span>
@@ -848,7 +848,7 @@ Outliers:  [100.]</code></pre>
 <ul>
 <li><strong>Isolation Forest:</strong> Anomaly detection algorithm that isolates outliers in a dataset.</li>
 </ul>
-<div id="de7cb92f" class="cell" data-execution_count="9">
+<div id="de4faa23" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> IsolationForest</span>
 <span id="cb17-3"><a href="#cb17-3"></a></span>
@@ -879,7 +879,7 @@ Outliers:  [100.]</code></pre>
 <ul>
 <li><strong>Boxplot:</strong> Visual representation of outliers in a dataset.</li>
 </ul>
-<div id="4076ef6e" class="cell" data-execution_count="10">
+<div id="6454e172" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb19-2"><a href="#cb19-2"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb19-3"><a href="#cb19-3"></a><span class="co"># Generate sample data'</span></span>

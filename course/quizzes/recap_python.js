@@ -148,10 +148,10 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             question: "How do I create a list in Python?",
             options: [
-                "Using <pre>[]</pre> brackets.",
-                "Using <pre>{}</pre> brackets.",
-                "Using <pre>()</pre> brackets.",
-                "Using <pre><></pre> brackets."
+                "Using [] brackets.",
+                "Using {} brackets.",
+                "Using () brackets.",
+                "Using <> brackets."
             ],
             answer: 0
         },
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "[2, 3, 4, 5]",
                 "[3, 4, 5, 6]"
             ],
-            answer: 2
+            answer: 1
         },
         {
             question: "How you get the all elements beginning with the element 3?\n" +
