@@ -23,9 +23,9 @@ code-links:
 
 
 
-## Quiz {.unnumbered}
-
+### Quiz
 <div id="quiz-container"></div>
+
 
 
 ## Exercise Recap Python {.unnumbered}
