@@ -116,9 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
             answer: 0
         },
 
-
-
-
         {
             question: "What does global and local variable mean?",
             options: [
@@ -255,57 +252,51 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       
     ];
+     // Find the quiz container
+     const quizContainer = document.getElementById('quiz-container');
+     if (!quizContainer) return;
  
-    // Find the quiz container
-    const quizContainer = document.getElementById('quiz-container');
-    if (!quizContainer) return;
+     // Create quiz HTML
+     let quizHTML = '<div class="quiz-wrapper">';
+     
+     // Add each question
+     pythonQuiz.forEach((q, qIndex) => {
+         quizHTML += `
+             <div class="question" id="question-${qIndex}">
+                 <h3>Question ${qIndex + 1}</h3>
+                 <p>${q.question.replace(/\n/g, '<br>')}</p>
+                 <div class="options">
+         `;
+         
+         // Add options
+         q.options.forEach((option, oIndex) => {
+             quizHTML += `
+                 <div class="option">
+                     <input type="radio" id="q${qIndex}-o${oIndex}" name="q${qIndex}" value="${oIndex}">
+                     <label for="q${qIndex}-o${oIndex}">${option}</label>
+                 </div>
+             `;
+         });
+         
+         quizHTML += `
+                 </div>
+                 <button class="check-answer" data-question="${qIndex}">Check Answer</button>
+                 <div class="feedback" id="feedback-${qIndex}"></div>
+             </div>
+         `;
+     });
+     
+     quizHTML += '</div>';
 
-    // Create quiz HTML
-    let quizHTML = '<div class="quiz-wrapper">';
-    
-    // Add each question
-    pythonQuiz.forEach((q, qIndex) => {
-        quizHTML += `
-            <div class="question" id="question-${qIndex}">
-                <h3>Question ${qIndex + 1}</h3>
-                <p>${q.question.replace(/\n/g, '<br>')}</p>
-                <div class="options">
-        `;
-        
-        // Add options
-        q.options.forEach((option, oIndex) => {
-            quizHTML += `
-                <div class="option">
-                    <input type="radio" id="q${qIndex}-o${oIndex}" name="q${qIndex}" value="${oIndex}">
-                    <label for="q${qIndex}-o${oIndex}">${option}</label>
-                </div>
-            `;
-        });
-        
-        quizHTML += `
-                </div>
-                <div class="feedback" id="feedback-${qIndex}"></div>
-            </div>
-        `;
-    });
-    
-    // Add submit button
-    quizHTML += `
-        <button id="submit-quiz" class="quiz-button">Check Answers</button>
-        <div id="quiz-results" class="results"></div>
-    </div>`;
-    
-    // Insert quiz into container
+     // Insert quiz into container
     quizContainer.innerHTML = quizHTML;
-    
-    // Add event listener to submit button
-    document.getElementById('submit-quiz').addEventListener('click', function() {
-        let score = 0;
-        
-        // Check each question
-        pythonQuiz.forEach((q, qIndex) => {
-            const selectedOption = document.querySelector(`input[name="q${qIndex}"]:checked`);
-            const feedbackElement = document.getElementById(`feedback-${qIndex}`);
+
+    // Add event listeners to "Check Answer" buttons
+    document.querySelectorAll('.check-answer').forEach(button => {
+        button.addEventListener('click', function() {
+            const questionIndex = parseInt(this.getAttribute('data-question'));
+            const selectedOption = document.querySelector(`input[name="q${questionIndex}"]:checked`);
+            const feedbackElement = document.getElementById(`feedback-${questionIndex}`);
             
             if (!selectedOption) {
                 feedbackElement.textContent = "Please select an answer.";
@@ -313,25 +304,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            if (parseInt(selectedOption.value) === q.answer) {
-                score++;
+            if (parseInt(selectedOption.value) === pythonQuiz[questionIndex].answer) {
                 feedbackElement.textContent = "Correct!";
                 feedbackElement.className = "feedback correct";
             } else {
-                feedbackElement.textContent = "Incorrect. The correct answer is: " + q.options[q.answer];
+                feedbackElement.textContent = "Incorrect. The correct answer is: " + pythonQuiz[questionIndex].options[pythonQuiz[questionIndex].answer];
                 feedbackElement.className = "feedback incorrect";
             }
-        });
-        
-        // Display results
-        const resultsElement = document.getElementById('quiz-results');
-        resultsElement.textContent = `You scored ${score} out of ${pythonQuiz.length}.`;
-        resultsElement.className = "results show";
-        
-        // Show all answers
-        pythonQuiz.forEach((q, qIndex) => {
-            const questionElement = document.getElementById(`question-${qIndex}`);
-            questionElement.classList.add('answered');
         });
     });
 });
