@@ -108,7 +108,7 @@ book:
           - course/exercises/playground.ipynb
       - part: "Repetition"
         chapters:
-          - course/exercises/recap_python.ipynb
+          - course/exercises/recap_python.qmd
       # - part: "Machine Learning"
       #   chapters:
       #     - course/chapters/ML/IntroductionML.qmd
