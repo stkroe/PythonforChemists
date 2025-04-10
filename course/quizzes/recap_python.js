@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             answer: 0
         },
         {
-            question: "What is the result of <pre>x = 3.1415926</pre>?\n<pre>print(f'{x:.4f}')</pre>",
+            question: "What is the result of `x = 3.1415926` \n `print(f'{x:.4f}'`",
             options: [
                 "3.1415",
                 "3.14159",
