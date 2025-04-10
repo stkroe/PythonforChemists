@@ -608,32 +608,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">I/O (Input/Output)</h1>
 <p>You can use the <code>print()</code> function to <strong>print a message</strong> to the screen. <br> You can use the <code>input()</code> function to get <strong>input from the user</strong>. <br> You can use the <code>open()</code> function to <strong>open a file</strong>. <br> You can use the <code>write()</code> function to <strong>write to a file</strong>. <br> You can use the <code>read()</code> function to <strong>read from a file</strong>. <br> You can use the <code>close()</code> function to <strong>close a file</strong>. <br> You can use the <code>with</code> statement to <strong>open a file</strong> and <strong>automatically close</strong> it when you are done. <br> You can use the <code>os</code> module to <strong>work with files and directories</strong>. <br> You can use the <code>sys</code> module to <strong>work with command line arguments</strong>. <br> You can use the <code>argparse</code> module to work also with <strong>command line arguments</strong>. <br></p>
 <p>This should print “Hello World!” to the console</p>
-<div id="d9fcb91d" class="cell" data-execution_count="1">
+<div id="f44f9996" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
 </div>
 <p>This should ask the user to enter a number and print it to the console</p>
-<div id="13983be7" class="cell" data-execution_count="2">
+<div id="fab492ce" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">print</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This should write “Hello World!” to the file “file.txt”</p>
-<div id="a9bba1c7" class="cell" data-execution_count="3">
+<div id="6d296850" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>).write(<span class="st">"Hello World!"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>12</code></pre>
 </div>
 </div>
 <p>This should read the file “file.txt” and print the content to the console</p>
-<div id="c499bcc4" class="cell" data-execution_count="4">
+<div id="943b3d0d" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">print</span>(<span class="bu">open</span>(<span class="st">"file.txt"</span>).read()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
 </div>
 <p>This should print “Hello World!” to the console without a newline</p>
-<div id="78bebb81" class="cell" data-execution_count="5">
+<div id="53f31a80" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="bu">print</span>(<span class="st">"Hello World without newline."</span>, end<span class="op">=</span><span class="st">""</span>) </span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="bu">print</span>(<span class="st">"Next print statement."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -641,14 +641,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>This should read the file “file.txt” and print the content to the console</p>
-<div id="22ff89b2" class="cell" data-execution_count="6">
+<div id="66ef3826" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>: <span class="bu">print</span>(<span class="bu">file</span>.read()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
 </div>
 <p>Write a file with the content “Hello World!” and close it</p>
-<div id="f04395fa" class="cell" data-execution_count="7">
+<div id="c07ba6d7" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(<span class="st">"file.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb12-2"><a href="#cb12-2"></a><span class="bu">file</span>.write(<span class="st">"Hello World!"</span>)</span>
 <span id="cb12-3"><a href="#cb12-3"></a><span class="bu">file</span>.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -670,18 +670,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>parse_args()</code> to parse the command line arguments. <br></p></li>
 </ul>
 <p>This should remove the file “file.txt”</p>
-<div id="016caef7" class="cell" data-execution_count="8">
+<div id="04d8dc39" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> os</span>
 <span id="cb13-2"><a href="#cb13-2"></a>os.remove(<span class="st">"file.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For <code>sys</code> you can use the <code>sys.argv</code> to get the command line arguments. <br> <code>sys.argv</code> is a list of the command line arguments. <br> <code>sys.argv[0]</code> is the name of the script. <br> <code>sys.argv[1]</code> is the first argument. <br></p>
-<div id="4666a507" class="cell" data-execution_count="9">
+<div id="1c15fc9e" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="im">import</span> sys</span>
 <span id="cb14-2"><a href="#cb14-2"></a>first_argument <span class="op">=</span> sys.argv[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For more information about the sys module you can visit the <a href="https://docs.python.org/3/library/sys.html">official documentation</a>.</p>
 <p>For <code>Argparse</code> you can use the following code: For python scripts: You can use argparse to parse command line arguments.</p>
-<div id="ae0730fe" class="cell" data-execution_count="10">
+<div id="78f0bbc2" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">from</span> argparse <span class="im">import</span> ArgumentParser</span>
 <span id="cb15-2"><a href="#cb15-2"></a></span>
 <span id="cb15-3"><a href="#cb15-3"></a>parser <span class="op">=</span> ArgumentParser(description<span class="op">=</span><span class="st">"This is a description."</span>)</span>
@@ -696,7 +696,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">Paths</h1>
 <p>Pay attention to the paths in your code. They are different defined in Windows and Linux. In Windows and macOS, you use backslashes <code>/</code> and in Linux, you use forward slashes <code>\</code>.</p>
 <p>To avoid this problem you can use the <code>os</code> or <code>pathlib</code> module to make your code platform independent.</p>
-<div id="93b4c1ce" class="cell" data-execution_count="11">
+<div id="789c682e" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="im">import</span> os</span>
 <span id="cb16-2"><a href="#cb16-2"></a></span>
 <span id="cb16-3"><a href="#cb16-3"></a>path <span class="op">=</span> os.path.join(<span class="st">'folder1'</span>, <span class="st">'folder2'</span>, <span class="st">'folder3'</span>, <span class="st">'data.dat'</span>)</span>
@@ -705,14 +705,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>folder1/folder2/folder3/data.dat</code></pre>
 </div>
 </div>
-<div id="50cb78a7" class="cell" data-execution_count="12">
+<div id="dce22da8" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>working_dir <span class="op">=</span> os.getcwd()</span>
 <span id="cb18-2"><a href="#cb18-2"></a><span class="bu">print</span>(working_dir)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>/home/runner/work/PythonforChemists/PythonforChemists/course/chapters/Python</code></pre>
 </div>
 </div>
-<div id="7fcd62f7" class="cell" data-execution_count="13">
+<div id="9e7fd1c3" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb20-2"><a href="#cb20-2"></a></span>
 <span id="cb20-3"><a href="#cb20-3"></a>path <span class="op">=</span> Path(<span class="st">'folder1'</span>) <span class="op">/</span> <span class="st">'folder2'</span> <span class="op">/</span> <span class="st">'folder3'</span> <span class="op">/</span> <span class="st">'data.dat'</span></span>
@@ -721,7 +721,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>folder1/folder2/folder3/data.dat</code></pre>
 </div>
 </div>
-<div id="31c627e4" class="cell" data-execution_count="14">
+<div id="5253943e" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>working_dir <span class="op">=</span> Path.cwd()</span>
 <span id="cb22-2"><a href="#cb22-2"></a><span class="bu">print</span>(working_dir)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -733,7 +733,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">Lists</h1>
 <p>Lists collect multiple items in a single variable. <br></p>
 <p>You can use the <code>[]</code> operator to create a list. <br> You can use the <code>append()</code> method to add an item to a list. <br> You can use the <code>insert()</code> method to add an item at a specific position. <br> You can use the <code>del</code> statement to delete an item from a list. <br> You can use the <code>remove()</code> method to remove an item from a list. <br> You can use the <code>pop()</code> method to remove an item at a specific position. <br> You can use the <code>clear()</code> method to remove all items from a list. <br> You can use the <code>copy()</code> method to copy a list. <br> You can use the <code>count()</code> method to count the number of items in a list. <br> You can use the <code>sort()</code> method to sort a list. <br> You can use the <code>reverse()</code> method to reverse a list. <br> You can use the <code>extend()</code> method to add items from another list. <br> You can use the <code>index()</code> method to get the index of an item. <br> You can use the <code>len()</code> function to get the length of a list. <br> You can use the <code>list()</code> function to create a list. <br></p>
-<div id="31cb8bf0" class="cell" data-execution_count="15">
+<div id="040675f3" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a>a <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
 <span id="cb24-2"><a href="#cb24-2"></a>b <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">3</span>,<span class="st">'a'</span>, <span class="ot">1j</span>]</span>
 <span id="cb24-3"><a href="#cb24-3"></a><span class="bu">len</span>(a) <span class="co">#length of list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -754,7 +754,7 @@ Warning
 <p>Index is starting with <strong>0</strong> in Python.</p>
 </div>
 </div>
-<div id="3e4edab5" class="cell" data-execution_count="16">
+<div id="cc185bf8" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a>l <span class="op">=</span> [<span class="st">'first'</span>, <span class="st">'second'</span>, <span class="st">'third'</span>]</span>
 <span id="cb26-2"><a href="#cb26-2"></a>l[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
@@ -762,7 +762,7 @@ Warning
 </div>
 </div>
 <p>Last element is reached by index -1.</p>
-<div id="1fe5b7f8" class="cell" data-execution_count="17">
+<div id="41512325" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a>l[<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>'third'</code></pre>
@@ -785,7 +785,7 @@ Warning
 </ul>
 <section id="if-statement" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="if-statement">if statement</h2>
-<div id="e81b2cfc" class="cell" data-execution_count="18">
+<div id="9db1dae4" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb30-2"><a href="#cb30-2"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
 <span id="cb30-3"><a href="#cb30-3"></a>    <span class="bu">print</span>(<span class="st">"x &lt; 0"</span>)</span>
@@ -800,7 +800,7 @@ Warning
 </section>
 <section id="breakcontinuepass" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="breakcontinuepass">break,continue,pass</h2>
-<div id="242595ec" class="cell" data-execution_count="19">
+<div id="b570224c" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb32-2"><a href="#cb32-2"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
 <span id="cb32-3"><a href="#cb32-3"></a>        <span class="cf">break</span></span>
@@ -813,7 +813,7 @@ Warning
 4</code></pre>
 </div>
 </div>
-<div id="439f7430" class="cell" data-execution_count="20">
+<div id="6932e0bb" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb34-2"><a href="#cb34-2"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
 <span id="cb34-3"><a href="#cb34-3"></a>        <span class="cf">continue</span></span>
@@ -830,7 +830,7 @@ Warning
 9</code></pre>
 </div>
 </div>
-<div id="68c9ef5e" class="cell" data-execution_count="21">
+<div id="aa23a894" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb36-2"><a href="#cb36-2"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</span>
 <span id="cb36-3"><a href="#cb36-3"></a>        <span class="cf">pass</span></span>
@@ -851,7 +851,7 @@ Warning
 </section>
 <section id="for-loops" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="for-loops">For Loops</h2>
-<div id="7bc9fbbe" class="cell" data-execution_count="22">
+<div id="6e3712de" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>): <span class="co">#from 0 to 4 </span></span>
 <span id="cb38-2"><a href="#cb38-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -862,7 +862,7 @@ Warning
 4</code></pre>
 </div>
 </div>
-<div id="8163a20d" class="cell" data-execution_count="23">
+<div id="d18eb33a" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">2</span>): <span class="co"># start 1, stop 10 excluded, step 2</span></span>
 <span id="cb40-2"><a href="#cb40-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -873,16 +873,16 @@ Warning
 9</code></pre>
 </div>
 </div>
-<div id="c257282e" class="cell" data-execution_count="24">
+<div id="8a1b4b12" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1"></a>l <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="adc5b5d7" class="cell" data-execution_count="25">
+<div id="50caa37a" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1"></a>l</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 <pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
 </div>
 </div>
-<div id="0a780ef5" class="cell" data-execution_count="26">
+<div id="99b21e78" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1"></a><span class="cf">for</span> i <span class="kw">in</span> l:  <span class="co"># using list</span></span>
 <span id="cb45-2"><a href="#cb45-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -901,7 +901,7 @@ Warning
 </section>
 <section id="while-loops" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="while-loops">While Loops</h2>
-<div id="1e405fb3" class="cell" data-execution_count="27">
+<div id="bed3517f" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb47-2"><a href="#cb47-2"></a><span class="cf">while</span> x  <span class="op">&lt;</span> <span class="dv">4</span>:</span>
 <span id="cb47-3"><a href="#cb47-3"></a>    <span class="bu">print</span>(l[x])</span>
@@ -913,7 +913,7 @@ Warning
 3</code></pre>
 </div>
 </div>
-<div id="7c444ecd" class="cell" data-execution_count="28">
+<div id="5efa745d" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1"></a><span class="bu">print</span>(<span class="st">"while loop with continue and break statement"</span>)</span>
 <span id="cb49-2"><a href="#cb49-2"></a>n <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb49-3"><a href="#cb49-3"></a><span class="cf">while</span>(n <span class="op">&lt;</span> <span class="dv">10</span>):</span>
@@ -938,17 +938,17 @@ The loop reached 7 and will break now.</code></pre>
 <section id="functions" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="functions">Functions</h2>
 <p>Functions are defined using the <code>def</code> keyword. <br> You can use the <code>return</code> keyword to return a value from a function. <br> The parameters of a function are defined in the parentheses. <br> Multiple parameters are separated by commas. <br> You can use default values for the parameter <em>e.g.</em> <code>b=5</code>. <br> Multiple return values are separated by commas. <br> They are stored in a tuple. <br></p>
-<div id="e4368820" class="cell" data-execution_count="29">
+<div id="c59f0d58" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1"></a><span class="kw">def</span> summation(a,b<span class="op">=</span><span class="dv">5</span>):</span>
 <span id="cb51-2"><a href="#cb51-2"></a>    <span class="cf">return</span> a<span class="op">+</span>b, a<span class="op">-</span>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="05a2481b" class="cell" data-execution_count="30">
+<div id="5a1aac50" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1"></a>summation(<span class="dv">4</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
 <pre><code>(6, 2)</code></pre>
 </div>
 </div>
-<div id="c2d5181f" class="cell" data-execution_count="31">
+<div id="ed16be8e" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1"></a><span class="bu">sum</span>, sub <span class="op">=</span> summation(<span class="dv">4</span>)</span>
 <span id="cb54-2"><a href="#cb54-2"></a><span class="bu">print</span>(<span class="bu">sum</span>)</span>
 <span id="cb54-3"><a href="#cb54-3"></a><span class="bu">print</span>(sub)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -957,7 +957,7 @@ The loop reached 7 and will break now.</code></pre>
 -1</code></pre>
 </div>
 </div>
-<div id="c6420b57" class="cell" data-execution_count="32">
+<div id="2a8f8a51" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb56-2"><a href="#cb56-2"></a></span>
 <span id="cb56-3"><a href="#cb56-3"></a><span class="kw">def</span> multiple_return_value(x,a,b):</span>
