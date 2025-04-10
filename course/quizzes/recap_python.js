@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             question: "What is the result of <pre>x = 3.1415926</pre>?\n<pre>print(f'{x:.4f}')</pre>",
             options: [
                 "3.1415",
-                "3.1416",
+                "3.14159",
                 "3.14",
                 "3.142"
             ],
@@ -132,7 +132,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         },
         {
-            question: "Which kind of variable is <pre>x</pre> at the start of the code block and which kind in the function?",
+            question: "Which kind of variable is `x` at the start of the code block and which kind in the function?"+            "<pre>x = 1</pre>" +
+            "<pre>def my_function(x):</pre>" +
+            "<pre>   x = x + 1</pre>" +
+            "<pre>my_function(x)</pre>" +
+            "<pre>print(x)</pre>",
             options: [
                 "At the start: local, in the function: global",
                 "At the start: global, in the function: local",
