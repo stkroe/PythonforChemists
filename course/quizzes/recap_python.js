@@ -148,10 +148,10 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             question: "How do I create a list in Python?",
             options: [
-                "Using <pre>[]</pre> brackets.",
-                "Using <pre>{}</pre> brackets.",
-                "Using <pre>()</pre> brackets.",
-                "Using <pre><></pre> brackets."
+                "Using [] brackets.",
+                "Using {} brackets.",
+                "Using () brackets.",
+                "Using <> brackets."
             ],
             answer: 0
         },
