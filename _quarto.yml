@@ -106,6 +106,9 @@ book:
       - part: "Playground"
         chapters:
           - course/exercises/playground.ipynb
+      - part: "Repetition"
+        chapters:
+          - course/exercises/recap_python.ipynb
       # - part: "Machine Learning"
       #   chapters:
       #     - course/chapters/ML/IntroductionML.qmd
