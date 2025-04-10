@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             question: "How would you print a float with 4 decimal places and 2 spaces before the decimal? x = 3.1415926",
             options: [
-                "print(f'{x:  .4f}')",
-                "print(f'{x:6.4f}')",
-                "print(f'{x:8.4f}')",
-                "print(f'{x:2.4f}')"
+                "<pre>print(f'{x:  .4f}')</pre>",
+                "<pre>print(f'{x:6.4f}')</pre>",
+                "<pre>print(f'{x:8.4f})</pre>",
+                "<pre>print(f'{x:2.4f}')</pre>"
             ],
             answer: 2
         },
@@ -26,26 +26,30 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             question: "Which statement is wrong?",
             options: [
-                "Numpy is a library for numerical computing in Python.",
-                 "With the command <pre>import numpy as np</pre> the library  <pre>numpy</pre> is imported and gives the alias 'np'.",
-                 "array() is included in the python standard library and we **do not need to import it**.",
-                 "If I want to use the datatype <pre>ndarray</pre> I have import the numpy library and use the command <pre>np.array([])</pre> to create a numpy arary.",
-                 "All functions from the library can be accessed using this alias e.g. <pre>np.array()</pre>. This means <pre>array()</pre> is a function from the numpy library and can be used in our code.",          
+                 "Numpy is a library for numerical computing in Python.",
+                 "With the command `import numpy as np`the library  `numpy`is imported and gives the alias 'np'.",
+                 "array() is included in the python standard library and we <b>do not need to import it</b>.",
+                 "If I want to use the datatype `darray`I have import the numpy library and use the command `np.array([])`to create a numpy arary.",
+                 "All functions from the library can be accessed using this alias e.g. `np.array()`. This means `array()` is a function from the numpy library and can be used in our code.",          
             ],
             answer: 2
         },
         {
-            question: "Which commmands **are** wrong?",
+            question: "Which commmand is wrong?",
             options: [
-                "import numpy as np\nx = np.array([1, 2, 3],[2, 3, 4])",
-                "import numpy as np\nx = np.array([[1, 2, 3],[2, 3, 4]], dtype='int')",
-                "import numpy as np\nx = np.array([1, 2, 3], dtype='float')",
-                "import numpy as np\nx = np.array(1,2,3)",
+                "<pre>import numpy as np</pre>" + 
+                "<pre>x = np.array([1, 2, 3],[2, 3, 4])</pre>",
+                "<pre>import numpy as np</pre>" + 
+                "<pre>x = np.array([[1, 2, 3],[2, 3, 4]], dtype='int')</pre>",
+                "<pre>import numpy as np</pre>" + 
+                "<pre>x = np.array([1, 2, 3], dtype='float')</pre>",
+                "<pre>import numpy as np</pre>" + 
+                "<pre>x = np.array(1,2,3)</pre>",
             ],
-            answer: [0, 3]
+            answer: 3
         },
         { 
-            question: "What is a <pre>float</pre>?",
+            question: "What is a `float`?",
             options: [
                 "A datatype for decimal numbers.",
                 "A datatype for whole numbers.",
@@ -90,12 +94,12 @@ document.addEventListener('DOMContentLoaded', function() {
             "<pre>   return x + 1</pre>" +
             "<pre>result = my_function(3)</pre>", 
             options: [
-                "<pre>x is a parameter of my_function</pre>",
-                "<pre>my_function is a function</pre>",
-                "<pre>result is a variable</pre>",
-                "<pre>my_function is a variable</pre>",
-                "<pre>my_function(3) returns 4 </pre>",
-                "<pre>result is equal 4</pre>",
+                "x is a parameter of `my_function`",
+                "`my_function` is a function",
+                "`result` is a variable",
+                "`my_function` is a variable",
+                "`my_function(3)` returns 4 ",
+                "`result` is equal 4",
             ],
             answer: 3
         },
