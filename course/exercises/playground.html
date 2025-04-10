@@ -111,7 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="Exercise Playground – Data Analysis and Visualization for Chemists and Material Scientists">
 <meta property="og:description" content="">
-<meta property="og:image" content="playground_files/figure-html/cell-7-output-2.png">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
 
@@ -566,10 +565,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#playground-for-python" id="toc-playground-for-python" class="nav-link active" data-scroll-target="#playground-for-python">Playground for Python</a>
-  <ul class="collapse">
-  <li><a href="#rca-analysis" id="toc-rca-analysis" class="nav-link" data-scroll-target="#rca-analysis">RCA Analysis</a></li>
-  </ul></li>
+  <li><a href="#playground-for-python" id="toc-playground-for-python" class="nav-link active" data-scroll-target="#playground-for-python">Playground for Python</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.dev/stkroe/PythonForChemists.github.io/blob/master/course/exercises/playground.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/exercises/playground.ipynb"><i class="bi bi-laptop"></i>Open in Colab Code</a></li><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/exercises/playground.ipynb"><i class="bi bi-laptop"></i>Open in Colab Solution</a></li></ul></div></nav>
     </div>
@@ -899,81 +895,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>What you can do with this dataset: - Load the dataset and explore its structure - Perform basic data analysis, such as calculating summary statistics - Visualize the data using different types of plots (e.g., scatter plots, histograms)</p>
-<section id="rca-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="rca-analysis">RCA Analysis</h2>
-<p>(see for more information <a href="https://en.wikipedia.org/wiki/Principal_component_regression">https://en.wikipedia.org/wiki/Principal_component_regression</a>)</p>
-<div id="b8708a5e" class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_wine</span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb5-8"><a href="#cb5-8"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error, r2_score</span>
-<span id="cb5-9"><a href="#cb5-9"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="co"># 1. Load the wine dataset</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a>data <span class="op">=</span> load_wine()</span>
-<span id="cb5-13"><a href="#cb5-13"></a>X <span class="op">=</span> data.data</span>
-<span id="cb5-14"><a href="#cb5-14"></a>y <span class="op">=</span> data.target</span>
-<span id="cb5-15"><a href="#cb5-15"></a></span>
-<span id="cb5-16"><a href="#cb5-16"></a><span class="co"># Optional: make it a regression task (we'll use class as numeric value)</span></span>
-<span id="cb5-17"><a href="#cb5-17"></a>y <span class="op">=</span> y.astype(<span class="bu">float</span>)</span>
-<span id="cb5-18"><a href="#cb5-18"></a></span>
-<span id="cb5-19"><a href="#cb5-19"></a><span class="co"># 2. Split data into training and test sets</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
-<span id="cb5-21"><a href="#cb5-21"></a></span>
-<span id="cb5-22"><a href="#cb5-22"></a><span class="co"># 3. Standardize the data</span></span>
-<span id="cb5-23"><a href="#cb5-23"></a>scaler <span class="op">=</span> StandardScaler()</span>
-<span id="cb5-24"><a href="#cb5-24"></a>X_train_scaled <span class="op">=</span> scaler.fit_transform(X_train)</span>
-<span id="cb5-25"><a href="#cb5-25"></a>X_test_scaled <span class="op">=</span> scaler.transform(X_test)</span>
-<span id="cb5-26"><a href="#cb5-26"></a></span>
-<span id="cb5-27"><a href="#cb5-27"></a><span class="co"># 4. Apply PCA</span></span>
-<span id="cb5-28"><a href="#cb5-28"></a>pca <span class="op">=</span> PCA()</span>
-<span id="cb5-29"><a href="#cb5-29"></a>X_train_pca <span class="op">=</span> pca.fit_transform(X_train_scaled)</span>
-<span id="cb5-30"><a href="#cb5-30"></a>X_test_pca <span class="op">=</span> pca.transform(X_test_scaled)</span>
-<span id="cb5-31"><a href="#cb5-31"></a></span>
-<span id="cb5-32"><a href="#cb5-32"></a><span class="co"># 5. Choose number of components (you can tweak this)</span></span>
-<span id="cb5-33"><a href="#cb5-33"></a>n_components <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb5-34"><a href="#cb5-34"></a>X_train_reduced <span class="op">=</span> X_train_pca[:, :n_components]</span>
-<span id="cb5-35"><a href="#cb5-35"></a>X_test_reduced <span class="op">=</span> X_test_pca[:, :n_components]</span>
-<span id="cb5-36"><a href="#cb5-36"></a></span>
-<span id="cb5-37"><a href="#cb5-37"></a><span class="co"># 6. Fit linear regression</span></span>
-<span id="cb5-38"><a href="#cb5-38"></a>lr <span class="op">=</span> LinearRegression()</span>
-<span id="cb5-39"><a href="#cb5-39"></a>lr.fit(X_train_reduced, y_train)</span>
-<span id="cb5-40"><a href="#cb5-40"></a></span>
-<span id="cb5-41"><a href="#cb5-41"></a><span class="co"># 7. Predict and evaluate</span></span>
-<span id="cb5-42"><a href="#cb5-42"></a>y_pred <span class="op">=</span> lr.predict(X_test_reduced)</span>
-<span id="cb5-43"><a href="#cb5-43"></a>mse <span class="op">=</span> mean_squared_error(y_test, y_pred)</span>
-<span id="cb5-44"><a href="#cb5-44"></a>r2 <span class="op">=</span> r2_score(y_test, y_pred)</span>
-<span id="cb5-45"><a href="#cb5-45"></a></span>
-<span id="cb5-46"><a href="#cb5-46"></a><span class="bu">print</span>(<span class="ss">f"Mean Squared Error: </span><span class="sc">{</span>mse<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
-<span id="cb5-47"><a href="#cb5-47"></a><span class="bu">print</span>(<span class="ss">f"R^2 Score: </span><span class="sc">{</span>r2<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
-<span id="cb5-48"><a href="#cb5-48"></a></span>
-<span id="cb5-49"><a href="#cb5-49"></a><span class="co"># Optional: plot explained variance</span></span>
-<span id="cb5-50"><a href="#cb5-50"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb5-51"><a href="#cb5-51"></a>plt.plot(np.cumsum(pca.explained_variance_ratio_), marker<span class="op">=</span><span class="st">'o'</span>)</span>
-<span id="cb5-52"><a href="#cb5-52"></a>plt.title(<span class="st">"Cumulative Explained Variance by PCA Components"</span>)</span>
-<span id="cb5-53"><a href="#cb5-53"></a>plt.xlabel(<span class="st">"Number of Components"</span>)</span>
-<span id="cb5-54"><a href="#cb5-54"></a>plt.ylabel(<span class="st">"Cumulative Explained Variance"</span>)</span>
-<span id="cb5-55"><a href="#cb5-55"></a>plt.grid(<span class="va">True</span>)</span>
-<span id="cb5-56"><a href="#cb5-56"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Mean Squared Error: 0.0769
-R^2 Score: 0.8682</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="playground_files/figure-html/cell-7-output-2.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
