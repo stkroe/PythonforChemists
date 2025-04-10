@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "<pre> for i in a:</pre>" +
             "<pre>     if i == 4:</pre>" +
             "<pre>         continue</pre>" +
-            "<pre>print(i, end=' ')</pre>",
+            "<pre>     print(i, end=' ')</pre>",
             options: [
                 "0 2 4 6 8",
                 "0 2 4",
