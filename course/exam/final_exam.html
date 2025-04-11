@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Ternary Plot – Data Analysis and Visualization for Chemists and Material Scientists</title>
+<title>Final Exam – Data Analysis and Visualization for Chemists and Material Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,64 +20,29 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../course/exercises/exercises/exerciseC_1.html" rel="next">
-<link href="../../../course/chapters/SpecialAnalysisPlots/ImageAnalysis.html" rel="prev">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7fd0fe4245b865325b8ce8dccb604d59.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9dc44f3162c39531be84931020d3c4ca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-516d921ec8d526d3fe54a05c4dfe7a3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../informations/references.html" rel="next">
+<link href="../../course/exercises/recap_python.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7fd0fe4245b865325b8ce8dccb604d59.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dc95f10abd972b9c41a78ec8992004fc.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9dc44f3162c39531be84931020d3c4ca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-516d921ec8d526d3fe54a05c4dfe7a3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -107,9 +72,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="Ternary Plot – Data Analysis and Visualization for Chemists and Material Scientists">
+<meta property="og:title" content="Final Exam – Data Analysis and Visualization for Chemists and Material Scientists">
 <meta property="og:description" content="">
-<meta property="og:image" content="Ternary_files/figure-html/cell-2-output-1.png">
 <meta property="og:site_name" content="Data Analysis and Visualization for Chemists and Material Scientists">
 </head>
 
@@ -122,7 +86,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html">Special Analysis and Visualization Techniques</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/SpecialAnalysisPlots/Ternary.html"><span class="chapter-title">Ternary Plot</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../course/exam/final_exam.html">Exam</a></li><li class="breadcrumb-item"><a href="../../course/exam/final_exam.html"><span class="chapter-title">Final Exam</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -136,37 +100,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../../">Data Analysis and Visualization for Chemists and Material Scientists</a> 
+      <a href="../../">Data Analysis and Visualization for Chemists and Material Scientists</a> 
         <div class="sidebar-tools-main tools-wide">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-substack"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../course/presentations/introduction.html">
+            <a class="dropdown-item sidebar-tools-main-item" href="../../course/presentations/introduction.html">
             Introduction
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../course/exercises/solutions/ExerciseA.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../../course/exercises/solutions/ExerciseA.pdf">
             Exercise A
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../course/exercises/solutions/ExerciseB.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../../course/exercises/solutions/ExerciseB.pdf">
             Exercise B
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../course/exercises/solutions/ExerciseC.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../../course/exercises/solutions/ExerciseC.pdf">
             Exercise C
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../course/exercises/solutions/ExerciseD.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../../course/exercises/solutions/ExerciseD.pdf">
             Exercise D
             </a>
           </li>
@@ -191,7 +155,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome to this Course!</span></a>
+  <a href="../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome to this Course!</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -205,22 +169,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Essentials/Introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
+  <a href="../../course/chapters/Essentials/Introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Essentials/WhatIsPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python?</span></a>
+  <a href="../../course/chapters/Essentials/WhatIsPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Essentials/InstallationGuide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installation Guide</span></a>
+  <a href="../../course/chapters/Essentials/InstallationGuide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installation Guide</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Essentials/Editors.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Editors</span></a>
+  <a href="../../course/chapters/Essentials/Editors.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Editors</span></a>
   </div>
 </li>
       </ul>
@@ -236,22 +200,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Python/Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Start</span></a>
+  <a href="../../course/chapters/Python/Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Start</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Python/Intermediate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Intermediate</span></a>
+  <a href="../../course/chapters/Python/Intermediate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Intermediate</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Python/BasicsModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Modules</span></a>
+  <a href="../../course/chapters/Python/BasicsModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Modules</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Python/AdvancedModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Modules</span></a>
+  <a href="../../course/chapters/Python/AdvancedModules.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Modules</span></a>
   </div>
 </li>
       </ul>
@@ -267,17 +231,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/DHP/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science in Chemistry and Materials Science</span></a>
+  <a href="../../course/chapters/DHP/DataCollection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Data Science in Chemistry and Materials Science</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/DHP/SimpleDataImport.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Import</span></a>
+  <a href="../../course/chapters/DHP/SimpleDataImport.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Import</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/DHP/SimpleDataInspection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Inspection</span></a>
+  <a href="../../course/chapters/DHP/SimpleDataInspection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Data Inspection</span></a>
   </div>
 </li>
       </ul>
@@ -293,22 +257,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/DataVisualization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction into Data Visualization</span></a>
+  <a href="../../course/chapters/Plots/DataVisualization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction into Data Visualization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/SimplePlots.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Data Visualization Techniques</span></a>
+  <a href="../../course/chapters/Plots/SimplePlots.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic Data Visualization Techniques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
+  <a href="../../course/chapters/Plots/SimplePlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Simple Plot Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
+  <a href="../../course/chapters/Plots/Seaborn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Seaborn Plots</span></a>
   </div>
 </li>
       </ul>
@@ -324,7 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseA_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise A 1</span></a>
+  <a href="../../course/exercises/exercises/exerciseA_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise A 1</span></a>
   </div>
 </li>
       </ul>
@@ -340,27 +304,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/DataManipulation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data Manipulation</span></a>
+  <a href="../../course/chapters/SEDA/DataManipulation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data Manipulation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/DescriptiveStatistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Descriptive Statistics and Analysis</span></a>
+  <a href="../../course/chapters/SEDA/DescriptiveStatistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Descriptive Statistics and Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/ModelTesting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Model Testing</span></a>
+  <a href="../../course/chapters/SEDA/ModelTesting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Model Testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/DataModels.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inferential Statistics</span></a>
+  <a href="../../course/chapters/SEDA/DataModels.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inferential Statistics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SEDA/AdvancedAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Statistical Analysis</span></a>
+  <a href="../../course/chapters/SEDA/AdvancedAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Statistical Analysis</span></a>
   </div>
 </li>
       </ul>
@@ -376,22 +340,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseA_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise A 2</span></a>
+  <a href="../../course/exercises/exercises/exerciseA_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise A 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseB_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 1</span></a>
+  <a href="../../course/exercises/exercises/exerciseB_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseB_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 2</span></a>
+  <a href="../../course/exercises/exercises/exerciseB_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseB_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 3</span></a>
+  <a href="../../course/exercises/exercises/exerciseB_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise B 3</span></a>
   </div>
 </li>
       </ul>
@@ -407,12 +371,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/PlotTypes/AdvancedPlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Plot Types</span></a>
+  <a href="../../course/chapters/PlotTypes/AdvancedPlotTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced Plot Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/PlotTypes/InteractivePlots.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Interactive Plots</span></a>
+  <a href="../../course/chapters/PlotTypes/InteractivePlots.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Interactive Plots</span></a>
   </div>
 </li>
       </ul>
@@ -428,38 +392,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseD_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise D 1</span></a>
+  <a href="../../course/exercises/exercises/exerciseD_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise D 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseD_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise D 2</span></a>
+  <a href="../../course/exercises/exercises/exerciseD_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise D 2</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
  <span class="menu-text">Special Analysis and Visualization Techniques</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Spectroscopy Data</span></a>
+  <a href="../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Spectroscopy Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SpecialAnalysisPlots/ImageAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Image Data</span></a>
+  <a href="../../course/chapters/SpecialAnalysisPlots/ImageAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analysis of Image Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/chapters/SpecialAnalysisPlots/Ternary.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Ternary Plot</span></a>
+  <a href="../../course/chapters/SpecialAnalysisPlots/Ternary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ternary Plot</span></a>
   </div>
 </li>
       </ul>
@@ -475,12 +439,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseC_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise C 1</span></a>
+  <a href="../../course/exercises/exercises/exerciseC_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise C 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/exercises/exerciseC_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise C 2</span></a>
+  <a href="../../course/exercises/exercises/exerciseC_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise C 2</span></a>
   </div>
 </li>
       </ul>
@@ -496,7 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/playground.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise Playground</span></a>
+  <a href="../../course/exercises/playground.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise Playground</span></a>
   </div>
 </li>
       </ul>
@@ -512,23 +476,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exercises/recap_python.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise Recap Python</span></a>
+  <a href="../../course/exercises/recap_python.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise Recap Python</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
  <span class="menu-text">Exam</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../course/exam/final_exam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final Exam</span></a>
+  <a href="../../course/exam/final_exam.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Final Exam</span></a>
   </div>
 </li>
       </ul>
@@ -544,28 +508,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../informations/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../../informations/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../informations/license.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">License</span></a>
+  <a href="../../informations/license.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">License</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../informations/privacy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Privacy Policy</span></a>
+  <a href="../../informations/privacy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Privacy Policy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../informations/impressum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Impressum</span></a>
+  <a href="../../informations/impressum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Impressum</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../informations/disclaimer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Disclaimers</span></a>
+  <a href="../../informations/disclaimer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Disclaimers</span></a>
   </div>
 </li>
       </ul>
@@ -580,16 +544,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#ternary-plot" id="toc-ternary-plot" class="nav-link active" data-scroll-target="#ternary-plot">Ternary Plot</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#temperature-vs-time-plot" id="toc-temperature-vs-time-plot" class="nav-link" data-scroll-target="#temperature-vs-time-plot">1. Temperature vs time plot</a></li>
+  <li><a href="#correlation-plot" id="toc-correlation-plot" class="nav-link" data-scroll-target="#correlation-plot">2. Correlation plot</a></li>
+  <li><a href="#x-ray-diffraction-plot" id="toc-x-ray-diffraction-plot" class="nav-link" data-scroll-target="#x-ray-diffraction-plot">3. X-ray diffraction plot</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SpecialAnalysisPlots/Ternary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/TenaryPlots.ipynb"><i class="bi bi-laptop"></i>Open in Colab</a></li><li><a href="https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/enaryPlots.ipynb"><i class="bi bi-journal"></i>Download Code</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/stkroe/PythonForChemists.github.io/blob/master/course/exam/final_exam.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../course/chapters/SpecialAnalysisPlots/Spectroscopy.html">Special Analysis and Visualization Techniques</a></li><li class="breadcrumb-item"><a href="../../../course/chapters/SpecialAnalysisPlots/Ternary.html"><span class="chapter-title">Ternary Plot</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../course/exam/final_exam.html">Exam</a></li><li class="breadcrumb-item"><a href="../../course/exam/final_exam.html"><span class="chapter-title">Final Exam</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Ternary Plot</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<h1 class="title"><span class="chapter-title">Final Exam</span></h1>
 </div>
 
 
@@ -606,47 +573,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Difficulty level: <span style="color:#2B7492"><i class="bi-star-fill " style="" role="img" aria-hidden="true"></i> <i class="bi-star-fill " style="" role="img" aria-hidden="true"></i> </span></p>
-<section id="ternary-plot" class="level1 unnumbered">
-<h1 class="unnumbered">Ternary Plot</h1>
-<p>A ternary plot is a type of plot that is used to visualize the composition of three components.</p>
-<div id="42a16675" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> ternary</span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co"># Create a figure</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>fig, tax <span class="op">=</span> ternary.figure(scale<span class="op">=</span><span class="fl">1.0</span>)</span>
-<span id="cb1-7"><a href="#cb1-7"></a></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># Draw Boundary and Gridlines</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>tax.boundary(linewidth<span class="op">=</span><span class="fl">2.0</span>)</span>
-<span id="cb1-10"><a href="#cb1-10"></a>tax.gridlines(multiple<span class="op">=</span><span class="fl">0.2</span>, color<span class="op">=</span><span class="st">"blue"</span>)</span>
-<span id="cb1-11"><a href="#cb1-11"></a></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="co"># Set Axis labels and Title</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a>fontsize <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>tax.set_title(<span class="st">"Ternary Plot"</span>, fontsize<span class="op">=</span>fontsize)</span>
-<span id="cb1-15"><a href="#cb1-15"></a>tax.left_axis_label(<span class="st">"Component A"</span>, fontsize<span class="op">=</span>fontsize)</span>
-<span id="cb1-16"><a href="#cb1-16"></a>tax.right_axis_label(<span class="st">"Component B"</span>, fontsize<span class="op">=</span>fontsize)</span>
-<span id="cb1-17"><a href="#cb1-17"></a>tax.bottom_axis_label(<span class="st">"Component C"</span>, fontsize<span class="op">=</span>fontsize)</span>
-<span id="cb1-18"><a href="#cb1-18"></a></span>
-<span id="cb1-19"><a href="#cb1-19"></a><span class="co"># Plot some data</span></span>
-<span id="cb1-20"><a href="#cb1-20"></a>points <span class="op">=</span> np.random.dirichlet((<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>), <span class="dv">10</span>)</span>
-<span id="cb1-21"><a href="#cb1-21"></a>tax.scatter(points, marker<span class="op">=</span><span class="st">'s'</span>, color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">"Data"</span>)</span>
-<span id="cb1-22"><a href="#cb1-22"></a></span>
-<span id="cb1-23"><a href="#cb1-23"></a><span class="co"># Legend</span></span>
-<span id="cb1-24"><a href="#cb1-24"></a>tax.legend()</span>
-<span id="cb1-25"><a href="#cb1-25"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Ternary_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
-</figure>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>The instruction will be published on the exam day.</p>
 </div>
+</div>
+</section>
+<section id="temperature-vs-time-plot" class="level1">
+<h1>1. Temperature vs time plot</h1>
+<p>First data set:</p>
+<p>Temperature in K | Time in seconds</p>
+<ul>
+<li>Draw a line plot of the temperature(y-axis) in K vs time(x-axis) in hours.</li>
+<li>Calculate the average temperature and the standard deviation. Plot both values as horizontal lines in the plot.</li>
+<li>Create a figure which is large enough for publication, label everything, and use a suitable font size for the labels, legend, x-ticks and y-ticks.</li>
+</ul>
+</section>
+<section id="correlation-plot" class="level1">
+<h1>2. Correlation plot</h1>
+<p>Second data set:</p>
+<p>Experiment in eV | Theory in eV</p>
+<ul>
+<li>Draw a scatter plot of the experiment(y-axis) in eV vs theory(x-axis) in eV.</li>
+<li>Calculate the correlation coefficient and the linear regression parameter.</li>
+<li>Draw the linear regression line in the plot.</li>
+<li>Give the parameters and R^2 of the linear regression line in the plot.</li>
+<li>Create a figure which is large enough for publication, label everything, and use a suitable font size for the labels, legend, x-ticks and y-ticks.</li>
+</ul>
+</section>
+<section id="x-ray-diffraction-plot" class="level1">
+<h1>3. X-ray diffraction plot</h1>
+<p>Third data set: 2 theta in degrees | Intensity in arbitrary units</p>
+<ul>
+<li>Draw a line plot of the intensity(y-axis) in arbitrary units vs 2 theta(x-axis) in degrees.</li>
+<li>Get the peak positions and give a text box with the peak positions in the plot.</li>
+<li>Create a figure which is large enough for publication, label everything, and use a suitable font size for the labels, legend, x-ticks and y-ticks.</li>
+</ul>
 
-
-<!-- -->
 
 </section>
 
@@ -1272,64 +1245,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../course/chapters/SpecialAnalysisPlots/ImageAnalysis.html" class="pagination-link" aria-label="Analysis of Image Data">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Analysis of Image Data</span></span>
+      <a href="../../course/exercises/recap_python.html" class="pagination-link" aria-label="Exercise Recap Python">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Exercise Recap Python</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../course/exercises/exercises/exerciseC_1.html" class="pagination-link" aria-label="Exercise C 1">
-        <span class="nav-page-text"><span class="chapter-title">Exercise C 1</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../informations/references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> "Ternary Plot"</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="an">execute:</span><span class="co"> </span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="co">  echo: True</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co">  eval: True</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="an">code-links:</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co">      - text: "Open in Colab"</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co">        href: "https://colab.research.google.com/github/stkroe/PythonForChemists/blob/main/course/notebooks/TenaryPlots.ipynb"</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="co">        icon: "laptop"</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="co">      - text: "Download Code"</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co">        href: "https://github.com/stkroe/PythonforChemists/blob/main/course/notebooks/enaryPlots.ipynb"</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="co">        icon: "journal"</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="co">---</span> </span>
-<span id="cb2-14"><a href="#cb2-14"></a>Difficulty level: &lt;span style="color:#2B7492"&gt;{{&lt; bi star-fill &gt;}} {{&lt; bi star-fill &gt;}} &lt;/span&gt;</span>
-<span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="fu"># Ternary Plot {.unnumbered}</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a></span>
-<span id="cb2-18"><a href="#cb2-18"></a>A ternary plot is a type of plot that is used to visualize the composition of three components.</span>
-<span id="cb2-19"><a href="#cb2-19"></a></span>
-<span id="cb2-22"><a href="#cb2-22"></a><span class="in">```{python}</span></span>
-<span id="cb2-23"><a href="#cb2-23"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-24"><a href="#cb2-24"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-25"><a href="#cb2-25"></a><span class="im">import</span> ternary</span>
-<span id="cb2-26"><a href="#cb2-26"></a></span>
-<span id="cb2-27"><a href="#cb2-27"></a><span class="co"># Create a figure</span></span>
-<span id="cb2-28"><a href="#cb2-28"></a>fig, tax <span class="op">=</span> ternary.figure(scale<span class="op">=</span><span class="fl">1.0</span>)</span>
-<span id="cb2-29"><a href="#cb2-29"></a></span>
-<span id="cb2-30"><a href="#cb2-30"></a><span class="co"># Draw Boundary and Gridlines</span></span>
-<span id="cb2-31"><a href="#cb2-31"></a>tax.boundary(linewidth<span class="op">=</span><span class="fl">2.0</span>)</span>
-<span id="cb2-32"><a href="#cb2-32"></a>tax.gridlines(multiple<span class="op">=</span><span class="fl">0.2</span>, color<span class="op">=</span><span class="st">"blue"</span>)</span>
-<span id="cb2-33"><a href="#cb2-33"></a></span>
-<span id="cb2-34"><a href="#cb2-34"></a><span class="co"># Set Axis labels and Title</span></span>
-<span id="cb2-35"><a href="#cb2-35"></a>fontsize <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb2-36"><a href="#cb2-36"></a>tax.set_title(<span class="st">"Ternary Plot"</span>, fontsize<span class="op">=</span>fontsize)</span>
-<span id="cb2-37"><a href="#cb2-37"></a>tax.left_axis_label(<span class="st">"Component A"</span>, fontsize<span class="op">=</span>fontsize)</span>
-<span id="cb2-38"><a href="#cb2-38"></a>tax.right_axis_label(<span class="st">"Component B"</span>, fontsize<span class="op">=</span>fontsize)</span>
-<span id="cb2-39"><a href="#cb2-39"></a>tax.bottom_axis_label(<span class="st">"Component C"</span>, fontsize<span class="op">=</span>fontsize)</span>
-<span id="cb2-40"><a href="#cb2-40"></a></span>
-<span id="cb2-41"><a href="#cb2-41"></a><span class="co"># Plot some data</span></span>
-<span id="cb2-42"><a href="#cb2-42"></a>points <span class="op">=</span> np.random.dirichlet((<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>), <span class="dv">10</span>)</span>
-<span id="cb2-43"><a href="#cb2-43"></a>tax.scatter(points, marker<span class="op">=</span><span class="st">'s'</span>, color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">"Data"</span>)</span>
-<span id="cb2-44"><a href="#cb2-44"></a></span>
-<span id="cb2-45"><a href="#cb2-45"></a><span class="co"># Legend</span></span>
-<span id="cb2-46"><a href="#cb2-46"></a>tax.legend()</span>
-<span id="cb2-47"><a href="#cb2-47"></a>plt.show()</span>
-<span id="cb2-48"><a href="#cb2-48"></a><span class="in">```</span></span>
-</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
-</div></div></div></div></div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1338,7 +1263,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/stkroe/PythonForChemists.github.io/edit/master/course/chapters/SpecialAnalysisPlots/Ternary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/stkroe/PythonForChemists.github.io/blob/master/course/exam/final_exam.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/stkroe/PythonForChemists.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <li>
 <a href="https://github.com/stkroe/PythonForChemists.github.io" target="blank">Code source</a>
