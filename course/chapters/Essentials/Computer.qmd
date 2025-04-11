@@ -1,0 +1,29 @@
+---
+title: "No More Fear: Understanding How Computers Work"
+format: html
+
+---
+
+Let`s indroduce some basic concepts of computers and how they work.
+This will help you to understand how Python works and how to use it effectively.
+
+## What is a Computer? {.unnumbered}
+
+A computer is a machine which can perform calculations and process data.
+It consists of hardware and software. The hardware is the physical part of the computer, like the CPU, RAM, hard disk, etc. and the software is the program which runs on the hardware.
+
+This sounds maybe a bit abstract, but actually it is quite similar as for example a chemists laboratory.
+
+| **Hardware Component** | **Explanation**                                                                 | **Lab Analogy**                                                                 |
+|-------------------------|---------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| **CPU (Central Processing Unit)** | The "brain" of the computer that performs calculations and processes instructions. | The chemist performing experiments and calculations.                            |
+| **RAM (Random Access Memory)**    | Temporary memory used to store data and instructions while the computer is running. | The lab bench where ongoing experiments and notes are temporarily placed.      |
+| **Hard Disk (Storage)**           | Long-term storage for data and programs, even when the computer is turned off.     | The storage cabinet where chemicals and equipment are kept for future use.     |
+| **Motherboard**                   | The main circuit board that connects all components and allows them to communicate. | The lab infrastructure, like tables and shelves, that organizes the workspace. |
+| **Power Supply Unit (PSU)**       | Converts electricity into usable power for the computer's components.              | The power outlet or gas supply that powers lab equipment.                      |
+| **Input Devices**                 | Devices like a keyboard and mouse used to provide an input for the user to the computer.           | Lab instructor which gives instructions to the chemists in the lab|
+| **Output Devices**                | Devices like a monitor or printer used to display or output results.               | Lab notebooks or displays where experiment results are recorded or shown.      |
+| **Cooling System**                | Keeps the computer's components from overheating during operation.                 | The ventilation system or cooling bath used to maintain optimal lab conditions. |
+:  {tbl-colwidths="[25,75]" .striped .hover}
+
+
