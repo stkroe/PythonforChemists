@@ -126,7 +126,6 @@ book:
          - informations/privacy.qmd
          - informations/impressum.qmd
          - informations/disclaimer.qmd
-bibliography: references.bib
 
 format:
   html: 

@@ -60,10 +60,24 @@ First some terminology:
 | Float | *A number with a decimal point.* |
 | Boolean | *A value that is either True or False.* |
 | List | *A collection of items.* |
-| Mutable | *A type of object that can be changed.* |
-| Immutable | *A type of object that cannot be changed.* |
 | String | *A sequence of characters.* |
 | Function | *A block of code that performs a specific task.* |
+| Argument | *A value that is passed to a function.* |
+| Parameter | *A variable that is used in a function.* |
+| Return | *The value that a function returns.* |
+| Keyword Arguments | *Arguments that are passed to a function by name.* |
+| Positional Arguments | *Arguments that are passed to a function by position.* |
+| Default Argument | *An argument that has a default value.* |
+| Operator | *A symbol that performs a specific operation.* |
+| Expression | *A combination of values and operators that evaluates to a value.* |
+| Statement | *A line of code that performs an action.* |
+| Block | *A group of statements that are executed together.* |
+| Method | *A function that is associated with an object.* |
+| Class | *A blueprint for creating objects.* |
+| Object | *An instance of a class.* |
+| Instance | *A specific object created from a class.* |
+| Mutable | *A type of object that can be changed.* |
+| Immutable | *A type of object that cannot be changed.* |
 | Module | *A collection of functions and variables.* |
 | Library | *A collection of modules.* |
 | Package | *A collection of related modules.* |
