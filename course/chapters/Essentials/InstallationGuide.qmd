@@ -23,7 +23,7 @@ Fundamental Python websites:
 - [Python documentation](https://www.python.org/doc/)
 
 
-## 1. Install Python Interpreter {.unnumbered}
+## 1. Install Python Interpreter (you do not needed if you use an environment manager) {.unnumbered} 
 
 
 Your preferred searching engine is your friend to find the best way to install Python on your system.
