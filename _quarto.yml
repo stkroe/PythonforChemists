@@ -109,9 +109,9 @@ book:
       - part: "Repetition"
         chapters:
           - course/exercises/recap_python.qmd
-      - part: "Exam"
-        chapters:
-          - course/exam/final_exam.ipynb
+      # - part: "Exam"
+      #   chapters:
+      #     - course/exam/final_exam.ipynb
       # - part: "Machine Learning"
       #   chapters:
       #     - course/chapters/ML/IntroductionML.qmd
