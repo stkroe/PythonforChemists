@@ -180,7 +180,7 @@ For more chemistry and material science packages please check the [Awesome Pytho
 
 
 
-
+## Short Cut {.unnumbered}
 :::{.callout-tip}
 **Recommendation** <br> 
 Use *yml-file* with all needed packages and configurations:
@@ -216,6 +216,11 @@ and create an environment with this specific packages:
 micromamba env create -f environment.yml
 ```
 
+Then you can activate it via:
+```bash
+micromamba activate myenv
+```
+## 5. Test your installation {.unnumbered}
 
 Test your installation by opening the interactive python mode by typing in your terminal (Linux, macOS) / command prompt (Windows):
 
